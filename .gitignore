@@ -1,0 +1,37 @@
+# Archivos temporales de Windows y macOS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Archivos temporales de Microsoft Office
+~$*
+*.tmp
+*.bak
+
+# Archivos auxiliares generados por LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+
+# Configuraciones de editores
+.vscode/
+.idea/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Variables privadas y credenciales
+.env
+*.env
