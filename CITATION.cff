@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Si utiliza este proyecto, cite a sus autores mediante la siguiente información."
+type: software
+title: "FabroGym: sistema de gestión administrativa y operativa para un gimnasio"
+version: "2A-v1.0"
+date-released: "2026-07-29"
+
+authors:
+  - family-names: "Alvia Villegas"
+    given-names: "Erick Adalberto"
+
+  - family-names: "Mera Arias"
+    given-names: "Erick Jhair"
+
+  - family-names: "Mora Duarte"
+    given-names: "Alex José"
+
+  - family-names: "Ponce Rivera"
+    given-names: "Mery Helenmey"
+
+  - family-names: "Vaca Romero"
+    given-names: "David Octavio"
+
+repository-code: "https://github.com/amorad35/FabroGym_ISR401"
+url: "https://github.com/amorad35/FabroGym_ISR401"
