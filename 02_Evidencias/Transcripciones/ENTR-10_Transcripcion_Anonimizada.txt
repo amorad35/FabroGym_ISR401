@@ -1,0 +1,140 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones, repreguntas e interrupciones relevantes.
+Limpieza moderada: se eliminaron muletillas repetitivas, errores evidentes de transcripción automática y fragmentos ininteligibles que no alteran el sentido de la entrevista.
+Anonimización: se sustituyeron los nombres personales por códigos de participante y entrevistador.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+ENTREVISTA 10 — ENTRENADOR
+Código del participante: Participante P10
+Duración aproximada del audio: 18:02
+Estado del documento: transcripción completa, depurada y anonimizada.
+
+[00:00 aprox.]
+Entrevistador: Buenos días. Somos estudiantes de la carrera de Ingeniería de Software, de la asignatura Ingeniería de Requerimientos, correspondiente al cuarto semestre de una institución académica. Actualmente desarrollamos un proyecto académico relacionado con la creación de un sistema para mejorar la gestión de un gimnasio.
+
+Entrevistador: Nos encontramos en la fase de elicitación de información, cuyo propósito es conocer cómo se maneja un gimnasio en sus áreas administrativa, de inventario, entrenamiento y atención al cliente.
+
+Entrevistador: El objetivo de esta entrevista es conocer su experiencia como entrenador, las actividades que realiza diariamente o semanalmente, la forma en que organiza las rutinas de los clientes nuevos y experimentados, y las principales dificultades o necesidades que ha identificado en su trabajo.
+
+Entrevistador: La información proporcionada nos permitirá comprender mejor el funcionamiento del establecimiento y definir los requisitos que debería incluir el sistema. Su participación es voluntaria, las respuestas se utilizarán únicamente con fines académicos y la información será tratada de forma confidencial, conforme al consentimiento previamente firmado.
+
+Entrevistador: No existen respuestas correctas o incorrectas; nos interesa conocer su experiencia y opinión personal como entrenador. Con su autorización, la entrevista será grabada únicamente para facilitar su transcripción y análisis. Agradecemos su tiempo, disposición y colaboración. ¿Está de acuerdo en comenzar?
+
+Participante P06: Sí, podemos comenzar.
+
+[03:43 aprox.]
+Entrevistador: Comenzaremos con las preguntas de contextualización. ¿Cuánto tiempo lleva trabajando como entrenador en el gimnasio y cómo ha cambiado esta labor durante ese período?
+
+Participante P06: Empecé desde que venía acá, en 2004. [El resto de esta respuesta inicial es parcialmente ininteligible debido a la baja audibilidad].
+
+Entrevistador: ¿Puede acercarse un poco más? No se escucha con claridad.
+
+Participante P06: ¿Ahí se escucha?
+
+Entrevistador: Sí, ahí se escucha mejor.
+
+[04:44 aprox.]
+Participante P06: Como le decía, siempre llegan personas con diferentes capacidades físicas. No todas llegan con las mismas condiciones. Como entrenador, debo adaptar el trabajo a las capacidades físicas de cada persona, dependiendo del movimiento que se vaya a realizar ese día.
+
+[05:04 aprox.]
+Entrevistador: ¿Qué tareas realiza con mayor frecuencia durante su jornada y cómo las organiza?
+
+Participante P06: Siempre trato de fortalecer el core, es decir, la parte o zona media del cuerpo. Al trabajar el core de una persona se pueden prevenir muchas lesiones a futuro. Un buen fortalecimiento del abdomen y de la zona lumbar puede evitar lesiones o fracturas.
+
+Participante P06: En CrossFit existe cierto riesgo de lesión, pero puede reducirse mediante el fortalecimiento del abdomen y de la zona lumbar.
+
+[05:58 aprox.]
+Entrevistador: ¿Qué métodos utiliza actualmente para consultar o registrar información de clientes que presentan dificultades al momento de entrenar? ¿Dispone de alguna herramienta o solamente los identifica durante la clase?
+
+Participante P06: Actualmente no utilizo ningún método tecnológico. Cuando empieza la clase y observo que hay una persona nueva, hablo con ella. Le pregunto si tiene alguna lesión, fractura, cirugía previa o alguna dificultad que deba conocer.
+
+Participante P06: Esto es importante especialmente cuando se trata de la primera clase. Siempre se debe preguntar si la persona ha sufrido una lesión o una cirugía.
+
+Entrevistador: Entonces, ¿esa información no se registra en una plataforma?
+
+Participante P06: No. No existe una plataforma donde pueda registrarla. Yo mismo pregunto directamente a cada persona.
+
+[07:00 aprox.]
+Entrevistador: Antes de asignar una rutina, ¿qué información considera necesaria para orientar al cliente y qué información no considera necesaria?
+
+Participante P06: ¿Puede repetir la pregunta?
+
+Entrevistador: Antes de asignar una rutina, ¿qué información considera necesaria para orientar al cliente durante los ejercicios?
+
+Participante P06: Cuando planifico la semana completa de entrenamiento, de lunes a viernes, considero la cantidad de personas nuevas que asistirán. Con base en eso realizo la planificación.
+
+Participante P06: No puedo colocar movimientos demasiado complicados porque trabajo solo y no tengo otra persona que me ayude. Por eso trato de utilizar movimientos que no sean demasiado básicos, pero tampoco excesivamente complejos para las personas nuevas. Mi objetivo es que adquieran una buena base y puedan mejorar progresivamente.
+
+[08:04 aprox.]
+Entrevistador: Cuando necesita ajustar una rutina o la carga de entrenamiento, ¿qué problemas se presentan y qué criterios considera para tomar esa decisión?
+
+Participante P06: Muchas veces me ha tocado improvisar. Cuando asisten muchas personas, por ejemplo, entre 35 y 38 en el horario de las siete de la noche, no puedo atenderlas individualmente y los implementos disponibles no alcanzan para todos.
+
+Participante P06: En esos casos adapto un entrenamiento que inicialmente era individual para realizarlo en parejas, de manera que todas las personas puedan trabajar durante la hora de clase y terminen satisfechas con el entrenamiento.
+
+[08:58 aprox.]
+Entrevistador: ¿Qué dificultades enfrenta con mayor frecuencia durante el seguimiento de un cliente y por qué puede disminuir la calidad del acompañamiento?
+
+Participante P06: No comprendí la pregunta. ¿Puede repetirla?
+
+Entrevistador: ¿Qué dificultades enfrenta con mayor frecuencia al dar seguimiento a una persona nueva?
+
+Participante P06: Muchas veces llegan personas que no escuchan las indicaciones. Se les dice que utilicen cinco libras, pero su ego las lleva a colocar más peso. Siempre les digo que deben dejar el ego en casa.
+
+Participante P06: Levantar más peso del indicado genera problemas para el entrenador y para el establecimiento. Si la persona se lesiona, puede decir que fue responsabilidad del entrenador o del gimnasio.
+
+Participante P06: Uno de los problemas más frecuentes es que algunas personas nuevas no escuchan. El entrenador indica un peso y ellas colocan más, incluso el doble. Esto aumenta el riesgo de lesión y después pueden responsabilizar al establecimiento.
+
+[10:47 aprox.]
+Entrevistador: ¿Qué resumen de información le sería útil durante el seguimiento del cliente y cómo lo utilizaría?
+
+Participante P06: ¿Puede repetir la pregunta? No la comprendo.
+
+Entrevistador: Me refiero a un resumen similar a las estadísticas de un deportista, que permita saber si puede aumentar el peso o si debe mantenerse en el nivel actual.
+
+Participante P06: Si se refiere a conocer cómo le fue durante una clase, en el caso de una persona nueva el desempeño durante los primeros días suele ser bajo. Las primeras dos semanas, especialmente la primera, son difíciles para alguien que empieza en CrossFit porque su cuerpo todavía no está adaptado.
+
+Participante P06: Sin embargo, algunas personas completan bien el entrenamiento desde el primer día porque ya cuentan con una base deportiva previa.
+
+Participante P06: El desempeño depende mucho de cómo la persona se ha relacionado con el deporte desde la niñez hasta la adolescencia. No es igual una persona sedentaria que alguien que practicó baloncesto, fútbol, natación u otros deportes desde pequeño.
+
+Entrevistador: Entonces, si ya posee una base sólida de condición física, tendrá un mejor desempeño.
+
+Participante P06: Exactamente. Tendrá un mejor desempeño en su primera clase y no la pasará tan mal como alguien sedentario que no ha realizado actividad física.
+
+[13:20 aprox.]
+Entrevistador: ¿Qué actividades son más repetitivas o difíciles de controlar durante el proceso de asignación y ejecución de una rutina? Ya mencionó el ego. ¿Puede señalar otra?
+
+Participante P06: Otra dificultad es no saber escuchar, no observar y no prestar atención cuando explico las técnicas. Muchas veces las personas conversan con el compañero que está al lado mientras se dan las indicaciones.
+
+Participante P06: También es frecuente que lleguen tarde y no realicen un calentamiento adecuado antes del entrenamiento. Las clases comienzan puntualmente a las cinco, seis o siete, pero algunas personas llegan quince o veinte minutos después.
+
+Participante P06: La impuntualidad es importante porque quienes pueden lesionarse son ellos, debido a que no calentaron correctamente. Además, la llegada tardía desorganiza toda la clase.
+
+Entrevistador: ¿Qué procedimiento realiza cuando una persona llega tarde?
+
+Participante P06: Muchas veces le indico que caliente por su cuenta. No puedo dejar a un grupo de veinte o veinticinco personas para atender solamente a quien llegó tarde. El grupo que ya está entrenando es la prioridad.
+
+[15:06 aprox.]
+Entrevistador: Cuando un cliente no muestra el avance esperado después de varios días, ¿qué identifica primero como entrenador y qué pasos considera necesarios para que mejore?
+
+Participante P06: Me ha ocurrido que algunas personas me dicen que sienten que no avanzan o que continúan utilizando los mismos pesos. En esos casos les indico que también deben poner de su parte.
+
+Participante P06: Para avanzar deben dormir bien, alimentarse bien y utilizar el peso que el entrenador les recomienda. La responsabilidad no depende únicamente del entrenador.
+
+Participante P06: En varias ocasiones me he quedado después de las clases para ayudar a personas que necesitan fortalecer alguna zona. Yo pongo de mi parte, pero también necesito que ellas asuman su responsabilidad y sigan las indicaciones.
+
+[16:19 aprox.]
+Entrevistador: Eso ha sido todo. Muchas gracias por su colaboración.
+
+Participante P06: De nada. Cualquier cosa, seguimos en contacto.
+
+Entrevistador: En nombre de todo el equipo, agradecemos su tiempo y la información proporcionada. Sus respuestas nos ayudarán a comprender mejor las actividades de un entrenador, la organización de las rutinas, las necesidades existentes en el gimnasio y la atención a personas nuevas o experimentadas.
+
+Entrevistador: Esta información será importante para definir los requisitos del sistema y proponer una solución que facilite la gestión y el seguimiento de los clientes. También permitirá comprender la importancia del fortalecimiento del core y de la adaptación progresiva del entrenamiento.
+
+Entrevistador: Muchas gracias nuevamente por su colaboración.
+
+[18:02 aprox.]
+Fin de la entrevista.

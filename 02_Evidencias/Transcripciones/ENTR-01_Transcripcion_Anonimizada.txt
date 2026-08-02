@@ -1,0 +1,122 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+ENTREVISTA 01 — PROPIETARIO / ADMINISTRADOR
+Código del participante: Participante P01
+Duración aproximada del audio: 11:09
+
+[00:00 aprox.]
+Entrevistador: Muy buenas noches. Nos encontramos con una persona propietaria de un gimnasio que nos ayudará con una entrevista relacionada con el desarrollo y mantenimiento del establecimiento. Contamos con la autorización correspondiente para realizarla.
+
+Entrevistador: ¿Qué función cumple actualmente en el gimnasio, cuánto tiempo lleva en el cargo y cuáles son sus principales responsabilidades?
+
+Participante P01: Soy propietario del gimnasio, administro el negocio y también soy entrenador. Mi servicio como entrenador personalizado tiene un valor adicional.
+
+Participante P01: Las personas que entrenan de forma general con los colaboradores pagan una mensualidad, mientras que quienes desean que yo los entrene personalmente pagan una tarifa que incluye mi servicio y el uso del gimnasio.
+
+Participante P01: Trabajo aproximadamente seis horas diarias.
+
+[01:25 aprox.]
+Entrevistador: ¿Qué lo inspiró o motivó a crear el gimnasio y brindar este servicio?
+
+Participante P01: Yo también fui principiante. Cuando asistía a otros gimnasios sentía que no me prestaban suficiente atención, no me enseñaban ni explicaban correctamente.
+
+Participante P01: Eso me permitió identificar una necesidad: crear un espacio donde se preste atención a las personas y se les dé prioridad. Implementé esa forma de trabajo y a los clientes les gusta cómo se los entrena.
+
+[02:15 aprox.]
+Entrevistador: ¿Cómo ha evolucionado el negocio desde sus inicios hasta la actualidad?
+
+Participante P01: Al principio se cobraba una tarifa diaria de cincuenta centavos y diez dólares mensuales. Actualmente se cobra un dólar con veinticinco centavos diarios y dieciocho dólares mensuales.
+
+Participante P01: También se han incorporado máquinas de mejor calidad, bicicletas, caminadoras, un área de boxeo y próximamente se implementará un área de spinning.
+
+[03:05 aprox.]
+Entrevistador: ¿Qué medios utiliza actualmente para registrar o consultar la información administrativa del gimnasio?
+
+Participante P01: Por el momento utilizo Excel. Sin embargo, necesito un programa que me ayude a llevar mejor el inventario de bebidas, porque a veces es complicado controlarlo.
+
+Participante P01: Manejo personalmente los ingresos y demás registros. Una aplicación sería útil.
+
+[04:00 aprox.]
+Entrevistador: Describa cómo organiza una jornada administrativa para comprobar que todas las actividades se realicen correctamente.
+
+Participante P01: La organización se realiza por horarios. Los colaboradores conocen los turnos que les corresponden en la mañana, tarde y noche.
+
+Participante P01: Tengo un colaborador para cada horario para evitar la saturación. Si un solo entrenador trabajara durante todos los turnos, su rendimiento no sería igual al inicio y al final de la jornada.
+
+Participante P01: No tengo una estructura administrativa formal o un documento detallado para organizar las tareas.
+
+[05:00 aprox.]
+Entrevistador: ¿Cómo se registra un cliente nuevo, cómo se activa su membresía y cómo se confirma el pago?
+
+Participante P01: Lo llevo mediante mi teléfono celular. Hago las anotaciones en una aplicación de notas. Registro el nombre del cliente, la fecha de inicio y la fecha de finalización de su mensualidad.
+
+Participante P01: Sería útil tener una aplicación en la que tanto el propietario como el cliente puedan ingresar, revisar la fecha de vencimiento y recibir una alarma.
+
+Participante P01: Como no permanezco todo el tiempo en el gimnasio, había pensado entregar tarjetas a los clientes para que las muestren al ingresar y el colaborador pueda verificar la fecha, pero todavía no lo he implementado.
+
+[06:05 aprox.]
+Entrevistador: ¿Cómo controla actualmente la vigencia de las membresías y la asistencia diaria?
+
+Participante P01: Lo controlo desde las notas del teléfono. Envío capturas de esas notas a los colaboradores para que revisen las fechas y recuerden al cliente dos o tres días antes de que deba pagar la mensualidad.
+
+[06:45 aprox.]
+Entrevistador: ¿Qué errores se presentan con mayor frecuencia al registrar o confirmar pagos y por qué ocurren?
+
+Participante P01: A veces olvido revisar las fechas anotadas y pueden pasar dos o tres días antes de recordarle al cliente.
+
+Participante P01: Cuando ocurre, se conversa con la persona y el pago se registra con la fecha que correspondía, no con el día en que finalmente pagó.
+
+Entrevistador: ¿Prefiere usar el teléfono o una libreta?
+
+Participante P01: Todo lo manejamos mediante el teléfono. Tenemos un grupo de WhatsApp con los colaboradores y allí envío una captura cuando alguien paga la mensualidad.
+
+[07:35 aprox.]
+Entrevistador: ¿Cómo realiza la venta de productos y cómo registra las entradas, salidas y existencias del inventario?
+
+Participante P01: Actualmente no manejo un inventario formal. Observo cuándo quedan pocas bebidas, realizo el pedido y el proveedor entrega los productos.
+
+Participante P01: No tengo una notificación o sistema que indique cuándo quedan pocas unidades.
+
+Entrevistador: ¿Cómo controla las entradas, salidas y productos de bodega?
+
+Participante P01: Lo hago de manera empírica. Cuando observo que quedan pocos productos, realizo un pedido para toda la semana.
+
+[08:25 aprox.]
+Entrevistador: ¿Qué información o reportes necesita revisar diariamente o semanalmente para controlar el negocio y tomar decisiones?
+
+Participante P01: Reviso diariamente las fechas de las mensualidades para recordarles a los clientes cuándo deben pagar.
+
+Participante P01: También reviso las anotaciones de los clientes que contratan entrenamiento personalizado, las rutinas realizadas y los pesos utilizados, para elaborar nuevas rutinas con cargas actualizadas.
+
+Entrevistador: ¿Cómo planifica el crecimiento futuro del negocio?
+
+Participante P01: El negocio se ha desarrollado mediante créditos. Cuando termino de pagar un crédito utilizado para comprar una máquina, solicito otro para adquirir algo que haga falta en el gimnasio.
+
+[09:20 aprox.]
+Entrevistador: ¿Cómo identifica si los clientes están satisfechos o han dejado de asistir y qué acciones realiza?
+
+Participante P01: No se puede conocer al cien por ciento, pero en este gimnasio se observa mucha fidelidad. Los clientes han visto cómo comenzó el negocio con pocas cosas y se mantienen contentos porque continuamente se incorporan nuevas máquinas sin aumentar demasiado el precio.
+
+[10:05 aprox.]
+Entrevistador: ¿Qué proceso administrativo le genera más problemas y cómo lo resuelve?
+
+Participante P01: Me falta incorporar tecnología. Necesito una aplicación para registrar clientes, controlar inventarios, permitir que los clientes consulten la fecha de finalización de su mensualidad y conocer cuántas bebidas quedan para realizar pedidos.
+
+Participante P01: También necesito mejorar el marketing en redes sociales. El gimnasio ha crecido principalmente mediante recomendaciones de boca en boca.
+
+[10:35 aprox.]
+Entrevistador: ¿Cómo espera que funcione la administración del gimnasio dentro de los próximos dos años y qué resultados considera indispensables?
+
+Participante P01: Quiero implementar una aplicación para controlar el inventario y un sistema de ingreso mediante tarjeta, parecido al que utilizan algunos servicios de transporte.
+
+Entrevistador: Después de implementar el sistema, ¿qué otro plan tiene?
+
+Participante P01: Ampliar el negocio y posiblemente abrir otro local más grande en un lugar más céntrico.
+
+Entrevistador: Con esto finaliza la entrevista. Muchas gracias por su participación.
+
+Participante P01: Muchas gracias.

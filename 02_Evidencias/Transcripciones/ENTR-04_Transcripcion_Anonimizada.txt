@@ -1,0 +1,113 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+ENTREVISTA 03 — RECEPCIÓN
+Código del participante: Participante P04
+Duración aproximada del audio: 24:05
+
+[00:00 aprox.]
+Entrevistador: Buenas noches. Formo parte de un equipo de estudiantes de Ingeniería de Software. Estamos desarrollando un proyecto académico para conocer cómo se realizan los procesos administrativos y operativos de los gimnasios. Nos interesa conocer su experiencia como recepcionista, especialmente en atención al cliente, registro de pagos, control de membresías, ventas, consulta de información y comunicación con el propietario y los entrenadores. No existen respuestas correctas o incorrectas. La información será utilizada con fines académicos y su participación es voluntaria.
+
+Participante P04: Buenas noches. Actualmente trabajo en el área de recepción de un gimnasio.
+
+[01:05 aprox.]
+Entrevistador: ¿Cuánto tiempo lleva trabajando en recepción y cuáles son sus principales responsabilidades?
+
+Participante P04: Tengo alrededor de ocho meses trabajando en el gimnasio. Llegué porque una conocida me comentó que buscaban a alguien que pudiera desenvolverse bien atendiendo personas y apoyando con las ventas. Al principio pensé que mi función sería únicamente recibir a los clientes, pero fui aprendiendo otras actividades.
+
+Participante P04: Actualmente explico los planes que ofrece el gimnasio, resuelvo dudas sobre precios, recibo pagos y ayudo a las personas nuevas a elegir una opción según el tiempo que piensan entrenar. También estoy pendiente de las promociones y los productos que se ofrecen en recepción. Si llega un suplemento nuevo, debo conocer su precio y sus características para explicárselas al cliente. Otra parte de mi trabajo consiste en revisar qué artículos tienen mayor salida. Mi función está relacionada con la atención, los cobros y el movimiento comercial del gimnasio.
+
+[03:20 aprox.]
+Entrevistador: Explique paso a paso cómo organiza sus actividades desde que inicia hasta que finaliza su jornada.
+
+Participante P04: Mi jornada comienza revisando cómo quedó el área de recepción y qué actividades están pendientes. Primero observo si hay mensajes de personas interesadas en conocer los planes, porque muchas consultas llegan por WhatsApp antes de que el cliente visite el gimnasio. Después reviso las promociones activas y verifico los productos disponibles para no ofrecer algo que ya se terminó.
+
+Participante P04: A medida que llegan las personas, las atiendo según el motivo de su visita. Algunas vienen a entrenar, otras a cancelar su mensualidad y otras quieren conocer el establecimiento antes de inscribirse. En esos casos explico los horarios, los servicios incluidos y las diferencias entre cada plan.
+
+Participante P04: Cuando hay un momento tranquilo, organizo los comprobantes y completo la información pendiente. Antes de retirarme, reviso las ventas del día, dejo preparado el dinero y comunico cualquier asunto que deba continuar la persona del siguiente turno.
+
+[05:35 aprox.]
+Entrevistador: ¿Cómo se registra actualmente un cliente nuevo, qué información se solicita y dónde se almacena?
+
+Participante P04: Cuando llega una persona interesada, primero converso con ella para entender qué está buscando. Le pregunto si ha entrenado antes, cuántos días piensa asistir y si desea pagar por mes o por un período más largo. No siempre se piden los datos inmediatamente porque muchas veces todavía no se sabe qué plan le conviene.
+
+Participante P04: Cuando ya tomó una decisión, solicito su nombre, número de identificación, teléfono y fecha de inicio. También anoto los servicios elegidos y la forma de pago. Esa información se coloca en un archivo compartido entre quienes trabajan en recepción.
+
+Participante P04: El inconveniente es que cada persona ingresa los datos de manera distinta. Una puede escribir el nombre completo y otra solamente el primer nombre y el apellido. Después, al buscarlo, parece que no estuviera registrado. Me ha pasado encontrar dos filas de una misma persona porque fue escrita de diferentes maneras.
+
+[08:05 aprox.]
+Entrevistador: ¿Qué pasos realiza cuando un cliente llega, desde la verificación de la membresía hasta el registro de asistencia?
+
+Participante P04: Con los clientes habituales muchas veces ya sé quiénes son y en qué horario suelen llegar. Aun así, reviso su información cuando la fecha de renovación está cerca o cuando ha pasado bastante tiempo desde su última visita.
+
+Participante P04: La asistencia se lleva en una lista en recepción. Si llegan pocas personas se puede hacer con calma, pero en horarios de mayor concurrencia entran varios clientes casi seguidos. En ese momento también pueden estar preguntando precios, comprando bebidas o esperando para pagar. Por eso algunas asistencias se marcan rápidamente y otras se revisan después.
+
+Participante P04: El problema aparece cuando un nombre queda poco claro o se olvida anotarlo. El control debería ser más sencillo: buscar a la persona y confirmar su entrada con una sola acción, sin revisar distintos documentos.
+
+[10:15 aprox.]
+Entrevistador: Cuando una membresía está vencida o no aparece registrada, ¿cómo comprueba la información y qué procedimiento realiza?
+
+Participante P04: Cuando una persona aparece sin membresía vigente, primero trato de entender qué ocurrió antes de decirle que no puede ingresar. Hay clientes que creen que su plan termina un día diferente o que el mes cuenta desde la fecha del pago, aunque hayan comenzado después. Entonces les explico la fecha registrada y revisamos juntos la información.
+
+Participante P04: También ocurre que alguien asegura haber pagado mediante transferencia. En ese caso le pido que muestre el comprobante y verifico si el valor y la fecha corresponden. Si todavía no existe confirmación, consulto con el propietario. Mientras espero la respuesta, trato de continuar atendiendo para que el cliente esté cómodo.
+
+Participante P04: Lo más complicado es cuando la persona está apurada y siente que se desconfía de ella. Por eso explico que no es algo personal, sino que necesitamos comprobar el pago antes de cambiar el estado de la membresía.
+
+[12:40 aprox.]
+Entrevistador: ¿Qué pasos realiza para registrar el pago o la renovación de una membresía y cómo confirma el comprobante?
+
+Participante P04: Primero explico las opciones disponibles. Algunas personas pagan otro mes, mientras que otras preguntan si existe un beneficio por cancelar varios meses juntos. También debo confirmar si la tarifa sigue siendo la misma, porque en ocasiones se aplican promociones.
+
+Participante P04: Si el pago es en efectivo, cuento el dinero y preparo el recibo. Si se realiza por transferencia, reviso que el comprobante tenga la fecha y el valor correctos. Después indico la nueva vigencia del plan.
+
+Participante P04: En momentos tranquilos el procedimiento se completa de una sola vez. Cuando hay varias personas esperando, a veces se resuelve primero el cobro y se completan los datos unos minutos después. Para evitar confusiones, coloco los recibos pendientes en un lugar separado y luego actualizo la información.
+
+[14:40 aprox.]
+Entrevistador: Cuando realiza la venta de un producto, ¿cómo registra la transacción, actualiza la existencia y controla el dinero?
+
+Participante P04: La venta de productos es una parte diferente del trabajo porque debemos estar pendientes de lo que buscan los clientes. Las bebidas frías suelen venderse con mayor frecuencia, mientras que ciertos suplementos se mueven cuando hay promociones o cuando un entrenador los recomienda.
+
+Participante P04: Cuando realizo una venta, anoto la cantidad y el precio, e indico si el cliente pagó en efectivo o por transferencia. El problema es que las existencias no siempre se revisan en tiempo real. A veces creemos que todavía quedan productos porque aparecen anotados, pero al buscarlos en la vitrina descubrimos que ya se terminaron. En otras ocasiones sí existen, pero están guardados en otro lugar.
+
+Participante P04: Por eso prefiero revisar físicamente antes de confirmar la venta. Sería útil conocer claramente qué productos están disponibles, cuáles se venden más y cuáles necesitan reposición.
+
+[16:55 aprox.]
+Entrevistador: Al finalizar su jornada, ¿cómo verifica y entrega la información de pagos, ventas, asistencias y novedades?
+
+Participante P04: Para cerrar mi turno, primero organizo los comprobantes según el tipo de operación. Separo los pagos de membresías de las ventas de productos y también separo lo pagado en efectivo de lo realizado por transferencia. Esto ayuda a no mezclar cantidades.
+
+Participante P04: Cuando tengo todo clasificado, comparo los valores con el dinero disponible. Si aparece una diferencia, reviso primero las operaciones pequeñas, porque muchas veces el problema está en una bebida o producto que se entregó y no se anotó. También verifico si algún cliente pagó una parte en efectivo y otra mediante transferencia.
+
+Participante P04: Al final preparo un resumen sencillo para el propietario. Trato de dejar claro cuánto ingresó, de dónde salió cada valor y si existe algo pendiente por confirmar.
+
+[18:50 aprox.]
+Entrevistador: ¿Qué información de los clientes necesita consultar o modificar y qué datos deberían tener acceso restringido?
+
+Participante P04: Necesito conocer la información directamente relacionada con la atención: nombre, teléfono, plan contratado, período cubierto, fecha de renovación y si existe una promoción o una parte del pago pendiente. En cuanto a productos, necesito consultar precios actuales y cantidades disponibles.
+
+Participante P04: No necesito acceder a toda la información financiera del gimnasio. Tampoco debería poder cambiar libremente los precios, eliminar operaciones anteriores o modificar los datos de otros trabajadores. Cada persona debería ingresar con una cuenta propia para que las responsabilidades queden claras. Si se cambia un precio o se corrige un cobro, debería quedar registrado quién lo hizo y por qué motivo.
+
+[20:25 aprox.]
+Entrevistador: ¿Qué actividad le genera más errores, retrasos o trabajo repetitivo?
+
+Participante P04: Mantener actualizados los productos mientras continúo atendiendo a los clientes. Una venta puede parecer rápida, pero implica comprobar la existencia, cobrar, entregar el artículo y dejar anotado el movimiento. Cuando se realizan varias ventas pequeñas durante el día, es fácil que alguna quede pendiente.
+
+Participante P04: Otro inconveniente es calcular qué productos tienen buena salida. Podemos saber cuánto queda, pero no siempre es fácil identificar cuántas unidades se venden durante una semana y cuáles artículos permanecen mucho tiempo sin moverse. Esa información sería útil para no comprar de manera innecesaria y aprovechar mejor las promociones.
+
+Participante P04: El trabajo repetitivo consiste en volver a contar productos, revisar, anotar y tratar de descubrir por qué las cantidades físicas no coinciden con lo escrito.
+
+[22:10 aprox.]
+Entrevistador: ¿Cuáles son las tres funciones que no deberían faltar en la primera versión del sistema?
+
+Participante P04: La primera sería un apartado para administrar los planes y promociones. Deberían aparecer los precios vigentes, lo que incluye cada membresía y las condiciones de los descuentos. Así todas las personas de recepción ofrecerían la misma información.
+
+Participante P04: La segunda sería una sección de ventas con catálogo de productos. Al seleccionar una bebida, suplemento o accesorio, el programa debería registrar la forma de pago y descontar la unidad vendida. También sería útil mostrar cuáles artículos tienen poca existencia y cuáles llevan tiempo sin venderse.
+
+Participante P04: La tercera sería un panel sencillo con las actividades pendientes del turno: transferencias por confirmar, clientes interesados en inscribirse, productos que deben solicitarse y mensajes que necesitan respuesta. Sería más útil ver esos pendientes de forma clara que buscarlos entre conversaciones, papeles y archivos.
+
+Entrevistador: Hemos concluido la entrevista. Muchas gracias por su participación.
+
+Participante P04: Gracias a ustedes. Que les vaya bien.
