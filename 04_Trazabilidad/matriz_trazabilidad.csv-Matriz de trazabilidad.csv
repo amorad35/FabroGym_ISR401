@@ -1,0 +1,68 @@
+MATRIZ DE TRAZABILIDAD EXTENDIDA — FABROGYM,,,,,,,,,,,,,,
+"Relación entre fuentes normativas, objetivos, stakeholders, evidencias, requisitos, casos de uso, historias, criterios, componentes y mockups.",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+ID,Ley,Articulo,Objetivo,Stakeholder,ID-EV,ID-RF,Tipo,ID-CU,ID-HU,ID-CA,ID-Componente,ID-Mockup,Prioridad,Descripcion
+RF-AUT-01,LOPDP,Art. 10,Garantizar tratamiento licito y minimizacion de datos,Propietario/Administrador,EV-ENT-01,RF-AUT-01,RF,CU-01,HU-01,CA-01,Seguridad,MU-01,Must,Autenticar usuario
+RF-AUT-02,LOPDP,Art. 20,Controlar acceso por roles y permisos,Propietario/Administrador,EV-ENT-01,RF-AUT-02,RF,CU-02,HU-02,CA-02,Seguridad,MU-22;MU-32,Must,Aplicar permisos por rol
+RF-AUT-03,LOPDP,Art. 24,Asegurar trazabilidad de eventos criticos,Propietario/Administrador,EV-ENT-01,RF-AUT-03,RF,CU-17,HU-17,CA-17,Auditoria,MU-25,Should,Auditar cambios criticos
+RF-CLI-01,Civil/Operacion,Art. N/A,Registrar datos minimos de cliente,Recepcion,EV-ENC-01,RF-CLI-01,RF,CU-03,HU-03,CA-03,Clientes,MU-12;MU-37,Must,Registrar cliente minimo
+RF-CLI-02,Civil/Operacion,Art. N/A,Consultar ficha de cliente,Recepcion,EV-ENC-01,RF-CLI-02,RF,CU-04,HU-04,CA-04,Clientes,MU-11;MU-36,Must,Buscar y consultar cliente
+RF-CLI-03,Civil/Operacion,Art. N/A,Actualizar y reactivar cliente,Recepcion,EV-ENT-02,RF-CLI-03,RF,CU-05,HU-05,CA-05,Clientes,MU-11;MU-36,Must,Actualizar o reactivar sin duplicar
+RF-MEM-01,Operacion,Art. N/A,Configurar catalogo de planes,Propietario/Administrador,EV-ENT-01,RF-MEM-01,RF,CU-06,HU-06,CA-06,Membresias,MU-68,Must,Configurar planes y promociones
+RF-MEM-02,Operacion,Art. N/A,Activar y renovar membresia,Recepcion,EV-ENT-02,RF-MEM-02,RF,CU-07,HU-07,CA-07,Membresias,MU-14;MU-39,Must,Activar o renovar membresia
+RF-MEM-03,Operacion,Art. N/A,Consultar vigencia,Recepcion,EV-ENC-02,RF-MEM-03,RF,CU-08,HU-08,CA-08,Membresias,MU-13;MU-38;MU-63,Must,Consultar vigencia
+RF-MEM-04,Operacion,Art. N/A,Alertar vencimientos,Propietario/Administrador,EV-ENC-02,RF-MEM-04,RF,CU-09,HU-09,CA-09,Membresias,MU-10;MU-13;MU-38,Must,Alertar vencimientos
+RF-PAG-01,Operacion,Art. N/A,Registrar pago y comprobante,Recepcion,EV-DOC-01,RF-PAG-01,RF,CU-10,HU-10,CA-10,Pagos,MU-15;MU-16;MU-40;MU-41,Must,Registrar pago y comprobante
+RF-PAG-02,Operacion,Art. N/A,Resolver pagos pendientes,Recepcion,EV-ENT-02,RF-PAG-02,RF,CU-10,HU-10,CA-10,Pagos,MU-15;MU-40,Should,Resolver pago pendiente
+RF-ASI-01,Operacion,Art. N/A,Registrar asistencia,Recepcion/Instructor,EV-OBS-01,RF-ASI-01,RF,CU-11,HU-11,CA-11,Asistencias,MU-20;MU-30;MU-46;MU-47,Must,Registrar asistencia
+RF-ASI-02,Operacion,Art. N/A,Consultar asistencia,Recepcion/Instructor,EV-OBS-01,RF-ASI-02,RF,CU-12,HU-12,CA-12,Asistencias,MU-20;MU-46;MU-56;MU-65,Must,Consultar asistencia
+RF-INV-01,Operacion,Art. N/A,Administrar productos,Propietario/Administrador,EV-DOC-02,RF-INV-01,RF,CU-13,HU-13,CA-13,Inventario,MU-19;MU-28;MU-44;MU-45,Must,Administrar productos
+RF-INV-02,Operacion,Art. N/A,Registrar movimientos de stock,Propietario/Administrador,EV-DOC-02,RF-INV-02,RF,CU-14,HU-14,CA-14,Inventario,MU-69,Must,Registrar movimientos de stock
+RF-VEN-01,Operacion,Art. N/A,Registrar venta,Recepcion,EV-DOC-02,RF-VEN-01,RF,CU-15,HU-15,CA-15,Ventas,MU-18;MU-27;MU-42;MU-43,Must,Registrar venta
+RF-INV-03,Base interna,N/A,Alertar stock y rotacion,Equipo PFC,EV-INT-01,RF-INV-03,RF,,,CA-N/A,General,MU-10;MU-19;MU-44,Should,Alertar stock y rotacion
+RF-CAJ-01,Operacion,Art. N/A,Cerrar turno y conciliar caja,Propietario/Administrador,EV-OBS-02,RF-CAJ-01,RF,CU-16,HU-16,CA-16,Caja,MU-70,Must,Cerrar turno y conciliar caja
+RF-NOV-01,Operacion,Art. N/A,Gestionar novedades internas,Propietario/Administrador,EV-ENT-03,RF-NOV-01,RF,CU-17,HU-17,CA-17,Novedades,MU-21;MU-50;MU-61,Must,Gestionar novedades internas
+RF-INS-01,Base interna,N/A,Gestionar horario y disponibilidad de instructor,Equipo PFC,EV-INT-01,RF-INS-01,RF,,,CA-N/A,General,MU-23;MU-33;MU-48;MU-49;MU-58,Should,Gestionar horario y disponibilidad de instructor
+RF-RUT-01,Operacion,Art. N/A,Administrar rutinas,Instructor,EV-ENT-03,RF-RUT-01,RF,CU-18,HU-18,CA-18,Rutinas,MU-54;MU-55;MU-64,Must,Crear y asignar rutina
+RF-RUT-02,Operacion,Art. N/A,Registrar seguimiento,Instructor,EV-ENT-03,RF-RUT-02,RF,CU-19,HU-19,CA-19,Rutinas,MU-59;MU-60,Must,Versionar y ajustar rutina
+RF-RUT-03,Base interna,N/A,Registrar seguimiento operativo,Equipo PFC,EV-INT-01,RF-RUT-03,RF,,,CA-N/A,General,MU-59;MU-60,Should,Registrar seguimiento operativo
+RF-REP-01,Base interna,N/A,Consultar panel y reportes,Equipo PFC,EV-INT-01,RF-REP-01,RF,,,CA-N/A,General,MU-10;MU-24;MU-34,Should,Consultar panel y reportes
+RNF-AF-01,Base interna,N/A,Adecuacion funcional,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Adecuacion funcional
+RNF-ED-01,Base interna,N/A,Eficiencia de desempeno,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Eficiencia de desempeno
+RNF-ED-02,Base interna,N/A,Eficiencia de desempeno,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Eficiencia de desempeno
+RNF-COM-01,Base interna,N/A,Compatibilidad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Compatibilidad
+RNF-IU-01,Base interna,N/A,Interaccion de usuario,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Interaccion de usuario
+RNF-IU-02,Base interna,N/A,Interaccion de usuario,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Interaccion de usuario
+RNF-FIA-01,Base interna,N/A,Fiabilidad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Fiabilidad
+RNF-FIA-02,Base interna,N/A,Fiabilidad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Fiabilidad
+RNF-SEG-01,Base interna,N/A,Seguridad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Seguridad
+RNF-SEG-02,Base interna,N/A,Seguridad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Seguridad
+RNF-SEG-03,Base interna,N/A,Seguridad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Seguridad
+RNF-MAN-01,Base interna,N/A,Mantenibilidad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Mantenibilidad
+RNF-MAN-02,Base interna,N/A,Mantenibilidad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Mantenibilidad
+RNF-POR-01,Base interna,N/A,Portabilidad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Portabilidad
+RNF-FLE-01,Base interna,N/A,Flexibilidad,Equipo PFC,EV-INT-01,,RNF,,,CA-N/A,General,No aplica,Sin cambio,Flexibilidad
+RD-PRI-01,Base interna,N/A,Exclusion de salud y biometria real,Equipo PFC,EV-INT-01,,RD,,,CA-N/A,General,No aplica,Sin cambio,Exclusion de salud y biometria real
+RD-PRI-02,Base interna,N/A,Privacidad por diseno y minimo privilegio,Equipo PFC,EV-INT-01,,RD,,,CA-N/A,General,No aplica,Sin cambio,Privacidad por diseno y minimo privilegio
+RD-PRI-03,Base interna,N/A,Derechos del titular,Equipo PFC,EV-INT-01,,RD,,,CA-N/A,General,No aplica,Sin cambio,Derechos del titular
+RD-IA-01,Base interna,N/A,No incorporar IA/AA sin validacion,Equipo PFC,EV-INT-01,,RD,,,CA-N/A,General,No aplica,Sin cambio,No incorporar IA/AA sin validacion
+RNF-IU-01,Rubrica,Art. N/A,Usabilidad en walkthrough,Usuarios técnicos y no técnicos,EV-VAL-01,,RNF,,,CA-IU-01,Interfaces,MU-01;MU-37;MU-47;MU-55,Must,Calidad en tareas críticas
+RNF-IU-02,Base interna,N/A,Mantener consistencia visual,Equipo PFC,EV-INT-02,,RNF,,,CA-IU-02,Interfaces,MU-10;MU-22;MU-68;MU-69;MU-70,Should,Consistencia visual del sistema
+RNF-RE-01,Base interna,N/A,Garantizar uso en horario de gimnasio,Propietario,EV-INT-02,,RNF,,,CA-RE-01,Infraestructura,N/A,Should,Disponibilidad operativa local
+RNF-RE-02,Base interna,N/A,Responder consultas comunes en menos de 3 s,Recepcion,EV-INT-02,,RNF,,,CA-RE-02,Backend,N/A,Must,Tiempo de respuesta
+RNF-RE-03,Base interna,N/A,Asegurar continuidad operativa,Propietario,EV-INT-02,,RNF,,,CA-RE-03,Despliegue,DEP-01,Must,Respaldos diarios
+RNF-SEG-01,LOPDP,Art. 20,Restringir acceso no autorizado,Propietario,EV-ENT-01,,RNF,,,CA-SEG-01,Seguridad,MU-01,Must,Autenticación segura
+RNF-SEG-02,LOPDP,Art. 20,Aplicar permisos por rol,Propietario,EV-ENT-01,,RNF,,,CA-SEG-02,Seguridad,MU-22,Must,Control de privilegios
+RNF-SEG-03,LOPDP,Art. 24,Proteger sesiones y tráfico,Equipo PFC,EV-INT-02,,RNF,,,CA-SEG-03,Despliegue,DEP-01,Must,Sesiones y cifrado TLS
+RNF-MAN-01,ISO/IEC 29148,N/A,Facilitar mantenimiento,Equipo PFC,EV-INT-03,,RNF,,,CA-MAN-01,Componentes,COMP-01,Should,Arquitectura modular
+RNF-MAN-02,ISO/IEC 29148,N/A,Controlar cambios del sistema,Equipo PFC,EV-INT-03,,RNF,,,CA-MAN-02,Auditoria,MU-25,Should,Trazabilidad de cambios
+RNF-PORT-01,Base interna,N/A,Asegurar acceso desde navegador moderno,Usuarios,EV-INT-02,,RNF,,,CA-PORT-01,Frontend,DEP-01,Should,Compatibilidad con navegadores actuales
+RNF-ESC-01,Base interna,N/A,Permitir nuevas funciones,Equipo PFC,EV-INT-03,,RNF,,,CA-ESC-01,Componentes,COMP-01,Could,Escalabilidad por módulos
+RNF-CAL-01,LOPDP,Art. 24,Registrar acciones sensibles,Propietario,EV-ENT-01,,RNF,,,CA-CAL-01,Auditoria,MU-25,Should,Auditoría de operaciones críticas
+RNF-DAT-01,Base interna,N/A,Evitar inconsistencias en pagos y stock,Propietario,EV-INT-02,,RNF,,,CA-DAT-01,Repositorio,MU-69;MU-70,Must,Integridad de transacciones
+RNF-LEG-01,LOPDP,Art. 10,Minimizar y proteger datos personales,Clientes,EV-ENT-01,,RNF,,,CA-LEG-01,Seguridad,MU-01;MU-22,Must,Protección de datos personales
+RD-PRI-01,Base interna,N/A,Usar navegador compatible,Equipo PFC,EV-INT-03,,RD,,,CA-RD-01,Despliegue,DEP-01,Must,Despliegue web responsivo
+RD-PRI-02,Ética PFC,N/A,No exponer datos reales,Equipo PFC,EV-ETH-01,,RD,,,CA-RD-02,MVP,MVP-01,Must,Datos sintéticos en el MVP
+RD-PRI-03,LOPDP,Art. 20,Restringir uso operativo,Propietario,EV-ENT-01,,RD,,,CA-RD-03,Seguridad,MU-01;MU-22,Must,Acceso solo a personal autorizado
+RD-IA-01,Base interna,N/A,Operar con una arquitectura simple,Equipo PFC,EV-INT-03,,RD,,,CA-RD-04,Despliegue,DEP-01,Should,Infraestructura mínima de red local
+RD-DEP-01,Base interna,N/A,Garantizar recuperación diaria,Propietario,EV-INT-03,,RD,,,CA-RD-05,Despliegue,DEP-01,Should,Respaldo cifrado fuera de línea
