@@ -13,6 +13,7 @@
 \fi
 \usepackage[spanish,es-nodecimaldot]{babel}
 \usepackage{microtype,graphicx,longtable,booktabs,tabularx,array,xcolor,enumitem,hyperref,fancyhdr,caption,rotating,float,pdflscape}
+\usepackage[most]{tcolorbox}
 \definecolor{navy}{HTML}{123A5A}
 \definecolor{teal}{HTML}{2A7F85}
 \definecolor{coral}{HTML}{E07A5F}
@@ -26,6 +27,7 @@
 \setlength{\parskip}{4pt}
 \setlist{nosep}
 \newcommand{\status}{\textcolor{coral}{PENDIENTE DE VALIDACION DOCENTE/STAKEHOLDER}}
+\newtcolorbox{cuadrocu}{enhanced,breakable,colback=white,colframe=black,boxrule=0.6pt,arc=0pt,left=6pt,right=6pt,top=5pt,bottom=5pt,before skip=5pt,after skip=6pt}
 \begin{document}
 \begin{titlepage}
 \centering
@@ -682,16 +684,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \subsection{Especificaciones de CU Must}
 
 \subsubsection{CU-01 — Autenticar usuario}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-AUT-01
-\item[Actor primario] Personal autorizado
-\item[Precondicion] cuenta activa
-\item[Disparador] El actor solicita autenticar usuario.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar identificador, secreto; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar sesion o rechazo generico.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] sesion trazable o acceso denegado
-\item[Criterio] Escenario HU-01 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-AUT-01 \\ \hline
+Actor primario & Personal autorizado \\ \hline
+Precondicion & cuenta activa \\ \hline
+Disparador & El actor solicita autenticar usuario. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar identificador, secreto; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar sesion o rechazo generico. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & sesion trazable o acceso denegado \\ \hline
+Criterio & Escenario HU-01 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-01_Autenticar_usuario.png}
@@ -699,16 +706,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-02 — Aplicar permisos por rol}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-AUT-02
-\item[Actor primario] Administrador
-\item[Precondicion] sesion autenticada
-\item[Disparador] El actor solicita aplicar permisos por rol.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar usuario, operacion, recurso; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar permiso o denegacion.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] solo se ejecuta una operacion autorizada
-\item[Criterio] Escenario HU-02 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-AUT-02 \\ \hline
+Actor primario & Administrador \\ \hline
+Precondicion & sesion autenticada \\ \hline
+Disparador & El actor solicita aplicar permisos por rol. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar usuario, operacion, recurso; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar permiso o denegacion. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & solo se ejecuta una operacion autorizada \\ \hline
+Criterio & Escenario HU-02 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-02_Aplicar_permisos_por_rol.png}
@@ -716,16 +728,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-03 — Registrar cliente minimo}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-CLI-01
-\item[Actor primario] Recepcion
-\item[Precondicion] consentimiento/base legitimadora documentada
-\item[Disparador] El actor solicita registrar cliente minimo.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar nombre de uso, contacto opcional; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar cliente y codigo.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] cliente unico activo
-\item[Criterio] Escenario HU-03 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-CLI-01 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & consentimiento/base legitimadora documentada \\ \hline
+Disparador & El actor solicita registrar cliente minimo. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar nombre de uso, contacto opcional; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar cliente y codigo. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & cliente unico activo \\ \hline
+Criterio & Escenario HU-03 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-03_Registrar_cliente_minimo.png}
@@ -733,16 +750,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-04 — Buscar y consultar cliente}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-CLI-02
-\item[Actor primario] Recepcion
-\item[Precondicion] sesion autorizada
-\item[Disparador] El actor solicita buscar y consultar cliente.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar criterio de busqueda; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar lista y ficha autorizada.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] consulta sin modificar datos
-\item[Criterio] Escenario HU-04 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-CLI-02 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & sesion autorizada \\ \hline
+Disparador & El actor solicita buscar y consultar cliente. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar criterio de busqueda; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar lista y ficha autorizada. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & consulta sin modificar datos \\ \hline
+Criterio & Escenario HU-04 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-04_Buscar_y_consultar_cliente.png}
@@ -750,16 +772,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-05 — Actualizar o reactivar sin duplicar}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-CLI-03
-\item[Actor primario] Recepcion
-\item[Precondicion] cliente existente o busqueda previa
-\item[Disparador] El actor solicita actualizar o reactivar sin duplicar.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar codigo y cambios; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar registro actualizado o advertencia.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] historial preservado y sin duplicado confirmado
-\item[Criterio] Escenario HU-05 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-CLI-03 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & cliente existente o busqueda previa \\ \hline
+Disparador & El actor solicita actualizar o reactivar sin duplicar. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar codigo y cambios; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar registro actualizado o advertencia. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & historial preservado y sin duplicado confirmado \\ \hline
+Criterio & Escenario HU-05 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-05_Actualizar_o_reactivar_cliente.png}
@@ -767,16 +794,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-06 — Configurar planes y promociones}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-MEM-01
-\item[Actor primario] Administrador
-\item[Precondicion] sesion de administrador
-\item[Disparador] El actor solicita configurar planes y promociones.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar datos del plan; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar catalogo actualizado.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] version vigente disponible para nuevas membresias
-\item[Criterio] Escenario HU-06 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-MEM-01 \\ \hline
+Actor primario & Administrador \\ \hline
+Precondicion & sesion de administrador \\ \hline
+Disparador & El actor solicita configurar planes y promociones. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar datos del plan; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar catalogo actualizado. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & version vigente disponible para nuevas membresias \\ \hline
+Criterio & Escenario HU-06 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-06_Configurar_planes_y_promociones.png}
@@ -784,16 +816,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-07 — Activar o renovar membresia}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-MEM-02
-\item[Actor primario] Recepcion
-\item[Precondicion] cliente existente y pago confirmado
-\item[Disparador] El actor solicita activar o renovar membresia.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar cliente, plan, pago, fecha; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar membresia vigente.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] periodo nuevo trazable
-\item[Criterio] Escenario HU-07 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-MEM-02 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & cliente existente y pago confirmado \\ \hline
+Disparador & El actor solicita activar o renovar membresia. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar cliente, plan, pago, fecha; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar membresia vigente. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & periodo nuevo trazable \\ \hline
+Criterio & Escenario HU-07 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-07_Activar_o_renovar_membresia.png}
@@ -801,16 +838,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-08 — Consultar vigencia}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-MEM-03
-\item[Actor primario] Personal autorizado
-\item[Precondicion] cliente existente
-\item[Disparador] El actor solicita consultar vigencia.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar codigo de cliente; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar estado y fechas.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] consulta registrada sin cambios
-\item[Criterio] Escenario HU-08 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-MEM-03 \\ \hline
+Actor primario & Personal autorizado \\ \hline
+Precondicion & cliente existente \\ \hline
+Disparador & El actor solicita consultar vigencia. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar codigo de cliente; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar estado y fechas. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & consulta registrada sin cambios \\ \hline
+Criterio & Escenario HU-08 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-08_Consultar_vigencia.png}
@@ -818,16 +860,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-09 — Alertar vencimientos}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-MEM-04
-\item[Actor primario] Recepcion
-\item[Precondicion] membresias registradas
-\item[Disparador] El actor solicita alertar vencimientos.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar fecha de corte; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar lista priorizada.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] alertas internas visibles
-\item[Criterio] Escenario HU-09 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-MEM-04 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & membresias registradas \\ \hline
+Disparador & El actor solicita alertar vencimientos. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar fecha de corte; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar lista priorizada. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & alertas internas visibles \\ \hline
+Criterio & Escenario HU-09 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-09_Alertar_vencimientos.png}
@@ -835,16 +882,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-10 — Registrar pago y comprobante}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-PAG-01
-\item[Actor primario] Recepcion
-\item[Precondicion] sesion autorizada y concepto valido
-\item[Disparador] El actor solicita registrar pago y comprobante.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar cliente, monto, medio, referencia; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar pago y comprobante.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] pago trazable
-\item[Criterio] Escenario HU-10 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-PAG-01 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & sesion autorizada y concepto valido \\ \hline
+Disparador & El actor solicita registrar pago y comprobante. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar cliente, monto, medio, referencia; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar pago y comprobante. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & pago trazable \\ \hline
+Criterio & Escenario HU-10 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-10_Registrar_pago_y_comprobante.png}
@@ -852,16 +904,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-11 — Registrar asistencia}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-ASI-01
-\item[Actor primario] Recepcion
-\item[Precondicion] cliente localizado
-\item[Disparador] El actor solicita registrar asistencia.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar cliente, fecha-hora, excepcion opcional; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar asistencia o rechazo.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] evento unico y trazable
-\item[Criterio] Escenario HU-11 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-ASI-01 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & cliente localizado \\ \hline
+Disparador & El actor solicita registrar asistencia. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar cliente, fecha-hora, excepcion opcional; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar asistencia o rechazo. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & evento unico y trazable \\ \hline
+Criterio & Escenario HU-11 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-11_Registrar_asistencia.png}
@@ -869,16 +926,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-12 — Consultar asistencia}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-ASI-02
-\item[Actor primario] Personal autorizado
-\item[Precondicion] sesion autorizada
-\item[Disparador] El actor solicita consultar asistencia.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar filtros; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar detalle y resumen.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] consulta exportable
-\item[Criterio] Escenario HU-12 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-ASI-02 \\ \hline
+Actor primario & Personal autorizado \\ \hline
+Precondicion & sesion autorizada \\ \hline
+Disparador & El actor solicita consultar asistencia. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar filtros; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar detalle y resumen. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & consulta exportable \\ \hline
+Criterio & Escenario HU-12 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-12_Consultar_asistencia.png}
@@ -886,16 +948,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-13 — Administrar productos}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-INV-01
-\item[Actor primario] Administrador
-\item[Precondicion] sesion de administrador
-\item[Disparador] El actor solicita administrar productos.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar datos de producto; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar producto.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] catalogo consistente
-\item[Criterio] Escenario HU-13 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-INV-01 \\ \hline
+Actor primario & Administrador \\ \hline
+Precondicion & sesion de administrador \\ \hline
+Disparador & El actor solicita administrar productos. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar datos de producto; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar producto. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & catalogo consistente \\ \hline
+Criterio & Escenario HU-13 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-13_Administrar_productos.png}
@@ -903,16 +970,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-14 — Registrar movimientos de stock}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-INV-02
-\item[Actor primario] Personal autorizado
-\item[Precondicion] producto activo
-\item[Disparador] El actor solicita registrar movimientos de stock.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar producto, tipo, cantidad, motivo; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar movimiento y saldo.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] saldo no negativo salvo ajuste autorizado
-\item[Criterio] Escenario HU-14 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-INV-02 \\ \hline
+Actor primario & Personal autorizado \\ \hline
+Precondicion & producto activo \\ \hline
+Disparador & El actor solicita registrar movimientos de stock. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar producto, tipo, cantidad, motivo; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar movimiento y saldo. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & saldo no negativo salvo ajuste autorizado \\ \hline
+Criterio & Escenario HU-14 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-14_Registrar_movimientos_de_stock.png}
@@ -920,16 +992,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-15 — Registrar venta}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-VEN-01
-\item[Actor primario] Recepcion
-\item[Precondicion] productos activos con stock
-\item[Disparador] El actor solicita registrar venta.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar items, cantidades, medio; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar venta, comprobante, saldo.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] venta y stock consistentes
-\item[Criterio] Escenario HU-15 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-VEN-01 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & productos activos con stock \\ \hline
+Disparador & El actor solicita registrar venta. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar items, cantidades, medio; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar venta, comprobante, saldo. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & venta y stock consistentes \\ \hline
+Criterio & Escenario HU-15 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-15_Registrar_venta.png}
@@ -937,16 +1014,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-16 — Cerrar turno y conciliar caja}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-CAJ-01
-\item[Actor primario] Recepcion
-\item[Precondicion] turno abierto
-\item[Disparador] El actor solicita cerrar turno y conciliar caja.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar turno, efectivo contado, observaciones; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar cierre y diferencia.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] turno cerrado e inmutable salvo correccion auditada
-\item[Criterio] Escenario HU-16 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-CAJ-01 \\ \hline
+Actor primario & Recepcion \\ \hline
+Precondicion & turno abierto \\ \hline
+Disparador & El actor solicita cerrar turno y conciliar caja. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar turno, efectivo contado, observaciones; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar cierre y diferencia. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & turno cerrado e inmutable salvo correccion auditada \\ \hline
+Criterio & Escenario HU-16 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-16_Cerrar_turno_y_conciliar_caja.png}
@@ -954,16 +1036,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-17 — Gestionar novedades internas}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-NOV-01
-\item[Actor primario] Personal autorizado
-\item[Precondicion] sesion autorizada
-\item[Disparador] El actor solicita gestionar novedades internas.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar categoria, detalle, responsable; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar novedad trazable.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] novedad visible al responsable y con historial
-\item[Criterio] Escenario HU-17 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-NOV-01 \\ \hline
+Actor primario & Personal autorizado \\ \hline
+Precondicion & sesion autorizada \\ \hline
+Disparador & El actor solicita gestionar novedades internas. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar categoria, detalle, responsable; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar novedad trazable. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & novedad visible al responsable y con historial \\ \hline
+Criterio & Escenario HU-17 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-17_Gestionar_novedades_internas.png}
@@ -971,16 +1058,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-18 — Crear y asignar rutina}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-RUT-01
-\item[Actor primario] Instructor
-\item[Precondicion] instructor autorizado
-\item[Disparador] El actor solicita crear y asignar rutina.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar cliente, objetivo, ejercicios y parametros; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar rutina version 1.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] rutina activa consultable
-\item[Criterio] Escenario HU-18 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-RUT-01 \\ \hline
+Actor primario & Instructor \\ \hline
+Precondicion & instructor autorizado \\ \hline
+Disparador & El actor solicita crear y asignar rutina. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar cliente, objetivo, ejercicios y parametros; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar rutina version 1. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & rutina activa consultable \\ \hline
+Criterio & Escenario HU-18 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-18_Crear_y_asignar_rutina.png}
@@ -988,16 +1080,21 @@ El diagrama precedente resume visualmente los actores y los 19 casos de uso prin
 \end{figure}
 
 \subsubsection{CU-19 — Versionar y ajustar rutina}
-\begin{description}[leftmargin=3.4cm,style=nextline]
-\item[RF asociado] RF-RUT-02
-\item[Actor primario] Instructor
-\item[Precondicion] rutina existente
-\item[Disparador] El actor solicita versionar y ajustar rutina.
-\item[Flujo principal] (1) validar sesion y permisos; (2) validar rutina activa, cambios, motivo; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar nueva version.
-\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
-\item[Postcondicion] una sola version activa e historial preservado
-\item[Criterio] Escenario HU-19 y archivo Gherkin homonimo.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.14}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.25cm}|>{\raggedright\arraybackslash}X|}
+\hline
+RF asociado & RF-RUT-02 \\ \hline
+Actor primario & Instructor \\ \hline
+Precondicion & rutina existente \\ \hline
+Disparador & El actor solicita versionar y ajustar rutina. \\ \hline
+Flujo principal & (1) validar sesion y permisos; (2) validar rutina activa, cambios, motivo; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar nueva version. \\ \hline
+Alternativas & Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada. \\ \hline
+Postcondicion & una sola version activa e historial preservado \\ \hline
+Criterio & Escenario HU-19 y archivo Gherkin homonimo. \\ \hline
+\end{tabularx}
+\endgroup
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-19_Versionar_y_ajustar_rutina.png}
@@ -1130,13 +1227,15 @@ En esta version se incorporan dentro del PDF los 19 diagramas de secuencia asoci
 \caption{Estados de la rutina.}
 \end{figure}
 
+\clearpage
+\begin{landscape}
 \subsubsection{Componentes}
 \begin{figure}[H]
 \centering
-\includegraphics[width=.92\textwidth,height=.40\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/COMP_COMPONENTES_FabroGym.pdf}
+\includegraphics[width=.97\linewidth,height=.76\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/COMP_COMPONENTES_FabroGym.png}
 \caption{Componentes propuestos.}
 \end{figure}
-
+\end{landscape}
 \clearpage
 \subsubsection{Diagrama de despliegue}
 El diagrama siguiente representa la distribucion propuesta entre el dispositivo autorizado, el servidor de aplicacion, la base de datos y el almacen de respaldos. Se mantiene dentro de esta seccion para conservar la continuidad entre los modelos de arquitectura y evitar que LaTeX lo desplace al final del documento.
@@ -1167,83 +1266,89 @@ La matriz de trazabilidad extendida se presenta a continuacion en formato horizo
 
 \begin{landscape}
 \scriptsize
+\renewcommand{\arraystretch}{1.28}
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
-\setlength{\tabcolsep}{2.5pt}
-\begin{longtable}{p{1.7cm}p{1.7cm}p{0.9cm}p{2.6cm}p{1.9cm}p{1.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.5cm}p{1.8cm}}
+\setlength{\tabcolsep}{2.2pt}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{1.7cm}|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}p{1.2cm}|>{\raggedright\arraybackslash}p{4.1cm}|>{\raggedright\arraybackslash}p{2.4cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}|>{\raggedright\arraybackslash}p{2.1cm}|>{\raggedright\arraybackslash}p{2.7cm}|}
 \caption{Matriz de trazabilidad extendida del sistema FabroGym.}\label{tab:trazabilidad-extendida}\\
-\toprule
-ID & Ley/Fuente & Art. & Objetivo & Stakeholder & Ev. & CU & HU & CA & Componente & Mockup \\ \midrule
+\hline
+\textbf{ID} & \textbf{Ley/Fuente} & \textbf{Art.} & \textbf{Objetivo} & \textbf{Stakeholder} & \textbf{Ev.} & \textbf{CU} & \textbf{HU} & \textbf{CA} & \textbf{Componente} & \textbf{Mockup} \\ \hline
 \endfirsthead
-\toprule
-ID & Ley/Fuente & Art. & Objetivo & Stakeholder & Ev. & CU & HU & CA & Componente & Mockup \\ \midrule
+\hline
+\textbf{ID} & \textbf{Ley/Fuente} & \textbf{Art.} & \textbf{Objetivo} & \textbf{Stakeholder} & \textbf{Ev.} & \textbf{CU} & \textbf{HU} & \textbf{CA} & \textbf{Componente} & \textbf{Mockup} \\ \hline
 \endhead
-RF-AUT-01 & LOPDP & Art. 10 & Garantizar tratamiento licito y minimizacion de datos & Propietario/Administrador & EV-ENT-01 & CU-01 & HU-01 & CA-01 & Seguridad & MU-01 \\
-RF-AUT-02 & LOPDP & Art. 20 & Controlar acceso por roles y permisos & Propietario/Administrador & EV-ENT-01 & CU-02 & HU-02 & CA-02 & Seguridad & MU-22;MU-32 \\
-RF-AUT-03 & LOPDP & Art. 24 & Asegurar trazabilidad de eventos criticos & Propietario/Administrador & EV-ENT-01 & CU-17 & HU-17 & CA-17 & Auditoria & MU-25 \\
-RF-CLI-01 & Civil/Operacion & Art. N/A & Registrar datos minimos de cliente & Recepcion & EV-ENC-01 & CU-03 & HU-03 & CA-03 & Clientes & MU-12;MU-37 \\
-RF-CLI-02 & Civil/Operacion & Art. N/A & Consultar ficha de cliente & Recepcion & EV-ENC-01 & CU-04 & HU-04 & CA-04 & Clientes & MU-11;MU-36 \\
-RF-CLI-03 & Civil/Operacion & Art. N/A & Actualizar y reactivar cliente & Recepcion & EV-ENT-02 & CU-05 & HU-05 & CA-05 & Clientes & MU-11;MU-36 \\
-RF-MEM-01 & Operacion & Art. N/A & Configurar catalogo de planes & Propietario/Administrador & EV-ENT-01 & CU-06 & HU-06 & CA-06 & Membresias & MU-68 \\
-RF-MEM-02 & Operacion & Art. N/A & Activar y renovar membresia & Recepcion & EV-ENT-02 & CU-07 & HU-07 & CA-07 & Membresias & MU-14;MU-39 \\
-RF-MEM-03 & Operacion & Art. N/A & Consultar vigencia & Recepcion & EV-ENC-02 & CU-08 & HU-08 & CA-08 & Membresias & MU-13;MU-38;MU-63 \\
-RF-MEM-04 & Operacion & Art. N/A & Alertar vencimientos & Propietario/Administrador & EV-ENC-02 & CU-09 & HU-09 & CA-09 & Membresias & MU-10;MU-13;MU-38 \\
-RF-PAG-01 & Operacion & Art. N/A & Registrar pago y comprobante & Recepcion & EV-DOC-01 & CU-10 & HU-10 & CA-10 & Pagos & MU-15;MU-16;MU-40;MU-41 \\
-RF-PAG-02 & Operacion & Art. N/A & Resolver pagos pendientes & Recepcion & EV-ENT-02 & CU-10 & HU-10 & CA-10 & Pagos & MU-15;MU-40 \\
-RF-ASI-01 & Operacion & Art. N/A & Registrar asistencia & Recepcion/Instructor & EV-OBS-01 & CU-11 & HU-11 & CA-11 & Asistencias & MU-20;MU-30;MU-46;MU-47 \\
-RF-ASI-02 & Operacion & Art. N/A & Consultar asistencia & Recepcion/Instructor & EV-OBS-01 & CU-12 & HU-12 & CA-12 & Asistencias & MU-20;MU-46;MU-56;MU-65 \\
-RF-INV-01 & Operacion & Art. N/A & Administrar productos & Propietario/Administrador & EV-DOC-02 & CU-13 & HU-13 & CA-13 & Inventario & MU-19;MU-28;MU-44;MU-45 \\
-RF-INV-02 & Operacion & Art. N/A & Registrar movimientos de stock & Propietario/Administrador & EV-DOC-02 & CU-14 & HU-14 & CA-14 & Inventario & MU-69 \\
-RF-VEN-01 & Operacion & Art. N/A & Registrar venta & Recepcion & EV-DOC-02 & CU-15 & HU-15 & CA-15 & Ventas & MU-18;MU-27;MU-42;MU-43 \\
-RF-INV-03 & Base interna &  & Alertar stock y rotacion & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-10;MU-19;MU-44 \\
-RF-CAJ-01 & Operacion & Art. N/A & Cerrar turno y conciliar caja & Propietario/Administrador & EV-OBS-02 & CU-16 & HU-16 & CA-16 & Caja & MU-70 \\
-RF-NOV-01 & Operacion & Art. N/A & Gestionar novedades internas & Propietario/Administrador & EV-ENT-03 & CU-17 & HU-17 & CA-17 & Novedades & MU-21;MU-50;MU-61 \\
-RF-INS-01 & Base interna &  & Gestionar horario y disponibilidad de instructor & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-23;MU-33;MU-48;MU-49;MU-58 \\
-RF-RUT-01 & Operacion & Art. N/A & Administrar rutinas & Instructor & EV-ENT-03 & CU-18 & HU-18 & CA-18 & Rutinas & MU-54;MU-55;MU-64 \\
-RF-RUT-02 & Operacion & Art. N/A & Registrar seguimiento & Instructor & EV-ENT-03 & CU-19 & HU-19 & CA-19 & Rutinas & MU-59;MU-60 \\
-RF-RUT-03 & Base interna &  & Registrar seguimiento operativo & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-59;MU-60 \\
-RF-REP-01 & Base interna &  & Consultar panel y reportes & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-10;MU-24;MU-34 \\
-RNF-AF-01 & Base interna &  & Adecuacion funcional & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-ED-01 & Base interna &  & Eficiencia de desempeno & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-ED-02 & Base interna &  & Eficiencia de desempeno & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-COM-01 & Base interna &  & Compatibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-IU-01 & Base interna &  & Interaccion de usuario & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-IU-02 & Base interna &  & Interaccion de usuario & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-FIA-01 & Base interna &  & Fiabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-FIA-02 & Base interna &  & Fiabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-SEG-01 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-SEG-02 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-SEG-03 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-MAN-01 & Base interna &  & Mantenibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-MAN-02 & Base interna &  & Mantenibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-POR-01 & Base interna &  & Portabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-FLE-01 & Base interna &  & Flexibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RD-PRI-01 & Base interna &  & Exclusion de salud y biometria real & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RD-PRI-02 & Base interna &  & Privacidad por diseno y minimo privilegio & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RD-PRI-03 & Base interna &  & Derechos del titular & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RD-IA-01 & Base interna &  & No incorporar IA/AA sin validacion & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
-RNF-IU-01 & Rubrica & Art. N/A & Usabilidad en walkthrough & Usuarios técnicos y no técnicos & EV-VAL-01 &  &  & CA-IU-01 & Interfaces & MU-01;MU-37;MU-47;MU-55 \\
-RNF-IU-02 & Base interna &  & Mantener consistencia visual & Equipo PFC & EV-INT-02 &  &  & CA-IU-02 & Interfaces & MU-10;MU-22;MU-68;MU-69;MU-70 \\
-RNF-RE-01 & Base interna &  & Garantizar uso en horario de gimnasio & Propietario & EV-INT-02 &  &  & CA-RE-01 & Infraestructura &  \\
-RNF-RE-02 & Base interna &  & Responder consultas comunes en menos de 3 s & Recepcion & EV-INT-02 &  &  & CA-RE-02 & Backend &  \\
-RNF-RE-03 & Base interna &  & Asegurar continuidad operativa & Propietario & EV-INT-02 &  &  & CA-RE-03 & Despliegue & DEP-01 \\
-RNF-SEG-01 & LOPDP & Art. 20 & Restringir acceso no autorizado & Propietario & EV-ENT-01 &  &  & CA-SEG-01 & Seguridad & MU-01 \\
-RNF-SEG-02 & LOPDP & Art. 20 & Aplicar permisos por rol & Propietario & EV-ENT-01 &  &  & CA-SEG-02 & Seguridad & MU-22 \\
-RNF-SEG-03 & LOPDP & Art. 24 & Proteger sesiones y tráfico & Equipo PFC & EV-INT-02 &  &  & CA-SEG-03 & Despliegue & DEP-01 \\
-RNF-MAN-01 & ISO/IEC 29148 &  & Facilitar mantenimiento & Equipo PFC & EV-INT-03 &  &  & CA-MAN-01 & Componentes & COMP-01 \\
-RNF-MAN-02 & ISO/IEC 29148 &  & Controlar cambios del sistema & Equipo PFC & EV-INT-03 &  &  & CA-MAN-02 & Auditoria & MU-25 \\
-RNF-PORT-01 & Base interna &  & Asegurar acceso desde navegador moderno & Usuarios & EV-INT-02 &  &  & CA-PORT-01 & Frontend & DEP-01 \\
-RNF-ESC-01 & Base interna &  & Permitir nuevas funciones & Equipo PFC & EV-INT-03 &  &  & CA-ESC-01 & Componentes & COMP-01 \\
-RNF-CAL-01 & LOPDP & Art. 24 & Registrar acciones sensibles & Propietario & EV-ENT-01 &  &  & CA-CAL-01 & Auditoria & MU-25 \\
-RNF-DAT-01 & Base interna &  & Evitar inconsistencias en pagos y stock & Propietario & EV-INT-02 &  &  & CA-DAT-01 & Repositorio & MU-69;MU-70 \\
-RNF-LEG-01 & LOPDP & Art. 10 & Minimizar y proteger datos personales & Clientes & EV-ENT-01 &  &  & CA-LEG-01 & Seguridad & MU-01;MU-22 \\
-RD-PRI-01 & Base interna &  & Usar navegador compatible & Equipo PFC & EV-INT-03 &  &  & CA-RD-01 & Despliegue & DEP-01 \\
-RD-PRI-02 & Ética PFC &  & No exponer datos reales & Equipo PFC & EV-ETH-01 &  &  & CA-RD-02 & MVP & MVP-01 \\
-RD-PRI-03 & LOPDP & Art. 20 & Restringir uso operativo & Propietario & EV-ENT-01 &  &  & CA-RD-03 & Seguridad & MU-01;MU-22 \\
-RD-IA-01 & Base interna &  & Operar con una arquitectura simple & Equipo PFC & EV-INT-03 &  &  & CA-RD-04 & Despliegue & DEP-01 \\
-RD-DEP-01 & Base interna &  & Garantizar recuperación diaria & Propietario & EV-INT-03 &  &  & CA-RD-05 & Despliegue & DEP-01 \\
-\bottomrule
+\hline
+\multicolumn{11}{|r|}{\scriptsize\itshape Continúa en la página siguiente} \\ \hline
+\endfoot
+\hline
+\endlastfoot
+RF-AUT-01 & LOPDP & Art. 10 & Garantizar tratamiento licito y minimizacion de datos & \shortstack[l]{Propietario\\Administrador} & EV-ENT-01 & CU-01 & HU-01 & CA-01 & Seguridad & MU-01 \\ \hline
+RF-AUT-02 & LOPDP & Art. 20 & Controlar acceso por roles y permisos & \shortstack[l]{Propietario\\Administrador} & EV-ENT-01 & CU-02 & HU-02 & CA-02 & Seguridad & MU-22;MU-32 \\ \hline
+RF-AUT-03 & LOPDP & Art. 24 & Asegurar trazabilidad de eventos criticos & \shortstack[l]{Propietario\\Administrador} & EV-ENT-01 & CU-17 & HU-17 & CA-17 & Auditoria & MU-25 \\ \hline
+RF-CLI-01 & Civil/Operacion & Art. N/A & Registrar datos minimos de cliente & Recepcion & EV-ENC-01 & CU-03 & HU-03 & CA-03 & Clientes & MU-12;MU-37 \\ \hline
+RF-CLI-02 & Civil/Operacion & Art. N/A & Consultar ficha de cliente & Recepcion & EV-ENC-01 & CU-04 & HU-04 & CA-04 & Clientes & MU-11;MU-36 \\ \hline
+RF-CLI-03 & Civil/Operacion & Art. N/A & Actualizar y reactivar cliente & Recepcion & EV-ENT-02 & CU-05 & HU-05 & CA-05 & Clientes & MU-11;MU-36 \\ \hline
+RF-MEM-01 & Operacion & Art. N/A & Configurar catalogo de planes & \shortstack[l]{Propietario\\Administrador} & EV-ENT-01 & CU-06 & HU-06 & CA-06 & Membresias & MU-68 \\ \hline
+RF-MEM-02 & Operacion & Art. N/A & Activar y renovar membresia & Recepcion & EV-ENT-02 & CU-07 & HU-07 & CA-07 & Membresias & MU-14;MU-39 \\ \hline
+RF-MEM-03 & Operacion & Art. N/A & Consultar vigencia & Recepcion & EV-ENC-02 & CU-08 & HU-08 & CA-08 & Membresias & MU-13;MU-38;MU-63 \\ \hline
+RF-MEM-04 & Operacion & Art. N/A & Alertar vencimientos & \shortstack[l]{Propietario\\Administrador} & EV-ENC-02 & CU-09 & HU-09 & CA-09 & Membresias & MU-10;MU-13;MU-38 \\ \hline
+RF-PAG-01 & Operacion & Art. N/A & Registrar pago y comprobante & Recepcion & EV-DOC-01 & CU-10 & HU-10 & CA-10 & Pagos & MU-15;MU-16;MU-40;MU-41 \\ \hline
+RF-PAG-02 & Operacion & Art. N/A & Resolver pagos pendientes & Recepcion & EV-ENT-02 & CU-10 & HU-10 & CA-10 & Pagos & MU-15;MU-40 \\ \hline
+RF-ASI-01 & Operacion & Art. N/A & Registrar asistencia & \shortstack[l]{Recepcion\\Instructor} & EV-OBS-01 & CU-11 & HU-11 & CA-11 & Asistencias & MU-20;MU-30;MU-46;MU-47 \\ \hline
+RF-ASI-02 & Operacion & Art. N/A & Consultar asistencia & \shortstack[l]{Recepcion\\Instructor} & EV-OBS-01 & CU-12 & HU-12 & CA-12 & Asistencias & MU-20;MU-46;MU-56;MU-65 \\ \hline
+RF-INV-01 & Operacion & Art. N/A & Administrar productos & \shortstack[l]{Propietario\\Administrador} & EV-DOC-02 & CU-13 & HU-13 & CA-13 & Inventario & MU-19;MU-28;MU-44;MU-45 \\ \hline
+RF-INV-02 & Operacion & Art. N/A & Registrar movimientos de stock & \shortstack[l]{Propietario\\Administrador} & EV-DOC-02 & CU-14 & HU-14 & CA-14 & Inventario & MU-69 \\ \hline
+RF-VEN-01 & Operacion & Art. N/A & Registrar venta & Recepcion & EV-DOC-02 & CU-15 & HU-15 & CA-15 & Ventas & MU-18;MU-27;MU-42;MU-43 \\ \hline
+RF-INV-03 & Base interna &  & Alertar stock y rotacion & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-10;MU-19;MU-44 \\ \hline
+RF-CAJ-01 & Operacion & Art. N/A & Cerrar turno y conciliar caja & \shortstack[l]{Propietario\\Administrador} & EV-OBS-02 & CU-16 & HU-16 & CA-16 & Caja & MU-70 \\ \hline
+RF-NOV-01 & Operacion & Art. N/A & Gestionar novedades internas & \shortstack[l]{Propietario\\Administrador} & EV-ENT-03 & CU-17 & HU-17 & CA-17 & Novedades & MU-21;MU-50;MU-61 \\ \hline
+RF-INS-01 & Base interna &  & Gestionar horario y disponibilidad de instructor & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-23;MU-33;MU-48;MU-49;MU-58 \\ \hline
+RF-RUT-01 & Operacion & Art. N/A & Administrar rutinas & Instructor & EV-ENT-03 & CU-18 & HU-18 & CA-18 & Rutinas & MU-54;MU-55;MU-64 \\ \hline
+RF-RUT-02 & Operacion & Art. N/A & Registrar seguimiento & Instructor & EV-ENT-03 & CU-19 & HU-19 & CA-19 & Rutinas & MU-59;MU-60 \\ \hline
+RF-RUT-03 & Base interna &  & Registrar seguimiento operativo & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-59;MU-60 \\ \hline
+RF-REP-01 & Base interna &  & Consultar panel y reportes & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-10;MU-24;MU-34 \\ \hline
+RNF-AF-01 & Base interna &  & Adecuacion funcional & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-ED-01 & Base interna &  & Eficiencia de desempeno & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-ED-02 & Base interna &  & Eficiencia de desempeno & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-COM-01 & Base interna &  & Compatibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-IU-01 & Base interna &  & Interaccion de usuario & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-IU-02 & Base interna &  & Interaccion de usuario & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-FIA-01 & Base interna &  & Fiabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-FIA-02 & Base interna &  & Fiabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-SEG-01 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-SEG-02 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-SEG-03 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-MAN-01 & Base interna &  & Mantenibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-MAN-02 & Base interna &  & Mantenibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-POR-01 & Base interna &  & Portabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-FLE-01 & Base interna &  & Flexibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RD-PRI-01 & Base interna &  & Exclusion de salud y biometria real & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RD-PRI-02 & Base interna &  & Privacidad por diseno y minimo privilegio & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RD-PRI-03 & Base interna &  & Derechos del titular & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RD-IA-01 & Base interna &  & No incorporar IA/AA sin validacion & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
+RNF-IU-01 & Rubrica & Art. N/A & Usabilidad en walkthrough & Usuarios técnicos y no técnicos & EV-VAL-01 &  &  & CA-IU-01 & Interfaces & MU-01;MU-37;MU-47;MU-55 \\ \hline
+RNF-IU-02 & Base interna &  & Mantener consistencia visual & Equipo PFC & EV-INT-02 &  &  & CA-IU-02 & Interfaces & MU-10;MU-22;MU-68;MU-69;MU-70 \\ \hline
+RNF-RE-01 & Base interna &  & Garantizar uso en horario de gimnasio & Propietario & EV-INT-02 &  &  & CA-RE-01 & Infraestructura &  \\ \hline
+RNF-RE-02 & Base interna &  & Responder consultas comunes en menos de 3 s & Recepcion & EV-INT-02 &  &  & CA-RE-02 & Backend &  \\ \hline
+RNF-RE-03 & Base interna &  & Asegurar continuidad operativa & Propietario & EV-INT-02 &  &  & CA-RE-03 & Despliegue & DEP-01 \\ \hline
+RNF-SEG-01 & LOPDP & Art. 20 & Restringir acceso no autorizado & Propietario & EV-ENT-01 &  &  & CA-SEG-01 & Seguridad & MU-01 \\ \hline
+RNF-SEG-02 & LOPDP & Art. 20 & Aplicar permisos por rol & Propietario & EV-ENT-01 &  &  & CA-SEG-02 & Seguridad & MU-22 \\ \hline
+RNF-SEG-03 & LOPDP & Art. 24 & Proteger sesiones y tráfico & Equipo PFC & EV-INT-02 &  &  & CA-SEG-03 & Despliegue & DEP-01 \\ \hline
+RNF-MAN-01 & ISO/IEC 29148 &  & Facilitar mantenimiento & Equipo PFC & EV-INT-03 &  &  & CA-MAN-01 & Componentes & COMP-01 \\ \hline
+RNF-MAN-02 & ISO/IEC 29148 &  & Controlar cambios del sistema & Equipo PFC & EV-INT-03 &  &  & CA-MAN-02 & Auditoria & MU-25 \\ \hline
+RNF-PORT-01 & Base interna &  & Asegurar acceso desde navegador moderno & Usuarios & EV-INT-02 &  &  & CA-PORT-01 & Frontend & DEP-01 \\ \hline
+RNF-ESC-01 & Base interna &  & Permitir nuevas funciones & Equipo PFC & EV-INT-03 &  &  & CA-ESC-01 & Componentes & COMP-01 \\ \hline
+RNF-CAL-01 & LOPDP & Art. 24 & Registrar acciones sensibles & Propietario & EV-ENT-01 &  &  & CA-CAL-01 & Auditoria & MU-25 \\ \hline
+RNF-DAT-01 & Base interna &  & Evitar inconsistencias en pagos y stock & Propietario & EV-INT-02 &  &  & CA-DAT-01 & Repositorio & MU-69;MU-70 \\ \hline
+RNF-LEG-01 & LOPDP & Art. 10 & Minimizar y proteger datos personales & Clientes & EV-ENT-01 &  &  & CA-LEG-01 & Seguridad & MU-01;MU-22 \\ \hline
+RD-PRI-01 & Base interna &  & Usar navegador compatible & Equipo PFC & EV-INT-03 &  &  & CA-RD-01 & Despliegue & DEP-01 \\ \hline
+RD-PRI-02 & Ética PFC &  & No exponer datos reales & Equipo PFC & EV-ETH-01 &  &  & CA-RD-02 & MVP & MVP-01 \\ \hline
+RD-PRI-03 & LOPDP & Art. 20 & Restringir uso operativo & Propietario & EV-ENT-01 &  &  & CA-RD-03 & Seguridad & MU-01;MU-22 \\ \hline
+RD-IA-01 & Base interna &  & Operar con una arquitectura simple & Equipo PFC & EV-INT-03 &  &  & CA-RD-04 & Despliegue & DEP-01 \\ \hline
+RD-DEP-01 & Base interna &  & Garantizar recuperación diaria & Propietario & EV-INT-03 &  &  & CA-RD-05 & Despliegue & DEP-01 \\ \hline
 \end{longtable}
+\renewcommand{\arraystretch}{1}
 \normalsize
 \end{landscape}
 
