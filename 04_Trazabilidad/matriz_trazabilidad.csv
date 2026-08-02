@@ -1,7 +1,7 @@
 MATRIZ DE TRAZABILIDAD EXTENDIDA — FABROGYM,,,,,,,,,,,,,,
 "Relación entre fuentes normativas, objetivos, stakeholders, evidencias, requisitos, casos de uso, historias, criterios, componentes y mockups.",,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
-ID,Ley,Articulo,Objetivo,Stakeholder,ID-EV,ID-RF,Tipo,ID-CU,ID-HU,ID-CA,ID-Componente,ID-Mockup,Prioridad,Descripcion
+ID,Ley,Articulo,Objetivo,Stakeholder,ID-EV,ID-RF,Tipo,ID-CU,ID-HU,ID-CA,ID-Componente,ID-Mockup,Moscow,Descripcion
 RF-AUT-01,LOPDP,Art. 10,Garantizar tratamiento licito y minimizacion de datos,Propietario/Administrador,EV-ENT-01,RF-AUT-01,RF,CU-01,HU-01,CA-01,Seguridad,MU-01,Must,Autenticar usuario
 RF-AUT-02,LOPDP,Art. 20,Controlar acceso por roles y permisos,Propietario/Administrador,EV-ENT-01,RF-AUT-02,RF,CU-02,HU-02,CA-02,Seguridad,MU-22;MU-32,Must,Aplicar permisos por rol
 RF-AUT-03,LOPDP,Art. 24,Asegurar trazabilidad de eventos criticos,Propietario/Administrador,EV-ENT-01,RF-AUT-03,RF,CU-17,HU-17,CA-17,Auditoria,MU-25,Should,Auditar cambios criticos
