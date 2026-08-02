@@ -1,0 +1,1396 @@
+
+\documentclass[11pt,a4paper,twoside]{article}
+\usepackage[inner=30mm,outer=22mm,top=22mm,bottom=23mm,headheight=14pt]{geometry}
+% Compatibilidad con pdfLaTeX, XeLaTeX y LuaLaTeX.
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{newtxtext,newtxmath}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+\fi
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{microtype,graphicx,longtable,booktabs,tabularx,array,xcolor,enumitem,hyperref,fancyhdr,caption,rotating,float,pdflscape}
+\definecolor{navy}{HTML}{123A5A}
+\definecolor{teal}{HTML}{2A7F85}
+\definecolor{coral}{HTML}{E07A5F}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=teal,citecolor=navy}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small FabroGym — ERS/SRS 2A}
+\fancyhead[RO]{\small Entrega 3 (2A) — v1.5.4}
+\fancyfoot[LE,RO]{\thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist{nosep}
+\newcommand{\status}{\textcolor{coral}{PENDIENTE DE VALIDACION DOCENTE/STAKEHOLDER}}
+\begin{document}
+\begin{titlepage}
+\centering
+{\Large\bfseries UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO\par}
+\vspace{0.28cm}
+{\large Facultad de Ciencias de la Computación\par}
+{\large Carrera de Ingeniería de Software\par}
+\vspace{0.50cm}
+{\large Asignatura: Ingeniería de Requerimientos (ISR-401)\par}
+\vspace{0.50cm}
+{\LARGE\bfseries Especificación de Requisitos de\\Software (ERS/SRS)\par}
+\vspace{0.30cm}
+{\Large\bfseries Entrega 3 (2A): ERS/SRS completo\par}
+{\normalsize con validación y trazabilidad\par}
+\vspace{0.48cm}
+{\Large\bfseries Sistema de gestión administrativa y operativa para un gimnasio\par}
+\vspace{0.45cm}
+\renewcommand{\arraystretch}{1.08}
+\small
+\begin{tabularx}{\textwidth}{|>{\bfseries}p{3.7cm}|X|}\hline
+Título del sistema: & Sistema de gestión administrativa y operativa para un gimnasio\\\hline
+Nombre del equipo: & Equipo PFC -- Gimnasio\\\hline
+Paralelo: & Software A\\\hline
+Contexto de aplicación: & Gestión de gimnasios en general; el alcance no se restringe a una sola organización cliente.\\\hline
+Versión del documento: & 1.4 -- compatibilidad con pdfLaTeX, XeLaTeX y LuaLaTeX\\\hline
+Fecha de entrega: & 2 de agosto de 2026\\\hline
+Docente: & PhD. Guerrero Ulloa Gleiston Ciceron\\\hline
+Repositorio GitHub: & \url{https://github.com/amorad35/FabroGym_ISR401}\\\hline
+Estado del documento: & Versión consolidada para revisión académica.\\\hline
+\end{tabularx}
+\vspace{0.28cm}
+{\normalsize\bfseries Integrantes con roles asignados\par}
+\vspace{0.12cm}
+\begin{tabularx}{\textwidth}{|X|X|p{2.7cm}|}\hline
+\textbf{Integrante} & \textbf{Rol principal} & \textbf{Cédula}\\\hline
+Alvia Villegas Erick Adalberto & Analista líder / entrevistador & 0942146200\\\hline
+Mera Arias Erick Jhair & Documentador / responsable de encuestas & 1206741108\\\hline
+Mora Duarte Alex José & Modelador / apoyo de análisis & 1207856350\\\hline
+Ponce Rivera Mery Helenmey & Verificador / calidad de requisitos & 1250801998\\\hline
+Vaca Romero David Octavio & Apoyo documental / evidencias & 1250083423\\\hline
+\end{tabularx}
+\vfill
+\normalsize Quevedo, Ecuador -- 2026
+\end{titlepage}
+\tableofcontents
+\listoffigures
+\newpage
+
+\section{Control de version y estado}
+El PDF se genera desde este proyecto LaTeX. El DOCX conserva el mismo contenido sustantivo de la correccion incremental. No se declaran aprobacion etica, firmas, OSF, Zenodo, resultados experimentales ni evidencias multimedia ausentes.
+
+\begin{tabularx}{\textwidth}{p{2.5cm}p{2.3cm}X}
+\toprule Version & Fecha & Cambio \\ \midrule
+1.1 & 2026-08-02 & Correccion incremental de revision, clasificacion y trazabilidad de 67 mockups; solo se actualizan secciones afectadas. \\
+1.4 & 2026-08-02 & Correccion de compilacion: preambulo compatible con pdfLaTeX, XeLaTeX y LuaLaTeX; se elimina la dependencia exclusiva de fontspec. \\
+1.3 & 2026-08-02 & Correccion de ubicacion del diagrama de despliegue dentro de su seccion. \\
+1.2 & 2026-08-02 & Integracion sobre la version 1.1: caratula institucional en una pagina, redaccion neutral de cobertura sin pantalla exclusiva y orientacion correcta del diagrama de clases. \\
++1.0.0-rc1 & 2026-08-02 & Reconstruccion integral con diez transcripciones, 26 respuestas, 25 RF, 15 RNF, UML y trazabilidad. \\
+0.2.0 & 2026-07-12 & Entrega anterior, usada solo como referencia estructural. \\
+\bottomrule
+\end{tabularx}
+
+\section{Introduccion}
+\subsection{Proposito}
+Especificar de forma verificable el producto FabroGym, relacionando necesidades administrativas y operativas con evidencia anonimizada, restricciones legales, historias, modelos, componentes y pruebas.
+\subsection{Alcance}
+Incluye autenticacion no biometrica, clientes minimos, membresias, pagos, asistencia, productos, inventario, ventas, cierre de caja, novedades, horarios de instructor, rutinas no sensibles y reportes. Excluye facturacion electronica integrada, bancos, nomina, marketing, reconocimiento biometrico, salud, diagnostico, nutricion, peso/medidas reales, imagen corporal e IA/AA.
+\subsection{Glosario}
+EV: identificador de evidencia; RF/RNF/RD: requisito funcional, no funcional o restriccion de diseno; CU: caso de uso; HU: historia; CA: criterio; MVP: producto minimo viable; LOPDP: Ley Organica de Proteccion de Datos Personales; Must/Should/Could/Won't: prioridades MoSCoW.
+\subsection{Referencias}
+La bibliografia contiene mas de 25 fuentes primarias/normativas, con al menos diez de 2023--2026 (ISO 25010, SWEBOK, Cheng, Arora, Vogelsang, Fischbach, W3C, SPDP 2025/2026, OWASP y NIST). Se emplean \cite{iso25010,swebok2024,pohl2010,iso29148}.
+
+\section{Descripcion general}
+\subsection{Perspectiva y limites}
+FabroGym se plantea como sistema web modular. WhatsApp, correo, facturacion electronica y sistemas bancarios quedan externos; solo se generan listas o referencias para gestion manual.
+\begin{figure}[ht]\centering\includegraphics[width=.92\textwidth]{imagenes/uso_documento/diagramas/CTX_CONTEXTO_FabroGym.pdf}\caption{Contexto y limites del sistema.}\end{figure}
+\subsection{Usuarios}
+Administrador configura y audita; Recepcion ejecuta operacion diaria; Instructor gestiona agenda y rutinas no sensibles. Cliente es actor futuro de consulta propia y no es esencial al MVP actual.
+\subsection{Stakeholders y poder/interes}
+\begin{tabularx}{\textwidth}{lccX}\toprule Interesado & Poder & Interes & Estrategia \\ \midrule
+Propietario/administrador & Alto & Alto & Gestion estrecha y decisiones de alcance. \\
+Recepcion & Medio & Alto & Validacion frecuente de flujos y tiempos. \\
+Instructor & Medio & Alto & Validacion de rutinas y agenda sin datos sensibles. \\
+Docente/comite etico & Alto & Alto & Gatekeeper de metodologia, etica y publicacion. \\
+Personas voluntarias permitidas & Bajo & Medio & Pruebas informadas y anonimas; sin socios reales. \\
+\bottomrule\end{tabularx}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.94\textwidth]{imagenes/uso_documento/diagramas/MAPA_PODER_INTERES_FabroGym.png}
+\caption{Mapa de stakeholders segun poder e interes.}
+\end{figure}
+\subsection{Entorno, supuestos y dependencias}
+Navegadores actuales, despliegue web y datos sinteticos. Depende de reglas de negocio validadas, disponibilidad de personal permitido por Categoria A y aprobaciones pendientes. No se presupone conectividad permanente para el MVP estatico.
+\subsection{Modelado organizacional i*}
+\begin{figure}[ht]\centering\includegraphics[width=.86\textwidth]{imagenes/uso_documento/diagramas/ISTAR_SD_FabroGym.pdf}\caption{Dependencias estrategicas (SD).}\end{figure}
+\begin{figure}[ht]\centering\includegraphics[width=.82\textwidth]{imagenes/uso_documento/diagramas/ISTAR_SR_FabroGym.pdf}\caption{Razon estrategica (SR).}\end{figure}
+
+\section{Fuente empirica y codificacion}
+Se cubren diez archivos. ENTR-05/06 presentan solapamiento y ENTR-10 reutiliza P06; por ello la curva es descriptiva y no prueba saturacion teorica. Las 26 respuestas del cuestionario estan debajo del minimo general n=30 y requieren ruta alternativa Categoria A aprobada. Las transcripciones son fuente; la ERS anterior no se usa como evidencia.
+\begin{figure}[ht]\centering\includegraphics[width=.86\textwidth]{imagenes/uso_documento/diagramas/curva_saturacion.png}\caption{Codigos acumulados y nuevos; interpretacion condicionada a verificacion de independencia.}\end{figure}
+
+\section{Requisitos funcionales}
+
+\subsubsection{RF-AUT-01 — Autenticar usuario}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Personal autorizado
+\item[Descripcion] El sistema permitira iniciar y cerrar sesion mediante credenciales individuales no biometricas.
+\item[Entradas] identificador, secreto
+\item[Salidas] sesion o rechazo generico
+\item[Precondicion] cuenta activa
+\item[Postcondicion] sesion trazable o acceso denegado
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR02-07
+\item[Componente/Mockup] Seguridad / MU-01
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-AUT-02 — Aplicar permisos por rol}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Administrador
+\item[Descripcion] El sistema autorizara cada operacion segun el rol Administrador, Recepcion o Instructor y denegara por defecto las no asignadas.
+\item[Entradas] usuario, operacion, recurso
+\item[Salidas] permiso o denegacion
+\item[Precondicion] sesion autenticada
+\item[Postcondicion] solo se ejecuta una operacion autorizada
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR02-07;EV-ENTR03-06;EV-ENTR08-04
+\item[Componente/Mockup] Seguridad / MU-22;MU-32
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-AUT-03 — Auditar cambios criticos}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Administrador
+\item[Descripcion] El sistema registrara autor, fecha, accion y valores anterior/nuevo para pagos, precios, inventario, membresias y permisos.
+\item[Entradas] operacion critica
+\item[Salidas] evento de auditoria
+\item[Precondicion] sesion autorizada
+\item[Postcondicion] evento inalterable disponible para consulta
+\item[Prioridad/Kano] Should / Desempeno
+\item[Evidencia] EV-ENTR02-04;EV-ENTR02-07;EV-ENTR03-06
+\item[Componente/Mockup] Auditoria / MU-25
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-CLI-01 — Registrar cliente minimo}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema registrara un cliente con codigo interno, nombre de uso y un medio de contacto, sin salud, biometria, direccion ni imagen corporal.
+\item[Entradas] nombre de uso, contacto opcional
+\item[Salidas] cliente y codigo
+\item[Precondicion] consentimiento/base legitimadora documentada
+\item[Postcondicion] cliente unico activo
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR01-02;EV-ENTR02-02;EV-ENTR03-02;EV-ENTR08-01
+\item[Componente/Mockup] Clientes / MU-12*;MU-37*
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-CLI-02 — Buscar y consultar cliente}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema buscara clientes por codigo, nombre normalizado o contacto y mostrara membresia, ultimo pago, asistencia y novedades segun permisos.
+\item[Entradas] criterio de busqueda
+\item[Salidas] lista y ficha autorizada
+\item[Precondicion] sesion autorizada
+\item[Postcondicion] consulta sin modificar datos
+\item[Prioridad/Kano] Must / Desempeno
+\item[Evidencia] EV-ENTR02-03;EV-ENTR02-08;EV-ENTR08-05
+\item[Componente/Mockup] Clientes / MU-11;MU-36
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-CLI-03 — Actualizar o reactivar sin duplicar}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema actualizara o reactivara un registro existente y advertira coincidencias antes de crear otro cliente.
+\item[Entradas] codigo y cambios
+\item[Salidas] registro actualizado o advertencia
+\item[Precondicion] cliente existente o busqueda previa
+\item[Postcondicion] historial preservado y sin duplicado confirmado
+\item[Prioridad/Kano] Must / Desempeno
+\item[Evidencia] EV-ENTR02-02;EV-ENTR03-02;EV-ENTR04-01;EV-ENTR05-02
+\item[Componente/Mockup] Clientes / MU-11;MU-36
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-MEM-01 — Configurar planes y promociones}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Administrador
+\item[Descripcion] El sistema administrara nombre, duracion, precio, vigencia y estado de planes y promociones.
+\item[Entradas] datos del plan
+\item[Salidas] catalogo actualizado
+\item[Precondicion] sesion de administrador
+\item[Postcondicion] version vigente disponible para nuevas membresias
+\item[Prioridad/Kano] Must / Desempeno
+\item[Evidencia] EV-ENTR02-01;EV-ENTR04-01
+\item[Componente/Mockup] Membresias / SIN PANTALLA EXCLUSIVA; COBERTURA RF/CU/HU
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-MEM-02 — Activar o renovar membresia}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema activara o renovara una membresia calculando inicio y vencimiento desde un plan vigente y un pago confirmado.
+\item[Entradas] cliente, plan, pago, fecha
+\item[Salidas] membresia vigente
+\item[Precondicion] cliente existente y pago confirmado
+\item[Postcondicion] periodo nuevo trazable
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-01;EV-ENTR04-03
+\item[Componente/Mockup] Membresias / MU-14;MU-39
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-MEM-03 — Consultar vigencia}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Personal autorizado
+\item[Descripcion] El sistema mostrara estado, plan, fecha de inicio y vencimiento de la membresia.
+\item[Entradas] codigo de cliente
+\item[Salidas] estado y fechas
+\item[Precondicion] cliente existente
+\item[Postcondicion] consulta registrada sin cambios
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR01-03;EV-ENTR02-03;EV-ENTR03-03;EV-ENTR08-02
+\item[Componente/Mockup] Membresias / MU-13;MU-38;MU-63(F)
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-MEM-04 — Alertar vencimientos}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema listara diariamente membresias que vencen en los proximos tres dias y las vencidas, sin enviar mensajes externos automaticamente.
+\item[Entradas] fecha de corte
+\item[Salidas] lista priorizada
+\item[Precondicion] membresias registradas
+\item[Postcondicion] alertas internas visibles
+\item[Prioridad/Kano] Must / Desempeno
+\item[Evidencia] EV-ENTR01-03;EV-ENTR05-02;EV-ENTR07-02
+\item[Componente/Mockup] Membresias / MU-10;MU-13;MU-38
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-PAG-01 — Registrar pago y comprobante}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema registrara monto, concepto, medio, referencia y fecha de un pago, y generara un comprobante interno.
+\item[Entradas] cliente, monto, medio, referencia
+\item[Salidas] pago y comprobante
+\item[Precondicion] sesion autorizada y concepto valido
+\item[Postcondicion] pago trazable
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-02;EV-ENTR08-03
+\item[Componente/Mockup] Pagos / MU-15;MU-16;MU-40;MU-41
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-PAG-02 — Resolver pago pendiente}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Administrador
+\item[Descripcion] El sistema permitira confirmar, rechazar o corregir un pago pendiente conservando motivo y auditoria.
+\item[Entradas] pago, decision, motivo
+\item[Salidas] estado resuelto
+\item[Precondicion] pago pendiente y evidencia disponible
+\item[Postcondicion] membresia recalculada solo si se confirma
+\item[Prioridad/Kano] Should / Desempeno
+\item[Evidencia] EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-07
+\item[Componente/Mockup] Pagos / MU-15;MU-40
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-ASI-01 — Registrar asistencia}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema registrara una asistencia no biometrica en una accion tras validar identidad operativa y vigencia, o documentara una excepcion autorizada.
+\item[Entradas] cliente, fecha-hora, excepcion opcional
+\item[Salidas] asistencia o rechazo
+\item[Precondicion] cliente localizado
+\item[Postcondicion] evento unico y trazable
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR02-03;EV-ENTR03-03;EV-ENTR04-02;EV-ENTR07-07;EV-ENTR08-02
+\item[Componente/Mockup] Asistencia / MU-20;MU-30*;MU-46;MU-47*
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-ASI-02 — Consultar asistencia}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Personal autorizado
+\item[Descripcion] El sistema filtrara asistencias por cliente, fecha y turno, y mostrara conteos operativos.
+\item[Entradas] filtros
+\item[Salidas] detalle y resumen
+\item[Precondicion] sesion autorizada
+\item[Postcondicion] consulta exportable
+\item[Prioridad/Kano] Must / Desempeno
+\item[Evidencia] EV-ENTR03-01;EV-ENTR07-01;EV-ENTR08-05;EV-ENTR09-06
+\item[Componente/Mockup] Asistencia / MU-20;MU-46;MU-56;MU-65(F)
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-INV-01 — Administrar productos}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Administrador
+\item[Descripcion] El sistema registrara productos con codigo, nombre, precio, unidad, stock minimo y estado.
+\item[Entradas] datos de producto
+\item[Salidas] producto
+\item[Precondicion] sesion de administrador
+\item[Postcondicion] catalogo consistente
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR01-01;EV-ENTR02-05
+\item[Componente/Mockup] Inventario / MU-19;MU-28;MU-44*;MU-45*
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-INV-02 — Registrar movimientos de stock}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Personal autorizado
+\item[Descripcion] El sistema registrara entradas y ajustes con cantidad, motivo, responsable y saldo resultante.
+\item[Entradas] producto, tipo, cantidad, motivo
+\item[Salidas] movimiento y saldo
+\item[Precondicion] producto activo
+\item[Postcondicion] saldo no negativo salvo ajuste autorizado
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR01-04;EV-ENTR04-04;EV-ENTR07-03
+\item[Componente/Mockup] Inventario / SIN PANTALLA EXCLUSIVA; COBERTURA RF/CU/HU
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-VEN-01 — Registrar venta}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema registrara una venta con items y medio de pago, y descontara existencias en la misma transaccion.
+\item[Entradas] items, cantidades, medio
+\item[Salidas] venta, comprobante, saldo
+\item[Precondicion] productos activos con stock
+\item[Postcondicion] venta y stock consistentes
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR02-05;EV-ENTR03-01;EV-ENTR04-04;EV-ENTR07-03;EV-ENTR08-03
+\item[Componente/Mockup] Ventas / MU-18;MU-27;MU-42;MU-43
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-INV-03 — Alertar stock y rotacion}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Administrador
+\item[Descripcion] El sistema listara productos en o bajo stock minimo y resumira entradas, salidas y ventas por periodo.
+\item[Entradas] periodo
+\item[Salidas] alertas y resumen
+\item[Precondicion] movimientos registrados
+\item[Postcondicion] consulta disponible sin alterar saldos
+\item[Prioridad/Kano] Should / Desempeno
+\item[Evidencia] EV-ENTR01-04;EV-ENTR02-05;EV-ENTR05-04;EV-ENTR06-04
+\item[Componente/Mockup] Inventario / MU-10;MU-19;MU-44*
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-CAJ-01 — Cerrar turno y conciliar caja}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Recepcion
+\item[Descripcion] El sistema calculara pagos y ventas por medio, comparara valores declarados y registrara diferencias y entrega de turno.
+\item[Entradas] turno, efectivo contado, observaciones
+\item[Salidas] cierre y diferencia
+\item[Precondicion] turno abierto
+\item[Postcondicion] turno cerrado e inmutable salvo correccion auditada
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR02-01;EV-ENTR02-06;EV-ENTR03-05;EV-ENTR04-05;EV-ENTR07-03;EV-ENTR08-04
+\item[Componente/Mockup] Caja / SIN PANTALLA EXCLUSIVA; COBERTURA RF/CU/HU
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-NOV-01 — Gestionar novedades internas}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Personal autorizado
+\item[Descripcion] El sistema creara una novedad con categoria, detalle minimo, responsable, vencimiento y estados pendiente, en proceso, resuelta o cancelada.
+\item[Entradas] categoria, detalle, responsable
+\item[Salidas] novedad trazable
+\item[Precondicion] sesion autorizada
+\item[Postcondicion] novedad visible al responsable y con historial
+\item[Prioridad/Kano] Must / Desempeno
+\item[Evidencia] EV-ENTR02-01;EV-ENTR02-08;EV-ENTR03-07;EV-ENTR04-06;EV-ENTR05-01
+\item[Componente/Mockup] Novedades / MU-21;MU-31*;MU-50;MU-51*;MU-61
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-INS-01 — Gestionar horario y disponibilidad de instructor}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Administrador
+\item[Descripcion] El sistema registrara turnos, capacidad, disponibilidad y novedades operativas del instructor, sin datos de salud.
+\item[Entradas] instructor, franja, capacidad, estado
+\item[Salidas] agenda operativa
+\item[Precondicion] instructor activo
+\item[Postcondicion] disponibilidad consultable
+\item[Prioridad/Kano] Should / Desempeno
+\item[Evidencia] EV-ENTR07-06;EV-ENTR09-03;EV-ENTR10-02
+\item[Componente/Mockup] Instructores / MU-23;MU-33;MU-48*;MU-49*;MU-58
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-RUT-01 — Crear y asignar rutina}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Instructor
+\item[Descripcion] El sistema creara una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y dias, y la asignara a un cliente sintetico o autorizado.
+\item[Entradas] cliente, objetivo, ejercicios y parametros
+\item[Salidas] rutina version 1
+\item[Precondicion] instructor autorizado
+\item[Postcondicion] rutina activa consultable
+\item[Prioridad/Kano] Must / Basico
+\item[Evidencia] EV-ENTR01-05;EV-ENTR05-04;EV-ENTR09-01;EV-ENTR09-02;EV-ENTR09-03
+\item[Componente/Mockup] Rutinas / MU-17*;MU-29*;MU-54;MU-55;MU-64(F)
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-RUT-02 — Versionar y ajustar rutina}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Instructor
+\item[Descripcion] El sistema creara una nueva version al modificar ejercicios o parametros y conservara las versiones anteriores en solo lectura.
+\item[Entradas] rutina activa, cambios, motivo
+\item[Salidas] nueva version
+\item[Precondicion] rutina existente
+\item[Postcondicion] una sola version activa e historial preservado
+\item[Prioridad/Kano] Must / Desempeno
+\item[Evidencia] EV-ENTR01-05;EV-ENTR09-01;EV-ENTR09-04;EV-ENTR10-01;EV-ENTR10-03
+\item[Componente/Mockup] Rutinas / MU-17*;MU-54
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-RUT-03 — Registrar seguimiento operativo}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Instructor
+\item[Descripcion] El sistema registrara fecha, cumplimiento de ejercicios, repeticiones y observacion operativa, excluyendo diagnosticos, lesiones, peso y medidas reales.
+\item[Entradas] rutina, cumplimiento, observacion no sensible
+\item[Salidas] seguimiento
+\item[Precondicion] rutina asignada
+\item[Postcondicion] historial operativo actualizado
+\item[Prioridad/Kano] Should / Desempeno
+\item[Evidencia] EV-ENTR09-04;EV-ENTR09-05;EV-ENTR09-06;EV-ENTR10-03;EV-ENTR10-04
+\item[Componente/Mockup] Rutinas / MU-59;MU-60*
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+\subsubsection{RF-REP-01 — Consultar panel y reportes}
+\begin{description}[leftmargin=3.2cm,style=nextline]
+\item[Actor] Administrador
+\item[Descripcion] El sistema mostrara indicadores filtrables de membresias, pagos, asistencias, ventas, caja, inventario y novedades, con exportacion CSV.
+\item[Entradas] periodo y filtros
+\item[Salidas] indicadores y CSV
+\item[Precondicion] datos operativos registrados
+\item[Postcondicion] reporte reproducible
+\item[Prioridad/Kano] Should / Desempeno
+\item[Evidencia] EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-ENTR09-05
+\item[Componente/Mockup] Reportes / MU-10;MU-24;MU-34
+\item[Estado] Redactado; validacion con stakeholders pendiente.
+\end{description}
+
+
+\section{Interfaces de usuario y mockups}
+La revision incremental cubre exactamente 67 mockups y conserva las cinco categorias obligatorias. La carpeta fisica recibida como \path{03_Asistente_Personal_Operativo} se registra como \textbf{Asistencia y personal creativo}; \path{05_Cliente} se registra como \textbf{Estudiante}. Esta equivalencia no cambia los nombres de las imagenes.
+
+\textbf{Leyenda.} Un asterisco (*) identifica una pantalla vinculada que requiere correccion; (F) identifica una relacion futura no vigente. Los mockups auxiliares no se fuerzan a un RF. RF-MEM-01, RF-INV-02 y RF-CAJ-01 no disponen de una pantalla exclusiva en el conjunto actual.
+
+\subsection{Pantallas principales relacionadas con funciones Must}
+Las siguientes imagenes representan las funciones Must con pantalla disponible. MU-37 y MU-47 se incluyen para evidenciar la correccion requerida; su contenido actual no se declara aprobado.
+\begin{figure}[p]\centering
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/01_Acceso_y_configuracion_inicial/MU-01_Inicio_de_sesion.jpg}
+\captionof{figure}{MU-01: Inicio de sesion; pantalla principal de autenticacion. Rol: Personal autorizado. RF: RF-AUT-01.}
+\vspace{5mm}
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/02_Dueno_Administrador/MU-22_Gestion_de_usuarios.jpg}
+\captionof{figure}{MU-22: Gestion de usuarios y permisos por rol. Rol: Dueno/Administrador. RF: RF-AUT-02.}
+\end{figure}
+\begin{figure}[p]\centering
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-37_Registro_de_cliente_por_el_asistente.jpg}
+\captionof{figure}{MU-37: Registro de cliente; requiere minimizacion de campos. Rol: Recepcion/Asistencia. RF: RF-CLI-01.}
+\vspace{5mm}
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-36_Gestion_de_clientes_del_asistente.jpg}
+\captionof{figure}{MU-36: Busqueda, consulta, edicion y reactivacion de clientes. Rol: Recepcion/Asistencia. RF: RF-CLI-02; RF-CLI-03.}
+\end{figure}
+\begin{figure}[p]\centering
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-39_Registro_de_membresia_por_el_asistente.jpg}
+\captionof{figure}{MU-39: Activacion o renovacion de membresia desde un plan vigente. Rol: Recepcion/Asistencia. RF: RF-MEM-02.}
+\vspace{5mm}
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-38_Gestion_de_membresias_del_asistente.jpg}
+\captionof{figure}{MU-38: Consulta de vigencia y alertas de vencimiento. Rol: Recepcion/Asistencia. RF: RF-MEM-03; RF-MEM-04.}
+\end{figure}
+\begin{figure}[p]\centering
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-41_Registro_de_pago_por_el_asistente.jpg}
+\captionof{figure}{MU-41: Registro de pago con medio, referencia y comprobante. Rol: Recepcion/Asistencia. RF: RF-PAG-01.}
+\vspace{5mm}
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-47_Registro_de_asistencia_por_el_asistente.jpg}
+\captionof{figure}{MU-47: Registro de asistencia; debe eliminarse la huella digital. Rol: Recepcion/Asistencia. RF: RF-ASI-01.}
+\end{figure}
+\begin{figure}[p]\centering
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-46_Gestion_de_asistencias_del_asistente.jpg}
+\captionof{figure}{MU-46: Consulta y filtrado de asistencias. Rol: Recepcion/Asistencia. RF: RF-ASI-02.}
+\vspace{5mm}
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/02_Dueno_Administrador/MU-28_Registro_de_producto.jpg}
+\captionof{figure}{MU-28: Registro de producto y stock minimo. Rol: Dueno/Administrador. RF: RF-INV-01.}
+\end{figure}
+\begin{figure}[p]\centering
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-43_Registro_de_venta_por_el_asistente.jpg}
+\captionof{figure}{MU-43: Registro de venta con items y medio de pago. Rol: Recepcion/Asistencia. RF: RF-VEN-01.}
+\vspace{5mm}
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/03_Asistencia_y_personal_creativo/MU-50_Gestion_de_novedades_internas_del_asistente.jpg}
+\captionof{figure}{MU-50: Gestion de novedades internas. Rol: Recepcion/Asistencia. RF: RF-NOV-01.}
+\end{figure}
+\begin{figure}[p]\centering
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/04_Instructor/MU-55_Registro_de_rutina_por_el_instructor.jpg}
+\captionof{figure}{MU-55: Creacion y asignacion de rutina. Rol: Instructor. RF: RF-RUT-01.}
+\vspace{5mm}
+\includegraphics[width=.88\textwidth]{imagenes/uso_documento/mockups/04_Instructor/MU-54_Gestion_de_rutinas_del_instructor.jpg}
+\captionof{figure}{MU-54: Gestion y versionado de rutinas. Rol: Instructor. RF: RF-RUT-02.}
+\end{figure}
+\clearpage
+\subsection{Cobertura Must sin pantalla exclusiva}
+\begin{itemize}
+\item \textbf{RF-MEM-01 / CU-06 / HU-06:} la configuración de planes y promociones se especifica mediante RF-MEM-01, CU-06 y HU-06, y ahora cuenta con el mockup dedicado MU-68.
+\item \textbf{RF-INV-02 / CU-14 / HU-14:} el registro de entradas y ajustes se especifica mediante RF-INV-02, CU-14 y HU-14, y ahora cuenta con el mockup dedicado MU-69.
+\item \textbf{RF-CAJ-01 / CU-16 / HU-16:} el cierre y conciliación de caja se especifica mediante RF-CAJ-01, CU-16 y HU-16, y ahora cuenta con el mockup dedicado MU-70.
+\end{itemize}
+La cobertura queda documentada mediante los requisitos, casos de uso e historias correspondientes; no se asignan mockups artificialmente para completar la matriz.
+
+\section{Requisitos no funcionales cuantificados}
+\small
+\begin{longtable}{p{1.8cm}p{2.2cm}p{6.5cm}p{3.7cm}}
+\hline ID & Caracteristica & Requisito/umbral & Verificacion \\ \hline
+RNF-AF-01 & Adecuacion funcional & En cada version candidata, el 100 \% de los RF Must tendra al menos un criterio de aceptacion ejecutable y una evidencia de prueba; no se libera si alguno falla. & revision de cobertura y pruebas \\ \hline
+RNF-ED-01 & Eficiencia de desempeno & Con 10 000 clientes sinteticos y 20 sesiones concurrentes, el percentil 95 de busqueda y consulta de membresia sera $\leq$ 5 s y la tasa de error $\leq$ 1 \%. & prueba de carga reproducible \\ \hline
+RNF-ED-02 & Eficiencia de desempeno & El registro de asistencia confirmada completara el flujo en $\leq$ 30 s para al menos 9 de 10 tareas de una prueba moderada. & prueba de tareas cronometrada \\ \hline
+RNF-COM-01 & Compatibilidad & Las funciones Must superaran el 100 \% de sus pruebas en las dos versiones estables mas recientes de Chrome, Edge y Firefox disponibles al corte. & matriz navegador-version y pruebas \\ \hline
+RNF-IU-01 & Interaccion de usuario & Al menos 9 de 10 tareas criticas de alta, renovacion, pago, asistencia y venta se completaran sin ayuda por cada perfil en walkthrough; la medicion esta pendiente. & rubrica y actas de $\geq$3 sesiones \\ \hline
+RNF-IU-02 & Interaccion de usuario & Las pantallas Must cumpliran WCAG 2.2 nivel AA en criterios aplicables mediante auditoria automatica y revision manual, sin errores criticos. & reporte WCAG 2.2 \\ \hline
+RNF-FIA-01 & Fiabilidad & Tras 100 operaciones transaccionales de pago, venta y asistencia con una interrupcion simulada, no habra registros parciales y la recuperacion sera $\leq$ 10 min. & prueba de recuperacion e integridad \\ \hline
+RNF-FIA-02 & Fiabilidad & Una copia diaria cifrada permitira restaurar una base sintetica de prueba con RPO $\leq$ 24 h y RTO $\leq$ 4 h en un simulacro documentado. & acta y log de restauracion \\ \hline
+RNF-SEG-01 & Seguridad & El 100 \% de las pruebas negativas de autorizacion impedira acceso a funciones o datos fuera del rol y registrara el intento sin exponer datos personales. & suite de autorizacion \\ \hline
+RNF-SEG-02 & Seguridad & Por defecto se almacenaran solo codigo interno, nombre de uso y contacto opcional; salud, biometria, peso, medidas, direccion e imagen corporal real tendran cobertura de captura igual a 0 \% en desarrollo y pruebas. & revision de esquema, formularios y dataset \\ \hline
+RNF-SEG-03 & Seguridad & Las sesiones expiraran tras 15 min de inactividad; secretos no se almacenaran en texto claro y todo trafico de un despliegue conectado usara TLS 1.2 o superior. & pruebas de sesion, almacenamiento y TLS \\ \hline
+RNF-MAN-01 & Mantenibilidad & La suite automatizada cubrira $\geq$ 70 \% de lineas de los modulos de dominio antes de etiquetar una version candidata. & informe de cobertura \\ \hline
+RNF-MAN-02 & Mantenibilidad & Los modulos Clientes, Membresias, Pagos, Asistencia, Inventario, Caja y Rutinas tendran interfaces explicitas; un cambio de regla en un modulo no exigira modificar mas de un modulo consumidor. & revision arquitectonica por cambio controlado \\ \hline
+RNF-POR-01 & Portabilidad & El sistema web y sus pruebas se desplegaran con una unica instruccion documentada en Windows 11 y una distribucion Linux LTS, sin editar codigo fuente. & prueba limpia en dos entornos \\ \hline
+RNF-FLE-01 & Flexibilidad & Planes, precios, stock minimo, roles operativos y ventanas de alerta se modificaran por configuracion autorizada sin recompilar ni editar codigo. & prueba de cinco cambios de configuracion \\ \hline
+\end{longtable}
+\normalsize
+
+\section{Requisitos legales y restricciones de diseno}
+La LOPDP define datos sensibles, principios, categorias especiales y privacidad desde el diseno; la guia oficial de la SPDP operacionaliza minimizacion y configuracion por defecto \cite{lopdp2021,spdp2025,spdp2026}.
+\small\begin{longtable}{p{1.8cm}p{2.2cm}p{6.5cm}p{3.7cm}}
+\hline ID & Articulo & Restriccion & Trazado \\ \hline
+RD-PRI-01 & Arts. 4, 10, 25, 26 y 39 & Excluir datos reales de salud y biometria automatizada; usar minimizacion, seudonimizacion y datos sinteticos en diseno y pruebas. & RF-CLI-01;RF-ASI-01;RF-RUT-01;RF-RUT-03;RNF-SEG-02 \\ \hline
+RD-PRI-02 & Arts. 10 y 39 & Aplicar privacidad desde el diseno y por defecto, minimo privilegio y conservacion limitada. & RF-AUT-02;RF-AUT-03;RNF-SEG-01;RNF-SEG-03 \\ \hline
+RD-PRI-03 & Derechos del titular y Art. 39 & Prever mecanismos trazables de acceso, rectificacion, actualizacion, eliminacion, oposicion y portabilidad antes de produccion. & RF-CLI-02;RF-CLI-03;RNF-SEG-02 \\ \hline
+RD-IA-01 & Categoria A / adenda pendiente & No incorporar IA o aprendizaje automatico al producto mientras no exista necesidad elicitada, evaluacion de riesgo, adenda y validacion. & No aplica a RF; controla alcance \\ \hline
+\end{longtable}\normalsize
+
+\section{Historias de usuario y aceptacion}
+
+\subsubsection{HU-01 / RF-AUT-01}
+\textbf{Connextra.} Como Personal autorizado, quiero autenticar usuario, para mantener autenticar usuario de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que cuenta activa y las entradas son validas, cuando se solicita autenticar usuario, entonces el sistema entrega sesion o rechazo generico y garantiza sesion trazable o acceso denegado.
+
+\subsubsection{HU-02 / RF-AUT-02}
+\textbf{Connextra.} Como Administrador, quiero aplicar permisos por rol, para mantener aplicar permisos por rol de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que sesion autenticada y las entradas son validas, cuando se solicita aplicar permisos por rol, entonces el sistema entrega permiso o denegacion y garantiza solo se ejecuta una operacion autorizada.
+
+\subsubsection{HU-03 / RF-CLI-01}
+\textbf{Connextra.} Como Recepcion, quiero registrar cliente minimo, para mantener registrar cliente minimo de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que consentimiento/base legitimadora documentada y las entradas son validas, cuando se solicita registrar cliente minimo, entonces el sistema entrega cliente y codigo y garantiza cliente unico activo.
+
+\subsubsection{HU-04 / RF-CLI-02}
+\textbf{Connextra.} Como Recepcion, quiero buscar y consultar cliente, para mantener buscar y consultar cliente de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que sesion autorizada y las entradas son validas, cuando se solicita buscar y consultar cliente, entonces el sistema entrega lista y ficha autorizada y garantiza consulta sin modificar datos.
+
+\subsubsection{HU-05 / RF-CLI-03}
+\textbf{Connextra.} Como Recepcion, quiero actualizar o reactivar sin duplicar, para mantener actualizar o reactivar sin duplicar de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que cliente existente o busqueda previa y las entradas son validas, cuando se solicita actualizar o reactivar sin duplicar, entonces el sistema entrega registro actualizado o advertencia y garantiza historial preservado y sin duplicado confirmado.
+
+\subsubsection{HU-06 / RF-MEM-01}
+\textbf{Connextra.} Como Administrador, quiero configurar planes y promociones, para mantener configurar planes y promociones de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que sesion de administrador y las entradas son validas, cuando se solicita configurar planes y promociones, entonces el sistema entrega catalogo actualizado y garantiza version vigente disponible para nuevas membresias.
+
+\subsubsection{HU-07 / RF-MEM-02}
+\textbf{Connextra.} Como Recepcion, quiero activar o renovar membresia, para mantener activar o renovar membresia de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que cliente existente y pago confirmado y las entradas son validas, cuando se solicita activar o renovar membresia, entonces el sistema entrega membresia vigente y garantiza periodo nuevo trazable.
+
+\subsubsection{HU-08 / RF-MEM-03}
+\textbf{Connextra.} Como Personal autorizado, quiero consultar vigencia, para mantener consultar vigencia de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que cliente existente y las entradas son validas, cuando se solicita consultar vigencia, entonces el sistema entrega estado y fechas y garantiza consulta registrada sin cambios.
+
+\subsubsection{HU-09 / RF-MEM-04}
+\textbf{Connextra.} Como Recepcion, quiero alertar vencimientos, para mantener alertar vencimientos de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que membresias registradas y las entradas son validas, cuando se solicita alertar vencimientos, entonces el sistema entrega lista priorizada y garantiza alertas internas visibles.
+
+\subsubsection{HU-10 / RF-PAG-01}
+\textbf{Connextra.} Como Recepcion, quiero registrar pago y comprobante, para mantener registrar pago y comprobante de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que sesion autorizada y concepto valido y las entradas son validas, cuando se solicita registrar pago y comprobante, entonces el sistema entrega pago y comprobante y garantiza pago trazable.
+
+\subsubsection{HU-11 / RF-ASI-01}
+\textbf{Connextra.} Como Recepcion, quiero registrar asistencia, para mantener registrar asistencia de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que cliente localizado y las entradas son validas, cuando se solicita registrar asistencia, entonces el sistema entrega asistencia o rechazo y garantiza evento unico y trazable.
+
+\subsubsection{HU-12 / RF-ASI-02}
+\textbf{Connextra.} Como Personal autorizado, quiero consultar asistencia, para mantener consultar asistencia de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que sesion autorizada y las entradas son validas, cuando se solicita consultar asistencia, entonces el sistema entrega detalle y resumen y garantiza consulta exportable.
+
+\subsubsection{HU-13 / RF-INV-01}
+\textbf{Connextra.} Como Administrador, quiero administrar productos, para mantener administrar productos de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que sesion de administrador y las entradas son validas, cuando se solicita administrar productos, entonces el sistema entrega producto y garantiza catalogo consistente.
+
+\subsubsection{HU-14 / RF-INV-02}
+\textbf{Connextra.} Como Personal autorizado, quiero registrar movimientos de stock, para mantener registrar movimientos de stock de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que producto activo y las entradas son validas, cuando se solicita registrar movimientos de stock, entonces el sistema entrega movimiento y saldo y garantiza saldo no negativo salvo ajuste autorizado.
+
+\subsubsection{HU-15 / RF-VEN-01}
+\textbf{Connextra.} Como Recepcion, quiero registrar venta, para mantener registrar venta de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que productos activos con stock y las entradas son validas, cuando se solicita registrar venta, entonces el sistema entrega venta, comprobante, saldo y garantiza venta y stock consistentes.
+
+\subsubsection{HU-16 / RF-CAJ-01}
+\textbf{Connextra.} Como Recepcion, quiero cerrar turno y conciliar caja, para mantener cerrar turno y conciliar caja de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que turno abierto y las entradas son validas, cuando se solicita cerrar turno y conciliar caja, entonces el sistema entrega cierre y diferencia y garantiza turno cerrado e inmutable salvo correccion auditada.
+
+\subsubsection{HU-17 / RF-NOV-01}
+\textbf{Connextra.} Como Personal autorizado, quiero gestionar novedades internas, para mantener gestionar novedades internas de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que sesion autorizada y las entradas son validas, cuando se solicita gestionar novedades internas, entonces el sistema entrega novedad trazable y garantiza novedad visible al responsable y con historial.
+
+\subsubsection{HU-18 / RF-RUT-01}
+\textbf{Connextra.} Como Instructor, quiero crear y asignar rutina, para mantener crear y asignar rutina de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que instructor autorizado y las entradas son validas, cuando se solicita crear y asignar rutina, entonces el sistema entrega rutina version 1 y garantiza rutina activa consultable.
+
+\subsubsection{HU-19 / RF-RUT-02}
+\textbf{Connextra.} Como Instructor, quiero versionar y ajustar rutina, para mantener versionar y ajustar rutina de forma trazable y consistente.\\
+\textbf{INVEST.} Independiente: si; Negociable: pendiente de stakeholder; Valiosa: si; Estimable: si; Pequena: si; Testeable: si.\\
+\textbf{Gherkin.} Dado que rutina existente y las entradas son validas, cuando se solicita versionar y ajustar rutina, entonces el sistema entrega nueva version y garantiza una sola version activa e historial preservado.
+
+
+\section{Modelado UML}
+\subsection{Casos de uso generales}
+\begin{figure}[H]\centering\includegraphics[width=.97\textwidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/CU_GENERAL_FabroGym.pdf}\caption{Casos de uso generales del sistema.}\end{figure}
+El diagrama precedente resume visualmente los actores y los 19 casos de uso principales del sistema. A continuacion, cada especificacion textual incorpora su diagrama individual con el actor primario, el caso principal y las relaciones include y extend mas relevantes.
+\subsection{Especificaciones de CU Must}
+
+\subsubsection{CU-01 — Autenticar usuario}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-AUT-01
+\item[Actor primario] Personal autorizado
+\item[Precondicion] cuenta activa
+\item[Disparador] El actor solicita autenticar usuario.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar identificador, secreto; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar sesion o rechazo generico.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] sesion trazable o acceso denegado
+\item[Criterio] Escenario HU-01 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-01_Autenticar_usuario.png}
+\caption{Diagrama UML monocromatico detallado de CU-01: Autenticar usuario.}
+\end{figure}
+
+\subsubsection{CU-02 — Aplicar permisos por rol}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-AUT-02
+\item[Actor primario] Administrador
+\item[Precondicion] sesion autenticada
+\item[Disparador] El actor solicita aplicar permisos por rol.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar usuario, operacion, recurso; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar permiso o denegacion.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] solo se ejecuta una operacion autorizada
+\item[Criterio] Escenario HU-02 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-02_Aplicar_permisos_por_rol.png}
+\caption{Diagrama UML monocromatico detallado de CU-02: Aplicar permisos por rol.}
+\end{figure}
+
+\subsubsection{CU-03 — Registrar cliente minimo}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-CLI-01
+\item[Actor primario] Recepcion
+\item[Precondicion] consentimiento/base legitimadora documentada
+\item[Disparador] El actor solicita registrar cliente minimo.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar nombre de uso, contacto opcional; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar cliente y codigo.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] cliente unico activo
+\item[Criterio] Escenario HU-03 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-03_Registrar_cliente_minimo.png}
+\caption{Diagrama UML monocromatico detallado de CU-03: Registrar cliente minimo.}
+\end{figure}
+
+\subsubsection{CU-04 — Buscar y consultar cliente}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-CLI-02
+\item[Actor primario] Recepcion
+\item[Precondicion] sesion autorizada
+\item[Disparador] El actor solicita buscar y consultar cliente.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar criterio de busqueda; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar lista y ficha autorizada.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] consulta sin modificar datos
+\item[Criterio] Escenario HU-04 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-04_Buscar_y_consultar_cliente.png}
+\caption{Diagrama UML monocromatico detallado de CU-04: Buscar y consultar cliente.}
+\end{figure}
+
+\subsubsection{CU-05 — Actualizar o reactivar sin duplicar}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-CLI-03
+\item[Actor primario] Recepcion
+\item[Precondicion] cliente existente o busqueda previa
+\item[Disparador] El actor solicita actualizar o reactivar sin duplicar.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar codigo y cambios; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar registro actualizado o advertencia.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] historial preservado y sin duplicado confirmado
+\item[Criterio] Escenario HU-05 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-05_Actualizar_o_reactivar_cliente.png}
+\caption{Diagrama UML monocromatico detallado de CU-05: Actualizar o reactivar sin duplicar.}
+\end{figure}
+
+\subsubsection{CU-06 — Configurar planes y promociones}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-MEM-01
+\item[Actor primario] Administrador
+\item[Precondicion] sesion de administrador
+\item[Disparador] El actor solicita configurar planes y promociones.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar datos del plan; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar catalogo actualizado.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] version vigente disponible para nuevas membresias
+\item[Criterio] Escenario HU-06 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-06_Configurar_planes_y_promociones.png}
+\caption{Diagrama UML monocromatico detallado de CU-06: Configurar planes y promociones.}
+\end{figure}
+
+\subsubsection{CU-07 — Activar o renovar membresia}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-MEM-02
+\item[Actor primario] Recepcion
+\item[Precondicion] cliente existente y pago confirmado
+\item[Disparador] El actor solicita activar o renovar membresia.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar cliente, plan, pago, fecha; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar membresia vigente.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] periodo nuevo trazable
+\item[Criterio] Escenario HU-07 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-07_Activar_o_renovar_membresia.png}
+\caption{Diagrama UML monocromatico detallado de CU-07: Activar o renovar membresia.}
+\end{figure}
+
+\subsubsection{CU-08 — Consultar vigencia}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-MEM-03
+\item[Actor primario] Personal autorizado
+\item[Precondicion] cliente existente
+\item[Disparador] El actor solicita consultar vigencia.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar codigo de cliente; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar estado y fechas.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] consulta registrada sin cambios
+\item[Criterio] Escenario HU-08 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-08_Consultar_vigencia.png}
+\caption{Diagrama UML monocromatico detallado de CU-08: Consultar vigencia.}
+\end{figure}
+
+\subsubsection{CU-09 — Alertar vencimientos}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-MEM-04
+\item[Actor primario] Recepcion
+\item[Precondicion] membresias registradas
+\item[Disparador] El actor solicita alertar vencimientos.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar fecha de corte; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar lista priorizada.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] alertas internas visibles
+\item[Criterio] Escenario HU-09 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-09_Alertar_vencimientos.png}
+\caption{Diagrama UML monocromatico detallado de CU-09: Alertar vencimientos.}
+\end{figure}
+
+\subsubsection{CU-10 — Registrar pago y comprobante}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-PAG-01
+\item[Actor primario] Recepcion
+\item[Precondicion] sesion autorizada y concepto valido
+\item[Disparador] El actor solicita registrar pago y comprobante.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar cliente, monto, medio, referencia; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar pago y comprobante.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] pago trazable
+\item[Criterio] Escenario HU-10 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-10_Registrar_pago_y_comprobante.png}
+\caption{Diagrama UML monocromatico detallado de CU-10: Registrar pago y comprobante.}
+\end{figure}
+
+\subsubsection{CU-11 — Registrar asistencia}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-ASI-01
+\item[Actor primario] Recepcion
+\item[Precondicion] cliente localizado
+\item[Disparador] El actor solicita registrar asistencia.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar cliente, fecha-hora, excepcion opcional; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar asistencia o rechazo.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] evento unico y trazable
+\item[Criterio] Escenario HU-11 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-11_Registrar_asistencia.png}
+\caption{Diagrama UML monocromatico detallado de CU-11: Registrar asistencia.}
+\end{figure}
+
+\subsubsection{CU-12 — Consultar asistencia}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-ASI-02
+\item[Actor primario] Personal autorizado
+\item[Precondicion] sesion autorizada
+\item[Disparador] El actor solicita consultar asistencia.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar filtros; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar detalle y resumen.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] consulta exportable
+\item[Criterio] Escenario HU-12 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-12_Consultar_asistencia.png}
+\caption{Diagrama UML monocromatico detallado de CU-12: Consultar asistencia.}
+\end{figure}
+
+\subsubsection{CU-13 — Administrar productos}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-INV-01
+\item[Actor primario] Administrador
+\item[Precondicion] sesion de administrador
+\item[Disparador] El actor solicita administrar productos.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar datos de producto; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar producto.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] catalogo consistente
+\item[Criterio] Escenario HU-13 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-13_Administrar_productos.png}
+\caption{Diagrama UML monocromatico detallado de CU-13: Administrar productos.}
+\end{figure}
+
+\subsubsection{CU-14 — Registrar movimientos de stock}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-INV-02
+\item[Actor primario] Personal autorizado
+\item[Precondicion] producto activo
+\item[Disparador] El actor solicita registrar movimientos de stock.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar producto, tipo, cantidad, motivo; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar movimiento y saldo.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] saldo no negativo salvo ajuste autorizado
+\item[Criterio] Escenario HU-14 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-14_Registrar_movimientos_de_stock.png}
+\caption{Diagrama UML monocromatico detallado de CU-14: Registrar movimientos de stock.}
+\end{figure}
+
+\subsubsection{CU-15 — Registrar venta}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-VEN-01
+\item[Actor primario] Recepcion
+\item[Precondicion] productos activos con stock
+\item[Disparador] El actor solicita registrar venta.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar items, cantidades, medio; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar venta, comprobante, saldo.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] venta y stock consistentes
+\item[Criterio] Escenario HU-15 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-15_Registrar_venta.png}
+\caption{Diagrama UML monocromatico detallado de CU-15: Registrar venta.}
+\end{figure}
+
+\subsubsection{CU-16 — Cerrar turno y conciliar caja}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-CAJ-01
+\item[Actor primario] Recepcion
+\item[Precondicion] turno abierto
+\item[Disparador] El actor solicita cerrar turno y conciliar caja.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar turno, efectivo contado, observaciones; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar cierre y diferencia.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] turno cerrado e inmutable salvo correccion auditada
+\item[Criterio] Escenario HU-16 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-16_Cerrar_turno_y_conciliar_caja.png}
+\caption{Diagrama UML monocromatico detallado de CU-16: Cerrar turno y conciliar caja.}
+\end{figure}
+
+\subsubsection{CU-17 — Gestionar novedades internas}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-NOV-01
+\item[Actor primario] Personal autorizado
+\item[Precondicion] sesion autorizada
+\item[Disparador] El actor solicita gestionar novedades internas.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar categoria, detalle, responsable; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar novedad trazable.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] novedad visible al responsable y con historial
+\item[Criterio] Escenario HU-17 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-17_Gestionar_novedades_internas.png}
+\caption{Diagrama UML monocromatico detallado de CU-17: Gestionar novedades internas.}
+\end{figure}
+
+\subsubsection{CU-18 — Crear y asignar rutina}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-RUT-01
+\item[Actor primario] Instructor
+\item[Precondicion] instructor autorizado
+\item[Disparador] El actor solicita crear y asignar rutina.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar cliente, objetivo, ejercicios y parametros; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar rutina version 1.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] rutina activa consultable
+\item[Criterio] Escenario HU-18 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-18_Crear_y_asignar_rutina.png}
+\caption{Diagrama UML monocromatico detallado de CU-18: Crear y asignar rutina.}
+\end{figure}
+
+\subsubsection{CU-19 — Versionar y ajustar rutina}
+\begin{description}[leftmargin=3.4cm,style=nextline]
+\item[RF asociado] RF-RUT-02
+\item[Actor primario] Instructor
+\item[Precondicion] rutina existente
+\item[Disparador] El actor solicita versionar y ajustar rutina.
+\item[Flujo principal] (1) validar sesion y permisos; (2) validar rutina activa, cambios, motivo; (3) aplicar reglas; (4) persistir atomicamente; (5) registrar auditoria cuando corresponda; (6) mostrar nueva version.
+\item[Alternativas] Datos invalidos: no guardar y explicar campos. Sin permiso: denegar y auditar. Conflicto/duplicado: conservar estado y solicitar resolucion autorizada.
+\item[Postcondicion] una sola version activa e historial preservado
+\item[Criterio] Escenario HU-19 y archivo Gherkin homonimo.
+\end{description}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth,height=.46\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/casos_uso_formato/CU-19_Versionar_y_ajustar_rutina.png}
+\caption{Diagrama UML monocromatico detallado de CU-19: Versionar y ajustar rutina.}
+\end{figure}
+
+\subsection{Clases}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.98\textwidth,height=.42\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DC_CLASES_FabroGym_CORREGIDO.png}
+\caption{Clases refinadas.}
+\end{figure}
+\subsection{Comportamiento, componentes y despliegue}
+En esta version se incorporan dentro del PDF los 19 diagramas de secuencia asociados a RF Must, cinco diagramas de actividad para procesos principales y cuatro maquinas de estados para entidades con ciclo de vida relevante. Los archivos fuente editables (.puml, .svg, .pdf y .xmi cuando aplica) se entregan en \path{03_Modelado/Diagramas_UML} y en \path{imagenes/diagramas/fuentes_completas}.
+
+\subsubsection{Diagramas de secuencia de los casos de uso Must}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_01_RF-AUT-01.png}
+\caption{Diagrama de secuencia de RF-AUT-01: autenticar usuario.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_02_RF-AUT-02.png}
+\caption{Diagrama de secuencia de RF-AUT-02: aplicar permisos por rol.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_03_RF-CLI-01.png}
+\caption{Diagrama de secuencia de RF-CLI-01: registrar cliente minimo.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_04_RF-CLI-02.png}
+\caption{Diagrama de secuencia de RF-CLI-02: buscar y consultar cliente.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_05_RF-CLI-03.png}
+\caption{Diagrama de secuencia de RF-CLI-03: actualizar, reactivar o duplicar cliente.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_06_RF-MEM-01.png}
+\caption{Diagrama de secuencia de RF-MEM-01: configurar planes y promociones.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_07_RF-MEM-02.png}
+\caption{Diagrama de secuencia de RF-MEM-02: activar o renovar membresia.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_08_RF-MEM-03.png}
+\caption{Diagrama de secuencia de RF-MEM-03: consultar vigencia.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_09_RF-MEM-04.png}
+\caption{Diagrama de secuencia de RF-MEM-04: alertar vencimientos.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_10_RF-PAG-01.png}
+\caption{Diagrama de secuencia de RF-PAG-01: registrar pago y comprobante.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_11_RF-ASI-01.png}
+\caption{Diagrama de secuencia de RF-ASI-01: registrar asistencia.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_12_RF-ASI-02.png}
+\caption{Diagrama de secuencia de RF-ASI-02: consultar asistencia.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_13_RF-INV-01.png}
+\caption{Diagrama de secuencia de RF-INV-01: administrar productos.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_14_RF-INV-02.png}
+\caption{Diagrama de secuencia de RF-INV-02: registrar movimientos de stock.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_15_RF-VEN-01.png}
+\caption{Diagrama de secuencia de RF-VEN-01: registrar venta.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_16_RF-CAJ-01.png}
+\caption{Diagrama de secuencia de RF-CAJ-01: cerrar turno y conciliar caja.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_17_RF-NOV-01.png}
+\caption{Diagrama de secuencia de RF-NOV-01: gestionar novedades internas.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_18_RF-RUT-01.png}
+\caption{Diagrama de secuencia de RF-RUT-01: administrar rutinas.}
+\end{figure}\end{landscape}
+\begin{landscape}\begin{figure}[p]\centering
+\includegraphics[width=.96\linewidth,height=.80\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DS_19_RF-RUT-02.png}
+\caption{Diagrama de secuencia de RF-RUT-02: registrar seguimiento.}
+\end{figure}\end{landscape}
+\subsubsection{Diagramas de actividad de los procesos principales}
+\begin{figure}[H]\centering
+\includegraphics[width=.92\textwidth,height=.42\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DA_01_Alta_Renovacion.png}
+\caption{Actividad de alta o renovacion de membresia.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.92\textwidth,height=.42\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DA_02_Ingreso_Asistencia.png}
+\caption{Actividad de ingreso y registro de asistencia.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.92\textwidth,height=.42\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DA_03_Venta_Caja.png}
+\caption{Actividad de venta y caja.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.92\textwidth,height=.42\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DA_04_Rutina_Seguimiento.png}
+\caption{Actividad de rutina y seguimiento.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.92\textwidth,height=.42\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DA_05_Novedad_Turno.png}
+\caption{Actividad de novedad y turno.}
+\end{figure}
+
+\subsubsection{Diagramas de estados de las entidades principales}
+\begin{figure}[H]\centering
+\includegraphics[width=.85\textwidth,height=.34\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DE_01_Membresia.png}
+\caption{Estados de la membresia.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.85\textwidth,height=.34\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DE_02_Pago.png}
+\caption{Estados del pago.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.85\textwidth,height=.34\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DE_03_Novedad.png}
+\caption{Estados de la novedad interna.}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.85\textwidth,height=.34\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DE_04_Rutina.png}
+\caption{Estados de la rutina.}
+\end{figure}
+
+\subsubsection{Componentes}
+\begin{figure}[H]
+\centering
+\includegraphics[width=.92\textwidth,height=.40\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/COMP_COMPONENTES_FabroGym.pdf}
+\caption{Componentes propuestos.}
+\end{figure}
+
+\clearpage
+\subsubsection{Diagrama de despliegue}
+El diagrama siguiente representa la distribucion propuesta entre el dispositivo autorizado, el servidor de aplicacion, la base de datos y el almacen de respaldos. Se mantiene dentro de esta seccion para conservar la continuidad entre los modelos de arquitectura y evitar que LaTeX lo desplace al final del documento.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.78\textwidth,height=.68\textheight,keepaspectratio]{imagenes/uso_documento/diagramas/DEP_DESPLIEGUE_FabroGym.pdf}
+\caption{Despliegue propuesto.}
+\end{figure}
+\clearpage
+\section{Priorizacion y trazabilidad}
+La priorizacion se consolido con un enfoque combinado MoSCoW, Kano y WSJF. Los valores WSJF representan una estimacion analitica interna del equipo para ordenar el backlog funcional y no reemplazan una validacion posterior con stakeholders. El archivo completo se entrega en \path{datos/priorizacion_moscow_kano_wsjf.csv} y la matriz extendida en \path{datos/matriz_trazabilidad_extendida.csv}.
+
+\begin{tabularx}{\textwidth}{lXc>{\raggedleft\arraybackslash}p{1.7cm}}
+\toprule ID & Descripcion & MoSCoW/Kano & WSJF \\ \midrule
+RF-AUT-01 & Autenticar usuario & Must / Basico & 9,67 \\
+RF-MEM-03 & Consultar vigencia & Must / Performance & 7,00 \\
+RF-CLI-02 & Buscar y consultar cliente & Must / Performance & 7,00 \\
+RF-MEM-02 & Activar o renovar membresia & Must / Basico & 6,75 \\
+RF-PAG-01 & Registrar pago y comprobante & Must / Basico & 6,75 \\
+RF-CLI-01 & Registrar cliente minimo & Must / Performance & 6,00 \\
+RF-VEN-01 & Registrar venta & Must / Basico & 6,00 \\
+RF-ASI-01 & Registrar asistencia & Must / Basico & 6,00 \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Matriz de trazabilidad extendida}
+La matriz de trazabilidad extendida se presenta a continuacion en formato horizontal para que todas las columnas queden visibles y no se recorte la informacion. Cada fila relaciona la fuente base, articulo, objetivo, stakeholder, evidencia, caso de uso, historia de usuario, criterio de aceptacion, componente y mockup asociado.
+
+\begin{landscape}
+\scriptsize
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{2.5pt}
+\begin{longtable}{p{1.7cm}p{1.7cm}p{0.9cm}p{2.6cm}p{1.9cm}p{1.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.5cm}p{1.8cm}}
+\caption{Matriz de trazabilidad extendida del sistema FabroGym.}\label{tab:trazabilidad-extendida}\\
+\toprule
+ID & Ley/Fuente & Art. & Objetivo & Stakeholder & Ev. & CU & HU & CA & Componente & Mockup \\ \midrule
+\endfirsthead
+\toprule
+ID & Ley/Fuente & Art. & Objetivo & Stakeholder & Ev. & CU & HU & CA & Componente & Mockup \\ \midrule
+\endhead
+RF-AUT-01 & LOPDP & Art. 10 & Garantizar tratamiento licito y minimizacion de datos & Propietario/Administrador & EV-ENT-01 & CU-01 & HU-01 & CA-01 & Seguridad & MU-01 \\
+RF-AUT-02 & LOPDP & Art. 20 & Controlar acceso por roles y permisos & Propietario/Administrador & EV-ENT-01 & CU-02 & HU-02 & CA-02 & Seguridad & MU-22;MU-32 \\
+RF-AUT-03 & LOPDP & Art. 24 & Asegurar trazabilidad de eventos criticos & Propietario/Administrador & EV-ENT-01 & CU-17 & HU-17 & CA-17 & Auditoria & MU-25 \\
+RF-CLI-01 & Civil/Operacion & Art. N/A & Registrar datos minimos de cliente & Recepcion & EV-ENC-01 & CU-03 & HU-03 & CA-03 & Clientes & MU-12;MU-37 \\
+RF-CLI-02 & Civil/Operacion & Art. N/A & Consultar ficha de cliente & Recepcion & EV-ENC-01 & CU-04 & HU-04 & CA-04 & Clientes & MU-11;MU-36 \\
+RF-CLI-03 & Civil/Operacion & Art. N/A & Actualizar y reactivar cliente & Recepcion & EV-ENT-02 & CU-05 & HU-05 & CA-05 & Clientes & MU-11;MU-36 \\
+RF-MEM-01 & Operacion & Art. N/A & Configurar catalogo de planes & Propietario/Administrador & EV-ENT-01 & CU-06 & HU-06 & CA-06 & Membresias & MU-68 \\
+RF-MEM-02 & Operacion & Art. N/A & Activar y renovar membresia & Recepcion & EV-ENT-02 & CU-07 & HU-07 & CA-07 & Membresias & MU-14;MU-39 \\
+RF-MEM-03 & Operacion & Art. N/A & Consultar vigencia & Recepcion & EV-ENC-02 & CU-08 & HU-08 & CA-08 & Membresias & MU-13;MU-38;MU-63 \\
+RF-MEM-04 & Operacion & Art. N/A & Alertar vencimientos & Propietario/Administrador & EV-ENC-02 & CU-09 & HU-09 & CA-09 & Membresias & MU-10;MU-13;MU-38 \\
+RF-PAG-01 & Operacion & Art. N/A & Registrar pago y comprobante & Recepcion & EV-DOC-01 & CU-10 & HU-10 & CA-10 & Pagos & MU-15;MU-16;MU-40;MU-41 \\
+RF-PAG-02 & Operacion & Art. N/A & Resolver pagos pendientes & Recepcion & EV-ENT-02 & CU-10 & HU-10 & CA-10 & Pagos & MU-15;MU-40 \\
+RF-ASI-01 & Operacion & Art. N/A & Registrar asistencia & Recepcion/Instructor & EV-OBS-01 & CU-11 & HU-11 & CA-11 & Asistencias & MU-20;MU-30;MU-46;MU-47 \\
+RF-ASI-02 & Operacion & Art. N/A & Consultar asistencia & Recepcion/Instructor & EV-OBS-01 & CU-12 & HU-12 & CA-12 & Asistencias & MU-20;MU-46;MU-56;MU-65 \\
+RF-INV-01 & Operacion & Art. N/A & Administrar productos & Propietario/Administrador & EV-DOC-02 & CU-13 & HU-13 & CA-13 & Inventario & MU-19;MU-28;MU-44;MU-45 \\
+RF-INV-02 & Operacion & Art. N/A & Registrar movimientos de stock & Propietario/Administrador & EV-DOC-02 & CU-14 & HU-14 & CA-14 & Inventario & MU-69 \\
+RF-VEN-01 & Operacion & Art. N/A & Registrar venta & Recepcion & EV-DOC-02 & CU-15 & HU-15 & CA-15 & Ventas & MU-18;MU-27;MU-42;MU-43 \\
+RF-INV-03 & Base interna &  & Alertar stock y rotacion & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-10;MU-19;MU-44 \\
+RF-CAJ-01 & Operacion & Art. N/A & Cerrar turno y conciliar caja & Propietario/Administrador & EV-OBS-02 & CU-16 & HU-16 & CA-16 & Caja & MU-70 \\
+RF-NOV-01 & Operacion & Art. N/A & Gestionar novedades internas & Propietario/Administrador & EV-ENT-03 & CU-17 & HU-17 & CA-17 & Novedades & MU-21;MU-50;MU-61 \\
+RF-INS-01 & Base interna &  & Gestionar horario y disponibilidad de instructor & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-23;MU-33;MU-48;MU-49;MU-58 \\
+RF-RUT-01 & Operacion & Art. N/A & Administrar rutinas & Instructor & EV-ENT-03 & CU-18 & HU-18 & CA-18 & Rutinas & MU-54;MU-55;MU-64 \\
+RF-RUT-02 & Operacion & Art. N/A & Registrar seguimiento & Instructor & EV-ENT-03 & CU-19 & HU-19 & CA-19 & Rutinas & MU-59;MU-60 \\
+RF-RUT-03 & Base interna &  & Registrar seguimiento operativo & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-59;MU-60 \\
+RF-REP-01 & Base interna &  & Consultar panel y reportes & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-10;MU-24;MU-34 \\
+RNF-AF-01 & Base interna &  & Adecuacion funcional & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-ED-01 & Base interna &  & Eficiencia de desempeno & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-ED-02 & Base interna &  & Eficiencia de desempeno & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-COM-01 & Base interna &  & Compatibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-IU-01 & Base interna &  & Interaccion de usuario & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-IU-02 & Base interna &  & Interaccion de usuario & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-FIA-01 & Base interna &  & Fiabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-FIA-02 & Base interna &  & Fiabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-SEG-01 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-SEG-02 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-SEG-03 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-MAN-01 & Base interna &  & Mantenibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-MAN-02 & Base interna &  & Mantenibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-POR-01 & Base interna &  & Portabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-FLE-01 & Base interna &  & Flexibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RD-PRI-01 & Base interna &  & Exclusion de salud y biometria real & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RD-PRI-02 & Base interna &  & Privacidad por diseno y minimo privilegio & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RD-PRI-03 & Base interna &  & Derechos del titular & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RD-IA-01 & Base interna &  & No incorporar IA/AA sin validacion & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\
+RNF-IU-01 & Rubrica & Art. N/A & Usabilidad en walkthrough & Usuarios técnicos y no técnicos & EV-VAL-01 &  &  & CA-IU-01 & Interfaces & MU-01;MU-37;MU-47;MU-55 \\
+RNF-IU-02 & Base interna &  & Mantener consistencia visual & Equipo PFC & EV-INT-02 &  &  & CA-IU-02 & Interfaces & MU-10;MU-22;MU-68;MU-69;MU-70 \\
+RNF-RE-01 & Base interna &  & Garantizar uso en horario de gimnasio & Propietario & EV-INT-02 &  &  & CA-RE-01 & Infraestructura &  \\
+RNF-RE-02 & Base interna &  & Responder consultas comunes en menos de 3 s & Recepcion & EV-INT-02 &  &  & CA-RE-02 & Backend &  \\
+RNF-RE-03 & Base interna &  & Asegurar continuidad operativa & Propietario & EV-INT-02 &  &  & CA-RE-03 & Despliegue & DEP-01 \\
+RNF-SEG-01 & LOPDP & Art. 20 & Restringir acceso no autorizado & Propietario & EV-ENT-01 &  &  & CA-SEG-01 & Seguridad & MU-01 \\
+RNF-SEG-02 & LOPDP & Art. 20 & Aplicar permisos por rol & Propietario & EV-ENT-01 &  &  & CA-SEG-02 & Seguridad & MU-22 \\
+RNF-SEG-03 & LOPDP & Art. 24 & Proteger sesiones y tráfico & Equipo PFC & EV-INT-02 &  &  & CA-SEG-03 & Despliegue & DEP-01 \\
+RNF-MAN-01 & ISO/IEC 29148 &  & Facilitar mantenimiento & Equipo PFC & EV-INT-03 &  &  & CA-MAN-01 & Componentes & COMP-01 \\
+RNF-MAN-02 & ISO/IEC 29148 &  & Controlar cambios del sistema & Equipo PFC & EV-INT-03 &  &  & CA-MAN-02 & Auditoria & MU-25 \\
+RNF-PORT-01 & Base interna &  & Asegurar acceso desde navegador moderno & Usuarios & EV-INT-02 &  &  & CA-PORT-01 & Frontend & DEP-01 \\
+RNF-ESC-01 & Base interna &  & Permitir nuevas funciones & Equipo PFC & EV-INT-03 &  &  & CA-ESC-01 & Componentes & COMP-01 \\
+RNF-CAL-01 & LOPDP & Art. 24 & Registrar acciones sensibles & Propietario & EV-ENT-01 &  &  & CA-CAL-01 & Auditoria & MU-25 \\
+RNF-DAT-01 & Base interna &  & Evitar inconsistencias en pagos y stock & Propietario & EV-INT-02 &  &  & CA-DAT-01 & Repositorio & MU-69;MU-70 \\
+RNF-LEG-01 & LOPDP & Art. 10 & Minimizar y proteger datos personales & Clientes & EV-ENT-01 &  &  & CA-LEG-01 & Seguridad & MU-01;MU-22 \\
+RD-PRI-01 & Base interna &  & Usar navegador compatible & Equipo PFC & EV-INT-03 &  &  & CA-RD-01 & Despliegue & DEP-01 \\
+RD-PRI-02 & Ética PFC &  & No exponer datos reales & Equipo PFC & EV-ETH-01 &  &  & CA-RD-02 & MVP & MVP-01 \\
+RD-PRI-03 & LOPDP & Art. 20 & Restringir uso operativo & Propietario & EV-ENT-01 &  &  & CA-RD-03 & Seguridad & MU-01;MU-22 \\
+RD-IA-01 & Base interna &  & Operar con una arquitectura simple & Equipo PFC & EV-INT-03 &  &  & CA-RD-04 & Despliegue & DEP-01 \\
+RD-DEP-01 & Base interna &  & Garantizar recuperación diaria & Propietario & EV-INT-03 &  &  & CA-RD-05 & Despliegue & DEP-01 \\
+\bottomrule
+\end{longtable}
+\normalsize
+\end{landscape}
+
+\section{MVP}
+El MVP consolidado continua siendo un prototipo web local y de baja fidelidad, pero en esta version se organiza su evidencia visual y se alinea su cobertura funcional con los RF Must mas proximos al alcance ya implementado. Se conserva la observacion de que la cobertura aun debe ampliarse para alcanzar el 60\% minimo del conjunto Must.
+\begin{figure}[H]
+\centering
+\includegraphics[width=.95\textwidth]{imagenes/uso_documento/diagramas/MVP_EVIDENCIA_VISUAL.png}
+\caption{Evidencia visual consolidada del MVP y su cobertura funcional actual.}
+\end{figure}
+
+\section{Validacion y pendientes}
+Se incorporan artefactos formales de seguimiento para reducir observaciones de completitud: un plan de pruebas de aceptacion (\path{datos/plan_pruebas_aceptacion.csv}) y un registro de control de cambios/CCB (\path{control/control_cambios_ccb.csv}). Las validaciones empiricas con stakeholders continuan sujetas a disponibilidad y aprobacion etica, por lo que este documento no declara resultados de walkthrough no ejecutados; en su lugar, deja estructurado el plan de validacion.
+
+\subsection{Plan resumido de pruebas de aceptacion}
+\begin{tabularx}{\textwidth}{l l X l}
+\toprule ID & RF & Escenario & Estado \\ \midrule
+PA-01 & RF-AUT-01 & Inicio y cierre de sesion con credenciales validas e invalidas. & Planificado \\
+PA-06 & RF-MEM-01 & Creacion, edicion y activacion de planes y promociones. & Planificado \\
+PA-14 & RF-INV-02 & Registro de entradas, salidas y ajustes de stock. & Planificado \\
+PA-16 & RF-CAJ-01 & Cierre de turno con conciliacion y registro de diferencia. & Planificado \\
+PA-18 & RF-RUT-01 & Creacion y actualizacion de rutinas del instructor. & Planificado \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Control de cambios (CCB)}
+\begin{tabularx}{\textwidth}{l p{2.3cm} X p{2.0cm}}
+\toprule ID & Elemento & Cambio aprobado & Estado \\ \midrule
+CR-01 & RF-MEM-01 & Se crea MU-68 para cubrir la configuracion de planes y promociones. & Incorporado en v1.5 \\
+CR-02 & RF-INV-02 & Se crea MU-69 para cubrir el registro de movimientos de stock. & Incorporado en v1.5 \\
+CR-03 & RF-CAJ-01 & Se crea MU-70 para cubrir el cierre y conciliacion de caja. & Incorporado en v1.5 \\
+CR-04 & UML & Se integran los 28 diagramas faltantes dentro del ERS/SRS. & Incorporado en v1.5 \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Pendientes aun externos al ERS}
+Siguen pendientes las evidencias que no pueden reconstruirse honestamente sin el trabajo de campo o sin aprobaciones externas: consentimientos firmados, material multimedia completo, walkthroughs ejecutados y firmados, registro OSF previo, hashes de contenedor restringido y firma electronica final del analista lider. Estos elementos se listan para control, pero no se declaran como cumplidos en ausencia de evidencia verificable.
+\section{Anexo de interfaces y catalogo general}
+El catalogo maestro editable se entrega en CSV y XLSX con los 16 campos solicitados. Esta tabla compacta permite localizar los 67 registros dentro del ERS/SRS.
+\textbf{Estados abreviados en esta tabla:} TRAZADO = valido y trazado; AUXILIAR = valido auxiliar; CORREGIR = requiere correccion; FUTURO = funcionalidad futura; FUERA = fuera de alcance; PENDIENTE = pendiente de validacion. Los estados completos se conservan en CSV y XLSX.
+
+\subsection{Mockups complementarios creados para cerrar cobertura Must}
+\begin{figure}[H]\centering
+\includegraphics[width=.94\textwidth]{imagenes/uso_documento/mockups/02_Dueno_Administrador/MU-68_Gestion_de_planes_y_promociones.png}
+\caption{MU-68. Gestion de planes y promociones (RF-MEM-01).}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.94\textwidth]{imagenes/uso_documento/mockups/02_Dueno_Administrador/MU-69_Registro_de_movimientos_de_stock.png}
+\caption{MU-69. Registro de movimientos de stock (RF-INV-02).}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=.94\textwidth]{imagenes/uso_documento/mockups/02_Dueno_Administrador/MU-70_Cierre_y_conciliacion_de_caja.png}
+\caption{MU-70. Cierre y conciliacion de caja (RF-CAJ-01).}
+\end{figure}
+\footnotesize
+\begin{longtable}{p{1.0cm}p{2.7cm}p{3.0cm}p{3.1cm}p{2.8cm}}
+\toprule ID & Categoria original & Pantalla & Estado & RF relacionados \\ \midrule
+\endfirsthead
+\toprule ID & Categoria original & Pantalla & Estado & RF relacionados \\ \midrule
+\endhead
+MU-01 & Acceso y configuracion inicial & Inicio de sesion & TRAZADO & RF-AUT-01 \\
+MU-02 & Acceso y configuracion inicial & Registro de cuenta & FUTURO & Sin RF directo \\
+MU-03 & Acceso y configuracion inicial & Recuperacion de contrasena & AUXILIAR & Sin RF directo \\
+MU-04 & Acceso y configuracion inicial & Confirmacion de enlace enviado & AUXILIAR & Sin RF directo \\
+MU-05 & Acceso y configuracion inicial & Restablecimiento de contrasena & AUXILIAR & Sin RF directo \\
+MU-06 & Acceso y configuracion inicial & Confirmacion de contrasena actualizada & AUXILIAR & Sin RF directo \\
+MU-07 & Acceso y configuracion inicial & Configuracion inicial: datos personales del propietario & CORREGIR & Sin RF directo \\
+MU-08 & Acceso y configuracion inicial & Configuracion inicial: datos del gimnasio o empresa & FUTURO & Sin RF directo \\
+MU-09 & Acceso y configuracion inicial & Configuracion inicial: credenciales de acceso & CORREGIR & Sin RF directo \\
+MU-10 & Dueno o administrador & Dashboard del dueno & TRAZADO & RF-REP-01;RF-MEM-04;RF-INV-03 \\
+MU-11 & Dueno o administrador & Gestion de clientes & TRAZADO & RF-CLI-02;RF-CLI-03 \\
+MU-12 & Dueno o administrador & Registro de cliente & CORREGIR & RF-CLI-01 \\
+MU-13 & Dueno o administrador & Gestion de membresias & TRAZADO & RF-MEM-03;RF-MEM-04 \\
+MU-14 & Dueno o administrador & Registro de membresia & TRAZADO & RF-MEM-02 \\
+MU-15 & Dueno o administrador & Gestion de pagos & TRAZADO & RF-PAG-01;RF-PAG-02 \\
+MU-16 & Dueno o administrador & Registro de pago & TRAZADO & RF-PAG-01 \\
+MU-17 & Dueno o administrador & Gestion de rutinas & CORREGIR & RF-RUT-01;RF-RUT-02 \\
+MU-18 & Dueno o administrador & Gestion de ventas & TRAZADO & RF-VEN-01 \\
+MU-19 & Dueno o administrador & Gestion de inventario & TRAZADO & RF-INV-01;RF-INV-03 \\
+MU-20 & Dueno o administrador & Gestion de asistencias & TRAZADO & RF-ASI-01;RF-ASI-02 \\
+MU-21 & Dueno o administrador & Gestion de novedades internas & TRAZADO & RF-NOV-01 \\
+MU-22 & Dueno o administrador & Gestion de usuarios & TRAZADO & RF-AUT-02 \\
+MU-23 & Dueno o administrador & Gestion de horarios & TRAZADO & RF-INS-01 \\
+MU-24 & Dueno o administrador & Gestion de reportes & TRAZADO & RF-REP-01 \\
+MU-25 & Dueno o administrador & Auditoria del sistema & TRAZADO & RF-AUT-03 \\
+MU-26 & Dueno o administrador & Configuracion general del sistema & FUTURO & Sin RF directo \\
+MU-27 & Dueno o administrador & Registro de venta & TRAZADO & RF-VEN-01 \\
+MU-28 & Dueno o administrador & Registro de producto & TRAZADO & RF-INV-01 \\
+MU-29 & Dueno o administrador & Registro de rutina & CORREGIR & RF-RUT-01 \\
+MU-30 & Dueno o administrador & Registro de asistencia & CORREGIR & RF-ASI-01 \\
+MU-31 & Dueno o administrador & Registro de novedad interna & CORREGIR & RF-NOV-01 \\
+MU-32 & Dueno o administrador & Registro de usuario & TRAZADO & RF-AUT-02 \\
+MU-33 & Dueno o administrador & Registro de horario & TRAZADO & RF-INS-01 \\
+MU-34 & Dueno o administrador & Generacion de reporte & TRAZADO & RF-REP-01 \\
+MU-35 & Asistencia y personal creativo & Dashboard del asistente & AUXILIAR & Sin RF directo \\
+MU-36 & Asistencia y personal creativo & Gestion de clientes del asistente & TRAZADO & RF-CLI-02;RF-CLI-03 \\
+MU-37 & Asistencia y personal creativo & Registro de cliente por el asistente & CORREGIR & RF-CLI-01 \\
+MU-38 & Asistencia y personal creativo & Gestion de membresias del asistente & TRAZADO & RF-MEM-03;RF-MEM-04 \\
+MU-39 & Asistencia y personal creativo & Registro de membresia por el asistente & TRAZADO & RF-MEM-02 \\
+MU-40 & Asistencia y personal creativo & Gestion de pagos del asistente & TRAZADO & RF-PAG-01;RF-PAG-02 \\
+MU-41 & Asistencia y personal creativo & Registro de pago por el asistente & TRAZADO & RF-PAG-01 \\
+MU-42 & Asistencia y personal creativo & Gestion de ventas del asistente & TRAZADO & RF-VEN-01 \\
+MU-43 & Asistencia y personal creativo & Registro de venta por el asistente & TRAZADO & RF-VEN-01 \\
+MU-44 & Asistencia y personal creativo & Gestion de inventario del asistente & CORREGIR & RF-INV-01;RF-INV-03 \\
+MU-45 & Asistencia y personal creativo & Registro de producto por el asistente & CORREGIR & RF-INV-01 \\
+MU-46 & Asistencia y personal creativo & Gestion de asistencias del asistente & TRAZADO & RF-ASI-01;RF-ASI-02 \\
+MU-47 & Asistencia y personal creativo & Registro de asistencia por el asistente & CORREGIR & RF-ASI-01 \\
+MU-48 & Asistencia y personal creativo & Gestion de horarios del asistente & CORREGIR & RF-INS-01 \\
+MU-49 & Asistencia y personal creativo & Registro de horario por el asistente & CORREGIR & RF-INS-01 \\
+MU-50 & Asistencia y personal creativo & Gestion de novedades internas del asistente & TRAZADO & RF-NOV-01 \\
+MU-51 & Asistencia y personal creativo & Registro de novedad interna por el asistente & CORREGIR & RF-NOV-01 \\
+MU-52 & Instructor & Dashboard del instructor & AUXILIAR & Sin RF directo \\
+MU-53 & Instructor & Consulta de alumnos asignados & AUXILIAR & Sin RF directo \\
+MU-54 & Instructor & Gestion de rutinas del instructor & TRAZADO & RF-RUT-01;RF-RUT-02 \\
+MU-55 & Instructor & Registro de rutina por el instructor & TRAZADO & RF-RUT-01 \\
+MU-56 & Instructor & Gestion de asistencias del instructor & TRAZADO & RF-ASI-02 \\
+MU-57 & Instructor & Registro de asistencia por el instructor & PENDIENTE & Sin RF directo \\
+MU-58 & Instructor & Consulta de mi horario & TRAZADO & RF-INS-01 \\
+MU-59 & Instructor & Seguimiento del progreso de alumnos & TRAZADO & RF-RUT-03 \\
+MU-60 & Instructor & Registro de seguimiento del alumno & CORREGIR & RF-RUT-03 \\
+MU-61 & Instructor & Consulta de novedades internas & TRAZADO & RF-NOV-01 \\
+MU-62 & Estudiante & Inicio del estudiante & FUTURO & Sin RF directo \\
+MU-63 & Estudiante & Consulta de mi membresia & FUTURO & RF-MEM-03 \\
+MU-64 & Estudiante & Consulta de mi rutina & FUTURO & RF-RUT-01 \\
+MU-65 & Estudiante & Consulta de mis asistencias & FUTURO & RF-ASI-02 \\
+MU-66 & Estudiante & Consulta de mi progreso & FUERA & Sin RF directo \\
+MU-67 & Estudiante & Gestion de mi perfil & FUTURO & Sin RF directo \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Resumen de clasificacion}
+\begin{tabularx}{\textwidth}{Xr}
+\toprule Estado & Cantidad \\ \midrule
+VALIDO\_Y\_TRAZADO & 35 \\
+VALIDO\_AUXILIAR & 7 \\
+DUPLICADO & 0 \\
+REQUIERE\_CORRECCION & 15 \\
+FUNCIONALIDAD\_FUTURA & 8 \\
+FUERA\_DE\_ALCANCE & 1 \\
+PENDIENTE\_DE\_VALIDACION & 1 \\
+\bottomrule
+\end{tabularx}
+\subsection{Mockups omitidos en la trazabilidad anterior}
+Los 19 mockups antes omitidos, ahora revisados, son: MU-06, MU-07, MU-25, MU-26, MU-27, MU-28, MU-29, MU-30, MU-36, MU-37, MU-38, MU-39, MU-47, MU-48, MU-49, MU-54, MU-57, MU-58, MU-59.
+
+\section{Bibliografia}
+\bibliographystyle{plain}
+\bibliography{referencias}
+\end{document}
