@@ -1,0 +1,1039 @@
+{
+  "schema_version": "1.0",
+  "counts": {
+    "RF": 25,
+    "RNF": 15,
+    "RD": 4,
+    "total": 44
+  },
+  "requirements": [
+    {
+      "id": "RF-AUT-01",
+      "tipo": "RF",
+      "descripcion": "El sistema permitira iniciar y cerrar sesion mediante credenciales individuales no biometricas.",
+      "fuente_legal_o_operativa": "LOPDP",
+      "articulo": "Art. 10",
+      "objetivo": "Garantizar tratamiento licito y minimizacion de datos",
+      "stakeholder": "Personal autorizado",
+      "evidencias": [
+        "EV-ENTR02-07"
+      ],
+      "caso_uso": "CU-01",
+      "historia_usuario": "HU-01",
+      "criterio_aceptacion": "CA-01",
+      "componente": "Seguridad",
+      "mockups": [
+        "MU-01"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-AUT-02",
+      "tipo": "RF",
+      "descripcion": "El sistema autorizara cada operacion segun el rol Administrador, Recepcion o Instructor y denegara por defecto las no asignadas.",
+      "fuente_legal_o_operativa": "LOPDP",
+      "articulo": "Art. 20",
+      "objetivo": "Controlar acceso por roles y permisos",
+      "stakeholder": "Administrador",
+      "evidencias": [
+        "EV-ENTR02-07",
+        "EV-ENTR03-06",
+        "EV-ENTR08-04"
+      ],
+      "caso_uso": "CU-02",
+      "historia_usuario": "HU-02",
+      "criterio_aceptacion": "CA-02",
+      "componente": "Seguridad",
+      "mockups": [
+        "MU-22",
+        "MU-32"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-AUT-03",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara autor, fecha, accion y valores anterior/nuevo para pagos, precios, inventario, membresias y permisos.",
+      "fuente_legal_o_operativa": "LOPDP",
+      "articulo": "Art. 24",
+      "objetivo": "Asegurar trazabilidad de eventos criticos",
+      "stakeholder": "Administrador",
+      "evidencias": [
+        "EV-ENTR02-04",
+        "EV-ENTR02-07",
+        "EV-ENTR03-06"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "Auditoria",
+      "mockups": [
+        "MU-25"
+      ],
+      "moscow": "Should",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-CLI-01",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara un cliente con codigo interno, nombre de uso y un medio de contacto, sin salud, biometria, direccion ni imagen corporal.",
+      "fuente_legal_o_operativa": "Civil/Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Registrar datos minimos de cliente",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR01-02",
+        "EV-ENTR02-02",
+        "EV-ENTR03-02",
+        "EV-ENTR08-01"
+      ],
+      "caso_uso": "CU-03",
+      "historia_usuario": "HU-03",
+      "criterio_aceptacion": "CA-03",
+      "componente": "Clientes",
+      "mockups": [
+        "MU-12",
+        "MU-37"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-CLI-02",
+      "tipo": "RF",
+      "descripcion": "El sistema buscara clientes por codigo, nombre normalizado o contacto y mostrara membresia, ultimo pago, asistencia y novedades segun permisos.",
+      "fuente_legal_o_operativa": "Civil/Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Consultar ficha de cliente",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR02-03",
+        "EV-ENTR02-08",
+        "EV-ENTR08-05"
+      ],
+      "caso_uso": "CU-04",
+      "historia_usuario": "HU-04",
+      "criterio_aceptacion": "CA-04",
+      "componente": "Clientes",
+      "mockups": [
+        "MU-11",
+        "MU-36"
+      ],
+      "moscow": "Must",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-CLI-03",
+      "tipo": "RF",
+      "descripcion": "El sistema actualizara o reactivara un registro existente y advertira coincidencias antes de crear otro cliente.",
+      "fuente_legal_o_operativa": "Civil/Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Actualizar y reactivar cliente",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR02-02",
+        "EV-ENTR03-02",
+        "EV-ENTR04-01",
+        "EV-ENTR05-02"
+      ],
+      "caso_uso": "CU-05",
+      "historia_usuario": "HU-05",
+      "criterio_aceptacion": "CA-05",
+      "componente": "Clientes",
+      "mockups": [
+        "MU-11",
+        "MU-36"
+      ],
+      "moscow": "Must",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-MEM-01",
+      "tipo": "RF",
+      "descripcion": "El sistema administrara nombre, duracion, precio, vigencia y estado de planes y promociones.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Configurar catalogo de planes",
+      "stakeholder": "Administrador",
+      "evidencias": [
+        "EV-ENTR02-01",
+        "EV-ENTR04-01"
+      ],
+      "caso_uso": "CU-06",
+      "historia_usuario": "HU-06",
+      "criterio_aceptacion": "CA-06",
+      "componente": "Membresias",
+      "mockups": [
+        "MU-68"
+      ],
+      "moscow": "Must",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-MEM-02",
+      "tipo": "RF",
+      "descripcion": "El sistema activara o renovara una membresia calculando inicio y vencimiento desde un plan vigente y un pago confirmado.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Activar y renovar membresia",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR01-02",
+        "EV-ENTR02-04",
+        "EV-ENTR03-01",
+        "EV-ENTR04-03"
+      ],
+      "caso_uso": "CU-07",
+      "historia_usuario": "HU-07",
+      "criterio_aceptacion": "CA-07",
+      "componente": "Membresias",
+      "mockups": [
+        "MU-14",
+        "MU-39"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-MEM-03",
+      "tipo": "RF",
+      "descripcion": "El sistema mostrara estado, plan, fecha de inicio y vencimiento de la membresia.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Consultar vigencia",
+      "stakeholder": "Personal autorizado",
+      "evidencias": [
+        "EV-ENTR01-03",
+        "EV-ENTR02-03",
+        "EV-ENTR03-03",
+        "EV-ENTR08-02"
+      ],
+      "caso_uso": "CU-08",
+      "historia_usuario": "HU-08",
+      "criterio_aceptacion": "CA-08",
+      "componente": "Membresias",
+      "mockups": [
+        "MU-13",
+        "MU-38",
+        "MU-63(F)"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-MEM-04",
+      "tipo": "RF",
+      "descripcion": "El sistema listara diariamente membresias que vencen en los proximos tres dias y las vencidas, sin enviar mensajes externos automaticamente.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Alertar vencimientos",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR01-03",
+        "EV-ENTR05-02",
+        "EV-ENTR07-02"
+      ],
+      "caso_uso": "CU-09",
+      "historia_usuario": "HU-09",
+      "criterio_aceptacion": "CA-09",
+      "componente": "Membresias",
+      "mockups": [
+        "MU-10",
+        "MU-13",
+        "MU-38"
+      ],
+      "moscow": "Must",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-PAG-01",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara monto, concepto, medio, referencia y fecha de un pago, y generara un comprobante interno.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Registrar pago y comprobante",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR01-02",
+        "EV-ENTR02-04",
+        "EV-ENTR03-04",
+        "EV-ENTR07-02",
+        "EV-ENTR08-03"
+      ],
+      "caso_uso": "CU-10",
+      "historia_usuario": "HU-10",
+      "criterio_aceptacion": "CA-10",
+      "componente": "Pagos",
+      "mockups": [
+        "MU-15",
+        "MU-16",
+        "MU-40",
+        "MU-41"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-PAG-02",
+      "tipo": "RF",
+      "descripcion": "El sistema permitira confirmar, rechazar o corregir un pago pendiente conservando motivo y auditoria.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Resolver pagos pendientes",
+      "stakeholder": "Administrador",
+      "evidencias": [
+        "EV-ENTR02-04",
+        "EV-ENTR03-04",
+        "EV-ENTR07-07"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "Pagos",
+      "mockups": [
+        "MU-15",
+        "MU-40"
+      ],
+      "moscow": "Should",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-ASI-01",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara una asistencia no biometrica en una accion tras validar identidad operativa y vigencia, o documentara una excepcion autorizada.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Registrar asistencia",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR02-03",
+        "EV-ENTR03-03",
+        "EV-ENTR04-02",
+        "EV-ENTR07-07",
+        "EV-ENTR08-02"
+      ],
+      "caso_uso": "CU-11",
+      "historia_usuario": "HU-11",
+      "criterio_aceptacion": "CA-11",
+      "componente": "Asistencia",
+      "mockups": [
+        "MU-20",
+        "MU-30",
+        "MU-46",
+        "MU-47"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-ASI-02",
+      "tipo": "RF",
+      "descripcion": "El sistema filtrara asistencias por cliente, fecha y turno, y mostrara conteos operativos.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Consultar asistencia",
+      "stakeholder": "Personal autorizado",
+      "evidencias": [
+        "EV-ENTR03-01",
+        "EV-ENTR07-01",
+        "EV-ENTR08-05",
+        "EV-ENTR09-06"
+      ],
+      "caso_uso": "CU-12",
+      "historia_usuario": "HU-12",
+      "criterio_aceptacion": "CA-12",
+      "componente": "Asistencia",
+      "mockups": [
+        "MU-20",
+        "MU-46",
+        "MU-56",
+        "MU-65(F)"
+      ],
+      "moscow": "Must",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-INV-01",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara productos con codigo, nombre, precio, unidad, stock minimo y estado.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Administrar productos",
+      "stakeholder": "Administrador",
+      "evidencias": [
+        "EV-ENTR01-01",
+        "EV-ENTR02-05"
+      ],
+      "caso_uso": "CU-13",
+      "historia_usuario": "HU-13",
+      "criterio_aceptacion": "CA-13",
+      "componente": "Inventario",
+      "mockups": [
+        "MU-19",
+        "MU-28",
+        "MU-44",
+        "MU-45"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-INV-02",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara entradas y ajustes con cantidad, motivo, responsable y saldo resultante.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Registrar movimientos de stock",
+      "stakeholder": "Personal autorizado",
+      "evidencias": [
+        "EV-ENTR01-04",
+        "EV-ENTR04-04",
+        "EV-ENTR07-03"
+      ],
+      "caso_uso": "CU-14",
+      "historia_usuario": "HU-14",
+      "criterio_aceptacion": "CA-14",
+      "componente": "Inventario",
+      "mockups": [
+        "MU-69"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-VEN-01",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara una venta con items y medio de pago, y descontara existencias en la misma transaccion.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Registrar venta",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR02-05",
+        "EV-ENTR03-01",
+        "EV-ENTR04-04",
+        "EV-ENTR07-03",
+        "EV-ENTR08-03"
+      ],
+      "caso_uso": "CU-15",
+      "historia_usuario": "HU-15",
+      "criterio_aceptacion": "CA-15",
+      "componente": "Ventas",
+      "mockups": [
+        "MU-18",
+        "MU-27",
+        "MU-42",
+        "MU-43"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-INV-03",
+      "tipo": "RF",
+      "descripcion": "El sistema listara productos en o bajo stock minimo y resumira entradas, salidas y ventas por periodo.",
+      "fuente_legal_o_operativa": "Base interna",
+      "articulo": "N/A",
+      "objetivo": "Alertar stock y rotacion",
+      "stakeholder": "Administrador",
+      "evidencias": [
+        "EV-ENTR01-04",
+        "EV-ENTR02-05",
+        "EV-ENTR05-04",
+        "EV-ENTR06-04"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "Inventario",
+      "mockups": [
+        "MU-10",
+        "MU-19",
+        "MU-44"
+      ],
+      "moscow": "Should",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-CAJ-01",
+      "tipo": "RF",
+      "descripcion": "El sistema calculara pagos y ventas por medio, comparara valores declarados y registrara diferencias y entrega de turno.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Cerrar turno y conciliar caja",
+      "stakeholder": "Recepcion",
+      "evidencias": [
+        "EV-ENTR02-01",
+        "EV-ENTR02-06",
+        "EV-ENTR03-05",
+        "EV-ENTR04-05",
+        "EV-ENTR07-03",
+        "EV-ENTR08-04"
+      ],
+      "caso_uso": "CU-16",
+      "historia_usuario": "HU-16",
+      "criterio_aceptacion": "CA-16",
+      "componente": "Caja",
+      "mockups": [
+        "MU-70"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-NOV-01",
+      "tipo": "RF",
+      "descripcion": "El sistema creara una novedad con categoria, detalle minimo, responsable, vencimiento y estados pendiente, en proceso, resuelta o cancelada.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Gestionar novedades internas",
+      "stakeholder": "Personal autorizado",
+      "evidencias": [
+        "EV-ENTR02-01",
+        "EV-ENTR02-08",
+        "EV-ENTR03-07",
+        "EV-ENTR04-06",
+        "EV-ENTR05-01"
+      ],
+      "caso_uso": "CU-17",
+      "historia_usuario": "HU-17",
+      "criterio_aceptacion": "CA-17",
+      "componente": "Novedades",
+      "mockups": [
+        "MU-21",
+        "MU-31",
+        "MU-50",
+        "MU-51",
+        "MU-61"
+      ],
+      "moscow": "Must",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-INS-01",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara turnos, capacidad, disponibilidad y novedades operativas del instructor, sin datos de salud.",
+      "fuente_legal_o_operativa": "Base interna",
+      "articulo": "N/A",
+      "objetivo": "Gestionar horario y disponibilidad de instructor",
+      "stakeholder": "Administrador",
+      "evidencias": [
+        "EV-ENTR07-06",
+        "EV-ENTR09-03",
+        "EV-ENTR10-02"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "Instructores",
+      "mockups": [
+        "MU-23",
+        "MU-33",
+        "MU-48",
+        "MU-49",
+        "MU-58"
+      ],
+      "moscow": "Should",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-RUT-01",
+      "tipo": "RF",
+      "descripcion": "El sistema creara una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y dias, y la asignara a un cliente sintetico o autorizado.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Administrar rutinas",
+      "stakeholder": "Instructor",
+      "evidencias": [
+        "EV-ENTR01-05",
+        "EV-ENTR05-04",
+        "EV-ENTR09-01",
+        "EV-ENTR09-02",
+        "EV-ENTR09-03"
+      ],
+      "caso_uso": "CU-18",
+      "historia_usuario": "HU-18",
+      "criterio_aceptacion": "CA-18",
+      "componente": "Rutinas",
+      "mockups": [
+        "MU-17",
+        "MU-29",
+        "MU-54",
+        "MU-55",
+        "MU-64(F)"
+      ],
+      "moscow": "Must",
+      "kano": "Basico"
+    },
+    {
+      "id": "RF-RUT-02",
+      "tipo": "RF",
+      "descripcion": "El sistema creara una nueva version al modificar ejercicios o parametros y conservara las versiones anteriores en solo lectura.",
+      "fuente_legal_o_operativa": "Operacion",
+      "articulo": "Art. N/A",
+      "objetivo": "Registrar seguimiento",
+      "stakeholder": "Instructor",
+      "evidencias": [
+        "EV-ENTR01-05",
+        "EV-ENTR09-01",
+        "EV-ENTR09-04",
+        "EV-ENTR10-01",
+        "EV-ENTR10-03"
+      ],
+      "caso_uso": "CU-19",
+      "historia_usuario": "HU-19",
+      "criterio_aceptacion": "CA-19",
+      "componente": "Rutinas",
+      "mockups": [
+        "MU-17",
+        "MU-54"
+      ],
+      "moscow": "Must",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-RUT-03",
+      "tipo": "RF",
+      "descripcion": "El sistema registrara fecha, cumplimiento de ejercicios, repeticiones y observacion operativa, excluyendo diagnosticos, lesiones, peso y medidas reales.",
+      "fuente_legal_o_operativa": "Base interna",
+      "articulo": "N/A",
+      "objetivo": "Registrar seguimiento operativo",
+      "stakeholder": "Instructor",
+      "evidencias": [
+        "EV-ENTR09-04",
+        "EV-ENTR09-05",
+        "EV-ENTR09-06",
+        "EV-ENTR10-03",
+        "EV-ENTR10-04"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "Rutinas",
+      "mockups": [
+        "MU-59",
+        "MU-60"
+      ],
+      "moscow": "Should",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RF-REP-01",
+      "tipo": "RF",
+      "descripcion": "El sistema mostrara indicadores filtrables de membresias, pagos, asistencias, ventas, caja, inventario y novedades, con exportacion CSV.",
+      "fuente_legal_o_operativa": "Base interna",
+      "articulo": "N/A",
+      "objetivo": "Consultar panel y reportes",
+      "stakeholder": "Administrador",
+      "evidencias": [
+        "EV-ENTR01-05",
+        "EV-ENTR05-05",
+        "EV-ENTR06-04",
+        "EV-ENTR07-04",
+        "EV-ENTR08-05",
+        "EV-ENTR09-05"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "Reportes",
+      "mockups": [
+        "MU-10",
+        "MU-24",
+        "MU-34"
+      ],
+      "moscow": "Should",
+      "kano": "Desempeno"
+    },
+    {
+      "id": "RNF-AF-01",
+      "tipo": "RNF",
+      "descripcion": "En cada version candidata, el 100 \\% de los RF Must tendra al menos un criterio de aceptacion ejecutable y una evidencia de prueba; no se libera si alguno falla.",
+      "fuente_legal_o_operativa": "ISO/IEC/IEEE 29148",
+      "articulo": "",
+      "objetivo": "Adecuacion funcional",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO29148"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "General",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-ED-01",
+      "tipo": "RNF",
+      "descripcion": "Con 10 000 clientes sinteticos y 20 sesiones concurrentes, el percentil 95 de busqueda y consulta de membresia sera $\\leq$ 5 s y la tasa de error $\\leq$ 1 \\%.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010",
+      "articulo": "",
+      "objetivo": "Eficiencia de desempeno",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO25010"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "General",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-ED-02",
+      "tipo": "RNF",
+      "descripcion": "El registro de asistencia confirmada completara el flujo en $\\leq$ 30 s para al menos 9 de 10 tareas de una prueba moderada.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010",
+      "articulo": "",
+      "objetivo": "Eficiencia de desempeno",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO25010"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "General",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-COM-01",
+      "tipo": "RNF",
+      "descripcion": "Las funciones Must superaran el 100 \\% de sus pruebas en las dos versiones estables mas recientes de Chrome, Edge y Firefox disponibles al corte.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010",
+      "articulo": "",
+      "objetivo": "Compatibilidad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO25010"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "General",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-IU-01",
+      "tipo": "RNF",
+      "descripcion": "Al menos 9 de 10 tareas criticas de alta, renovacion, pago, asistencia y venta se completaran sin ayuda por cada perfil en walkthrough; la medicion esta pendiente.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010 / Rúbrica",
+      "articulo": "",
+      "objetivo": "Interaccion de usuario",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "EV-VAL-01"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-IU-01",
+      "componente": "Interfaces",
+      "mockups": [
+        "MU-01",
+        "MU-37",
+        "MU-47",
+        "MU-55"
+      ],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-IU-02",
+      "tipo": "RNF",
+      "descripcion": "Las pantallas Must cumpliran WCAG 2.2 nivel AA en criterios aplicables mediante auditoria automatica y revision manual, sin errores criticos.",
+      "fuente_legal_o_operativa": "WCAG 2.2",
+      "articulo": "",
+      "objetivo": "Interaccion de usuario",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-WCAG22"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-IU-02",
+      "componente": "Interfaces",
+      "mockups": [
+        "MU-10",
+        "MU-22",
+        "MU-68",
+        "MU-69",
+        "MU-70"
+      ],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-FIA-01",
+      "tipo": "RNF",
+      "descripcion": "Tras 100 operaciones transaccionales de pago, venta y asistencia con una interrupcion simulada, no habra registros parciales y la recuperacion sera $\\leq$ 10 min.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010",
+      "articulo": "",
+      "objetivo": "Fiabilidad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO25010"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "General",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-FIA-02",
+      "tipo": "RNF",
+      "descripcion": "Una copia diaria cifrada permitira restaurar una base sintetica de prueba con RPO $\\leq$ 24 h y RTO $\\leq$ 4 h en un simulacro documentado.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010 / OWASP",
+      "articulo": "",
+      "objetivo": "Fiabilidad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO25010",
+        "REF-OWASP"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "General",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-SEG-01",
+      "tipo": "RNF",
+      "descripcion": "El 100 \\% de las pruebas negativas de autorizacion impedira acceso a funciones o datos fuera del rol y registrara el intento sin exponer datos personales.",
+      "fuente_legal_o_operativa": "LOPDP / OWASP",
+      "articulo": "Arts. 10 y 20",
+      "objetivo": "Seguridad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-LOPDP",
+        "REF-OWASP"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-SEG-01",
+      "componente": "Seguridad",
+      "mockups": [
+        "MU-01"
+      ],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-SEG-02",
+      "tipo": "RNF",
+      "descripcion": "Por defecto se almacenaran solo codigo interno, nombre de uso y contacto opcional; salud, biometria, peso, medidas, direccion e imagen corporal real tendran cobertura de captura igual a 0 \\% en desarrollo y pruebas.",
+      "fuente_legal_o_operativa": "LOPDP / SPDP",
+      "articulo": "Arts. 10, 25, 26 y 39",
+      "objetivo": "Seguridad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-LOPDP",
+        "REF-SPDP"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-SEG-02",
+      "componente": "Seguridad",
+      "mockups": [
+        "MU-22"
+      ],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-SEG-03",
+      "tipo": "RNF",
+      "descripcion": "Las sesiones expiraran tras 15 min de inactividad; secretos no se almacenaran en texto claro y todo trafico de un despliegue conectado usara TLS 1.2 o superior.",
+      "fuente_legal_o_operativa": "OWASP / NIST",
+      "articulo": "",
+      "objetivo": "Seguridad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-OWASP",
+        "REF-NIST"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-SEG-03",
+      "componente": "Despliegue",
+      "mockups": [
+        "DEP-01"
+      ],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-MAN-01",
+      "tipo": "RNF",
+      "descripcion": "La suite automatizada cubrira $\\geq$ 70 \\% de lineas de los modulos de dominio antes de etiquetar una version candidata.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010",
+      "articulo": "",
+      "objetivo": "Mantenibilidad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO25010"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-MAN-01",
+      "componente": "Componentes",
+      "mockups": [
+        "COMP-01"
+      ],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-MAN-02",
+      "tipo": "RNF",
+      "descripcion": "Los modulos Clientes, Membresias, Pagos, Asistencia, Inventario, Caja y Rutinas tendran interfaces explicitas; un cambio de regla en un modulo no exigira modificar mas de un modulo consumidor.",
+      "fuente_legal_o_operativa": "ISO/IEC/IEEE 29148",
+      "articulo": "",
+      "objetivo": "Mantenibilidad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO29148"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-MAN-02",
+      "componente": "Auditoria",
+      "mockups": [
+        "MU-25"
+      ],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-POR-01",
+      "tipo": "RNF",
+      "descripcion": "El sistema web y sus pruebas se desplegaran con una unica instruccion documentada en Windows 11 y una distribucion Linux LTS, sin editar codigo fuente.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010",
+      "articulo": "",
+      "objetivo": "Portabilidad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO25010"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "General",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RNF-FLE-01",
+      "tipo": "RNF",
+      "descripcion": "Planes, precios, stock minimo, roles operativos y ventanas de alerta se modificaran por configuracion autorizada sin recompilar ni editar codigo.",
+      "fuente_legal_o_operativa": "ISO/IEC 25010",
+      "articulo": "",
+      "objetivo": "Flexibilidad",
+      "stakeholder": "Equipo PFC / perfiles de usuario",
+      "evidencias": [
+        "REF-ISO25010"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-N/A",
+      "componente": "General",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RD-PRI-01",
+      "tipo": "RD",
+      "descripcion": "Excluir datos reales de salud y biometria automatizada; usar minimizacion, seudonimizacion y datos sinteticos en diseno y pruebas.",
+      "fuente_legal_o_operativa": "LOPDP / SPDP",
+      "articulo": "Arts. 4, 10, 25, 26 y 39",
+      "objetivo": "Exclusion de salud y biometria real",
+      "stakeholder": "Equipo PFC / responsable del tratamiento",
+      "evidencias": [
+        "REF-LOPDP",
+        "REF-SPDP"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-PRI-01",
+      "componente": "Privacidad",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RD-PRI-02",
+      "tipo": "RD",
+      "descripcion": "Aplicar privacidad desde el diseno y por defecto, minimo privilegio y conservacion limitada.",
+      "fuente_legal_o_operativa": "LOPDP / SPDP",
+      "articulo": "Arts. 10 y 39",
+      "objetivo": "Privacidad por diseno y minimo privilegio",
+      "stakeholder": "Equipo PFC / responsable del tratamiento",
+      "evidencias": [
+        "REF-LOPDP",
+        "REF-SPDP"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-PRI-02",
+      "componente": "Seguridad",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RD-PRI-03",
+      "tipo": "RD",
+      "descripcion": "Prever mecanismos trazables de acceso, rectificacion, actualizacion, eliminacion, oposicion y portabilidad antes de produccion.",
+      "fuente_legal_o_operativa": "LOPDP",
+      "articulo": "Art. 39",
+      "objetivo": "Derechos del titular",
+      "stakeholder": "Equipo PFC / responsable del tratamiento",
+      "evidencias": [
+        "REF-LOPDP"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-PRI-03",
+      "componente": "Clientes",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    },
+    {
+      "id": "RD-IA-01",
+      "tipo": "RD",
+      "descripcion": "No incorporar IA o aprendizaje automatico al producto mientras no exista necesidad elicitada, evaluacion de riesgo, adenda y validacion.",
+      "fuente_legal_o_operativa": "Paquete ético / memo de alcance",
+      "articulo": "Categoría A",
+      "objetivo": "No incorporar IA/AA sin validacion",
+      "stakeholder": "Equipo PFC / responsable del tratamiento",
+      "evidencias": [
+        "MEMO-ALCANCE-IA"
+      ],
+      "caso_uso": null,
+      "historia_usuario": null,
+      "criterio_aceptacion": "CA-IA-01",
+      "componente": "Alcance",
+      "mockups": [],
+      "moscow": null,
+      "kano": null
+    }
+  ]
+}

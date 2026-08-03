@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Cite este conjunto de datos mediante la siguiente información."
+type: dataset
+title: "FabroGym: conjunto de datos anonimizado para ingeniería de requisitos en la gestión de gimnasios"
+version: "1.0"
+date-released: "2026-08-02"
+authors:
+  - family-names: "Alvia Villegas"
+    given-names: "Erick Adalberto"
+    orcid: "https://orcid.org/0009-0001-3777-470X"
+  - family-names: "Mera Arias"
+    given-names: "Erick Jhair"
+    orcid: "https://orcid.org/0009-0001-0068-1796"
+  - family-names: "Mora Duarte"
+    given-names: "Alex José"
+    orcid: "https://orcid.org/0009-0000-2494-2842"
+  - family-names: "Ponce Rivera"
+    given-names: "Mery Helenmey"
+    orcid: "https://orcid.org/0009-0006-6041-9198"
+  - family-names: "Vaca Romero"
+    given-names: "David Octavio"
+    orcid: "https://orcid.org/0009-0000-4457-3095"
+repository-code: "https://github.com/amorad35/FabroGym_ISR401"
+url: "https://github.com/amorad35/FabroGym_ISR401"
+license: "CC-BY-4.0"
+# doi: incorporar únicamente después del depósito en Zenodo

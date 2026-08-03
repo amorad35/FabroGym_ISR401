@@ -1,0 +1,17 @@
+{
+  "project": "FabroGym",
+  "instrument": "Cuestionario digital anónimo dirigido a personas adultas usuarias o exusuarias de gimnasios",
+  "n": 32,
+  "pilot_responses_included": 4,
+  "consent_affirmative": 32,
+  "id_range": [
+    "ENC-CLI-001",
+    "ENC-CLI-032"
+  ],
+  "updated": "2026-08-02",
+  "notes": [
+    "La base se entrega sin marcas de tiempo, nombres ni columnas identificativas.",
+    "Cuatro respuestas proceden del pilotaje y permanecen incluidas; esta condición debe considerarse al interpretar resultados.",
+    "La muestra es no probabilística y no autoriza inferencias poblacionales."
+  ]
+}

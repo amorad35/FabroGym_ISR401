@@ -1,0 +1,11 @@
+﻿entrevista,codigos_tematicos_en_entrevista,codigos_tematicos_nuevos,codigos_tematicos_acumulados,codigos_nuevos_detalle,memos_restricciones,nota
+ENTR-01,5,5,5,CONTROL_INVENTARIO_VENTAS;CONTROL_VIGENCIA_ACCESO;GESTION_CLIENTES_MEMBRESIAS;REGISTROS_DISPERSOS;REPORTES_DECISION,,
+ENTR-02,7,6,11,CENTRALIZACION_CONSULTA;CIERRE_CAJA_TURNO;CONTROL_ACCESO_ROLES;GESTION_NOVEDADES;GESTION_PAGOS;INTEGRIDAD_TRANSACCIONAL,,Identificación normalizada por el nombre del archivo y el código P02; la cabecera interna no modifica la unidad de análisis.
+ENTR-03,7,0,11,,,No aporta códigos temáticos normalizados nuevos en este orden de análisis.
+ENTR-04,5,0,11,,,No aporta códigos temáticos normalizados nuevos en este orden de análisis.
+ENTR-05,5,1,12,CONTINUIDAD_OPERATIVA,,Entrevista independiente confirmada por el Equipo FabroGym.
+ENTR-06,3,0,12,,EXCLUSION_DATOS_SENSIBLES;IA_FUERA_ALCANCE,Entrevista independiente confirmada; los códigos nuevos de esta entrevista son memos/restricciones y no se suman a la curva temática.
+ENTR-07,5,1,13,GESTION_INSTRUCTORES,EXCLUSION_DATOS_SENSIBLES,
+ENTR-08,5,1,14,PRIVACIDAD_MINIMIZACION,,
+ENTR-09,5,2,16,GESTION_RUTINAS;SEGUIMIENTO_RUTINAS,,
+ENTR-10,3,0,16,,,Participante confirmado como P10; no aporta códigos temáticos nuevos en este orden.
