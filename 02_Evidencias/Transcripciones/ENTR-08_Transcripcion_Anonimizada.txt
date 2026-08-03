@@ -1,0 +1,139 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+ENTREVISTA 08 — RECEPCIÓN
+Código del participante: Participante P08
+Duración aproximada del audio: 17:41
+
+[00:00 aprox.]
+Entrevistador: Muy buenos días. En esta ocasión entrevistaremos a una persona que trabaja como recepcionista en un gimnasio y que nos ayudará con la siguiente entrevista. Antes de comenzar, ¿desea mencionar algo?
+
+Participante P08: Buenos días. Es un gusto ayudarlos y estar presente con ustedes.
+
+Entrevistador: Antes de iniciar formalmente, quisiera conocer cómo es el ambiente actual del gimnasio y qué piensa del trabajo que realiza.
+
+Participante P08: El ambiente es muy amigable y cálido. Todos sabemos relacionarnos bastante bien.
+
+[01:05 aprox.]
+Entrevistador: ¿Cuánto tiempo lleva trabajando o colaborando en la recepción del gimnasio y cuáles son sus principales responsabilidades?
+
+Participante P08: Llevo aproximadamente un año trabajando como recepcionista. Mis principales responsabilidades son atender a los clientes, registrar a los socios, verificar las membresías, controlar los pagos y cobros y, principalmente, registrar la asistencia diaria.
+
+[02:05 aprox.]
+Entrevistador: Describa paso a paso cómo organiza sus actividades desde que inicia hasta que finaliza su jornada laboral.
+
+Participante P08: Al iniciar mi jornada reviso que el área de recepción esté ordenada. Después verifico en el sistema los registros del día.
+
+Participante P08: Durante el turno registro los ingresos y las salidas y verifico los pagos de cada socio. Al finalizar realizo el cierre de caja y dejo todo limpio y ordenado.
+
+Entrevistador: ¿Ha tenido algún inconveniente en ese proceso?
+
+Participante P08: Por el momento no hemos tenido inconvenientes, porque como equipo sabemos comunicar cualquier cambio que se realice.
+
+[03:35 aprox.]
+Entrevistador: Describa paso a paso cómo registra actualmente a un cliente nuevo, qué información solicita y dónde almacena esos datos.
+
+Participante P08: Para registrar a un cliente se solicita la cédula. Después se registran los nombres, el número de teléfono, el correo electrónico para enviar comprobantes de pago y la dirección por cualquier situación que pueda presentarse.
+
+Entrevistador: Respecto a la cédula, ¿solamente se solicita ese documento o existen casos especiales?
+
+Participante P08: Solamente se solicita la cédula para verificar la identidad del cliente.
+
+[05:00 aprox.]
+Entrevistador: Describa qué hace cuando un cliente llega al gimnasio, desde la verificación de su membresía hasta el registro de su asistencia.
+
+Participante P08: Primero se lo saluda y se le da una bienvenida para que se sienta en confianza. Después se solicita su nombre o el código asignado para permitirle el ingreso.
+
+Participante P08: Verificamos en la base de datos si su membresía está activa o inactiva. Si está activa, ingresa normalmente. Si no está activa, se conversa con el propietario para determinar qué solución se puede ofrecer.
+
+Entrevistador: ¿Cómo registra actualmente esa información?
+
+Participante P08: Por el momento se lleva de manera escrita en un cuaderno.
+
+[06:25 aprox.]
+Entrevistador: Cuando una membresía está vencida o no aparece registrada, ¿cómo comprueba la información y qué procedimiento realiza para atender al cliente?
+
+Participante P08: ¿Puede repetir la pregunta?
+
+Entrevistador: Cuando una membresía aparece vencida o no está registrada, ¿cómo comprueba la información y qué hace para atender al cliente?
+
+Participante P08: Los nombres están organizados en orden alfabético. Se puede buscar al cliente mediante su código o apellido.
+
+Participante P08: Si la membresía no está activa, antes de tomar una decisión debo conversar con el propietario para saber si se le permite ingresar ese día o si primero debe realizar el pago.
+
+[07:50 aprox.]
+Entrevistador: Describa cómo registra el pago o la renovación de una membresía y cómo entrega o confirma el comprobante al cliente.
+
+Participante P08: Se utiliza factura electrónica. El pago también se registra en el cuaderno, pero siempre se entrega una factura o se la envía al correo electrónico.
+
+Entrevistador: ¿Desea añadir algo más?
+
+Participante P08: No. Por el momento, eso es lo que corresponde a mis funciones.
+
+[08:55 aprox.]
+Entrevistador: Cuando realiza la venta de un producto, ¿cómo registra la transacción, actualiza las existencias y controla el dinero recibido?
+
+Participante P08: Ese proceso se maneja mediante Excel. La venta se registra en el momento en que se realiza y se va contabilizando. Por eso siempre debemos estar pendientes.
+
+Entrevistador: ¿Han considerado automatizar ese trabajo mediante un sistema propio?
+
+Participante P08: Sí, pero se desea hacer más adelante. Como el negocio está comenzando, todavía existen aspectos que deben concretarse antes de implementar ese sistema.
+
+[10:10 aprox.]
+Entrevistador: Al finalizar su jornada, ¿cómo verifica y entrega la información de pagos, ventas, asistencias y novedades registradas durante su turno?
+
+Participante P08: Diariamente se revisa el libro diario. En el cuaderno se anota todo con la fecha, los nombres y las cantidades correspondientes a pagos y ventas.
+
+Participante P08: Después se comparan los resultados con el dinero de caja y todo debe quedar cuadrado.
+
+Entrevistador: ¿Han tenido problemas por faltantes de dinero?
+
+Participante P08: No. Todo se maneja con factura electrónica. En el caso de los productos se emite la factura y, en los pagos mediante transferencia, se verifica el comprobante.
+
+[11:30 aprox.]
+Entrevistador: ¿Qué información de los clientes necesita consultar o modificar para realizar su trabajo y qué datos deberían tener acceso restringido?
+
+Participante P08: Necesitamos consultar los datos personales, el estado de la membresía y el historial de pagos.
+
+Participante P08: La información personal, los datos de contacto y el historial de pagos deben tener acceso restringido únicamente para personas autorizadas. Un amigo u otra persona no puede solicitar esos datos.
+
+Entrevistador: Entonces, los datos se entregan únicamente a la persona autorizada.
+
+Participante P08: Exactamente.
+
+[12:45 aprox.]
+Entrevistador: ¿Cómo comunica actualmente al propietario y a los entrenadores los pagos, vencimientos, registros, eventos o novedades de los clientes? ¿Por qué pueden producirse errores o demoras?
+
+Participante P08: La información se comunica inmediatamente mediante WhatsApp o correo electrónico. En ocasiones WhatsApp puede presentar inconvenientes, por eso el correo es más confiable.
+
+Participante P08: Como recepcionista puedo comunicar las inquietudes o problemas por esos canales o verbalmente.
+
+Entrevistador: ¿También utiliza la comunicación verbal?
+
+Participante P08: Sí. A veces los mensajes se pierden o se olvidan, por eso debo recordarlos también verbalmente.
+
+[14:10 aprox.]
+Entrevistador: ¿Qué actividad de recepción le genera más errores, retrasos o trabajo repetitivo y cómo afecta la atención al cliente?
+
+Participante P08: Principalmente la verificación de las membresías vencidas y el registro manual de los pagos. Aun así, se lleva una contabilización exacta.
+
+[14:55 aprox.]
+Entrevistador: De acuerdo con su experiencia, ¿cuáles son las tres funciones que no deberían faltar en la primera versión de un sistema para recepción y por qué serían prioritarias?
+
+Participante P08: La primera sería el registro y administración de clientes y membresías, para realizar consultas inmediatas y disponer de la información de cada socio, incluso fuera del horario habitual.
+
+Participante P08: La segunda sería el control de pagos y renovaciones, para registrar correctamente las membresías y evitar errores.
+
+Participante P08: La tercera sería el registro automático de asistencias y reportes, para llevar un control diario de ingresos y facilitar la elaboración de reportes al finalizar la jornada.
+
+[16:35 aprox.]
+Entrevistador: ¿Desea añadir alguna observación o recomendación antes de cerrar la entrevista?
+
+Participante P08: No. Por el momento, todo está bien.
+
+Entrevistador: Muchas gracias por participar en esta entrevista. En caso de requerir información adicional, nos mantendremos en contacto.
+
+Participante P08: Gracias por la invitación.

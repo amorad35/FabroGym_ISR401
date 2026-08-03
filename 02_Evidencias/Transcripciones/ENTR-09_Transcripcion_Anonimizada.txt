@@ -1,0 +1,162 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+ENTREVISTA 09 — ENTRENADOR
+Código del participante: Participante P09
+Duración aproximada del audio: 21:06
+
+[00:00 aprox.]
+Entrevistador: Muy buenas noches. Nos encontramos con una persona que trabaja como entrenador en un gimnasio. Realizaremos una entrevista relacionada con un proyecto académico de Ingeniería de Requerimientos. La información tendrá fines académicos.
+
+Entrevistador: Antes de iniciar, ¿desea presentarse?
+
+Participante P09: Buenas noches. Llevo alrededor de tres años trabajando como entrenador. Mi enfoque principal es el área de fuerza e hipertrofia, aunque también tengo experiencia competitiva en lucha de brazos.
+
+Participante P09: Doy bastante importancia al trabajo de agarre, antebrazo y fuerza funcional. Durante estos años he acompañado a clientes principiantes y a personas con objetivos específicos de rendimiento.
+
+Participante P09: Mi rol ha evolucionado. Al principio me dedicaba a corregir técnicas en máquinas y pesas libres. Después también empecé a diseñar y dar seguimiento a las rutinas.
+
+[01:50 aprox.]
+Entrevistador: ¿Cuánto tiempo lleva trabajando como entrenador y cómo ha cambiado su labor durante ese período?
+
+Participante P09: Llevo aproximadamente tres años. Al principio mi función era más operativa: recibía a los clientes, les mostraba las máquinas y corregía la técnica en el área de entrenamiento.
+
+Participante P09: Con el tiempo asumí más responsabilidades, como el diseño de rutinas personalizadas y el seguimiento de resultados. Actualmente mi trabajo combina la práctica y el análisis, no únicamente el acompañamiento durante la sesión.
+
+[03:05 aprox.]
+Entrevistador: ¿Qué tareas realiza con mayor frecuencia durante su jornada y cómo se organiza con los demás entrenadores?
+
+Participante P09: Mi día se divide en tres partes. La primera es la atención directa en el área de entrenamiento: corrección de técnica, motivación y supervisión de series.
+
+Participante P09: La segunda es la actualización de rutinas cuando se deben ajustar cargas o ejercicios. La tercera consiste en revisar el progreso de cada cliente antes de su sesión.
+
+Participante P09: Normalmente reviso la información durante los tiempos libres entre un cliente y otro. Esto depende mucho de qué tan rápido pueda acceder a los datos.
+
+Entrevistador: ¿Ha tenido problemas con esa organización?
+
+Participante P09: Sí. Mi forma de organizarme es ambigua. Registro información en libretas, hojas de Excel y notas sueltas del teléfono. A largo plazo eso genera inconvenientes.
+
+[04:45 aprox.]
+Entrevistador: ¿Qué medios utiliza actualmente para registrar o consultar la información de los clientes y qué dificultades encuentra al utilizarlos?
+
+Participante P09: Utilizo hojas de cálculo, notas en el celular y, en algunos casos, cuadernos físicos que permanecen en el gimnasio.
+
+Participante P09: El principal problema es que la información queda dispersa. Si un cliente cambia de entrenador o no tengo el cuaderno, pierdo el contexto de su historial.
+
+Participante P09: Buscar un dato específico de una semana anterior puede tomar varios minutos, lo que representa una pérdida de tiempo durante la jornada.
+
+[06:10 aprox.]
+Entrevistador: Antes de asignar una rutina, ¿qué información considera necesaria para orientar al cliente?
+
+Participante P09: No es necesario mencionar información privada. Lo principal es conocer el objetivo del cliente: pérdida de grasa, ganancia de masa muscular, rendimiento o salud general.
+
+Participante P09: También necesito conocer su experiencia previa, lesiones o limitaciones físicas, disponibilidad de días a la semana y, cuando sea posible y esté autorizado, mediciones básicas como peso o composición corporal.
+
+Participante P09: Esto permite calibrar la intensidad y evitar ejercicios que puedan generar riesgos.
+
+Entrevistador: ¿Cómo cambia la rutina según el objetivo?
+
+Participante P09: No es lo mismo diseñar una rutina de hipertrofia que una de fuerza. Cambian los rangos de repeticiones, los tiempos de descanso y la selección de ejercicios.
+
+Participante P09: En hipertrofia pueden utilizarse rangos aproximados de diez a quince repeticiones, controlando el peso, la intensidad y las series semanales.
+
+Participante P09: También existe un límite de volumen. Si una persona excede demasiado las series, puede perjudicar su recuperación, perder rendimiento o lesionarse. Por eso siempre es importante conocer el objetivo.
+
+[08:45 aprox.]
+Entrevistador: ¿Cómo se entera de que ingresó un cliente nuevo, qué información recibe y qué problemas pueden presentarse en esa comunicación?
+
+Participante P09: Generalmente la recepción me informa verbalmente o mediante un grupo interno de WhatsApp.
+
+Participante P09: La información suele ser mínima: nombre y, en ocasiones, objetivo general. Muchas veces el formulario de ingreso no llega completo.
+
+Participante P09: Cuando ocurre, debo realizar nuevamente la entrevista inicial desde cero. Esto retrasa el inicio del plan, porque conocer lesiones, objetivos y antecedentes puede tomar entre una y dos horas.
+
+[10:05 aprox.]
+Entrevistador: ¿Cómo registra actualmente las rutinas de los clientes y cómo las consulta posteriormente?
+
+Participante P09: Las escribo en hojas de cálculo o notas del celular, organizadas por nombre.
+
+Participante P09: Para consultarlas debo buscarlas manualmente en los archivos o desplazarme dentro de la hoja hasta encontrar el registro correcto.
+
+Participante P09: No tengo un historial ordenado por fechas que permita observar la evolución rápidamente.
+
+[11:10 aprox.]
+Entrevistador: Cuando necesita ajustar una rutina o una carga, ¿qué problema se presenta con mayor frecuencia y qué criterios considera?
+
+Participante P09: El mayor problema es no tener siempre disponible el registro de la sesión anterior.
+
+Participante P09: A veces ajusto la carga según lo que recuerda el cliente o lo que recuerdo yo, lo cual no siempre es exacto.
+
+Participante P09: Cuando tengo los datos, reviso si cumplió todas las repeticiones, si mantuvo una técnica correcta, si reportó fatiga excesiva o dolor y cuánto tiempo lleva utilizando el mismo peso.
+
+Participante P09: Si un cliente lleva varias semanas con el mismo peso sin progresar, primero reviso la técnica, las compensaciones, el rango de movimiento, la fatiga acumulada y la necesidad de cambiar el estímulo, los ejercicios o el esquema de series y repeticiones.
+
+[13:00 aprox.]
+Entrevistador: ¿Qué información debería mantenerse en el historial de seguimiento?
+
+Participante P09: Principalmente el historial de cargas y repeticiones por ejercicio, las fechas de las sesiones, la evolución del peso corporal o las medidas, cuando el cliente lo autorice, las lesiones o molestias reportadas y las observaciones generales de rendimiento.
+
+Participante P09: Cada dato tiene un propósito. El historial de cargas permite detectar progresión o estancamiento. Las fechas ayudan a revisar la constancia y las ausencias prolongadas. Las lesiones evitan repetir ejercicios que ya generaron una alerta.
+
+Participante P09: Las observaciones permiten hacer seguimiento a la motivación y a la adherencia al plan, sin almacenar datos médicos detallados ni información personal irrelevante.
+
+[14:20 aprox.]
+Entrevistador: ¿Qué dificultades enfrenta con mayor frecuencia durante el seguimiento y cómo afectan la calidad del acompañamiento?
+
+Participante P09: La mayor dificultad es la dispersión de la información. Buscar en varios lugares el historial de un cliente me quita tiempo que debería dedicar a la sesión.
+
+Participante P09: A veces termino ajustando rutinas con información incompleta o repitiendo preguntas que el cliente ya respondió. Eso puede generar una mala impresión profesional.
+
+Participante P09: También ha ocurrido que un cliente recuerda un ajuste acordado la semana anterior y yo no tengo ese dato disponible porque quedó anotado en otro lugar o no se registró correctamente.
+
+Entrevistador: Entonces, ¿lo más importante es tener la información de las sesiones disponible?
+
+Participante P09: Sí. Esa información permite entrenar con criterios y verificar mediante datos reales si la persona está progresando.
+
+[15:55 aprox.]
+Entrevistador: Si un cliente no muestra mejoría, ¿qué hace?
+
+Participante P09: Primero reviso si está cumpliendo correctamente el entrenamiento, las series, las repeticiones y las cargas.
+
+Participante P09: Si el plan se está ejecutando correctamente y aun así existe estancamiento, reviso factores externos como la nutrición, la calidad del sueño, los hábitos y el estado general de la persona.
+
+Participante P09: Todos esos factores influyen en el rendimiento y en los resultados.
+
+[17:10 aprox.]
+Entrevistador: ¿Qué resumen de información le ayudaría durante el seguimiento de los clientes y cómo lo utilizaría?
+
+Participante P09: Me ayudaría tener un resumen rápido con la última rutina realizada, el progreso de las últimas semanas y alertas relevantes como lesiones, ausencias prolongadas o metas próximas.
+
+Participante P09: Lo utilizaría antes de cada sesión para preparar ajustes sin revisar todo el historial.
+
+Participante P09: Una ausencia prolongada también es importante. Si una persona deja de entrenar durante dos meses, no puede regresar utilizando inmediatamente las mismas cargas. Debe reajustarse el entrenamiento para prevenir lesiones.
+
+[18:30 aprox.]
+Entrevistador: ¿Qué actividades de seguimiento son más repetitivas o difíciles de controlar y qué proceso debería organizarse mejor?
+
+Participante P09: Lo más repetitivo es registrar manualmente cada sesión y recordar el punto de progresión de cada cliente cuando manejo varios en paralelo.
+
+Participante P09: El registro y la consulta de rutinas deberían centralizarse en un solo sistema. Esto reduciría errores y ahorraría tiempo que podría dedicarse a la atención.
+
+Participante P09: Cuando tengo cinco o seis clientes en un mismo horario, es fácil confundir el progreso de uno con el de otro si la información no está organizada. Un sistema centralizado ayudaría tanto a mí como a los demás entrenadores.
+
+[19:50 aprox.]
+Entrevistador: Cuando un cliente no muestra el avance esperado, ¿qué información revisa primero y cómo decide los pasos siguientes?
+
+Participante P09: Primero reviso la constancia, la asistencia y si cumplió la rutina planteada.
+
+Participante P09: Después reviso si ha mencionado cambios en la alimentación o el descanso.
+
+Participante P09: Con esa información decido si debe ajustarse la rutina, la intensidad o si es necesario conversar con el cliente sobre hábitos fuera del gimnasio.
+
+[20:35 aprox.]
+Entrevistador: ¿Desea añadir algo más?
+
+Participante P09: No. Considero que todo quedó claro. Si existe alguna pregunta adicional, puedo responderla.
+
+Entrevistador: Muchas gracias por la entrevista. También dejamos constancia de que el participante no encendió la cámara por razones personales.
+
+Participante P09: Muchas gracias por la invitación.

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MVP local de Fabro Gym para asistencia, rutinas e instructores">
+  <title>Fabro Gym | MVP Asistencia, Rutinas e Instructores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">FG</div>
+        <div>
+          <strong>Fabro Gym</strong>
+          <span>MVP operativo</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-link active" data-view="dashboard">
+          <span>▦</span> Resumen
+        </button>
+        <button class="nav-link" data-view="attendance">
+          <span>✓</span> Asistencias
+        </button>
+        <button class="nav-link" data-view="routines">
+          <span>≡</span> Rutinas
+        </button>
+        <button class="nav-link" data-view="instructors">
+          <span>◷</span> Instructores
+        </button>
+      </nav>
+
+      <div class="sidebar-note">
+        <strong>Datos de demostración</strong>
+        <p>La aplicación usa exclusivamente personas ficticias y guarda la información en este navegador.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Entrega 3 (2A)</p>
+          <h1 id="pageTitle">Resumen operativo</h1>
+        </div>
+        <div class="top-actions">
+          <button id="resetDemo" class="btn btn-ghost">Restablecer demo</button>
+          <div class="user-chip">
+            <span class="avatar">ER</span>
+            <div>
+              <strong>Recepción</strong>
+              <small>Usuario de prueba</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="dashboard" class="view active">
+        <div class="hero-card">
+          <div>
+            <span class="status-badge">MVP funcional local</span>
+            <h2>Control de asistencia, rutinas e instructores</h2>
+            <p>Prototipo ejecutable en HTML, CSS y JavaScript, sin servidor ni servicios externos.</p>
+          </div>
+          <button class="btn btn-primary" data-jump="attendance">Registrar asistencia</button>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span>Asistencias hoy</span>
+            <strong id="statAttendance">0</strong>
+            <small>Registros confirmados</small>
+          </article>
+          <article class="stat-card">
+            <span>Rutinas activas</span>
+            <strong id="statRoutines">0</strong>
+            <small>Asignaciones vigentes</small>
+          </article>
+          <article class="stat-card">
+            <span>Clientes sintéticos</span>
+            <strong id="statClients">0</strong>
+            <small>Datos de demostración</small>
+          </article>
+          <article class="stat-card">
+            <span>Seguimientos</span>
+            <strong id="statFollowups">0</strong>
+            <small>Sesiones registradas</small>
+          </article>
+        </div>
+
+        <div class="panel-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Actividad reciente</p>
+                <h3>Últimas asistencias</h3>
+              </div>
+              <button class="link-button" data-jump="attendance">Ver módulo</button>
+            </div>
+            <div id="recentAttendance" class="activity-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Rutinas</p>
+                <h3>Asignaciones recientes</h3>
+              </div>
+              <button class="link-button" data-jump="routines">Ver módulo</button>
+            </div>
+            <div id="recentRoutines" class="activity-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="attendance" class="view">
+        <div class="section-grid">
+          <article class="panel sticky-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">RF-ASI-01</p>
+                <h2>Registrar asistencia</h2>
+              </div>
+              <span class="status-badge neutral">LocalStorage</span>
+            </div>
+
+            <form id="attendanceForm" class="form-grid">
+              <label>
+                Cliente
+                <select id="attendanceClient" required></select>
+              </label>
+              <label>
+                Fecha
+                <input id="attendanceDate" type="date" required>
+              </label>
+              <label>
+                Hora
+                <input id="attendanceTime" type="time" required>
+              </label>
+              <label>
+                Turno
+                <select id="attendanceShift" required>
+                  <option value="Mañana">Mañana</option>
+                  <option value="Tarde">Tarde</option>
+                  <option value="Noche">Noche</option>
+                </select>
+              </label>
+              <label>
+                Canal de registro
+                <select id="attendanceChannel" required>
+                  <option value="Recepción">Recepción</option>
+                  <option value="Instructor">Instructor</option>
+                  <option value="Código QR simulado">Código QR simulado</option>
+                </select>
+              </label>
+              <label>
+                Estado operativo
+                <select id="attendanceStatus" required>
+                  <option value="Habilitado">Habilitado</option>
+                  <option value="No habilitado">No habilitado</option>
+                </select>
+              </label>
+              <div class="form-actions full">
+                <button type="submit" class="btn btn-primary">Confirmar ingreso</button>
+                <button type="button" id="attendanceClear" class="btn btn-ghost">Limpiar</button>
+              </div>
+            </form>
+
+            <div id="attendanceMessage" class="message" role="status"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">RF-ASI-02</p>
+                <h2>Historial de asistencias</h2>
+              </div>
+              <button id="exportAttendance" class="btn btn-secondary">Exportar CSV</button>
+            </div>
+
+            <div class="filters">
+              <label>
+                Cliente
+                <select id="filterAttendanceClient"></select>
+              </label>
+              <label>
+                Fecha
+                <input id="filterAttendanceDate" type="date">
+              </label>
+              <label>
+                Turno
+                <select id="filterAttendanceShift">
+                  <option value="">Todos</option>
+                  <option value="Mañana">Mañana</option>
+                  <option value="Tarde">Tarde</option>
+                  <option value="Noche">Noche</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Turno</th>
+                    <th>Canal</th>
+                    <th>Registrado por</th>
+                  </tr>
+                </thead>
+                <tbody id="attendanceTableBody"></tbody>
+              </table>
+            </div>
+            <div class="table-summary">
+              <span>Registros mostrados</span>
+              <strong id="attendanceCount">0</strong>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="routines" class="view">
+        <div class="section-grid">
+          <article class="panel sticky-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">RF-RUT-01</p>
+                <h2>Crear y asignar rutina</h2>
+              </div>
+              <span class="status-badge neutral">Datos sintéticos</span>
+            </div>
+
+            <form id="routineForm" class="form-grid">
+              <label>
+                Cliente
+                <select id="routineClient" required></select>
+              </label>
+              <label>
+                Instructor
+                <select id="routineInstructor" required></select>
+              </label>
+              <label class="full">
+                Nombre de la rutina
+                <input id="routineName" type="text" maxlength="80" placeholder="Ej.: Adaptación general" required>
+              </label>
+              <label>
+                Fecha de inicio
+                <input id="routineStart" type="date" required>
+              </label>
+              <label>
+                Fecha de fin
+                <input id="routineEnd" type="date" required>
+              </label>
+              <label class="full">
+                Observación operativa
+                <textarea id="routineNote" rows="3" maxlength="250" placeholder="Sin datos médicos ni biométricos reales"></textarea>
+              </label>
+
+              <div class="exercise-builder full">
+                <div class="subsection-title">
+                  <h3>Ejercicios</h3>
+                  <button type="button" id="addExercise" class="btn btn-secondary">Agregar ejercicio</button>
+                </div>
+                <div id="exerciseRows"></div>
+              </div>
+
+              <div class="form-actions full">
+                <button type="submit" class="btn btn-primary">Guardar rutina</button>
+                <button type="button" id="routineClear" class="btn btn-ghost">Limpiar</button>
+              </div>
+            </form>
+            <div id="routineMessage" class="message" role="status"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">RF-RUT-02</p>
+                <h2>Rutinas y seguimiento</h2>
+              </div>
+              <button id="exportRoutines" class="btn btn-secondary">Exportar JSON</button>
+            </div>
+
+            <div class="filters">
+              <label>
+                Filtrar por cliente
+                <select id="filterRoutineClient"></select>
+              </label>
+            </div>
+
+            <div id="routineCards" class="routine-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="instructors" class="view">
+        <div class="section-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">RF-INS-01</p>
+                <h2>Alumnos asignados</h2>
+              </div>
+              <span class="status-badge neutral">Datos mínimos</span>
+            </div>
+
+            <div class="filters compact-filters">
+              <label>
+                Instructor
+                <select id="assignedInstructor"></select>
+              </label>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Cliente sintético</th>
+                    <th>Nivel</th>
+                    <th>Rutina activa</th>
+                    <th>Versión</th>
+                  </tr>
+                </thead>
+                <tbody id="assignedStudentsBody"></tbody>
+              </table>
+            </div>
+            <div class="table-summary">
+              <span>Alumnos mostrados</span>
+              <strong id="assignedCount">0</strong>
+            </div>
+          </article>
+
+          <article class="panel sticky-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">RF-INS-02</p>
+                <h2>Disponibilidad y novedades</h2>
+              </div>
+              <span class="status-badge neutral">Recepción</span>
+            </div>
+
+            <form id="availabilityForm" class="form-grid">
+              <label>
+                Instructor
+                <select id="availabilityInstructor" required></select>
+              </label>
+              <label>
+                Fecha
+                <input id="availabilityDate" type="date" required>
+              </label>
+              <label>
+                Hora desde
+                <input id="availabilityFrom" type="time" required>
+              </label>
+              <label>
+                Hora hasta
+                <input id="availabilityTo" type="time" required>
+              </label>
+              <label>
+                Estado
+                <select id="availabilityStatus" required>
+                  <option value="Disponible">Disponible</option>
+                  <option value="Retraso">Retraso</option>
+                  <option value="Ausente">Ausente</option>
+                </select>
+              </label>
+              <label class="full">
+                Observación operativa
+                <textarea id="availabilityNote" rows="3" maxlength="180" placeholder="Ej.: llegará 20 minutos tarde"></textarea>
+              </label>
+              <div class="form-actions full">
+                <button type="submit" class="btn btn-primary">Guardar novedad</button>
+                <button type="button" id="availabilityClear" class="btn btn-ghost">Limpiar</button>
+              </div>
+            </form>
+            <div id="availabilityMessage" class="message" role="status"></div>
+          </article>
+        </div>
+
+        <article class="panel availability-history">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Historial operativo</p>
+              <h2>Novedades de instructores</h2>
+            </div>
+            <button id="exportAvailability" class="btn btn-secondary">Exportar CSV</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Instructor</th>
+                  <th>Fecha</th>
+                  <th>Franja</th>
+                  <th>Estado</th>
+                  <th>Observación</th>
+                </tr>
+              </thead>
+              <tbody id="availabilityTableBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="followupDialog">
+    <form method="dialog" id="followupForm" class="dialog-card">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Seguimiento</p>
+          <h2 id="followupTitle">Registrar seguimiento</h2>
+        </div>
+        <button type="button" id="closeDialog" class="icon-button" aria-label="Cerrar">×</button>
+      </div>
+      <input type="hidden" id="followupRoutineId">
+      <label>
+        Fecha de sesión
+        <input type="date" id="followupDate" required>
+      </label>
+      <label>
+        Cumplimiento
+        <select id="followupCompliance" required>
+          <option value="Completa">Completa</option>
+          <option value="Parcial">Parcial</option>
+          <option value="No realizada">No realizada</option>
+        </select>
+      </label>
+      <label>
+        Observación operativa
+        <textarea id="followupNote" rows="4" maxlength="250" placeholder="Ej.: completó todas las series planificadas"></textarea>
+      </label>
+      <div class="form-actions">
+        <button type="submit" value="default" class="btn btn-primary">Guardar seguimiento</button>
+        <button type="button" id="cancelDialog" class="btn btn-ghost">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <template id="exerciseTemplate">
+    <div class="exercise-row">
+      <label>
+        Ejercicio
+        <input type="text" class="exercise-name" maxlength="60" placeholder="Ej.: Sentadilla guiada" required>
+      </label>
+      <label>
+        Series
+        <input type="number" class="exercise-series" min="1" max="20" value="3" required>
+      </label>
+      <label>
+        Repeticiones
+        <input type="text" class="exercise-reps" maxlength="20" value="12" required>
+      </label>
+      <label>
+        Descanso
+        <input type="text" class="exercise-rest" maxlength="20" value="60 s" required>
+      </label>
+      <button type="button" class="remove-exercise icon-button" aria-label="Eliminar ejercicio">×</button>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
