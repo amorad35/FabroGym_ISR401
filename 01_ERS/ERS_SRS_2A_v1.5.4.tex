@@ -12,7 +12,7 @@
   \setmainfont{TeX Gyre Termes}
 \fi
 \usepackage[spanish,es-nodecimaldot]{babel}
-\usepackage{microtype,graphicx,longtable,booktabs,tabularx,array,xcolor,enumitem,hyperref,fancyhdr,caption,rotating,float,pdflscape}
+\usepackage{microtype,graphicx,longtable,booktabs,tabularx,array,xcolor,enumitem,hyperref,fancyhdr,caption,rotating,float,pdflscape,seqsplit,cite}
 \usepackage[most]{tcolorbox}
 \definecolor{navy}{HTML}{123A5A}
 \definecolor{teal}{HTML}{2A7F85}
@@ -21,7 +21,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE]{\small FabroGym — ERS/SRS 2A}
-\fancyhead[RO]{\small Entrega 3 (2A) — v1.5.4}
+\fancyhead[RO]{\small Entrega 3 (2A) -- v1.5.8}
 \fancyfoot[LE,RO]{\thepage}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{4pt}
@@ -40,8 +40,8 @@
 \vspace{0.50cm}
 {\LARGE\bfseries Especificación de Requisitos de\\Software (ERS/SRS)\par}
 \vspace{0.30cm}
-{\Large\bfseries Entrega 3 (2A): ERS/SRS completo\par}
-{\normalsize con validación y trazabilidad\par}
+{\Large\bfseries Entrega 3 (2A): ERS/SRS consolidado\par}
+{\normalsize con trazabilidad y plan de validación\par}
 \vspace{0.48cm}
 {\Large\bfseries Sistema de gestión administrativa y operativa para un gimnasio\par}
 \vspace{0.45cm}
@@ -51,23 +51,23 @@
 Título del sistema: & Sistema de gestión administrativa y operativa para un gimnasio\\\hline
 Nombre del equipo: & Equipo PFC -- Gimnasio\\\hline
 Paralelo: & Software A\\\hline
-Contexto de aplicación: & Gestión de gimnasios en general; el alcance no se restringe a una sola organización cliente.\\\hline
-Versión del documento: & 1.4 -- compatibilidad con pdfLaTeX, XeLaTeX y LuaLaTeX\\\hline
+Contexto de aplicación: & Requisitos derivados de trabajo de campo en una organización real del sector fitness, anonimizada como FabroGym, con alcance generalizable a gimnasios de operación semejante.\\\hline
+Versión del documento: & 1.5.8 -- actualización de evidencia, bibliografía, trazabilidad y consistencia interna\\\hline
 Fecha de entrega: & 2 de agosto de 2026\\\hline
 Docente: & PhD. Guerrero Ulloa Gleiston Ciceron\\\hline
 Repositorio GitHub: & \url{https://github.com/amorad35/FabroGym_ISR401}\\\hline
-Estado del documento: & Versión consolidada para revisión académica.\\\hline
+Estado del documento: & Versión consolidada y trazada; validación empírica y cobertura del MVP aún pendientes de ejecución verificable.\\\hline
 \end{tabularx}
 \vspace{0.28cm}
 {\normalsize\bfseries Integrantes con roles asignados\par}
 \vspace{0.12cm}
-\begin{tabularx}{\textwidth}{|X|X|p{2.7cm}|}\hline
-\textbf{Integrante} & \textbf{Rol principal} & \textbf{Cédula}\\\hline
-Alvia Villegas Erick Adalberto & Analista líder / entrevistador & 0942146200\\\hline
-Mera Arias Erick Jhair & Documentador / responsable de encuestas & 1206741108\\\hline
-Mora Duarte Alex José & Modelador / apoyo de análisis & 1207856350\\\hline
-Ponce Rivera Mery Helenmey & Verificador / calidad de requisitos & 1250801998\\\hline
-Vaca Romero David Octavio & Apoyo documental / evidencias & 1250083423\\\hline
+\begin{tabularx}{\textwidth}{|X|X|p{4.1cm}|}\hline
+\textbf{Integrante} & \textbf{Rol principal} & \textbf{ORCID}\\\hline
+Alvia Villegas Erick Adalberto & Analista líder / entrevistador & \href{https://orcid.org/0009-0001-3777-470X}{0009-0001-3777-470X}\\\hline
+Mera Arias Erick Jhair & Documentador / responsable de encuestas & \href{https://orcid.org/0009-0001-0068-1796}{0009-0001-0068-1796}\\\hline
+Mora Duarte Alex José & Modelador / apoyo de análisis & \href{https://orcid.org/0009-0000-2494-2842}{0009-0000-2494-2842}\\\hline
+Ponce Rivera Mery Helenmey & Verificador / calidad de requisitos & \href{https://orcid.org/0009-0006-6041-9198}{0009-0006-6041-9198}\\\hline
+Vaca Romero David Octavio & Apoyo documental / evidencias & \href{https://orcid.org/0009-0000-4457-3095}{0009-0000-4457-3095}\\\hline
 \end{tabularx}
 \vfill
 \normalsize Quevedo, Ecuador -- 2026
@@ -77,16 +77,15 @@ Vaca Romero David Octavio & Apoyo documental / evidencias & 1250083423\\\hline
 \newpage
 
 \section{Control de version y estado}
-El PDF se genera desde este proyecto LaTeX. El DOCX conserva el mismo contenido sustantivo de la correccion incremental. No se declaran aprobacion etica, firmas, OSF, Zenodo, resultados experimentales ni evidencias multimedia ausentes.
+El PDF se genera desde este proyecto LaTeX. La versión 1.5.8 corrige inconsistencias verificables entre el ERS, la base final del cuestionario y la matriz de trazabilidad. No se declaran aprobaciones, sesiones de walkthrough, pruebas de aceptación ejecutadas, DOI, OSF, Zenodo ni cobertura funcional del MVP que no cuenten con evidencia dentro del repositorio.
 
-\begin{tabularx}{\textwidth}{p{2.5cm}p{2.3cm}X}
-\toprule Version & Fecha & Cambio \\ \midrule
-1.1 & 2026-08-02 & Correccion incremental de revision, clasificacion y trazabilidad de 67 mockups; solo se actualizan secciones afectadas. \\
-1.4 & 2026-08-02 & Correccion de compilacion: preambulo compatible con pdfLaTeX, XeLaTeX y LuaLaTeX; se elimina la dependencia exclusiva de fontspec. \\
-1.3 & 2026-08-02 & Correccion de ubicacion del diagrama de despliegue dentro de su seccion. \\
-1.2 & 2026-08-02 & Integracion sobre la version 1.1: caratula institucional en una pagina, redaccion neutral de cobertura sin pantalla exclusiva y orientacion correcta del diagrama de clases. \\
-+1.0.0-rc1 & 2026-08-02 & Reconstruccion integral con diez transcripciones, 26 respuestas, 25 RF, 15 RNF, UML y trazabilidad. \\
-0.2.0 & 2026-07-12 & Entrega anterior, usada solo como referencia estructural. \\
+\begin{tabularx}{\textwidth}{p{2.2cm}p{2.4cm}X}
+\toprule Versión & Fecha & Cambio \\ \midrule
+1.5.8 & 2026-08-02 & Actualización a 32 respuestas anonimizadas; integración de la codificación temática vigente (59 fragmentos, 16 códigos temáticos y 2 memos/restricciones); sustitución de cédulas por ORCID; depuración de la matriz a 44 identificadores únicos; actualización bibliográfica y corrección del catálogo a 70 mockups. \\
+1.5.7 & 2026-08-02 & Integración de la matriz cuadriculada y consolidación de los archivos editables del ERS. \\
+1.5.4 & 2026-08-02 & Compatibilidad de compilación, ubicación del diagrama de despliegue y consolidación visual. \\
+1.5.0 & 2026-08-02 & Reconstrucción integral con diez transcripciones, 26 respuestas disponibles al corte, 25 RF, 15 RNF, UML y trazabilidad. \\
+0.2.0 & 2026-07-12 & Entrega anterior usada como referencia estructural. \\
 \bottomrule
 \end{tabularx}
 
@@ -98,7 +97,18 @@ Incluye autenticacion no biometrica, clientes minimos, membresias, pagos, asiste
 \subsection{Glosario}
 EV: identificador de evidencia; RF/RNF/RD: requisito funcional, no funcional o restriccion de diseno; CU: caso de uso; HU: historia; CA: criterio; MVP: producto minimo viable; LOPDP: Ley Organica de Proteccion de Datos Personales; Must/Should/Could/Won't: prioridades MoSCoW.
 \subsection{Referencias}
-La bibliografia contiene mas de 25 fuentes primarias/normativas, con al menos diez de 2023--2026 (ISO 25010, SWEBOK, Cheng, Arora, Vogelsang, Fischbach, W3C, SPDP 2025/2026, OWASP y NIST). Se emplean \cite{iso25010,swebok2024,pohl2010,iso29148}.
+La base bibliográfica contiene 29 fuentes normativas, metodológicas y técnicas; once corresponden al período 2023--2026. Las referencias se presentan en formato IEEE y respaldan la estructura del ERS, la calidad de requisitos, el componente empírico, la privacidad, la seguridad, la accesibilidad y las decisiones explícitas de alcance.
+
+\subsection{Fundamento metodológico y normativo}
+La estructura, los atributos y los criterios de calidad de la especificación se alinean con ISO/IEC/IEEE 29148, el modelo ISO/IEC 25010, el marco de Pohl y SWEBOK v4 \cite{iso29148,iso25010,pohl2010,swebok2024,montgomery2022}. Esta base diferencia requisitos funcionales, no funcionales y restricciones, y exige que sus enunciados sean trazables, verificables y consistentes.
+
+El trabajo de campo se documenta como un estudio aplicado y descriptivo. La planificación de entrevistas, cuestionarios, análisis cualitativo y control de calidad toma como referentes la investigación empírica en ingeniería de software y las recomendaciones sobre encuestas, estudios de caso, ambigüedad y suficiencia del corpus \cite{runeson2009,wohlin2012,molleri2020,ferrari2016,hennink2017,hagaman2017,guest2006}. La curva incorporada en este ERS es descriptiva: permite observar la aparición acumulada de códigos, pero no se presenta como prueba automática de saturación teórica.
+
+La organización de los datos anonimizados, la reproducibilidad y la preparación posterior del material de publicación consideran los principios FAIR, el prerregistro, las revisiones sistemáticas y la citación de software \cite{wilkinson2016,nosek2018,kitchenham2007,smith2016}. Los criterios de aceptación se vinculan con escenarios verificables y con literatura sobre derivación de pruebas a partir de requisitos en lenguaje natural \cite{fischbach2023}.
+
+En privacidad, seguridad y accesibilidad se aplican la LOPDP, las guías de la Superintendencia de Protección de Datos Personales, WCAG 2.2, OWASP ASVS y NIST SP 800-63B-4 \cite{lopdp2021,spdp2025,spdp2026,wcag2024,owasp2025,nist2025}. Estas fuentes sustentan la minimización de datos, el mínimo privilegio, la exclusión de biometría y salud reales, el control de sesiones y la verificación de interfaces.
+
+Finalmente, aunque la literatura reciente estudia IA generativa y explicabilidad en Ingeniería de Requisitos \cite{cheng2026,arora2024,vogelsang2024,chazette2020,chazette2021,chazette2022}, FabroGym mantiene dichos componentes fuera del alcance mientras no exista necesidad empírica confirmada, evaluación de riesgo y aprobación correspondiente.
 
 \section{Descripcion general}
 \subsection{Perspectiva y limites}
@@ -125,367 +135,517 @@ Navegadores actuales, despliegue web y datos sinteticos. Depende de reglas de ne
 \begin{figure}[ht]\centering\includegraphics[width=.86\textwidth]{imagenes/uso_documento/diagramas/ISTAR_SD_FabroGym.pdf}\caption{Dependencias estrategicas (SD).}\end{figure}
 \begin{figure}[ht]\centering\includegraphics[width=.82\textwidth]{imagenes/uso_documento/diagramas/ISTAR_SR_FabroGym.pdf}\caption{Razon estrategica (SR).}\end{figure}
 
-\section{Fuente empirica y codificacion}
-Se cubren diez archivos. ENTR-05/06 presentan solapamiento y ENTR-10 reutiliza P06; por ello la curva es descriptiva y no prueba saturacion teorica. Las 26 respuestas del cuestionario estan debajo del minimo general n=30 y requieren ruta alternativa Categoria A aprobada. Las transcripciones son fuente; la ERS anterior no se usa como evidencia.
-\begin{figure}[ht]\centering\includegraphics[width=.86\textwidth]{imagenes/uso_documento/diagramas/curva_saturacion.png}\caption{Codigos acumulados y nuevos; interpretacion condicionada a verificacion de independencia.}\end{figure}
+\section{Fuente empírica y codificación}
+El corpus cualitativo vigente comprende diez transcripciones independientes (ENTR-01 a ENTR-10), correspondientes a cuatro participantes de propiedad/administración, cuatro de recepción y dos instructores. La codificación temática consolidada contiene 59 fragmentos, 16 códigos temáticos incluidos en la curva y dos elementos separados de control ético o alcance. Los códigos se organizan en seis temas: centralización y calidad de registros; operación financiera, ventas e inventario; comunicación, reportes y continuidad; seguridad, privacidad y límites éticos; clientes, membresías y acceso; y rutinas e instructores.
+
+La curva alcanza 16 códigos temáticos acumulados. ENTR-03, ENTR-04, ENTR-06 y ENTR-10 no incorporan códigos temáticos nuevos en el orden analítico utilizado; ENTR-06 sí aporta dos memos/restricciones que no se contabilizan como códigos de saturación. En consecuencia, la figura se interpreta de manera descriptiva y no como demostración concluyente de saturación teórica. Los archivos de respaldo se encuentran en \path{02_Evidencias/Codificacion_Tematica/}.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{Xc}
+\toprule Tema consolidado & Códigos temáticos \\ \midrule
+Centralización y calidad de registros & 2 \\
+Operación financiera, ventas e inventario & 4 \\
+Comunicación, reportes y continuidad & 3 \\
+Seguridad, privacidad y límites éticos & 2 \\
+Clientes, membresías y acceso & 2 \\
+Rutinas e instructores & 3 \\ \midrule
+\textbf{Total} & \textbf{16} \\
+\bottomrule
+\end{tabularx}
+\caption{Distribución de códigos temáticos por tema consolidado.}
+\end{table}
+
+La base cuantitativa final contiene 32 respuestas anonimizadas, codificadas desde ENC-CLI-001 hasta ENC-CLI-032, con consentimiento afirmativo en 32 de 32 registros. Cuatro respuestas corresponden al pilotaje y permanecen identificadas en los metadatos; su análisis conjunto solo es válido porque el equipo debe conservar la equivalencia del instrumento y documentar cualquier cambio entre piloto y aplicación definitiva. Con esta base se supera el mínimo cuantitativo general de 30 respuestas, sin alterar las restricciones éticas ni autorizar la publicación de datos identificables.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.86\textwidth]{imagenes/uso_documento/diagramas/curva_saturacion.png}
+\caption{Códigos temáticos acumulados y nuevos por entrevista; la curva es descriptiva y excluye memos/restricciones.}
+\end{figure}
 
 \section{Requisitos funcionales}
 
 \subsubsection{RF-AUT-01 — Autenticar usuario}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Personal autorizado
-\item[Descripcion] El sistema permitira iniciar y cerrar sesion mediante credenciales individuales no biometricas.
-\item[Entradas] identificador, secreto
-\item[Salidas] sesion o rechazo generico
-\item[Precondicion] cuenta activa
-\item[Postcondicion] sesion trazable o acceso denegado
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR02-07
-\item[Componente/Mockup] Seguridad / MU-01
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Personal autorizado \\ \hline
+Descripcion & El sistema permitira iniciar y cerrar sesion mediante credenciales individuales no biometricas. \\ \hline
+Entradas & identificador, secreto \\ \hline
+Salidas & sesion o rechazo generico \\ \hline
+Precondicion & cuenta activa \\ \hline
+Postcondicion & sesion trazable o acceso denegado \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR02-07 \\ \hline
+Componente/Mockup & Seguridad / MU-01 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-AUT-02 — Aplicar permisos por rol}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Administrador
-\item[Descripcion] El sistema autorizara cada operacion segun el rol Administrador, Recepcion o Instructor y denegara por defecto las no asignadas.
-\item[Entradas] usuario, operacion, recurso
-\item[Salidas] permiso o denegacion
-\item[Precondicion] sesion autenticada
-\item[Postcondicion] solo se ejecuta una operacion autorizada
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR02-07;EV-ENTR03-06;EV-ENTR08-04
-\item[Componente/Mockup] Seguridad / MU-22;MU-32
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Administrador \\ \hline
+Descripcion & El sistema autorizara cada operacion segun el rol Administrador, Recepcion o Instructor y denegara por defecto las no asignadas. \\ \hline
+Entradas & usuario, operacion, recurso \\ \hline
+Salidas & permiso o denegacion \\ \hline
+Precondicion & sesion autenticada \\ \hline
+Postcondicion & solo se ejecuta una operacion autorizada \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR02-07;EV-ENTR03-06;EV-ENTR08-04 \\ \hline
+Componente/Mockup & Seguridad / MU-22;MU-32 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-AUT-03 — Auditar cambios criticos}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Administrador
-\item[Descripcion] El sistema registrara autor, fecha, accion y valores anterior/nuevo para pagos, precios, inventario, membresias y permisos.
-\item[Entradas] operacion critica
-\item[Salidas] evento de auditoria
-\item[Precondicion] sesion autorizada
-\item[Postcondicion] evento inalterable disponible para consulta
-\item[Prioridad/Kano] Should / Desempeno
-\item[Evidencia] EV-ENTR02-04;EV-ENTR02-07;EV-ENTR03-06
-\item[Componente/Mockup] Auditoria / MU-25
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Administrador \\ \hline
+Descripcion & El sistema registrara autor, fecha, accion y valores anterior/nuevo para pagos, precios, inventario, membresias y permisos. \\ \hline
+Entradas & operacion critica \\ \hline
+Salidas & evento de auditoria \\ \hline
+Precondicion & sesion autorizada \\ \hline
+Postcondicion & evento inalterable disponible para consulta \\ \hline
+Prioridad/Kano & Should / Desempeno \\ \hline
+Evidencia & EV-ENTR02-04;EV-ENTR02-07;EV-ENTR03-06 \\ \hline
+Componente/Mockup & Auditoria / MU-25 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-CLI-01 — Registrar cliente minimo}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema registrara un cliente con codigo interno, nombre de uso y un medio de contacto, sin salud, biometria, direccion ni imagen corporal.
-\item[Entradas] nombre de uso, contacto opcional
-\item[Salidas] cliente y codigo
-\item[Precondicion] consentimiento/base legitimadora documentada
-\item[Postcondicion] cliente unico activo
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR01-02;EV-ENTR02-02;EV-ENTR03-02;EV-ENTR08-01
-\item[Componente/Mockup] Clientes / MU-12*;MU-37*
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema registrara un cliente con codigo interno, nombre de uso y un medio de contacto, sin salud, biometria, direccion ni imagen corporal. \\ \hline
+Entradas & nombre de uso, contacto opcional \\ \hline
+Salidas & cliente y codigo \\ \hline
+Precondicion & consentimiento/base legitimadora documentada \\ \hline
+Postcondicion & cliente unico activo \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR01-02;EV-ENTR02-02;EV-ENTR03-02;EV-ENTR08-01 \\ \hline
+Componente/Mockup & Clientes / MU-12*;MU-37* \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-CLI-02 — Buscar y consultar cliente}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema buscara clientes por codigo, nombre normalizado o contacto y mostrara membresia, ultimo pago, asistencia y novedades segun permisos.
-\item[Entradas] criterio de busqueda
-\item[Salidas] lista y ficha autorizada
-\item[Precondicion] sesion autorizada
-\item[Postcondicion] consulta sin modificar datos
-\item[Prioridad/Kano] Must / Desempeno
-\item[Evidencia] EV-ENTR02-03;EV-ENTR02-08;EV-ENTR08-05
-\item[Componente/Mockup] Clientes / MU-11;MU-36
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema buscara clientes por codigo, nombre normalizado o contacto y mostrara membresia, ultimo pago, asistencia y novedades segun permisos. \\ \hline
+Entradas & criterio de busqueda \\ \hline
+Salidas & lista y ficha autorizada \\ \hline
+Precondicion & sesion autorizada \\ \hline
+Postcondicion & consulta sin modificar datos \\ \hline
+Prioridad/Kano & Must / Desempeno \\ \hline
+Evidencia & EV-ENTR02-03;EV-ENTR02-08;EV-ENTR08-05 \\ \hline
+Componente/Mockup & Clientes / MU-11;MU-36 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-CLI-03 — Actualizar o reactivar sin duplicar}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema actualizara o reactivara un registro existente y advertira coincidencias antes de crear otro cliente.
-\item[Entradas] codigo y cambios
-\item[Salidas] registro actualizado o advertencia
-\item[Precondicion] cliente existente o busqueda previa
-\item[Postcondicion] historial preservado y sin duplicado confirmado
-\item[Prioridad/Kano] Must / Desempeno
-\item[Evidencia] EV-ENTR02-02;EV-ENTR03-02;EV-ENTR04-01;EV-ENTR05-02
-\item[Componente/Mockup] Clientes / MU-11;MU-36
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema actualizara o reactivara un registro existente y advertira coincidencias antes de crear otro cliente. \\ \hline
+Entradas & codigo y cambios \\ \hline
+Salidas & registro actualizado o advertencia \\ \hline
+Precondicion & cliente existente o busqueda previa \\ \hline
+Postcondicion & historial preservado y sin duplicado confirmado \\ \hline
+Prioridad/Kano & Must / Desempeno \\ \hline
+Evidencia & EV-ENTR02-02;EV-ENTR03-02;EV-ENTR04-01;EV-ENTR05-02 \\ \hline
+Componente/Mockup & Clientes / MU-11;MU-36 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-MEM-01 — Configurar planes y promociones}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Administrador
-\item[Descripcion] El sistema administrara nombre, duracion, precio, vigencia y estado de planes y promociones.
-\item[Entradas] datos del plan
-\item[Salidas] catalogo actualizado
-\item[Precondicion] sesion de administrador
-\item[Postcondicion] version vigente disponible para nuevas membresias
-\item[Prioridad/Kano] Must / Desempeno
-\item[Evidencia] EV-ENTR02-01;EV-ENTR04-01
-\item[Componente/Mockup] Membresias / SIN PANTALLA EXCLUSIVA; COBERTURA RF/CU/HU
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Administrador \\ \hline
+Descripcion & El sistema administrara nombre, duracion, precio, vigencia y estado de planes y promociones. \\ \hline
+Entradas & datos del plan \\ \hline
+Salidas & catalogo actualizado \\ \hline
+Precondicion & sesion de administrador \\ \hline
+Postcondicion & version vigente disponible para nuevas membresias \\ \hline
+Prioridad/Kano & Must / Desempeno \\ \hline
+Evidencia & EV-ENTR02-01;EV-ENTR04-01 \\ \hline
+Componente/Mockup & Membresias / MU-68 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-MEM-02 — Activar o renovar membresia}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema activara o renovara una membresia calculando inicio y vencimiento desde un plan vigente y un pago confirmado.
-\item[Entradas] cliente, plan, pago, fecha
-\item[Salidas] membresia vigente
-\item[Precondicion] cliente existente y pago confirmado
-\item[Postcondicion] periodo nuevo trazable
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-01;EV-ENTR04-03
-\item[Componente/Mockup] Membresias / MU-14;MU-39
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema activara o renovara una membresia calculando inicio y vencimiento desde un plan vigente y un pago confirmado. \\ \hline
+Entradas & cliente, plan, pago, fecha \\ \hline
+Salidas & membresia vigente \\ \hline
+Precondicion & cliente existente y pago confirmado \\ \hline
+Postcondicion & periodo nuevo trazable \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-01;EV-ENTR04-03 \\ \hline
+Componente/Mockup & Membresias / MU-14;MU-39 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-MEM-03 — Consultar vigencia}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Personal autorizado
-\item[Descripcion] El sistema mostrara estado, plan, fecha de inicio y vencimiento de la membresia.
-\item[Entradas] codigo de cliente
-\item[Salidas] estado y fechas
-\item[Precondicion] cliente existente
-\item[Postcondicion] consulta registrada sin cambios
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR01-03;EV-ENTR02-03;EV-ENTR03-03;EV-ENTR08-02
-\item[Componente/Mockup] Membresias / MU-13;MU-38;MU-63(F)
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Personal autorizado \\ \hline
+Descripcion & El sistema mostrara estado, plan, fecha de inicio y vencimiento de la membresia. \\ \hline
+Entradas & codigo de cliente \\ \hline
+Salidas & estado y fechas \\ \hline
+Precondicion & cliente existente \\ \hline
+Postcondicion & consulta registrada sin cambios \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR01-03;EV-ENTR02-03;EV-ENTR03-03;EV-ENTR08-02 \\ \hline
+Componente/Mockup & Membresias / MU-13;MU-38;MU-63(F) \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-MEM-04 — Alertar vencimientos}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema listara diariamente membresias que vencen en los proximos tres dias y las vencidas, sin enviar mensajes externos automaticamente.
-\item[Entradas] fecha de corte
-\item[Salidas] lista priorizada
-\item[Precondicion] membresias registradas
-\item[Postcondicion] alertas internas visibles
-\item[Prioridad/Kano] Must / Desempeno
-\item[Evidencia] EV-ENTR01-03;EV-ENTR05-02;EV-ENTR07-02
-\item[Componente/Mockup] Membresias / MU-10;MU-13;MU-38
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema listara diariamente membresias que vencen en los proximos tres dias y las vencidas, sin enviar mensajes externos automaticamente. \\ \hline
+Entradas & fecha de corte \\ \hline
+Salidas & lista priorizada \\ \hline
+Precondicion & membresias registradas \\ \hline
+Postcondicion & alertas internas visibles \\ \hline
+Prioridad/Kano & Must / Desempeno \\ \hline
+Evidencia & EV-ENTR01-03;EV-ENTR05-02;EV-ENTR07-02 \\ \hline
+Componente/Mockup & Membresias / MU-10;MU-13;MU-38 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-PAG-01 — Registrar pago y comprobante}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema registrara monto, concepto, medio, referencia y fecha de un pago, y generara un comprobante interno.
-\item[Entradas] cliente, monto, medio, referencia
-\item[Salidas] pago y comprobante
-\item[Precondicion] sesion autorizada y concepto valido
-\item[Postcondicion] pago trazable
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-02;EV-ENTR08-03
-\item[Componente/Mockup] Pagos / MU-15;MU-16;MU-40;MU-41
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema registrara monto, concepto, medio, referencia y fecha de un pago, y generara un comprobante interno. \\ \hline
+Entradas & cliente, monto, medio, referencia \\ \hline
+Salidas & pago y comprobante \\ \hline
+Precondicion & sesion autorizada y concepto valido \\ \hline
+Postcondicion & pago trazable \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-02;EV-ENTR08-03 \\ \hline
+Componente/Mockup & Pagos / MU-15;MU-16;MU-40;MU-41 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-PAG-02 — Resolver pago pendiente}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Administrador
-\item[Descripcion] El sistema permitira confirmar, rechazar o corregir un pago pendiente conservando motivo y auditoria.
-\item[Entradas] pago, decision, motivo
-\item[Salidas] estado resuelto
-\item[Precondicion] pago pendiente y evidencia disponible
-\item[Postcondicion] membresia recalculada solo si se confirma
-\item[Prioridad/Kano] Should / Desempeno
-\item[Evidencia] EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-07
-\item[Componente/Mockup] Pagos / MU-15;MU-40
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Administrador \\ \hline
+Descripcion & El sistema permitira confirmar, rechazar o corregir un pago pendiente conservando motivo y auditoria. \\ \hline
+Entradas & pago, decision, motivo \\ \hline
+Salidas & estado resuelto \\ \hline
+Precondicion & pago pendiente y evidencia disponible \\ \hline
+Postcondicion & membresia recalculada solo si se confirma \\ \hline
+Prioridad/Kano & Should / Desempeno \\ \hline
+Evidencia & EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-07 \\ \hline
+Componente/Mockup & Pagos / MU-15;MU-40 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-ASI-01 — Registrar asistencia}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema registrara una asistencia no biometrica en una accion tras validar identidad operativa y vigencia, o documentara una excepcion autorizada.
-\item[Entradas] cliente, fecha-hora, excepcion opcional
-\item[Salidas] asistencia o rechazo
-\item[Precondicion] cliente localizado
-\item[Postcondicion] evento unico y trazable
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR02-03;EV-ENTR03-03;EV-ENTR04-02;EV-ENTR07-07;EV-ENTR08-02
-\item[Componente/Mockup] Asistencia / MU-20;MU-30*;MU-46;MU-47*
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema registrara una asistencia no biometrica en una accion tras validar identidad operativa y vigencia, o documentara una excepcion autorizada. \\ \hline
+Entradas & cliente, fecha-hora, excepcion opcional \\ \hline
+Salidas & asistencia o rechazo \\ \hline
+Precondicion & cliente localizado \\ \hline
+Postcondicion & evento unico y trazable \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR02-03;EV-ENTR03-03;EV-ENTR04-02;EV-ENTR07-07;EV-ENTR08-02 \\ \hline
+Componente/Mockup & Asistencia / MU-20;MU-30*;MU-46;MU-47* \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-ASI-02 — Consultar asistencia}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Personal autorizado
-\item[Descripcion] El sistema filtrara asistencias por cliente, fecha y turno, y mostrara conteos operativos.
-\item[Entradas] filtros
-\item[Salidas] detalle y resumen
-\item[Precondicion] sesion autorizada
-\item[Postcondicion] consulta exportable
-\item[Prioridad/Kano] Must / Desempeno
-\item[Evidencia] EV-ENTR03-01;EV-ENTR07-01;EV-ENTR08-05;EV-ENTR09-06
-\item[Componente/Mockup] Asistencia / MU-20;MU-46;MU-56;MU-65(F)
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Personal autorizado \\ \hline
+Descripcion & El sistema filtrara asistencias por cliente, fecha y turno, y mostrara conteos operativos. \\ \hline
+Entradas & filtros \\ \hline
+Salidas & detalle y resumen \\ \hline
+Precondicion & sesion autorizada \\ \hline
+Postcondicion & consulta exportable \\ \hline
+Prioridad/Kano & Must / Desempeno \\ \hline
+Evidencia & EV-ENTR03-01;EV-ENTR07-01;EV-ENTR08-05;EV-ENTR09-06 \\ \hline
+Componente/Mockup & Asistencia / MU-20;MU-46;MU-56;MU-65(F) \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-INV-01 — Administrar productos}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Administrador
-\item[Descripcion] El sistema registrara productos con codigo, nombre, precio, unidad, stock minimo y estado.
-\item[Entradas] datos de producto
-\item[Salidas] producto
-\item[Precondicion] sesion de administrador
-\item[Postcondicion] catalogo consistente
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR01-01;EV-ENTR02-05
-\item[Componente/Mockup] Inventario / MU-19;MU-28;MU-44*;MU-45*
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Administrador \\ \hline
+Descripcion & El sistema registrara productos con codigo, nombre, precio, unidad, stock minimo y estado. \\ \hline
+Entradas & datos de producto \\ \hline
+Salidas & producto \\ \hline
+Precondicion & sesion de administrador \\ \hline
+Postcondicion & catalogo consistente \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR01-01;EV-ENTR02-05 \\ \hline
+Componente/Mockup & Inventario / MU-19;MU-28;MU-44*;MU-45* \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-INV-02 — Registrar movimientos de stock}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Personal autorizado
-\item[Descripcion] El sistema registrara entradas y ajustes con cantidad, motivo, responsable y saldo resultante.
-\item[Entradas] producto, tipo, cantidad, motivo
-\item[Salidas] movimiento y saldo
-\item[Precondicion] producto activo
-\item[Postcondicion] saldo no negativo salvo ajuste autorizado
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR01-04;EV-ENTR04-04;EV-ENTR07-03
-\item[Componente/Mockup] Inventario / SIN PANTALLA EXCLUSIVA; COBERTURA RF/CU/HU
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Personal autorizado \\ \hline
+Descripcion & El sistema registrara entradas y ajustes con cantidad, motivo, responsable y saldo resultante. \\ \hline
+Entradas & producto, tipo, cantidad, motivo \\ \hline
+Salidas & movimiento y saldo \\ \hline
+Precondicion & producto activo \\ \hline
+Postcondicion & saldo no negativo salvo ajuste autorizado \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR01-04;EV-ENTR04-04;EV-ENTR07-03 \\ \hline
+Componente/Mockup & Inventario / MU-69 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-VEN-01 — Registrar venta}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema registrara una venta con items y medio de pago, y descontara existencias en la misma transaccion.
-\item[Entradas] items, cantidades, medio
-\item[Salidas] venta, comprobante, saldo
-\item[Precondicion] productos activos con stock
-\item[Postcondicion] venta y stock consistentes
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR02-05;EV-ENTR03-01;EV-ENTR04-04;EV-ENTR07-03;EV-ENTR08-03
-\item[Componente/Mockup] Ventas / MU-18;MU-27;MU-42;MU-43
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema registrara una venta con items y medio de pago, y descontara existencias en la misma transaccion. \\ \hline
+Entradas & items, cantidades, medio \\ \hline
+Salidas & venta, comprobante, saldo \\ \hline
+Precondicion & productos activos con stock \\ \hline
+Postcondicion & venta y stock consistentes \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR02-05;EV-ENTR03-01;EV-ENTR04-04;EV-ENTR07-03;EV-ENTR08-03 \\ \hline
+Componente/Mockup & Ventas / MU-18;MU-27;MU-42;MU-43 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-INV-03 — Alertar stock y rotacion}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Administrador
-\item[Descripcion] El sistema listara productos en o bajo stock minimo y resumira entradas, salidas y ventas por periodo.
-\item[Entradas] periodo
-\item[Salidas] alertas y resumen
-\item[Precondicion] movimientos registrados
-\item[Postcondicion] consulta disponible sin alterar saldos
-\item[Prioridad/Kano] Should / Desempeno
-\item[Evidencia] EV-ENTR01-04;EV-ENTR02-05;EV-ENTR05-04;EV-ENTR06-04
-\item[Componente/Mockup] Inventario / MU-10;MU-19;MU-44*
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Administrador \\ \hline
+Descripcion & El sistema listara productos en o bajo stock minimo y resumira entradas, salidas y ventas por periodo. \\ \hline
+Entradas & periodo \\ \hline
+Salidas & alertas y resumen \\ \hline
+Precondicion & movimientos registrados \\ \hline
+Postcondicion & consulta disponible sin alterar saldos \\ \hline
+Prioridad/Kano & Should / Desempeno \\ \hline
+Evidencia & EV-ENTR01-04;EV-ENTR02-05;EV-ENTR05-04;EV-ENTR06-04 \\ \hline
+Componente/Mockup & Inventario / MU-10;MU-19;MU-44* \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-CAJ-01 — Cerrar turno y conciliar caja}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Recepcion
-\item[Descripcion] El sistema calculara pagos y ventas por medio, comparara valores declarados y registrara diferencias y entrega de turno.
-\item[Entradas] turno, efectivo contado, observaciones
-\item[Salidas] cierre y diferencia
-\item[Precondicion] turno abierto
-\item[Postcondicion] turno cerrado e inmutable salvo correccion auditada
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR02-01;EV-ENTR02-06;EV-ENTR03-05;EV-ENTR04-05;EV-ENTR07-03;EV-ENTR08-04
-\item[Componente/Mockup] Caja / SIN PANTALLA EXCLUSIVA; COBERTURA RF/CU/HU
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Recepcion \\ \hline
+Descripcion & El sistema calculara pagos y ventas por medio, comparara valores declarados y registrara diferencias y entrega de turno. \\ \hline
+Entradas & turno, efectivo contado, observaciones \\ \hline
+Salidas & cierre y diferencia \\ \hline
+Precondicion & turno abierto \\ \hline
+Postcondicion & turno cerrado e inmutable salvo correccion auditada \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR02-01;EV-ENTR02-06;EV-ENTR03-05;EV-ENTR04-05;EV-ENTR07-03;EV-ENTR08-04 \\ \hline
+Componente/Mockup & Caja / MU-70 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-NOV-01 — Gestionar novedades internas}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Personal autorizado
-\item[Descripcion] El sistema creara una novedad con categoria, detalle minimo, responsable, vencimiento y estados pendiente, en proceso, resuelta o cancelada.
-\item[Entradas] categoria, detalle, responsable
-\item[Salidas] novedad trazable
-\item[Precondicion] sesion autorizada
-\item[Postcondicion] novedad visible al responsable y con historial
-\item[Prioridad/Kano] Must / Desempeno
-\item[Evidencia] EV-ENTR02-01;EV-ENTR02-08;EV-ENTR03-07;EV-ENTR04-06;EV-ENTR05-01
-\item[Componente/Mockup] Novedades / MU-21;MU-31*;MU-50;MU-51*;MU-61
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Personal autorizado \\ \hline
+Descripcion & El sistema creara una novedad con categoria, detalle minimo, responsable, vencimiento y estados pendiente, en proceso, resuelta o cancelada. \\ \hline
+Entradas & categoria, detalle, responsable \\ \hline
+Salidas & novedad trazable \\ \hline
+Precondicion & sesion autorizada \\ \hline
+Postcondicion & novedad visible al responsable y con historial \\ \hline
+Prioridad/Kano & Must / Desempeno \\ \hline
+Evidencia & EV-ENTR02-01;EV-ENTR02-08;EV-ENTR03-07;EV-ENTR04-06;EV-ENTR05-01 \\ \hline
+Componente/Mockup & Novedades / MU-21;MU-31*;MU-50;MU-51*;MU-61 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-INS-01 — Gestionar horario y disponibilidad de instructor}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Administrador
-\item[Descripcion] El sistema registrara turnos, capacidad, disponibilidad y novedades operativas del instructor, sin datos de salud.
-\item[Entradas] instructor, franja, capacidad, estado
-\item[Salidas] agenda operativa
-\item[Precondicion] instructor activo
-\item[Postcondicion] disponibilidad consultable
-\item[Prioridad/Kano] Should / Desempeno
-\item[Evidencia] EV-ENTR07-06;EV-ENTR09-03;EV-ENTR10-02
-\item[Componente/Mockup] Instructores / MU-23;MU-33;MU-48*;MU-49*;MU-58
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Administrador \\ \hline
+Descripcion & El sistema registrara turnos, capacidad, disponibilidad y novedades operativas del instructor, sin datos de salud. \\ \hline
+Entradas & instructor, franja, capacidad, estado \\ \hline
+Salidas & agenda operativa \\ \hline
+Precondicion & instructor activo \\ \hline
+Postcondicion & disponibilidad consultable \\ \hline
+Prioridad/Kano & Should / Desempeno \\ \hline
+Evidencia & EV-ENTR07-06;EV-ENTR09-03;EV-ENTR10-02 \\ \hline
+Componente/Mockup & Instructores / MU-23;MU-33;MU-48*;MU-49*;MU-58 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-RUT-01 — Crear y asignar rutina}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Instructor
-\item[Descripcion] El sistema creara una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y dias, y la asignara a un cliente sintetico o autorizado.
-\item[Entradas] cliente, objetivo, ejercicios y parametros
-\item[Salidas] rutina version 1
-\item[Precondicion] instructor autorizado
-\item[Postcondicion] rutina activa consultable
-\item[Prioridad/Kano] Must / Basico
-\item[Evidencia] EV-ENTR01-05;EV-ENTR05-04;EV-ENTR09-01;EV-ENTR09-02;EV-ENTR09-03
-\item[Componente/Mockup] Rutinas / MU-17*;MU-29*;MU-54;MU-55;MU-64(F)
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Instructor \\ \hline
+Descripcion & El sistema creara una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y dias, y la asignara a un cliente sintetico o autorizado. \\ \hline
+Entradas & cliente, objetivo, ejercicios y parametros \\ \hline
+Salidas & rutina version 1 \\ \hline
+Precondicion & instructor autorizado \\ \hline
+Postcondicion & rutina activa consultable \\ \hline
+Prioridad/Kano & Must / Basico \\ \hline
+Evidencia & EV-ENTR01-05;EV-ENTR05-04;EV-ENTR09-01;EV-ENTR09-02;EV-ENTR09-03 \\ \hline
+Componente/Mockup & Rutinas / MU-17*;MU-29*;MU-54;MU-55;MU-64(F) \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-RUT-02 — Versionar y ajustar rutina}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Instructor
-\item[Descripcion] El sistema creara una nueva version al modificar ejercicios o parametros y conservara las versiones anteriores en solo lectura.
-\item[Entradas] rutina activa, cambios, motivo
-\item[Salidas] nueva version
-\item[Precondicion] rutina existente
-\item[Postcondicion] una sola version activa e historial preservado
-\item[Prioridad/Kano] Must / Desempeno
-\item[Evidencia] EV-ENTR01-05;EV-ENTR09-01;EV-ENTR09-04;EV-ENTR10-01;EV-ENTR10-03
-\item[Componente/Mockup] Rutinas / MU-17*;MU-54
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Instructor \\ \hline
+Descripcion & El sistema creara una nueva version al modificar ejercicios o parametros y conservara las versiones anteriores en solo lectura. \\ \hline
+Entradas & rutina activa, cambios, motivo \\ \hline
+Salidas & nueva version \\ \hline
+Precondicion & rutina existente \\ \hline
+Postcondicion & una sola version activa e historial preservado \\ \hline
+Prioridad/Kano & Must / Desempeno \\ \hline
+Evidencia & EV-ENTR01-05;EV-ENTR09-01;EV-ENTR09-04;EV-ENTR10-01;EV-ENTR10-03 \\ \hline
+Componente/Mockup & Rutinas / MU-17*;MU-54 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-RUT-03 — Registrar seguimiento operativo}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Instructor
-\item[Descripcion] El sistema registrara fecha, cumplimiento de ejercicios, repeticiones y observacion operativa, excluyendo diagnosticos, lesiones, peso y medidas reales.
-\item[Entradas] rutina, cumplimiento, observacion no sensible
-\item[Salidas] seguimiento
-\item[Precondicion] rutina asignada
-\item[Postcondicion] historial operativo actualizado
-\item[Prioridad/Kano] Should / Desempeno
-\item[Evidencia] EV-ENTR09-04;EV-ENTR09-05;EV-ENTR09-06;EV-ENTR10-03;EV-ENTR10-04
-\item[Componente/Mockup] Rutinas / MU-59;MU-60*
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Instructor \\ \hline
+Descripcion & El sistema registrara fecha, cumplimiento de ejercicios, repeticiones y observacion operativa, excluyendo diagnosticos, lesiones, peso y medidas reales. \\ \hline
+Entradas & rutina, cumplimiento, observacion no sensible \\ \hline
+Salidas & seguimiento \\ \hline
+Precondicion & rutina asignada \\ \hline
+Postcondicion & historial operativo actualizado \\ \hline
+Prioridad/Kano & Should / Desempeno \\ \hline
+Evidencia & EV-ENTR09-04;EV-ENTR09-05;EV-ENTR09-06;EV-ENTR10-03;EV-ENTR10-04 \\ \hline
+Componente/Mockup & Rutinas / MU-59;MU-60* \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 \subsubsection{RF-REP-01 — Consultar panel y reportes}
-\begin{description}[leftmargin=3.2cm,style=nextline]
-\item[Actor] Administrador
-\item[Descripcion] El sistema mostrara indicadores filtrables de membresias, pagos, asistencias, ventas, caja, inventario y novedades, con exportacion CSV.
-\item[Entradas] periodo y filtros
-\item[Salidas] indicadores y CSV
-\item[Precondicion] datos operativos registrados
-\item[Postcondicion] reporte reproducible
-\item[Prioridad/Kano] Should / Desempeno
-\item[Evidencia] EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-ENTR09-05
-\item[Componente/Mockup] Reportes / MU-10;MU-24;MU-34
-\item[Estado] Redactado; validacion con stakeholders pendiente.
-\end{description}
+\begingroup
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\bfseries\raggedright\arraybackslash}p{3.35cm}|>{\raggedright\arraybackslash}X|}
+\hline
+Actor & Administrador \\ \hline
+Descripcion & El sistema mostrara indicadores filtrables de membresias, pagos, asistencias, ventas, caja, inventario y novedades, con exportacion CSV. \\ \hline
+Entradas & periodo y filtros \\ \hline
+Salidas & indicadores y CSV \\ \hline
+Precondicion & datos operativos registrados \\ \hline
+Postcondicion & reporte reproducible \\ \hline
+Prioridad/Kano & Should / Desempeno \\ \hline
+Evidencia & EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-ENTR09-05 \\ \hline
+Componente/Mockup & Reportes / MU-10;MU-24;MU-34 \\ \hline
+Estado & Especificado y trazado; validación con stakeholders pendiente. \\ \hline
+\end{tabularx}
+\endgroup
 
 
 \section{Interfaces de usuario y mockups}
-La revision incremental cubre exactamente 67 mockups y conserva las cinco categorias obligatorias. La carpeta fisica recibida como \path{03_Asistente_Personal_Operativo} se registra como \textbf{Asistencia y personal creativo}; \path{05_Cliente} se registra como \textbf{Estudiante}. Esta equivalencia no cambia los nombres de las imagenes.
+La revisión consolidada cubre 70 mockups: 67 pantallas originales y tres mockups complementarios (MU-68 a MU-70), conservando las cinco categorías obligatorias. La carpeta fisica recibida como \path{03_Asistente_Personal_Operativo} se registra como \textbf{Asistencia y personal creativo}; \path{05_Cliente} se registra como \textbf{Estudiante}. Esta equivalencia no cambia los nombres de las imagenes.
 
-\textbf{Leyenda.} Un asterisco (*) identifica una pantalla vinculada que requiere correccion; (F) identifica una relacion futura no vigente. Los mockups auxiliares no se fuerzan a un RF. RF-MEM-01, RF-INV-02 y RF-CAJ-01 no disponen de una pantalla exclusiva en el conjunto actual.
+\textbf{Leyenda.} Un asterisco (*) identifica una pantalla vinculada que requiere correccion; (F) identifica una relacion futura no vigente. Los mockups auxiliares no se fuerzan a un RF. RF-MEM-01, RF-INV-02 y RF-CAJ-01 cuentan ahora con las pantallas complementarias MU-68, MU-69 y MU-70, respectivamente.
 
 \subsection{Pantallas principales relacionadas con funciones Must}
 Las siguientes imagenes representan las funciones Must con pantalla disponible. MU-37 y MU-47 se incluyen para evidenciar la correccion requerida; su contenido actual no se declara aprobado.
@@ -1262,106 +1422,126 @@ RF-ASI-01 & Registrar asistencia & Must / Basico & 6,00 \\
 \end{tabularx}
 
 \subsection{Matriz de trazabilidad extendida}
-La matriz de trazabilidad extendida se presenta a continuacion en formato horizontal para que todas las columnas queden visibles y no se recorte la informacion. Cada fila relaciona la fuente base, articulo, objetivo, stakeholder, evidencia, caso de uso, historia de usuario, criterio de aceptacion, componente y mockup asociado.
+La matriz fue depurada para conservar exactamente 44 identificadores únicos: 25 requisitos funcionales, 15 requisitos no funcionales y 4 restricciones de diseño. Se eliminaron duplicidades de identificadores y filas adicionales que no disponían de especificación formal en este ERS. La versión editable se entrega en \path{datos/matriz_trazabilidad_extendida_DEPURADA.csv} y \path{datos/matriz_trazabilidad_extendida_DEPURADA.xlsx}.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lc}
+\toprule Tipo & Cantidad \\ \midrule
+Requisitos funcionales (RF) & 25 \\
+Requisitos no funcionales (RNF) & 15 \\
+Restricciones de diseño (RD) & 4 \\ \midrule
+\textbf{Total de identificadores únicos} & \textbf{44} \\
+\bottomrule
+\end{tabular}
+\caption{Resumen de consistencia de la matriz de trazabilidad.}
+\end{table}
 
 \begin{landscape}
 \scriptsize
-\renewcommand{\arraystretch}{1.28}
+\renewcommand{\arraystretch}{1.22}
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
-\setlength{\tabcolsep}{2.2pt}
-\begin{longtable}{|>{\raggedright\arraybackslash}p{1.7cm}|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}p{1.2cm}|>{\raggedright\arraybackslash}p{4.1cm}|>{\raggedright\arraybackslash}p{2.4cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}|>{\centering\arraybackslash}p{1.1cm}|>{\raggedright\arraybackslash}p{2.1cm}|>{\raggedright\arraybackslash}p{2.7cm}|}
-\caption{Matriz de trazabilidad extendida del sistema FabroGym.}\label{tab:trazabilidad-extendida}\\
+\setlength{\tabcolsep}{1.8pt}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{1.65cm}|>{\raggedright\arraybackslash}p{2.1cm}|>{\raggedright\arraybackslash}p{1.3cm}|>{\raggedright\arraybackslash}p{3.8cm}|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}p{2.35cm}|>{\centering\arraybackslash}p{1.15cm}|>{\centering\arraybackslash}p{1.15cm}|>{\centering\arraybackslash}p{1.35cm}|>{\raggedright\arraybackslash}p{2.1cm}|>{\raggedright\arraybackslash}p{2.8cm}|}
+\caption{Matriz de trazabilidad extendida y depurada del sistema FabroGym.}\label{tab:trazabilidad-extendida}\\
 \hline
-\textbf{ID} & \textbf{Ley/Fuente} & \textbf{Art.} & \textbf{Objetivo} & \textbf{Stakeholder} & \textbf{Ev.} & \textbf{CU} & \textbf{HU} & \textbf{CA} & \textbf{Componente} & \textbf{Mockup} \\ \hline
+\textbf{ID} & \textbf{Ley/Fuente} & \textbf{Art.} & \textbf{Objetivo} & \textbf{Stakeholder} & \textbf{Evidencia} & \textbf{CU} & \textbf{HU} & \textbf{CA} & \textbf{Componente} & \textbf{Mockup} \\ \hline
 \endfirsthead
 \hline
-\textbf{ID} & \textbf{Ley/Fuente} & \textbf{Art.} & \textbf{Objetivo} & \textbf{Stakeholder} & \textbf{Ev.} & \textbf{CU} & \textbf{HU} & \textbf{CA} & \textbf{Componente} & \textbf{Mockup} \\ \hline
+\textbf{ID} & \textbf{Ley/Fuente} & \textbf{Art.} & \textbf{Objetivo} & \textbf{Stakeholder} & \textbf{Evidencia} & \textbf{CU} & \textbf{HU} & \textbf{CA} & \textbf{Componente} & \textbf{Mockup} \\ \hline
 \endhead
 \hline
 \multicolumn{11}{|r|}{\scriptsize\itshape Continúa en la página siguiente} \\ \hline
 \endfoot
 \hline
 \endlastfoot
-RF-AUT-01 & LOPDP & Art. 10 & Garantizar tratamiento licito y minimizacion de datos & \shortstack[l]{Propietario\\Administrador} & EV-ENT-01 & CU-01 & HU-01 & CA-01 & Seguridad & MU-01 \\ \hline
-RF-AUT-02 & LOPDP & Art. 20 & Controlar acceso por roles y permisos & \shortstack[l]{Propietario\\Administrador} & EV-ENT-01 & CU-02 & HU-02 & CA-02 & Seguridad & MU-22;MU-32 \\ \hline
-RF-AUT-03 & LOPDP & Art. 24 & Asegurar trazabilidad de eventos criticos & \shortstack[l]{Propietario\\Administrador} & EV-ENT-01 & CU-17 & HU-17 & CA-17 & Auditoria & MU-25 \\ \hline
-RF-CLI-01 & Civil/Operacion & Art. N/A & Registrar datos minimos de cliente & Recepcion & EV-ENC-01 & CU-03 & HU-03 & CA-03 & Clientes & MU-12;MU-37 \\ \hline
-RF-CLI-02 & Civil/Operacion & Art. N/A & Consultar ficha de cliente & Recepcion & EV-ENC-01 & CU-04 & HU-04 & CA-04 & Clientes & MU-11;MU-36 \\ \hline
-RF-CLI-03 & Civil/Operacion & Art. N/A & Actualizar y reactivar cliente & Recepcion & EV-ENT-02 & CU-05 & HU-05 & CA-05 & Clientes & MU-11;MU-36 \\ \hline
-RF-MEM-01 & Operacion & Art. N/A & Configurar catalogo de planes & \shortstack[l]{Propietario\\Administrador} & EV-ENT-01 & CU-06 & HU-06 & CA-06 & Membresias & MU-68 \\ \hline
-RF-MEM-02 & Operacion & Art. N/A & Activar y renovar membresia & Recepcion & EV-ENT-02 & CU-07 & HU-07 & CA-07 & Membresias & MU-14;MU-39 \\ \hline
-RF-MEM-03 & Operacion & Art. N/A & Consultar vigencia & Recepcion & EV-ENC-02 & CU-08 & HU-08 & CA-08 & Membresias & MU-13;MU-38;MU-63 \\ \hline
-RF-MEM-04 & Operacion & Art. N/A & Alertar vencimientos & \shortstack[l]{Propietario\\Administrador} & EV-ENC-02 & CU-09 & HU-09 & CA-09 & Membresias & MU-10;MU-13;MU-38 \\ \hline
-RF-PAG-01 & Operacion & Art. N/A & Registrar pago y comprobante & Recepcion & EV-DOC-01 & CU-10 & HU-10 & CA-10 & Pagos & MU-15;MU-16;MU-40;MU-41 \\ \hline
-RF-PAG-02 & Operacion & Art. N/A & Resolver pagos pendientes & Recepcion & EV-ENT-02 & CU-10 & HU-10 & CA-10 & Pagos & MU-15;MU-40 \\ \hline
-RF-ASI-01 & Operacion & Art. N/A & Registrar asistencia & \shortstack[l]{Recepcion\\Instructor} & EV-OBS-01 & CU-11 & HU-11 & CA-11 & Asistencias & MU-20;MU-30;MU-46;MU-47 \\ \hline
-RF-ASI-02 & Operacion & Art. N/A & Consultar asistencia & \shortstack[l]{Recepcion\\Instructor} & EV-OBS-01 & CU-12 & HU-12 & CA-12 & Asistencias & MU-20;MU-46;MU-56;MU-65 \\ \hline
-RF-INV-01 & Operacion & Art. N/A & Administrar productos & \shortstack[l]{Propietario\\Administrador} & EV-DOC-02 & CU-13 & HU-13 & CA-13 & Inventario & MU-19;MU-28;MU-44;MU-45 \\ \hline
-RF-INV-02 & Operacion & Art. N/A & Registrar movimientos de stock & \shortstack[l]{Propietario\\Administrador} & EV-DOC-02 & CU-14 & HU-14 & CA-14 & Inventario & MU-69 \\ \hline
-RF-VEN-01 & Operacion & Art. N/A & Registrar venta & Recepcion & EV-DOC-02 & CU-15 & HU-15 & CA-15 & Ventas & MU-18;MU-27;MU-42;MU-43 \\ \hline
-RF-INV-03 & Base interna &  & Alertar stock y rotacion & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-10;MU-19;MU-44 \\ \hline
-RF-CAJ-01 & Operacion & Art. N/A & Cerrar turno y conciliar caja & \shortstack[l]{Propietario\\Administrador} & EV-OBS-02 & CU-16 & HU-16 & CA-16 & Caja & MU-70 \\ \hline
-RF-NOV-01 & Operacion & Art. N/A & Gestionar novedades internas & \shortstack[l]{Propietario\\Administrador} & EV-ENT-03 & CU-17 & HU-17 & CA-17 & Novedades & MU-21;MU-50;MU-61 \\ \hline
-RF-INS-01 & Base interna &  & Gestionar horario y disponibilidad de instructor & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-23;MU-33;MU-48;MU-49;MU-58 \\ \hline
-RF-RUT-01 & Operacion & Art. N/A & Administrar rutinas & Instructor & EV-ENT-03 & CU-18 & HU-18 & CA-18 & Rutinas & MU-54;MU-55;MU-64 \\ \hline
-RF-RUT-02 & Operacion & Art. N/A & Registrar seguimiento & Instructor & EV-ENT-03 & CU-19 & HU-19 & CA-19 & Rutinas & MU-59;MU-60 \\ \hline
-RF-RUT-03 & Base interna &  & Registrar seguimiento operativo & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-59;MU-60 \\ \hline
-RF-REP-01 & Base interna &  & Consultar panel y reportes & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & MU-10;MU-24;MU-34 \\ \hline
-RNF-AF-01 & Base interna &  & Adecuacion funcional & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-ED-01 & Base interna &  & Eficiencia de desempeno & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-ED-02 & Base interna &  & Eficiencia de desempeno & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-COM-01 & Base interna &  & Compatibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-IU-01 & Base interna &  & Interaccion de usuario & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-IU-02 & Base interna &  & Interaccion de usuario & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-FIA-01 & Base interna &  & Fiabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-FIA-02 & Base interna &  & Fiabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-SEG-01 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-SEG-02 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-SEG-03 & Base interna &  & Seguridad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-MAN-01 & Base interna &  & Mantenibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-MAN-02 & Base interna &  & Mantenibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-POR-01 & Base interna &  & Portabilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-FLE-01 & Base interna &  & Flexibilidad & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RD-PRI-01 & Base interna &  & Exclusion de salud y biometria real & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RD-PRI-02 & Base interna &  & Privacidad por diseno y minimo privilegio & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RD-PRI-03 & Base interna &  & Derechos del titular & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RD-IA-01 & Base interna &  & No incorporar IA/AA sin validacion & Equipo PFC & EV-INT-01 &  &  & CA-N/A & General & No aplica \\ \hline
-RNF-IU-01 & Rubrica & Art. N/A & Usabilidad en walkthrough & Usuarios técnicos y no técnicos & EV-VAL-01 &  &  & CA-IU-01 & Interfaces & MU-01;MU-37;MU-47;MU-55 \\ \hline
-RNF-IU-02 & Base interna &  & Mantener consistencia visual & Equipo PFC & EV-INT-02 &  &  & CA-IU-02 & Interfaces & MU-10;MU-22;MU-68;MU-69;MU-70 \\ \hline
-RNF-RE-01 & Base interna &  & Garantizar uso en horario de gimnasio & Propietario & EV-INT-02 &  &  & CA-RE-01 & Infraestructura &  \\ \hline
-RNF-RE-02 & Base interna &  & Responder consultas comunes en menos de 3 s & Recepcion & EV-INT-02 &  &  & CA-RE-02 & Backend &  \\ \hline
-RNF-RE-03 & Base interna &  & Asegurar continuidad operativa & Propietario & EV-INT-02 &  &  & CA-RE-03 & Despliegue & DEP-01 \\ \hline
-RNF-SEG-01 & LOPDP & Art. 20 & Restringir acceso no autorizado & Propietario & EV-ENT-01 &  &  & CA-SEG-01 & Seguridad & MU-01 \\ \hline
-RNF-SEG-02 & LOPDP & Art. 20 & Aplicar permisos por rol & Propietario & EV-ENT-01 &  &  & CA-SEG-02 & Seguridad & MU-22 \\ \hline
-RNF-SEG-03 & LOPDP & Art. 24 & Proteger sesiones y tráfico & Equipo PFC & EV-INT-02 &  &  & CA-SEG-03 & Despliegue & DEP-01 \\ \hline
-RNF-MAN-01 & ISO/IEC 29148 &  & Facilitar mantenimiento & Equipo PFC & EV-INT-03 &  &  & CA-MAN-01 & Componentes & COMP-01 \\ \hline
-RNF-MAN-02 & ISO/IEC 29148 &  & Controlar cambios del sistema & Equipo PFC & EV-INT-03 &  &  & CA-MAN-02 & Auditoria & MU-25 \\ \hline
-RNF-PORT-01 & Base interna &  & Asegurar acceso desde navegador moderno & Usuarios & EV-INT-02 &  &  & CA-PORT-01 & Frontend & DEP-01 \\ \hline
-RNF-ESC-01 & Base interna &  & Permitir nuevas funciones & Equipo PFC & EV-INT-03 &  &  & CA-ESC-01 & Componentes & COMP-01 \\ \hline
-RNF-CAL-01 & LOPDP & Art. 24 & Registrar acciones sensibles & Propietario & EV-ENT-01 &  &  & CA-CAL-01 & Auditoria & MU-25 \\ \hline
-RNF-DAT-01 & Base interna &  & Evitar inconsistencias en pagos y stock & Propietario & EV-INT-02 &  &  & CA-DAT-01 & Repositorio & MU-69;MU-70 \\ \hline
-RNF-LEG-01 & LOPDP & Art. 10 & Minimizar y proteger datos personales & Clientes & EV-ENT-01 &  &  & CA-LEG-01 & Seguridad & MU-01;MU-22 \\ \hline
-RD-PRI-01 & Base interna &  & Usar navegador compatible & Equipo PFC & EV-INT-03 &  &  & CA-RD-01 & Despliegue & DEP-01 \\ \hline
-RD-PRI-02 & Ética PFC &  & No exponer datos reales & Equipo PFC & EV-ETH-01 &  &  & CA-RD-02 & MVP & MVP-01 \\ \hline
-RD-PRI-03 & LOPDP & Art. 20 & Restringir uso operativo & Propietario & EV-ENT-01 &  &  & CA-RD-03 & Seguridad & MU-01;MU-22 \\ \hline
-RD-IA-01 & Base interna &  & Operar con una arquitectura simple & Equipo PFC & EV-INT-03 &  &  & CA-RD-04 & Despliegue & DEP-01 \\ \hline
-RD-DEP-01 & Base interna &  & Garantizar recuperación diaria & Propietario & EV-INT-03 &  &  & CA-RD-05 & Despliegue & DEP-01 \\ \hline
+\seqsplit{RF-AUT-01} & LOPDP & Art. 10 & Garantizar tratamiento licito y minimizacion de datos & Personal autorizado & \seqsplit{EV-ENTR02-07} & \seqsplit{CU-01} & \seqsplit{HU-01} & \seqsplit{CA-01} & Seguridad & \seqsplit{MU-01} \\ \hline
+\seqsplit{RF-AUT-02} & LOPDP & Art. 20 & Controlar acceso por roles y permisos & Administrador & \seqsplit{EV-ENTR02-07;EV-ENTR03-06;EV-ENTR08-04} & \seqsplit{CU-02} & \seqsplit{HU-02} & \seqsplit{CA-02} & Seguridad & \seqsplit{MU-22;MU-32} \\ \hline
+\seqsplit{RF-AUT-03} & LOPDP & Art. 24 & Asegurar trazabilidad de eventos criticos & Administrador & \seqsplit{EV-ENTR02-04;EV-ENTR02-07;EV-ENTR03-06} &  &  & \seqsplit{CA-N/A} & Auditoria & \seqsplit{MU-25} \\ \hline
+\seqsplit{RF-CLI-01} & Civil/Operacion & Art. N/A & Registrar datos minimos de cliente & Recepcion & \seqsplit{EV-ENTR01-02;EV-ENTR02-02;EV-ENTR03-02;EV-ENTR08-01} & \seqsplit{CU-03} & \seqsplit{HU-03} & \seqsplit{CA-03} & Clientes & \seqsplit{MU-12*;MU-37*} \\ \hline
+\seqsplit{RF-CLI-02} & Civil/Operacion & Art. N/A & Consultar ficha de cliente & Recepcion & \seqsplit{EV-ENTR02-03;EV-ENTR02-08;EV-ENTR08-05} & \seqsplit{CU-04} & \seqsplit{HU-04} & \seqsplit{CA-04} & Clientes & \seqsplit{MU-11;MU-36} \\ \hline
+\seqsplit{RF-CLI-03} & Civil/Operacion & Art. N/A & Actualizar y reactivar cliente & Recepcion & \seqsplit{EV-ENTR02-02;EV-ENTR03-02;EV-ENTR04-01;EV-ENTR05-02} & \seqsplit{CU-05} & \seqsplit{HU-05} & \seqsplit{CA-05} & Clientes & \seqsplit{MU-11;MU-36} \\ \hline
+\seqsplit{RF-MEM-01} & Operacion & Art. N/A & Configurar catalogo de planes & Administrador & \seqsplit{EV-ENTR02-01;EV-ENTR04-01} & \seqsplit{CU-06} & \seqsplit{HU-06} & \seqsplit{CA-06} & Membresias & \seqsplit{MU-68} \\ \hline
+\seqsplit{RF-MEM-02} & Operacion & Art. N/A & Activar y renovar membresia & Recepcion & \seqsplit{EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-01;EV-ENTR04-03} & \seqsplit{CU-07} & \seqsplit{HU-07} & \seqsplit{CA-07} & Membresias & \seqsplit{MU-14;MU-39} \\ \hline
+\seqsplit{RF-MEM-03} & Operacion & Art. N/A & Consultar vigencia & Personal autorizado & \seqsplit{EV-ENTR01-03;EV-ENTR02-03;EV-ENTR03-03;EV-ENTR08-02} & \seqsplit{CU-08} & \seqsplit{HU-08} & \seqsplit{CA-08} & Membresias & \seqsplit{MU-13;MU-38;MU-63(F)} \\ \hline
+\seqsplit{RF-MEM-04} & Operacion & Art. N/A & Alertar vencimientos & Recepcion & \seqsplit{EV-ENTR01-03;EV-ENTR05-02;EV-ENTR07-02} & \seqsplit{CU-09} & \seqsplit{HU-09} & \seqsplit{CA-09} & Membresias & \seqsplit{MU-10;MU-13;MU-38} \\ \hline
+\seqsplit{RF-PAG-01} & Operacion & Art. N/A & Registrar pago y comprobante & Recepcion & \seqsplit{EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-02;EV-ENTR08-03} & \seqsplit{CU-10} & \seqsplit{HU-10} & \seqsplit{CA-10} & Pagos & \seqsplit{MU-15;MU-16;MU-40;MU-41} \\ \hline
+\seqsplit{RF-PAG-02} & Operacion & Art. N/A & Resolver pagos pendientes & Administrador & \seqsplit{EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-07} &  &  & \seqsplit{CA-N/A} & Pagos & \seqsplit{MU-15;MU-40} \\ \hline
+\seqsplit{RF-ASI-01} & Operacion & Art. N/A & Registrar asistencia & Recepcion & \seqsplit{EV-ENTR02-03;EV-ENTR03-03;EV-ENTR04-02;EV-ENTR07-07;EV-ENTR08-02} & \seqsplit{CU-11} & \seqsplit{HU-11} & \seqsplit{CA-11} & Asistencia & \seqsplit{MU-20;MU-30*;MU-46;MU-47*} \\ \hline
+\seqsplit{RF-ASI-02} & Operacion & Art. N/A & Consultar asistencia & Personal autorizado & \seqsplit{EV-ENTR03-01;EV-ENTR07-01;EV-ENTR08-05;EV-ENTR09-06} & \seqsplit{CU-12} & \seqsplit{HU-12} & \seqsplit{CA-12} & Asistencia & \seqsplit{MU-20;MU-46;MU-56;MU-65(F)} \\ \hline
+\seqsplit{RF-INV-01} & Operacion & Art. N/A & Administrar productos & Administrador & \seqsplit{EV-ENTR01-01;EV-ENTR02-05} & \seqsplit{CU-13} & \seqsplit{HU-13} & \seqsplit{CA-13} & Inventario & \seqsplit{MU-19;MU-28;MU-44*;MU-45*} \\ \hline
+\seqsplit{RF-INV-02} & Operacion & Art. N/A & Registrar movimientos de stock & Personal autorizado & \seqsplit{EV-ENTR01-04;EV-ENTR04-04;EV-ENTR07-03} & \seqsplit{CU-14} & \seqsplit{HU-14} & \seqsplit{CA-14} & Inventario & \seqsplit{MU-69} \\ \hline
+\seqsplit{RF-VEN-01} & Operacion & Art. N/A & Registrar venta & Recepcion & \seqsplit{EV-ENTR02-05;EV-ENTR03-01;EV-ENTR04-04;EV-ENTR07-03;EV-ENTR08-03} & \seqsplit{CU-15} & \seqsplit{HU-15} & \seqsplit{CA-15} & Ventas & \seqsplit{MU-18;MU-27;MU-42;MU-43} \\ \hline
+\seqsplit{RF-INV-03} & Base interna & N/A & Alertar stock y rotacion & Administrador & \seqsplit{EV-ENTR01-04;EV-ENTR02-05;EV-ENTR05-04;EV-ENTR06-04} &  &  & \seqsplit{CA-N/A} & Inventario & \seqsplit{MU-10;MU-19;MU-44*} \\ \hline
+\seqsplit{RF-CAJ-01} & Operacion & Art. N/A & Cerrar turno y conciliar caja & Recepcion & \seqsplit{EV-ENTR02-01;EV-ENTR02-06;EV-ENTR03-05;EV-ENTR04-05;EV-ENTR07-03;EV-ENTR08-04} & \seqsplit{CU-16} & \seqsplit{HU-16} & \seqsplit{CA-16} & Caja & \seqsplit{MU-70} \\ \hline
+\seqsplit{RF-NOV-01} & Operacion & Art. N/A & Gestionar novedades internas & Personal autorizado & \seqsplit{EV-ENTR02-01;EV-ENTR02-08;EV-ENTR03-07;EV-ENTR04-06;EV-ENTR05-01} & \seqsplit{CU-17} & \seqsplit{HU-17} & \seqsplit{CA-17} & Novedades & \seqsplit{MU-21;MU-31*;MU-50;MU-51*;MU-61} \\ \hline
+\seqsplit{RF-INS-01} & Base interna & N/A & Gestionar horario y disponibilidad de instructor & Administrador & \seqsplit{EV-ENTR07-06;EV-ENTR09-03;EV-ENTR10-02} &  &  & \seqsplit{CA-N/A} & Instructores & \seqsplit{MU-23;MU-33;MU-48*;MU-49*;MU-58} \\ \hline
+\seqsplit{RF-RUT-01} & Operacion & Art. N/A & Administrar rutinas & Instructor & \seqsplit{EV-ENTR01-05;EV-ENTR05-04;EV-ENTR09-01;EV-ENTR09-02;EV-ENTR09-03} & \seqsplit{CU-18} & \seqsplit{HU-18} & \seqsplit{CA-18} & Rutinas & \seqsplit{MU-17*;MU-29*;MU-54;MU-55;MU-64(F)} \\ \hline
+\seqsplit{RF-RUT-02} & Operacion & Art. N/A & Registrar seguimiento & Instructor & \seqsplit{EV-ENTR01-05;EV-ENTR09-01;EV-ENTR09-04;EV-ENTR10-01;EV-ENTR10-03} & \seqsplit{CU-19} & \seqsplit{HU-19} & \seqsplit{CA-19} & Rutinas & \seqsplit{MU-17*;MU-54} \\ \hline
+\seqsplit{RF-RUT-03} & Base interna & N/A & Registrar seguimiento operativo & Instructor & \seqsplit{EV-ENTR09-04;EV-ENTR09-05;EV-ENTR09-06;EV-ENTR10-03;EV-ENTR10-04} &  &  & \seqsplit{CA-N/A} & Rutinas & \seqsplit{MU-59;MU-60*} \\ \hline
+\seqsplit{RF-REP-01} & Base interna & N/A & Consultar panel y reportes & Administrador & \seqsplit{EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-ENTR09-05} &  &  & \seqsplit{CA-N/A} & Reportes & \seqsplit{MU-10;MU-24;MU-34} \\ \hline
+\seqsplit{RNF-AF-01} & ISO/IEC/IEEE 29148 &  & Adecuacion funcional & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO29148} &  &  & \seqsplit{CA-N/A} & General & \seqsplit{No aplica} \\ \hline
+\seqsplit{RNF-ED-01} & ISO/IEC 25010 &  & Eficiencia de desempeno & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO25010} &  &  & \seqsplit{CA-N/A} & General & \seqsplit{No aplica} \\ \hline
+\seqsplit{RNF-ED-02} & ISO/IEC 25010 &  & Eficiencia de desempeno & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO25010} &  &  & \seqsplit{CA-N/A} & General & \seqsplit{No aplica} \\ \hline
+\seqsplit{RNF-COM-01} & ISO/IEC 25010 &  & Compatibilidad & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO25010} &  &  & \seqsplit{CA-N/A} & General & \seqsplit{No aplica} \\ \hline
+\seqsplit{RNF-IU-01} & ISO/IEC 25010 / Rúbrica &  & Interaccion de usuario & Equipo PFC / perfiles de usuario & \seqsplit{EV-VAL-01} &  &  & \seqsplit{CA-IU-01} & Interfaces & \seqsplit{MU-01;MU-37;MU-47;MU-55} \\ \hline
+\seqsplit{RNF-IU-02} & WCAG 2.2 &  & Interaccion de usuario & Equipo PFC / perfiles de usuario & \seqsplit{REF-WCAG22} &  &  & \seqsplit{CA-IU-02} & Interfaces & \seqsplit{MU-10;MU-22;MU-68;MU-69;MU-70} \\ \hline
+\seqsplit{RNF-FIA-01} & ISO/IEC 25010 &  & Fiabilidad & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO25010} &  &  & \seqsplit{CA-N/A} & General & \seqsplit{No aplica} \\ \hline
+\seqsplit{RNF-FIA-02} & ISO/IEC 25010 / OWASP &  & Fiabilidad & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO25010;REF-OWASP} &  &  & \seqsplit{CA-N/A} & General & \seqsplit{No aplica} \\ \hline
+\seqsplit{RNF-SEG-01} & LOPDP / OWASP & Arts. 10 y 20 & Seguridad & Equipo PFC / perfiles de usuario & \seqsplit{REF-LOPDP;REF-OWASP} &  &  & \seqsplit{CA-SEG-01} & Seguridad & \seqsplit{MU-01} \\ \hline
+\seqsplit{RNF-SEG-02} & LOPDP / SPDP & Arts. 10, 25, 26 y 39 & Seguridad & Equipo PFC / perfiles de usuario & \seqsplit{REF-LOPDP;REF-SPDP} &  &  & \seqsplit{CA-SEG-02} & Seguridad & \seqsplit{MU-22} \\ \hline
+\seqsplit{RNF-SEG-03} & OWASP / NIST &  & Seguridad & Equipo PFC / perfiles de usuario & \seqsplit{REF-OWASP;REF-NIST} &  &  & \seqsplit{CA-SEG-03} & Despliegue & \seqsplit{DEP-01} \\ \hline
+\seqsplit{RNF-MAN-01} & ISO/IEC 25010 &  & Mantenibilidad & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO25010} &  &  & \seqsplit{CA-MAN-01} & Componentes & \seqsplit{COMP-01} \\ \hline
+\seqsplit{RNF-MAN-02} & ISO/IEC/IEEE 29148 &  & Mantenibilidad & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO29148} &  &  & \seqsplit{CA-MAN-02} & Auditoria & \seqsplit{MU-25} \\ \hline
+\seqsplit{RNF-POR-01} & ISO/IEC 25010 &  & Portabilidad & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO25010} &  &  & \seqsplit{CA-N/A} & General & \seqsplit{No aplica} \\ \hline
+\seqsplit{RNF-FLE-01} & ISO/IEC 25010 &  & Flexibilidad & Equipo PFC / perfiles de usuario & \seqsplit{REF-ISO25010} &  &  & \seqsplit{CA-N/A} & General & \seqsplit{No aplica} \\ \hline
+\seqsplit{RD-PRI-01} & LOPDP / SPDP & Arts. 4, 10, 25, 26 y 39 & Exclusion de salud y biometria real & Equipo PFC / responsable del tratamiento & \seqsplit{REF-LOPDP;REF-SPDP} &  &  & \seqsplit{CA-PRI-01} & Privacidad & \seqsplit{No aplica} \\ \hline
+\seqsplit{RD-PRI-02} & LOPDP / SPDP & Arts. 10 y 39 & Privacidad por diseno y minimo privilegio & Equipo PFC / responsable del tratamiento & \seqsplit{REF-LOPDP;REF-SPDP} &  &  & \seqsplit{CA-PRI-02} & Seguridad & \seqsplit{No aplica} \\ \hline
+\seqsplit{RD-PRI-03} & LOPDP & Art. 39 & Derechos del titular & Equipo PFC / responsable del tratamiento & \seqsplit{REF-LOPDP} &  &  & \seqsplit{CA-PRI-03} & Clientes & \seqsplit{No aplica} \\ \hline
+\seqsplit{RD-IA-01} & Paquete ético / memo de alcance & Categoría A & No incorporar IA/AA sin validacion & Equipo PFC / responsable del tratamiento & \seqsplit{MEMO-ALCANCE-IA} &  &  & \seqsplit{CA-IA-01} & Alcance & \seqsplit{No aplica} \\ \hline
 \end{longtable}
 \renewcommand{\arraystretch}{1}
 \normalsize
 \end{landscape}
 
 \section{MVP}
-El MVP consolidado continua siendo un prototipo web local y de baja fidelidad, pero en esta version se organiza su evidencia visual y se alinea su cobertura funcional con los RF Must mas proximos al alcance ya implementado. Se conserva la observacion de que la cobertura aun debe ampliarse para alcanzar el 60\% minimo del conjunto Must.
+El MVP continúa siendo un prototipo web local. La evidencia visual disponible demuestra avances de interfaz y navegación, pero no permite afirmar por sí sola el cumplimiento funcional del 60\% de los RF Must. Por integridad académica, esta versión mantiene la cobertura como pendiente de verificación mediante ejecución, repositorio del MVP y casos de prueba reproducibles.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=.95\textwidth]{imagenes/uso_documento/diagramas/MVP_EVIDENCIA_VISUAL.png}
-\caption{Evidencia visual consolidada del MVP y su cobertura funcional actual.}
+\caption{Evidencia visual consolidada del MVP; la cobertura funcional debe verificarse mediante ejecución.}
 \end{figure}
 
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{lXl}
+\toprule Indicador & Fórmula o criterio & Estado \\ \midrule
+RF Must especificados & Conteo del backlog priorizado & 19 \\
+Mínimo exigido para 60\% & $\lceil 19\times0.60\rceil$ & 12 RF Must \\
+RF Must funcionalmente verificados & Pruebas ejecutadas con evidencia reproducible & Pendiente \\
+Cobertura funcional del MVP & RF Must verificados / 19 $\times 100$ & No declarada \\
+\bottomrule
+\end{tabularx}
+\caption{Control de cobertura del MVP sin fabricación de resultados.}
+\end{table}
+
 \section{Validacion y pendientes}
-Se incorporan artefactos formales de seguimiento para reducir observaciones de completitud: un plan de pruebas de aceptacion (\path{datos/plan_pruebas_aceptacion.csv}) y un registro de control de cambios/CCB (\path{control/control_cambios_ccb.csv}). Las validaciones empiricas con stakeholders continuan sujetas a disponibilidad y aprobacion etica, por lo que este documento no declara resultados de walkthrough no ejecutados; en su lugar, deja estructurado el plan de validacion.
+Se incorporan artefactos formales de seguimiento: un plan de pruebas de aceptación (\path{datos/plan_pruebas_aceptacion.csv}), un registro de control de cambios/CCB (\path{control/control_cambios_ccb.csv}) y una plantilla para documentar las sesiones requeridas. Las validaciones empíricas con stakeholders continúan pendientes; no se presentan como ejecutadas mientras no existan actas, hallazgos y evidencia verificable.
+
+\subsection{Plan de sesiones de validación}
+\begin{tabularx}{\textwidth}{lXll}
+\toprule ID & Perfil mínimo & Artefactos principales & Estado \\ \midrule
+VAL-01 & Usuario técnico de administración/propiedad & RF Must, pagos, membresías, inventario y caja & Planificada \\
+VAL-02 & Usuario técnico de recepción o instructor & Flujos operativos, rutinas, asistencia y novedades & Planificada \\
+VAL-03 & Usuario no técnico & Comprensión de mockups, mensajes y navegación & Planificada \\
+\bottomrule
+\end{tabularx}
+
+Cada sesión deberá registrar participante codificado, perfil, artefacto revisado, hallazgo, severidad, corrección, responsable y estado. Solo después de esa evidencia los requisitos podrán cambiar de ``pendiente de validación'' a ``validado'' o ``corregido y confirmado''.
 
 \subsection{Plan resumido de pruebas de aceptacion}
 \begin{tabularx}{\textwidth}{l l X l}
@@ -1385,9 +1565,9 @@ CR-04 & UML & Se integran los 28 diagramas faltantes dentro del ERS/SRS. & Incor
 \end{tabularx}
 
 \subsection{Pendientes aun externos al ERS}
-Siguen pendientes las evidencias que no pueden reconstruirse honestamente sin el trabajo de campo o sin aprobaciones externas: consentimientos firmados, material multimedia completo, walkthroughs ejecutados y firmados, registro OSF previo, hashes de contenedor restringido y firma electronica final del analista lider. Estos elementos se listan para control, pero no se declaran como cumplidos en ausencia de evidencia verificable.
+Permanecen pendientes las evidencias que no pueden reconstruirse honestamente sin ejecución real o aprobaciones externas: consentimientos firmados, material multimedia completo, walkthroughs ejecutados y firmados, registro OSF previo, hashes de contenedor restringido y firma electronica final del analista lider. Estos elementos se listan para control, pero no se declaran como cumplidos en ausencia de evidencia verificable.
 \section{Anexo de interfaces y catalogo general}
-El catalogo maestro editable se entrega en CSV y XLSX con los 16 campos solicitados. Esta tabla compacta permite localizar los 67 registros dentro del ERS/SRS.
+El catalogo maestro editable se entrega en CSV y XLSX con los 16 campos solicitados. Esta tabla compacta permite localizar los 70 registros dentro del ERS/SRS.
 \textbf{Estados abreviados en esta tabla:} TRAZADO = valido y trazado; AUXILIAR = valido auxiliar; CORREGIR = requiere correccion; FUTURO = funcionalidad futura; FUERA = fuera de alcance; PENDIENTE = pendiente de validacion. Los estados completos se conservan en CSV y XLSX.
 
 \subsection{Mockups complementarios creados para cerrar cobertura Must}
@@ -1476,6 +1656,9 @@ MU-64 & Estudiante & Consulta de mi rutina & FUTURO & RF-RUT-01 \\
 MU-65 & Estudiante & Consulta de mis asistencias & FUTURO & RF-ASI-02 \\
 MU-66 & Estudiante & Consulta de mi progreso & FUERA & Sin RF directo \\
 MU-67 & Estudiante & Gestion de mi perfil & FUTURO & Sin RF directo \\
+MU-68 & Dueno o administrador & Gestión de planes y promociones & TRAZADO & RF-MEM-01 \\
+MU-69 & Dueno o administrador & Registro de movimientos de stock & TRAZADO & RF-INV-02 \\
+MU-70 & Dueno o administrador & Cierre y conciliación de caja & TRAZADO & RF-CAJ-01 \\
 \bottomrule
 \end{longtable}
 \normalsize
@@ -1483,19 +1666,21 @@ MU-67 & Estudiante & Gestion de mi perfil & FUTURO & Sin RF directo \\
 \subsection{Resumen de clasificacion}
 \begin{tabularx}{\textwidth}{Xr}
 \toprule Estado & Cantidad \\ \midrule
-VALIDO\_Y\_TRAZADO & 35 \\
+VALIDO\_Y\_TRAZADO & 38 \\
 VALIDO\_AUXILIAR & 7 \\
 DUPLICADO & 0 \\
 REQUIERE\_CORRECCION & 15 \\
 FUNCIONALIDAD\_FUTURA & 8 \\
 FUERA\_DE\_ALCANCE & 1 \\
 PENDIENTE\_DE\_VALIDACION & 1 \\
+\midrule
+\textbf{TOTAL} & \textbf{70} \\
 \bottomrule
 \end{tabularx}
 \subsection{Mockups omitidos en la trazabilidad anterior}
 Los 19 mockups antes omitidos, ahora revisados, son: MU-06, MU-07, MU-25, MU-26, MU-27, MU-28, MU-29, MU-30, MU-36, MU-37, MU-38, MU-39, MU-47, MU-48, MU-49, MU-54, MU-57, MU-58, MU-59.
 
 \section{Bibliografia}
-\bibliographystyle{plain}
+\bibliographystyle{IEEEtran}
 \bibliography{referencias}
 \end{document}
