@@ -1,0 +1,9 @@
+﻿codigo,categoria,definicion_operacional,ejemplos_indicativos,decision
+SM-01,Cuantificador vago,Expresiones sin umbral medible o alcance definido.,rapido; adecuado; algunos; frecuentemente,Marcar ambiguo si cambia la interpretación o impide verificar.
+SM-02,Termino subjetivo,Adjetivos cuyo significado depende de la persona evaluadora.,facil; intuitivo; amigable; sencillo,Marcar ambiguo si no existe criterio observable.
+SM-03,Referencia imprecisa,Pronombre o referencia sin antecedente único.,este; ello; el mismo; dicha informacion,Marcar ambiguo cuando existan dos o mas antecedentes posibles.
+SM-04,Requisito compuesto,Dos o mas comportamientos independientes unidos en un solo enunciado.,multiples y/o; varias acciones principales,Marcar ambiguo cuando debiera dividirse para verificarse.
+SM-05,Modalidad debil,Obligacion no clara o formulada como opcion.,podra; deberia; se recomienda; cuando sea posible,Marcar ambiguo si no queda claro si es obligatorio.
+SM-06,Lista abierta,Enumeracion que no delimita todos los casos.,etc.; entre otros; y similares,Marcar ambiguo si el alcance queda abierto.
+SM-07,Voz pasiva o actor omitido,La accion no identifica con claridad quien la ejecuta.,sera registrado; debera ser validado,Marcar ambiguo si el responsable no se deduce de forma unica.
+SM-08,Condicion incompleta,"Falta evento, precondicion, excepcion o criterio de terminacion.",si aplica; segun corresponda sin regla,Marcar ambiguo si produce decisiones distintas.
