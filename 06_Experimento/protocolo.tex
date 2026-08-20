@@ -1,0 +1,477 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,left=18mm,right=18mm,top=18mm,bottom=17mm,headheight=14pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\renewcommand{\arraystretch}{0.98}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{3pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\setlength{\LTpre}{3pt}
+\setlength{\LTpost}{3pt}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\footnotesize UTEQ · ISR-401 · FabroGym · Protocolo OSF}
+\fancyfoot[C]{\footnotesize Protocolo de preregistro - versión 1.0 - 19/08/2026}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}\\[2pt]
+{\normalsize\bfseries Facultad de Ciencias de la Computación}\\
+Ingeniería de Requerimientos (ISR-401)\\[8pt]
+{\LARGE\bfseries PROTOCOLO DE PRERREGISTRO OSF}\\[3pt]
+{\large\bfseries FabroGym - Enfoque 3: Explicabilidad como Requisito No Funcional}\\[2pt]
+\emph{Estudio de caso para un componente propuesto de recomendación de rutinas}
+\end{center}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Campo}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Detalle}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Proyecto & FabroGym - Sistema de gestión de gimnasio \\
+Tipo de estudio & Estudio de caso único con componente mixto de validación de requisitos \\
+Enfoque de la rúbrica 2B & Enfoque 3 - Explicabilidad como RNF \\
+Versión del protocolo & 1.0 \\
+Fecha de preparación & 19 de agosto de 2026 \\
+Repositorio & github.com/amorad35/FabroGym\_ISR401 \\
+Registro previsto & Open Science Framework (OSF) - preregistro antes de la nueva ronda empírica \\
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{ADVERTENCIA DE INTEGRIDAD DEL PRERREGISTRO\\
+}Este documento no retrodata actividades ya realizadas. Las validaciones técnicas efectuadas antes del sello temporal de OSF se consideran antecedentes o validaciones formativas y no se incorporarán como datos confirmatorios del estudio preregistrado. La nueva recolección destinada al análisis del Enfoque 3 debe comenzar después del registro en OSF.\strut
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\textbf{Documento preparado para registrar el plan de investigación; no contiene resultados empíricos.}
+
+\subsection*{1. Propósito y relación con la Entrega 4 (2B)}\label{propuxf3sito-y-relaciuxf3n-con-la-entrega-4-2b}
+
+El propósito de este protocolo es preregistrar, antes de la nueva recolección de datos, el diseño empírico mediante el cual el equipo FabroGym identificará y validará requisitos de explicabilidad para un componente propuesto de recomendación de rutinas. El protocolo se alinea con la adaptación temática de la rúbrica de la Entrega 4 (2B), que asigna a FabroGym el Enfoque 3 (explicabilidad).
+
+El estudio no presupone que el componente de inteligencia artificial o aprendizaje automático ya esté implementado. Su objeto es determinar qué explicaciones deberían exigirse como RNF verificables y cómo son percibidas por perfiles técnicos y no técnicos antes de consolidar el alcance terminal del ERS/SRS y del MVP.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{NOTA DE CONSISTENCIA CON EL REPOSITORIO ACTUAL\\
+}El ERS 2A y el README del MVP actualmente excluyen IA/AA y generación de rutinas mediante IA. Por ello, el registro OSF de este protocolo debe ir acompañado posteriormente de una actualización explícita del alcance del ERS/SRS 2B si el equipo adopta el componente de recomendación exigido por la rúbrica. No se debe afirmar en OSF que dicho componente ya existe si todavía no está implementado.\strut
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\subsection*{2. Preguntas de investigación (RQ) y PICOC}\label{preguntas-de-investigaciuxf3n-rq-y-picoc}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{ID}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Pregunta}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+RQ1 & ¿Qué requisitos de explicabilidad emergen para los perfiles técnicos y no técnicos de FabroGym ante un componente de recomendación de rutinas? \\
+RQ2 & ¿Existen diferencias en la percepción de la explicabilidad entre usuarios técnicos y no técnicos cuando evalúan las mismas explicaciones del componente de recomendación? \\
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Elemento PICOC}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Operacionalización}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+P - Población & Personas vinculadas al dominio FabroGym: perfiles técnicos de software/IR y perfiles no técnicos del gimnasio o usuarios del servicio, reclutados con consentimiento informado. \\
+I - Intervención & Exposición a escenarios y prototipos/mockups que muestran una recomendación de rutina junto con una explicación estructurada de por qué fue sugerida. \\
+C - Comparación & Percepción del perfil técnico frente al perfil no técnico; además, comparación entre rondas de validación cuando corresponda. \\
+O - Resultados & RNF de explicabilidad derivados; cobertura del marco de explicabilidad; puntuaciones Likert por dimensión; acuerdo de validación; diferencias entre perfiles. \\
+C - Contexto & FabroGym, sistema de gestión de gimnasio local en Ecuador, con componente propuesto de recomendación de rutinas. \\
+\end{longtable}
+
+\subsection*{3. Hipótesis y proposiciones preregistradas}\label{hipuxf3tesis-y-proposiciones-preregistradas}
+
+Para RQ1, de carácter principalmente exploratorio y de ingeniería de requisitos, se utilizarán proposiciones de estudio de caso:
+
+\begin{itemize}
+\item
+  P1: Los perfiles técnicos y no técnicos no necesariamente priorizan las mismas necesidades de explicación; se espera que el proceso de validación produzca RNF diferenciados o matizados por perfil.
+\item
+  P2: Una explicación útil para FabroGym deberá traducirse en requisitos verificables, no solo en preferencias subjetivas de interfaz.
+\end{itemize}
+
+Para RQ2, de carácter comparativo, se preregistran las siguientes hipótesis estadísticas no direccionales:
+
+\begin{itemize}
+\item
+  H0: La distribución de las puntuaciones de percepción de explicabilidad es equivalente entre participantes técnicos y no técnicos para cada dimensión evaluada.
+\item
+  H1: Al menos una dimensión presenta una diferencia de distribución entre participantes técnicos y no técnicos.
+\end{itemize}
+
+\subsection*{4. Constructos, variables y operacionalización}\label{constructos-variables-y-operacionalizaciuxf3n}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Variable}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Rol}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Operacionalización}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Fuente}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Escala}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Perfil de usuario & Independiente & Técnico / no técnico & Ficha de caracterización & Nominal \\
+Percepción de explicabilidad & Dependiente & Puntuación por dimensión & Cuestionario Likert & Ordinal \\
+Cobertura de explicabilidad & Dependiente & Proporción de dimensiones con $\geq$1 RNF verificable & Matriz RNF-dimensión & Proporción \\
+Acuerdo de validación & Dependiente & Consistencia entre evaluadores/rondas & Matriz de decisiones & Kappa de Fleiss cuando proceda \\
+Escenario presentado & Control & Mismos escenarios y orden base & Guion de sesión & Controlado \\
+Prototipo/explicación & Control & Misma versión por ronda & Versión etiquetada & Controlado \\
+\end{longtable}
+
+Las dimensiones concretas del instrumento se fijarán antes de abrir la recolección y se documentarán en la matriz de operacionalización, tomando como base la literatura de explicabilidad citada por la rúbrica (Chazette \& Schneider; Chazette, Brunotte \& Speith). Para evitar flexibilidad analítica posterior, cada ítem quedará vinculado a una única dimensión primaria y a un RNF o candidato a RNF.
+
+\subsection*{5. Diseño del estudio}\label{diseuxf1o-del-estudio}
+
+Se empleará un estudio de caso único con unidades de análisis embebidas por perfil de participante. El componente cualitativo se utilizará para elicitar y refinar candidatos a RNF de explicabilidad; el componente cuantitativo permitirá comparar la percepción de los perfiles mediante escalas Likert y pruebas no paramétricas.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Preparar y congelar la versión del prototipo/mockup de recomendación y el guion de validación.
+\item
+  Registrar este protocolo en OSF y conservar la URL persistente y el sello temporal.
+\item
+  Ejecutar la nueva ronda de walkthroughs: mínimo 3 sesiones con usuarios técnicos y 3 con usuarios no técnicos, según el mínimo terminal de la rúbrica.
+\item
+  Aplicar el cuestionario Likert asociado a las dimensiones de explicabilidad.
+\item
+  Codificar observaciones y derivar candidatos a RNF verificables con identificadores únicos.
+\item
+  Realizar una segunda ronda de validación o revisión de los RNF refinados, cuando el diseño de campo lo permita, para estimar acuerdo.
+\item
+  Ejecutar member checking con al menos 3 participantes previos para confirmar la interpretación de los hallazgos.
+\item
+  Procesar únicamente datos anonimizados con scripts versionados en Python o R.
+\end{enumerate}
+
+\subsection*{6. Participantes, muestreo y criterios}\label{participantes-muestreo-y-criterios}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Aspecto}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Plan preregistrado}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Perfiles & Técnico: experiencia en software, IR, QA, desarrollo o docencia técnica. No técnico: propietario, personal operativo, instructor o usuario del dominio fitness sin rol profesional de software en el estudio. \\
+Walkthroughs & Mínimo 6 sesiones cerradas: 3 técnicas + 3 no técnicas. \\
+Cuestionario & Meta de referencia de la rúbrica: n $\geq$ 60 respuestas por perfil dominante; si el reclutamiento real difiere, se realizará y reportará cálculo de potencia a priori/post hoc conforme al criterio metodológico acordado y se documentará como desviación OSF. \\
+Member checking & 1 sesión con al menos 3 participantes previos. \\
+Muestreo & Intencional por criterios para walkthroughs; convocatoria ampliada para cuestionario. \\
+Unidad de análisis & Respuesta individual del participante por dimensión y decisión de aceptación/rechazo/modificación de cada RNF. \\
+\end{longtable}
+
+Criterios de inclusión: persona mayor de edad; pertenecer claramente a uno de los perfiles definidos; aceptar el consentimiento informado; completar la sesión o el cuestionario; no haber participado en el diseño del instrumento que se le aplica. Criterios de exclusión: respuestas incompletas en más del 20 \% de los ítems; duplicados verificables; retiro del consentimiento; o imposibilidad de clasificar el perfil sin ambigüedad.
+
+\subsection*{7. Instrumentos y materiales}\label{instrumentos-y-materiales}
+
+\begin{itemize}
+\item
+  Guion de walkthrough de explicabilidad, con escenarios homogéneos para todos los participantes.
+\item
+  Prototipo o mockup versionado del componente de recomendación de rutinas y de su explicación.
+\item
+  Matriz de candidatos a RNF de explicabilidad: ID, enunciado, fuente, perfil, dimensión, criterio de aceptación, decisión de validación y observaciones.
+\item
+  Cuestionario Likert por dimensión, con escala fijada antes de la recolección y anclajes semánticos explícitos.
+\item
+  Ficha de caracterización mínima para clasificar el perfil sin recopilar datos innecesarios.
+\item
+  Acta de member checking.
+\item
+  Scripts de importación, limpieza, análisis descriptivo e inferencial en 06\_Experimento/scripts\_analisis/.
+\end{itemize}
+
+\subsection*{8. Procedimiento de recolección}\label{procedimiento-de-recolecciuxf3n}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\item
+  Confirmar aprobación ética y consentimiento aplicable antes de cada participación.
+\item
+  Asignar un código seudónimo al participante y almacenar los originales identificables solo en la zona restringida cifrada.
+\item
+  Presentar el mismo contexto y los mismos escenarios de recomendación.
+\item
+  Solicitar que el participante explique qué entiende de la recomendación, qué información le falta y qué debería mostrar el sistema para permitir una decisión informada.
+\item
+  Registrar aceptación, rechazo o modificación de cada candidato a RNF y aplicar el cuestionario Likert.
+\item
+  Anonimizar la evidencia pública; separar audio, video, firmas y cédulas en el contenedor restringido.
+\item
+  Cerrar la codificación y ejecutar member checking antes del análisis final.
+\end{enumerate}
+
+\subsection*{9. Plan de análisis estadístico preregistrado}\label{plan-de-anuxe1lisis-estaduxedstico-preregistrado}
+
+El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán pruebas en función de qué opción produzca significación estadística. Las decisiones siguientes quedan preregistradas:
+
+\begin{itemize}
+\item
+  Descriptivos por grupo y dimensión: n, media, mediana, desviación estándar, mínimo, máximo e intervalo intercuartílico.
+\item
+  Pruebas de supuestos: Shapiro-Wilk para normalidad y Levene para homogeneidad cuando sean pertinentes al estadístico considerado.
+\item
+  RQ1: síntesis cualitativa de candidatos a RNF; número y proporción de dimensiones cubiertas por al menos un RNF verificable. Se reportará cobertura = dimensiones cubiertas / dimensiones evaluadas.
+\item
+  RQ2: comparación técnico vs no técnico mediante U de Mann-Whitney por dimensión, coherente con la rúbrica del Enfoque 3. Se reportarán U, p con al menos tres decimales, tamaño del efecto r e intervalo de confianza del 95 \% cuando sea calculable de forma reproducible.
+\item
+  Acuerdo entre rondas/evaluadores: coeficiente kappa de Fleiss cuando existan tres o más evaluadores comparables y una matriz nominal bien definida.
+\item
+  Nivel de significación: $\alpha$ = 0,05. Si se realizan múltiples contrastes por dimensión, se aplicará corrección de Holm para controlar el error familiar.
+\item
+  Los intervalos de confianza se calcularán al 95 \%. Cualquier análisis no previsto aquí se etiquetará como exploratorio y se declarará como desviación.
+\end{itemize}
+
+\subsection*{10. Gestión de datos, ética y reproducibilidad}\label{gestiuxf3n-de-datos-uxe9tica-y-reproducibilidad}
+
+\begin{itemize}
+\item
+  Zona pública {[}P{]}: datos anonimizados, transcripciones seudonimizadas, instrumentos vacíos, matrices procesadas y scripts.
+\item
+  Zona restringida {[}R{]}: consentimientos originales, firmas, cédulas, audios, videos y cualquier otro identificador directo; almacenamiento cifrado AES-256 conforme a la rúbrica.
+\item
+  No se publicarán datos de salud, biométricos ni identificadores reales de clientes.
+\item
+  Los resultados del manuscrito deberán poder regenerarse desde los datos crudos anonimizados mediante los scripts versionados.
+\item
+  El registro OSF conservará el protocolo original; las modificaciones posteriores se documentarán en osf\_deviations.pdf y en la sección de desviaciones del registro.
+\end{itemize}
+
+\subsection*{11. Tratamiento de actividades realizadas antes del registro OSF}\label{tratamiento-de-actividades-realizadas-antes-del-registro-osf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{REGLA DE CORTE TEMPORAL\\
+}Toda entrevista, encuesta o validación realizada antes del sello temporal de OSF se considerará evidencia previa de ingeniería o actividad piloto/formativa. No se presentará como dato confirmatorio preregistrado. Si alguna evidencia previa se reutiliza únicamente para diseñar el instrumento, esta utilización se declarará expresamente en el manuscrito y en las desviaciones del protocolo.\strut
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+En particular, las validaciones técnicas que el equipo ya haya ejecutado antes del preregistro pueden conservarse como evidencia de validación del ERS, pero el análisis confirmatorio del Enfoque 3 debe basarse en una ronda identificada y ejecutada después del timestamp de OSF.
+
+\subsection*{12. Reglas de detención, datos faltantes y exclusiones}\label{reglas-de-detenciuxf3n-datos-faltantes-y-exclusiones}
+
+\begin{itemize}
+\item
+  La recolección no se detendrá anticipadamente por observar resultados favorables o desfavorables.
+\item
+  Los registros incompletos en más del 20 \% de los ítems Likert se excluirán del análisis inferencial, conservándose el conteo y la razón de exclusión.
+\item
+  Los datos faltantes restantes no se imputarán salvo que se preregistre una modificación antes de inspeccionar los resultados; se reportará el n efectivo por análisis.
+\item
+  Las respuestas duplicadas verificables serán eliminadas conservando la primera respuesta completa, salvo evidencia de corrección legítima.
+\item
+  Toda exclusión se documentará en un archivo de flujo de participantes y será reproducible mediante script.
+\end{itemize}
+
+\subsection*{13. Desviaciones y cambios al protocolo}\label{desviaciones-y-cambios-al-protocolo}
+
+Cualquier cambio posterior al registro se documentará con: (a) descripción del cambio, (b) razón, (c) fecha en que se detectó la necesidad, (d) si ocurrió antes o después de observar resultados, y (e) mitigación. Los análisis no preregistrados se identificarán como exploratorios. La existencia de una desviación no implica ocultarla ni reescribir el protocolo original.
+
+\subsection*{14. Productos esperados}\label{productos-esperados}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Archivo}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Contenido}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+06\_Experimento/protocolo.pdf & Este protocolo, congelado antes de la nueva ronda empírica. \\
+06\_Experimento/osf\_registration.pdf & Comprobante oficial del registro OSF con URL persistente y timestamp. \\
+06\_Experimento/osf\_deviations.pdf & Desviaciones documentadas respecto del protocolo, si las hubiera. \\
+06\_Experimento/instrumentos/ & Guion, cuestionario, matriz RNF y materiales de validación. \\
+06\_Experimento/datos\_crudos/ & Datos anonimizados de la ronda preregistrada. \\
+06\_Experimento/datos\_procesados/ & Datos derivados mediante scripts. \\
+06\_Experimento/resultados/ & Tablas y figuras generadas reproduciblemente. \\
+06\_Experimento/scripts\_analisis/ & Scripts que producen el análisis final. \\
+\end{longtable}
+
+\subsection*{15. Resumen listo para copiar en OSF}\label{resumen-listo-para-copiar-en-osf}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Campo OSF}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Texto recomendado}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Título & FabroGym: preregistration of an explainability requirements study for a fitness routine recommendation component \\
+Descripción & Estudio de caso preregistrado para elicitar y validar requisitos no funcionales de explicabilidad en un componente propuesto de recomendación de rutinas de FabroGym, comparando percepciones de perfiles técnicos y no técnicos. \\
+Pregunta principal & ¿Qué requisitos de explicabilidad emergen para distintos perfiles de usuarios y cómo difiere su percepción al evaluar las mismas explicaciones? \\
+Diseño & Estudio de caso único con componente cualitativo de walkthrough y componente cuantitativo Likert. \\
+Análisis principal & Cobertura de dimensiones mediante RNF verificables; descriptivos; U de Mann-Whitney técnico vs no técnico; tamaño del efecto r; kappa de Fleiss cuando proceda. \\
+Estado al registrar & Sin resultados confirmatorios de la ronda preregistrada. Las actividades previas se tratan como antecedentes/piloto y se excluyen del análisis confirmatorio. \\
+\end{longtable}
+
+\subsection*{Referencias}\label{referencias}
+
+Chazette, L., \& Schneider, K. (2020). Explainability as a non-functional requirement: Challenges and recommendations. Requirements Engineering, 25, 493-514.
+
+Chazette, L., Brunotte, W., \& Speith, T. (2021). Exploring explainability: A definition, a model, and a knowledge catalogue. Proceedings of the IEEE International Requirements Engineering Conference, 197-208.
+
+Chazette, L., Brunotte, W., \& Speith, T. (2022). Explainable software systems: From requirements analysis to system evaluation. Requirements Engineering, 27(4), 457-487.
+
+Nosek, B. A., Ebersole, C. R., DeHaven, A. C., \& Mellor, D. T. (2018). The preregistration revolution. Proceedings of the National Academy of Sciences, 115(11), 2600-2606. https://doi.org/10.1073/pnas.1708274114
+
+Runeson, P., \& Höst, M. (2009). Guidelines for conducting and reporting case study research in software engineering. Empirical Software Engineering, 14(2), 131-164. https://doi.org/10.1007/s10664-008-9102-8
+
+Wohlin, C., Runeson, P., Höst, M., Ohlsson, M. C., Regnell, B., \& Wesslén, A. (2012). Experimentation in Software Engineering. Springer.
+
+Universidad Técnica Estatal de Quevedo. (2026). Guía y rúbrica de evaluación - Proyecto Fin de Curso, Entrega 4 (2B/Defensa Final): Manuscrito para revista JCR. Ingeniería de Requerimientos ISR-401.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{ANTES DE PRESIONAR ``REGISTER'' EN OSF\\
+}Verifique que el equipo acepta este cambio de enfoque, que la nueva ronda empírica todavía no ha comenzado y que se ha decidido cómo se actualizará el ERS/SRS para resolver la contradicción actual con la exclusión de IA. Una vez registrado, el protocolo debe conservarse sin reescribir retroactivamente sus decisiones.\strut
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\end{document}
