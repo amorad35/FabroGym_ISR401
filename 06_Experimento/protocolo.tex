@@ -8,7 +8,12 @@
 \usepackage{fancyhdr}
 \usepackage[spanish,es-nodecimaldot]{babel}
 \usepackage{enumitem}
+\usepackage{titlesec}
 \setlist{nosep,leftmargin=*}
+% Distinción visual entre secciones principales
+\titleformat{name=\section,numberless}{\normalfont\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{16pt plus 2pt minus 1pt}{7pt}
+\renewcommand{\refname}{Referencias}
 \renewcommand{\arraystretch}{0.98}
 \usepackage{iftex}
 \ifPDFTeX
@@ -36,7 +41,7 @@
     \usepackage{parskip}
   }{% else
     \setlength{\parindent}{0pt}
-    \setlength{\parskip}{3pt}}
+    \setlength{\parskip}{5pt}}
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
@@ -72,20 +77,64 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\footnotesize UTEQ · ISR-401 · FabroGym · Protocolo OSF}
-\fancyfoot[C]{\footnotesize Protocolo de preregistro - versión 1.0 - 19/08/2026}
-\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\footnotesize Entrega 4 (2B) - v1.0}
+\fancyfoot[R]{\footnotesize\bfseries \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
 \begin{document}
 
+% =========================
+% CARÁTULA
+% =========================
+\thispagestyle{empty}
 \begin{center}
-{\Large\bfseries UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}\\[2pt]
-{\normalsize\bfseries Facultad de Ciencias de la Computación}\\
-Ingeniería de Requerimientos (ISR-401)\\[8pt]
-{\LARGE\bfseries PROTOCOLO DE PRERREGISTRO OSF}\\[3pt]
-{\large\bfseries FabroGym - Enfoque 3: Explicabilidad como Requisito No Funcional}\\[2pt]
-\emph{Estudio de caso para un componente propuesto de recomendación de rutinas}
+{\Large\bfseries UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}\\[6pt]
+{\normalsize Facultad de Ciencias de la Computación}\\[3pt]
+{\normalsize Carrera de Ingeniería de Software}\\[14pt]
+{\normalsize Asignatura: Ingeniería de Requerimientos (ISR-401)}\\[18pt]
+
+{\LARGE\bfseries PROTOCOLO DE PRERREGISTRO OSF}\\[8pt]
+{\large\bfseries FabroGym - Enfoque 3: Explicabilidad como Requisito No Funcional}\\[5pt]
+{\normalsize\itshape Estudio de caso para un componente propuesto de recomendación de rutinas}\\[14pt]
 \end{center}
+
+\begin{center}
+\begin{tabular}{|>{\bfseries}p{0.25\textwidth}|p{0.66\textwidth}|}
+\hline
+Proyecto: & FabroGym - Sistema de gestión administrativa y operativa para un gimnasio \\ \hline
+Entrega: & Entrega 4 (2B/Defensa Final) - componente empírico \\ \hline
+Enfoque seleccionado: & Enfoque 3 - Explicabilidad como Requisito No Funcional \\ \hline
+Versión: & 1.0 - paquete preparado para prerregistro \\ \hline
+Fecha: & 19 de agosto de 2026 \\ \hline
+Repositorio: & \url{https://github.com/amorad35/FabroGym_ISR401} \\ \hline
+Estado: & Borrador preparado para prerregistro; sin resultados confirmatorios de la ronda preregistrada \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{8pt}
+\begin{center}
+{\bfseries Equipo PFC - Gimnasio}\\[5pt]
+\begin{tabular}{|p{0.44\textwidth}|p{0.47\textwidth}|}
+\hline
+Alvia Villegas Erick Adalberto & Analista líder / entrevistador \\ \hline
+Mera Arias Erick Jhair & Documentador / responsable de encuestas \\ \hline
+Mora Duarte Alex José & Modelador / apoyo de análisis \\ \hline
+Ponce Rivera Mery Helenmey & Verificadora / calidad de requisitos \\ \hline
+Vaca Romero David Octavio & Apoyo documental / evidencias \\ \hline
+\end{tabular}
+\end{center}
+
+\vfill
+\begin{center}
+Quevedo, Ecuador - 2026
+\end{center}
+\clearpage
+
+% =========================
+% ÍNDICE
+% =========================
+\tableofcontents
+\clearpage
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
@@ -124,9 +173,10 @@ Registro previsto & Open Science Framework (OSF) - preregistro antes de la nueva
 
 \textbf{Documento preparado para registrar el plan de investigación; no contiene resultados empíricos.}
 
-\subsection*{1. Propósito y relación con la Entrega 4 (2B)}\label{propuxf3sito-y-relaciuxf3n-con-la-entrega-4-2b}
+\section*{1. Propósito y relación con la Entrega 4 (2B)}\label{propuxf3sito-y-relaciuxf3n-con-la-entrega-4-2b}
+\addcontentsline{toc}{section}{1. Propósito y relación con la Entrega 4 (2B)}
 
-El propósito de este protocolo es preregistrar, antes de la nueva recolección de datos, el diseño empírico mediante el cual el equipo FabroGym identificará y validará requisitos de explicabilidad para un componente propuesto de recomendación de rutinas. El protocolo se alinea con la adaptación temática de la rúbrica de la Entrega 4 (2B), que asigna a FabroGym el Enfoque 3 (explicabilidad).
+El propósito de este protocolo es preregistrar, antes de la nueva recolección de datos, el diseño empírico mediante el cual el equipo FabroGym identificará y validará requisitos de explicabilidad para un componente propuesto de recomendación de rutinas. El protocolo se alinea con la adaptación temática de la rúbrica de la Entrega 4 (2B), que asigna a FabroGym el Enfoque 3 (explicabilidad) \cite{uteq2026}.
 
 El estudio no presupone que el componente de inteligencia artificial o aprendizaje automático ya esté implementado. Su objeto es determinar qué explicaciones deberían exigirse como RNF verificables y cómo son percibidas por perfiles técnicos y no técnicos antes de consolidar el alcance terminal del ERS/SRS y del MVP.
 
@@ -143,7 +193,8 @@ El estudio no presupone que el componente de inteligencia artificial o aprendiza
 \endlastfoot
 \end{longtable}
 
-\subsection*{2. Preguntas de investigación (RQ) y PICOC}\label{preguntas-de-investigaciuxf3n-rq-y-picoc}
+\section*{2. Preguntas de investigación (RQ) y PICOC}\label{preguntas-de-investigaciuxf3n-rq-y-picoc}
+\addcontentsline{toc}{section}{2. Preguntas de investigación (RQ) y PICOC}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
@@ -182,7 +233,8 @@ O - Resultados & RNF de explicabilidad derivados; cobertura del marco de explica
 C - Contexto & FabroGym, sistema de gestión de gimnasio local en Ecuador, con componente propuesto de recomendación de rutinas. \\
 \end{longtable}
 
-\subsection*{3. Hipótesis y proposiciones preregistradas}\label{hipuxf3tesis-y-proposiciones-preregistradas}
+\section*{3. Hipótesis y proposiciones preregistradas}\label{hipuxf3tesis-y-proposiciones-preregistradas}
+\addcontentsline{toc}{section}{3. Hipótesis y proposiciones preregistradas}
 
 Para RQ1, de carácter principalmente exploratorio y de ingeniería de requisitos, se utilizarán proposiciones de estudio de caso:
 
@@ -202,7 +254,8 @@ Para RQ2, de carácter comparativo, se preregistran las siguientes hipótesis es
   H1: Al menos una dimensión presenta una diferencia de distribución entre participantes técnicos y no técnicos.
 \end{itemize}
 
-\subsection*{4. Constructos, variables y operacionalización}\label{constructos-variables-y-operacionalizaciuxf3n}
+\section*{4. Constructos, variables y operacionalización}\label{constructos-variables-y-operacionalizaciuxf3n}
+\addcontentsline{toc}{section}{4. Constructos, variables y operacionalización}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
@@ -234,11 +287,12 @@ Escenario presentado & Control & Mismos escenarios y orden base & Guion de sesi�
 Prototipo/explicación & Control & Misma versión por ronda & Versión etiquetada & Controlado \\
 \end{longtable}
 
-Las dimensiones concretas del instrumento se fijarán antes de abrir la recolección y se documentarán en la matriz de operacionalización, tomando como base la literatura de explicabilidad citada por la rúbrica (Chazette \& Schneider; Chazette, Brunotte \& Speith). Para evitar flexibilidad analítica posterior, cada ítem quedará vinculado a una única dimensión primaria y a un RNF o candidato a RNF.
+Las dimensiones concretas del instrumento se fijarán antes de abrir la recolección y se documentarán en la matriz de operacionalización, tomando como base la literatura de explicabilidad citada por la rúbrica \cite{chazette2020,chazette2021,chazette2022}. Para evitar flexibilidad analítica posterior, cada ítem quedará vinculado a una única dimensión primaria y a un RNF o candidato a RNF.
 
-\subsection*{5. Diseño del estudio}\label{diseuxf1o-del-estudio}
+\section*{5. Diseño del estudio}\label{diseuxf1o-del-estudio}
+\addcontentsline{toc}{section}{5. Diseño del estudio}
 
-Se empleará un estudio de caso único con unidades de análisis embebidas por perfil de participante. El componente cualitativo se utilizará para elicitar y refinar candidatos a RNF de explicabilidad; el componente cuantitativo permitirá comparar la percepción de los perfiles mediante escalas Likert y pruebas no paramétricas.
+Se empleará un estudio de caso único con unidades de análisis embebidas por perfil de participante, siguiendo lineamientos metodológicos de estudios de caso y experimentación en ingeniería de software \cite{runeson2009,wohlin2012}. El componente cualitativo se utilizará para elicitar y refinar candidatos a RNF de explicabilidad; el componente cuantitativo permitirá comparar la percepción de los perfiles mediante escalas Likert y pruebas no paramétricas.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -260,7 +314,8 @@ Se empleará un estudio de caso único con unidades de análisis embebidas por p
   Procesar únicamente datos anonimizados con scripts versionados en Python o R.
 \end{enumerate}
 
-\subsection*{6. Participantes, muestreo y criterios}\label{participantes-muestreo-y-criterios}
+\section*{6. Participantes, muestreo y criterios}\label{participantes-muestreo-y-criterios}
+\addcontentsline{toc}{section}{6. Participantes, muestreo y criterios}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
@@ -285,7 +340,8 @@ Unidad de análisis & Respuesta individual del participante por dimensión y dec
 
 Criterios de inclusión: persona mayor de edad; pertenecer claramente a uno de los perfiles definidos; aceptar el consentimiento informado; completar la sesión o el cuestionario; no haber participado en el diseño del instrumento que se le aplica. Criterios de exclusión: respuestas incompletas en más del 20 \% de los ítems; duplicados verificables; retiro del consentimiento; o imposibilidad de clasificar el perfil sin ambigüedad.
 
-\subsection*{7. Instrumentos y materiales}\label{instrumentos-y-materiales}
+\section*{7. Instrumentos y materiales}\label{instrumentos-y-materiales}
+\addcontentsline{toc}{section}{7. Instrumentos y materiales}
 
 \begin{itemize}
 \item
@@ -304,11 +360,11 @@ Criterios de inclusión: persona mayor de edad; pertenecer claramente a uno de l
   Scripts de importación, limpieza, análisis descriptivo e inferencial en 06\_Experimento/scripts\_analisis/.
 \end{itemize}
 
-\subsection*{8. Procedimiento de recolección}\label{procedimiento-de-recolecciuxf3n}
+\section*{8. Procedimiento de recolección}\label{procedimiento-de-recolecciuxf3n}
+\addcontentsline{toc}{section}{8. Procedimiento de recolección}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{8}
 \item
   Confirmar aprobación ética y consentimiento aplicable antes de cada participación.
 \item
@@ -325,7 +381,8 @@ Criterios de inclusión: persona mayor de edad; pertenecer claramente a uno de l
   Cerrar la codificación y ejecutar member checking antes del análisis final.
 \end{enumerate}
 
-\subsection*{9. Plan de análisis estadístico preregistrado}\label{plan-de-anuxe1lisis-estaduxedstico-preregistrado}
+\section*{9. Plan de análisis estadístico preregistrado}\label{plan-de-anuxe1lisis-estaduxedstico-preregistrado}
+\addcontentsline{toc}{section}{9. Plan de análisis estadístico preregistrado}
 
 El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán pruebas en función de qué opción produzca significación estadística. Las decisiones siguientes quedan preregistradas:
 
@@ -346,7 +403,9 @@ El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán 
   Los intervalos de confianza se calcularán al 95 \%. Cualquier análisis no previsto aquí se etiquetará como exploratorio y se declarará como desviación.
 \end{itemize}
 
-\subsection*{10. Gestión de datos, ética y reproducibilidad}\label{gestiuxf3n-de-datos-uxe9tica-y-reproducibilidad}
+\clearpage
+\section*{10. Gestión de datos, ética y reproducibilidad}\label{gestiuxf3n-de-datos-uxe9tica-y-reproducibilidad}
+\addcontentsline{toc}{section}{10. Gestión de datos, ética y reproducibilidad}
 
 \begin{itemize}
 \item
@@ -358,10 +417,11 @@ El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán 
 \item
   Los resultados del manuscrito deberán poder regenerarse desde los datos crudos anonimizados mediante los scripts versionados.
 \item
-  El registro OSF conservará el protocolo original; las modificaciones posteriores se documentarán en osf\_deviations.pdf y en la sección de desviaciones del registro.
+  El registro OSF conservará el protocolo original; las modificaciones posteriores se documentarán en osf\_deviations.pdf y en la sección de desviaciones del registro, en coherencia con los principios de prerregistro \cite{nosek2018}.
 \end{itemize}
 
-\subsection*{11. Tratamiento de actividades realizadas antes del registro OSF}\label{tratamiento-de-actividades-realizadas-antes-del-registro-osf}
+\section*{11. Tratamiento de actividades realizadas antes del registro OSF}\label{tratamiento-de-actividades-realizadas-antes-del-registro-osf}
+\addcontentsline{toc}{section}{11. Tratamiento de actividades realizadas antes del registro OSF}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
@@ -378,7 +438,8 @@ El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán 
 
 En particular, las validaciones técnicas que el equipo ya haya ejecutado antes del preregistro pueden conservarse como evidencia de validación del ERS, pero el análisis confirmatorio del Enfoque 3 debe basarse en una ronda identificada y ejecutada después del timestamp de OSF.
 
-\subsection*{12. Reglas de detención, datos faltantes y exclusiones}\label{reglas-de-detenciuxf3n-datos-faltantes-y-exclusiones}
+\section*{12. Reglas de detención, datos faltantes y exclusiones}\label{reglas-de-detenciuxf3n-datos-faltantes-y-exclusiones}
+\addcontentsline{toc}{section}{12. Reglas de detención, datos faltantes y exclusiones}
 
 \begin{itemize}
 \item
@@ -393,11 +454,13 @@ En particular, las validaciones técnicas que el equipo ya haya ejecutado antes 
   Toda exclusión se documentará en un archivo de flujo de participantes y será reproducible mediante script.
 \end{itemize}
 
-\subsection*{13. Desviaciones y cambios al protocolo}\label{desviaciones-y-cambios-al-protocolo}
+\section*{13. Desviaciones y cambios al protocolo}\label{desviaciones-y-cambios-al-protocolo}
+\addcontentsline{toc}{section}{13. Desviaciones y cambios al protocolo}
 
 Cualquier cambio posterior al registro se documentará con: (a) descripción del cambio, (b) razón, (c) fecha en que se detectó la necesidad, (d) si ocurrió antes o después de observar resultados, y (e) mitigación. Los análisis no preregistrados se identificarán como exploratorios. La existencia de una desviación no implica ocultarla ni reescribir el protocolo original.
 
-\subsection*{14. Productos esperados}\label{productos-esperados}
+\section*{14. Productos esperados}\label{productos-esperados}
+\addcontentsline{toc}{section}{14. Productos esperados}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
@@ -422,7 +485,8 @@ Cualquier cambio posterior al registro se documentará con: (a) descripción del
 06\_Experimento/scripts\_analisis/ & Scripts que producen el análisis final. \\
 \end{longtable}
 
-\subsection*{15. Resumen listo para copiar en OSF}\label{resumen-listo-para-copiar-en-osf}
+\section*{15. Resumen listo para copiar en OSF}\label{resumen-listo-para-copiar-en-osf}
+\addcontentsline{toc}{section}{15. Resumen listo para copiar en OSF}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
@@ -445,21 +509,32 @@ Análisis principal & Cobertura de dimensiones mediante RNF verificables; descri
 Estado al registrar & Sin resultados confirmatorios de la ronda preregistrada. Las actividades previas se tratan como antecedentes/piloto y se excluyen del análisis confirmatorio. \\
 \end{longtable}
 
-\subsection*{Referencias}\label{referencias}
+\addcontentsline{toc}{section}{Referencias}
 
-Chazette, L., \& Schneider, K. (2020). Explainability as a non-functional requirement: Challenges and recommendations. Requirements Engineering, 25, 493-514.
+\begin{thebibliography}{99}
 
-Chazette, L., Brunotte, W., \& Speith, T. (2021). Exploring explainability: A definition, a model, and a knowledge catalogue. Proceedings of the IEEE International Requirements Engineering Conference, 197-208.
+\bibitem{chazette2020}
+L. Chazette and K. Schneider, ``Explainability as a non-functional requirement: Challenges and recommendations,'' \textit{Requirements Engineering}, vol. 25, pp. 493--514, 2020.
 
-Chazette, L., Brunotte, W., \& Speith, T. (2022). Explainable software systems: From requirements analysis to system evaluation. Requirements Engineering, 27(4), 457-487.
+\bibitem{chazette2021}
+L. Chazette, W. Brunotte, and T. Speith, ``Exploring explainability: A definition, a model, and a knowledge catalogue,'' in \textit{Proc. IEEE Int. Requirements Engineering Conf. (RE)}, 2021, pp. 197--208.
 
-Nosek, B. A., Ebersole, C. R., DeHaven, A. C., \& Mellor, D. T. (2018). The preregistration revolution. Proceedings of the National Academy of Sciences, 115(11), 2600-2606. https://doi.org/10.1073/pnas.1708274114
+\bibitem{chazette2022}
+L. Chazette, W. Brunotte, and T. Speith, ``Explainable software systems: From requirements analysis to system evaluation,'' \textit{Requirements Engineering}, vol. 27, no. 4, pp. 457--487, 2022.
 
-Runeson, P., \& Höst, M. (2009). Guidelines for conducting and reporting case study research in software engineering. Empirical Software Engineering, 14(2), 131-164. https://doi.org/10.1007/s10664-008-9102-8
+\bibitem{nosek2018}
+B. A. Nosek, C. R. Ebersole, A. C. DeHaven, and D. T. Mellor, ``The preregistration revolution,'' \textit{Proc. Natl. Acad. Sci. U.S.A.}, vol. 115, no. 11, pp. 2600--2606, 2018, doi: 10.1073/pnas.1708274114.
 
-Wohlin, C., Runeson, P., Höst, M., Ohlsson, M. C., Regnell, B., \& Wesslén, A. (2012). Experimentation in Software Engineering. Springer.
+\bibitem{runeson2009}
+P. Runeson and M. Höst, ``Guidelines for conducting and reporting case study research in software engineering,'' \textit{Empirical Software Engineering}, vol. 14, no. 2, pp. 131--164, 2009, doi: 10.1007/s10664-008-9102-8.
 
-Universidad Técnica Estatal de Quevedo. (2026). Guía y rúbrica de evaluación - Proyecto Fin de Curso, Entrega 4 (2B/Defensa Final): Manuscrito para revista JCR. Ingeniería de Requerimientos ISR-401.
+\bibitem{wohlin2012}
+C. Wohlin, P. Runeson, M. Höst, M. C. Ohlsson, B. Regnell, and A. Wesslén, \textit{Experimentation in Software Engineering}. Berlin, Germany: Springer, 2012.
+
+\bibitem{uteq2026}
+Universidad Técnica Estatal de Quevedo, ``Guía y rúbrica de evaluación - Proyecto Fin de Curso, Entrega 4 (2B/Defensa Final): Manuscrito para revista JCR,'' Ingeniería de Requerimientos ISR-401, 2026.
+
+\end{thebibliography}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
