@@ -77,7 +77,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\footnotesize Entrega 4 (2B) - v1.0}
+\fancyhead[R]{\footnotesize Entrega 4 (2B) - v1.1}
 \fancyfoot[R]{\footnotesize\bfseries \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -104,8 +104,8 @@
 Proyecto: & FabroGym - Sistema de gestión administrativa y operativa para un gimnasio \\ \hline
 Entrega: & Entrega 4 (2B/Defensa Final) - componente empírico \\ \hline
 Enfoque seleccionado: & Enfoque 3 - Explicabilidad como Requisito No Funcional \\ \hline
-Versión: & 1.0 - paquete preparado para prerregistro \\ \hline
-Fecha: & 19 de agosto de 2026 \\ \hline
+Versión: & 1.1 - ajuste metodológico previo al prerregistro \\ \hline
+Fecha: & 26 de agosto de 2026 \\ \hline
 Repositorio: & \url{https://github.com/amorad35/FabroGym_ISR401} \\ \hline
 Estado: & Borrador preparado para prerregistro; sin resultados confirmatorios de la ronda preregistrada \\ \hline
 \end{tabular}
@@ -152,46 +152,18 @@ Quevedo, Ecuador - 2026
 Proyecto & FabroGym - Sistema de gestión de gimnasio \\
 Tipo de estudio & Estudio de caso único con componente mixto de validación de requisitos \\
 Enfoque de la rúbrica 2B & Enfoque 3 - Explicabilidad como RNF \\
-Versión del protocolo & 1.0 \\
-Fecha de preparación & 19 de agosto de 2026 \\
+Versión del protocolo & 1.1 \\
+Fecha de actualización & 26 de agosto de 2026 \\
 Repositorio & github.com/amorad35/FabroGym\_ISR401 \\
 Registro previsto & Open Science Framework (OSF) - preregistro antes de la nueva ronda empírica \\
 \end{longtable}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{ADVERTENCIA DE INTEGRIDAD DEL PRERREGISTRO\\
-}Este documento no retrodata actividades ya realizadas. Las validaciones técnicas efectuadas antes del sello temporal de OSF se consideran antecedentes o validaciones formativas y no se incorporarán como datos confirmatorios del estudio preregistrado. La nueva recolección destinada al análisis del Enfoque 3 debe comenzar después del registro en OSF.\strut
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
-
-\textbf{Documento preparado para registrar el plan de investigación; no contiene resultados empíricos.}
-
 \section*{1. Propósito y relación con la Entrega 4 (2B)}\label{propuxf3sito-y-relaciuxf3n-con-la-entrega-4-2b}
 \addcontentsline{toc}{section}{1. Propósito y relación con la Entrega 4 (2B)}
 
-El propósito de este protocolo es preregistrar, antes de la nueva recolección de datos, el diseño empírico mediante el cual el equipo FabroGym identificará y validará requisitos de explicabilidad para un componente propuesto de recomendación de rutinas. El protocolo se alinea con la adaptación temática de la rúbrica de la Entrega 4 (2B), que asigna a FabroGym el Enfoque 3 (explicabilidad) \cite{uteq2026}.
+El propósito de este protocolo es preregistrar, antes de la nueva recolección confirmatoria de datos, el diseño empírico mediante el cual el equipo FabroGym identificará y validará requisitos de explicabilidad para un componente propuesto de recomendación de rutinas. El protocolo se alinea con la adaptación temática de la rúbrica de la Entrega 4 (2B), que asigna a FabroGym el Enfoque 3 (explicabilidad) \cite{uteq2026}.
 
 El estudio no presupone que el componente de inteligencia artificial o aprendizaje automático ya esté implementado. Su objeto es determinar qué explicaciones deberían exigirse como RNF verificables y cómo son percibidas por perfiles técnicos y no técnicos antes de consolidar el alcance terminal del ERS/SRS y del MVP.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{NOTA DE CONSISTENCIA CON EL REPOSITORIO ACTUAL\\
-}El ERS 2A y el README del MVP actualmente excluyen IA/AA y generación de rutinas mediante IA. Por ello, el registro OSF de este protocolo debe ir acompañado posteriormente de una actualización explícita del alcance del ERS/SRS 2B si el equipo adopta el componente de recomendación exigido por la rúbrica. No se debe afirmar en OSF que dicho componente ya existe si todavía no está implementado.\strut
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
 
 \section*{2. Preguntas de investigación (RQ) y PICOC}\label{preguntas-de-investigaciuxf3n-rq-y-picoc}
 \addcontentsline{toc}{section}{2. Preguntas de investigación (RQ) y PICOC}
@@ -294,24 +266,28 @@ Las dimensiones concretas del instrumento se fijarán antes de abrir la recolecc
 
 Se empleará un estudio de caso único con unidades de análisis embebidas por perfil de participante, siguiendo lineamientos metodológicos de estudios de caso y experimentación en ingeniería de software \cite{runeson2009,wohlin2012}. El componente cualitativo se utilizará para elicitar y refinar candidatos a RNF de explicabilidad; el componente cuantitativo permitirá comparar la percepción de los perfiles mediante escalas Likert y pruebas no paramétricas.
 
+El diseño distingue explícitamente dos etapas temporales. La primera corresponde a evidencia exploratoria/formativa obtenida antes del sello temporal de OSF, si la hubiera. Sus hallazgos podrán orientar la identificación preliminar de necesidades de explicabilidad, dimensiones, escenarios, candidatos a RNF y mejoras de los instrumentos, pero sus respuestas individuales, puntuaciones y decisiones no formarán parte de la base confirmatoria. La segunda etapa corresponde a la nueva ronda confirmatoria, que comenzará únicamente después de congelar los instrumentos y completar el prerregistro en OSF.
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Preparar y congelar la versión del prototipo/mockup de recomendación y el guion de validación.
+  Sistematizar, cuando exista, la evidencia formativa previa exclusivamente como insumo exploratorio para identificar necesidades de explicabilidad, refinar escenarios y formular candidatos preliminares a RNF.
+\item
+  Refinar y congelar la versión definitiva del prototipo/mockup de recomendación, el guion de walkthrough, el cuestionario Likert y las matrices de operacionalización y candidatos a RNF.
 \item
   Registrar este protocolo en OSF y conservar la URL persistente y el sello temporal.
 \item
-  Ejecutar la nueva ronda de walkthroughs: mínimo 3 sesiones con usuarios técnicos y 3 con usuarios no técnicos, según el mínimo terminal de la rúbrica.
+  Ejecutar la nueva ronda confirmatoria de walkthroughs: mínimo 3 sesiones con usuarios técnicos y 3 con usuarios no técnicos, según el mínimo terminal de la rúbrica.
 \item
-  Aplicar el cuestionario Likert asociado a las dimensiones de explicabilidad.
+  Aplicar el cuestionario Likert asociado a las dimensiones de explicabilidad dentro de la ronda confirmatoria.
 \item
-  Codificar observaciones y derivar candidatos a RNF verificables con identificadores únicos.
+  Codificar las observaciones confirmatorias y derivar o refinar candidatos a RNF verificables con identificadores únicos, manteniendo trazabilidad respecto de los insumos formativos cuando corresponda.
 \item
   Realizar una segunda ronda de validación o revisión de los RNF refinados, cuando el diseño de campo lo permita, para estimar acuerdo.
 \item
   Ejecutar member checking con al menos 3 participantes previos para confirmar la interpretación de los hallazgos.
 \item
-  Procesar únicamente datos anonimizados con scripts versionados en Python o R.
+  Procesar para el análisis confirmatorio únicamente datos anonimizados obtenidos después del sello temporal de OSF, mediante scripts versionados en Python o R.
 \end{enumerate}
 
 \section*{6. Participantes, muestreo y criterios}\label{participantes-muestreo-y-criterios}
@@ -359,6 +335,8 @@ Criterios de inclusión: persona mayor de edad; pertenecer claramente a uno de l
 \item
   Scripts de importación, limpieza, análisis descriptivo e inferencial en 06\_Experimento/scripts\_analisis/.
 \end{itemize}
+
+Los walkthroughs exploratorios o formativos realizados antes del prerregistro podrán informar el contenido y la redacción de estos instrumentos, incluyendo la selección de escenarios, dimensiones de explicabilidad y candidatos preliminares a RNF. Esta utilización deberá quedar documentada como antecedente metodológico. Las versiones definitivas de los instrumentos que se emplearán en la ronda confirmatoria se cerrarán, versionarán y congelarán antes del registro OSF; los datos formativos previos permanecerán separados y no se fusionarán con la base confirmatoria.
 
 \section*{8. Procedimiento de recolección}\label{procedimiento-de-recolecciuxf3n}
 \addcontentsline{toc}{section}{8. Procedimiento de recolección}
@@ -428,7 +406,7 @@ El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán 
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{REGLA DE CORTE TEMPORAL\\
-}Toda entrevista, encuesta o validación realizada antes del sello temporal de OSF se considerará evidencia previa de ingeniería o actividad piloto/formativa. No se presentará como dato confirmatorio preregistrado. Si alguna evidencia previa se reutiliza únicamente para diseñar el instrumento, esta utilización se declarará expresamente en el manuscrito y en las desviaciones del protocolo.\strut
+}Toda entrevista, encuesta, sesión walkthrough o validación realizada antes del sello temporal de OSF se considerará evidencia previa de ingeniería o actividad exploratoria/formativa. No se presentará como dato confirmatorio preregistrado. Sus hallazgos podrán utilizarse, de forma transparente y trazable, para identificar necesidades preliminares de explicabilidad, refinar escenarios, mejorar el guion y el cuestionario, definir dimensiones del instrumento y formular candidatos iniciales a RNF. Las respuestas individuales, puntuaciones Likert y decisiones obtenidas antes del sello temporal permanecerán excluidas de la base confirmatoria y de los contrastes estadísticos preregistrados.\strut
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -436,7 +414,9 @@ El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán 
 \endlastfoot
 \end{longtable}
 
-En particular, las validaciones técnicas que el equipo ya haya ejecutado antes del preregistro pueden conservarse como evidencia de validación del ERS, pero el análisis confirmatorio del Enfoque 3 debe basarse en una ronda identificada y ejecutada después del timestamp de OSF.
+En particular, los walkthroughs técnicos o no técnicos que el equipo haya realizado antes del prerregistro conservarán valor como evidencia formativa del proceso de Ingeniería de Requisitos y podrán sustentar la justificación de ajustes metodológicos o de candidatos preliminares a RNF. La fecha en que estos archivos se incorporen posteriormente a GitHub u OSF no modifica su clasificación temporal: una sesión ejecutada antes del sello de OSF continúa siendo evidencia previa/formativa aunque el archivo se publique después.
+
+Por consiguiente, el análisis confirmatorio del Enfoque 3 se basará exclusivamente en una ronda identificada y ejecutada después del timestamp de OSF. Los datos previos se conservarán separados y cualquier síntesis derivada de ellos se etiquetará explícitamente como exploratoria o formativa.
 
 \section*{12. Reglas de detención, datos faltantes y exclusiones}\label{reglas-de-detenciuxf3n-datos-faltantes-y-exclusiones}
 \addcontentsline{toc}{section}{12. Reglas de detención, datos faltantes y exclusiones}
@@ -475,7 +455,7 @@ Cualquier cambio posterior al registro se documentará con: (a) descripción del
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-06\_Experimento/protocolo.pdf & Este protocolo, congelado antes de la nueva ronda empírica. \\
+06\_Experimento/protocolo.pdf & Este protocolo, congelado antes de la nueva ronda empírica confirmatoria. \\
 06\_Experimento/osf\_registration.pdf & Comprobante oficial del registro OSF con URL persistente y timestamp. \\
 06\_Experimento/osf\_deviations.pdf & Desviaciones documentadas respecto del protocolo, si las hubiera. \\
 06\_Experimento/instrumentos/ & Guion, cuestionario, matriz RNF y materiales de validación. \\
@@ -506,7 +486,7 @@ Descripción & Estudio de caso preregistrado para elicitar y validar requisitos 
 Pregunta principal & ¿Qué requisitos de explicabilidad emergen para distintos perfiles de usuarios y cómo difiere su percepción al evaluar las mismas explicaciones? \\
 Diseño & Estudio de caso único con componente cualitativo de walkthrough y componente cuantitativo Likert. \\
 Análisis principal & Cobertura de dimensiones mediante RNF verificables; descriptivos; U de Mann-Whitney técnico vs no técnico; tamaño del efecto r; kappa de Fleiss cuando proceda. \\
-Estado al registrar & Sin resultados confirmatorios de la ronda preregistrada. Las actividades previas se tratan como antecedentes/piloto y se excluyen del análisis confirmatorio. \\
+Estado al registrar & Sin resultados confirmatorios de la ronda preregistrada. Las actividades previas se consideran exploratorias/formativas; pueden informar el diseño y refinamiento de los instrumentos y candidatos preliminares a RNF, pero sus datos se mantienen separados y se excluyen del análisis confirmatorio. \\
 \end{longtable}
 
 \addcontentsline{toc}{section}{Referencias}
@@ -535,18 +515,5 @@ C. Wohlin, P. Runeson, M. Höst, M. C. Ohlsson, B. Regnell, and A. Wesslén, \te
 Universidad Técnica Estatal de Quevedo, ``Guía y rúbrica de evaluación - Proyecto Fin de Curso, Entrega 4 (2B/Defensa Final): Manuscrito para revista JCR,'' Ingeniería de Requerimientos ISR-401, 2026.
 
 \end{thebibliography}
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{ANTES DE PRESIONAR ``REGISTER'' EN OSF\\
-}Verifique que el equipo acepta este cambio de enfoque, que la nueva ronda empírica todavía no ha comenzado y que se ha decidido cómo se actualizará el ERS/SRS para resolver la contradicción actual con la exclusión de IA. Una vez registrado, el protocolo debe conservarse sin reescribir retroactivamente sus decisiones.\strut
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
 
 \end{document}
