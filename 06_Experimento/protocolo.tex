@@ -77,7 +77,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\footnotesize Entrega 4 (2B) - v1.2}
+\fancyhead[R]{\footnotesize Entrega 4 (2B) - v1.3}
 \fancyfoot[R]{\footnotesize\bfseries \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -104,8 +104,8 @@
 Proyecto: & FabroGym - Sistema de gestión administrativa y operativa para un gimnasio \\ \hline
 Entrega: & Entrega 4 (2B/Defensa Final) - componente empírico \\ \hline
 Enfoque seleccionado: & Enfoque 3 - Explicabilidad como Requisito No Funcional \\ \hline
-Versión: & 1.2 - ajuste del estado real del estudio previo al registro OSF \\ \hline
-Fecha: & 27 de agosto de 2026 \\ \hline
+Versión: & 1.3 - corrección de la secuencia temporal previa y posterior al registro OSF \\ \hline
+Fecha: & 28 de agosto de 2026 \\ \hline
 Repositorio: & \url{https://github.com/amorad35/FabroGym_ISR401} \\ \hline
 Estado: & Preparado para registro OSF; seis walkthroughs realizados previamente como evidencia formativa \\ \hline
 \end{tabular}
@@ -152,8 +152,8 @@ Quevedo, Ecuador - 2026
 Proyecto & FabroGym - Sistema de gestión de gimnasio \\
 Tipo de estudio & Estudio de caso único con análisis cualitativo y descriptivo de validación de requisitos \\
 Enfoque de la rúbrica 2B & Enfoque 3 - Explicabilidad como RNF \\
-Versión del protocolo & 1.2 \\
-Fecha de actualización & 27 de agosto de 2026 \\
+Versión del protocolo & 1.3 \\
+Fecha de actualización & 28 de agosto de 2026 \\
 Repositorio & github.com/amorad35/FabroGym\_ISR401 \\
 Registro previsto & Open Science Framework (OSF) - registro posterior a seis walkthroughs formativos y previo a las actividades analíticas y de validación aún pendientes \\
 \end{longtable}
@@ -165,7 +165,7 @@ El propósito de este protocolo es documentar y congelar en OSF las decisiones m
 
 Antes del registro OSF ya se realizaron seis sesiones walkthrough: tres con participantes de perfil técnico y tres con participantes de perfil no técnico. Estas sesiones constituyen evidencia empírica previa o formativa y se utilizarán de manera transparente para elicitar, identificar y refinar necesidades y candidatos a RNF de explicabilidad. No se presentarán como datos confirmatorios preregistrados ni se afirmará que ocurrieron después del sello temporal de OSF.
 
-El registro OSF se utilizará para dejar fijadas las decisiones de análisis y las actividades que todavía se encuentren pendientes, entre ellas la sistematización final de la evidencia, la validación de los candidatos a RNF y, si aún no se ha ejecutado, una sesión de member checking con participantes previos del estudio.
+El registro OSF se utilizará para dejar fijadas las decisiones de análisis y las actividades que todavía se encuentren pendientes. Después del registro se realizará la codificación y el análisis sistemático de la evidencia disponible, se formularán o ajustarán los candidatos a RNF con trazabilidad a su origen y, si aún no se ha ejecutado, se realizará una sesión de member checking con participantes previos del estudio.
 
 El estudio no presupone que el componente de inteligencia artificial o aprendizaje automático ya esté implementado. Su objeto es determinar qué explicaciones deberían exigirse como RNF verificables y cómo son percibidas por perfiles técnicos y no técnicos antes de consolidar el alcance terminal del ERS/SRS y del MVP.
 
@@ -271,17 +271,17 @@ La secuencia metodológica correspondiente al estado real del estudio es la sigu
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Conservar y organizar la evidencia de los seis walkthroughs ya realizados, manteniendo la distinción entre tres participantes técnicos y tres no técnicos.
+  Conservar la evidencia de los seis walkthroughs ya realizados, manteniendo la distinción entre tres participantes técnicos y tres no técnicos y preservando su condición de evidencia previa o formativa.
 \item
-  Sistematizar las observaciones disponibles para identificar necesidades de explicabilidad y formular o refinar candidatos a RNF verificables con trazabilidad a su evidencia de origen.
+  Registrar en OSF el protocolo actualizado, declarando expresamente que los seis walkthroughs preceden al sello temporal del registro y que no constituyen datos confirmatorios preregistrados.
 \item
-  Registrar en OSF el protocolo actualizado, declarando expresamente que los walkthroughs preceden al sello temporal del registro.
+  Después del registro OSF, sistematizar y codificar de manera reproducible la evidencia realmente disponible para identificar necesidades de explicabilidad y contrastar descriptivamente los perfiles técnico y no técnico.
 \item
-  Ejecutar únicamente las actividades que todavía estén pendientes y que hayan quedado definidas en este protocolo, sin declarar nuevas rondas de walkthrough inexistentes.
+  Formular, refinar o ajustar candidatos a RNF de explicabilidad únicamente a partir de evidencia verificable, manteniendo trazabilidad con las observaciones que sustenten cada enunciado.
 \item
-  Realizar, si todavía no se ha ejecutado, una sesión final de member checking con al menos tres participantes previos del estudio para contrastar la interpretación de los hallazgos y candidatos a RNF.
+  Realizar, si todavía no se ha ejecutado, una sesión final de member checking con al menos tres participantes previos del estudio para confirmar, ajustar o no confirmar las interpretaciones y candidatos a RNF.
 \item
-  Analizar de manera reproducible la evidencia realmente disponible y reportar como no aplicable o no calculable cualquier análisis que requiera datos inexistentes.
+  Actualizar el ERS/SRS con los RNF que queden sustentados tras el análisis y la validación, documentando como no aplicable, no calculable o no verificable cualquier elemento que requiera datos inexistentes.
 \end{enumerate}
 
 El diseño no incorpora rondas adicionales de walkthrough posteriores al OSF ni divide las seis sesiones existentes en rondas artificiales.
@@ -335,15 +335,17 @@ La estructura de los instrumentos refleja la secuencia real del estudio y no emp
 \section*{8. Procedimiento de recolección y actividades pendientes}\label{procedimiento-de-recolecciuxf3n}
 \addcontentsline{toc}{section}{8. Procedimiento de recolección y actividades pendientes}
 
-\textbf{Actividades realizadas.} Se ejecutaron seis sesiones walkthrough antes del registro OSF: tres con participantes técnicos y tres con participantes no técnicos. Durante la sistematización se conservará la fecha real de ejecución que conste en cada evidencia y no se modificará su clasificación temporal por la fecha de carga a GitHub u OSF.
+\textbf{Actividades realizadas.} Se ejecutaron seis sesiones walkthrough antes del registro OSF: tres con participantes técnicos y tres con participantes no técnicos. Estas sesiones constituyen evidencia empírica previa o formativa y no se presentan como datos confirmatorios preregistrados. La fecha real de ejecución que conste en cada evidencia se conservará y no se modificará por la fecha de carga a GitHub u OSF.
 
-\textbf{Tratamiento posterior al walkthrough.} La evidencia disponible se anonimizará o seudonimizará según corresponda y se codificará para identificar necesidades de explicabilidad y candidatos a RNF. Cada candidato deberá mantener trazabilidad con la observación o evidencia que lo sustenta.
+\textbf{Registro OSF.} El protocolo actualizado se registrará después de los seis walkthroughs y antes de la codificación y el análisis sistemático previstos en este protocolo. El registro documentará de forma explícita esta secuencia y congelará las decisiones analíticas y actividades pendientes, sin atribuir al prerregistro actividades ya ejecutadas.
 
-\textbf{Registro OSF.} El protocolo actualizado se registrará después de los seis walkthroughs. El registro documentará de forma explícita este hecho y congelará las decisiones analíticas y actividades pendientes, sin presentar las sesiones anteriores como preregistradas.
+\textbf{Codificación y análisis sistemático posteriores al registro.} La evidencia disponible se anonimizará o seudonimizará según corresponda y se codificará de manera reproducible para identificar necesidades de explicabilidad y contrastar descriptivamente los perfiles técnico y no técnico. Cualquier dato que no pueda verificarse se registrará como no verificable.
+
+\textbf{Candidatos a RNF.} A partir de la evidencia codificada se formularán, refinarán o ajustarán candidatos a RNF de explicabilidad. Cada candidato deberá mantener trazabilidad con la observación o evidencia que lo sustenta y no se incorporarán resultados, puntuaciones ni inferencias sin respaldo verificable.
 
 \textbf{Member checking.} Si esta actividad aún no se ha ejecutado, se realizará una sesión final con al menos tres participantes previos del estudio. La sesión se utilizará para confirmar, ajustar o no confirmar las interpretaciones y candidatos a RNF derivados de la evidencia.
 
-\textbf{Cierre y análisis.} Después de completar las actividades pendientes se ejecutará el análisis sobre la evidencia real disponible. Cualquier análisis para el cual no existan datos suficientes se declarará como no aplicable o no calculable.
+\textbf{Actualización del ERS/SRS y cierre.} Después del análisis y, si corresponde, del member checking, se actualizará el ERS/SRS con los RNF sustentados. Cualquier análisis o conclusión para el cual no existan datos suficientes se declarará como no aplicable, no calculable o no verificable.
 
 \section*{9. Plan de análisis preregistrado}\label{plan-de-anuxe1lisis-preregistrado}
 \addcontentsline{toc}{section}{9. Plan de análisis preregistrado}
@@ -389,7 +391,7 @@ El análisis se limitará a la evidencia realmente disponible y se ejecutará me
 
 Antes del registro OSF se realizaron seis walkthroughs reales: tres con participantes técnicos y tres con participantes no técnicos. Estas seis sesiones constituyen evidencia empírica previa o formativa del estudio y satisfacen el mínimo de sesiones de walkthrough requerido por la rúbrica terminal 2B para este componente de validación.
 
-Debido a que las sesiones preceden al sello temporal del OSF, no se describirán como datos confirmatorios preregistrados. El registro OSF no altera su fecha ni su naturaleza metodológica. Su utilización se limita a la elicitación, identificación y refinamiento de necesidades y candidatos a RNF de explicabilidad, así como al contraste descriptivo entre perfiles.
+Debido a que las sesiones preceden al sello temporal del OSF, no se describirán como datos confirmatorios preregistrados. El registro OSF no altera su fecha ni su naturaleza metodológica. Después del registro, estas sesiones podrán utilizarse como evidencia previa o formativa para la codificación y el análisis sistemático, la identificación y el refinamiento de necesidades y candidatos a RNF de explicabilidad, así como para el contraste descriptivo entre perfiles.
 
 La fecha de incorporación de archivos a GitHub u OSF no modifica la fecha real de ejecución de las sesiones. La trazabilidad deberá conservar la secuencia temporal efectiva del estudio.
 
@@ -457,7 +459,7 @@ Cualquier cambio posterior al registro se documentará con: (a) descripción del
 \bottomrule\noalign{}
 \endlastfoot
 Título & FabroGym: registration of an explainability requirements analysis for a fitness routine recommendation component \\
-Descripción & Estudio de caso sobre requisitos no funcionales de explicabilidad en un componente propuesto de recomendación de rutinas. Antes del registro OSF se realizaron seis walkthroughs: tres con participantes técnicos y tres con participantes no técnicos. Estas sesiones se tratan como evidencia empírica previa/formativa para elicitar y refinar necesidades y candidatos a RNF. El registro congela las decisiones de análisis y las actividades de validación todavía pendientes. \\
+Descripción & Estudio de caso sobre requisitos no funcionales de explicabilidad en un componente propuesto de recomendación de rutinas. Antes del registro OSF se realizaron seis walkthroughs: tres con participantes técnicos y tres con participantes no técnicos. Estas sesiones constituyen evidencia empírica previa/formativa y no datos confirmatorios preregistrados. Después del registro se realizarán la codificación y el análisis sistemático, la formulación o ajuste trazable de candidatos a RNF y, si aún está pendiente, el member checking final. \\
 Pregunta principal & ¿Qué requisitos de explicabilidad emergen para los perfiles técnicos y no técnicos de FabroGym y qué diferencias descriptivas se observan entre ambos perfiles? \\
 Diseño & Estudio de caso único basado en seis walkthroughs previos al OSF, con análisis cualitativo y descriptivo de la evidencia y member checking final si aún se encuentra pendiente. \\
 Análisis principal & Codificación cualitativa de necesidades de explicabilidad; formulación y trazabilidad de candidatos a RNF; contraste descriptivo entre perfiles; cobertura de dimensiones cuando sea calculable; y síntesis del member checking si se ejecuta. \\
