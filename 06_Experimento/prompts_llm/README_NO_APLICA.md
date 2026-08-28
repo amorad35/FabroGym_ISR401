@@ -1,18 +1,7 @@
-# Registro de prompts LLM - no aplicable al diseño base
+# Prompts LLM - no aplicable
 
-El Enfoque 2 seleccionado utiliza un detector determinista en Python con expresiones regulares. No se utiliza un LLM para clasificar los requisitos; por ello no existen prompt, temperatura, top-p, top-k ni semilla de generación que registrar.
+El diseño empírico vigente de **FabroGym - Enfoque 3: Explicabilidad como Requisito No Funcional** no utiliza un modelo de lenguaje grande (LLM) como instrumento de recolección, clasificación automática de respuestas o análisis estadístico.
 
-La carpeta se conserva para respetar el árbol obligatorio y dejar documentada la no aplicabilidad.
+Por esta razón, el componente empírico activo no requiere parámetros de generación como prompt, temperatura, top-p, top-k o semilla.
 
-Si antes del prerregistro el equipo decide incorporar un LLM, debe actualizar el protocolo, la adenda ética y el registro OSF. Cada ejecución deberá documentarse en un archivo Markdown con:
-
-- prompt exacto;
-- modelo y versión;
-- temperatura, top-p y top-k;
-- semilla, cuando la plataforma la permita;
-- fecha y hora;
-- material de entrada anonimizado;
-- respuesta completa;
-- responsable de la ejecución.
-
-Después de observar resultados no se puede cambiar el método sin declarar una desviación del prerregistro.
+La carpeta se conserva únicamente para documentar la no aplicabilidad de este tipo de artefacto dentro del diseño vigente.
