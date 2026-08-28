@@ -77,7 +77,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\footnotesize Entrega 4 (2B) - v1.1}
+\fancyhead[R]{\footnotesize Entrega 4 (2B) - v1.2}
 \fancyfoot[R]{\footnotesize\bfseries \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -104,10 +104,10 @@
 Proyecto: & FabroGym - Sistema de gestión administrativa y operativa para un gimnasio \\ \hline
 Entrega: & Entrega 4 (2B/Defensa Final) - componente empírico \\ \hline
 Enfoque seleccionado: & Enfoque 3 - Explicabilidad como Requisito No Funcional \\ \hline
-Versión: & 1.1 - ajuste metodológico previo al prerregistro \\ \hline
-Fecha: & 26 de agosto de 2026 \\ \hline
+Versión: & 1.2 - ajuste del estado real del estudio previo al registro OSF \\ \hline
+Fecha: & 27 de agosto de 2026 \\ \hline
 Repositorio: & \url{https://github.com/amorad35/FabroGym_ISR401} \\ \hline
-Estado: & Borrador preparado para prerregistro; sin resultados confirmatorios de la ronda preregistrada \\ \hline
+Estado: & Preparado para registro OSF; seis walkthroughs realizados previamente como evidencia formativa \\ \hline
 \end{tabular}
 \end{center}
 
@@ -152,16 +152,20 @@ Quevedo, Ecuador - 2026
 Proyecto & FabroGym - Sistema de gestión de gimnasio \\
 Tipo de estudio & Estudio de caso único con componente mixto de validación de requisitos \\
 Enfoque de la rúbrica 2B & Enfoque 3 - Explicabilidad como RNF \\
-Versión del protocolo & 1.1 \\
-Fecha de actualización & 26 de agosto de 2026 \\
+Versión del protocolo & 1.2 \\
+Fecha de actualización & 27 de agosto de 2026 \\
 Repositorio & github.com/amorad35/FabroGym\_ISR401 \\
-Registro previsto & Open Science Framework (OSF) - preregistro antes de la nueva ronda empírica \\
+Registro previsto & Open Science Framework (OSF) - registro posterior a seis walkthroughs formativos y previo a las actividades analíticas y de validación aún pendientes \\
 \end{longtable}
 
 \section*{1. Propósito y relación con la Entrega 4 (2B)}\label{propuxf3sito-y-relaciuxf3n-con-la-entrega-4-2b}
 \addcontentsline{toc}{section}{1. Propósito y relación con la Entrega 4 (2B)}
 
-El propósito de este protocolo es preregistrar, antes de la nueva recolección confirmatoria de datos, el diseño empírico mediante el cual el equipo FabroGym identificará y validará requisitos de explicabilidad para un componente propuesto de recomendación de rutinas. El protocolo se alinea con la adaptación temática de la rúbrica de la Entrega 4 (2B), que asigna a FabroGym el Enfoque 3 (explicabilidad) \cite{uteq2026}.
+El propósito de este protocolo es documentar y congelar en OSF las decisiones metodológicas y analíticas correspondientes al Enfoque 3 de FabroGym: Explicabilidad como Requisito No Funcional (RNF). El protocolo se alinea con la adaptación temática de la rúbrica de la Entrega 4 (2B), que asigna a FabroGym el Enfoque 3 (explicabilidad) \cite{uteq2026}.
+
+Antes del registro OSF ya se realizaron seis sesiones walkthrough: tres con participantes de perfil técnico y tres con participantes de perfil no técnico. Estas sesiones constituyen evidencia empírica previa o formativa y se utilizarán de manera transparente para elicitar, identificar y refinar necesidades y candidatos a RNF de explicabilidad. No se presentarán como datos confirmatorios preregistrados ni se afirmará que ocurrieron después del sello temporal de OSF.
+
+El registro OSF se utilizará para dejar fijadas las decisiones de análisis y las actividades que todavía se encuentren pendientes, entre ellas la sistematización final de la evidencia, la validación de los candidatos a RNF y, si aún no se ha ejecutado, una sesión de member checking con participantes previos del estudio.
 
 El estudio no presupone que el componente de inteligencia artificial o aprendizaje automático ya esté implementado. Su objeto es determinar qué explicaciones deberían exigirse como RNF verificables y cómo son percibidas por perfiles técnicos y no técnicos antes de consolidar el alcance terminal del ERS/SRS y del MVP.
 
@@ -200,31 +204,26 @@ RQ2 & ¿Existen diferencias en la percepción de la explicabilidad entre usuario
 \endlastfoot
 P - Población & Personas vinculadas al dominio FabroGym: perfiles técnicos de software/IR y perfiles no técnicos del gimnasio o usuarios del servicio, reclutados con consentimiento informado. \\
 I - Intervención & Exposición a escenarios y prototipos/mockups que muestran una recomendación de rutina junto con una explicación estructurada de por qué fue sugerida. \\
-C - Comparación & Percepción del perfil técnico frente al perfil no técnico; además, comparación entre rondas de validación cuando corresponda. \\
-O - Resultados & RNF de explicabilidad derivados; cobertura del marco de explicabilidad; puntuaciones Likert por dimensión; acuerdo de validación; diferencias entre perfiles. \\
+C - Comparación & Contraste descriptivo y cualitativo entre las necesidades de explicabilidad identificadas en participantes técnicos y no técnicos. \\
+O - Resultados & Necesidades y candidatos a RNF de explicabilidad derivados de los walkthroughs; cobertura de dimensiones cuando pueda determinarse con la evidencia disponible; diferencias descriptivas entre perfiles; y resultado del member checking si se ejecuta. \\
 C - Contexto & FabroGym, sistema de gestión de gimnasio local en Ecuador, con componente propuesto de recomendación de rutinas. \\
 \end{longtable}
 
-\section*{3. Hipótesis y proposiciones preregistradas}\label{hipuxf3tesis-y-proposiciones-preregistradas}
-\addcontentsline{toc}{section}{3. Hipótesis y proposiciones preregistradas}
+\section*{3. Proposiciones de análisis}\label{proposiciones-de-analisis}
+\addcontentsline{toc}{section}{3. Proposiciones de análisis}
 
-Para RQ1, de carácter principalmente exploratorio y de ingeniería de requisitos, se utilizarán proposiciones de estudio de caso:
+Para RQ1 y RQ2 se utilizarán proposiciones de estudio de caso, coherentes con la naturaleza cualitativa y descriptiva de las seis sesiones walkthrough disponibles:
 
 \begin{itemize}
 \item
-  P1: Los perfiles técnicos y no técnicos no necesariamente priorizan las mismas necesidades de explicación; se espera que el proceso de validación produzca RNF diferenciados o matizados por perfil.
+  P1: Los perfiles técnicos y no técnicos pueden priorizar necesidades distintas de explicación; estas diferencias se examinarán mediante contraste descriptivo y cualitativo de la evidencia disponible.
 \item
   P2: Una explicación útil para FabroGym deberá traducirse en requisitos verificables, no solo en preferencias subjetivas de interfaz.
+\item
+  P3: Los candidatos a RNF derivados de los walkthroughs deberán conservar trazabilidad con la evidencia que sustenta su formulación y podrán ser confirmados, ajustados o descartados durante el member checking.
 \end{itemize}
 
-Para RQ2, de carácter comparativo, se preregistran las siguientes hipótesis estadísticas no direccionales:
-
-\begin{itemize}
-\item
-  H0: La distribución de las puntuaciones de percepción de explicabilidad es equivalente entre participantes técnicos y no técnicos para cada dimensión evaluada.
-\item
-  H1: Al menos una dimensión presenta una diferencia de distribución entre participantes técnicos y no técnicos.
-\end{itemize}
+No se preregistran hipótesis inferenciales para los seis walkthroughs existentes, debido a que la evidencia disponible corresponde a tres participantes técnicos y tres no técnicos y no se han declarado respuestas Likert adicionales como parte de esta base empírica.
 
 \section*{4. Constructos, variables y operacionalización}\label{constructos-variables-y-operacionalizaciuxf3n}
 \addcontentsline{toc}{section}{4. Constructos, variables y operacionalización}
@@ -237,7 +236,7 @@ Para RQ2, de carácter comparativo, se preregistran las siguientes hipótesis es
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Variable}
+\textbf{Variable / constructo}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Rol}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -245,50 +244,47 @@ Para RQ2, de carácter comparativo, se preregistran las siguientes hipótesis es
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Fuente}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Escala}
+\textbf{Escala / tratamiento}
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Perfil de usuario & Independiente & Técnico / no técnico & Ficha de caracterización & Nominal \\
-Percepción de explicabilidad & Dependiente & Puntuación por dimensión & Cuestionario Likert & Ordinal \\
-Cobertura de explicabilidad & Dependiente & Proporción de dimensiones con $\geq$1 RNF verificable & Matriz RNF-dimensión & Proporción \\
-Acuerdo de validación & Dependiente & Consistencia entre evaluadores/rondas & Matriz de decisiones & Kappa de Fleiss cuando proceda \\
-Escenario presentado & Control & Mismos escenarios y orden base & Guion de sesión & Controlado \\
-Prototipo/explicación & Control & Misma versión por ronda & Versión etiquetada & Controlado \\
+Perfil de participante & Comparación & Técnico / no técnico, conforme a la caracterización documentada de cada sesión & Ficha o evidencia de caracterización disponible & Nominal \\
+Necesidad de explicabilidad & Analítica & Unidad temática expresada por el participante sobre qué debe explicar el sistema, por qué y con qué nivel de detalle & Registro o transcripción del walkthrough & Categórica / cualitativa \\
+Candidato a RNF & Resultado de ingeniería & Enunciado verificable derivado de una o más necesidades de explicabilidad con trazabilidad a su fuente & Matriz de candidatos a RNF & Cualitativa / verificable \\
+Cobertura de explicabilidad & Descriptiva & Dimensiones de explicabilidad representadas por al menos un candidato a RNF cuando la codificación disponible permita establecerlo & Matriz RNF-dimensión & Conteo y proporción descriptiva \\
+Decisión de member checking & Validación & Confirmado, ajustado o no confirmado para cada interpretación o candidato revisado, si se ejecuta la sesión pendiente & Acta de member checking & Nominal descriptiva \\
 \end{longtable}
 
-Las dimensiones concretas del instrumento se fijarán antes de abrir la recolección y se documentarán en la matriz de operacionalización, tomando como base la literatura de explicabilidad citada por la rúbrica \cite{chazette2020,chazette2021,chazette2022}. Para evitar flexibilidad analítica posterior, cada ítem quedará vinculado a una única dimensión primaria y a un RNF o candidato a RNF.
+Las dimensiones empleadas para organizar la evidencia deberán derivarse de la literatura de explicabilidad citada por la rúbrica y de la codificación trazable de los walkthroughs \cite{chazette2020,chazette2021,chazette2022}. No se incorporarán puntuaciones Likert, coeficientes de acuerdo ni variables cuantitativas que no correspondan a datos realmente disponibles.
 
 \section*{5. Diseño del estudio}\label{diseuxf1o-del-estudio}
 \addcontentsline{toc}{section}{5. Diseño del estudio}
 
-Se empleará un estudio de caso único con unidades de análisis embebidas por perfil de participante, siguiendo lineamientos metodológicos de estudios de caso y experimentación en ingeniería de software \cite{runeson2009,wohlin2012}. El componente cualitativo se utilizará para elicitar y refinar candidatos a RNF de explicabilidad; el componente cuantitativo permitirá comparar la percepción de los perfiles mediante escalas Likert y pruebas no paramétricas.
+Se emplea un estudio de caso único con unidades de análisis embebidas por perfil de participante, siguiendo lineamientos metodológicos de estudios de caso en ingeniería de software \cite{runeson2009,wohlin2012}. La evidencia empírica disponible está constituida por seis walkthroughs reales: tres realizados con participantes técnicos y tres con participantes no técnicos.
 
-El diseño distingue explícitamente dos etapas temporales. La primera corresponde a evidencia exploratoria/formativa obtenida antes del sello temporal de OSF, si la hubiera. Sus hallazgos podrán orientar la identificación preliminar de necesidades de explicabilidad, dimensiones, escenarios, candidatos a RNF y mejoras de los instrumentos, pero sus respuestas individuales, puntuaciones y decisiones no formarán parte de la base confirmatoria. La segunda etapa corresponde a la nueva ronda confirmatoria, que comenzará únicamente después de congelar los instrumentos y completar el prerregistro en OSF.
+Los seis walkthroughs fueron ejecutados antes del sello temporal de OSF. Por tanto, se consideran evidencia empírica previa o formativa y no datos confirmatorios preregistrados. El registro OSF no se utilizará para retrodatarlos, sino para documentar su existencia y congelar las decisiones de análisis y validación que aún estén pendientes.
+
+La secuencia metodológica correspondiente al estado real del estudio es la siguiente:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Sistematizar, cuando exista, la evidencia formativa previa exclusivamente como insumo exploratorio para identificar necesidades de explicabilidad, refinar escenarios y formular candidatos preliminares a RNF.
+  Conservar y organizar la evidencia de los seis walkthroughs ya realizados, manteniendo la distinción entre tres participantes técnicos y tres no técnicos.
 \item
-  Refinar y congelar la versión definitiva del prototipo/mockup de recomendación, el guion de walkthrough, el cuestionario Likert y las matrices de operacionalización y candidatos a RNF.
+  Sistematizar las observaciones disponibles para identificar necesidades de explicabilidad y formular o refinar candidatos a RNF verificables con trazabilidad a su evidencia de origen.
 \item
-  Registrar este protocolo en OSF y conservar la URL persistente y el sello temporal.
+  Registrar en OSF el protocolo actualizado, declarando expresamente que los walkthroughs preceden al sello temporal del registro.
 \item
-  Ejecutar la nueva ronda confirmatoria de walkthroughs: mínimo 3 sesiones con usuarios técnicos y 3 con usuarios no técnicos, según el mínimo terminal de la rúbrica.
+  Ejecutar únicamente las actividades que todavía estén pendientes y que hayan quedado definidas en este protocolo, sin declarar nuevas rondas de walkthrough inexistentes.
 \item
-  Aplicar el cuestionario Likert asociado a las dimensiones de explicabilidad dentro de la ronda confirmatoria.
+  Realizar, si todavía no se ha ejecutado, una sesión final de member checking con al menos tres participantes previos del estudio para contrastar la interpretación de los hallazgos y candidatos a RNF.
 \item
-  Codificar las observaciones confirmatorias y derivar o refinar candidatos a RNF verificables con identificadores únicos, manteniendo trazabilidad respecto de los insumos formativos cuando corresponda.
-\item
-  Realizar una segunda ronda de validación o revisión de los RNF refinados, cuando el diseño de campo lo permita, para estimar acuerdo.
-\item
-  Ejecutar member checking con al menos 3 participantes previos para confirmar la interpretación de los hallazgos.
-\item
-  Procesar para el análisis confirmatorio únicamente datos anonimizados obtenidos después del sello temporal de OSF, mediante scripts versionados en Python o R.
+  Analizar de manera reproducible la evidencia realmente disponible y reportar como no aplicable o no calculable cualquier análisis que requiera datos inexistentes.
 \end{enumerate}
+
+El diseño no incorpora rondas adicionales de walkthrough posteriores al OSF ni divide las seis sesiones existentes en rondas artificiales.
 
 \section*{6. Participantes, muestreo y criterios}\label{participantes-muestreo-y-criterios}
 \addcontentsline{toc}{section}{6. Participantes, muestreo y criterios}
@@ -300,85 +296,75 @@ El diseño distingue explícitamente dos etapas temporales. La primera correspon
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Aspecto}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Plan preregistrado}
+\textbf{Situación documentada / tratamiento}
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Perfiles & Técnico: experiencia en software, IR, QA, desarrollo o docencia técnica. No técnico: propietario, personal operativo, instructor o usuario del dominio fitness sin rol profesional de software en el estudio. \\
-Walkthroughs & Mínimo 6 sesiones cerradas: 3 técnicas + 3 no técnicas. \\
-Cuestionario & Meta de referencia de la rúbrica: n $\geq$ 60 respuestas por perfil dominante; si el reclutamiento real difiere, se realizará y reportará cálculo de potencia a priori/post hoc conforme al criterio metodológico acordado y se documentará como desviación OSF. \\
-Member checking & 1 sesión con al menos 3 participantes previos. \\
-Muestreo & Intencional por criterios para walkthroughs; convocatoria ampliada para cuestionario. \\
-Unidad de análisis & Respuesta individual del participante por dimensión y decisión de aceptación/rechazo/modificación de cada RNF. \\
+Perfiles & Técnico: experiencia vinculada a software, ingeniería de requisitos, QA, desarrollo o docencia técnica. No técnico: participante del dominio del gimnasio sin rol profesional de software en el estudio. \\
+Walkthroughs realizados & 6 sesiones: 3 con participantes técnicos y 3 con participantes no técnicos. Estas sesiones fueron ejecutadas antes del registro OSF. \\
+Member checking & Actividad final prevista por la rúbrica con al menos 3 participantes previos del estudio, únicamente si todavía no ha sido ejecutada. No requiere reclutar necesariamente participantes nuevos. \\
+Unidad de análisis & Observación, comentario o decisión atribuible a un participante durante el walkthrough y su relación trazable con una necesidad o candidato a RNF de explicabilidad. \\
 \end{longtable}
 
-Criterios de inclusión: persona mayor de edad; pertenecer claramente a uno de los perfiles definidos; aceptar el consentimiento informado; completar la sesión o el cuestionario; no haber participado en el diseño del instrumento que se le aplica. Criterios de exclusión: respuestas incompletas en más del 20 \% de los ítems; duplicados verificables; retiro del consentimiento; o imposibilidad de clasificar el perfil sin ambigüedad.
+La elegibilidad de cada sesión para el análisis se verificará con la evidencia documental disponible. No se asumirá ni declarará consentimiento, caracterización, fecha u otro dato que no pueda verificarse. Cuando algún elemento requerido no pueda comprobarse, se registrará como no verificable y se informará de forma transparente en el análisis.
 
 \section*{7. Instrumentos y materiales}\label{instrumentos-y-materiales}
 \addcontentsline{toc}{section}{7. Instrumentos y materiales}
 
 \begin{itemize}
 \item
-  Guion de walkthrough de explicabilidad, con escenarios homogéneos para todos los participantes.
+  Guion o guía de walkthrough disponible para documentar el procedimiento y las observaciones de explicabilidad; su correspondencia con cada sesión se verificará con la evidencia existente.
 \item
-  Prototipo o mockup versionado del componente de recomendación de rutinas y de su explicación.
+  Prototipo o mockup del componente de recomendación de rutinas presentado durante las sesiones, identificado con la versión que pueda verificarse en la evidencia disponible.
 \item
-  Matriz de candidatos a RNF de explicabilidad: ID, enunciado, fuente, perfil, dimensión, criterio de aceptación, decisión de validación y observaciones.
+  Evidencia disponible de los seis walkthroughs realizados, incluidas notas, registros o transcripciones anonimizadas cuando existan.
 \item
-  Cuestionario Likert por dimensión, con escala fijada antes de la recolección y anclajes semánticos explícitos.
+  Matriz de candidatos a RNF de explicabilidad: ID, enunciado, fuente, perfil, dimensión, criterio de aceptación y observaciones, completada únicamente con información trazable a la evidencia disponible.
 \item
-  Ficha de caracterización mínima para clasificar el perfil sin recopilar datos innecesarios.
+  Ficha de caracterización del participante, cuando exista o pueda reconstruirse legítimamente a partir de información ya documentada sin incorporar identificadores innecesarios.
 \item
-  Acta de member checking.
+  Acta de member checking para la actividad final, si esta aún se encuentra pendiente.
 \item
-  Scripts de importación, limpieza, análisis descriptivo e inferencial en 06\_Experimento/scripts\_analisis/.
+  Scripts de importación, validación y análisis reproducible ajustados a la estructura real de los datos disponibles.
 \end{itemize}
 
-Los walkthroughs exploratorios o formativos realizados antes del prerregistro podrán informar el contenido y la redacción de estos instrumentos, incluyendo la selección de escenarios, dimensiones de explicabilidad y candidatos preliminares a RNF. Esta utilización deberá quedar documentada como antecedente metodológico. Las versiones definitivas de los instrumentos que se emplearán en la ronda confirmatoria se cerrarán, versionarán y congelarán antes del registro OSF; los datos formativos previos permanecerán separados y no se fusionarán con la base confirmatoria.
+La estructura de los instrumentos refleja la secuencia real del estudio y no emplea campos de ronda. Los instrumentos no contendrán resultados, puntuaciones o decisiones que no hayan sido obtenidos empíricamente.
 
-\section*{8. Procedimiento de recolección}\label{procedimiento-de-recolecciuxf3n}
-\addcontentsline{toc}{section}{8. Procedimiento de recolección}
+\section*{8. Procedimiento de recolección y actividades pendientes}\label{procedimiento-de-recolecciuxf3n}
+\addcontentsline{toc}{section}{8. Procedimiento de recolección y actividades pendientes}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Confirmar aprobación ética y consentimiento aplicable antes de cada participación.
-\item
-  Asignar un código seudónimo al participante y almacenar los originales identificables solo en la zona restringida cifrada.
-\item
-  Presentar el mismo contexto y los mismos escenarios de recomendación.
-\item
-  Solicitar que el participante explique qué entiende de la recomendación, qué información le falta y qué debería mostrar el sistema para permitir una decisión informada.
-\item
-  Registrar aceptación, rechazo o modificación de cada candidato a RNF y aplicar el cuestionario Likert.
-\item
-  Anonimizar la evidencia pública; separar audio, video, firmas y cédulas en el contenedor restringido.
-\item
-  Cerrar la codificación y ejecutar member checking antes del análisis final.
-\end{enumerate}
+\textbf{Actividades realizadas.} Se ejecutaron seis sesiones walkthrough antes del registro OSF: tres con participantes técnicos y tres con participantes no técnicos. Durante la sistematización se conservará la fecha real de ejecución que conste en cada evidencia y no se modificará su clasificación temporal por la fecha de carga a GitHub u OSF.
 
-\section*{9. Plan de análisis estadístico preregistrado}\label{plan-de-anuxe1lisis-estaduxedstico-preregistrado}
-\addcontentsline{toc}{section}{9. Plan de análisis estadístico preregistrado}
+\textbf{Tratamiento posterior al walkthrough.} La evidencia disponible se anonimizará o seudonimizará según corresponda y se codificará para identificar necesidades de explicabilidad y candidatos a RNF. Cada candidato deberá mantener trazabilidad con la observación o evidencia que lo sustenta.
 
-El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán pruebas en función de qué opción produzca significación estadística. Las decisiones siguientes quedan preregistradas:
+\textbf{Registro OSF.} El protocolo actualizado se registrará después de los seis walkthroughs. El registro documentará de forma explícita este hecho y congelará las decisiones analíticas y actividades pendientes, sin presentar las sesiones anteriores como preregistradas.
+
+\textbf{Member checking.} Si esta actividad aún no se ha ejecutado, se realizará una sesión final con al menos tres participantes previos del estudio. La sesión se utilizará para confirmar, ajustar o no confirmar las interpretaciones y candidatos a RNF derivados de la evidencia.
+
+\textbf{Cierre y análisis.} Después de completar las actividades pendientes se ejecutará el análisis sobre la evidencia real disponible. Cualquier análisis para el cual no existan datos suficientes se declarará como no aplicable o no calculable.
+
+\section*{9. Plan de análisis preregistrado}\label{plan-de-anuxe1lisis-preregistrado}
+\addcontentsline{toc}{section}{9. Plan de análisis preregistrado}
+
+El análisis se limitará a la evidencia realmente disponible y se ejecutará mediante procedimientos reproducibles. No se incorporarán métricas inferenciales, respuestas Likert, intervalos de confianza ni coeficientes de acuerdo si los datos necesarios no existen o no pueden verificarse.
 
 \begin{itemize}
 \item
-  Descriptivos por grupo y dimensión: n, media, mediana, desviación estándar, mínimo, máximo e intervalo intercuartílico.
+  RQ1: codificación y síntesis cualitativa de las necesidades de explicabilidad expresadas en los seis walkthroughs; formulación y refinamiento de candidatos a RNF con trazabilidad a la evidencia de origen.
 \item
-  Pruebas de supuestos: Shapiro-Wilk para normalidad y Levene para homogeneidad cuando sean pertinentes al estadístico considerado.
+  RQ2: contraste descriptivo y cualitativo entre los patrones identificados en los tres participantes técnicos y los tres no técnicos. Se podrán reportar conteos de categorías o dimensiones únicamente cuando deriven de una codificación reproducible de la evidencia.
 \item
-  RQ1: síntesis cualitativa de candidatos a RNF; número y proporción de dimensiones cubiertas por al menos un RNF verificable. Se reportará cobertura = dimensiones cubiertas / dimensiones evaluadas.
+  Cobertura de explicabilidad: número y proporción de dimensiones representadas por al menos un candidato a RNF verificable, únicamente cuando la matriz de codificación permita establecer de forma trazable cuáles dimensiones fueron evaluadas.
 \item
-  RQ2: comparación técnico vs no técnico mediante U de Mann-Whitney por dimensión, coherente con la rúbrica del Enfoque 3. Se reportarán U, p con al menos tres decimales, tamaño del efecto r e intervalo de confianza del 95 \% cuando sea calculable de forma reproducible.
+  Member checking: resumen descriptivo de candidatos o interpretaciones confirmados, ajustados o no confirmados durante la sesión final, si esta se ejecuta.
 \item
-  Acuerdo entre rondas/evaluadores: coeficiente kappa de Fleiss cuando existan tres o más evaluadores comparables y una matriz nominal bien definida.
+  No se prevé calcular kappa entre rondas, al no existir rondas reales comparables en el estudio. Un coeficiente de acuerdo solo podrá considerarse si posteriormente existe una matriz nominal real con evaluadores comparables y esta situación se documenta como análisis adicional.
 \item
-  Nivel de significación: $\alpha$ = 0,05. Si se realizan múltiples contrastes por dimensión, se aplicará corrección de Holm para controlar el error familiar.
+  No se aplicará U de Mann-Whitney ni se calcularán tamaños del efecto o intervalos de confianza sobre puntuaciones Likert mientras no existan respuestas Likert reales y verificables correspondientes al estudio de explicabilidad.
 \item
-  Los intervalos de confianza se calcularán al 95 \%. Cualquier análisis no previsto aquí se etiquetará como exploratorio y se declarará como desviación.
+  Cualquier análisis no previsto o no sustentado por la evidencia disponible se etiquetará como exploratorio, no aplicable o no calculable, según corresponda.
 \end{itemize}
 
 \clearpage
@@ -401,37 +387,28 @@ El análisis se ejecutará mediante scripts reproducibles. No se seleccionarán 
 \section*{11. Tratamiento de actividades realizadas antes del registro OSF}\label{tratamiento-de-actividades-realizadas-antes-del-registro-osf}
 \addcontentsline{toc}{section}{11. Tratamiento de actividades realizadas antes del registro OSF}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textbf{REGLA DE CORTE TEMPORAL\\
-}Toda entrevista, encuesta, sesión walkthrough o validación realizada antes del sello temporal de OSF se considerará evidencia previa de ingeniería o actividad exploratoria/formativa. No se presentará como dato confirmatorio preregistrado. Sus hallazgos podrán utilizarse, de forma transparente y trazable, para identificar necesidades preliminares de explicabilidad, refinar escenarios, mejorar el guion y el cuestionario, definir dimensiones del instrumento y formular candidatos iniciales a RNF. Las respuestas individuales, puntuaciones Likert y decisiones obtenidas antes del sello temporal permanecerán excluidas de la base confirmatoria y de los contrastes estadísticos preregistrados.\strut
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-\end{longtable}
+Antes del registro OSF se realizaron seis walkthroughs reales: tres con participantes técnicos y tres con participantes no técnicos. Estas seis sesiones constituyen evidencia empírica previa o formativa del estudio y satisfacen el mínimo de sesiones de walkthrough requerido por la rúbrica terminal 2B para este componente de validación.
 
-En particular, los walkthroughs técnicos o no técnicos que el equipo haya realizado antes del prerregistro conservarán valor como evidencia formativa del proceso de Ingeniería de Requisitos y podrán sustentar la justificación de ajustes metodológicos o de candidatos preliminares a RNF. La fecha en que estos archivos se incorporen posteriormente a GitHub u OSF no modifica su clasificación temporal: una sesión ejecutada antes del sello de OSF continúa siendo evidencia previa/formativa aunque el archivo se publique después.
+Debido a que las sesiones preceden al sello temporal del OSF, no se describirán como datos confirmatorios preregistrados. El registro OSF no altera su fecha ni su naturaleza metodológica. Su utilización se limita a la elicitación, identificación y refinamiento de necesidades y candidatos a RNF de explicabilidad, así como al contraste descriptivo entre perfiles.
 
-Por consiguiente, el análisis confirmatorio del Enfoque 3 se basará exclusivamente en una ronda identificada y ejecutada después del timestamp de OSF. Los datos previos se conservarán separados y cualquier síntesis derivada de ellos se etiquetará explícitamente como exploratoria o formativa.
+La fecha de incorporación de archivos a GitHub u OSF no modifica la fecha real de ejecución de las sesiones. La trazabilidad deberá conservar la secuencia temporal efectiva del estudio.
 
-\section*{12. Reglas de detención, datos faltantes y exclusiones}\label{reglas-de-detenciuxf3n-datos-faltantes-y-exclusiones}
-\addcontentsline{toc}{section}{12. Reglas de detención, datos faltantes y exclusiones}
+El registro OSF congelará las decisiones analíticas y las actividades aún pendientes. Entre estas podrá incluirse el member checking con al menos tres participantes previos, si todavía no ha sido realizado. No se declararán nuevas rondas de walkthrough ni se atribuirán al prerregistro actividades ya ejecutadas.
+
+\section*{12. Reglas de datos faltantes, evidencia no verificable y exclusiones}\label{reglas-de-datos-faltantes-y-exclusiones}
+\addcontentsline{toc}{section}{12. Reglas de datos faltantes, evidencia no verificable y exclusiones}
 
 \begin{itemize}
 \item
-  La recolección no se detendrá anticipadamente por observar resultados favorables o desfavorables.
+  No se imputarán respuestas, observaciones, fechas, perfiles, consentimientos ni decisiones que no consten en la evidencia disponible.
 \item
-  Los registros incompletos en más del 20 \% de los ítems Likert se excluirán del análisis inferencial, conservándose el conteo y la razón de exclusión.
+  Cuando una sesión carezca de información necesaria para un análisis específico, esa ausencia se registrará como dato no disponible o no verificable y se reportará el número efectivo de casos utilizados.
 \item
-  Los datos faltantes restantes no se imputarán salvo que se preregistre una modificación antes de inspeccionar los resultados; se reportará el n efectivo por análisis.
+  Una observación solo se atribuirá a un perfil técnico o no técnico cuando la clasificación pueda verificarse en la documentación disponible.
 \item
-  Las respuestas duplicadas verificables serán eliminadas conservando la primera respuesta completa, salvo evidencia de corrección legítima.
+  Los registros duplicados verificables se depurarán manteniendo trazabilidad de la decisión adoptada.
 \item
-  Toda exclusión se documentará en un archivo de flujo de participantes y será reproducible mediante script.
+  Toda exclusión o imposibilidad de cálculo deberá quedar documentada de forma reproducible.
 \end{itemize}
 
 \section*{13. Desviaciones y cambios al protocolo}\label{desviaciones-y-cambios-al-protocolo}
@@ -447,7 +424,7 @@ Cualquier cambio posterior al registro se documentará con: (a) descripción del
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-\textbf{Archivo}
+\textbf{Archivo / ubicación}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Contenido}
 \end{minipage} \\
@@ -455,14 +432,12 @@ Cualquier cambio posterior al registro se documentará con: (a) descripción del
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-06\_Experimento/protocolo.pdf & Este protocolo, congelado antes de la nueva ronda empírica confirmatoria. \\
-06\_Experimento/osf\_registration.pdf & Comprobante oficial del registro OSF con URL persistente y timestamp. \\
+06\_Experimento/protocolo.pdf & Versión del protocolo correspondiente al estado real del estudio al momento del registro OSF. \\
+06\_Experimento/osf\_registration.pdf & Comprobante oficial del registro OSF con URL persistente y sello temporal. \\
 06\_Experimento/osf\_deviations.pdf & Desviaciones documentadas respecto del protocolo, si las hubiera. \\
-06\_Experimento/instrumentos/ & Guion, cuestionario, matriz RNF y materiales de validación. \\
-06\_Experimento/datos\_crudos/ & Datos anonimizados de la ronda preregistrada. \\
-06\_Experimento/datos\_procesados/ & Datos derivados mediante scripts. \\
-06\_Experimento/resultados/ & Tablas y figuras generadas reproduciblemente. \\
-06\_Experimento/scripts\_analisis/ & Scripts que producen el análisis final. \\
+06\_Experimento/instrumentos/ & Instrumentos y matrices utilizados para sistematizar los walkthroughs y realizar member checking cuando corresponda. \\
+06\_Experimento/resultados/ & Tablas, matrices y figuras derivadas de la evidencia real disponible mediante procedimientos reproducibles. \\
+06\_Experimento/scripts\_analisis/ & Scripts ajustados a la estructura real de los datos utilizados en el análisis final. \\
 \end{longtable}
 
 \section*{15. Resumen listo para copiar en OSF}\label{resumen-listo-para-copiar-en-osf}
@@ -481,12 +456,12 @@ Cualquier cambio posterior al registro se documentará con: (a) descripción del
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Título & FabroGym: preregistration of an explainability requirements study for a fitness routine recommendation component \\
-Descripción & Estudio de caso preregistrado para elicitar y validar requisitos no funcionales de explicabilidad en un componente propuesto de recomendación de rutinas de FabroGym, comparando percepciones de perfiles técnicos y no técnicos. \\
-Pregunta principal & ¿Qué requisitos de explicabilidad emergen para distintos perfiles de usuarios y cómo difiere su percepción al evaluar las mismas explicaciones? \\
-Diseño & Estudio de caso único con componente cualitativo de walkthrough y componente cuantitativo Likert. \\
-Análisis principal & Cobertura de dimensiones mediante RNF verificables; descriptivos; U de Mann-Whitney técnico vs no técnico; tamaño del efecto r; kappa de Fleiss cuando proceda. \\
-Estado al registrar & Sin resultados confirmatorios de la ronda preregistrada. Las actividades previas se consideran exploratorias/formativas; pueden informar el diseño y refinamiento de los instrumentos y candidatos preliminares a RNF, pero sus datos se mantienen separados y se excluyen del análisis confirmatorio. \\
+Título & FabroGym: registration of an explainability requirements analysis for a fitness routine recommendation component \\
+Descripción & Estudio de caso sobre requisitos no funcionales de explicabilidad en un componente propuesto de recomendación de rutinas. Antes del registro OSF se realizaron seis walkthroughs: tres con participantes técnicos y tres con participantes no técnicos. Estas sesiones se tratan como evidencia empírica previa/formativa para elicitar y refinar necesidades y candidatos a RNF. El registro congela las decisiones de análisis y las actividades de validación todavía pendientes. \\
+Pregunta principal & ¿Qué requisitos de explicabilidad emergen para los perfiles técnicos y no técnicos de FabroGym y qué diferencias descriptivas se observan entre ambos perfiles? \\
+Diseño & Estudio de caso único basado en seis walkthroughs previos al OSF, con análisis cualitativo y descriptivo de la evidencia y member checking final si aún se encuentra pendiente. \\
+Análisis principal & Codificación cualitativa de necesidades de explicabilidad; formulación y trazabilidad de candidatos a RNF; contraste descriptivo entre perfiles; cobertura de dimensiones cuando sea calculable; y síntesis del member checking si se ejecuta. \\
+Estado al registrar & Seis walkthroughs ya realizados antes del sello temporal de OSF: 3 técnicos y 3 no técnicos. No se presentan como datos confirmatorios preregistrados. No se declaran rondas adicionales inexistentes ni análisis que requieran datos no disponibles. \\
 \end{longtable}
 
 \addcontentsline{toc}{section}{Referencias}
