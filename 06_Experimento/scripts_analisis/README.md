@@ -1,23 +1,54 @@
-# Scripts de análisis
+# Scripts de análisis - FabroGym
 
-## Salvaguarda de prerregistro
+Esta carpeta contiene scripts reproducibles alineados con el **protocolo v1.2** del Enfoque 3: Explicabilidad como Requisito No Funcional (RNF).
 
-`run_all.py` bloquea la ejecución mientras exista `PENDIENTE_osf_registration.md` o falte `osf_registration.pdf`. Esto evita generar resultados reales antes del prerregistro.
+## Alcance
 
-## Flujo
+Los scripts trabajan sobre matrices estructuradas derivadas de la evidencia real disponible. No requieren ni generan respuestas Likert inexistentes y no suponen rondas adicionales de walkthrough.
 
-1. `validar_entradas.py`: comprueba 25 RF, cobertura completa, evaluadores y dominios de valores.
-2. `detector_ambiguedad.py`: clasifica posibles smells mediante reglas transparentes.
-3. `preparar_consenso.py`: calcula mayoría experta y marca empates para adjudicación.
-4. `analizar_resultados.py`: métricas, kappa, McNemar, desacuerdos y figuras.
-5. `run_all.py`: orquesta el flujo real.
-6. `prueba_sintetica.py`: verifica el entorno con datos ficticios, sin tocar el corpus real.
-7. `generar_matrices_evaluacion.py`: regenera órdenes aleatorizados con semilla declarada.
+## Archivos
 
-## Entrada real esperada después de OSF
+- `validar_entradas.py`: valida estructura mínima, perfiles permitidos y campos obligatorios.
+- `analizar_walkthroughs.py`: resume unidades codificadas por perfil, necesidad y dimensión cuando corresponda.
+- `analizar_rnf.py`: resume candidatos a RNF y calcula cobertura únicamente cuando la información necesaria está disponible.
+- `analizar_member_checking.py`: resume decisiones Confirmado / Ajustado / No confirmado si existe una matriz real de member checking.
+- `run_all.py`: ejecuta los análisis disponibles sin exigir archivos opcionales inexistentes.
+- `requirements.txt`: indica la versión mínima de Python; no se requieren librerías externas.
 
-Copie la matriz completada como `resultados/evaluaciones_expertos.csv`. Debe conservar las columnas de `instrumentos/03_Matriz_Evaluacion_Expertos.csv`.
+## Entradas principales
 
-## Salidas
+```text
+06_Experimento/instrumentos/02_Matriz_Codificacion_Walkthroughs.csv
+06_Experimento/instrumentos/03_Matriz_Candidatos_RNF_Explicabilidad.csv
+```
 
-CSV de métricas, acuerdo y desacuerdos; figuras PNG y SVG.
+El member checking puede incorporarse opcionalmente mediante un CSV estructurado con las columnas:
+
+```text
+ID,Resultado,Observaciones
+```
+
+Ese archivo se crea únicamente después de ejecutar la actividad y transcribir de manera fiel las decisiones del acta.
+
+## Tratamiento analítico
+
+Los scripts pueden generar:
+
+- número de unidades codificadas por perfil;
+- conteos de necesidades o categorías;
+- distribución descriptiva por dimensión cuando exista una codificación válida;
+- número de candidatos RNF por perfil y dimensión;
+- cobertura descriptiva de dimensiones cuando sea calculable;
+- resumen de decisiones de member checking cuando exista evidencia.
+
+No se calcula U de Mann-Whitney, tamaño del efecto, IC95 % o kappa entre rondas, porque el protocolo v1.2 no presupone los datos necesarios para esos análisis.
+
+## Resultados
+
+Las salidas se guardan en:
+
+```text
+06_Experimento/resultados/
+```
+
+Los scripts no incorporan resultados predefinidos ni completan datos faltantes por inferencia.
