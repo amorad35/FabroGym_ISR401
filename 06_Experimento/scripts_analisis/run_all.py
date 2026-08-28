@@ -1,26 +1,24 @@
 #!/usr/bin/env python3
-"""Ejecuta el flujo completo únicamente DESPUÉS del prerregistro OSF."""
+# -*- coding: utf-8 -*-
+from __future__ import annotations
+import argparse
 from pathlib import Path
-from detector_ambiguedad import run as run_detector
-from preparar_consenso import run as run_consensus
-from validar_entradas import validate
-from analizar_resultados import run as run_analysis
-
-ROOT=Path(__file__).resolve().parents[1]
+from analizar_walkthroughs import procesar as procesar_walkthroughs
+from analizar_rnf import procesar as procesar_rnf
+from analizar_member_checking import procesar as procesar_mc
 
 def main():
-    pending=ROOT/"PENDIENTE_osf_registration.md"
-    osf=ROOT/"osf_registration.pdf"
-    if pending.exists() or not osf.exists():
-        raise SystemExit("Ejecución bloqueada: falta osf_registration.pdf real o permanece el marcador PENDIENTE.")
-    eval_file=ROOT/"resultados"/"evaluaciones_expertos.csv"
-    if not eval_file.exists():
-        raise SystemExit("Falta resultados/evaluaciones_expertos.csv completado.")
-    corpus=ROOT/"fuentes"/"requisitos_fabrogym_v1.5.8.csv"
-    validate(corpus,eval_file,min_evaluators=3)
-    run_detector(corpus,ROOT/"resultados"/"salida_detector.csv")
-    run_consensus(eval_file,ROOT/"resultados"/"consenso_experto.csv")
-    run_analysis(ROOT/"resultados"/"salida_detector.csv",eval_file,ROOT/"resultados"/"consenso_experto.csv",ROOT/"resultados")
-    print("Análisis completado. Revise resultados/ y resultados/figuras/.")
-
-if __name__=="__main__": main()
+    p=argparse.ArgumentParser(description='Ejecuta los análisis disponibles del Enfoque 3 de FabroGym.')
+    p.add_argument('--salida',required=True,type=Path)
+    p.add_argument('--codificacion',type=Path)
+    p.add_argument('--rnf',type=Path)
+    p.add_argument('--member-checking',type=Path)
+    p.add_argument('--total-dimensiones',type=int,default=None)
+    a=p.parse_args()
+    if not any([a.codificacion,a.rnf,a.member_checking]): p.error('Indique al menos una entrada real disponible.')
+    a.salida.mkdir(parents=True,exist_ok=True)
+    if a.codificacion: procesar_walkthroughs(a.codificacion,a.salida)
+    if a.rnf: procesar_rnf(a.rnf,a.salida,a.total_dimensiones)
+    if a.member_checking: procesar_mc(a.member_checking,a.salida)
+    print('Procesamiento completado con las entradas disponibles.')
+if __name__=='__main__': main()
