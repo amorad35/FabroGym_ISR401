@@ -4,9 +4,14 @@ Esta carpeta contiene el componente empírico de **FabroGym - Enfoque 3: Explica
 
 ## Estado actual
 
-La evidencia empírica disponible está constituida por **seis walkthroughs reales ya realizados antes del registro OSF**: tres con participantes técnicos y tres con participantes no técnicos. Estas sesiones corresponden a **validaciones generales de FabroGym**, se tratan como evidencia previa/formativa y no como datos confirmatorios preregistrados.
+La evidencia empírica disponible está constituida por **seis walkthroughs reales realizados antes del registro OSF**: tres con participantes técnicos y tres con participantes no técnicos. Estas sesiones corresponden a **validaciones generales de FabroGym**, se tratan como evidencia previa/formativa y no como datos confirmatorios preregistrados.
 
-El registro OSF se realizará después de estas seis sesiones. Su finalidad es documentar transparentemente el estado temporal del estudio y congelar las decisiones analíticas y las actividades que todavía se encuentren pendientes.
+El **prerregistro cualitativo fue formalizado y publicado en OSF Registries el 29 de agosto de 2026**, después de estas seis sesiones y antes de la codificación y el análisis sistemático definidos en el protocolo. El registro público se encuentra en:
+
+- **OSF:** https://osf.io/62ysc/
+- **DOI:** https://doi.org/10.17605/OSF.IO/62YSC
+- **Tipo de registro:** Qualitative Preregistration
+- **Commit congelado pre-OSF:** `d2886d7453185daca62427c75729773b3510d1bb`
 
 No se presupone que las seis sesiones hayan evaluado una misma explicación estructurada ni que en todas se haya presentado un componente específico de recomendación de rutinas. Después del registro se realizará la codificación sistemática de la evidencia completa y únicamente los fragmentos con relación verificable con explicabilidad se utilizarán para formular o refinar candidatos a RNF de este enfoque.
 
@@ -93,19 +98,23 @@ La carpeta no debe contener resultados inventados. Sus archivos se generan únic
 
 ## Prerregistro OSF
 
-Mientras no exista el comprobante oficial se conserva:
+El prerregistro cualitativo del estudio fue formalizado en **OSF Registries** el **29 de agosto de 2026**.
 
-```text
-06_Experimento/PENDIENTE_osf_registration.md
-```
+- **Registro público:** https://osf.io/62ysc/
+- **DOI:** https://doi.org/10.17605/OSF.IO/62YSC
+- **Tipo:** Qualitative Preregistration
+- **Protocolo registrado:** versión 1.4
+- **Commit congelado pre-OSF:** `d2886d7453185daca62427c75729773b3510d1bb`
 
-Después de formalizar el registro, el comprobante oficial se guardará como:
+El comprobante documental del registro se conserva como:
 
 ```text
 06_Experimento/osf_registration.pdf
 ```
 
-El registro deberá declarar expresamente que los seis walkthroughs fueron realizados antes del sello temporal de OSF, que fueron validaciones generales de FabroGym y que no se afirma retroactivamente que las seis sesiones evaluaron una misma explicación estructurada.
+El registro declara expresamente que los seis walkthroughs fueron realizados antes del sello temporal de OSF, que corresponden a validaciones generales de FabroGym y que constituyen evidencia previa/formativa, no datos confirmatorios preregistrados.
+
+Asimismo, no se afirma retroactivamente que las seis sesiones evaluaron una misma explicación estructurada ni que en todas se presentó un componente específico de recomendación de rutinas. La codificación y el análisis sistemático se realizan después del registro, utilizando únicamente evidencia verificable y trazable.
 
 ## Privacidad
 
