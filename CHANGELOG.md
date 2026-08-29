@@ -4,6 +4,23 @@ En este archivo se documentan los cambios más relevantes realizados durante la 
 
 El registro se organiza por entregas e identifica los elementos añadidos, modificados y corregidos en cada versión.
 
+## [2B-preOSF-v1.4] - 2026-08-28
+
+### Cambiado
+
+- Actualización del protocolo de prerregistro OSF a la versión 1.4.
+- Se mantiene la secuencia temporal real: seis walkthroughs realizados antes del registro OSF y codificación/análisis sistemático posteriores al registro.
+- Los seis walkthroughs se describen explícitamente como validaciones generales de FabroGym y evidencia previa/formativa.
+- El análisis de explicabilidad se limita a los fragmentos de los walkthroughs que tengan relación verificable y trazable con necesidades de información, justificación o nivel de detalle.
+- Se actualizan el `README.md` raíz y `06_Experimento/README.md` para reflejar el mismo alcance metodológico.
+
+### Corregido
+
+- Se elimina la afirmación de que las seis sesiones evaluaron necesariamente una recomendación de rutina acompañada de una explicación estructurada.
+- Se ajustan RQ1, RQ2 y el elemento de intervención del PICOC para que correspondan con la naturaleza real de los walkthroughs ya ejecutados.
+- Se aclara que los instrumentos creados posteriormente para sistematizar explicabilidad no se presentan retroactivamente como instrumentos aplicados en las sesiones previas.
+- Se actualiza el resumen listo para OSF para declarar de forma transparente el estado real de la evidencia antes del registro.
+
 ## [2B-preOSF-v1.3] - 2026-08-28
 
 ### Añadido

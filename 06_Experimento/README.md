@@ -4,22 +4,26 @@ Esta carpeta contiene el componente empírico de **FabroGym - Enfoque 3: Explica
 
 ## Estado actual
 
-La evidencia empírica disponible está constituida por **seis walkthroughs reales ya realizados antes del registro OSF**: tres con participantes técnicos y tres con participantes no técnicos. Estas sesiones se tratan como evidencia previa/formativa y no como datos confirmatorios preregistrados.
+La evidencia empírica disponible está constituida por **seis walkthroughs reales ya realizados antes del registro OSF**: tres con participantes técnicos y tres con participantes no técnicos. Estas sesiones corresponden a **validaciones generales de FabroGym**, se tratan como evidencia previa/formativa y no como datos confirmatorios preregistrados.
 
 El registro OSF se realizará después de estas seis sesiones. Su finalidad es documentar transparentemente el estado temporal del estudio y congelar las decisiones analíticas y las actividades que todavía se encuentren pendientes.
+
+No se presupone que las seis sesiones hayan evaluado una misma explicación estructurada ni que en todas se haya presentado un componente específico de recomendación de rutinas. Después del registro se realizará la codificación sistemática de la evidencia completa y únicamente los fragmentos con relación verificable con explicabilidad se utilizarán para formular o refinar candidatos a RNF de este enfoque.
 
 No se declaran rondas adicionales de walkthrough ni se divide artificialmente la evidencia existente en Ronda 1 / Ronda 2.
 
 ## Protocolo vigente
 
-El protocolo activo corresponde a la **versión 1.3**:
+El protocolo activo corresponde a la **versión 1.4**:
 
 ```text
 06_Experimento/protocolo.tex
 06_Experimento/protocolo.pdf
 ```
 
-El protocolo establece un estudio de caso único basado en la sistematización cualitativa y descriptiva de los seis walkthroughs existentes, la formulación trazable de candidatos a RNF y el member checking final si esta actividad todavía se encuentra pendiente.
+La versión 1.4 conserva la secuencia temporal definida en la v1.3 y corrige la correspondencia entre la naturaleza general de los walkthroughs ya realizados y el análisis posterior de explicabilidad.
+
+El protocolo establece un estudio de caso único basado en la sistematización cualitativa y descriptiva de los seis walkthroughs existentes, la identificación trazable de fragmentos pertinentes para explicabilidad, la formulación de candidatos a RNF y el member checking final si esta actividad todavía se encuentra pendiente.
 
 ## Evidencia de walkthroughs
 
@@ -41,11 +45,11 @@ El guion o instrumento realmente utilizado en cada sesión se conserva como evid
 └── 06_Acta_Member_Checking.pdf
 ```
 
-- `01_Guia_Walkthrough_Explicabilidad.pdf` estructura la **sistematización** de la evidencia ya disponible.
+- `01_Guia_Walkthrough_Explicabilidad.pdf` estructura la **sistematización posterior** de la evidencia disponible; no se presenta como el instrumento aplicado retroactivamente en las seis sesiones.
 - `02_Matriz_Codificacion_Walkthroughs.csv` registra unidades temáticas trazables de los walkthroughs.
-- `03_Matriz_Candidatos_RNF_Explicabilidad.csv` registra candidatos a RNF derivados únicamente de evidencia verificable.
+- `03_Matriz_Candidatos_RNF_Explicabilidad.csv` registra candidatos a RNF derivados únicamente de fragmentos verificables pertinentes para explicabilidad.
 - `04_Ficha_Caracterizacion_Participante.pdf` permite documentar información de perfil solo cuando pueda verificarse.
-- `05_Matriz_Operacionalizacion_Explicabilidad.csv` documenta las variables y tratamientos definidos en el protocolo v1.3.
+- `05_Matriz_Operacionalizacion_Explicabilidad.csv` documenta las variables y tratamientos definidos para el análisis.
 - `06_Acta_Member_Checking.pdf` se utiliza únicamente si la sesión final de member checking todavía se encuentra pendiente y se ejecuta.
 
 No se mantiene un cuestionario Likert como instrumento activo mientras no existan respuestas Likert reales y verificables correspondientes al estudio de explicabilidad.
@@ -54,9 +58,11 @@ No se mantiene un cuestionario Likert como instrumento activo mientras no exista
 
 El análisis se limita a la evidencia realmente disponible e incluye, cuando sea sustentable:
 
-- codificación y síntesis cualitativa de necesidades de explicabilidad;
+- codificación cualitativa de los seis walkthroughs y conservación de sus hallazgos generales;
+- identificación trazable del subconjunto de fragmentos pertinente para explicabilidad;
+- síntesis de necesidades de explicabilidad sustentadas por ese subconjunto;
 - formulación y refinamiento de candidatos a RNF con trazabilidad a su evidencia de origen;
-- contraste descriptivo y cualitativo entre participantes técnicos y no técnicos;
+- contraste descriptivo y cualitativo entre participantes técnicos y no técnicos únicamente sobre evidencia pertinente;
 - conteos de categorías o dimensiones cuando provengan de una codificación reproducible;
 - cobertura de dimensiones mediante candidatos a RNF verificables, únicamente cuando el denominador y la clasificación puedan establecerse de forma trazable;
 - resumen del member checking si la actividad se ejecuta.
@@ -71,7 +77,7 @@ Los scripts activos se encuentran en:
 06_Experimento/scripts_analisis/
 ```
 
-Su función es validar matrices, resumir la codificación existente, calcular conteos descriptivos y cobertura cuando corresponda, y procesar las decisiones de member checking si se dispone de ellas.
+Su función es validar matrices, resumir la codificación existente, calcular conteos descriptivos y cobertura cuando corresponda, y procesar las decisiones de member checking si se dispone de ellas. Cualquier ajuste técnico necesario para reflejar la matriz final se realizará después del registro y quedará versionado.
 
 Los scripts del experimento anterior de detección de ambigüedad, Precision, Recall, F1, McNemar o consenso experto no forman parte del árbol activo del Enfoque 3. La trazabilidad de esas versiones permanece en el historial Git.
 
@@ -99,7 +105,7 @@ Después de formalizar el registro, el comprobante oficial se guardará como:
 06_Experimento/osf_registration.pdf
 ```
 
-El registro deberá declarar expresamente que los seis walkthroughs fueron realizados antes del sello temporal de OSF.
+El registro deberá declarar expresamente que los seis walkthroughs fueron realizados antes del sello temporal de OSF, que fueron validaciones generales de FabroGym y que no se afirma retroactivamente que las seis sesiones evaluaron una misma explicación estructurada.
 
 ## Privacidad
 

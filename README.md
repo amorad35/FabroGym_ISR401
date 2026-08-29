@@ -6,16 +6,18 @@ Repositorio académico del proyecto **FabroGym**, desarrollado en la Universidad
 
 El trabajo vigente corresponde a la **Entrega 4 (2B / Defensa Final)**. El componente empírico activo utiliza el **Enfoque 3: Explicabilidad como Requisito No Funcional (RNF)**.
 
-El protocolo de prerregistro vigente es la **versión 1.3, actualizada el 28 de agosto de 2026**, disponible en:
+El protocolo de prerregistro vigente es la **versión 1.4, actualizada el 28 de agosto de 2026**, disponible en:
 
 ```text
 06_Experimento/protocolo.tex
 06_Experimento/protocolo.pdf
 ```
 
-Antes del registro OSF se realizaron **seis walkthroughs reales**: tres con participantes de perfil técnico y tres con participantes de perfil no técnico. Estas sesiones se consideran evidencia empírica **previa/formativa** y no datos confirmatorios preregistrados.
+Antes del registro OSF se realizaron **seis walkthroughs reales**: tres con participantes de perfil técnico y tres con participantes de perfil no técnico. Estas sesiones corresponden a **validaciones generales de FabroGym**, se consideran evidencia empírica **previa/formativa** y no datos confirmatorios preregistrados.
 
-El registro OSF se realizará después de esas seis sesiones y antes de la codificación y el análisis sistemático definidos en el protocolo. No se declaran rondas adicionales de walkthrough ni se divide artificialmente la evidencia existente.
+El registro OSF se realizará después de esas seis sesiones y antes de la codificación y el análisis sistemático definidos en el protocolo. La versión 1.4 aclara que no se presupone que las seis sesiones hayan evaluado una misma explicación estructurada ni que en todas se haya mostrado un componente específico de recomendación de rutinas. El análisis posterior identificará de forma trazable qué fragmentos de la evidencia son pertinentes para explicabilidad.
+
+No se declaran rondas adicionales de walkthrough ni se divide artificialmente la evidencia existente.
 
 Mientras no exista el comprobante oficial del registro OSF se conserva:
 
@@ -60,6 +62,8 @@ La carpeta `06_Experimento/` contiene el paquete metodológico activo del Enfoqu
 └── 06_Acta_Member_Checking.pdf
 ```
 
+Los instrumentos creados para la sistematización de explicabilidad son posteriores y no se presentan retroactivamente como si hubieran sido aplicados durante los seis walkthroughs previos.
+
 No existe un cuestionario Likert activo para el estudio de explicabilidad. Tampoco se preregistran por defecto U de Mann-Whitney, tamaños del efecto, intervalos de confianza sobre puntuaciones Likert ni kappa entre rondas cuando los datos necesarios no existen.
 
 ### Análisis reproducible
@@ -70,7 +74,7 @@ Los scripts activos se encuentran en:
 06_Experimento/scripts_analisis/
 ```
 
-Su función es validar las matrices, sistematizar la codificación real disponible, resumir necesidades de explicabilidad, analizar candidatos a RNF y procesar el member checking únicamente si existe evidencia de esa actividad.
+Su función es validar las matrices, sistematizar la codificación real disponible, identificar de forma trazable los fragmentos pertinentes para explicabilidad, resumir necesidades sustentadas por evidencia, analizar candidatos a RNF y procesar el member checking únicamente si existe evidencia de esa actividad.
 
 Los resultados se generan en:
 
