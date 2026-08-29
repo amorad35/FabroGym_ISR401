@@ -12,22 +12,34 @@ No se incorporan resultados inventados ni archivos llenados con valores hipotét
 
 La existencia de cada salida depende de que exista información real suficiente para generarla.
 
-## Estructura prevista
+## Salidas generables por los scripts
+
+Con datos válidos en la matriz de codificación, `analizar_walkthroughs.py` puede generar:
 
 ```text
-06_Experimento/resultados/
-├── README.md
-├── codificacion_walkthroughs_procesada.csv
-├── resumen_necesidades_por_perfil.csv
-├── resumen_dimensiones.csv
-├── resumen_candidatos_rnf.csv
-├── cobertura_dimensiones.csv
-└── resumen_member_checking.csv
+codificacion_walkthroughs_procesada.csv
+resumen_necesidades.csv
+resumen_necesidades_por_perfil.csv
+resumen_dimensiones.csv
+resumen_perfil_dimension.csv
 ```
 
-`cobertura_dimensiones.csv` se genera únicamente cuando la matriz de codificación permita establecer de forma trazable qué dimensiones fueron evaluadas y cuál es el denominador válido.
+Con candidatos RNF válidos, `analizar_rnf.py` puede generar:
 
-`resumen_member_checking.csv` se genera únicamente si la actividad se ejecuta y existe una matriz estructurada de decisiones reales.
+```text
+resumen_candidatos_rnf.csv
+candidatos_por_perfil.csv
+candidatos_por_dimension.csv
+cobertura_dimensiones.csv
+```
+
+`cobertura_dimensiones.csv` registra una proporción únicamente cuando se proporciona un denominador verificable. Si ese denominador no está establecido, la cobertura se mantiene como descripción y la proporción se reporta como no calculable.
+
+Si se ejecuta el member checking y existe una matriz estructurada de decisiones reales, `analizar_member_checking.py` puede generar:
+
+```text
+resumen_member_checking.csv
+```
 
 ## Análisis que no se asumen
 

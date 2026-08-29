@@ -1,143 +1,102 @@
-# 06_Experimento - FabroGym
+# FabroGym — Ingeniería de Requerimientos (ISR-401)
 
-Esta carpeta contiene el componente empírico del proyecto **FabroGym**, correspondiente al **Enfoque 3: Explicabilidad como Requisito No Funcional (RNF)**.
-
-El estudio tiene como finalidad identificar, refinar y validar requisitos de explicabilidad aplicables a un componente propuesto de recomendación de rutinas, considerando la percepción de perfiles técnicos y no técnicos vinculados al dominio del sistema.
+Repositorio académico del proyecto **FabroGym**, desarrollado en la Universidad Técnica Estatal de Quevedo para documentar la especificación, evidencia, modelado, trazabilidad, MVP y componente empírico del proyecto.
 
 ## Estado actual
 
-- `protocolo.tex` y `protocolo.pdf`: actualizados a la versión 1.1 del protocolo de prerregistro.
-- El prerregistro en Open Science Framework (OSF) aún no se ha realizado.
-- `PENDIENTE_osf_registration.md` se mantiene como marcador hasta obtener el comprobante oficial del registro.
-- Las sesiones walkthrough realizadas antes del sello temporal de OSF se consideran evidencia exploratoria o formativa.
-- La ronda empírica confirmatoria deberá ejecutarse después del prerregistro OSF.
-- Los materiales pertenecientes al enfoque experimental anterior todavía deben separarse y conservarse en una carpeta histórica.
-- Los instrumentos, scripts de análisis y estructura de resultados del Enfoque 3 se encuentran pendientes de actualización y alineación con el protocolo vigente.
+El trabajo vigente corresponde a la **Entrega 4 (2B / Defensa Final)**. El componente empírico activo utiliza el **Enfoque 3: Explicabilidad como Requisito No Funcional (RNF)**.
 
-## Diseño empírico
+El protocolo de prerregistro vigente es la **versión 1.3, actualizada el 28 de agosto de 2026**, disponible en:
 
-El protocolo distingue dos etapas de trabajo:
+```text
+06_Experimento/protocolo.tex
+06_Experimento/protocolo.pdf
+```
 
-### Validación exploratoria o formativa
+Antes del registro OSF se realizaron **seis walkthroughs reales**: tres con participantes de perfil técnico y tres con participantes de perfil no técnico. Estas sesiones se consideran evidencia empírica **previa/formativa** y no datos confirmatorios preregistrados.
 
-Las entrevistas, encuestas, walkthroughs u otras actividades realizadas antes del sello temporal de OSF pueden utilizarse como antecedentes para:
+El registro OSF se realizará después de esas seis sesiones y antes de la codificación y el análisis sistemático definidos en el protocolo. No se declaran rondas adicionales de walkthrough ni se divide artificialmente la evidencia existente.
 
-- identificar necesidades preliminares de explicabilidad;
-- refinar escenarios de validación;
-- mejorar el guion de walkthrough;
-- definir dimensiones del cuestionario;
-- formular candidatos iniciales a RNF de explicabilidad.
+Mientras no exista el comprobante oficial del registro OSF se conserva:
 
-Los datos obtenidos en esta etapa no formarán parte de la base confirmatoria ni de los contrastes estadísticos preregistrados.
+```text
+06_Experimento/PENDIENTE_osf_registration.md
+```
 
-### Ronda confirmatoria
+## Estructura del repositorio
 
-Después del prerregistro OSF se ejecutará la nueva ronda empírica definida en el protocolo. Esta etapa contemplará, según corresponda:
+```text
+FabroGym_ISR401/
+├── 01_ERS/              # Especificación de requisitos
+├── 02_Evidencias/       # Evidencia pública anonimizada y zona restringida
+├── 03_Modelado/         # Diagramas UML y mockups
+├── 04_Trazabilidad/     # Matriz de trazabilidad
+├── 05_MVP/              # MVP académico y video de demostración
+├── 06_Experimento/      # Componente empírico vigente y prerregistro OSF
+├── 07_Publicacion/      # Paquete histórico de publicación de la Entrega 3 (2A)
+├── 08_ETICA/            # Documentación ética del proyecto
+├── 09_Defensa/          # Artefactos de presentación y defensa
+├── CHANGELOG.md
+├── CITATION.cff
+├── LICENSE
+└── checksums.sha256
+```
 
-- walkthroughs con perfiles técnicos y no técnicos;
-- cuestionario Likert de explicabilidad;
-- identificación y refinamiento de candidatos a RNF;
-- comparación entre perfiles;
-- cobertura de dimensiones de explicabilidad;
-- member checking;
-- análisis cualitativo y cuantitativo reproducible.
+`07_Publicacion/` conserva artefactos de la **Entrega 3 (2A)** como evidencia histórica. Sus descripciones de estado deben interpretarse en el contexto temporal de esa entrega y no como el estado vigente del componente empírico 2B.
 
-Los análisis confirmatorios se realizarán únicamente con datos obtenidos después del sello temporal del prerregistro.
+## Componente empírico vigente
 
-## Instrumentos previstos
+La carpeta `06_Experimento/` contiene el paquete metodológico activo del Enfoque 3.
 
-El paquete metodológico del Enfoque 3 deberá incluir instrumentos equivalentes a los siguientes:
+### Instrumentos y matrices
 
 ```text
 06_Experimento/instrumentos/
 ├── 01_Guia_Walkthrough_Explicabilidad.pdf
-├── 02_Cuestionario_Likert_Explicabilidad.pdf
+├── 02_Matriz_Codificacion_Walkthroughs.csv
 ├── 03_Matriz_Candidatos_RNF_Explicabilidad.csv
 ├── 04_Ficha_Caracterizacion_Participante.pdf
 ├── 05_Matriz_Operacionalizacion_Explicabilidad.csv
 └── 06_Acta_Member_Checking.pdf
 ```
 
-Estos archivos deberán corresponder a plantillas e instrumentos metodológicos. No deben contener resultados confirmatorios antes de la recolección correspondiente.
+No existe un cuestionario Likert activo para el estudio de explicabilidad. Tampoco se preregistran por defecto U de Mann-Whitney, tamaños del efecto, intervalos de confianza sobre puntuaciones Likert ni kappa entre rondas cuando los datos necesarios no existen.
 
-## Organización del experimento anterior
+### Análisis reproducible
 
-Los materiales asociados al enfoque previo de detección de ambigüedad y evaluación experta no forman parte del estudio que se prerregistrará en OSF.
-
-Estos archivos deberán conservarse, sin eliminarlos, en una estructura histórica separada, por ejemplo:
-
-```text
-06_Experimento/historico_enfoque2/
-```
-
-La finalidad de esta separación es mantener trazabilidad del trabajo anterior y evitar que sus instrumentos, fuentes, scripts o plantillas se confundan con el Enfoque 3.
-
-## Análisis previsto
-
-El análisis del Enfoque 3 deberá alinearse con el protocolo vigente e incluir, cuando corresponda:
-
-- estadísticos descriptivos de las respuestas Likert;
-- análisis por perfil técnico y no técnico;
-- comparación entre perfiles mediante U de Mann-Whitney;
-- tamaño del efecto;
-- cobertura de dimensiones de explicabilidad;
-- cobertura y validación de candidatos a RNF;
-- acuerdo entre evaluadores o rondas cuando proceda;
-- member checking;
-- síntesis cualitativa de observaciones;
-- tablas y figuras reproducibles mediante scripts versionados.
-
-Los scripts y archivos de resultados asociados exclusivamente al detector de ambigüedad, Precision, Recall, F1, McNemar o consenso experto pertenecen al enfoque anterior y deberán archivarse o sustituirse según corresponda.
-
-## Prerregistro OSF
-
-El registro OSF debe realizarse antes de iniciar la nueva ronda empírica confirmatoria.
-
-Hasta obtener el comprobante oficial se mantiene:
-
-```text
-06_Experimento/PENDIENTE_osf_registration.md
-```
-
-Después de completar y aprobar el registro, el comprobante deberá conservarse como:
-
-```text
-06_Experimento/osf_registration.pdf
-```
-
-La versión del paquete experimental utilizada para el prerregistro deberá identificarse mediante el SHA del commit de congelamiento correspondiente.
-
-## Privacidad y gestión de datos
-
-La carpeta pública del experimento podrá contener únicamente instrumentos vacíos, scripts, documentación metodológica y datos anonimizados o seudonimizados que puedan compartirse legítimamente.
-
-Los siguientes elementos deben permanecer fuera del paquete público:
-
-- nombres completos de participantes;
-- cédulas;
-- firmas;
-- correos personales;
-- números telefónicos;
-- audios;
-- videos;
-- fotografías identificables;
-- consentimientos firmados;
-- cualquier otro dato personal o identificador directo.
-
-Las evidencias restringidas deberán mantenerse en la zona correspondiente del proyecto y no publicarse directamente en OSF.
-
-## Reproducibilidad
-
-Los datos confirmatorios, una vez obtenidos y anonimizados, deberán poder procesarse mediante scripts versionados dentro de:
+Los scripts activos se encuentran en:
 
 ```text
 06_Experimento/scripts_analisis/
 ```
 
-Las tablas, métricas y figuras resultantes deberán generarse de manera reproducible y almacenarse en:
+Su función es validar las matrices, sistematizar la codificación real disponible, resumir necesidades de explicabilidad, analizar candidatos a RNF y procesar el member checking únicamente si existe evidencia de esa actividad.
+
+Los resultados se generan en:
 
 ```text
 06_Experimento/resultados/
 ```
 
-La estructura definitiva de estas carpetas se actualizará antes del congelamiento del paquete para prerregistro.
+No se incorporan resultados hipotéticos ni se completan datos faltantes por inferencia.
+
+## Privacidad y evidencia
+
+El repositorio público debe contener únicamente información apta para publicación. No deben publicarse nombres completos de participantes, cédulas, firmas, teléfonos, correos personales, audios, videos, rostros identificables, consentimientos originales ni otra información que permita reidentificación.
+
+La carpeta `02_Evidencias/00_Restringido/` es una **clasificación documental y no un mecanismo de control de acceso**. Cualquier material identificable que permanezca versionado en un repositorio público debe estar protegido conforme al protocolo y a las autorizaciones aplicables; las credenciales o claves de cifrado nunca deben almacenarse en este repositorio.
+
+## Reproducibilidad y congelamiento
+
+`checksums.sha256` se utiliza para verificar la integridad del estado preparado para registro. Debe regenerarse **solo después de completar todas las correcciones previas al congelamiento**.
+
+El SHA que se declare en OSF debe corresponder al commit definitivo generado después de:
+
+1. cerrar la revisión de coherencia documental;
+2. verificar privacidad y ausencia de información publicable indebidamente;
+3. regenerar `checksums.sha256`;
+4. revisar que no queden referencias obsoletas al Enfoque 2, Likert o versiones anteriores del protocolo.
+
+## Licenciamiento y citación
+
+Consulte `LICENSE` para los términos aplicables al código, documentación y datos anonimizados, y `CITATION.cff` para la información de citación del proyecto.

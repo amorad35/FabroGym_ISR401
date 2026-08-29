@@ -1,6 +1,6 @@
 # Scripts de análisis - FabroGym
 
-Esta carpeta contiene scripts reproducibles alineados con el **protocolo v1.2** del Enfoque 3: Explicabilidad como Requisito No Funcional (RNF).
+Esta carpeta contiene scripts reproducibles alineados con el **protocolo v1.3** del Enfoque 3: Explicabilidad como Requisito No Funcional (RNF).
 
 ## Alcance
 
@@ -41,7 +41,7 @@ Los scripts pueden generar:
 - cobertura descriptiva de dimensiones cuando sea calculable;
 - resumen de decisiones de member checking cuando exista evidencia.
 
-No se calcula U de Mann-Whitney, tamaño del efecto, IC95 % o kappa entre rondas, porque el protocolo v1.2 no presupone los datos necesarios para esos análisis.
+No se calcula U de Mann-Whitney, tamaño del efecto, IC95 % o kappa entre rondas, porque el protocolo v1.3 no presupone los datos necesarios para esos análisis.
 
 ## Resultados
 

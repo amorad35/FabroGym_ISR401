@@ -1,10 +1,31 @@
 # Registro de cambios
 
-En este archivo se documentan los cambios más relevantes realizados
-durante la evolución del proyecto FabroGym.
+En este archivo se documentan los cambios más relevantes realizados durante la evolución del proyecto FabroGym.
 
-El registro se organiza por entregas e identifica los elementos añadidos,
-modificados y corregidos en cada versión.
+El registro se organiza por entregas e identifica los elementos añadidos, modificados y corregidos en cada versión.
+
+## [2B-preOSF-v1.3] - 2026-08-28
+
+### Añadido
+
+- Protocolo de prerregistro OSF v1.3 para el Enfoque 3: Explicabilidad como Requisito No Funcional.
+- Instrumentos y matrices para sistematización de walkthroughs, candidatos a RNF, caracterización, operacionalización y member checking.
+- Scripts reproducibles para validación, análisis descriptivo y generación de resultados a partir de evidencia real.
+- Marcador documental `06_Experimento/PENDIENTE_osf_registration.md` mientras no exista el comprobante oficial del registro OSF.
+
+### Cambiado
+
+- El componente empírico activo se orienta exclusivamente al Enfoque 3.
+- Se documenta que los seis walkthroughs reales fueron ejecutados antes del registro OSF y se tratan como evidencia previa/formativa.
+- La codificación y el análisis sistemático quedan definidos como actividades posteriores al registro OSF.
+- Se reemplaza el antiguo cuestionario Likert del flujo activo por `02_Matriz_Codificacion_Walkthroughs.csv`.
+
+### Corregido
+
+- Eliminación de referencias activas a rondas artificiales de walkthrough.
+- Eliminación del supuesto de respuestas Likert inexistentes y de análisis inferenciales no sustentados por los datos.
+- Alineación entre instrumentos, scripts, resultados y protocolo v1.3.
+- Limpieza de artefactos residuales del enfoque experimental anterior en `06_Experimento/`.
 
 ## [2A-v1.0] - En desarrollo
 
@@ -19,17 +40,13 @@ modificados y corregidos en cada versión.
 
 ### Cambiado
 
-- Reorganización del repositorio para ajustarlo a la estructura oficial
-  de la Entrega 3 (2A).
-- Preparación del proyecto para integrar el ERS/SRS completo, las
-  evidencias, el modelado, la trazabilidad, el MVP y el componente
-  empírico.
+- Reorganización del repositorio para ajustarlo a la estructura oficial de la Entrega 3 (2A).
+- Preparación del proyecto para integrar el ERS/SRS completo, las evidencias, el modelado, la trazabilidad, el MVP y el componente empírico.
 
 ### Corregido
 
 - Unificación inicial de los nombres y metadatos del proyecto.
-- Diferenciación del licenciamiento del código, la documentación y los
-  datos anonimizados.
+- Diferenciación del licenciamiento del código, la documentación y los datos anonimizados.
 
 ## [1B-v2.0] - 2026-06-27
 

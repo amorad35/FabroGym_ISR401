@@ -12,7 +12,7 @@ No se declaran rondas adicionales de walkthrough ni se divide artificialmente la
 
 ## Protocolo vigente
 
-El protocolo activo corresponde a la **versión 1.2**:
+El protocolo activo corresponde a la **versión 1.3**:
 
 ```text
 06_Experimento/protocolo.tex
@@ -45,7 +45,7 @@ El guion o instrumento realmente utilizado en cada sesión se conserva como evid
 - `02_Matriz_Codificacion_Walkthroughs.csv` registra unidades temáticas trazables de los walkthroughs.
 - `03_Matriz_Candidatos_RNF_Explicabilidad.csv` registra candidatos a RNF derivados únicamente de evidencia verificable.
 - `04_Ficha_Caracterizacion_Participante.pdf` permite documentar información de perfil solo cuando pueda verificarse.
-- `05_Matriz_Operacionalizacion_Explicabilidad.csv` documenta las variables y tratamientos definidos en el protocolo v1.2.
+- `05_Matriz_Operacionalizacion_Explicabilidad.csv` documenta las variables y tratamientos definidos en el protocolo v1.3.
 - `06_Acta_Member_Checking.pdf` se utiliza únicamente si la sesión final de member checking todavía se encuentra pendiente y se ejecuta.
 
 No se mantiene un cuestionario Likert como instrumento activo mientras no existan respuestas Likert reales y verificables correspondientes al estudio de explicabilidad.

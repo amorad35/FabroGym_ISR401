@@ -1,36 +1,39 @@
 # FabroGym MVP — demostración funcional
 
-MVP académico ejecutable para la Entrega 3 (2A) de Ingeniería de Requerimientos. Implementa flujos de autenticación, clientes, membresías, asistencias y rutinas con datos totalmente sintéticos.
+Aplicación web estática del MVP académico de FabroGym.
 
-## Cobertura de requisitos Must
+## Ejecución rápida
 
-La priorización vigente del proyecto contiene 19 RF Must. Este MVP implementa 12 RF Must:
+Abra `index.html` con Chrome, Edge o Firefox.
 
-- RF-AUT-01, RF-AUT-02
-- RF-CLI-01, RF-CLI-02, RF-CLI-03
-- RF-MEM-02, RF-MEM-03, RF-MEM-04
-- RF-ASI-01, RF-ASI-02
-- RF-RUT-01, RF-RUT-02
-
-**Cobertura:** 12/19 = **63,2 %**, superior al mínimo del 60 % exigido para el MVP.
-
-## Ejecución rápida sin Docker
-
-Abra `index.html` con Chrome o Edge. Para evitar restricciones del navegador, también puede ejecutar:
+Como alternativa:
 
 ```bash
 python -m http.server 8080
 ```
 
-Después abra `http://localhost:8080`.
+y abra:
+
+```text
+http://localhost:8080
+```
 
 ## Ejecución con Docker
 
+Esta carpeta contiene un `Dockerfile`. Desde `05_MVP/MVP_HTML/` ejecute:
+
 ```bash
-docker compose up --build
+docker build -t fabrogym-mvp .
+docker run --rm -p 8080:80 fabrogym-mvp
 ```
 
-Después abra `http://localhost:8080`.
+Después abra:
+
+```text
+http://localhost:8080
+```
+
+No se utiliza `docker compose` mientras no exista un archivo `docker-compose.yml` o `compose.yml` versionado.
 
 ## Credenciales de demostración
 
@@ -40,16 +43,8 @@ Después abra `http://localhost:8080`.
 
 ## Persistencia
 
-La aplicación utiliza `localStorage`. No se conecta a una base de datos externa.
+La aplicación utiliza `localStorage` y no requiere una base de datos externa.
 
-## Privacidad y ética
+## Privacidad
 
-Todos los nombres, identificaciones, teléfonos, asistencias y rutinas son ficticios. El sistema muestra la etiqueta **DATO SINTÉTICO — NO REAL** y no utiliza información de clientes reales, datos de salud, biometría ni fotografías.
-
-## Video
-
-El archivo `video_demo.mp4` presenta el recorrido funcional y dura menos de tres minutos.
-
-## Tecnologías
-
-HTML5, CSS3, JavaScript, Nginx y Docker Compose.
+Todos los datos utilizados deben ser ficticios o sintéticos. No deben almacenarse datos personales reales, información de salud, biometría, fotografías ni credenciales reales.
