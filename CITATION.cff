@@ -1,30 +1,36 @@
 cff-version: 1.2.0
-message: "Si utiliza este proyecto, cite a sus autores mediante la siguiente información."
+message: "Si utiliza FabroGym o su paquete de replicación, cite esta versión del proyecto."
 type: software
-title: "FabroGym: sistema de gestión administrativa y operativa para un gimnasio"
-version: "2A-v1.0"
-date-released: "2026-07-29"
-
+title: "FabroGym: explainability requirements and reproducible requirements-engineering artifacts"
+version: "2.0"
+date-released: "2026-09-01"
+abstract: "FabroGym is an ISR-401 requirements-engineering project for a local gym, including a terminal SRS, traceability, an MVP, and a reproducible field-study package on explainability requirements for a proposed fitness-routine recommendation component."
 authors:
   - family-names: "Alvia Villegas"
     given-names: "Erick Adalberto"
     orcid: "https://orcid.org/0009-0001-3777-470X"
-
   - family-names: "Mera Arias"
     given-names: "Erick Jhair"
     orcid: "https://orcid.org/0009-0001-0068-1796"
-
   - family-names: "Mora Duarte"
     given-names: "Alex José"
     orcid: "https://orcid.org/0009-0000-2494-2842"
-
   - family-names: "Ponce Rivera"
     given-names: "Mery Helenmey"
     orcid: "https://orcid.org/0009-0006-6041-9198"
-
   - family-names: "Vaca Romero"
     given-names: "David Octavio"
     orcid: "https://orcid.org/0009-0000-4457-3095"
-
+keywords:
+  - "Explainability"
+  - "Fitness recommendation"
+  - "Personalization"
+  - "Non-functional requirements"
+  - "Field study"
 repository-code: "https://github.com/amorad35/FabroGym_ISR401"
 url: "https://github.com/amorad35/FabroGym_ISR401"
+identifiers:
+  - type: url
+    value: "https://osf.io/62ysc/"
+    description: "OSF preregistration record; DOI 10.17605/OSF.IO/62YSC."
+# AFTER PHASE 6 / ZENODO: add root doi: <ZENODO_DOI> and identifiers of type doi and swh.
