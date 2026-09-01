@@ -1,0 +1,13 @@
+COMMAND: python scripts/run_all.py
+
+STDOUT:
+OK — FabroGym Fase 2 regenerada
+Sesiones: 16; video total: 06:18:08; audio total: 06:18:14
+Encuesta: n=70; sin perfil técnico/no técnico; sin Likert de explicabilidad
+Walkthroughs: 76 fragmentos; códigos=37; categorías=18
+Saturación códigos últimas 3: 6.306% -> NO CUMPLE ESTRICTAMENTE
+Member checking: 12 decisiones; RNF terminales=4
+
+STDERR:
+
+EXIT_CODE: 0

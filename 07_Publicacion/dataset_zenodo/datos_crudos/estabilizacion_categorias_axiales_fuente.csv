@@ -1,0 +1,7 @@
+﻿Orden,Codigo_Sesion,Categorias_axiales_en_sesion,Categorias_axiales_nuevas,Categorias_nuevas_detalle
+1,WALK-TEC-01,8,8,ASIS; CLI; COM; INFO; REP; RUT; SEG_AUD; USAB
+2,WALK-TEC-02,10,5,ESC; INV; SEG_ROL; VAL; VAL_IR
+3,WALK-TEC-03,11,4,ADAP; DAT; LEG; SEG_CONT
+4,WALK-NTEC-01,5,1,ERR
+5,WALK-NTEC-02,5,0,
+6,WALK-NTEC-03,8,0,

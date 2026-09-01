@@ -1,0 +1,154 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se normalizaron saltos de línea y marcas técnicas de transcripción sin alterar el sentido de las intervenciones.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+WALKTHROUGH TÉCNICO 01 — VALIDACIÓN DEL PROTOTIPO
+Código de sesión: WALK-TEC-01
+Código del participante: Participante T01
+Perfil: Técnico
+Fecha de sesión: 18/08/2026
+Duración aproximada del audio: 24:45
+Nota de formato: la fuente no identifica de forma fiable todos los cambios de hablante; se conserva el orden de la conversación sin atribuir turnos no verificables.
+
+[00:02 aprox.]
+Registro de sesión: Con respecto a parte de... No, no tengo yo opción, yo como usuario. Ustedes de pronto incluso, como usuario cliente ya por así decirlo, no van a tener de tal acceso, porque tengo tal que es un sistema administrativo, por ende solamente lo que son los que son administradores, compañeros de gimnasia. Entrenadores y lo que son los recepcionistas, que ellos le tienen acceso como tal a acceder a esta página,
+
+[00:32 aprox.]
+Registro de sesión: para lo que es el control de rutinas, lo que son ventas, pagos de productos, lo que es el control incluso de los clientes con respecto a su peso, de las metas que se espera lograr. No, el usuario no rellena nada, no hace nada. El usuario como tal al principio lo que hace es registrarse en el caso de un empresivo . Las empresivas son mensuales, en esta empresa los recepcionistas son los que se van a encargar de registrar los datos del usuario. Por ende es porque como tal uno tiene que saber que todo lo que son los clientes
+
+[01:06 aprox.]
+Registro de sesión: cuenta con lo que es el usuario. Por ejemplo, como mencionamos del peso, incluso para poder obtener una nota a la víctima. Con lo que puede observar en este caso, aquí ya tenemos dos empresas. Esta de aquí ya cuenta como dueño. En el caso de acá tenemos también para registrar, en caso del dueño quiera registrarse directamente ya el sistema para que cuente o conste como dueño, este solo es registro único. Una vez se registra como tal como dueño, ya no hay forma de acceder como dueño nuevamente.
+
+[01:39 aprox.]
+Registro de sesión: Y aquí como tal ya podemos observar lo que el dueño como tal observa. En este caso tenemos lo que son los clientes, las membresías, pagos, ventas, lo que es el inventario, lo que son las rutinas que se van a llevar en cabo dentro del gimnasio. Porque un dueño como tal no solamente puede formar parte, solamente el rol de dueño, sino que el dueño del gimnasio también puede ser entrenador, como también puede ser recepcionista. Entonces todas esas áreas como tal las abarca lo que es el dueño.
+
+[02:09 aprox.]
+Registro de sesión: Entre esto de aquí también queremos saber si de pronto usted logra observar dentro de lo que es de las interfaces, porque incluso si puedo observar, al ser un HTML y ejecutable puede ir navegando entre cada una de los métodos. No están como tal funcionales al 100%, pero sí como para que tenga un conocimiento previo a lo que es el programa como tal que se espera acceder o que se espera lograr.
+
+[02:42 aprox.]
+Registro de sesión: Si yo no quiero tener membresía y yo no pago mensual, ¿entro en alguna categoría ahí? Yo soy una de las que no me gusta pagar mensual porque no voy constante cuando no tengo tiempo. Con respecto a eso ya es, por así decirlo, cuando usted como clienta va al gimnasio y va a registrarse directamente, no cuenta como tal para pagar una membresía, su consenso como tal solamente es por así decirlo de vez en cuando.
+
+[03:13 aprox.]
+Registro de sesión: Sí, pero igual me cobran diario. Claro, el cobro diario como tal es un sistema aparte, ya que este de aquí va directamente enfocado a los clientes fijos, porque como puede observar este ya cuenta con un control de rutinas en el cual puede establecer horarios, puede establecer incluso clases. Se tiene previsto que a futuro se planeen implementar lo que son las clases en línea, pero eso ya es mucho más a futuro.
+
+[03:43 aprox.]
+Registro de sesión: Ahora, ¿qué pasa si yo soy una clienta que sí tengo días fijos, pero no pago membresía? O sea, pago, supongamos, le digo yo voy los martes, miércoles y jueves, pero no voy a poner membresía, sino voy a poner diario. En ese caso entraría como una especie de cliente extraordinario, ya que usted contaría como tal con pago fijo, sí, y con una asistencia fija, pero no puede comportarse como un miembro, por así decirlo, ordinario común dentro de lo que es la parte de clientes.
+
+[04:17 aprox.]
+Registro de sesión: Porque en algún lado debería estar ahí, debería estar. Porque también soy de esas que yo no tengo control de mi cuenta si es que hago el pago con tarjeta y membresía. Entonces, lo que yo le digo yo, yo le voy pagando, supongamos, mes a mes, pero en efectivo. No le voy a pagar por tarjeta ni nada de eso, sino le voy a pagar directamente. Claro, pero aquí estamos como tal abarcando todo eso, que es el pago efectivo y también el pago por tarjeta.
+
+[04:47 aprox.]
+Registro de sesión: Entonces, todo eso hay que utilizar una gran capacidad o gran, cómo poder así decirlo específicamente, clientes tal vez. Pero con respecto a todo eso ahí es lo que se tiene como tal previsto actualmente. Porque de ahí está, igual le voy a pagar, le van a tener que hacer rutinas, todo eso. Pero lo que no voy a hacer es como hacer ese pago de débito, que me van a debitar.
+
+[05:18 aprox.]
+Registro de sesión: Yo le voy a pagar en efectivo, pero igual me quiero que me ponga rutina, que voy a ir con unos más décadas. Ya cambié, ¿no? Así voy a ir fijo, pero no voy a pagar con tarjeta. Sino que diariamente en efectivo. Diariamente o puede ser mensual, pero ya no pago. No debitan. No debitan. Porque me merecía, entiendo que mes a mes le apuesta tanto y paga, le descuenta directamente la tarjeta o le descuentan directamente.
+
+[05:51 aprox.]
+Registro de sesión: Claro, pero eso es en el caso de que se pague con tarjeta. No sé, no sé cómo la tienen. Entonces, de ahí como consola tiene también lo que es el área de pago. Puede ir registrando. Todo eso puede escribir. ¿Qué significa la vigencia? ¿Vigencia de qué? Esa es la vigencia que tiene el portal de la membresía. Es decir, desde el fondo inicia hasta el fondo termina.
+
+[06:50 aprox.]
+Registro de sesión: Con respecto a las vendas que se han realizado y el manejo del inventario. Por decir de los productos que ingresan. Tanto de ingresos como ingresos. ¿Y qué significa ese cliente? María González. Proteína, venta de productos. Proteína, método efectivo, fecha total y el estado en que se ingresa. Ese es el registro como tal de la venta realizada en ese proceso.
+
+[07:20 aprox.]
+Registro de sesión: Porque como puedo observar tenemos lo que es un pleno también. Que se puede acceder para registrar una venta de algún producto. ¿Por qué está pendiente? ¿Por qué sale ese pendiente? Porque como tal hay miembros que hacen un pago para hacerse lo a medio. Dicen, pago tanto ahorita y pago tanto tal vez. Entonces, por eso el portal como tal está pendiente. Porque aún queda pendiente el pago total del producto. Entonces aquí es el estado de pago.
+
+[07:50 aprox.]
+Registro de sesión: Sí, todo el pago. Yo pensé que la cliente estaba como retirada, suspendida. Pero cuando veo los estados, la palabra, no conviene. Ah, entonces tiene que ser estado de pago. Algo así debería ser. Porque yo pensé que era estado de la cliente que ya no estaba activa. O que ya se había retirado. Eso como se mencionaba, estamos en la parte de la sección de pagos. Dentro de lo que es el pago tanto del producto.
+
+[08:22 aprox.]
+Registro de sesión: Porque es como que este de aquí no se entiende. Está fuera de contexto. Es el pago. Ajá. Ah, ok, ok. Sección de inventario. Aquí están los productos, las categorías, el estómago, lo que va a estar disponible.
+
+[08:53 aprox.]
+Registro de sesión: ¿Qué rutina tiene? No está entonces por nombre, sino está por... ¿Este es el nombre de la rutina? Sí, es el por nombre de la rutina. Porque tengamos en cuenta que una rutina como tal tiene asignado también cierta cantidad de empleos y cierta cantidad de socios usuarios. Porque hay alrededor de, digamos, cinco estudios como tal que trabajan en la parte de la hipertrofia. Hay diez mil personas que trabajan. Otro tipo de entrenamiento.
+
+[09:24 aprox.]
+Registro de sesión: Entonces, además, porque también van a llegar entrenadores y van a tener disponibilidad de formar, organizarse como todas las clases básicas de la rutina y el trabajo que se vaya realizando. Luego de eso se mantiene un control de rutinas por medio del nombre. Porque muchos tienen previsto que dentro del tal de lo que es la sección de rutina, se puede incluir a todas las personas, todos los clientes que están dentro de la misma, las observaciones por parte del entrenador. Y también se tiene previsto incluir lo que es
+
+[09:55 aprox.]
+Registro de sesión: la ayuda de una inteligencia artificial, la cual pueda incluir rutinas propias dentro de lo que es el agua. Claro que con validación propia de los entrenadores. Recomendaciones, como quien decía. ¿En qué parte está que Participante T01 tiene la rutina de pesas, por ejemplo, que va a necesitar? Eso, como usted defendía, es que en la parte de rutina, como mencioné, digamos, para usted como la Participante T01, entra, digamos, a la sección de hipertrofia, a lo que es a las rutinas de hipertrofia. Entonces, dentro de las rutinas de hipertrofia,
+
+[10:25 aprox.]
+Registro de sesión: usted debería visualizar ahí la lista de, por ejemplo, Participante T01 está, la Participante T01, está en la sección de hipertrofia, las observaciones de la Participante T01, recluir tal cosa, tal cosa, tal cosa, fecha y hora en que estuvo dentro del gimnasio y un registro previo de pronto. Por ejemplo, a mí me ponen una rutina, me ponen varias cosas en esa rutina, ¿no? Claro. Varios, varias series de ejercicio. Sí, sí, así es. Entonces, ¿dónde veo eso ya? ¿Dónde yo veo que...?
+
+[10:55 aprox.]
+Registro de sesión: Usted como opina, lo que quiere decir es realmente... Personas estadísticas. Ver como tal su propia rutina, a ver, saber que... Ah, excelente. Supongamos que hice, ya, yo me acuerdo, ¿qué hice la semana pasada? Supongamos, yo me acuerdo que estuve en bicicleta, que estuve en la banda y que supongamos estuve en... ¿Sentadilla? No, estuve... ¿Prensa? En la danza de baile, en el baile. Ya, estuve en estas cosas. Pero la siguiente semana no me acuerdo qué me puso o qué me dijo que íbamos a hacer.
+
+[11:25 aprox.]
+Registro de sesión: Claro, tener un registro, como un instrumento. Un registro editorial. Ah, ok. Porque a mí me gusta que me manden apesas . Entonces yo, uy, otras apesas . Me ponen rutina, apesas , olvídese, que yo ya estoy reglada por otro lado. La verdad es que mi entrenador siempre me dijo, y la persona que me vigila me sabe, me está diciendo, ¿por qué si usted se ha volado si usted tenía esta rutina? Ya él me vigila para que no me vuele de apesas . Y me vaya esa semana o ese tiempo que me tocó apesas . Claro, pero con respecto a ese ínclus , recordemos que el enfoque principal del programa
+
+[11:56 aprox.]
+Registro de sesión: como tal es enfocado básicamente para el dueño, la directora y los seleccionistas . El cliente como tal sí llega a saber de la rutina que lleva a tener, pero el entrenador al asignar como tal una rutina, se tiene previsto que el informe como tal de la rutina, lo que debe hacer, se va a enviar por whatsapp o correo, por whatsapp o correo, se va a mandar como tal por un medio de whatsapp o correo lo que es la lista de que aquí tiene lo que son las rutinas para tal fecha y tal día. Con tantas series que necesitas y el tiempo estimado.
+
+[12:26 aprox.]
+Registro de sesión: Pero por ejemplo, una breve verificación propia del entrenador. O sea, para usted ver, como que dice un historial. Ajá, como tal que el programa también agrega los clientes dentro de, o los miembros como tal, porque también cuenta que los miembros ya entran a formar parte dentro de lo que es del programa como tal, pero así es. Aunque sea tener conocimiento, incluso ahí podríamos añadir lo que es el efecto de la inteligencia artificial, que ayuda incluso a los propios miembros de los equipos.
+
+[12:59 aprox.]
+Registro de sesión: ¿Cómo marco yo mi asistencia? ¿Que yo llegué a la hora que trabajé? Como tal, el entrenador es el que marca la asistencia dentro de lo que es el programa. A nosotros nos daban un pincito, nosotros nos daban como un, digamos que un código QR, ¿no? Metido en una cosa que ponemos como elástico y una bolita. ¿Como una pulsera? Sí, una pulsera. Una pulsera o un llavero. Se tenía previsto que incluso por medio, ya sea incluso la tarjeta,
+
+[13:30 aprox.]
+Registro de sesión: en lo que es un escanador QR también, por medio de eso. Incluso eso en el gimnasio de ahí, encontré que había, no me acuerdo si era un... ¿Datos biométricos? ¿Ah? ¿Datos biométricos? Ah, no, simplemente va pasando y creo que tiene un sensor o algo que detecta directamente en esa idea. Nosotros poníamos la pulsera o el llavero, lo pasábamos con un lector y ya, ese no se estaba viendo. Así es que yo pensé incluso para este manual
+
+[14:01 aprox.]
+Registro de sesión: añadir lo que es la parte del QR. ¿Con cuero? Sí, con cuero. Sí, con el teclado. No estábamos ya a ver porque no esperábamos. ¿Plan? ¿Por qué? Ah, ¿por qué la nombre? Si hay plan, está la nombre . Plan, salida, actividad. ¿Por qué esta actividad en la esquina? ¿Por qué esta actividad en la esquina? Porque claro que yo he hecho
+
+[14:31 aprox.]
+Registro de sesión: varias cosas. He hecho bicicleta, he hecho bandas, he hecho pesas, he hecho danza. ¿Pero por qué esta? Solo fuerza, solo palo. Esa sí, habría que mejorar la palabra porque ahí sería la categoría, ya que fuerza, pues puede hablarte de hipertrofia o una rutina full body . Yo digo porque ahí ya no sé, bueno, sí hice fuerza, pero hice más cosas. Ajá, una categoría mix . Ok.
+
+[15:08 aprox.]
+Registro de sesión: De pronto la priorización del ejercicio, por ejemplo, si hizo banda, la priorización. Ajá, ok. Dice hay cursos ya, novedades internas, así será.
+
+[15:44 aprox.]
+Registro de sesión: ¿Estado de qué es? Estado de los reportes, bueno, de reportes internos, pero en sí son novedades que van a tener las personas internas. Porque, por ejemplo, mira, hay varios estados. Sí, solo que no lo categorizamos bien. Yo estoy pensando ya, me va a salir lo mismo que en el de arriba me salía estado de vigencia. Ajá. Porque este es un estado diferente. Ahí entonces con quien dice
+
+[16:16 aprox.]
+Registro de sesión: estado de novedades internas. Estado de pago, estado de cliente, estado de plan. Para especificar mejor. Son como diferentes. Sí, eso tiene que traer la confusión. Y teléfono y algo así, supongo que debe tener el usuario, o el cliente,
+
+[16:46 aprox.]
+Registro de sesión: o no sé si es lo mismo o no. Pero tiene que haber un teléfono para contactar. Eso es lo básico, más que el correo que viene y le dice. De verdad, yo no le reviso, y no tengo así el teléfono, pero como no me suenan, no me chillan ahorita, los correos que me llegan, entonces yo ni le reviso. Pero el WhatsApp sí. El teléfono sí. Ajá. Horarios. Semanales, todos los días.
+
+[17:17 aprox.]
+Registro de sesión: Horarios de qué serán esos? Esos son los horarios de las clases de entrenamiento. Ah, ya. Esos son los horarios de reportes. Y esos son todos los horarios por haber. Sí, por el momento tenemos eso. Bien. Auditoría. Son como quien dice la trazabilidad. Es lo que hizo el usuario, o sea, el usuario, por ejemplo, el administrador, ¿qué hizo? El recepcionista, ¿qué hizo? Se eliminó un cliente, entonces ahí cachamos que...
+
+[17:48 aprox.]
+Registro de sesión: Ajá. Este es un súper usuario. Súper admin , sí. Es el administrador completo. Como está poniendo aquí configuración y le dan cosas aquí, es el súper usuario. Sí. Interesante, está bonito el trabajo. Con respecto entonces a lo que venimos fue observando en este caso, sí quisiera como tal hacer unas cinco preguntitas nomás
+
+[18:19 aprox.]
+Registro de sesión: para saber el contexto de lo que va a suceder. Ah, bien. De momento, con respecto a todo eso de ahí, ¿considera de pronto que la navegación es intuitiva para el usuario o detecta algún punto ahí... De confusión. No, o sea, de estar fácil está fácil. Se entiende rápido. En el momento que navega usted, se entiende rápido la forma de...
+
+[18:49 aprox.]
+Registro de sesión: Interacción. De interactuar, sí. Efectivamente, o para poder trabajarlo, en este caso con la aplicación. Sólo, acuérdense de aumentar aquí los... Como el estado de qué para aclarar. La especificación. Cuando reviso, digo, voy a ver el cliente, voy a ver el plan, voy a ver los campos y ya entiendo porque en este estado... Y con respecto a lo que son por ejemplo, qué validación crítica nos puede sugerir
+
+[19:19 aprox.]
+Registro de sesión: en este caso, para considerar en la interfaz antes de enviar como tal la petición. Validaciones... Validaciones como tal, ya no recuerdo qué validaciones. ¿Numéricas de pronto o de cédula? De cédula es mucho. Muy largo para ser de cédula. De pronto, no sé si algún código ustedes le dan al cliente y le dan...
+
+[19:50 aprox.]
+Registro de sesión: Por ejemplo, a nosotros la universidad nos da un código que va desde, iba desde cuando usted se matriculó en nivelación hasta el último semestre. Un código de cuatro dígitos. Entonces, bueno, ahora no sé si sean de más, pero cuatro dígitos y usted cada vez que digitaba esos dígitos, automáticamente aparecía toda esa información. No sé si le sirve a usted eso o al final con el nombre y el apellido ya le sale. No lo sé. Pero número de cédula es preferible no
+
+[20:20 aprox.]
+Registro de sesión: porque es mucho dígito y si me equivoco, otra vez se me aparece. No es recomendable el número de cédula. ¿Y considera que de pronto los controles mostrados con respecto a lo que son los perfiles de usuario, si corresponden bien como tal a los mismos o deberíamos restringir más la vista según el rol dependiendo? No, sí me parece bien. No me parece que deberían restringir a los clientes. Bueno, en la interfaz general. ¿Los clientes? ¿Cuál me decía? Los clientes.
+
+[20:50 aprox.]
+Registro de sesión: Hola. Entonces, teniendo en cuenta todo esto de cómo hemos venido trabajando en esta parte de aquí, ¿sugiere que de pronto modifiquemos, agrupemos de pronto algunos campos como para facilitar que la estructura esté bien implementada dentro de la educación de las interfaces? Yo lo que les pedí es eso de que, si cambio los estados y si yo como cliente, yo necesito ver
+
+[21:20 aprox.]
+Registro de sesión: si he pagado, porque yo soy otra de las que me olvido, si ya pagué o no pagué. Entonces, yo normalmente llego a una libreta y yo apago. Pero quiero saber si es que en la plataforma está registrada que pagué o no pagué. Que si y lo que les decía, lo de las rutinas nuevas que me van a poner, que me van a poner para saber. O sea, un registro. Como para consultar, como para consultar. No para tocarlos, sino como para consultar.
+
+[21:51 aprox.]
+Registro de sesión: Y de todos estos módulos que hemos venido revisando, ¿de pronto recomendaría priorizar alguno en específico al momento de inicializar de pronto lo que es el programa? No, porque ustedes tienen como un dashboard . Sí, un dashboard . Una media tendencia. Lo más importante, ¿no? De pronto, el dueño podría, le gustaría ver, por ejemplo,
+
+[22:21 aprox.]
+Registro de sesión: los clientes que tiene esa semana o el mes, no sé si sea lo mismo que los clientes de activos que tienen. Cuántos, cómo ha ido el flujo de clientes. Sí, así como le ponen aquí el vaivén del pago, sería de pagos. Así mismo del cliente, de pronto. Para saber cuántos clientes han ingresado o cuántos clientes nuevos han ingresado. Porque eso nos interesa, no a decir ya, este mes ha sido como que ha crecido, ¿qué habrá pasado? Que este mes ha habido
+
+[22:51 aprox.]
+Registro de sesión: o ingresó un nuevo entrenador y ese entrenador trajo un botón de clientes. Para saber qué pasó, si hubo así como este flujo de clientes. Que podría ser aquí mismo un daivén o uno más pequeño, o sea, uno aquí mismo de clientes. Ah, un daivén . Sí, sí. Y entonces, ¿alguna recomendación final de pronto, aparte de la que ya hemos venido conversando? ¿Algo más que quiera añadir de pronto a lo que es a lo que es
+
+[23:22 aprox.]
+Registro de sesión: el trabajo? No, pues no sé. No se me ocurre. Entonces, en ese caso, muchas gracias Ingeniera por habernos ayudado en este momento. De pronto, ¿algo que quieres decir? No, todo en orden. Entonces, pues... Les agradezco a ustedes. Muchas gracias. Está bonito, está muy interesante, no está complicado de entenderlo. Y sí,
+
+[23:52 aprox.]
+Registro de sesión: vayan adelante, porque está muy bien su trabajo. Nosotros hicimos algo de gimnasios también, pero a este nivel no. Tenemos uno más básico. Ah, uno más básico. ¿En base a datos con qué estamos haciendo? ¿Cuál es? Aún no tenemos para este de pronto, porque nos vamos a hacerlo en web. Y aparte es un proyecto que se va a llevar un recorrido de tres, cuatro semestres.
+
+[24:23 aprox.]
+Registro de sesión: Ah, en aplicaciones lo vamos a ver. Todo eso es un proyecto de agradecimiento. Y eso, los estados, ojo con eso. Con el estado de qué. Si está el cliente, si está la vendecía , si está el pago. Claro. Gracias.

@@ -1,0 +1,106 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: sesión de validación y recorrido con preguntas, respuestas y retroalimentación.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+WALKTHROUGH NO TÉCNICO 01 — INSTRUCTOR / ENTRENADOR
+Código de sesión: WALK-NTEC-01
+Código del participante: Participante NT01
+Perfil: No técnico
+Fecha de sesión: 24/08/2026
+Duración aproximada del audio: 17:53
+
+[00:04 aprox.]
+Entrevistador: Bueno, muy bien, antes de presentar la sesión que se va a realizar de las validaciones no técnicas, vamos a realizar una breve contextualización del proyecto Fabro Gym y del objetivo de esta validación que se va a llevar a cabo. Fabro Gym es un proyecto académico orientado al desarrollo de un sistema para apoyar la gestión administrativa y operativa de un gimnasio.
+
+Entrevistador: La propuesta busca organizar en una misma plataforma varias tareas o funcionalidades que se realizan dentro de un gimnasio de manera manual o mediante herramientas separadas, facilitando el trabajo de los diferentes usuarios que intervienen en el funcionamiento cotidiano.
+
+Entrevistador: Para esta sesión se trabajó desde la perspectiva de un usuario no técnico relacionado con las actividades de instructor o entrenador. Por este motivo, el recorrido se centra principalmente en aquellas funcionalidades que podrían formar parte de su trabajo cotidiano dentro del sistema MVP.
+
+[01:45 aprox.]
+Entrevistador: Entre los elementos que vamos a tener durante el walkthrough se encuentra el dashboard correspondiente al instructor, desde donde se busca proporcionar un resumen de la información relevante para sus actividades. También muestra apartados relacionados con los alumnos asignados, consulta de información de los clientes, rutinas de entrenamiento, objetivos, horarios, asistencia y el seguimiento.
+
+Entrevistador: Otro componente importante corresponde a la gestión de rutinas. La intención es que el instructor pueda consultar, crear y organizar las rutinas asociadas a sus alumnos, además de disponer de información que facilite el seguimiento a lo largo del tiempo. También se presentan horarios, opciones de seguimiento y novedades internas.
+
+[03:26 aprox.]
+Entrevistador: La finalidad no es únicamente mostrar la pantalla del prototipo MVP. Lo que se busca es principalmente observar cómo una persona vinculada en este tipo de actividades interpreta el sistema, identifica sus funcionalidades y navega entre sus diferentes funciones.
+
+Entrevistador: Prestaremos mucha atención a aspectos como la facilidad para encontrar funcionalidades principales, claridad de los nombres en los menús, cantidad de información presentada, facilidad de completar tareas frecuentes y la posibilidad de recuperarse cuando se ingresa a una opción equivocada. Nos interesa conocer si la información mostrada corresponde realmente con lo que un instructor necesita consultar.
+
+[05:18 aprox.]
+Entrevistador: Cabe aclarar que se trata de un prototipo académico en proceso de construcción, en etapa de elicitación y análisis de requisitos. Por ello, no se espera que todas las funcionalidades estén implementadas completamente. Las observaciones obtenidas servirán para precisar elementos que puedan mantenerse, requerir ajustes o nuevas necesidades.
+
+Entrevistador: La identidad del participante se mantendrá anonimizada. Las opiniones y observaciones se presentarán después de las validaciones. Con esto concluimos la contextualización y vamos con la sesión correspondiente.
+
+[06:56 aprox.]
+Entrevistador: Muy buenas noches a todos, sean muy bienvenidos a esta revisión por el área no técnica del sistema para la gestión de un gimnasio, Fabro Gym. Nos acompaña el Participante NT01, quien fue entrenador de gimnasios y nos ayudará con su retroalimentación sobre el sistema. ¿Algo que quieras decir antes de comenzar con la presentación del proyecto?
+
+Participante NT01: No, nada. Lo único que sí, estoy emocionado de ver cómo funciona Fabro Gym.
+
+[07:39 aprox.]
+Entrevistador: El enfoque principal del programa es el área de gestión de un gimnasio. Muchos clientes suelen tener inconvenientes porque no conocen o se olvidan del control de sus propias rutinas. Al tener esto, el entrenador puede hacer recordatorios a sus clientes sobre membresías, rutinas y horarios.
+
+Entrevistador: Para ayudarte con el sistema, vamos a empezar con las credenciales. Vas a ser instructor y tu contraseña será 1, 2, 3, 4, 5, 6.
+
+[08:51 aprox.]
+Entrevistador: Una vez dentro, en el primer apartado tenemos un dashboard que te muestra un poco sobre tus alumnos, las rutinas activas, asistencias y seguimientos pendientes. Puedes verificar por medio de una gráfica el comportamiento de asistencia, si ha sido buena o productiva, e inclusive el costo de membresía en un lapso de tiempo.
+
+Entrevistador: En la parte de arriba tenemos el menú para guiarte en la aplicación: rutinas, asistencia, horarios, seguimiento y novedades internas. Si accedes a la parte de mis alumnos, observarás la lista de alumnos pendientes en tu gimnasio. Estos alumnos te serán asignados considerando las membresías y pagos gestionados por administración.
+
+[10:15 aprox.]
+Entrevistador: Puedes ver en las tablas la información principal de cada uno de tus alumnos. Puedes navegar a tu gusto por la parte que desees.
+
+[10:54 aprox.]
+Entrevistador: Esa es la parte de asistencia. Tenemos pensado implementar un escaneo de asistencia por medio de tarjetas con código QR para que el usuario o tú como entrenador no tengan que andar registrando todo manualmente. El cliente escanea su tarjeta al ingresar y directamente se registra su asistencia.
+
+Entrevistador: También puedes ver la sección de horarios y la de seguimiento personalizado. Con respecto a las novedades internas, es un medio de comunicación entre tú y el equipo del gimnasio (entrenadores, recepcionistas, dueño) para tener control del mantenimiento del equipo, pagos de membresías u otras observaciones.
+
+[12:03 aprox.]
+Entrevistador: En base a todo esto, ¿qué te ha parecido? ¿Te está gustando o tienes algún desliz visual que no te agrade? Puedes fijarte que ahí mismo tenemos las nuevas rutinas que puedes ir agregando, las asistencias y los horarios.
+
+Participante NT01: La verdad es que me gusta porque se ve que sí hay facilidad. Más que todo en el tema de asistencia, como tú dices, con los códigos QR, eso da mucha más facilidad para no estar pendiente de quién llegó y quién no. De las rutinas también es interesante porque poder agregar cosas que uno va aprendiendo hace que se faciliten más las cosas. Me gusta esta plataforma, está bonita.
+
+[12:57 aprox.]
+Entrevistador: Al ver la pantalla principal, ¿te resulta claro lo que debes hacer o qué botón presionar para realizar tu tarea principal como entrenador, o sientes que hay demasiada información junta en una sola pantalla?
+
+Participante NT01: No siento que haya mucha información junta porque prácticamente aquí está por separado cada una de las cosas que debes hacer. Y obviamente en la gráfica se va reflejando todo lo que se va haciendo en base a lo que vayamos agregando.
+
+[13:51 aprox.]
+Entrevistador: Pensando en tu trabajo del día a día, ¿consideras que este flujo para registrar a tus alumnos, las rutinas o la asistencia te ahorra tiempo, o sientes que tienes pasos innecesarios?
+
+Participante NT01: La verdad es que no creo que me tome demasiado tiempo porque uno puede irlo generando semanal o mensual y saber la rutina que vamos a tener. Lo único es que si llega un nuevo alumno hay que registrarlo, pero con lo de la asistencia nos da facilidad; sabiendo que ellos van llegando, ya vamos haciendo el seguimiento en la plataforma.
+
+[14:45 aprox.]
+Entrevistador: Con respecto a los iconos, el menú y los nombres, ¿te resultan fáciles de entender o hay algún término que te genere confusión?
+
+Participante NT01: La verdad es que no. Incluso está todo detallado para poder informar: códigos, nombres, apellidos, identificación, fecha, género, correos, teléfonos. La verdad es que sí me gusta.
+
+[15:09 aprox.]
+Entrevistador: Si por error llegases a apretar un botón equivocado, ¿te parece claro cómo cancelar la acción o volver atrás?
+
+Participante NT01: La verdad es que eso de cancelación no lo vi.
+
+Entrevistador: Entonces falta esa parte de ahí.
+
+Participante NT01: Sí.
+
+[15:36 aprox.]
+Entrevistador: Con respecto a las vistas en la parte de inicio (dashboard, asistencias, próximas clases), ¿son realmente importantes para tu trabajo diario o falta algún dato que necesites ver de manera inmediata antes de iniciar tu jornada?
+
+Participante NT01: La verdad es que no. Yo creo que lo que se ve ahí es lo que tenemos que tener reflejado en su momento: los alumnos asignados y más que todo las asistencias del día, y todo eso.
+
+[16:21 aprox.]
+Entrevistador: Si tuvieras que usar este sistema mañana mismo, ¿qué tan fácil crees que sería aprender a manejarlo o cuánto tiempo de capacitación necesitarías?
+
+Participante NT01: La verdad es que se ve fácil. Como te digo, hay muchas cosas que están por separado, no está todo junto. Se nota fácil cómo añadir nuevas rutinas con todo el seguimiento. Lo único sería que se vea más claro para hacer los entrenamientos mensuales, para saber con cuál rutina se debería empezar.
+
+[17:13 aprox.]
+Entrevistador: Claro, listo. ¿Algo más que quieras añadir antes de culminar con la reunión? Cualquier retroalimentación o crítica resulta útil para el desarrollo.
+
+Participante NT01: La verdad es que no. Todo está muy bonito, sí me gusta y está muy fácil de usar.
+
+[17:38 aprox.]
+Entrevistador: Bueno, en ese caso muchas gracias por habernos ayudado. Espero poder trabajar a futuro con usted y seguir teniendo retroalimentación.
+
+Participante NT01: De gusto.

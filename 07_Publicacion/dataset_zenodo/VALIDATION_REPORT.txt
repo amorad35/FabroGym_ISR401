@@ -1,0 +1,18 @@
+FabroGym Zenodo package validation - DOI-updated final candidate
+
+Zenodo DOI: 10.5281/zenodo.22237884
+Interview transcripts: 10 (expected 10)
+Walkthrough transcripts: 6 (expected 6)
+General ENTR coding rows: 59 (expected 59)
+Walkthrough coding rows: 76 (expected 76)
+Forbidden media/archive extensions found: 0
+Manifest data files: 154
+
+Methodological separation: PASS
+- ENTR coding preserved for elicitation / general requirement traceability.
+- WALK coding preserved for terminal explainability analysis.
+
+Restricted files: none
+
+PDF snapshots updated with reserved Zenodo DOI: ERS/SRS and manuscript.
+Checksums regenerated after DOI propagation.

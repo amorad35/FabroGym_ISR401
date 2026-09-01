@@ -1,0 +1,83 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: sesión de validación y recorrido con preguntas, respuestas y retroalimentación.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+WALKTHROUGH NO TÉCNICO 02 — RECEPCIONISTA
+Código de sesión: WALK-NTEC-02
+Código del participante: Participante NT02
+Perfil: No técnico
+Fecha de sesión: 24/08/2026
+Duración aproximada del audio: 17:57
+
+[00:05 aprox.]
+Entrevistador: Bueno, antes de presentar la sesión de la validación no técnica número 2, vamos a explicar brevemente su contexto y finalidad. Este walkthrough forma parte del proceso de validación del proyecto Fabro Gym. Corresponde a la participación de una persona no técnica relacionada con las actividades de recepción. Durante el recorrido vamos a presentar principalmente aquellas funcionalidades relacionadas con el trabajo cotidiano de este perfil, incluyendo el dashboard general, el registro de clientes, membresías, pagos, ventas y algunos indicadores sobre la operación del gimnasio.
+
+Entrevistador: La finalidad de esta sesión es conocer si la organización propuesta resulta comprensible para una persona que utilizaría estas funciones diariamente. También se busca identificar si el proceso de registro y cobro contiene pasos innecesarios, si los términos e íconos son claros, si la información es suficiente para las tareas habituales y si el usuario puede navegar sin perderse. Se observará la facilidad para comprender la relación entre el registro de clientes, membresías, pagos y ventas con las tareas cotidianas.
+
+Entrevistador: Fabro Gym se encuentra en una etapa de elicitación y análisis de requisitos. Presentamos un prototipo MVP, por lo que las observaciones se utilizarán para consolidar y ajustar los requisitos del sistema. La identidad del participante será anonimizada para obtener su retroalimentación.
+
+[04:03 aprox.]
+Entrevistador: Muy buenas noches a todos. En esta ocasión estamos con el Participante NT02, recepcionista de un gimnasio de [LOCALIDAD]. Él nos realizará un recorrido en el walkthrough y una demostración de los módulos gráficos del proyecto Fabro Gym. Antes de empezar, el sistema tiene como base la gestión de un gimnasio. Manejamos roles específicos como el dueño, el recepcionista y el entrenador.
+
+Entrevistador: Usted, como recepcionista, va a ingresar al sistema con unas credenciales para ver el control de asistencia, membresías y la gestión de inventarios, que es el área con la que está más familiarizado. Queremos conocer sus criterios sobre la parte visual, si el programa es amigable, fácil de usar y de guiarse. Ingresará como usuario "recepcionista" y la contraseña es "123456".
+
+[06:28 aprox.]
+Entrevistador: Una vez dentro del sistema, lo primero que tenemos es un dashboard que muestra los ingresos obtenidos en los últimos siete días, junto con el presupuesto. Recordemos que esta parte tiene una esencia visual para que comprenda el alcance del proyecto, no está al cien por ciento terminado. Queremos saber su opinión sobre el diseño y el manejo de los paneles, si le parece sencillo y familiar. Puede navegar y darnos sus recomendaciones.
+
+[08:22 aprox.]
+Entrevistador: ¿Alguna observación en la sección de horarios, los menús o con respecto a los diseños, las tablas y la información mostrada en los paneles?
+
+Participante NT02: De momento todo parece muy intuitivo, no se me hace difícil diferenciar una cosa de otra. Me parece que para ser una beta del programa está bien.
+
+[09:08 aprox.]
+Participante NT02: ¿El gráfico se modifica de alguna forma o va avanzando?
+
+Entrevistador: El gráfico muestra los ingresos de los últimos siete días. Conforme pasen los días, el gráfico va cambiando. No se puede manipular directamente para alterar los datos, pero sí permite ampliar o reducir la visualización para ver mejor la escala temporal, reflejando el ingreso total de esos días.
+
+Participante NT02: Está muy bien hecho para ser una beta, es muy intuitivo. [10:21 aprox.] De hecho, me parece que aquí se podría cambiar la vista para ver la diferencia de los ingresos a 15 días, un mes o dos meses, para ir diferenciando cómo han crecido o caído los ingresos. Por lo demás, me parece que tiene la información necesaria. Esta es la plantilla principal, ¿verdad?
+
+Entrevistador: Claro, es el resumen de toda la información del sistema. Tiene la sección de clientes activos, membresías, ingresos del mes, ventas del día y la asistencia diaria. También hay atajos en la parte inferior para ir directamente al registro de clientes, generar ventas y otras secciones sin tener que navegar por tantos canales.
+
+[11:51 aprox.]
+Participante NT02: ¿El registrar pago y registrar clientes no tendría que estar incluido al mismo tiempo? Dependiendo de cómo vaya a ser el cliente, los pagos adicionales serían de los productos que estamos vendiendo.
+
+Entrevistador: Tenemos dos secciones separadas. El registro de pago pertenece a la sección de membresías, no a la de ventas de un producto. Al lado se encuentra "registrar ventas", que sirve para facturar bebidas, proteínas, gelatinas, etc. La sección de registro de clientes va ligada a membresías para mantener un registro de quienes ingresan mes a mes o con una membresía fija.
+
+[13:01 aprox.]
+Entrevistador: Muy bien. Me gustaría hacerle unas preguntas finales sobre la facilidad de uso. Al ver la pantalla por primera vez, ¿le resulta claro lo que debe hacer o qué botón presionar, o siente que hay demasiada información junta?
+
+Participante NT02: No, tiene la información necesaria. Como dije, me parece bastante intuitivo; no es difícil entender qué parte va con qué parte.
+
+[13:50 aprox.]
+Entrevistador: Pensando en su día a día como recepcionista, ¿considera que este flujo para registrar clientes y cobrar membresías le ahorraría tiempo o siente que tiene pasos innecesarios?
+
+Participante NT02: En lo poco que he visto me ahorraría bastante tiempo. Tiene lo justo para que sea fácil agregar las cosas y no tome mucho tiempo.
+
+[14:34 aprox.]
+Entrevistador: Sobre la calidad visual, los íconos y mensajes, ¿le resultan familiares y fáciles de entender, o hay algún término que genere confusión?
+
+Participante NT02: No, todo ha sido fácil de entender hasta ahora.
+
+[15:02 aprox.]
+Entrevistador: Si por error llegase a presionar un botón equivocado en la sección de registrar pagos, ¿le parece claro cómo cancelar la acción, editar o volver atrás?
+
+Participante NT02: Imagino que aquí mismo está para editarlo. Si registro a un cliente nuevo y me equivoco, me parece que puedo editarlo o eliminarlo para volver a registrarlo.
+
+[15:53 aprox.]
+Entrevistador: Viendo la pantalla de inicio, ¿los datos que ve a simple vista son los más importantes para su trabajo o falta algún dato inmediato?
+
+Participante NT02: Es lo necesario. Si tal vez habría algo que agregar, tendría que visualizarlo con más detenimiento.
+
+[16:28 aprox.]
+Entrevistador: Si tuviera que usar este sistema mañana mismo, ¿qué tan fácil cree que sería aprender a manejarlo o cuánto tiempo de capacitación necesitaría?
+
+Participante NT02: Para personas que saben utilizar una computadora, dudo mucho que sea complicado. Para otras que no, no tomaría más de un día en realidad para enseñarles. Es bastante intuitivo y fácil de entender.
+
+[17:09 aprox.]
+Entrevistador: Eso sería todo por hoy. ¿Alguna recomendación o crítica final sobre el programa en construcción?
+
+Participante NT02: No hay nada más que agregar.
+
+Entrevistador: Muchas gracias, Participante NT02, por acompañarnos. Esperamos contar con su presencia en el futuro para culminar el desarrollo de este programa.

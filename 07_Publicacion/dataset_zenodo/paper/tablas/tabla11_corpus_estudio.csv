@@ -1,0 +1,6 @@
+﻿Source,Identifiers,N,Analytical_role
+Initial interviews,ENTR-01..ENTR-10,10,Operational elicitation; base RF/RNF; domain and privacy constraints
+Technical walkthroughs,WALK-TEC-01..WALK-TEC-03,3,Prototype walkthrough; thematic coding; explainability evidence
+Non-technical walkthroughs,WALK-NTEC-01..WALK-NTEC-03,3,Prototype walkthrough; thematic coding; explainability evidence
+Client questionnaire,70 anonymous responses,70,Descriptive domain evidence; not an explainability Likert scale
+Member checking,MC-P01..MC-P03,3,Review of four RNF candidates; 12 decisions

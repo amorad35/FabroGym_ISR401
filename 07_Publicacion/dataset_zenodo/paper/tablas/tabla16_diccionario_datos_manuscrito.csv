@@ -1,0 +1,11 @@
+﻿variable,source,meaning
+Codigo_Sesion,Walkthrough coding,Stable WALK-TEC-01..03 or WALK-NTEC-01..03 identifier
+Perfil,Walkthrough coding,Technical/non-technical profile; descriptive grouping only
+Categoria,Walkthrough coding,Axial/thematic category assigned to a coded fragment
+Codigo_Normalizado,Walkthrough coding,Normalized open code used in accumulation curve
+Aplicable_Explicabilidad,Walkthrough coding,Flag for explainability-pertinent fragments
+Dimension_Explicabilidad,Walkthrough coding,Multi-label observed explainability labels; no closed denominator
+privacy_importance,Client questionnaire,General ordinal privacy-importance item; not explainability
+Metrica / Umbral,Candidate RNF,Operational measure and acceptance threshold
+Metodo_Comprobacion,Candidate RNF,Verification procedure
+Resultado,Member checking,Confirmado / Ajustado / No confirmado

@@ -1,0 +1,5 @@
+FabroGym replication package
+version: 2.2-zenodo-final
+date: 2026-09-01
+Zenodo DOI: 10.5281/zenodo.22237884
+ERS/SRS: 2.2 with definitive UML

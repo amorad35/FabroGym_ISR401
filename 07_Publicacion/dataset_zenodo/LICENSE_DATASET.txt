@@ -1,18 +1,1 @@
-Creative Commons Attribution 4.0 International (CC BY 4.0)
-
-Copyright (c) 2026 Equipo PFC FabroGym.
-
-El conjunto de datos anonimizado contenido en este directorio se prepara para su distribución bajo la licencia Creative Commons Attribution 4.0 International.
-
-Usted puede compartir y adaptar el material para cualquier propósito, incluso comercial, siempre que otorgue crédito adecuado, enlace la licencia e indique si realizó cambios.
-
-Texto legal:
-https://creativecommons.org/licenses/by/4.0/legalcode
-
-Resumen:
-https://creativecommons.org/licenses/by/4.0/
-
-Exclusiones:
-- Esta licencia no cubre consentimientos originales, firmas, cédulas, audios, videos, rostros, voces, documentos identificables ni ningún contenido de 02_Evidencias/00_Restringido/.
-- No se concede autorización para intentar reidentificar a participantes.
-- El depósito en Zenodo y la asignación de DOI permanecen pendientes; no debe citarse un DOI inexistente.
+FabroGym anonymized replication data and documentation: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Analysis code: MIT. Identifiable/restricted evidence is excluded.

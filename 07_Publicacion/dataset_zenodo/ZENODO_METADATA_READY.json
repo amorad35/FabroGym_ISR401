@@ -1,0 +1,60 @@
+{
+  "resource_type": "Dataset",
+  "title": "Replication package for Explainability Requirements for Fitness Routine Recommendations: A Field Case Study in Ecuador",
+  "publication_date": "2026-09-01",
+  "creators": [
+    {
+      "name": "Alvia Villegas, Erick Adalberto",
+      "orcid": "0009-0001-3777-470X",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    },
+    {
+      "name": "Mera Arias, Erick Jhair",
+      "orcid": "0009-0001-0068-1796",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    },
+    {
+      "name": "Mora Duarte, Alex José",
+      "orcid": "0009-0000-2494-2842",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    },
+    {
+      "name": "Ponce Rivera, Mery Helenmey",
+      "orcid": "0009-0006-6041-9198",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    },
+    {
+      "name": "Vaca Romero, David Octavio",
+      "orcid": "0009-0000-4457-3095",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    }
+  ],
+  "description": "Anonymized replication package for a requirements-engineering field case study on explainability requirements for a proposed fitness-routine recommendation component in FabroGym. Includes 16 anonymized session transcripts, questionnaire data, terminal requirements, traceability, thematic coding, member-checking decisions, processed results, manuscript-supporting material and reproducible analysis scripts. Identifiable audiovisual evidence and original consent material are excluded. The package also preserves 59 coded fragments from the ten initial interviews (ENTR-01..10), separated from the six walkthroughs used for the terminal explainability analysis.",
+  "keywords": [
+    "Requirements engineering",
+    "Explainability",
+    "Non-functional requirements",
+    "Requirements traceability",
+    "Thematic analysis",
+    "Reproducibility",
+    "Fitness management",
+    "FabroGym",
+    "Ecuador"
+  ],
+  "data_license": "CC BY 4.0",
+  "code_license": "MIT",
+  "related_identifiers": [
+    {
+      "identifier": "10.17605/OSF.IO/62YSC",
+      "relation": "IsSupplementTo",
+      "resource_type": "Other",
+      "note": "OSF preregistration"
+    },
+    {
+      "identifier": "https://github.com/amorad35/FabroGym_ISR401",
+      "relation": "IsSupplementTo",
+      "resource_type": "Software"
+    }
+  ],
+  "zenodo_doi": "10.5281/zenodo.22237884"
+}

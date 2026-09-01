@@ -1,0 +1,166 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se normalizaron saltos de línea y marcas técnicas de transcripción sin alterar el sentido de las intervenciones.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+WALKTHROUGH TÉCNICO 02 — VALIDACIÓN DEL PROTOTIPO
+Código de sesión: WALK-TEC-02
+Código del participante: Participante T02
+Perfil: Técnico
+Fecha de sesión: 18/08/2026
+Duración aproximada del audio: 26:38
+Nota de formato: la fuente no identifica de forma fiable todos los cambios de hablante; se conserva el orden de la conversación sin atribuir turnos no verificables.
+
+[00:00 aprox.]
+Registro de sesión: Muy buenos días compañeros y señoras presentes. Estamos reunidos en esta ocasión con el Participante T02 de la [INSTITUCION], en el cual vamos a llevar a cabo lo que es una revisión técnica de lo que son las interfaces y los usuarios de nuestro pequeño sistema, lo que es FabroGym . En este caso vamos a presentar un pequeño recorrido sobre los walltracks y un poquito de muestra sobre lo que son los mapas del programa para que así podamos tener una retroalimentación y también una recomendación por parte de gente que ya es experta y profesional en lo que es ingeniería.
+
+[00:37 aprox.]
+Registro de sesión: De pronto, ¿este ingeniero quiere presentarse o quiere decir algo referente? Como sea, mi nombre creo que ya es conocido en la universidad, soy el Participante T02 . Precisamente mi especialidad es el desarrollo de software y el manejo de bases de datos. Entonces vamos a ver si me puede colaborar con todo. En este caso le vamos a dar un poquito de lo que es el contexto del sistema. En sí, buscamos como tal lo que es automatizar un poco lo que es la gestión de clientes para lo que son los linazos . Entre esto de aquí vamos a encontrar lo que son interfaces como por ejemplo lo que es la sección de membresías,
+
+[01:12 aprox.]
+Registro de sesión: la sección de pagos y la sección de ventas de productos. Entre otras pequeñas categorías que vamos a tener en lo que es la gestión y administración de un gimnasio. En anteriores ocasiones tuvimos como tal recomendaciones respecto a la sección de clientes, pero en este caso queremos saber usted qué opina sobre el proyecto. En este caso como puede observar estamos en lo que es la sección de configuración personal. ¿Para qué cosas? Para que como tal podamos ingresar o como tal registrar al usuario líder o al usuario administrador en este caso.
+
+[01:47 aprox.]
+Registro de sesión: Como puede observar estamos trabajando con lo que son los datos personales del propietario en los cuales ya están todos cada uno para poder rellenar lo que son las interfaces. Esta es la interfaz principal para lo que es el ingreso del usuario principal. Lo que son los datos personales, los datos de la empresa, en lo que vamos a encontrar lo que son los nombres del gimnasio, correo, la dirección en la que se encuentra, si este cuenta con lo que es un root ya institucional del negocio y algunas que otras cositas más.
+
+[02:18 aprox.]
+Registro de sesión: Y por último lo que son las credenciales de acceso. ¿Por qué razón es importante indicar lo de las credenciales de acceso? Porque como tal el sistema como tal no va a permitir que otro usuario externo, por así decirlo, se registre automáticamente o directamente dentro del programa, ya que debe de tener como tal autorización del administrador mayor. Porque como tal el sistema va a ser implementado solamente para lo que son administradores, recepcionistas y entrenadores del gimnasio. Más no, todavía no se piensa en lo que es en la sección de los clientes.
+
+[02:52 aprox.]
+Registro de sesión: Entonces teniendo en cuenta todo eso, vamos a la sección de... ¿Dónde está para iniciar, entrar a lo que son ya dentro del programa? Es ahí mismo. Siguiente, siguiente. En esta sección de aquí, ya como puede ver, esto es lo que tenemos del usuario. Al momento de darle al botón registrarse, como le mencioné, uno puede registrar lo que es el usuario, pero el administrador como tal es el que brinda el acceso al sistema. El administrador mayor es el que indica si por ejemplo tal usuario va a ser recepcionista
+
+[03:22 aprox.]
+Registro de sesión: o tal usuario va a ser entrenador. Pero como tal, el administrador general del sistema solo va a ver, que va a ser el principal que se acaba de... Como super admin . Ya, esperemos un rato. Ustedes están manejando usuarios y roles, ¿verdad? El rol es el que me da los permisos dentro del sistema. Claro. Va a tener un rol principal, el administrador. El administrador como tal. Y los otros roles corresponden a quién, a los dueños del gimnasio? No, el dueño del gimnasio por lo general siempre, en lo que hemos estado revisando en las entrevistas, por lo general siempre son los administradores.
+
+[03:52 aprox.]
+Registro de sesión: El administrador principal. ¿Y quiénes se pueden registrar? Bueno, los que se pueden registrar solamente son, como mencioné, recepcionistas y entrenadores del gimnasio como tal. Entonces, estos registros como tal, este programa va a ser usado solamente para el uso del gimnasio. Entonces, el administrador como tal va a cerciorarse o va a verificar que el usuario que se esté registrando pertenece a uno de sus entrenadores o recepcionistas como tal. ¿Para qué? Para que el administrador les brinde el acceso al sistema por medio de lo que es una configuración
+
+[04:23 aprox.]
+Registro de sesión: ya de lo que son las credenciales del propio sistema. Porque en este caso, por ejemplo, ya vamos a comenzar con lo que es la sección de administrador. Ahí como pueden observar, esa es la plantilla principal de lo que es el sistema. Ustedes ya pueden ir navegando entre cada una de las interfaces que tenemos. Este es el dashboard , ¿verdad? Sí. Del administrador.
+
+[04:54 aprox.]
+Registro de sesión: Exactamente. Es el entorno del administrador. Él va a manejar clientes, aunque los clientes no se registran en el sistema, sino se ingresan manualmente. Exactamente. Los ingresa, ¿quién es el rol que permite el ingreso de clientes? Los recepcionistas. Los recepcionistas. Ellos tienen opción a ingresar el rol de los clientes. La membresía, que es la contratación mensual, anual, semanal, de alguna medida, de los clientes.
+
+[05:26 aprox.]
+Registro de sesión: Precisamente. Pagos, ventas, me imagino que venden productos adicionales a la membresía. Claro. Aguas, bebidas energéticas. Aguas, son proteínas, cetinas, etcétera. El control de inventarios también. El control de inventarios. Hay control de compras, ventas, facturas, compras, facturas, ventas. Eso se encuentra dentro de lo que es la parte de reportes. Ya, pero, ¿hay ese proceso? Es decir, ¿cómo manejan el inventario?
+
+[05:58 aprox.]
+Registro de sesión: Cuando yo vendo algo, ¿qué pasa con el inventario? ¿Disminuye? Tiene que disminuir el inventario. Tiene que disminuir el inventario. ¿Pero que lo hago manualmente? ¿O hay un proceso de facturación que se encarga de esto? No, no tenemos un proceso de facturación. Cuando venden un producto, ¿cómo lo registran? Exacto. Para lo que es la sección de vender, como tal, un producto, en la sección misma de venta, tenemos lo que es la sección de generar una nueva venta, como tal. Entonces, como tal, aquí vamos ingresando lo que son el cliente al que se le vende, el tipo de venta que vamos a realizar, puede ser un producto o servicio,
+
+[06:28 aprox.]
+Registro de sesión: la fecha en la que se realizó la venta, el tipo de pago, número de comprobante y el resto de inconvenientes . Y esto permite que automáticamente disminuya el stock en el inventario. Exactamente. Por eso el inventario no se debe editar. Claro. El inventario, como tal, lo único que hace es agregar una cantidad de productos, como puede ver allá. Ah, aquí solamente me permite insertar, ¿no? Ingresar productos y editar o comprar productos nuevos. Entonces, yo estoy comprendo, este movimiento stock es la compra de productos.
+
+[06:58 aprox.]
+Registro de sesión: Ya. Un ingreso a ingreso. Un ingreso, básicamente, porque el ingreso se da a través de las ventas. Exacto. Ya. Asistencia es... El control para la acepción del entregado. El control del acceso, ya sea por membresías. Hay ingreso directo, es decir, el sistema debe permitir que haya clientes que vengan, aunque no estén en una membresía, pero acuden un día, ¿verdad? Claro. Lo que es, por ejemplo, ya que hay clientes, como tal, que no acceden o no ingresan, como quien dice, todos los días del mes,
+
+[07:30 aprox.]
+Registro de sesión: sino que ingresan una o dos veces a la semana, incluso que realizan pago, por así decirlo, en efectivo y no por medio de tarjeta, por medio de otro tipo de método. Y se ingresan aquí, a través de esta pantalla. Registrar asistencia. Las asistencias, como tal, se tiene previsto que se va a trabajar por medio de unas tarjetas con código QR, ya que se tiene previsto que por medio de un lector en la barra de entrada se permita lo que es, al momento de colocar el código QR, la asistencia, como tal, queda marcada. Gracias, queda marcada. Ajá. ¿Y cómo pagaría alguien o cómo ingresaría alguien que no tiene membresía?
+
+[08:01 aprox.]
+Registro de sesión: Ahí la asistencia, como tal, sería manual por parte del entrenador. El entrenador tendría que registrarlo manualmente. Exactamente. ¿En qué parte? ¿Aquí mismo? Ahí mismo, en la siguiente asistencia. ¿En registrar este? Exactamente. Estoy tratando de comprender muy bien el sistema. Eso ahí son ya las novedades internas dentro del sistema, por ejemplo, lo que son la parte de la trazabilidad, muestra de lo que es uniforme de lo que son los entrenadores, etc. Ya, gestión de usuarios, aquí es donde el administrador puede...
+
+[08:34 aprox.]
+Registro de sesión: Este es el rol del administrador, por tanto, él debería poder designar aquellos usuarios que son... Recepcionista. ¿Los otros roles que ustedes tenían? Era recepcionista y entrenador. Entrenador. Incluso ya que el entrenador, como se da cuenta, tiene su propio apartado, que es la sección de rutinas, que es en donde se va a asignar como tal la rutina. Cuando alguien se registra como usuario nuevo, ¿el sistema le asigna algún rol automáticamente? No, de momento, el usuario no está, como quien dice,
+
+[09:08 aprox.]
+Registro de sesión: en estado pendiente hasta que el administrador como tal permita el acceso. Hasta que el usuario, la administración principal le diga... No me parece necesario, porque generalmente cuando se trabaja con pocos roles, no hace falta hacer todo ese proceso. ¿Cómo? No hay un registro, simplemente el administrador ingresa y crea el usuario nuevo y le asigna el rol. Ah, o sea, el recepcionista, como quien dice, no crea el usuario. No tiene como tal la sección de registrarse. No había una sección de registrarse.
+
+[09:38 aprox.]
+Registro de sesión: Generalmente se hace una opción de registro cuando el registro va a ser de manera masiva. ¿Más de 5 roles o más de 10? Se hace un estudio para eso, pero generalmente el registro de los roles está asignado cuando hay una carga masiva, o se crea cuando hay una carga masiva. Siempre se hace el análisis en desarrollo de sistemas, el análisis de costo-beneficio respecto al sobre. Es decir, cuánto me cuesta desarrollar una parte del código y cuánto beneficio va a tener desarrollar ese código.
+
+[10:09 aprox.]
+Registro de sesión: O sea, hacen un breve estudio antes de... Claro, cuando yo voy a crear esta parte del código, que es más compleja que simplemente permitir que el administrador cree los roles, perdón, los usuarios de determinados roles, eso es crear una creación automática, es decir, una auto-identificación de usuarios. Es más complejo que hacer que el usuario automáticamente, que el administrador cree esos roles. Por tanto, hay un costo de codificación más grande
+
+[10:40 aprox.]
+Registro de sesión: y hay que hacer una valoración si vale la pena o no desarrollar ese código. Y la seguridad. Entonces se hace un análisis de costo-beneficio, que es una matriz de riesgo generalmente, donde está el impacto y está el riesgo. Y se hace una valoración de eso para determinar si vale la pena o no tomar ciertas contingencias. A mayor impacto, pues más vale la pena. El costo que cuesta. Lo mismo ocurre con el desarrollo de software.
+
+[11:11 aprox.]
+Registro de sesión: Entonces uno hace una valoración y dice que esto vale. Pero yo sí creo útil utilizar esta parte del código que ustedes han realizado para permitir que los clientes se puedan registrar automáticamente. Es decir, yo por ejemplo, quiero ser un cliente de este gimnasio, yo me registro previamente, pido la solicitud, el administrador revisa mi registro y puede asignarme con un cliente. Es más, yo podría hacer la interfaz que permita que el cliente pueda pagar
+
+[11:42 aprox.]
+Registro de sesión: en línea la suscripción, pueda realizar, y simplemente él va al gimnasio. Y no tenga necesidad de ir al gimnasio para establecer la suscripción. Entonces, por ese lado me parece valioso que ya se piense en la suscripción automática de los usuarios. Que convieras a realizar ese proceso. Es decir, a darle la facilidad al cliente para que se registre en línea, para que pueda pagar en línea, y él simplemente va al gimnasio para hacer uso ya de su suscripción. Eso me parecería bien.
+
+[12:12 aprox.]
+Registro de sesión: Pero ustedes me dicen que todavía no han pensado en esa parte. En la parte de clientes, todavía no. Aunque sí se tiene previsto a un futuro, porque como tal, los clientes también deben de conocer o tener un control de sus propias rutinas. Pero eso ahí lo estamos manejando por medio de envío de mensajes por WhatsApp por parte del entrenador. Simplemente haciéndole un recordatorio, tenemos esta rutina también. Ustedes incluso lo podrían integrar entre WhatsApp y la aplicación IAPI que me permiten hacer esa integración sin problema.
+
+[12:45 aprox.]
+Registro de sesión: Horarios, que son horarios de disponibilidad. Horarios de control de rutinas dentro de la sección del gimnasio. Como puede ver ahí, se puede fijar que hay para lo que es de fuerza, hipertrofia, etc. Pero esos horarios son particularizados. Porque no todos los clientes tienen los mismos objetivos ni tienen las mismas rutinas. Eso de ahí es más que todo en cuestión de cómo se organiza el entrenador. Con sus clientes como tal.
+
+[13:16 aprox.]
+Registro de sesión: Ya que tengamos en cuenta que cada entrenador tiene una plantilla, por así decirlo, de horario distinto. Entonces, los que son con sus propios clientes, sus propios socios, usuarios, tienen como tal un horario ya prefijado, establecido entre ellos. O sea que yo puedo crear un horario para cada instructor. Aquí dice todos los instructores. La idea es crearle a cada instructor. Y si hubiera un gimnasio con varias salas, a cada sala. Así es. Lo veo bien, aunque generalmente es el cliente el que impone la rutina.
+
+[13:52 aprox.]
+Registro de sesión: No es el entrenador. Yo como cliente tengo mi rutina personalizada. O sea, usted crea su rutina como cliente. Yo fui hace muchos años también cliente de gimnasio. Yo iba al gimnasio. Entonces yo tenía mi tablita con la rutina que generalmente me la revisaba el entrenador. Es decir, yo proponía una rutina o el entrenador me daba una hojita. Me decía, mira, esta es la rutina que tienes que seguir en función de las necesidades que tú tienes.
+
+[14:23 aprox.]
+Registro de sesión: Pero si yo quería definición de mi cuerpo, tenía una rutina. Si quería desarrollo, englosamiento de músculo, tenía otra rutina. Y generalmente estas rutinas me las daban para dos meses, tres meses, dependiendo del tiempo que necesitaba. Pero también había la posibilidad de que yo, como soy yo, lleve mi rutina y le diga al entrenador. Mira, ¿qué opinas de esta rutina? Entonces el entrenador me daba las indicaciones. Me decía, mejora esto. Mira, tienes que hacer tantas repeticiones para mejorar el pecho. Te faltan piernas, necesitas más piernas. Yo también fui usuario de gimnasio, aunque ahora ya no parezco.
+
+[14:56 aprox.]
+Registro de sesión: Pero entonces, yo por eso tengo pleno conocimiento que la rutina generalmente es por cliente. Es decir, cada quien sigue su propia rutina en función de las recomendaciones del entrenador. No es que el entrenador impone una rutina para toditos, porque no todos tenemos los mismos objetivos dentro del gimnasio. Hay personas que quieren desarrollar una parte de su cuerpo más que otra. O necesitan desarrollar una parte de su cuerpo más que otra por salud. Hay personas que van al gimnasio precisamente no para vanidad, no para desarrollar musculatura,
+
+[15:26 aprox.]
+Registro de sesión: sino para mejorar la condición de alguna de las partes de su cuerpo. Nosotros teníamos compañeros en el gimnasio que iban porque habían tenido algún problema en las rodillas, en las piernas. Entonces ellos tenían otra necesidad y hacían solamente rodillas. Algunos iban fortaleciendo con ejercicios con muchas repeticiones de poco peso, por ejemplo. Entonces era una rutina muy particular. Pero eso ocurre por cliente, no es que el entrenador impone esta rutina.
+
+[15:58 aprox.]
+Registro de sesión: Eso me parece importante que ustedes lo tengan claro. Por eso desarrollaron un apartado para clientes. Yo recomendaría que cada cliente tenga su rutina y que la pueda verificar. Por eso es que sería tan importante que ustedes ya creen la parte del cliente. Para que el cliente pueda hacer su rutina y el entrenador pueda revisar y pueda decir, mira esta realmente es la rutina que necesita. Como quien dice el entrenador, la valida.
+
+[16:30 aprox.]
+Registro de sesión: Porque hay clientes que vienen, no entrenadores, clientes que vienen al gimnasio y ya con una rutina establecida, a veces por fisiatras. Es decir, por los médicos que se encargan de la recuperación. Fisioterapeuta. Fisioterapeuta. Y ellos traen y dicen, miren esto es lo que me ha recomendado el fisioterapeuta y yo voy a hacer lo que el fisioterapeuta. Entonces ahí el entrenador incluso no interviene porque no es su especialidad. Él dice, bueno entonces siga las indicaciones que te ha dado el fisioterapeuta porque él es el que más conocimiento tiene de esto.
+
+[17:04 aprox.]
+Registro de sesión: Entonces eso ha ocurrido. Es lo que ocurrió cuando yo asistía, en mi experiencia. Por eso yo recomendaría que esta rutina sea por clientes. Especialmente por aquellos clientes que tienen la membresía. La suficiencia. La suficiencia. Que se sabe lo que van a hacer. Eso por el paso de estos horarios. La gestión del reporte es buena. Se puede ampliar. Hasta de más. Se puede hacer de venta, de uso.
+
+[17:37 aprox.]
+Registro de sesión: Todo lo que te parezca mejor. Y en función de esto, el dashboard . Tiempo, tiempo de más uso, clientes que más utilizan. Eso ya, ahí hay que dejar volar la memoria. En función de, sobre todo las necesidades del administrador. Por eso yo les iba a consultar. Hicieron las entrevistas, la encuesta. Aplicaron los instructivos. Felicitación.
+
+[18:08 aprox.]
+Registro de sesión: Para poder realizar el software. Hicieron las consultas con los dueños de algunos fundamentos. Para poder iniciar el proceso de análisis de necesidades del software. Porque el estudio de las necesidades. Que son, se me fue el nombre ahorita. Los requerimientos. Estos requerimientos son la parte más importante del desarrollo del software. Hay mucha gente que lo deja como que fuera no necesario. Pero con el tiempo uno se da cuenta que eso es la parte más importante.
+
+[18:38 aprox.]
+Registro de sesión: Porque ahí ustedes establecen qué realmente es lo que necesita el cliente. Incluso para hacer recomendaciones. Ya tienen que tener muy clara la película de lo que el cliente necesita. Eso es lo primero que tienen que haber hecho ustedes. El estudio de las necesidades. Es decir, el análisis de funcionalidades. Ya, por lo demás veo que está excelente. El entorno gráfico está excelente.
+
+[19:10 aprox.]
+Registro de sesión: Ya lleva un framework me imagino que predefinido. Y lo demás está muy bien. Esas son las recomendaciones que les puedo hacer por el momento. No sé si tienen alguna otra cosa más. El manejo de roles y de usuarios está bien. Aunque yo le hiciera las modificaciones que ya les había indicado. Yo también haría en vez del manejo de inventario. Si ustedes pudieran hacerlo. El manejo de adquisiciones.
+
+[19:41 aprox.]
+Registro de sesión: Es decir, ingresos de facturas de compra. Más que manejo de inventario, el ingreso de facturas de compra. Es decir, yo registro las facturas de compra en el gimnasio. Y yo ya tengo un registro, un incremento automático. Por ejemplo, del stock. E incluso puedo saber los productos. En cuanto los vende, en cuanto los compro. Y como ya sé en cuanto los vendo, en algún momento puedo hacer un cruce. Para determinar cuáles serían mis ganancias brutas. Es decir, proyectándome hacia la escalabilidad del software. Proyectándome a que en algún momento maneje además de lo que ya está manejando ahora.
+
+[20:14 aprox.]
+Registro de sesión: Contabilidad, de costos y todos esos elementos. Permitiendo que el software sea escalable. Proyectándome hacia adelante. Eso nada más serían las recomendaciones que tengo por el momento. Entonces, con base a todo esto de aquí, le voy a hacer unas pequeñas preguntitas. Para ver qué es lo que me puede comentar sobre esto. Viendo lo que es la estructura general de lo que es el dashboard . La distribución de los módulos principales. ¿Considera que de pronto la navegación dentro de lo que es el SDK es intuitiva para el usuario?
+
+[20:45 aprox.]
+Registro de sesión: ¿O detecta que hay algún punto de fricción visual? No, la navegación está muy bien pensada. Quizás podría añadir en la usabilidad un camino de hormigas. Por ejemplo, podría ser importante, interesante. Si quisieran tenerlo. No lo tienen ahora. Pero es interesante. Añadir un camino de hormigas. Entonces, con respecto a lo que es incluso la lógica de negocio.
+
+[21:16 aprox.]
+Registro de sesión: Y a la regla misma de la validación del programa. En lo que es, por ejemplo, ya estuvimos hablando sobre el tema del inventario. Pero en la pantalla de lo que es de pagos y las membresías. De pronto, la forma en la que se muestran los estados. Porque en el caso anterior tuvimos una pequeña observación en lo que es en los estados. Ya que si se puede fijar, tenemos lo que es tanto para pagos. Ventas y membresías es solamente lo que es. No tenemos ninguna identificación como tal de los tipos de estado.
+
+[21:46 aprox.]
+Registro de sesión: Entonces, no sé si de pronto con respecto a eso de ahí. ¿Le parece claro? ¿Desde la vista de lo que es el control de datos? ¿O hay algún pequeño error ahí? No, a mí me parece perfectamente claro. Es decir, los colores. El uso de los colores y el uso de las palabras está muy bien. Es decir, muy intuitivo. No, no, con eso no tengo problema. ¿Considera que de pronto la interfaz ofrece suficiente retroalimentación visual?
+
+[22:16 aprox.]
+Registro de sesión: ¿De pronto en lo que es, por ejemplo, las aletas de éxito, confirmaciones? ¿Tras cada acción que vaya revisando? ¿O algo más? No, creo que sí. Que está bastante. Porque pude ver que tienen notas incluso a los costados. Notas de uso. Veo que tienen estadísticas. Creo que es bastante usable el sistema. No tengo recomendaciones al respecto. Me parece bastante bien. Y teniendo en cuenta todo esto de aquí. Lo que es la recolección de datos y todo eso. ¿Sugiere que de pronto modifiquemos? ¿Agrupemos de pronto algunos campos en específico?
+
+[22:47 aprox.]
+Registro de sesión: ¿Como para facilitar luego lo que es la estructura en lo que es la base de datos? ¿De pronto ahí mismo lo que es el sistema? ¿O algo más? No, bueno. Para hacer ese tipo de recomendaciones. Tendrían yo que hacer un análisis más profundo del software. Para modificar la base de datos. Porque bueno, eso ya implica que yo tendría que realizar exactamente. ¿Cuáles son las necesidades que tienen los anunciadores? Por ejemplo, respecto de la información de cliente. Si es necesario que yo tenga.
+
+[23:17 aprox.]
+Registro de sesión: Telefono , direcciones, correo electrónico. Tema de facturación. Pero ya ese es un análisis más profundo que el que podemos realizar simplemente en esta edición. Para hacer ese tipo de recomendaciones. Pero me imagino que ustedes ya hicieron ese análisis dentro del estudio de requerimientos del software. Y desde lo que es de su experiencia como tal. ¿Qué buenas prácticas deberíamos de tener en cuenta al pasar todos estos diseños como tal?
+
+[23:47 aprox.]
+Registro de sesión: Para que el proyecto como tal sea escalable y mantenible. Escalable, lo que les mencioné. Es decir, la predicción generalmente. A veces olvidamos la escalabilidad del software. Tenemos que proyectarnos hacia lo que se puede crear. Es decir, si yo tengo la proyección de hacer que los usuarios se integren a mi sistema. Tengo que desde ya permitir que los campos de la base de datos y la interfaz. Me permitan manejar la gestión de usuarios.
+
+[24:19 aprox.]
+Registro de sesión: O sea, tener un gestor de usuarios. Si yo quiero llevar un proceso contable. Tengo que ir colocando ya en el sistema la base de datos. Conforme se proyecte al manejo de un sistema contable. La notabilidad. Costos, beneficios. Claro, y encuesta a la renta, IVA. Facturación, por ejemplo. Si desean escalar a futuro. Al tema de facturación.
+
+[24:50 aprox.]
+Registro de sesión: Ya deberían ir revisando. Cómo se lleva la facturación a través del sistema de rentas internas. Que hay un manual entero para eso. Y ver qué campos necesitarían ustedes para manejar. Dentro de ese tipo de facturación. Y dejar los espacios necesarios dentro de la base de datos. Para que eso pueda ser escalado a lo posterior. Ok. Porque hay ciertas estructuras necesarias dentro de la facturación. Que a veces se contraponen con los de análisis previos.
+
+[25:21 aprox.]
+Registro de sesión: Y que no lo hemos dejado ya limpio ese tema. Entonces, en este caso considera que el diseño como tal de la interfaz. Y el flujo que se va llevando a cabo de lo que es el usuario. ¿Se encuentra listo o todavía no? Para pasar a lo que es la fase de implementación. ¿O de pronto hay ajustes críticos que debemos corregir antes de eso? Hay ajustes pequeños los que les había mencionado al inicio. Que yo recomendaría pero no son críticos. Y simplemente para pasar a la fase de producción. Faltaría la revisión que ustedes tienen que realizar.
+
+[25:51 aprox.]
+Registro de sesión: Previo a poner en producción el sistema. Tienen que hacer las pruebas con los usuarios. Las pruebas de usabilidad. Las pruebas de usabilidad. Pero ya está bastante terminado. El sistema va a ser el 90% más o menos. En ese caso, entonces, muchas gracias. Igualmente, Ingeniero. Aquellos por lo que es su observación. Y por las recomendaciones que nos ha brindado en esta ocasión. Esperamos también de pronto. Más a futuro con el avance del proyecto. Podamos contar también con su perspectiva más adelante.
+
+[26:21 aprox.]
+Registro de sesión: O su visualización de todo esto de aquí. Con todo gusto. Aunque para hacer un análisis más profundo. Se necesitaría mucho más tiempo que hemos tenido. Pero dentro del tiempo que hemos revisado. Esto es lo que les podría recomendar. Y felicitarlos además. Porque está bastante bien logrado. Listo. Muchas gracias.
