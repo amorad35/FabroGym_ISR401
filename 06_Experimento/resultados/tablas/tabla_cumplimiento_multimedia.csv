@@ -1,0 +1,2 @@
+﻿sesiones_unicas,entrevistas_ENTR,walkthroughs_WALK,walkthroughs_tecnicos,walkthroughs_no_tecnicos,audios,videos,duracion_total_video,duracion_total_audio,duracion_video_minutos,cumple_16_videos,cumple_240_min_video,hashes_audio_formato_valido,hashes_video_formato_valido,nota_hashes
+16,10,6,3,3,16,16,06:18:08,06:18:14,378.133,True,True,True,True,Se valida formato SHA-256 (64 hex). La coincidencia con multimedia requiere rehashear los archivos reales de la zona restringida.

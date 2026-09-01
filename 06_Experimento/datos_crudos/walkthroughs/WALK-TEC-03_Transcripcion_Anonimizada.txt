@@ -1,0 +1,93 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se normalizaron saltos de línea y marcas técnicas de transcripción sin alterar el sentido de las intervenciones.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+WALKTHROUGH TÉCNICO 03 — VALIDACIÓN DEL PROTOTIPO
+Código de sesión: WALK-TEC-03
+Código del participante: Participante T03
+Perfil: Técnico
+Fecha de sesión: 18/08/2026
+Duración aproximada del audio: 44:45
+
+[00:00 aprox.]
+Presentador: Bueno. En este caso, muy buenas noches a todos. En la noche de hoy estamos todos aquí reunidos ante la presencia del Participante T03, que nos va a ayudar en esta ocasión con una pequeña revisión técnica con respecto a las interfaces y los flujos de usuario de esta pequeña demostración de un prototipo para un sistema de gestión de gimnasios. Antes de iniciar, ¿el compañero Participante T03 desea presentarse o decir algo ante esta llamada?
+
+[01:15 aprox.]
+Participante T03: Bueno, buenas noches con todos. Principalmente, agradecerles por permitirme evaluar su prototipo que están realizando en clase y, bueno, espero aportarles con mis conocimientos y darles un feedback, tanto positivo como negativo, de lo que pueda ir evaluando.
+
+[02:30 aprox.]
+Presentador: Muy bien. En este caso, como acabé de mencionar, el Participante T03 nos estará brindando su retroalimentación, validando nuestras propuestas de diseño y orientándonos en las mejores prácticas antes de pasar a la fase de desarrollo final de este sistema. Antes de empezar, vamos a poner un poquito en contexto de qué trata el sistema. Actualmente buscamos automatizar la gestión de clientes dentro del área de un gimnasio. Vamos a gestionar la sección de membresías, asistencias, reportes del gimnasio, compra y venta de productos, e incluso gestión de inventarios de ahí mismo. Y unas que otras cositas más, como las rutinas, horarios, etc. Ya le dimos paso del sistema al compañero Participante T03, el cual puede acceder directamente en esta ocasión si desea.
+
+[05:10 aprox.]
+Presentador: Como podemos observar, en este caso vamos a encontrarnos con la configuración inicial del programa. Como tal, el programa solamente va a contar con tres roles principales, los cuales se espera que vayan a ser: administradores, recepcionistas y los instructores del gimnasio. Al momento de ingresar al sistema, lo primero que vamos a hacer es crear el usuario jefe/líder, que es el administrador. Como puede ver ahí, se encuentran los datos personales del propietario. Si usted desea puede verificar que todo está interactivo, puede escribir e ir interactuando con cada uno de los casilleros vacíos. Y lo mismo con las siguientes secciones, ya que nos podemos encontrar con los datos de la empresa y también con las credenciales de acceso.
+
+[07:45 aprox.]
+Participante T03: A medida que vaya evaluando le voy dando las observaciones, ¿verdad?
+
+[08:00 aprox.]
+Presentador: Claro. Si desea puede ir por partes, cosa que ahí por ejemplo estamos en la sección de inicio, y de ahí puede ir evaluando. Cualquier pregunta o duda, aquí estamos para ayudarle y responderle.
+
+[08:20 aprox.]
+Participante T03: Ya, bueno. Antes que me olvide, entonces voy a dar las observaciones del inicio. Principalmente aquí, el teléfono lo van a tomar como dato obligatorio. Recomendaría que el número de teléfono sea un dato obligatorio. De ahí en el aspecto de diseño (nombres, apellidos, cédula, correo), todo sí está correctamente. Al ser un prototipo, claro, tienen que posteriormente validar que el botón no se active mientras no se llene esta parte del formulario.
+
+[09:55 aprox.]
+Presentador: Claro, obviamente.
+
+[10:05 aprox.]
+Participante T03: En la parte del registro de la empresa, lo que es el RUC, esta parte tiene que ser obligatoria, ya que es el identificador de la empresa. Si tiene una sucursal, el RUC va a ser el identificador, por eso debería ser obligatorio y no opcional. Teléfono del gimnasio, dirección... bueno, esto sí está todo correctamente. Siguiente. Aquí también tenía otra duda y observación: la pregunta de seguridad. Debe tener una lista predefinida para uno poder elegir, porque no es recomendable que se ingrese la pregunta de forma manual. Si llega a fallar un carácter, o a su vez al hacer una búsqueda en la base de datos de una cantidad grande de preguntas, va a consumir muchos recursos. Otra que me di cuenta es que al "aceptar términos", igual debe estar linkeado a una pestaña, o a un modal, que se puedan leer los términos y condiciones, y encima las políticas de privacidad.
+
+[14:15 aprox.]
+Participante T03: En el inicio, lo que es en el Dashboard, aquí le está haciendo falta un botón tipo hamburguesa para que se pueda ocultar el menú, y de preferencia que el menú se encuentre oculto, solamente que se muestre el ícono. Esta parte de acá del usuario, ya que lo tenemos aquí dentro del Dashboard, no sería necesario nuevamente ponerlo en la parte de acá arriba. En los datos principales está bien, se encuentra bien. Aquí lo que sí recomiendo es que los bordes de cada tarjeta tengan un poquito más de resalte, o tengan una sombra de fondo para que se logre ver el contraste entre el fondo y la tarjeta de cada información, porque aparentemente se ve así como que todo muy plano.
+
+[18:05 aprox.]
+Participante T03: Ahora en la parte de clientes... está correctamente lo que es la tabla, los botones. Estos botones que sean un poquito... un color que tenga contraste con el fondo, porque cuesta un poco observarlos. Así mismo aquí tienen que indicar qué campos van a ser obligatorios al crear un cliente. Si aquí que tenga, como no se abre dentro de un modal padre, preferencia que aquí tenga linkeada la ruta, por ejemplo, si yo quiero regresar, que tenga la parte de "Clientes" aquí, o a su vez el botón hacia atrás.
+
+[19:40 aprox.]
+Presentador: La sección de ventas funcionará casi como la sección de facturación de un producto. Solo que en vez de los métodos tradicionales en el cual se contaba con una tabla de ingresar el producto, cantidad y ese tipo de cosas, en la sección de "Nueva Venta" se puede ingresar a qué cliente se le va a vender, el tipo de venta, el método de pago, el número de comprobante, detalles, etc.
+
+[20:30 aprox.]
+Participante T03: En este caso, aquí es recomendable que no se muestre primeramente esta información el historial, sino que si yo le doy a "Ventas", directamente me muestre esta información para registrar una venta de una forma más rápida. Y que tenga por aquí un botón que me permita ver los detalles o el historial; es un paso de más que se puede ahorrar. Aquí no estoy viendo... bueno, no sé cómo llegarán a manejar lo que es el IVA. El IVA no tiene que ir directamente en código, sino que tiene que haber una sección que pueda modificar el IVA. Hay productos que no constan con IVA, el IVA puede cambiar, y todo eso es preferible que sea manejado directamente en el panel de administrador y no en código. Y además que tanto lo que es ventas, pagos e inventario tengan su sección de auditoría para tener todo el control de todo el movimiento que vienen haciendo.
+
+[25:15 aprox.]
+Participante T03: Aquí lo que es en la categoría, puede ser también manejada con base de datos. Si en algún caso algún día el gimnasio tenga que expandirse más, puede implementar más tipos de categorías y no es necesario volver a tocar el código. El administrador viene aquí al panel, registra una nueva categoría y ya se añade automáticamente. Que sea más modular en lo que es el mantenimiento. En lo que es proveedores, ¿no están registrando proveedores?
+
+[26:00 aprox.]
+Presentador: No. Como tal, lo que es la sección de proveedores se está manteniendo un poquito más al margen. Tengamos en cuenta que un gimnasio como tal no suele ser tan extenso, por ende los proveedores no son tan variados.
+
+[26:45 aprox.]
+Participante T03: Igual en lo que es proveedores siempre es recomendable que también sea ingresado mediante el sistema y no esté predefinido. Ejemplo: yo compro un stock de productos a este proveedor, y al mes nuevamente le compro, nuevamente tengo que estar registrando sus datos. Como ya lo tengo almacenado, yo digo "proveedor número uno" y automáticamente me llena todo.
+
+[29:10 aprox.]
+Presentador: La sección de rutinas es enfocada para el instructor. Depende también del cliente, porque hay clientes que no pueden tener la misma rutina por temas de salud, o buscan el gimnasio no para definir músculos sino por temas de salud. Los instructores en base a los clientes organizan los horarios y los ejercicios.
+
+[30:05 aprox.]
+Participante T03: Ya. En rutina está asignado al instructor, ¿verdad? Sí está bien, está perfecto ahí.
+
+[30:15 aprox.]
+Presentador: El registro de asistencia es para los clientes. Esta sección es manual, automatizada por medio del registro del código QR. Se tiene previsto que el sistema llegue a tener un alcance en el que se incluyan a los clientes para que estos, por medio de sus celulares o una aplicación externa, puedan indicar qué días asisten.
+
+[31:00 aprox.]
+Participante T03: Si lo vamos a manejar actualmente así manualmente, claro, en una hora pico esto va a ser demasiado lento. Lo recomendable es que sea automático. Esta parte de asistencia se la puede manejar si un día falla o hubo una intermitencia con el servidor. Se puede tabular esos usuarios en ese tiempo y registrarlos manualmente, pero si va a ser en hora pico, va a estar el factor tiempo y la satisfacción del usuario. Mientras va a tener una cola de usuarios queriendo ingresar, se van a cansar y se van a ir.
+
+[34:20 aprox.]
+Participante T03: Aquí tengo una duda. Digamos que en este caso, el dueño le asigna un horario de clase a un instructor. Este instructor tiene varios tipos de clientes (masas, pérdida de peso, etc.). ¿Cómo el sistema detecta que esta clase tiene que dividirse o que no coja a todos esos?
+
+[35:10 aprox.]
+Presentador: El instructor también tiene control o es el que asigna sus propios horarios en base a los clientes que vaya a tener.
+
+[35:30 aprox.]
+Participante T03: Ah ya, de los roles... Igual aquí como tal está manejando como dueño, pero aparte de dueño deberían tener un nivel más alto, dejarlo como un "Super Admin". Al entregar el sistema, ciertas funcionalidades aún no pueden ser manejadas totalmente por el dueño, por ejemplo, configuraciones generales. Siempre tiene que haber un perfil del desarrollador dando mantenimiento. Lo que sí estoy viendo que está faltando es algo que tenga que ver con respaldos de base de datos. Claro que puede ser manejado con tareas o triggers directamente en el motor de base de datos, pero si fuera bueno que tengan una sección aquí, por ejemplo: si se cayó el sistema o quiero revisar algo, puedo hacer un backup directamente desde aquí de la configuración, sin ir al motor de base de datos. Esa parte creo que le está faltando.
+
+[41:00 aprox.]
+Participante T03: Principalmente, mis buenas prácticas a recomendar es elegir buenas tecnologías que estén acordes a las tecnologías actuales. Digamos, PHP puede estar un poquito obsoleto, ya nos vamos basando en tecnologías más actuales, por ejemplo utilizar React, Angular, Flutter... Y si tienen servidores de internet, manejar la menor cantidad de peticiones innecesarias al servidor para que el consumo sea mínimo. Un 90% está directamente ya para pasar a desarrollo. Principalmente, la corrección general es manejar mejor el tema de colores, porque parece que todo fuera en texto plano, las tarjetas no se identifican directamente.
+
+[43:30 aprox.]
+Presentador: Bueno, en este caso, muchas gracias Participante T03 por el tiempo que nos ha prestado en esta ocasión y por las valiosas observaciones que nos ha brindado. Nos ayudaría enormemente a perfeccionar esta etapa de programación, y esperamos contar con usted en un futuro para seguir evaluando este mismo proyecto.
+
+[44:15 aprox.]
+Participante T03: No, agradecerles totalmente por incluirme y poder evaluar este prototipo funcional. Cualquier duda o necesidad que tengan, estoy presto a colaborarles.
+
+[44:45 aprox.]
+Presentador: Muchas gracias, ingeniero. Nos estamos viendo en una próxima ocasión.
