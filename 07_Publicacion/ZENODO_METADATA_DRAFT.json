@@ -1,0 +1,56 @@
+{
+  "title": "Replication package for Explainability Requirements for Fitness Routine Recommendations: A Field Case Study in Ecuador",
+  "resource_type": "dataset",
+  "publication_date": "TO_BE_SET_ON_FINAL_DEPOSIT",
+  "creators": [
+    {
+      "name": "Alvia Villegas, Erick Adalberto",
+      "orcid": "0009-0001-3777-470X",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    },
+    {
+      "name": "Mera Arias, Erick Jhair",
+      "orcid": "0009-0001-0068-1796",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    },
+    {
+      "name": "Mora Duarte, Alex José",
+      "orcid": "0009-0000-2494-2842",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    },
+    {
+      "name": "Ponce Rivera, Mery Helenmey",
+      "orcid": "0009-0006-6041-9198",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    },
+    {
+      "name": "Vaca Romero, David Octavio",
+      "orcid": "0009-0000-4457-3095",
+      "affiliation": "Universidad Técnica Estatal de Quevedo"
+    }
+  ],
+  "description": "Anonymized replication package for a requirements-engineering field case study on explainability requirements for a proposed fitness-routine recommendation component in FabroGym. Includes anonymized transcripts, questionnaire data, terminal requirements, traceability, thematic coding, member-checking decisions, processed results and reproducible analysis scripts. Identifiable audiovisual and consent materials are excluded.",
+  "keywords": [
+    "Explainability",
+    "Fitness recommendation",
+    "Personalization",
+    "Non-functional requirements",
+    "Field study"
+  ],
+  "license_data": "CC-BY-4.0",
+  "license_code": "MIT",
+  "related_identifiers": [
+    {
+      "identifier": "https://osf.io/62ysc/",
+      "relation": "isSupplementTo",
+      "resource_type": "other",
+      "note": "OSF preregistration DOI 10.17605/OSF.IO/62YSC"
+    },
+    {
+      "identifier": "https://github.com/amorad35/FabroGym_ISR401",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "PRE-DEPOSIT DRAFT. Do not invent or prefill a Zenodo DOI. Deposit after Phase 6, then patch all project artifacts with the real DOI."
+}
