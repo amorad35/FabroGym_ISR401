@@ -1,0 +1,202 @@
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se normalizaron saltos de línea y marcas técnicas de transcripción sin alterar el sentido de las intervenciones.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+WALKTHROUGH NO TÉCNICO 03 — PROPIETARIO / ADMINISTRADOR
+Código de sesión: WALK-NTEC-03
+Código del participante: Participante NT03
+Perfil: No técnico
+Fecha de sesión: 24/08/2026
+Duración aproximada del audio: 22:56
+Nota de formato: la fuente no identifica de forma fiable todos los cambios de hablante; se conserva el orden de la conversación sin atribuir turnos no verificables.
+
+[00:00–02:07 aprox.]
+Registro de sesión: Bueno, ahora sí, vamos a empezar ya los micrófonos sí, encendidos, ya. Bueno, ahora vamos a proceder a lo que ha presentado este gastrado. En este caso, muy buenas tardes a todas las que están presentes en esta ocasión. A mi derecha tenemos en este caso al Participante NT03, él es el dueño como tal del gimnasio [GIMNASIO], el cual nos ha estado como tal ayudando con sus propias experiencias en lo que es el gimnasio, para que podamos como tal realizar lo que es el desarrollo de, por el momento, esta pequeña demostración, una pequeña demo, un walkthrough, para que él por medio de sus propias palabras nos pueda ir guiando en decirnos si les pareció bien, si las cositas estaban un poco todas contésticas y todo ese asunto. Entonces, antes de empezar como tal, de pronto tiene algo que decir este compañero Participante NT03. No, por ahora no. Ahorita que vamos revisando ya vemos qué se puede decir. Entonces, antes de entrar al programa, para que ustedes mismos lo puedan, vamos a hablar un poquito de contexto. Como hemos venido conversando yo anteriormente en el gimnasio, programas como tal, de momento, solo tenemos como fuente, tenemos como fuente lo que es una página web, ya que a partir de lo que es la página web nosotros vamos a realizar lo que es un form, para que a pasarlo directamente a la app móvil para que ahí también puedan gestionar. Entonces, el programa como tal es un sistema de gestión autónomo completo de lo que es el gimnasio, el cual va a contar con áreas de rutina, con áreas horarias, con la gestión de clientes, lo que es la gestión de la empresilla, y al momento de ingresar lo primero que va a tener es una gráfica que va a mostrar, por ejemplo, de manera visual lo que son las asistencias de los clientes, el pago, los avances, y ese tipo de cosas. Entonces, antes de entrar esto aquí, hemos dividido la gestión en dos partes. La primera es la inclusión o la agregación como tal del dueño o del local propio del gimnasio.
+
+[02:07–02:13 aprox.]
+Registro de sesión: En este caso, ya si desea, puede acceder para irle guiando. Ya, fácil. Vamos a ver.
+
+[02:14–02:22 aprox.]
+Registro de sesión: ¿Estoy haciendo lo malo? A ver. Sí. Ahora, si no es mucho la molestia, le vamos a comentar.
+
+[02:22–02:42 aprox.]
+Registro de sesión: Esta primera sección que vemos aquí en la pantalla es la configuración inicial del programa. En esta de aquí nosotros vamos a crear lo que son nuestros propios usuarios, en el caso suyo, como es administrador y dueño del propio gimnasio porque ahí mismo puede desarrollar lo desde ahí. Por eso dice datos personales del superadministrador, porque usted como tal es el dueño del programa.
+
+[02:42–02:51 aprox.]
+Registro de sesión: Claro. Entonces, ahí a partir de ahí puede ingresar directamente al sistema. Como puede ver, tenemos para irle el nombre, apellido, cédula, todo eso ahí.
+
+[02:51–02:57 aprox.]
+Registro de sesión: Entonces, si puede pelear, puede escribir, puede hacer lo que usted quiera. De pronto ahí en esta sección es de ahí. Ya bien, yo sigo empezando.
+
+[02:57–03:14 aprox.]
+Registro de sesión: ¿Y ahí ya qué más? Ya bien. Ahora, en esta sección, exacto. ¿Por qué razón la parte del gimnasio es importante? Porque más que todo, no solamente por el nombre, sino también por la ubicación de la misma.
+
+[03:14–03:34 aprox.]
+Registro de sesión: Ya que ésta, al ser de una página web y va a compartir como tal una fuente de datos junto con el móvil, eso puede ser bastante útil incluso para los propios clientes. Porque hay clientes que por ejemplo dicen, no sé dónde queda el gimnasio y todo ese asunto, pero de aquí por medio de la guía ya puede directamente encontrar el móvil. Aparte de la información como el número de teléfono, el correo y todo eso.
+
+[03:34–03:42 aprox.]
+Registro de sesión: Puede seguir directamente a la siguiente. Esta es la parte de credenciales de acceso. Es más que todo para la accesión del usuario solo.
+
+[03:43–03:57 aprox.]
+Registro de sesión: Ahí usted puede acceder a la aplicación. Usted puede crear su usuario para ya directamente ingresar al programa. Ahí puede, por ejemplo, tener usuario, contraseña, confirmar la contraseña, lo que es la pregunta de seguridad y todo eso.
+
+[03:59–04:09 aprox.]
+Registro de sesión: Claro, puedo seguir adelante. Antes de comenzar, a seguir ahí adelante de pronto, esa sección de cómo le ha estado apareciendo. Si lo ve más o menos agradable a la vista.
+
+[04:10–04:35 aprox.]
+Registro de sesión: Para acceder al usuario para ingresar al programa. En este caso, como ya vamos a trabajar en una pequeña demostración, ya tenemos de momento lo que son los tres usuarios principales, que en este caso van a ser el dueño, el recepcionista y el entrenador. Usted, como es dueño del gimnasio, va a proceder directamente con un usuario de dueño, con un usuario de superadministrador.
+
+[04:36–04:44 aprox.]
+Registro de sesión: En este caso, el usuario se llama dueño. Puede escribir directamente con D mayúscula. Dueño.
+
+[04:45–05:02 aprox.]
+Registro de sesión: Y la contraseña es 1, 2, 3, 4, 5. 1, 2, 3, 4, 5. Y 6. 1, 2, 3, 4, 5, 6. 6. Puede ingresar directamente ahí al sistema. Y ahora, esa es la pantalla principal que usted va a ver en el sistema. Como puede observar, es un dashboard gráfico, el cual en este caso está mostrando los ingresos de los últimos 7 días.
+
+[05:03–05:18 aprox.]
+Registro de sesión: De ahí puede verificar todo lo que es la pantalla, lo que es la actividad reciente, clientes activos y todo lo demás. De ahí en adelante, puede navegar en la sección del programa. Activos, clientes, energía, pago, inventario.
+
+[05:19–05:36 aprox.]
+Registro de sesión: ¿Cuántos productos puedo agregar? La cantidad de productos en la sección de inventario es bastante alta. Porque, por lo general, una base de datos suele administrar hasta miles, cientos de miles. Entonces, es una base de datos que incluso ya igualmente se puede ir administrando con el tiempo.
+
+[05:36–05:46 aprox.]
+Registro de sesión: Porque como tales productos van ingresando, también van saliendo. Las rutinas las debo yo crear, ¿verdad? Claro, exactamente. Por eso ahí en la parte de acá arriba puede ver una sección llamada nueva.
+
+[05:47–05:57 aprox.]
+Registro de sesión: Bien, ya listo. Pero cuando mi cliente acceda, me imagino que la interfaz va a ser diferente. Claro, la interfaz del cliente es muy diferente a la que usted está viendo ahora.
+
+[05:58–06:08 aprox.]
+Registro de sesión: Usted ahorita puede observar todo eso porque usted es el dueño de la herramienta. Exactamente. Ya, ya, entiendo.
+
+[06:16–06:20 aprox.]
+Registro de sesión: Configuración. Ya, ya, listo. Y ahí para ver aquí.
+
+[06:21–06:29 aprox.]
+Registro de sesión: Exactamente. Eso es para visualizar de manera general lo que son los datos que ya están ingresados dentro de Canella. Por ejemplo, esa es la parte de las rutinas.
+
+[06:29–06:35 aprox.]
+Registro de sesión: Ah, rutinas. Vamos a ver. Ahí, aquí tenemos ejercicios, observaciones, todo ahí.
+
+[06:35–07:01 aprox.]
+Registro de sesión: Otra vez. Ahora, vamos a ir viendo de parte en parte, en sección a sección, para ir un poquito a entender qué es lo que es. Ahora, si nos fijamos en la parte de inicio, aparte de lo que es el dashboard que hemos venido mencionando, si se puede dar cuenta, en la parte inferior nos encontramos con tres accesos directos a las partes más principales en el dashboard yo como dueño.
+
+[07:01–07:27 aprox.]
+Registro de sesión: Que son la parte del registro del cliente, el registro de pago y la sección de reportes. ¿Por qué razón enfoco en la sección de reportes? Porque en la parte de reportes no solamente puede generar lo que son las facturas, sino que también puede generar un reporte oficial, supongamos, el rendimiento mismo de los que son de los clientes. Usted, digamos, de aquí en unos tres meses o en unos cinco meses, usted quiere conocer el rendimiento de todos estos usuarios a lo largo de su tiempo.
+
+[07:27–07:49 aprox.]
+Registro de sesión: Usted, por medio de los reportes, puede conocer por fecha, por nombre, y exactamente qué rutina se ha ido enfocándose cada uno de los clientes. Entre todo eso, incluso en la sección del mismo donde dice sección de reportes, puede observar incluso detalladamente cuadritos cuadritos cada una de las características de acciones. Aquí puede ver incluso los detalles de cada uno.
+
+[07:51–07:59 aprox.]
+Registro de sesión: Ver análisis. Exactamente. Puede fijarse incluso las asistencias por día, incluso por género.
+
+[08:00–08:10 aprox.]
+Registro de sesión: Tienen todo esto en manera. Si se puede dar ahora en cuenta, esa es la parte de inicio. Ahora vamos a la siguiente parte que es la de clientes.
+
+[08:11–08:41 aprox.]
+Registro de sesión: En clientes, es como tal, al principio no como ir agregando lo que son, la asistencia como tal, sino que en este caso hay algo que en los gimnasios, como tal, suele pasar. Y es que, como tal, al pago de las membresías, no solamente hay clientes como tales que, aunque paguen la membresía, no asisten todos los días. Hay clientes que solamente van una vez a la semana, o dos veces a la semana, entonces hay que tratar de manejar y controlar todo ese tipo de gastos, y también de la asistencia de ellos mismos.
+
+[08:42–09:08 aprox.]
+Registro de sesión: Entonces, para ese tipo de casos, se ha manejado esta parte de la gestión de clientes. Para que usted mismo pueda conocer por medio de quiénes son los clientes, y aparte de eso, si su membresía es una membresía premium, o una VIP, una mensual, o una, por así decirlo, casual, que es la que acabé de mencionar, la de ir a su confección. Ahí usted puede incluso editar la misma información de los clientes en la parte de acciones, que está visualizar, editar y eliminar.
+
+[09:10–09:45 aprox.]
+Registro de sesión: Esa es la parte de visualizar, la otra de editar, y la última que es eliminar. Si usted de pronto dice, ok, me equivoqué en el nombre de la compañera María, ¿qué puede ser el resultado? Editar el registro. Ahora, en la parte de la membresía, que es la parte que tal vez a usted como dueño es lo que más le interesa, puede observar incluso por medio de los cuadritos arriba, lo que son las membresías que se encuentran activas en este caso, las nuevas que hay por el mes, las que están por vencer, y los ingresos que se han ido adquiriendo por membresía.
+
+[09:46–10:00 aprox.]
+Registro de sesión: ¿Puede recorrer eso ahí? Es una demostración de mod, pero no cambia mucho. Puede ir a la 1, 2, 3, pero no cambia mucho el gráfico porque es lo mismo. Es porque como tal no tenemos más datos ingresados a la base.
+
+[10:00–10:48 aprox.]
+Registro de sesión: Son datos que pusimos de manera aleatoria para dejar funcionando el programa. Ya después es usted, ya nada más lo va ingresando, paso a paso, poco a poco, y ya todo eso ahí sale del área. Incluso al futuro, si ya después decide, dice, bacán, sí, me gusta el programa, el nombre incluso de la misma aplicación cambia. En vez de ser FabroGym, pasa a ser la de [GIMNASIO]. Incluso lo que es la coloración, y aquí como ven la coloración de esos gimnasios como estilo negro con rojo y este tipo de color. Ya.
+
+[10:49–11:14 aprox.]
+Registro de sesión: Ya, ya estamos pendientes de eso. Enfocarnos en realizar un sistema de facturación como ven en los supermercados, que simplemente por medio del producto se rellena automáticamente. Lo mismo va a pasar en la asistencia.
+
+[11:14–11:33 aprox.]
+Registro de sesión: Porque si no mal recuerdo, usted mencionó que le gustaría como tal acceder con el código QR en una tarjetita de cada uno de los clientes que tiene membresía, que directamente lo que hacen es mostrar la tarjetita y ya con eso la asistencia queda registrada. Claro. Todo eso de ahí irá como que implementado ya al momento de realizar, de tener el producto ya tunado.
+
+[11:34–11:50 aprox.]
+Registro de sesión: Porque eso de ahí vamos a tenerlo enlazado junto con la aplicación móvil. Porque el uso de la tarjeta, es verdad que muchos clientes lo necesitan, pero hay casos en los que los clientes como tales suelen dejar la tarjeta olvidada, pero el celular casi nunca lo olvidan. Entonces, el código QR lo pueden cargar incluso en el mismo celular.
+
+[11:52–12:09 aprox.]
+Registro de sesión: Ya, sigo. Puede seguir. La gestión de inventario, como puede obtener el mismo nombre, automáticamente lo que es gestionar los inventarios, que es el producto, que es lo que es, si hay un estorbajo.
+
+[12:10–12:19 aprox.]
+Registro de sesión: Claro, aquí puede poner las bebidas, los suplementos. Todo lo que hay disponible en el Binance. Exactamente.
+
+[12:21–12:32 aprox.]
+Registro de sesión: Ya, seguimos. Puede seguir ya directamente a la sección de rutinas. Y lo de las rutinas ya es más familiar para usted, que es creador de rutinas, usted ya sabe un poco más el manejo de todo eso de ahí.
+
+[12:33–12:56 aprox.]
+Registro de sesión: Las rutinas, las creas y son visualizadas de forma general por todos los alumnos o puedo especificar a quien jamás se los muestre? No, claro que puede hacerlo de manera general, pero es cuando se crea una clase en grupo, una clase grupal. Es cuando es una clase privada o de manera individua, ahí se gestiona simplemente. Exactamente.
+
+[12:58–13:05 aprox.]
+Registro de sesión: Claro, me parece mejor así, porque es más lejos para cada persona. Ya, listo, listo. Pasamos a la siguiente.
+
+[13:05–13:12 aprox.]
+Registro de sesión: Claro. La gestión de asistencia. Ahí actualmente se está mostrando la versión manual.
+
+[13:13–13:33 aprox.]
+Registro de sesión: La versión automática ya sabe que es la mención de la tarjetita código QR. Claro, ahí se ve la asistencia, todo el tiempo promedio de cada persona. Y al igual que en todas las demás interfaces, hemos revisado que en la parte superior derecha está el botoncito verde, ya sea para registrar asistencia, registrar ventas, registrar membresía, rutinas y lo demás.
+
+[13:34–13:41 aprox.]
+Registro de sesión: Ya, novedades internas. Las novedades internas es el enfoque más que todo para ustedes como los trabajadores del mismo gimnasio. Claro.
+
+[13:41–14:04 aprox.]
+Registro de sesión: Están entre ustedes, como quien dice, esa sección es definida para usted como dueño, para los entrenadores y para los recepcionistas. En la gestión de novedades internas, eso más que todo es en la parte de, por ejemplo, observaciones para un entrenador, diciéndole, por ejemplo, ok, te falta tal cosa, tienes que averiguar esto, o te hace falta tal entrenamiento para tal cliente. Por eso están los observaciones.
+
+[14:07–14:17 aprox.]
+Registro de sesión: Ya, acá ya es parte de la administración. Claro, esa parte de abajo es la parte de administración. Los que trabajan conmigo.
+
+[14:17–14:46 aprox.]
+Registro de sesión: Exactamente. De ahí incluso la parte de la gestión de usuarios, usted como dueño va a tener, antes se tenía previsto que el sistema, que en el programa como tal, usted no, o sea, como quien dice, el usuario, en este caso el recepcionista o el entrenador, iría a registrarse directamente al programa. Pero, por temas de seguridad, usted también modelo a que usted como dueño del gimnasio sea quien ingrese o quien otorgue como tal los usuarios a aquellos miembros.
+
+[14:47–15:06 aprox.]
+Registro de sesión: ¿Por qué? Porque, por lo general, ese tipo de mecánica de registrarse dentro del sistema es más que todo enfocado por una cantidad bastante grande de usuarios. En este caso, como en el gimnasio, los usuarios principales van a ser usted, el entrenador y el recepcionista como tal. Esos usuarios como tal, usted los va a administrar.
+
+[15:06–15:17 aprox.]
+Registro de sesión: Por ejemplo, yo que soy entrenador y digo que yo trabajo como entrenador y esto es chévere. Usted me dice, ok, acá, dame tu número y tu correo. Y a tu correo, en dos o tres horas te llega un usuario.
+
+[15:18–15:35 aprox.]
+Registro de sesión: Con ese usuario tú puedes ingresar al programa y todo eso porque eso ya es algo que usted mismo puede gestionar. ¿Qué son los horarios de trabajo? En los horarios tenemos, estamos viviéndonos en dos secciones. En la gestión de horarios de trabajo y en la gestión de horarios de entrenamiento, que es para el control de rutina.
+
+[15:35–15:46 aprox.]
+Registro de sesión: Ese ahí actualmente está mostrándose el control de rutina. Porque puede ver que están seleccionados por el control de entrenamiento. Ahí ya listo, listo.
+
+[15:46–16:05 aprox.]
+Registro de sesión: Pero digamos las personas en cualquier hora y en cualquier hora de jornada, trabajan casi todos en una hora. Como mencioné, esa parte de ahí es más que todo enfocada para la gente que tiene su empresa. Ellos como tal ya van organizándose, el entrenador como tal ya tiene organizadas sus experiencias como tal.
+
+[16:05–16:25 aprox.]
+Registro de sesión: Entonces, como tiene digamos 15 estudiantes, de los 15 estudiantes dos estudian o trabajan el lunes, otros tres trabajan el martes o el lunes trabajan cuatro, pero con diferentes ejercicios. Esos son horarios como tal que el entrenador tiene que ir administrando con sus diferentes estudiantes. La gestión de reportes de la semana, del mes, de todo.
+
+[16:25–16:46 aprox.]
+Registro de sesión: Eso ahí le hace el reporte de absolutamente todo. De la asistencia incluso de los trabajadores, de lo que son de los clientes, del estado de la empresía, todo lo que es la parte de reportes. Ahí ya se puede poner por semana.
+
+[16:55–17:24 aprox.]
+Registro de sesión: Configuración. La configuración general del sistema. Ahora, antes de terminar con esta sección de lo que es la mostrada de entrevistas, vamos a hacer unas pequeñas preguntitas.
+
+[17:24–17:48 aprox.]
+Registro de sesión: Ahora, si no hay más preguntas, voy a volver a colocarme ahí para poder estar frente a usted. Como hemos venido trabajando y visualizando ahorita lo que es el programa, antes de empezar con las preguntas quiero saber su opinión. ¿Qué le parece? De forma general es interesante.
+
+[17:48–18:02 aprox.]
+Registro de sesión: Sí, todo lo que usted había mencionado se necesita para un programa de gimnasio. Más que todo lo que es la asistencia, el control de inventario, también llevar a uno mejor control de los ingresos, de todo eso. Exactamente.
+
+[18:03–19:00 aprox.]
+Registro de sesión: Ahora, teniendo en cuenta todo eso, quiero saber que, de pronto a usted, al ver lo que es el programa o la pantalla como usted hace por primera vez, ¿le resulta claro qué es lo que debe de hacer, en este caso usted como dueño, o qué botón presionar para realizar ciertas acciones o ciertas tareas? ¿Le parece todo bien? Sí, todo bien, claro. Se especifica bien el programa, no hay complicaciones. Y sobre lo que es la parte de la resolución de sus trabajos, de sus tareas como dueño, pensando de pronto en el trabajo suyo día a día, ¿considera de pronto que este proceso de trabajo que usted le ha estado llevando, lo que es llevar a la verdad al cliente, a la membresía, todo eso ahí, ¿le está ahorrando de pronto tiempo o de pronto siente que hay un proceso que lo está reteniendo, que lo está moviendo más lento de pronto? No, sí, le ahorra tiempo estar revisando lo que es la mensualidad y el programa mismo va a revisar cuánto ya está pendiente o está o algo, cuánto es la mensualidad y todo eso.
+
+[19:00–20:00 aprox.]
+Registro de sesión: Y de pronto, con lo que son las palabras y los nombres, tipo de las secciones que hay en cada uno de los puntos, ¿le resulta bastante conocido o fácil de entender? ¿O hay de pronto algún tema que... Sí, de pronto se entiende todo. Muy bien, es claro y preciso. Sí, de pronto hay una sección que tal vez no nos ayuda en cualquier caso más a revisar y es que de pronto cuando usted, por ejemplo, va a ingresar en este caso, vamos a la sección de membresía o cliente, en cualquier sección, de pronto al momento de ingresar a una nueva membresía, ¿le parece claro incluso lo que son las acciones de pronto en algún momento usted llegue a escribir algo mal y envíe, pueda cancelar esa acción o de pronto limpiar la pantalla? Inclusive, para evitar esos inconvenientes, agregamos la parte de editar los datos que pudimos ver en la sección anterior para en caso de pronto usted comete algún error o dice ok, me equivoqué aquí en agregar el valor, en agregar el nombre y ese tipo de cositas, para que usted tenga lo que es la corrección.
+
+[20:01–21:30 aprox.]
+Registro de sesión: Entonces, teniendo eso de ahí, si por error presiona un botón equivocado o no encuentra de pronto algo por ahí en lo que es en el programa, ¿le parece claro lo que es el hecho de cancelar la acción y todo eso? Sí está comprensible todo, está lógico. Y con lo que es la parte de la visibilidad de la información, porque como puede ver esta información, puede que para muchos, digamos, muchos van a decir que hay demasiada información, está muy bien concentrada la información en un cierto punto, pero en este caso, para usted, viendo cada una de las pantallas, en específico la principal, que fue la del dashboard, que vimos la parte gráfica, los datos que usted puede ver en este caso, ¿son realmente los más importantes para lo que es en este caso su trabajo diario o falta algún dato que necesite ver en este caso? No, para el trabajo diario que se da en el gimnasio está completo, solo habría que ver, porque igual, diferente a una computadora o un celular, hay que ver cómo se va a visualizar en el celular si no se satura, y no es muy difícil observar, pero hasta ahora todo bien ahí. Listo, y sobre lo que es este, si de pronto usted en este momento, digamos, usted de aquí ya ahora, llegando al gimnasio, tuviera que usar este sistema, ahorita o mañana mismo, ¿qué tan fácil cree usted que sería manejar el sistema? ¿Cree que es fácil o necesitaría como tal tiempo de capacitación? No, no es fácil, habría que enseñar a los muchachos, sí, pero para mí se llamaría fácil.
+
+[21:32–22:07 aprox.]
+Registro de sesión: Listo, en ese caso me parece muy bien todo lo que ha venido mencionando, como tal de culminar, ¿tiene alguna observación, alguna crítica? De pronto, diga, está muy bien el programa, pero hace falta que le agreguen esto, o de pronto que le cambien algún diseño, algún color, o no se ve tal cosa. Bueno, como me has indicado de que es como que un prototipo que se podrá cambiar el nombre del gimnasio, los colores, adecuar a cada negocio, yo lo veo excelente, no veo que le falte algo. Sí lo veo bien completo, porque está todo lo que se necesita para lo que es el gimnasio.
+
+[22:08–22:24 aprox.]
+Registro de sesión: Muy bien, entonces, en este caso, si no hay ninguna otra observación de pronto que quiera dar, ¿alguna crítica nada más? No, por ahora no, no todavía. Bueno, en ese caso, muchas gracias a ti Participante NT03 por habernos acompañado en este momento. Listo.
+
+[22:24–22:51 aprox.]
+Registro de sesión: Fue un gusto, porque como tal, gracias a ti hemos estado llevando a cabo este proyecto, y igual de pronto a futuro me gustaría volver a contar contigo si llego a necesitar algún miembro y todo eso, porque este proyecto va de largo todavía. Entonces, como tal, si cuento contigo en el apoyo de todo lo necesario, bacán, nos estaríamos viendo como quien dice de aquí a unos días, unos meses, quién sabe. Entonces, pues muchas gracias, entonces eso sería todo.
+
+[22:51–22:56 aprox.]
+Registro de sesión: Nos vemos, cuídense. Ahora sí. Ya estamos ahí.
