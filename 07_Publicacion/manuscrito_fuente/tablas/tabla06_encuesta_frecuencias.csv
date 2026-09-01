@@ -1,0 +1,80 @@
+﻿variable,categoria,conteo,porcentaje
+attendance_freq,1 vez por semana,28,40.0
+attendance_freq,2 a 3 veces por semana,28,40.0
+attendance_freq,4 a 5 veces por semana,10,14.286
+attendance_freq,6 o más veces por semana,4,5.714
+membership_tenure,De 1 a 6 meses,30,42.857
+membership_tenure,Menos de 1 mes,29,41.429
+membership_tenure,De 7 a 12 meses,6,8.571
+membership_tenure,Más de 1 año,5,7.143
+membership_check,Consulta verbal en recepción,34,48.571
+membership_check,Mensaje por WhatsApp u otro medio,16,22.857
+membership_check,Tarjeta o credencial,10,14.286
+membership_check,No suele verificarlo,6,8.571
+membership_check,No voy al gym,1,1.429
+membership_check,Pago diariamente ,1,1.429
+membership_check,Huella dactilar ,1,1.429
+membership_check,Ubicamos nuestro rostro en una máquina y eso nos da acceso ,1,1.429
+expiry_difficulty,A veces,31,44.286
+expiry_difficulty,Casi nunca,22,31.429
+expiry_difficulty,Nunca,13,18.571
+expiry_difficulty,Siempre,2,2.857
+expiry_difficulty,Casi siempre,2,2.857
+payment_wait,Casi nunca,26,37.143
+payment_wait,A veces,25,35.714
+payment_wait,Nunca,12,17.143
+payment_wait,Casi siempre,6,8.571
+payment_wait,Siempre,1,1.429
+notice_preference,WhatsApp,34,48.571
+notice_preference,Correo electrónico,13,18.571
+notice_preference,Aviso presencial,13,18.571
+notice_preference,Notificación del sistema,9,12.857
+notice_preference,No deseo recibir avisos,1,1.429
+registration_ease,Ni fácil ni difícil,30,42.857
+registration_ease,Fácil,18,25.714
+registration_ease,Difícil,9,12.857
+registration_ease,Muy fácil,9,12.857
+registration_ease,Muy difícil,4,5.714
+plan_clarity,Clara,31,44.286
+plan_clarity,Ni clara ni poco clara,15,21.429
+plan_clarity,Poco clara,13,18.571
+plan_clarity,Muy clara,8,11.429
+plan_clarity,Muy poco clara,3,4.286
+staff_satisfaction,Satisfecho(a),32,45.714
+staff_satisfaction,Ni satisfecho(a) ni insatisfecho(a),22,31.429
+staff_satisfaction,Muy satisfecho(a),7,10.0
+staff_satisfaction,Insatisfecho(a),5,7.143
+staff_satisfaction,Muy insatisfecho(a),4,5.714
+entry_method,Cuaderno o lista impresa,24,34.286
+entry_method,Aviso verbal,18,25.714
+entry_method,Sistema digital,16,22.857
+entry_method,Tarjeta o credencial,6,8.571
+entry_method,No se registra,6,8.571
+routine_consult,Una vez al mes,26,37.143
+routine_consult,Nunca,16,22.857
+routine_consult,Cada quince días,12,17.143
+routine_consult,Una vez por semana,9,12.857
+routine_consult,Varias veces por semana,7,10.0
+future_info,Rutina asignada,20,28.571
+future_info,Estado de la membresía,14,20.0
+future_info,Avisos y novedades,12,17.143
+future_info,Pagos realizados,10,14.286
+future_info,Registro de asistencia,9,12.857
+future_info,Compras de productos,5,7.143
+purchase_difficulty,No he tenido dificultades,38,54.286
+purchase_difficulty,Precio poco claro o diferente,14,20.0
+purchase_difficulty,Falta de disponibilidad,9,12.857
+purchase_difficulty,Demora o error en el registro o pago,5,7.143
+purchase_difficulty,Otra dificultad,3,4.286
+purchase_difficulty,No compro,1,1.429
+improve_first,Membresías,15,21.429
+improve_first,Comunicación y avisos,14,20.0
+improve_first,Atención al cliente,14,20.0
+improve_first,Inventario y ventas,10,14.286
+improve_first,Rutinas,9,12.857
+improve_first,Pagos,8,11.429
+privacy_importance,Importante,28,40.0
+privacy_importance,Muy importante,26,37.143
+privacy_importance,Moderadamente importante,9,12.857
+privacy_importance,Nada importante,5,7.143
+privacy_importance,Poco importante,2,2.857

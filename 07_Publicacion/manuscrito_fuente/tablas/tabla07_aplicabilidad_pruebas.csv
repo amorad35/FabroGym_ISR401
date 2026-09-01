@@ -1,0 +1,6 @@
+﻿metrica_prueba,estado,justificacion
+Satisfacción Likert por dimensión de explicabilidad + IC95%,NO APLICABLE,El cuestionario real no contiene ítems Likert de explicabilidad por dimensión. Los índices ordinales son generales y descriptivos.
+Fleiss kappa entre rondas de validación,NO CALCULADO,No existen dos rondas equivalentes de clasificación; el protocolo v1.4 preregistró decisión nominal de member checking y excluyó kappa.
+U de Mann-Whitney técnico vs no técnico,NO APLICABLE,Hay tres walkthroughs por perfil y no existe resultado cuantitativo independiente por participante preregistrado.
+Shapiro-Wilk / Levene,NO APLICABLE,No se ejecuta una hipótesis inferencial sobre una variable cuantitativa del Enfoque 3.
+Bootstrap IC95% de índices ordinales generales de encuesta,APLICADO DESCRIPTIVAMENTE,Solo describe seis preguntas ordinales generales; no se interpreta como explicabilidad ni como prueba de hipótesis.

@@ -1,0 +1,420 @@
+% FabroGym - Entrega 4 (2B)
+% Target journal: Requirements Engineering (Springer Nature)
+% Official authoring class required: sn-jnl.cls
+\documentclass[pdflatex,sn-basic]{sn-jnl}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+\usepackage{xurl}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{threeparttable}
+\usepackage{rotating}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{float}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
+
+\begin{document}
+
+\title[Explainability requirements for fitness recommendations]{Explainability Requirements for Fitness Routine Recommendations: A Field Case Study in Ecuador}
+
+\author[1]{\fnm{Erick Adalberto} \sur{Alvia Villegas}}
+\author[1]{\fnm{Erick Jhair} \sur{Mera Arias}}
+\author[1]{\fnm{Alex Jos{\'e}} \sur{Mora Duarte}}
+\author[1]{\fnm{Mery Helenmey} \sur{Ponce Rivera}}
+\author[1]{\fnm{David Octavio} \sur{Vaca Romero}}
+
+\affil[1]{\orgdiv{Facultad de Ciencias de la Computaci{\'o}n}, \orgname{Universidad T{\'e}cnica Estatal de Quevedo}, \orgaddress{\city{Quevedo}, \state{Los R{\'i}os}, \country{Ecuador}}}
+
+\abstract{\textbf{Context:} Explainability is increasingly treated as a software-quality concern, yet small organizations often need concrete requirements before an intelligent component exists. \textbf{Objective:} We investigate which explainability requirements emerge for a proposed fitness-routine recommender in FabroGym, a local-gym management system, and how those requirements change after member checking. \textbf{Method:} We conducted a bounded requirements-engineering case study using ten initial interviews and six prototype walkthroughs (three technical and three non-technical), complemented by a 70-response client questionnaire. The walkthrough corpus contains 76 coded fragments and 37 normalized codes. Explainability-relevant fragments were transformed into candidate non-functional requirements and reviewed by three prior participants (MC-P01--MC-P03). All numerical outputs are reproduced by versioned Python scripts. \textbf{Results:} Nine fragments were pertinent to explainability, seven from technical and two from non-technical walkthroughs. They produced four candidate requirements concerning recommendation rationale and constraints, human review/provenance, routine history, and the principal criterion behind a suggestion or automatic assignment. Member checking yielded 12 decisions: four confirmations and eight adjustments; all four candidates were retained with changes. The strict code-saturation indicator for the final three walkthroughs was 6.306\%, above the predefined 5\% threshold, while axial-category stabilization was 1.852\%. \textbf{Conclusions:} Explainability requirements can be elicited and operationalized before implementing a recommender, but the evidence supports specification and validation rather than claims about an implemented AI component or generalized user effects.}
+
+\keywords{Explainability, Non-functional requirements, Fitness recommendation, Requirements engineering, Field study}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+Small fitness centers coordinate memberships, payments, attendance, product sales, instructor availability, training routines, and day-to-day handovers under strong time and staffing constraints. In such settings, requirements engineering (RE) is not merely a documentation exercise: it is the mechanism used to separate observed operational needs from attractive but unsupported functionality. The FabroGym project was developed around that distinction. Its terminal requirements corpus follows ISO/IEC/IEEE 29148:2018 and the quality model of ISO/IEC 25010:2023, while the empirical component is treated as a bounded software-engineering case study \cite{iso29148,iso25010,pohl2010,swebok2024,runeson2009,wohlin2012}.
+
+The research problem becomes sharper when a future intelligent component is considered. Recommendation systems can provide personalized alternatives, but a useful recommendation is not automatically an understandable one. Decades of recommender-system research show that explanations may affect transparency, acceptance, trust, and decision quality \cite{herlocker2000,gedikli2014,zhangchen2020}. Explainable-AI research likewise emphasizes that explanation is contextual, audience-dependent, and shaped by human expectations \cite{miller2019,ribeiro2016,sokol2020}. From an RE perspective, this means that explainability should be specified as a quality requirement before selecting or deploying an explanation technique. Chazette and colleagues explicitly frame explainability as a non-functional requirement (NFR) and provide models for connecting explanation needs with software-quality concerns \cite{chazette2020,chazette2021,chazette2022}.
+
+This study addresses a practical gap between those conceptual frameworks and an early-stage, real-world academic system in which the recommender itself is only proposed. FabroGym's operational MVP manages gym workflows with synthetic demonstration data; it does not contain a machine-learning recommender. Consequently, this paper does not evaluate prediction accuracy, recommendation quality, or an implemented explanation interface. Instead, it asks what should be explainable if such a component is later built, and how stakeholder evidence can be transformed into measurable requirements without inventing data or prematurely fixing an algorithm.
+
+The contribution is fourfold. First, we provide a traceable evidence-to-requirement pipeline that preserves the distinction between ten initial interviews and six later walkthrough sessions. Second, we report a technical/non-technical comparison at the level supported by the actual data, without creating inferential outcomes that were not collected. Third, we operationalize four explainability NFRs with a metric, threshold, and verification method and report how three prior participants changed their wording through member checking. Fourth, we publish the reproducible descriptive analysis and explicitly report deviations from the OSF protocol rather than retrofitting the study after observing results \cite{nosek2018,simmons2011,kerr1998}.
+
+The study answers two research questions. \textbf{RQ1: What explainability information needs emerge from technical and non-technical walkthrough evidence for a proposed fitness-routine recommender?} \textbf{RQ2: How are those needs transformed into verifiable explainability NFRs, and how are the candidate requirements modified through member checking?} These RQs deliberately focus on requirement discovery and validation. They do not assume that an intelligent component exists, and they do not claim statistical generalization beyond the case.
+
+\section{Related work}\label{sec:related}
+\subsection{Requirements engineering and evidence traceability}
+RE has long been characterized as the process of discovering, analyzing, documenting, validating, and evolving stakeholder needs \cite{nuseibeh2000,lamsweerde2001,pohl2010}. ISO/IEC/IEEE 29148 emphasizes properties such as necessity, unambiguity, completeness, feasibility, verifiability, and traceability, while Glinz highlights the continuing difficulty of precisely defining and handling NFRs \cite{iso29148,glinz2007}. Empirical studies also show that industrial RE problems remain entangled with communication, incomplete knowledge, and context \cite{mendez2017,ferrari2016}. FabroGym therefore treats each requirement as an evidence-linked statement rather than a free-standing design idea.
+
+Traceability also supports acceptance and reproducibility. Automatically deriving acceptance tests from natural-language conditions illustrates how explicit requirement structure can support verification \cite{fischbach2023}. Reproducible computational research, in turn, requires analysis steps that can be regenerated from versioned inputs rather than manually edited tables \cite{sandve2013,peng2011}. Software and source-code citation principles extend that reproducibility chain beyond prose documents \cite{smith2016,dicosmo2020}.
+
+\subsection{Explainability as a requirement}
+Chazette and Schneider identify explainability as an emerging NFR whose meaning depends on stakeholders, the object being explained, the explanation purpose, and interactions with other quality properties \cite{chazette2020}. The subsequent explainability model and knowledge catalogue systematize those concepts \cite{chazette2021}, and later work connects requirements analysis to evaluation of explainable software systems \cite{chazette2022}. These works motivate our decision to formulate explanation obligations before implementation and to express them with observable criteria rather than generic claims such as ``the recommender shall be transparent.''
+
+The broader XAI literature is complementary but not interchangeable with RE. Miller argues that good explanations are selective and social rather than exhaustive technical dumps \cite{miller2019}. LIME demonstrates post-hoc local explanations for classifiers \cite{ribeiro2016}, whereas explainability fact sheets provide a structured way to describe explanation approaches \cite{sokol2020}. FabroGym does not select among these techniques: the artifact under study is the requirement, not the explanation algorithm.
+
+\subsection{Explanations in recommender systems}
+Recommender-system studies provide domain-relevant evidence about why explanations matter. Herlocker et al. showed that explanation interfaces can increase acceptance of collaborative-filtering recommendations \cite{herlocker2000}. Gedikli et al. compared multiple explanation types and found that explanation design changes perceived transparency and satisfaction \cite{gedikli2014}. Zhang and Chen synthesize explainable recommendation into a broader taxonomy covering explanation generation, users, and evaluation goals \cite{zhangchen2020}. These studies evaluate built recommendation mechanisms; our case instead uses stakeholder interactions to define requirements for a component that is explicitly not implemented.
+
+\subsection{Case-study validity, qualitative saturation, and member checking}
+Software-engineering case studies require clear case boundaries, data sources, chains of evidence, and explicit threats to validity \cite{runeson2009,siegmund2015}. Interview-based work additionally requires disciplined handling of saturation. Guest et al. and Hagaman and Wutich illustrate how the number of interviews needed depends on the type of theme sought, while Hennink et al. distinguish code saturation from meaning saturation \cite{guest2006,hagaman2017,hennink2017}. We therefore report the project's prespecified code-level indicator numerically and do not rename axial stabilization as code saturation.
+
+Member checking can strengthen interpretive credibility, but it is not a mechanical guarantee of truth \cite{birt2016}. In this study it is used narrowly: prior participants review four candidate NFRs and may confirm, adjust, or reject each interpretation. This creates an auditable chain from evidence fragment to candidate requirement to participant decision to final requirement.
+
+\subsection{Closed related-work screening}
+The closed search for this manuscript used the 29-entry bibliography already versioned with the 2A manuscript as the initial candidate pool. All 29 entries were screened for direct relevance to (i) explainability requirements, (ii) recommender explanations, (iii) requirements elicitation/traceability, and (iv) qualitative validation. Twelve closest studies were retained for the comparative synthesis in Table~\ref{tab:related}; methodological and normative sources were retained elsewhere in the bibliography. This procedure follows the principle of documenting search terms, inclusion/exclusion logic, and the screened set rather than inventing database hit counts that were not recorded \cite{kitchenham2007}.
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{1.8cm}p{0.7cm}p{1.8cm}p{3.7cm}p{3.7cm}@{}}
+\caption{Closest related studies and the specific distinction of the FabroGym case.}\label{tab:related}\\
+\toprule
+Reference & Year & Focus & Main result / role & Difference in this study \\
+\midrule
+\endfirsthead
+\caption[]{Closest related studies and the specific distinction of the FabroGym case (continued).}\\
+\toprule
+Reference & Year & Focus & Main result / role & Difference in this study \\
+\midrule
+\endhead
+\midrule \multicolumn{5}{r}{\footnotesize Continued on next page}\\ \bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+Chazette \& Schneider \cite{chazette2020} & 2020 & Explainability NFR & Challenges and recommendations for specifying explainability & Operationalizes four field-derived RNF for a proposed local-gym recommender.\\
+Chazette et al. \cite{chazette2021} & 2021 & Explainability model & Definition, model and knowledge catalogue & Uses observed walkthrough evidence and participant review to instantiate requirements.\\
+Chazette et al. \cite{chazette2022} & 2022 & RE-to-evaluation & Connects requirements analysis to system evaluation & Works before implementation and limits claims to specification/validation.\\
+Miller \cite{miller2019} & 2019 & Human explanation & Social-science properties of useful explanations & Converts explanation needs into verifiable software requirements.\\
+Zhang \& Chen \cite{zhangchen2020} & 2020 & Explainable recommendation & Taxonomy of explainable recommender research & Applies requirements elicitation to fitness-routine recommendations.\\
+Gedikli et al. \cite{gedikli2014} & 2014 & Explanation interfaces & Explanation types affect perceived quality & Elicits required information before building explanation interfaces.\\
+Herlocker et al. \cite{herlocker2000} & 2000 & Collaborative filtering & Explanations can support acceptance/transparency & Does not evaluate an implemented recommender.\\
+Sokol \& Flach \cite{sokol2020} & 2020 & XAI assessment & Structured explainability assessment & Defines verification targets without choosing an explainer.\\
+Ferrari et al. \cite{ferrari2016} & 2016 & Elicitation interviews & Tacit knowledge and ambiguity shape elicitation & Combines interview heritage with prototype walkthrough evidence.\\
+Runeson \& H\"ost \cite{runeson2009} & 2009 & Case-study method & Reporting guidance for SE case studies & Applies a bounded Ecuadorian academic case with explicit deviations.\\
+Birt et al. \cite{birt2016} & 2016 & Member checking & Benefits and caveats of member validation & Uses decision-level review of candidate RNF.\\
+Hennink et al. \cite{hennink2017} & 2017 & Saturation & Distinguishes code and meaning saturation & Reports the 5\% rule outcome without overstating saturation.\\
+\end{longtable}
+}
+
+\section{Methodology}\label{sec:method}
+\subsection{Study design and case boundary}
+We used a single-case, mixed-evidence RE design. The case is FabroGym, an academic system grounded in the operations of a local gym in Ecuador. The empirical focus of this paper is explainability as an NFR for a \emph{proposed} routine-recommendation capability. The operational MVP and the proposed recommender are intentionally separated: the first supports routine management and other gym workflows, whereas the latter is a future component whose explanation obligations can be specified before implementation.
+
+The study follows software-engineering case-study guidance \cite{runeson2009,wohlin2012,jedlitschka2008}. Survey handling is informed by Molleri et al. \cite{molleri2020}; thematic saturation is interpreted using Guest et al., Hagaman and Wutich, and Hennink et al. \cite{guest2006,hagaman2017,hennink2017}; and member checking follows the role-aware caution described by Birt et al. \cite{birt2016}. Reproducible analyses are implemented in Python, with generated tables and figures versioned together with their data inputs \cite{sandve2013,peng2011}.
+
+\subsection{Research questions in PICOC form}
+For \textbf{RQ1}, the \emph{Population} comprises technical and non-technical participants interacting with the FabroGym prototype; the \emph{Intervention} is the structured walkthrough and thematic coding; the \emph{Comparison} is technical versus non-technical profile evidence at a descriptive level; the \emph{Outcome} is the set of explainability-relevant fragments, labels, and information needs; and the \emph{Context} is a local-gym management system with a proposed routine recommender.
+
+For \textbf{RQ2}, the \emph{Population} comprises three previous participants invited to member checking; the \emph{Intervention} is review of four candidate explainability NFRs; the \emph{Comparison} is candidate wording versus participant-confirmed or adjusted wording; the \emph{Outcome} is the final set of measurable RNF and the distribution of confirm/adjust/reject decisions; and the \emph{Context} is the same proposed recommendation capability.
+
+No inferential hypothesis was preregistered for the three-versus-three walkthrough profile comparison. The operational propositions were instead: \textbf{P1}, technical and non-technical walkthroughs may surface partially shared but differently emphasized quality concerns; and \textbf{P2}, participant review will either confirm, adjust, or reject each candidate explainability requirement, producing a traceable final decision.
+
+\subsection{Participants and evidence sources}
+The accumulated audiovisual package contains 16 sessions: ten initial interviews (ENTR-01 to ENTR-10), three technical walkthroughs (WALK-TEC-01 to WALK-TEC-03), and three non-technical walkthroughs (WALK-NTEC-01 to WALK-NTEC-03). The identifiers are preserved across fichas, transcripts, analysis, and traceability; WALK sessions are not renamed as interviews. The public technical sheet records 16 videos totaling 06:18:08 and 16 audios totaling 06:18:14. To avoid double counting, the video duration is used as the one-session duration for the terminal 240-minute criterion.
+
+A client questionnaire contains 70 accepted responses. Its two direct-identification columns are empty in all 70 rows. Importantly, the instrument has neither a technical/non-technical profile field nor an explainability Likert scale. It is therefore used only to describe general domain perceptions. The member-checking record contains three pseudonymized prior participants, MC-P01, MC-P02, and MC-P03, reviewing four candidate requirements on 29 August 2026.
+
+\begin{table}[H]
+\caption{Empirical sources used in the terminal analysis.}\label{tab:corpus}
+\centering\small
+\begin{tabularx}{\textwidth}{@{}l r X@{}}
+\toprule
+Source & N & Analytical role \\
+\midrule
+Initial interviews (ENTR) & 10 & Base operational requirements, constraints, domain context.\\
+Technical walkthroughs & 3 & Prototype validation, coding, explainability evidence.\\
+Non-technical walkthroughs & 3 & Prototype validation, coding, explainability evidence.\\
+Client questionnaire & 70 & Descriptive domain evidence only.\\
+Member checking & 3 & Review of four RNF candidates, 12 nominal decisions.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Thematic coding and explainability extraction}
+The six walkthroughs produced 76 coded fragments, of which 49 came from technical sessions and 27 from non-technical sessions. Open coding was normalized into 37 distinct codes and 18 thematic categories. Each fragment retains the session identifier, profile, source text, category, normalized code, and an explainability-applicability flag. The explainability subset contains nine fragments: seven technical and two non-technical.
+
+Explainability labels were multi-valued because one fragment could express, for example, both justification and context. Consequently, label frequencies are descriptive and do not define a closed partition. We do not report ``framework coverage'' as a percentage because no preregistered denominator maps every possible framework dimension to a mutually exclusive coding scheme. Doing so would create a numerical result not supported by the instrument.
+
+\subsection{From evidence to candidate and final NFRs}
+For each explainability-relevant cluster, we constructed a candidate NFR using the structure: object to explain, audience, presentation format, moment of presentation, metric, threshold, verification method, and source fragments. This operationalization is consistent with treating NFRs as testable quality obligations rather than vague aspirations \cite{glinz2007,chazette2020,chazette2021}.
+
+The four candidates were then presented to MC-P01--MC-P03. Each participant recorded one of three decisions: \emph{Confirmed}, \emph{Adjusted}, or \emph{Not confirmed}, with a rationale and replacement wording when adjustment was requested. The final requirement was produced only after considering all three decisions; no candidate was silently promoted to the final specification.
+
+\subsection{Questionnaire analysis and statistical scope}
+The questionnaire is analyzed through category frequencies and six ordinal 1--5 indices (expiry difficulty, payment wait, registration ease, plan clarity, staff satisfaction, and privacy importance). For the ordinal means, 95\% bootstrap intervals use 10,000 resamples with a fixed random seed in the versioned script. These indices summarize the questionnaire only; they are not reinterpreted as explainability satisfaction scores.
+
+The analysis explicitly does \emph{not} compute Fleiss' $\kappa$, Mann--Whitney $U$, Shapiro--Wilk, or Levene tests. Fleiss' $\kappa$ would require comparable ratings of the same items by multiple raters rather than the available member-checking decision process \cite{cohen1960,fleiss1971}. Mann--Whitney would require an independent quantitative outcome per participant; the three technical and three non-technical walkthroughs provide coded qualitative fragments instead. Normality and variance tests would therefore not answer a meaningful preregistered hypothesis. This non-applicability is recorded rather than filling the manuscript with unsupported p-values.
+
+For sample-size context, a reproducible Cohen $d=0.5$, $\alpha=.05$, power $=.80$ calculation yields approximately 34 observations for a one-sample/paired standardized effect and approximately 64 per group for two equal independent groups \cite{cohen1988}. The questionnaire $n=70$ exceeds the first number but cannot support a technical-versus-non-technical contrast because it contains no profile variable.
+
+\subsection{Saturation rule}
+The terminal rubric operationalizes code saturation as the average number of new codes in the last three sessions being at most 5\% of the final accumulated code set. With 37 normalized codes and 2.333 new codes per session on average across WALK-NTEC-01, WALK-NTEC-02, and WALK-NTEC-03, the observed value is 6.306\%. It therefore does not satisfy the strict code-level threshold. The axial-category analysis accumulates 18 categories and yields 1.852\% for the same three-session window; this is reported as complementary conceptual stabilization, not as a substitute for the code rule \cite{hennink2017}.
+
+\subsection{Ethics, privacy, and open-science controls}
+Public artifacts are anonymized or pseudonymized; identifiable voices, faces, signatures, and original consent material belong to a restricted encrypted zone. The public analysis uses session codes rather than names. These controls align the project with Ecuador's Organic Law on Personal Data Protection and privacy-by-design guidance \cite{lopdp2021,spdp2025}. The software requirements additionally reference access-control, session, and accessibility baselines from OWASP ASVS, NIST digital-identity guidance, and WCAG 2.2 \cite{owasp2025,nist2025,wcag2024}.
+
+The OSF protocol (v1.4; DOI 10.17605/OSF.IO/62YSC) was registered on 29 August 2026. The six WALK sessions occurred before that timestamp. We therefore classify them transparently as pre-registration/formative evidence rather than pretending they were collected after preregistration. The deviation is documented in the OSF deviations artifact, consistent with the principle that preregistration should expose rather than conceal deviations \cite{nosek2018,simmons2011,kerr1998}.
+
+\section{Results}\label{sec:results}
+\subsection{RQ1: Explainability information needs}
+The six walkthroughs yielded 76 coded fragments: 49 technical and 27 non-technical. The strongest shared categories were usability/navigation, routines/personalization, clients/memberships/payments, clarity/information, and assistance/automation. Technical sessions additionally contained exclusive or predominant references to communication, maintainability/scalability, legal/privacy, security/continuity, security/operational traceability, data validation, and validation engineering. Non-technical sessions uniquely emphasized prevention and recovery from errors. Figure~\ref{fig:profiles} summarizes the ten highest-frequency categories. These counts describe the coded corpus; they are not treated as independent participant measurements.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.96\textwidth]{figuras/fig06_perfiles_walkthrough.png}
+\caption{Most frequent walkthrough categories by technical and non-technical profile. Counts are coded fragments, not inferential observations.}\label{fig:profiles}
+\end{figure}
+
+Nine fragments were explicitly pertinent to explainability, seven from technical walkthroughs and two from non-technical walkthroughs. Multi-label coding most often identified \emph{justification} (4 fragments) and \emph{transparency} (3), followed by provenance, personalization, and context (2 each). Comprehensibility, accessibility, detail, validation, and logic appeared once each. Since one fragment may receive multiple labels, these frequencies do not sum to nine and are not percentages of a closed framework.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.92\textwidth]{figuras/fig05_dimensiones_explicabilidad.png}
+\caption{Observed explainability labels in the nine pertinent walkthrough fragments. Multi-label coding is allowed.}\label{fig:dimensions}
+\end{figure}
+
+The evidence clusters converged on four information needs. First, a recommendation should expose its primary objective or need and relevant recorded constraints. Second, users should be able to see whether a routine has been reviewed by an authorized trainer and, when applicable, the provenance of an external professional indication. Third, the system should preserve an inspectable routine history with dates and available observations. Fourth, any future suggestion or automatic assignment should state the principal criterion used. These needs are intentionally system- and process-facing: they do not prescribe LIME, SHAP, feature importance, counterfactuals, or another explanation algorithm \cite{miller2019,ribeiro2016,sokol2020}.
+
+The client questionnaire provides complementary domain context but not explainability measurement. Privacy importance had an ordinal mean of 3.971 on the 1--5 coding (95\% bootstrap CI 3.700--4.214); 54 of 70 respondents (77.143\%) selected ``Important'' or ``Very important.'' The most frequently selected first improvement was memberships (15/70, 21.429\%), followed by communication/notifications and customer attention (14/70 each, 20.000\%). These results support the relevance of transparent data handling and clear operational information, but they are not transformed into an explainability satisfaction score.
+
+\subsection{RQ2: Member checking and terminal NFRs}
+The four candidate NFRs generated 12 member-checking decisions. Four decisions (33.333\%) were confirmations, eight (66.667\%) requested adjustments, and none rejected a candidate. RNF-EXP-C01 and RNF-EXP-C02 each received two confirmations and one adjustment. RNF-EXP-C03 and RNF-EXP-C04 each received three adjustments. All four were therefore incorporated with revised wording rather than treated as unanimously accepted originals.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.76\textwidth]{figuras/fig03_member_checking.png}
+\caption{Member-checking decisions across four candidate explainability NFRs (12 decisions).}\label{fig:mc}
+\end{figure}
+
+The most consequential adjustments narrowed overclaims. For RNF-EXP-01, the final wording removed a general reference to observations and retained only the objective/need plus relevant recorded constraints. For RNF-EXP-02, participants retained the need to show trainer review and professional provenance but avoided inventing states not observed in the evidence. For RNF-EXP-03, all three participants removed an automatic comparison between routine versions and kept an inspectable history with dates and available observations. For RNF-EXP-04, all three removed the claim that the system must compare alternatives and retained only the principal criterion behind a future suggestion or automatic assignment.
+
+\begin{table}[H]
+\caption{Terminal explainability NFRs after member checking.}\label{tab:rnf}
+\centering\small
+\begin{tabularx}{\textwidth}{@{}p{1.5cm}X p{3.1cm}p{3.2cm}@{}}
+\toprule
+ID & Terminal requirement & Metric/threshold & Verification \\
+\midrule
+RNF-EXP-01 & A proposed routine recommendation shall show its primary objective or need and, when present, relevant recorded client constraints. & 100\% of test recommendations show the objective/need and applicable constraints. & Functional cases with different objectives and constraints; inspect visible routine information.\\
+RNF-EXP-02 & Every assigned or proposed routine shall indicate whether it was reviewed/validated by an authorized trainer and, when recorded, the provenance of an external professional indication. & 100\% show review state; cases with external indications show provenance. & Functional cases with reviewed/unreviewed routines and with/without external indications.\\
+RNF-EXP-03 & The system shall allow consultation of the current routine and the history of registered routines, showing date and associated observations when available. & 100\% of test routines remain consultable with date; observations appear when present. & Register multiple routines and verify later retrieval, dates, and available observations.\\
+RNF-EXP-04 & When the system suggests an initial routine or automatically assigns a routine/class, it shall briefly show the principal criterion used for the suggestion or assignment. & 100\% of evaluated future suggestions/automatic assignments show a principal criterion. & Cases with different profiles/objectives; inspect the criterion shown before confirmation.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+All four final RNF include a metric, threshold, and verification method; thus operationalization completeness for this four-requirement set is 100\%. This is not equivalent to implementation coverage: the recommendation component remains \textbf{proposed}, and each RNF is classified as \textbf{specified}, not implemented in the MVP.
+
+\subsection{Saturation and reproducibility checks}
+The code curve shows 10, 12, 8, 2, 2, and 3 new normalized codes across the six walkthroughs, accumulating to 37. The final three sessions average 2.333 new codes, or 6.306\% of the final code set. Therefore, the study does not satisfy its strict $\leq5\%$ code-level rule. The inflection is nevertheless visible after the third session, and the axial-category curve falls to 1.852\% for the final three sessions. Figure~\ref{fig:sat} presents both new and accumulated codes; Figure~\ref{fig:axial} presents axial stabilization.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.92\textwidth]{figuras/fig01_saturacion_codigos.png}
+\caption{New and accumulated normalized codes across the six walkthrough sessions.}\label{fig:sat}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.92\textwidth]{figuras/fig02_estabilizacion_axial.png}
+\caption{New and accumulated axial categories. Axial stabilization is complementary and does not replace the code-level threshold.}\label{fig:axial}
+\end{figure}
+
+Every numerical statement in this Results section corresponds to a CSV output generated from the versioned analysis package. The single entry point regenerates multimedia summaries, questionnaire frequencies and bootstrap intervals, saturation tables, and member-checking summaries. This design follows reproducible-research principles and reduces the risk of manuscript-only numbers \cite{sandve2013,peng2011,wilkinson2016,smith2016}.
+
+\section{Discussion}\label{sec:discussion}
+\subsection{Implications for requirements-engineering research}
+The main research implication is that explainability can be engineered before an intelligent component is implemented. In FabroGym, no participant needed to inspect a machine-learning model to express requirements about rationale, constraints, provenance, history, or assignment criteria. This supports the RE view that explainability is a stakeholder-dependent quality property rather than a synonym for a particular post-hoc algorithm \cite{chazette2020,chazette2021,chazette2022}. It also suggests a sequencing benefit: specifying explanation obligations early can constrain later architecture and evaluation instead of forcing an explanation layer onto a completed black box.
+
+The second implication concerns the granularity of evidence. Technical walkthroughs contributed more explainability-relevant fragments (7 versus 2), but that asymmetry cannot be interpreted as a population effect. Technical participants also produced more coded fragments overall (49 versus 27). With only three sessions per profile and no quantitative participant-level outcome, an inferential group comparison would violate the data structure. The defensible finding is qualitative: technical sessions more often articulated provenance, validation, security, and system-oriented rationale, while non-technical evidence helped constrain clarity and avoid overcomplicated comparisons.
+
+The third implication is methodological. Member checking did not merely rubber-stamp the four candidates. Two-thirds of the 12 decisions requested adjustments, and the strongest adjustments removed functionality that the analysts had added beyond the evidence: automatic version comparisons, comparisons against alternatives, and overly broad observation fields. That pattern shows why member checking can be valuable in RE: it can act as a brake on analyst elaboration. At the same time, Birt et al.'s caution remains relevant; participant confirmation is evidence about interpretive fit, not proof that the requirement is universally correct \cite{birt2016}.
+
+\subsection{Implications for practice}
+For a small gym, explanation requirements should remain concise and actionable. A ``reason for recommendation'' that exposes the primary goal and relevant constraints is likely to be more usable than a technical explanation of model weights. Trainer-review status and professional provenance address accountability: users can distinguish system-originated guidance from human or external professional input. A routine history with dates supports traceability and continuity. Finally, showing the principal criterion behind any future automatic assignment gives both instructors and clients a basis for questioning or overriding the suggestion.
+
+These obligations are compatible with several recommender architectures. A rules-based recommender could satisfy them by exposing matched rules; a content-based or collaborative system could provide a human-readable rationale derived from its inputs; a more complex model might require a separate explanation mechanism. The requirements therefore preserve architectural freedom while establishing acceptance conditions. This is consistent with the goal of NFR specification: define externally verifiable quality outcomes before binding the solution to one implementation \cite{glinz2007,iso25010}.
+
+Privacy is also inseparable from explainability in this domain. An explanation should not become a new channel for exposing sensitive personal attributes. The project therefore minimizes real personal data and excludes health, biometric, weight, body-measure, address, and body-image data from development/testing by default. This aligns with privacy-by-design principles under Ecuadorian law and with general secure-design guidance \cite{lopdp2021,spdp2025,owasp2025,nist2025}.
+
+\subsection{Counterintuitive and negative findings}
+Two negative findings are important. First, the 70-response questionnaire cannot answer the paper's technical-versus-non-technical explainability question. Its size is larger than the qualitative walkthrough set, but sample size cannot compensate for a missing grouping variable or missing explainability items. Recasting general satisfaction questions as explainability Likert items would produce a more impressive statistical section but would violate construct validity.
+
+Second, the code-saturation threshold is not met. The observed 6.306\% is close to but above 5\%, and the final non-technical session adds three new codes. Reporting axial stabilization at 1.852\% does not authorize calling the code-level criterion satisfied. This negative result is informative: the themes appear to be organizing into stable higher-level categories while fine-grained codes continue to emerge. Future data collection could test whether the curve converges with additional walkthroughs.
+
+\subsection{Lessons learned}
+The most transferable lesson is procedural: keep identifiers stable, encode limitations in the analysis, and allow participants to delete analyst-added meaning. The distinction between ENTR and WALK identifiers prevented accidental reclassification of validation sessions as interviews. The separation between a proposed recommender and an implemented MVP prevented a specification study from becoming a fictitious system evaluation. Finally, the decision to produce no Fleiss $\kappa$ or Mann--Whitney test when the instrument did not support them preserved the chain of evidence even though it reduced the number of statistical outputs.
+
+\section{Threats to validity}\label{sec:validity}
+We organize threats using the standard internal, external, construct, and conclusion categories commonly applied in empirical software engineering \cite{wohlin2012,siegmund2015}.
+
+\subsection{Internal validity}
+The first internal threat is temporal: all six walkthroughs occurred before the OSF registration timestamp. This means the sessions cannot be portrayed as confirmatory post-registration data collection. We mitigate the issue through explicit deviation reporting and by keeping the analysis descriptive; the temporal ordering itself cannot be repaired retroactively. The second threat concerns member checking. The activity is documented with pseudonymized decisions and a date, but no audiovisual recording exists. We retain the documentary evidence and explicitly report the missing recording rather than creating a substitute.
+
+\subsection{External validity}
+FabroGym is a single local-gym case and uses non-probability recruitment. Operational practices, technology familiarity, and expectations may differ in larger chains, other countries, or other recommendation domains. We therefore restrict conclusions to the case and use the study to generate verifiable requirements rather than universal prevalence estimates. The six walkthroughs include only three technical and three non-technical sessions. Replication with larger and more diverse samples is needed before treating observed profile patterns as stable population differences.
+
+\subsection{Construct validity}
+The questionnaire is a general client-experience instrument, not a validated explainability scale. It contains no technical/non-technical profile and no Likert items mapped to explainability dimensions. We therefore report its ordinal variables descriptively and do not use it to answer the profile-comparison component of RQ1. A second construct threat is the explainability coding framework. Labels are multi-valued and the study did not preregister a closed universe of dimensions. We report observed label frequencies but do not calculate a framework-coverage percentage that lacks a defensible denominator.
+
+\subsection{Conclusion validity}
+The strict code-level saturation indicator is 6.306\%, above the 5\% threshold; declaring saturation would overstate the evidence. Axial stabilization is reported separately as supportive context. In addition, the design lacks a participant-level quantitative outcome for technical versus non-technical walkthroughs and lacks two equivalent rater rounds for Fleiss' $\kappa$. Therefore, Shapiro--Wilk, Levene, Mann--Whitney, and Fleiss tests are not performed. This reduces inferential breadth but avoids p-hacking and HARKing risks from constructing analyses after observing the data \cite{simmons2011,kerr1998}.
+
+\begin{table}[H]
+\caption{Principal validity threats, mitigations, and residual limitations.}\label{tab:validity}
+\centering\small
+\begin{tabularx}{\textwidth}{@{}p{2.0cm}X X X@{}}
+\toprule
+Category & Threat & Mitigation & Residual limitation \\
+\midrule
+Internal & Walkthroughs predate OSF registration. & Explicit preregistration deviation; descriptive framing. & Timing cannot be changed retroactively.\\
+Internal & No member-checking audio/video. & Preserve dated documentary decisions; do not fabricate recording. & Literal recording expectation remains unmet.\\
+External & One local-gym case. & Bound claims to FabroGym and similar contexts. & No statistical generalization.\\
+External & Three sessions per profile. & Descriptive profile comparison only. & Larger replication needed.\\
+Construct & Questionnaire is not an explainability scale. & Keep ordinal items descriptive. & Explainability satisfaction cannot be estimated.\\
+Construct & No closed explainability-dimension denominator. & Report multi-label frequencies only. & Framework-coverage percentage undetermined.\\
+Conclusion & Code saturation indicator is 6.306\% (>5\%). & Report exact value and axial result separately. & Strict code saturation not established.\\
+Conclusion & Inferential variables/rater structure unavailable. & Document non-applicability of tests. & No inferential profile effect.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Conclusions and future work}\label{sec:conclusion}
+For \textbf{RQ1}, the walkthrough evidence shows that explainability needs in the FabroGym case center on four forms of information: the objective and relevant constraints behind a routine, human review and professional provenance, routine history, and the principal criterion behind a future suggestion or automatic assignment. Nine fragments supported this subset, with more explainability-relevant material in technical sessions (7) than non-technical sessions (2), but the design does not support an inferential claim about profile populations.
+
+For \textbf{RQ2}, those needs were converted into four measurable NFR candidates and reviewed by MC-P01--MC-P03. Across 12 decisions, four were confirmations and eight were adjustments; no candidate was rejected. The final RNF are more conservative than the candidates because member checking removed unsupported comparisons and overly broad content. All four have a metric, threshold, and verification method, but all remain specified requirements for a proposed recommender rather than implemented AI functionality.
+
+The consolidated contribution is a transparent requirements-engineering pathway from field evidence to operationalized explainability NFRs in a small-organization context. Equally important, the study documents what the evidence does \emph{not} support: no explainability Likert score, no Mann--Whitney or Fleiss result, no claim of strict code saturation, and no claim that a recommendation model has been implemented. These boundaries make the case reproducible and falsifiable.
+
+Future work has three concrete directions. First, additional walkthroughs should test whether the code-level curve falls below the prespecified 5\% threshold and whether profile-specific patterns persist. Second, a dedicated explainability instrument should collect dimension-level ratings from technical and non-technical users, enabling preregistered inferential comparisons and confidence intervals. Third, after implementing a routine recommender, the four RNF should be converted into executable acceptance tests and evaluated across alternative explanation interfaces and recommendation architectures, connecting RE specification to system-level explainability evaluation \cite{chazette2022,gedikli2014,zhangchen2020}.
+
+\section*{Data and materials availability}
+The preregistration is publicly identified at OSF (DOI: \href{https://doi.org/10.17605/OSF.IO/62YSC}{10.17605/OSF.IO/62YSC}). The final replication package is prepared for Zenodo but its persistent DOI must be inserted only after the external deposit is actually published; no Zenodo DOI is invented in this manuscript version. Public materials include anonymized transcripts, the anonymized questionnaire, requirement corpora, traceability, processed results, and reproducible scripts. Identifiable audio/video and original consent materials remain restricted and are not part of the open dataset. Data publication follows FAIR and software-citation principles \cite{wilkinson2016,smith2016,dicosmo2020}.
+
+\section*{Use of AI-assisted technologies}
+OpenAI ChatGPT (GPT-5.6 Sol) was used under human review for language polishing, consistency checking, LaTeX/document assembly, and cross-checking the manuscript against the versioned project artifacts. The ChatGPT product session did not expose a user-configurable sampling temperature; therefore, no numerical temperature value is reported. The tool was not used as a substitute for primary evidence, to create participants or interviews, to fabricate statistical results, or to invent references. All numerical claims in the Results section are derived from versioned project data and reproducible analysis outputs. The proposed recommendation/AI component of FabroGym is not presented as implemented.
+
+\section*{Acknowledgements}
+The authors thank the participants who contributed interviews, walkthrough feedback, questionnaire responses, and member-checking decisions. Identifying participant names are intentionally omitted. Academic supervision was provided by Dr. Gleiston Guerrero-Ulloa (ORCID 0000-0001-5990-2357), Universidad T{\'e}cnica Estatal de Quevedo.
+
+\section*{Author ORCID identifiers}
+Erick Adalberto Alvia Villegas: 0009-0001-3777-470X; Erick Jhair Mera Arias: 0009-0001-0068-1796; Alex Jos{\'e} Mora Duarte: 0009-0000-2494-2842; Mery Helenmey Ponce Rivera: 0009-0006-6041-9198; David Octavio Vaca Romero: 0009-0000-4457-3095.
+
+\section*{Declarations}
+\textbf{Funding.} No external research funding is claimed.\\
+\textbf{Competing interests.} The authors declare no competing interests.\\
+\textbf{Ethics and consent.} The project maintains public and restricted evidence zones. Statements about signed documents are limited to artifacts actually signed by the team; unsigned drafts are not represented as approved.\\
+\textbf{Consent for publication.} Only anonymized or pseudonymized research outputs are intended for open publication.
+
+
+\appendix
+\section{Reproducibility map}\label{app:repro}
+Table~\ref{tab:repro-map} links the main numerical claims used in the manuscript to the versioned input and the generated CSV that supports the claim. The entry point is \texttt{06\_Experimento/scripts\_analisis/run\_all.py}; the Phase 4 patch additionally exports the publication-facing copies of figures and tables into \texttt{07\_Publicacion/}. This appendix is an audit aid rather than a new analysis.
+
+{\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{3.1cm}p{4.2cm}p{5.0cm}@{}}
+\caption{Reproducibility map for numerical claims in the manuscript.}\label{tab:repro-map}\\
+\toprule
+Claim & Versioned input & Reproducible output / stage \\
+\midrule
+\endfirsthead
+\caption[]{Reproducibility map (continued).}\\
+\toprule Claim & Versioned input & Reproducible output / stage \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+16 sessions; 10 ENTR + 6 WALK & \path{sesiones_multimedia_desde_ficha_v3_1.csv} & \path{tabla09_cumplimiento_multimedia.csv}; \texttt{analyze\_multimedia}.\\
+Video 06:18:08; audio 06:18:14 & Same technical-sheet subset & \path{tabla09_cumplimiento_multimedia.csv}; duration conversion and summation.\\
+Questionnaire $n=70$ & \path{encuesta_clientes_anonimizada.csv} & \path{tabla06_encuesta_frecuencias.csv}; \texttt{analyze\_survey}.\\
+76 coded fragments (49 technical, 27 non-technical) & \path{codificacion_walkthroughs.csv} & \path{tabla04_comparacion_perfiles.csv}; \texttt{analyze\_walkthroughs}.\\
+9 explainability-relevant fragments & Same coding file + applicability flag & \path{tabla10_dimensiones_explicabilidad.csv}; \texttt{analyze\_explainability}.\\
+4 terminal RNF with metric, threshold and verification & Candidate RNF + member-checking records & \path{tabla01_rnf_explicabilidad_final.csv}.\\
+12 member-checking decisions (4 confirm, 8 adjust, 0 reject) & \path{member_checking_estructurado.csv} & \path{tabla02_member_checking_por_rnf.csv}; member-checking summary.\\
+Strict code indicator = 6.306\% & New-code curve across six WALK sessions & \path{tabla03_resumen_saturacion.csv}; final-three-session rule.\\
+Axial stabilization = 1.852\% & Axial-category stabilization source & \path{tabla03_resumen_saturacion.csv}; complementary indicator.\\
+Privacy index mean 3.971, 95\% bootstrap CI 3.700--4.214 & Questionnaire privacy item & \path{tabla05_encuesta_indices_ordinales.csv}; 10,000 bootstrap resamples.\\
+Power references $n\approx34$ and $n\approx64$/group & $d=0.5$, $\alpha=.05$, power $=.80$ & \path{tabla08_power_calculation.csv}; Statsmodels power functions.\\
+\end{longtable}
+}
+
+\section{Analysis applicability decisions}\label{app:analysis-decisions}
+The analysis plan was constrained by the instrument actually administered. Table~\ref{tab:applicability} records the decision rule for statistics explicitly mentioned in the terminal rubric but unsupported by the collected variables. This log prevents later reinterpretation of general questionnaire items as explainability measures.
+
+{\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{@{}p{3.4cm}p{2.2cm}p{6.7cm}@{}}
+\caption{Applicability log for statistical procedures.}\label{tab:applicability}\\
+\toprule Procedure & Status & Evidence-based reason \\
+\midrule
+\endfirsthead
+\caption[]{Applicability log for statistical procedures (continued).}\\
+\toprule Procedure & Status & Evidence-based reason \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Explainability Likert mean by dimension + 95\% CI & Not applicable & The real questionnaire has no Likert items mapped to explainability dimensions. General ordinal indices are reported only as domain descriptors.\\
+Fleiss' $\kappa$ & Not calculated & There are not two equivalent rounds of categorical rating of the same units by multiple raters; member checking records confirm/adjust/reject decisions.\\
+Mann--Whitney $U$, technical vs non-technical & Not applicable & Three WALK sessions per profile provide coded qualitative fragments but no preregistered independent quantitative participant outcome.\\
+Shapiro--Wilk and Levene tests & Not applicable & No inferential hypothesis on a quantitative outcome is executed for the Enfoque 3 profile comparison.\\
+Bootstrap CI for general ordinal questionnaire indices & Applied descriptively & A fixed-seed 10,000-resample bootstrap summarizes six general ordinal questions; these intervals are not interpreted as explainability effects.\\
+\end{longtable}
+}
+
+\section{Candidate-to-final requirement audit}\label{app:mc-audit}
+The candidate-to-final mapping in Table~\ref{tab:mc-audit} makes visible where member checking changed analyst wording. The three reviewers are retained only under the pseudonyms MC-P01, MC-P02 and MC-P03.
+
+\begin{table}[H]
+\caption{Member-checking audit by candidate RNF.}\label{tab:mc-audit}
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{2.3cm}cccX@{}}
+\toprule
+Candidate $\rightarrow$ final & Confirm & Adjust & Reject & Final decision \\
+\midrule
+RNF-EXP-C01 $\rightarrow$ RNF-EXP-01 & 2 & 1 & 0 & Retained with narrower wording on objective/need and relevant recorded constraints.\\
+RNF-EXP-C02 $\rightarrow$ RNF-EXP-02 & 2 & 1 & 0 & Retained with trainer-review status and external-professional provenance when recorded.\\
+RNF-EXP-C03 $\rightarrow$ RNF-EXP-03 & 0 & 3 & 0 & Retained after removing automatic comparison; history, dates and available observations remain.\\
+RNF-EXP-C04 $\rightarrow$ RNF-EXP-04 & 0 & 3 & 0 & Retained after removing alternative comparison; only the principal suggestion/assignment criterion remains.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+\section{Manuscript-facing data dictionary}\label{app:data-dict}
+Table~\ref{tab:data-dict} documents the variables most directly used to obtain the results in this paper. It is intentionally limited to analysis-facing fields and does not include direct personal identifiers.
+
+\begin{table}[H]
+\caption{Data dictionary for the principal manuscript-facing variables.}\label{tab:data-dict}
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{3.2cm}p{3.0cm}X@{}}
+\toprule
+Variable & Source & Meaning in this study \\
+\midrule
+\path{Codigo_Sesion} & Walkthrough coding & Stable identifier: WALK-TEC-01..03 or WALK-NTEC-01..03.\\
+\path{Perfil} & Walkthrough coding & Technical or non-technical walkthrough profile; descriptive grouping only.\\
+\path{Categoria} & Walkthrough coding & Axial/thematic category assigned to a coded fragment.\\
+\path{Codigo_Normalizado} & Walkthrough coding & Normalized open code used for the code-accumulation curve.\\
+\path{Aplicable_Explicabilidad} & Walkthrough coding & Flag identifying fragments pertinent to explainability requirement elicitation.\\
+\path{Dimension_Explicabilidad} & Walkthrough coding & One or more observed explainability labels; multi-label and not a closed framework denominator.\\
+\path{privacy_importance} & Client questionnaire & General ordinal privacy-importance item; not an explainability scale.\\
+\path{Metrica}, \path{Umbral} & Candidate RNF & Operational measure and acceptance threshold for a candidate/final explainability RNF.\\
+\path{Metodo_Comprobacion} & Candidate RNF & Verification procedure associated with the RNF.\\
+\path{Resultado} & Member checking & Participant decision: Confirmado, Ajustado, or No confirmado.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\nocite{amaral2021,cohen1988,cohen1960,fleiss1971,kitchenham2007,wcag2024}
+\bibliography{referencias}
+
+\end{document}

@@ -1,0 +1,13 @@
+﻿Reference,Year,Study_type,Focus,Main_result,Difference_from_FabroGym
+Chazette & Schneider,2020,Conceptual/RE study,Explainability as NFR,Challenges and recommendations for specifying explainability,Directly operationalizes explainability as verifiable RNF in a local-gym case
+Chazette et al.,2021,Systematic literature review + expert workshops,Explainability quality model,"Definition, model and knowledge catalogue",Uses observed user evidence to instantiate a small set of domain RNF
+Chazette et al.,2022,RE-to-evaluation framework,Explainable software systems,Links requirements analysis to evaluation,Adds field walkthroughs and member checking in a fitness recommendation context
+Miller,2019,Interdisciplinary review,Human explanations in AI,Social-science principles for explanations,Translates explanation properties into requirements rather than algorithms
+Zhang & Chen,2020,Survey,Explainable recommendation,Taxonomy and perspectives for recommendation explanations,Focuses on fitness routine recommendations as a proposed component
+Gedikli et al.,2014,User study,Recommender explanation types,Different explanation interfaces affect quality perceptions,Evidence here elicits what should be explained before implementation
+Herlocker et al.,2000,Experimental recommender study,Collaborative-filtering explanations,Explanations can support acceptance and transparency,Uses RE artifacts and traceability rather than post-hoc UI evaluation
+Sokol & Flach,2020,Framework,Explainability assessment,Systematic fact sheets for explainers,Provides verification-oriented RNF and provenance without selecting an XAI algorithm
+Ferrari et al.,2016,Interview study,Tacit knowledge in elicitation,Ambiguity and tacit knowledge shape elicitation,Combines interviews with walkthrough evidence and explicit traceability
+Runeson & Höst,2009,Methodological guideline,Software engineering case studies,Guidance for case-study conduct and reporting,Applies a bounded academic case with transparent limitations
+Birt et al.,2016,Methodological analysis,Member checking,Clarifies strengths and limitations of member validation,Records decision-level member checking for RNF candidates
+Hennink et al.,2017,Qualitative methods study,Code vs meaning saturation,Distinguishes types of saturation,Reports the 5% code threshold outcome without claiming saturation when not reached
