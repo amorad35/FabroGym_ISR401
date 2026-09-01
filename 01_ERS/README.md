@@ -1,43 +1,15 @@
-# ERS — FabroGym
+# ERS/SRS FabroGym - Entrega 4 (2B)
 
-Esta carpeta contiene la **Especificación de Requisitos de Software (ERS / SRS)** del proyecto FabroGym, elaborada para la asignatura Ingeniería de Requerimientos (ISR-401) de la Universidad Técnica Estatal de Quevedo.
+Versión terminal vigente: **ERS_SRS_2B_v2.0**.
 
-## Archivo principal
+Esta versión integra el conjunto UML definitivo del equipo (54 diagramas) y reemplaza la versión v2.1.
 
-La versión actualmente conservada en esta carpeta es:
+Archivos principales:
+- `ERS_SRS_2B_v2.0.pdf`
+- `ERS_SRS_2B_v2.0.tex`
+- `referencias.bib`
+- `modelado_final/` (copia autocontenida de los diagramas usados para compilar)
 
-```text
-ERS_SRS_2A_v1.5.4.pdf
-```
+La fuente LaTeX también puede resolver los diagramas desde `../03_Modelado/Diagramas_UML/`.
 
-Su fuente LaTeX correspondiente es:
-
-```text
-ERS_SRS_2A_v1.5.4.tex
-```
-
-También se mantiene:
-
-```text
-referencias.bib
-```
-
-## Propósito
-
-La ERS documenta el alcance funcional y no funcional del sistema FabroGym, junto con restricciones, casos de uso, criterios de aceptación y demás elementos de especificación utilizados por el proyecto.
-
-## Relación con la Entrega 4 (2B)
-
-La ERS de esta carpeta corresponde a la base consolidada proveniente de la Entrega 3 (2A).
-
-Los RNF de explicabilidad derivados del **Enfoque 3** no deben incorporarse como resultados definitivos antes de completar el análisis y la validación previstos en `06_Experimento/protocolo.pdf`.
-
-Después del análisis y, si corresponde, del member checking, la ERS podrá actualizarse con los RNF de explicabilidad que queden sustentados por evidencia verificable.
-
-## Nota sobre nombres de archivo
-
-El PDF no debe conservar una doble extensión `.pdf.pdf`. El nombre correcto es:
-
-```text
-ERS_SRS_2A_v1.5.4.pdf
-```
+DOI Zenodo reservado: `10.5281/zenodo.22237884`.
