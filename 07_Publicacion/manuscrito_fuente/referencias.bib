@@ -1,30 +1,169 @@
-
-@standard{iso29148, author={{ISO/IEC/IEEE}}, title={ISO/IEC/IEEE 29148:2018 Systems and software engineering -- Requirements engineering}, year={2018}}
-@standard{iso25010, author={{ISO/IEC}}, title={ISO/IEC 25010:2023 Systems and software Quality Requirements and Evaluation -- Product quality model}, year={2023}}
-@book{pohl2010, author={Pohl, Klaus}, title={Requirements Engineering: Fundamentals, Principles, and Techniques}, publisher={Springer}, year={2010}}
-@techreport{swebok2024, author={Washizaki, Hironori and IEEE Computer Society}, title={Guide to the Software Engineering Body of Knowledge, Version 4.0}, year={2024}}
-@article{wilkinson2016, author={Wilkinson, Mark D. and others}, title={The FAIR Guiding Principles for scientific data management and stewardship}, journal={Scientific Data}, volume={3}, year={2016}}
-@article{cheng2026, author={Cheng, H. and others}, title={Generative AI for requirements engineering: A systematic literature review}, journal={Software: Practice and Experience}, volume={56}, number={2}, year={2026}}
-@article{arora2024, author={Arora, C. and Grundy, J. and Abdelrazek, M.}, title={Advancing requirements engineering through generative AI}, journal={Communications of the ACM}, volume={67}, number={6}, year={2024}}
-@techreport{vogelsang2024, author={Vogelsang, A. and Fischbach, J.}, title={Using large language models for natural language processing tasks in requirements engineering: A systematic guideline}, number={arXiv:2402.13823}, year={2024}}
-@article{chazette2020, author={Chazette, L. and Schneider, K.}, title={Explainability as a non-functional requirement}, journal={Requirements Engineering}, volume={25}, number={4}, year={2020}}
-@inproceedings{chazette2021, author={Chazette, L. and Brunotte, W. and Speith, T.}, title={Exploring explainability: A definition, a model, and a knowledge catalogue}, booktitle={IEEE RE}, year={2021}}
-@article{chazette2022, author={Chazette, L. and Brunotte, W. and Speith, T.}, title={Explainable software systems: from requirements analysis to system evaluation}, journal={Requirements Engineering}, volume={27}, number={4}, year={2022}}
-@misc{lopdp2021, author={{Asamblea Nacional del Ecuador}}, title={Ley Organica de Proteccion de Datos Personales}, year={2021}, howpublished={Registro Oficial, Quinto Suplemento 459}}
-@techreport{spdp2025, author={{Superintendencia de Proteccion de Datos Personales}}, title={Guia de Proteccion de Datos Personales desde el Diseno y por Defecto}, year={2025}, url={https://spdp.gob.ec/guias-spdp/}}
-@techreport{spdp2026, author={{Superintendencia de Proteccion de Datos Personales}}, title={Guia de gestion de riesgos y evaluacion de impacto del tratamiento de datos personales}, year={2026}, url={https://spdp.gob.ec/wp-content/uploads/2026/03/ggrispdp2026v2.pdf}}
-@article{molleri2020, author={Molleri, J. S. and Petersen, K. and Mendes, E.}, title={An empirically evaluated checklist for surveys in software engineering}, journal={Information and Software Technology}, volume={119}, year={2020}}
-@article{hennink2017, author={Hennink, M. M. and Kaiser, B. N. and Marconi, V. C.}, title={Code saturation versus meaning saturation}, journal={Qualitative Health Research}, volume={27}, number={4}, year={2017}}
-@article{hagaman2017, author={Hagaman, A. K. and Wutich, A.}, title={How many interviews are enough to identify metathemes?}, journal={Field Methods}, volume={29}, number={1}, year={2017}}
-@article{guest2006, author={Guest, G. and Bunce, A. and Johnson, L.}, title={How many interviews are enough?}, journal={Field Methods}, volume={18}, number={1}, year={2006}}
-@article{runeson2009, author={Runeson, P. and Host, M.}, title={Guidelines for conducting and reporting case study research in software engineering}, journal={Empirical Software Engineering}, volume={14}, number={2}, year={2009}}
-@book{wohlin2012, author={Wohlin, C. and others}, title={Experimentation in Software Engineering}, publisher={Springer}, year={2012}}
-@article{nosek2018, author={Nosek, B. A. and others}, title={The preregistration revolution}, journal={PNAS}, volume={115}, number={11}, year={2018}}
-@article{montgomery2022, author={Montgomery, L. and others}, title={Empirical research on requirements quality: a systematic mapping study}, journal={Requirements Engineering}, volume={27}, number={2}, year={2022}}
-@article{ferrari2016, author={Ferrari, A. and Spoletini, P. and Gnesi, S.}, title={Ambiguity and tacit knowledge in requirements elicitation interviews}, journal={Requirements Engineering}, volume={21}, number={3}, year={2016}}
-@article{fischbach2023, author={Fischbach, J. and others}, title={Automatic creation of acceptance tests by deriving conditionals from natural language requirements}, journal={Information and Software Technology}, volume={154}, year={2023}}
-@techreport{kitchenham2007, author={Kitchenham, B. and Charters, S.}, title={Guidelines for performing systematic literature reviews in software engineering}, year={2007}}
-@article{smith2016, author={Smith, A. M. and others}, title={Software citation principles}, journal={PeerJ Computer Science}, volume={2}, year={2016}}
-@standard{wcag2024, author={{W3C}}, title={Web Content Accessibility Guidelines (WCAG) 2.2}, year={2024}, url={https://www.w3.org/TR/WCAG22/}}
-@techreport{owasp2025, author={{OWASP Foundation}}, title={Application Security Verification Standard 5.0.0}, year={2025}, url={https://owasp.org/www-project-application-security-verification-standard/}}
-@techreport{nist2025, author={Temoshok, D. and others}, title={NIST SP 800-63B-4 Digital Identity Guidelines: Authentication and Authenticator Management}, institution={NIST}, year={2025}, url={https://csrc.nist.gov/pubs/sp/800/63/b/4/final}}
+@techreport{iso29148,
+  author={{ISO/IEC/IEEE}},
+  title={ISO/IEC/IEEE 29148:2018 Systems and software engineering -- Life cycle processes -- Requirements engineering},
+  year={2018}, institution={ISO/IEC/IEEE}
+}
+@techreport{iso25010,
+  author={{ISO/IEC}},
+  title={ISO/IEC 25010:2023 Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Product quality model},
+  year={2023}, institution={ISO/IEC}
+}
+@book{pohl2010,
+  author={Pohl, Klaus}, title={Requirements Engineering: Fundamentals, Principles, and Techniques},
+  publisher={Springer}, year={2010}, doi={10.1007/978-3-642-12578-2}
+}
+@techreport{swebok2024,
+  author={Washizaki, Hironori and others}, title={Guide to the Software Engineering Body of Knowledge (SWEBOK), Version 4.0},
+  institution={IEEE Computer Society}, year={2024}
+}
+@book{wohlin2012,
+  author={Wohlin, Claes and Runeson, Per and H{\"o}st, Martin and Ohlsson, Magnus C. and Regnell, Bj{\"o}rn and Wessl{\'e}n, Anders},
+  title={Experimentation in Software Engineering}, publisher={Springer}, year={2012}, doi={10.1007/978-3-642-29044-2}
+}
+@article{runeson2009,
+  author={Runeson, Per and H{\"o}st, Martin}, title={Guidelines for conducting and reporting case study research in software engineering},
+  journal={Empirical Software Engineering}, volume={14}, number={2}, pages={131--164}, year={2009}, doi={10.1007/s10664-008-9102-8}
+}
+@incollection{jedlitschka2008,
+  author={Jedlitschka, Andreas and Ciolkowski, Marcus and Pfahl, Dietmar}, title={Reporting Experiments in Software Engineering},
+  booktitle={Guide to Advanced Empirical Software Engineering}, publisher={Springer}, pages={201--228}, year={2008}, doi={10.1007/978-1-84800-044-5_8}
+}
+@article{hennink2017,
+  author={Hennink, Monique M. and Kaiser, Bonnie N. and Marconi, Vincent C.}, title={Code Saturation Versus Meaning Saturation: How Many Interviews Are Enough?},
+  journal={Qualitative Health Research}, volume={27}, number={4}, pages={591--608}, year={2017}, doi={10.1177/1049732316665344}
+}
+@article{guest2006,
+  author={Guest, Greg and Bunce, Arwen and Johnson, Laura}, title={How Many Interviews Are Enough? An Experiment with Data Saturation and Variability},
+  journal={Field Methods}, volume={18}, number={1}, pages={59--82}, year={2006}, doi={10.1177/1525822X05279903}
+}
+@article{hagaman2017,
+  author={Hagaman, Ashley K. and Wutich, Amber}, title={How Many Interviews Are Enough to Identify Metathemes in Multisited and Cross-cultural Research?},
+  journal={Field Methods}, volume={29}, number={1}, pages={23--41}, year={2017}, doi={10.1177/1525822X16640447}
+}
+@article{molleri2020,
+  author={Molleri, Jefferson Seide and Petersen, Kai and Mendes, Emilia}, title={An empirically evaluated checklist for surveys in software engineering},
+  journal={Information and Software Technology}, volume={119}, pages={106240}, year={2020}, doi={10.1016/j.infsof.2019.106240}
+}
+@article{nosek2018,
+  author={Nosek, Brian A. and Ebersole, Charles R. and DeHaven, Alexander C. and Mellor, David T.}, title={The preregistration revolution},
+  journal={Proceedings of the National Academy of Sciences}, volume={115}, number={11}, pages={2600--2606}, year={2018}, doi={10.1073/pnas.1708274114}
+}
+@article{wilkinson2016,
+  author={Wilkinson, Mark D. and others}, title={The FAIR Guiding Principles for scientific data management and stewardship},
+  journal={Scientific Data}, volume={3}, pages={160018}, year={2016}, doi={10.1038/sdata.2016.18}
+}
+@article{sandve2013,
+  author={Sandve, Geir Kjetil and Nekrutenko, Anton and Taylor, James and Hovig, Eivind}, title={Ten Simple Rules for Reproducible Computational Research},
+  journal={PLoS Computational Biology}, volume={9}, number={10}, pages={e1003285}, year={2013}, doi={10.1371/journal.pcbi.1003285}
+}
+@article{peng2011,
+  author={Peng, Roger D.}, title={Reproducible Research in Computational Science}, journal={Science}, volume={334}, number={6060}, pages={1226--1227}, year={2011}, doi={10.1126/science.1213847}
+}
+@article{birt2016,
+  author={Birt, Linda and Scott, Suzanne and Cavers, Debbie and Campbell, Christine and Walter, Fiona}, title={Member Checking: A Tool to Enhance Trustworthiness or Merely a Nod to Validation?},
+  journal={Qualitative Health Research}, volume={26}, number={13}, pages={1802--1811}, year={2016}, doi={10.1177/1049732316654870}
+}
+@article{chazette2020,
+  author={Chazette, Larissa and Schneider, Kurt}, title={Explainability as a non-functional requirement: challenges and recommendations},
+  journal={Requirements Engineering}, volume={25}, pages={493--514}, year={2020}, doi={10.1007/s00766-020-00333-1}
+}
+@inproceedings{chazette2021,
+  author={Chazette, Larissa and Brunotte, Wasja and Speith, Timo}, title={Exploring Explainability: A Definition, a Model, and a Knowledge Catalogue},
+  booktitle={2021 IEEE 29th International Requirements Engineering Conference (RE)}, pages={197--208}, publisher={IEEE}, year={2021}, doi={10.1109/RE51729.2021.00025}
+}
+@article{chazette2022,
+  author={Chazette, Larissa and Brunotte, Wasja and Speith, Timo}, title={Explainable software systems: from requirements analysis to system evaluation},
+  journal={Requirements Engineering}, volume={27}, pages={457--487}, year={2022}, doi={10.1007/s00766-022-00393-5}
+}
+@article{miller2019,
+  author={Miller, Tim}, title={Explanation in artificial intelligence: Insights from the social sciences}, journal={Artificial Intelligence}, volume={267}, pages={1--38}, year={2019}, doi={10.1016/j.artint.2018.07.007}
+}
+@inproceedings{ribeiro2016,
+  author={Ribeiro, Marco Tulio and Singh, Sameer and Guestrin, Carlos}, title={{Why Should I Trust You?}: Explaining the Predictions of Any Classifier},
+  booktitle={Proceedings of NAACL: Demonstrations}, pages={97--101}, year={2016}, doi={10.18653/v1/N16-3020}
+}
+@inproceedings{sokol2020,
+  author={Sokol, Kacper and Flach, Peter}, title={Explainability fact sheets: a framework for systematic assessment of explainable approaches},
+  booktitle={Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency}, pages={56--67}, year={2020}, doi={10.1145/3351095.3372870}
+}
+@article{zhangchen2020,
+  author={Zhang, Yongfeng and Chen, Xu}, title={Explainable Recommendation: A Survey and New Perspectives}, journal={Foundations and Trends in Information Retrieval}, volume={14}, number={1}, pages={1--101}, year={2020}, doi={10.1561/1500000066}
+}
+@article{gedikli2014,
+  author={Gedikli, Fatih and Jannach, Dietmar and Ge, Mouzhi}, title={How should I explain? A comparison of different explanation types for recommender systems},
+  journal={International Journal of Human-Computer Studies}, volume={72}, number={4}, pages={367--382}, year={2014}, doi={10.1016/j.ijhcs.2013.12.007}
+}
+@inproceedings{herlocker2000,
+  author={Herlocker, Jonathan L. and Konstan, Joseph A. and Riedl, John}, title={Explaining collaborative filtering recommendations},
+  booktitle={Proceedings of the 2000 ACM Conference on Computer Supported Cooperative Work}, pages={241--250}, year={2000}, doi={10.1145/358916.358995}
+}
+@inproceedings{glinz2007,
+  author={Glinz, Martin}, title={On Non-Functional Requirements}, booktitle={15th IEEE International Requirements Engineering Conference (RE 2007)}, year={2007}, doi={10.1109/RE.2007.45}
+}
+@inproceedings{nuseibeh2000,
+  author={Nuseibeh, Bashar and Easterbrook, Steve}, title={Requirements Engineering: A Roadmap}, booktitle={Proceedings of the Conference on the Future of Software Engineering}, pages={35--46}, year={2000}, doi={10.1145/336512.336523}
+}
+@inproceedings{lamsweerde2001,
+  author={van Lamsweerde, Axel}, title={Goal-Oriented Requirements Engineering: A Guided Tour}, booktitle={Proceedings of the Fifth IEEE International Symposium on Requirements Engineering}, pages={249--262}, year={2001}, doi={10.1109/ISRE.2001.948567}
+}
+@article{ferrari2016,
+  author={Ferrari, Alessio and Spoletini, Paola and Gnesi, Stefania}, title={Ambiguity and tacit knowledge in requirements elicitation interviews},
+  journal={Requirements Engineering}, volume={21}, number={3}, pages={333--355}, year={2016}, doi={10.1007/s00766-016-0249-3}
+}
+@article{fischbach2023,
+  author={Fischbach, Jannik and Frattini, Julian and Vogelsang, Andreas and Mendez, Daniel and Unterkalmsteiner, Michael and others},
+  title={Automatic creation of acceptance tests by extracting conditionals from requirements: NLP approach and case study}, journal={Journal of Systems and Software}, volume={197}, pages={111549}, year={2023}, doi={10.1016/j.jss.2022.111549}
+}
+@article{mendez2017,
+  author={Mendez Fernandez, Daniel and Wagner, Stefan and Kalinowski, Marcos and Felderer, Michael and Mafra, Priscilla and others},
+  title={Naming the pain in requirements engineering: Contemporary problems, causes, and effects in practice}, journal={Empirical Software Engineering}, volume={22}, number={5}, pages={2298--2338}, year={2017}, doi={10.1007/s10664-016-9451-7}
+}
+@article{smith2016,
+  author={Smith, Arfon M. and Katz, Daniel S. and Niemeyer, Kyle E.}, title={Software citation principles}, journal={PeerJ Computer Science}, volume={2}, pages={e86}, year={2016}, doi={10.7717/peerj-cs.86}
+}
+@article{dicosmo2020,
+  author={Di Cosmo, Roberto and Gruenpeter, Morane and Zacchiroli, Stefano}, title={Referencing Source Code Artifacts: A Separate Concern in Software Citation},
+  journal={Computing in Science \& Engineering}, volume={22}, number={2}, pages={33--43}, year={2020}, doi={10.1109/MCSE.2019.2963148}
+}
+@inproceedings{siegmund2015,
+  author={Siegmund, Janet and Siegmund, Norbert and Apel, Sven}, title={Views on Internal and External Validity in Empirical Software Engineering},
+  booktitle={2015 IEEE/ACM 37th IEEE International Conference on Software Engineering}, pages={9--19}, year={2015}, doi={10.1109/ICSE.2015.24}
+}
+@inproceedings{amaral2021,
+  author={Amaral, Orlando and Abualhaija, Sallam and Sabetzadeh, Mehrdad and Briand, Lionel}, title={A Model-based Conceptualization of Requirements for Compliance Checking of Data Processing against GDPR},
+  booktitle={2021 IEEE 29th International Requirements Engineering Conference Workshops (REW)}, pages={16--20}, year={2021}, doi={10.1109/REW53955.2021.00009}
+}
+@article{cohen1960,
+  author={Cohen, Jacob}, title={A Coefficient of Agreement for Nominal Scales}, journal={Educational and Psychological Measurement}, volume={20}, number={1}, pages={37--46}, year={1960}, doi={10.1177/001316446002000104}
+}
+@article{fleiss1971,
+  author={Fleiss, Joseph L.}, title={Measuring nominal scale agreement among many raters}, journal={Psychological Bulletin}, volume={76}, number={5}, pages={378--382}, year={1971}, doi={10.1037/h0031619}
+}
+@article{simmons2011,
+  author={Simmons, Joseph P. and Nelson, Leif D. and Simonsohn, Uri}, title={False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant},
+  journal={Psychological Science}, volume={22}, number={11}, pages={1359--1366}, year={2011}, doi={10.1177/0956797611417632}
+}
+@article{kerr1998,
+  author={Kerr, Norbert L.}, title={HARKing: Hypothesizing After the Results are Known}, journal={Personality and Social Psychology Review}, volume={2}, number={3}, pages={196--217}, year={1998}, doi={10.1207/s15327957pspr0203_4}
+}
+@book{cohen1988,
+  author={Cohen, Jacob}, title={Statistical Power Analysis for the Behavioral Sciences}, edition={2}, publisher={Lawrence Erlbaum Associates}, year={1988}
+}
+@techreport{kitchenham2007,
+  author={Kitchenham, Barbara and Charters, Stuart}, title={Guidelines for Performing Systematic Literature Reviews in Software Engineering}, institution={Keele University and Durham University}, number={EBSE-2007-01}, year={2007}
+}
+@misc{lopdp2021,
+  author={{Asamblea Nacional del Ecuador}}, title={Ley Org{\'a}nica de Protecci{\'o}n de Datos Personales}, howpublished={Registro Oficial, Quinto Suplemento 459}, year={2021}
+}
+@misc{wcag2024,
+  author={{W3C}}, title={Web Content Accessibility Guidelines (WCAG) 2.2}, year={2024}, url={https://www.w3.org/TR/WCAG22/}
+}
+@techreport{owasp2025,
+  author={{OWASP Foundation}}, title={Application Security Verification Standard 5.0.0}, institution={OWASP Foundation}, year={2025}, url={https://owasp.org/www-project-application-security-verification-standard/}
+}
+@techreport{nist2025,
+  author={Temoshok, David and others}, title={NIST SP 800-63B-4 Digital Identity Guidelines: Authentication and Authenticator Management}, institution={National Institute of Standards and Technology}, year={2025}, url={https://csrc.nist.gov/pubs/sp/800/63/b/4/final}
+}
+@techreport{spdp2025,
+  author={{Superintendencia de Protecci{\'o}n de Datos Personales}}, title={Gu{\'i}a de Protecci{\'o}n de Datos Personales desde el Dise{\~n}o y por Defecto}, institution={SPDP, Ecuador}, year={2025}, url={https://spdp.gob.ec/guias-spdp/}
+}

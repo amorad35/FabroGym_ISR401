@@ -1,0 +1,12 @@
+﻿claim,versioned_input,reproducible_output
+16 sessions; 10 ENTR + 6 WALK,sesiones_multimedia_desde_ficha_v3_1.csv,tabla09_cumplimiento_multimedia.csv / analyze_multimedia
+Video 06:18:08; audio 06:18:14,sesiones_multimedia_desde_ficha_v3_1.csv,tabla09_cumplimiento_multimedia.csv
+Questionnaire n=70,encuesta_clientes_anonimizada.csv,tabla06_encuesta_frecuencias.csv / analyze_survey
+"76 coded fragments: 49 technical, 27 non-technical",codificacion_walkthroughs.csv,tabla04_comparacion_perfiles.csv / analyze_walkthroughs
+9 explainability-relevant fragments,codificacion_walkthroughs.csv,tabla10_dimensiones_explicabilidad.csv / analyze_explainability
+4 terminal RNF,candidatos + member checking,tabla01_rnf_explicabilidad_final.csv
+"12 MC decisions: 4 confirm, 8 adjust, 0 reject",member_checking_estructurado.csv,tabla02_member_checking_por_rnf.csv
+Code indicator 6.306%,curva_codigos_nuevos_walkthroughs_fuente.csv,tabla03_resumen_saturacion.csv
+Axial stabilization 1.852%,estabilizacion_categorias_axiales_fuente.csv,tabla03_resumen_saturacion.csv
+Privacy mean 3.971; CI95% 3.700-4.214,encuesta_clientes_anonimizada.csv,tabla05_encuesta_indices_ordinales.csv
+Power n~34 and n~64/group,d=.5; alpha=.05; power=.80,tabla08_power_calculation.csv

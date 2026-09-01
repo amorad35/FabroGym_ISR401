@@ -1,0 +1,19 @@
+﻿Categoria,Sesiones_Tecnicas_que_mencionan,Sesiones_NoTecnicas_que_mencionan,Fragmentos_Tecnicos,Fragmentos_NoTecnicos,Patron,Interpretacion
+Adaptabilidad y visualizacion,1,1,2,2,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Asistencia y automatizacion,2,2,2,2,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Claridad e informacion,1,2,4,4,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+"Clientes, membresias y pagos",2,2,5,2,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Comunicacion,2,0,3,0,Predominio_exclusivo_tecnico,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Escalabilidad y mantenibilidad,2,0,2,0,Predominio_exclusivo_tecnico,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Inventario y ventas,2,1,5,1,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Legal y privacidad,1,0,1,0,Predominio_exclusivo_tecnico,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Prevencion y recuperacion de errores,0,2,0,2,Predominio_exclusivo_no_tecnico,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Reportes y dashboard,2,1,2,1,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Roles y acceso,2,1,2,1,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Rutinas y personalizacion,3,2,7,3,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Seguridad y continuidad,1,0,1,0,Predominio_exclusivo_tecnico,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Seguridad y trazabilidad operativa,2,0,3,0,Predominio_exclusivo_tecnico,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Usabilidad y navegacion,3,3,6,7,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Validacion de datos,1,0,2,0,Predominio_exclusivo_tecnico,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Validacion e ingenieria de requisitos,1,0,1,0,Predominio_exclusivo_tecnico,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).
+Validacion general,1,1,1,2,Compartido,Comparación descriptiva; no inferencial. La unidad de presencia es sesión (máximo 3 por perfil).

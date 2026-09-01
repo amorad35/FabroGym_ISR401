@@ -1,0 +1,3 @@
+﻿escenario,Cohen_d,alpha,potencia,n_requerido_continuo,n_requerido_redondeado,aplicabilidad_FabroGym
+Una muestra o diferencia pareada estandarizada,0.5,0.05,0.8,33.367,34,"Referencia de sensibilidad; n=70 supera este mínimo, pero el cuestionario no contiene una escala de explicabilidad."
+Dos grupos independientes de igual tamaño,0.5,0.05,0.8,63.766,64,Requeriría ~64 por grupo (128 total). El cuestionario no registra perfil técnico/no técnico.

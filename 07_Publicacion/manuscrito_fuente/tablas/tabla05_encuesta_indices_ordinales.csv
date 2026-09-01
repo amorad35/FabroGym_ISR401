@@ -1,0 +1,7 @@
+﻿variable,n,media_indice_1a5,mediana,desv_est,IC95_boot_media_inf,IC95_boot_media_sup,interpretacion
+expiry_difficulty,70,2.4,2.5,0.923,2.186,2.614,Índice descriptivo ordinal; NO es escala Likert de explicabilidad.
+payment_wait,70,2.4,2.0,0.923,2.186,2.614,Índice descriptivo ordinal; NO es escala Likert de explicabilidad.
+registration_ease,70,3.271,3.0,1.034,3.029,3.514,Índice descriptivo ordinal; NO es escala Likert de explicabilidad.
+plan_clarity,70,3.4,4.0,1.055,3.157,3.643,Índice descriptivo ordinal; NO es escala Likert de explicabilidad.
+staff_satisfaction,70,3.471,4.0,0.974,3.243,3.7,Índice descriptivo ordinal; NO es escala Likert de explicabilidad.
+privacy_importance,70,3.971,4.0,1.129,3.7,4.214,Índice descriptivo ordinal; NO es escala Likert de explicabilidad.

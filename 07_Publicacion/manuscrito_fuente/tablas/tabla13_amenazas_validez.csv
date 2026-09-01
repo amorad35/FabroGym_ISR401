@@ -1,0 +1,9 @@
+﻿Validity_category,Threat,Mitigation,Residual_limitation
+Internal,Walkthroughs occurred before the OSF registration timestamp.,Reported explicitly as a preregistration deviation; analyses are not framed as confirmatory post-registration collection.,Temporal ordering cannot be retroactively corrected.
+Internal,Member checking has documentary evidence but no audio/video recording.,"Decision-level records, participant pseudonyms and date are preserved; no recording is fabricated.",Literal rubric requirement for restricted recording remains unmet.
+External,Single local-gym case and non-probability recruitment.,Claims are restricted to FabroGym and similar small fitness-management settings.,No statistical generalization to all gyms or recommendation systems.
+External,Only three technical and three non-technical walkthrough sessions.,"Profile differences are reported descriptively, not inferentially.",Profile patterns require replication with larger samples.
+Construct,Questionnaire was not designed as an explainability Likert instrument.,General ordinal questions are kept descriptive; no explainability satisfaction scale is constructed.,Perceived explainability cannot be quantified from this questionnaire.
+Construct,Explainability labels are multi-label and no closed denominator for the full framework was preregistered.,Observed dimensions are reported as frequencies only; no fabricated coverage percentage.,Full framework coverage remains undetermined.
+Conclusion,"Code-level saturation criterion is 6.306%, above the <=5% threshold.",The exact value is reported; axial stabilization at 1.852% is complementary only.,Strict code saturation is not claimed.
+Conclusion,"No quantitative per-participant outcome supports Mann-Whitney, Fleiss kappa, Shapiro-Wilk or Levene.",Non-applicability is documented and no inferential p-values are produced.,Inference about group differences is unavailable.
