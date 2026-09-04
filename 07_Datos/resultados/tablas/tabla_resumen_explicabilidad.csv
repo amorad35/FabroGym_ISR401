@@ -1,0 +1,2 @@
+﻿fragmentos_codificados_total,fragmentos_pertinentes_explicabilidad,fragmentos_explicabilidad_tecnicos,fragmentos_explicabilidad_no_tecnicos,candidatos_RNF_revisados,RNF_finales_incorporables,RNF_con_metrica_umbral_metodo,porcentaje_operacionalizacion_completa,cobertura_porcentaje_marco_explicabilidad,motivo_cobertura
+76,9,7,2,4,4,4,100.0,NO CALCULABLE,El protocolo exige denominador y clasificación verificables; la evidencia usa etiquetas compuestas y no fija un universo cerrado.
