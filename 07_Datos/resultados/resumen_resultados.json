@@ -1,0 +1,55 @@
+{
+  "proyecto": "FabroGym",
+  "fase": "2B - Fase 2 análisis empírico reproducible",
+  "sesiones": {
+    "total": 16,
+    "entrevistas": 10,
+    "walkthroughs": 6,
+    "walkthroughs_tecnicos": 3,
+    "walkthroughs_no_tecnicos": 3,
+    "video_total": "06:18:08",
+    "audio_total": "06:18:14"
+  },
+  "encuesta": {
+    "n": 70,
+    "perfil_tecnico_no_tecnico_disponible": false,
+    "items_likert_explicabilidad": false
+  },
+  "walkthroughs": {
+    "fragmentos": 76,
+    "tecnicos": 49,
+    "no_tecnicos": 27,
+    "codigos_normalizados": 37,
+    "categorias": 18
+  },
+  "explicabilidad": {
+    "fragmentos_pertinentes": 9,
+    "candidatos": 4,
+    "rnf_finales": 4,
+    "cobertura_marco_porcentaje": null,
+    "razon_no_porcentaje": "No existe denominador cerrado verificable en instrumento/codificación."
+  },
+  "member_checking": {
+    "participantes": [
+      "MC-P01",
+      "MC-P02",
+      "MC-P03"
+    ],
+    "fecha": "2026-08-29",
+    "decisiones": 12,
+    "confirmado": 4,
+    "ajustado": 8,
+    "no_confirmado": 0,
+    "grabacion_audiovisual": false
+  },
+  "saturacion": {
+    "codigos_total": 37,
+    "promedio_nuevos_ultimas_3": 2.333,
+    "porcentaje": 6.306,
+    "umbral_pct": 5.0,
+    "cumple_codigos": false,
+    "categorias_axiales_total": 18,
+    "porcentaje_categorias_ultimas_3": 1.852,
+    "cumple_categorias": true
+  }
+}
