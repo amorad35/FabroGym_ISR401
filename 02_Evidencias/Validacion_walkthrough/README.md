@@ -10,15 +10,20 @@ La ejecución de nuevos walkthroughs no se encuentra prevista. Las seis sesiones
 
 ## Estado de la evidencia
 
-La evidencia documental correspondiente a las seis sesiones se encuentra **pendiente de incorporación completa al repositorio**.
+Se encuentran incorporadas al repositorio las **seis actas correspondientes a las sesiones de walkthrough realizadas**: tres con participantes de perfil técnico y tres con participantes de perfil no técnico.
 
-A medida que se incorporen archivos reales y verificables, esta carpeta podrá contener, según la evidencia efectivamente disponible:
+Las actas disponibles en esta carpeta corresponden a versiones **enmascaradas para su publicación en la zona pública del repositorio**, preservando la confidencialidad de las firmas y de cualquier elemento que requiera protección.
 
-- actas o registros de las sesiones;
-- observaciones y hallazgos;
-- material anonimizado o enmascarado apto para la zona pública;
-- referencias a grabaciones almacenadas en la zona restringida;
-- matrices de sistematización y trazabilidad derivadas de los walkthroughs.
+La evidencia incorporada comprende:
+
+- `WALK-TEC-01_Acta.pdf`
+- `WALK-TEC-02_Acta.pdf`
+- `WALK-TEC-03_Acta.pdf`
+- `WALK-NTEC-01_Acta.pdf`
+- `WALK-NTEC-02_Acta.pdf`
+- `WALK-NTEC-03_Acta.pdf`
+
+Las grabaciones u otros archivos que contengan información sensible se mantienen fuera de la zona pública o en los espacios restringidos definidos para el proyecto.
 
 No se incorporarán fechas, consentimientos, resultados, puntuaciones ni otros datos que no puedan verificarse mediante la evidencia disponible.
 
