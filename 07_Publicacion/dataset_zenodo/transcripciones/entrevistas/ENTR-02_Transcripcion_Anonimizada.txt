@@ -1,3 +1,122 @@
-TRANSCRIPCION ANONIMIZADA
-Codigo ENTR-02
-Participante P02
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+ENTREVISTA 02 — RECEPCIÓN
+Código del participante: Participante P02
+Duración aproximada del audio: 22:13
+
+[00:00 aprox.]
+Entrevistador: Buenas noches. Formamos parte de un equipo de estudiantes de la materia de Ingeniería de Requerimientos de una institución académica. Estamos desarrollando un proyecto para conocer cómo se realizan actualmente los procesos administrativos y operativos de los gimnasios. En esta entrevista nos interesa conocer su experiencia como recepcionista, especialmente en la atención al cliente, el registro de pagos, el control de membresías, las ventas, la consulta de información y la comunicación con el propietario y los entrenadores. No existen respuestas correctas o incorrectas. La información será utilizada únicamente con fines académicos, será tratada de forma confidencial y su participación es voluntaria. Con su autorización grabaremos esta conversación. ¿Tiene alguna pregunta antes de comenzar?
+
+Participante P02: No, ninguna.
+
+Entrevistador: Entonces damos inicio. ¿Cuánto tiempo lleva trabajando o colaborando en la recepción del gimnasio y cuáles son sus principales responsabilidades?
+
+Participante P02: Llevo un poco más de dos años trabajando en el gimnasio. Durante ese tiempo me he encargado principalmente de la recepción y de varias actividades administrativas. Normalmente soy de las primeras personas con las que hablan los clientes cuando llegan, así que debo atender sus dudas, ayudarlos con las membresías y verificar que sus pagos estén registrados correctamente. También coordino algunos horarios de los entrenadores con el propietario, especialmente cuando llega un cliente nuevo o alguien necesita cambiar su rutina.
+
+Entrevistador: Básicamente, cuando los clientes llegan al gimnasio se comunican primero con usted.
+
+Participante P02: Sí. Si son nuevos, me encargo de hablar con ellos, explicarles cómo funciona la membresía, las rutinas y cómo sería su semana de entrenamiento.
+
+[02:15 aprox.]
+Entrevistador: ¿Puede describir cómo organiza sus actividades desde que inicia hasta que finaliza su jornada?
+
+Participante P02: Cuando comienzo mi jornada, lo primero que hago es revisar las novedades que dejó la persona del turno anterior. Esto me ayuda a saber si quedó algún pago pendiente, si algún cliente debe presentar un comprobante o si existe una situación que deba comunicarse a un entrenador. También reviso las membresías próximas a vencer. Durante el día atiendo renovaciones, consultas y ventas de productos. Cuando llega una persona nueva, trato de explicarle los planes, los horarios y la forma en la que se trabaja en el gimnasio. También aviso a los entrenadores cuando tienen que recibir a un cliente nuevo. Al finalizar mi turno organizo los comprobantes, reviso los pagos y dejo anotadas las novedades. Hay días tranquilos y otros en los que se acumulan muchas personas.
+
+Entrevistador: Hay temporadas con más personas, otras con menos y otras regulares.
+
+Participante P02: Exactamente.
+
+[04:10 aprox.]
+Entrevistador: Describa paso a paso cómo registra actualmente a un cliente nuevo, qué información solicita y dónde almacena esos datos.
+
+Participante P02: Si es un cliente nuevo, se solicitan datos básicos como nombre, número de identificación, teléfono y, en algunos casos, un contacto adicional. Esta información se coloca inicialmente en un formulario y después se pasa a una hoja de cálculo donde se lleva el control general de los clientes. También registramos el tipo de membresía elegida, la fecha de inicio y el horario en el que normalmente asistirá.
+
+Participante P02: El problema es que pueden ocurrir errores. A veces el formulario está completo, pero algún dato no se pasa a la hoja de cálculo digital. También puede suceder que una persona que asistió anteriormente sea registrada nuevamente porque no se comprobó su existencia. Hay clientes que dejan de asistir uno o dos años y luego vuelven a inscribirse. Eso genera inconvenientes para volverlos a añadir, eliminar registros o completar los datos nuevos.
+
+Entrevistador: Entonces, cuando alguien vuelve después de mucho tiempo puede generarse confusión.
+
+Participante P02: Sí, se genera un registro duplicado y no se sabe cuál es el correcto. Por eso sería mejor tener toda la información centralizada y buscar al cliente antes de crear un registro nuevo. Si no se hace eso, se duplica la información y solucionarlo es un dolor de cabeza.
+
+[07:05 aprox.]
+Entrevistador: Describa qué hace cuando un cliente llega al gimnasio, desde la verificación de su membresía hasta el registro de su asistencia.
+
+Participante P02: Cuando llega un cliente, normalmente lo busco en la lista para comprobar que tenga una membresía activa. Después verifico la fecha de vencimiento y registro su asistencia. Con los clientes frecuentes el proceso es rápido porque ya conozco sus nombres y horarios. Sin embargo, cuando llegan varias personas al mismo tiempo la atención se vuelve más complicada. En horarios de mayor concurrencia debo recibir clientes, responder preguntas, registrar pagos y controlar asistencias al mismo tiempo.
+
+Participante P02: También existen clientes con nombres parecidos, así que se debe revisar bien para no marcar la asistencia en el perfil equivocado. Una búsqueda rápida por número de identificación o teléfono ayudaría bastante a evitar filas en recepción.
+
+[09:10 aprox.]
+Entrevistador: Cuando una membresía está vencida o no aparece registrada, ¿cómo comprueba la información y qué procedimiento realiza para atender al cliente?
+
+Participante P02: Primero reviso la fecha de finalización y el historial de pagos. En ocasiones, una persona asegura que ya renovó, pero el pago todavía no aparece. En ese caso le pregunto si tiene el comprobante, reviso los recibos disponibles y consulto con el compañero que la atendió. A veces también debo comunicarme con la persona responsable de la administración.
+
+Participante P02: Mientras se verifica la información, en algunos casos se permite que el cliente ingrese temporalmente durante unos días, especialmente si es una persona conocida y existe la posibilidad de que el problema sea únicamente de registro. Esto debe manejarse con cuidado para evitar que alguien utilice el gimnasio sin tener un plan activo. Lo ideal es actualizar inmediatamente el pago y la membresía, dejando registrado quién realizó el cambio.
+
+[11:00 aprox.]
+Entrevistador: ¿Cómo registra el pago o la renovación de una membresía y cómo entrega o confirma el comprobante?
+
+Participante P02: Primero reviso qué tipo de plan tiene el cliente o cuál desea contratar. Después recibo el pago, verifico el valor y registro la renovación con la nueva fecha de vencimiento. Al finalizar le entrego un comprobante para que tenga respaldo.
+
+Participante P02: El proceso no es complicado, pero pueden aparecer problemas cuando existen descuentos o promociones. Como esos valores se calculan manualmente, puede haber desbalances. Por eso siempre trato de confirmar el valor antes de finalizar el registro. Los descuentos y promociones se conversan personalmente y luego hay que calcularlos en la aplicación.
+
+[12:35 aprox.]
+Entrevistador: Cuando realiza la venta de un producto, ¿cómo registra la transacción, actualiza la existencia y controla el dinero recibido?
+
+Participante P02: Además de las membresías, vendemos productos disponibles en el gimnasio, como bebidas hidratantes, energizantes, proteína y otros suplementos. Cuando una persona compra algo, se registra el producto vendido y el dinero recibido. Después se actualiza la cantidad disponible en el inventario.
+
+Participante P02: El inconveniente es que no siempre sabemos inmediatamente cuál es el stock real mientras atendemos a los clientes. A veces el registro indica que todavía existe un producto, pero al revisar la vitrina o la bodega resulta que ya se terminó. También ha pasado que se venden productos y no se registran en ese momento, por lo que debemos revisar físicamente antes de vender.
+
+[14:35 aprox.]
+Entrevistador: Al finalizar su jornada, ¿cómo verifica y entrega la información de pagos, ventas, asistencias y novedades del turno?
+
+Participante P02: Preparo un resumen de todo lo ocurrido durante esas horas. Incluyo pagos de membresías, renovaciones, ventas, asistencias y cualquier novedad importante. También entrego el dinero en efectivo y los comprobantes a las personas encargadas de administración.
+
+Participante P02: Trato de explicar verbalmente las novedades al compañero del siguiente turno, especialmente cuando queda algo pendiente con un cliente, un pago o una renovación. A veces hay problemas porque no existe confirmación de que la otra persona leyó o atendió toda la información. También puede pasar que se deje un mensaje, pero por la cantidad de trabajo no haya tiempo de revisarlo. Después se vuelve a preguntar al cliente y se generan confusiones.
+
+Entrevistador: Entonces, cuando termina su jornada, entrega lo pendiente al siguiente compañero.
+
+Participante P02: Sí. Si el cliente no llega durante mi turno y ya debo retirarme, le explico al compañero lo pendiente para que continúe.
+
+[16:55 aprox.]
+Entrevistador: ¿Qué información de los clientes necesita consultar o modificar y qué datos deberían tener acceso restringido?
+
+Participante P02: Necesito consultar información básica como nombres, tipo de membresía, fecha de vencimiento, pagos realizados, asistencias y novedades pendientes. Esto permite atender más rápido y responder correctamente cuando una persona pregunta por su plan.
+
+Participante P02: No todos los empleados deberían tener acceso a todas las funciones. Las contraseñas, la eliminación de transacciones, los cambios de precios y los reportes financieros deberían estar disponibles solamente para el administrador o propietario. Cada empleado debería ingresar con su propio usuario y tener permisos según las actividades que realiza.
+
+Entrevistador: Es decir, algunos usuarios deben tener acceso restringido.
+
+Participante P02: Sí. Cada empleado o cliente debería poder acceder solamente a lo que le corresponde.
+
+[18:35 aprox.]
+Entrevistador: ¿Cómo comunica actualmente al propietario y a los entrenadores los pagos, vencimientos, registros nuevos o novedades de los clientes? ¿Por qué pueden producirse errores o demoras?
+
+Participante P02: La coordinación se realiza por mensajes, llamadas o conversaciones personales dentro del gimnasio. Cuando ocurre una novedad con un cliente, tratamos de comunicársela al propietario o al entrenador correspondiente. Por ejemplo, puede llegar una persona nueva que necesita una rutina, una valoración o información sobre los horarios del entrenador.
+
+Participante P02: El problema aparece cuando no queda claro quién es responsable de resolver la novedad. Hay varios entrenadores y algunas personas buscan a uno específico. A veces el cliente piensa que el entrenador ya recibió el mensaje, pero todavía no lo ha visto. También puede ocurrir que el propietario esté ocupado y la respuesta tarde más tiempo.
+
+[20:05 aprox.]
+Entrevistador: ¿Qué actividad de recepción le genera más errores, retrasos o trabajo repetitivo?
+
+Participante P02: Las búsquedas de información y los cambios de turno. Cuando los datos de un cliente no están actualizados o están registrados en diferentes lugares, se pierde tiempo comprobando cuál es la información correcta. Una persona puede decir que ya registró un pago, pero si no aparece debemos buscar el comprobante o consultar al empleado que la atendió.
+
+Participante P02: Esto hace que la atención sea más lenta y puede causar incomodidad. Durante los cambios de turno también pueden perderse novedades, especialmente cuando se comunican verbalmente o mediante varios mensajes. Después se repiten preguntas, aparecen desacuerdos sobre fechas de vencimiento y no se sabe quién debe encargarse de la situación pendiente.
+
+[21:20 aprox.]
+Entrevistador: ¿Cuáles son las tres funciones que no deberían faltar en la primera versión del sistema?
+
+Participante P02: La primera sería una búsqueda rápida del cliente mediante nombre, teléfono o identificación. Deberían aparecer inmediatamente su membresía, último pago, fecha de vencimiento y novedades pendientes.
+
+Participante P02: La segunda sería la administración de usuarios y permisos. Cada trabajador debería tener una cuenta propia y acceder solamente a las opciones relacionadas con su cargo. El sistema también debería guardar quién registró, modificó o eliminó información.
+
+Participante P02: La tercera sería un módulo de novedades internas. Allí se podría escribir lo ocurrido, asignarlo al propietario, a un entrenador o a otro empleado, y después marcarlo como revisado o solucionado. Estas funciones reducirían confusiones y mejorarían la atención.
+
+Entrevistador: En momentos de alta concurrencia, ¿cuánto debería tardar una búsqueda?
+
+Participante P02: Debería ser prácticamente inmediata. Cuando no hay personas y todo está normal, unos cinco segundos. En una aglomeración tendría que ser todavía más rápida para evitar que los clientes esperen.
+
+Entrevistador: Muchas gracias por su participación.
+

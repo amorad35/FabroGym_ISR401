@@ -1,3 +1,196 @@
-TRANSCRIPCION ANONIMIZADA
-Codigo ENTR-07
-Participante P07
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+ENTREVISTA 05 — RECEPCIÓN
+Código del participante: Participante P07
+Duración aproximada del audio: 20:10
+
+[00:00 aprox.]
+Entrevistador: Buenos días. Formamos parte de un equipo de estudiantes de la materia de Ingeniería de Requerimientos de una institución académica. Estamos desarrollando un proyecto para conocer cómo se realizan actualmente los procesos administrativos y operativos de los gimnasios. En esta entrevista nos interesa conocer su experiencia como recepcionista, especialmente en la atención al cliente, el registro de pagos, el control de membresías, las ventas, la consulta de información y la comunicación con el propietario y los entrenadores. No existen respuestas correctas o incorrectas. La información será utilizada únicamente con fines académicos, será tratada de forma confidencial y su participación es voluntaria. Con su autorización grabaremos esta conversación. ¿Tiene alguna pregunta antes de comenzar?
+
+Participante P07: No, ninguna duda. Está bien.
+
+Entrevistador: Entonces damos inicio. ¿Cuánto tiempo lleva trabajando o colaborando en la recepción del gimnasio y cuáles son sus principales responsabilidades?
+
+Participante P07: Desempeño el cargo de recepcionista en el turno de la noche. Tengo un año y medio en el cargo. Llevo los datos de cada persona que ingresa y registro los pagos de membresías y mensualidades dentro del gimnasio.
+
+[01:50 aprox.]
+Entrevistador: ¿Puede describir cómo organiza sus actividades desde que inicia hasta que finaliza su jornada?
+
+Participante P07: Cuando llego, reviso el registro que dejó la otra recepcionista, porque en el turno de la mañana trabaja otra persona. Reviso cuántas personas asistieron durante ese turno. Ella trabaja desde las 6:00 de la mañana hasta las 12:00, cuando se cierra el gimnasio. Después, la apertura es desde las 14:00 hasta las 20:00.
+
+Participante P07: También contabilizo lo que se ha vendido, como aguas, bebidas energizantes y, en ocasiones, avenas. Se lleva una contabilidad para mantener todo al día.
+
+Entrevistador: Entonces, antes de comenzar su jornada, la otra recepcionista deja un resumen de lo realizado.
+
+Participante P07: Sí. En la mañana está la otra recepcionista.
+
+[03:20 aprox.]
+Entrevistador: Describa paso a paso cómo registra actualmente a un cliente nuevo, qué información solicita y dónde almacena esos datos.
+
+Participante P07: Tenemos una página de Excel, pero primero llevamos el registro manualmente. Existe un registro diario en el que anotamos a cada persona. Cuando alguien ingresa, revisamos su mensualidad o membresía.
+
+Participante P07: Por ejemplo, si una persona inicia el 6 de julio, su fecha límite es el 6 de agosto y debe pagar nuevamente cada día 6. También anotamos el nombre de cada persona y la hora en que ingresa. Aunque permanezca dos o tres horas, siempre se registra la hora de entrada de cada cliente.
+
+[04:40 aprox.]
+Entrevistador: Describa qué hace cuando un cliente llega al gimnasio, desde la verificación de su membresía hasta el registro de su asistencia.
+
+Participante P07: Se revisa en la página. También tenemos un chat de WhatsApp en el que se mantiene contacto con los clientes. Siempre se verifica quién está al día. Dos o tres días antes del vencimiento se le informa al cliente la fecha en la que terminará su pago.
+
+[05:35 aprox.]
+Entrevistador: Cuando una membresía está vencida o no aparece registrada, ¿cómo comprueba la información y qué procedimiento realiza para atender al cliente?
+
+Participante P07: Podemos comprobar el pago con el administrador o verificar directamente la información en la página que manejamos. Después le indicamos al cliente que su membresía ya venció.
+
+[06:15 aprox.]
+Entrevistador: ¿Cómo registra el pago o la renovación de una membresía y cómo entrega o confirma el comprobante?
+
+Participante P07: Cuando el pago es en efectivo, se anota que fue realizado en efectivo. Cuando el pago se realiza mediante transferencia, se envía el comprobante al administrador por WhatsApp.
+
+Entrevistador: Entonces utiliza tanto la hoja de cálculo de Excel como WhatsApp.
+
+Participante P07: Exactamente. Así se comprueba cuántas personas pagaron la mensualidad por transferencia y cuántas pagaron en efectivo.
+
+[07:20 aprox.]
+Entrevistador: Cuando realiza la venta de un producto, ¿cómo registra la transacción, actualiza la existencia y controla el dinero recibido?
+
+Participante P07: Eso se mantiene en la misma página de Excel, pero en una sección relacionada con bebidas. Cuando recibimos una caja, registramos la cantidad inicial. Por ejemplo, si hay 24 botellas de agua, se anotan 24 y luego se va disminuyendo la cantidad conforme se venden.
+
+Participante P07: En el registro diario manual, en la parte inferior, también anotamos cuántas aguas, bebidas energizantes o avenas se vendieron. Después se realiza una contabilización y debe coincidir lo que queda en la vitrina con lo que aparece en el documento.
+
+Entrevistador: ¿Realizan algo parecido a un libro diario?
+
+Participante P07: Sí. Todos los días se realiza un libro diario.
+
+Entrevistador: Entonces se lleva una contabilización y todo debe cuadrar.
+
+Participante P07: Debe cuadrar lo que queda en caja con la mercadería disponible. Casi todos los pagos se manejan en efectivo, aunque también existen transferencias.
+
+[09:10 aprox.]
+Entrevistador: Al finalizar su jornada, ¿cómo verifica y entrega la información de pagos, ventas, asistencias y novedades del turno?
+
+Participante P07: Se suma todo en Excel, se revisa la información y después se entrega mediante una fotografía enviada por WhatsApp al administrador o propietario.
+
+Entrevistador: Entonces realiza un resumen de la jornada.
+
+Participante P07: Sí. La recepcionista de la mañana deja todo lo que realizó. Yo verifico que esté correcto, contabilizo lo que hice durante la tarde y entrego todo en la noche. Esa información la compartimos tres personas mediante WhatsApp.
+
+Entrevistador: ¿Mantienen un grupo?
+
+Participante P07: Sí. Es un grupo administrativo en el que solamente están el gerente y las dos recepcionistas.
+
+Entrevistador: ¿La información del turno de la mañana y de la tarde se envía al administrador por separado?
+
+Participante P07: No. Se envía una sola vez en la noche.
+
+Entrevistador: Es decir, se envía un resumen total.
+
+Participante P07: Sí, un resumen total del día en la noche.
+
+Entrevistador: ¿También existe un resumen general de las mensualidades?
+
+Participante P07: Sí. Las mensualidades se mantienen en un resumen que debe revisarse todos los días y enviarse por WhatsApp.
+
+[11:05 aprox.]
+Entrevistador: ¿Qué información de los clientes necesita consultar o modificar y qué datos deberían tener acceso restringido?
+
+Participante P07: En algunos casos se registra información relacionada con el trabajo de la persona. Por ejemplo, hay clientes que trabajan en instituciones de seguridad y solicitan que esa información sea confidencial.
+
+Entrevistador: Entonces procura que los datos sensibles no sean visibles.
+
+Participante P07: Sí. Esos datos no deben quedar visibles para otras personas. Esa información se maneja internamente.
+
+[11:55 aprox.]
+Entrevistador: ¿Cómo comunica actualmente al propietario y a los entrenadores los pagos, vencimientos, registros nuevos o novedades de los clientes?
+
+Participante P07: Con los entrenadores no se comunican los pagos diarios. La comunicación sobre pagos se realiza únicamente con el propietario. Con él se mantiene comunicación todos los días.
+
+Participante P07: Cuando existe un ingreso nuevo, se anota en el libro de Excel y también en un libro manual. Si el pago fue por transferencia, se envía el comprobante y los datos de la persona: nombres, apellidos y edad.
+
+Participante P07: La edad es importante porque se debe considerar si se trata de una persona adulta mayor o si tiene alguna condición que pueda influir en los movimientos o ejercicios. Al entrenador se le informa si la persona es nueva, si nunca ha entrenado o si ya tiene experiencia.
+
+Entrevistador: Si llega una persona con una discapacidad física, ¿usted se comunica con el entrenador?
+
+Participante P07: Sí. Primero deben informármelo y después yo se lo comunico al entrenador para que determine qué movimientos puede realizar y cómo debe comenzar la clase.
+
+Entrevistador: Entonces el entrenador ya tiene una información previa.
+
+Participante P07: Sí. Al principio siempre se pregunta el nombre, si tiene alguna enfermedad, alguna discapacidad o si ha tenido una operación recientemente. Toda esa información se recopila para poder comunicársela al entrenador.
+
+[14:00 aprox.]
+Entrevistador: ¿Qué actividad de recepción le genera más errores, retrasos o trabajo repetitivo?
+
+Participante P07: Cuando los entrenadores no llegan a tiempo. Como soy recepcionista, si el entrenador no llega, debo pedirle al cliente que espere un momento.
+
+Participante P07: En el gimnasio las personas preguntan qué movimiento pueden realizar, pero yo no puedo indicarles una rutina completa porque el entrenador es quien se encarga de decidir qué movimientos deben hacer.
+
+Entrevistador: ¿Puede darles alguna indicación mientras esperan?
+
+Participante P07: A veces se les puede orientar para que hagan estiramientos o utilicen la bicicleta durante unos diez minutos hasta que llegue el entrenador. Después, el entrenador realiza la rutina.
+
+[15:10 aprox.]
+Entrevistador: ¿Cuáles son las tres funciones que no deberían faltar en la primera versión del sistema?
+
+Participante P07: No debería faltar el entrenador, las máquinas deberían mantenerse en buen estado y también debería existir una buena contabilidad.
+
+Entrevistador: ¿Puede explicar la parte relacionada con las máquinas?
+
+Participante P07: Las máquinas deben estar en buen funcionamiento. A veces se dañan ligas u otras piezas y eso impide realizar correctamente los movimientos.
+
+Entrevistador: Es decir, se necesita mantenimiento.
+
+Participante P07: Sí. Un mantenimiento exclusivo para todas las máquinas.
+
+Entrevistador: ¿Y qué considera importante en la parte administrativa?
+
+Participante P07: Estar pendiente de las membresías y no olvidar la fecha en que cada persona comenzó. También sería útil tener un sistema que bloquee el acceso y avise que una persona ya no puede utilizar el gimnasio porque su membresía venció.
+
+[16:40 aprox.]
+Entrevistador: Cuando busca a un cliente en la hoja de Excel o en el registro manual, ¿el proceso demora o se realiza en pocos segundos?
+
+Participante P07: Siempre tratamos de hacerlo lo más rápido posible porque no podemos hacer que el cliente espere demasiado.
+
+Participante P07: Algunas personas saben cuándo les corresponde renovar, pero otras lo olvidan. Entonces les pedimos que esperen mientras verificamos. Tenemos una hoja en la que marcamos los días de las personas cuyas membresías van a terminar durante la semana.
+
+Participante P07: De esa manera podemos anticiparnos e informarles, por ejemplo, que al día siguiente les corresponde pagar la mensualidad.
+
+Entrevistador: ¿Se han producido confusiones porque algún dato esté mal anotado?
+
+Participante P07: Sí. En esos casos debemos revisar si el pago se hizo mediante transferencia o en efectivo, porque las transferencias se registran en un lugar y los pagos en efectivo en otro.
+
+Participante P07: Mientras verificamos, se permite que el cliente ingrese y se le indica que al salir se le confirmará la información. Después se conversa sobre la fecha del pago.
+
+Participante P07: Si debía pagar el día 15, aunque pague el día 16, se registra con la fecha que correspondía originalmente, es decir, el día 15.
+
+Entrevistador: Entonces es importante mantener claridad sobre las fechas.
+
+Participante P07: Sí. A veces ni el cliente ni nosotros recordamos inmediatamente la fecha exacta. Por eso se verifica y luego se conversa con la persona.
+
+[18:15 aprox.]
+Entrevistador: ¿Estos casos ocurren con mucha frecuencia?
+
+Participante P07: No son muy frecuentes, pero sí suceden. Al comienzo algunas personas no entienden que los pagos son de fecha a fecha.
+
+Participante P07: Si una persona ingresa el día 6, todos sus pagos corresponden al día 6. Si ingresa el día 10, todos los pagos corresponden al día 10. Siempre se les informa que la fecha de ingreso determina la fecha de pago.
+
+Participante P07: Sin embargo, puede ocurrir que el día 10 sea sábado, que la persona entrene el viernes 9 y regrese el lunes. Entonces paga el lunes, aunque la fecha correspondiente siga siendo el día 10.
+
+Entrevistador: Eso puede generar confusión entre ambas partes.
+
+Participante P07: Sí, entre ambas partes. Con los clientes frecuentes, que llevan uno o dos años entrenando, normalmente ya conocen su fecha. Ellos realizan la transferencia o el pago en efectivo sin esperar que se les recuerde.
+
+[19:20 aprox.]
+Entrevistador: ¿Qué ocurre cuando un cliente asistió hace varios meses o años y después regresa? ¿Se utiliza el registro anterior o se crea uno nuevo?
+
+Participante P07: Se lo anota nuevamente y se le pregunta por qué dejó de asistir.
+
+Participante P07: Algunas personas se ausentan durante tres o seis meses porque se lesionaron, tuvieron un accidente o fueron trasladadas a otra ciudad.
+
+Participante P07: Esto ocurre bastante con personas que trabajan en instituciones de seguridad. Se ausentan dos o tres meses porque las cambian de ciudad y, cuando regresan, retoman desde el comienzo.
+
+Entrevistador: Muchas gracias por su participación. Hemos terminado la entrevista.
+
+Participante P07: Muchas gracias igualmente.

@@ -1,3 +1,112 @@
-TRANSCRIPCION ANONIMIZADA
-Codigo ENTR-03
-Participante P03
+TRANSCRIPCIÓN ANONIMIZADA
+Proyecto académico Fabro Gym
+Criterio aplicado: conversación completa con preguntas, respuestas, aclaraciones y repreguntas.
+Limpieza moderada: se omitieron muletillas repetitivas que no alteran el sentido.
+Las marcas de tiempo son aproximadas y sirven únicamente como referencia de ubicación.
+
+ENTREVISTA 02 — RECEPCIÓN
+Código del participante: Participante P03
+Duración aproximada del audio: 22:17
+
+[00:00 aprox.]
+Entrevistador: Buenas noches. Somos estudiantes de Ingeniería de Software y estamos desarrollando un proyecto académico para conocer cómo se realizan los procesos administrativos y operativos de los gimnasios. Nos acompaña una persona con experiencia en recepción. No existen respuestas correctas o incorrectas; buscamos conocer cómo realiza su trabajo y qué dificultades se presentan.
+
+Participante P03: Buenas noches. He trabajado en recepción de un gimnasio durante un año y seis meses.
+
+Entrevistador: ¿Cómo ha sido su experiencia?
+
+Participante P03: Muy buena. El trabajo es bonito, pero requiere llevar todo en orden. Me he encargado principalmente de recibir a los clientes, atender consultas y revisar el estado de sus membresías. También registro pagos, controlo asistencias y explico los planes disponibles cuando llega una persona interesada en inscribirse.
+
+[01:45 aprox.]
+Entrevistador: ¿Cuáles son sus principales responsabilidades como recepcionista?
+
+Participante P03: También realizo la venta de bebidas, suplementos y otros productos disponibles en recepción. Al finalizar el turno debo revisar el dinero, organizar los comprobantes y entregar al propietario lo recaudado durante la jornada. También dejo anotadas las novedades para la persona que trabaja después de mí.
+
+Participante P03: Aunque parece un trabajo sencillo, se deben controlar varias cosas al mismo tiempo, especialmente cuando llegan muchos clientes juntos o alguien presenta un problema con su pago.
+
+[03:15 aprox.]
+Entrevistador: Describa paso a paso cómo organiza sus actividades desde el comienzo hasta el final de su jornada.
+
+Participante P03: Cuando llego, lo primero que hago es revisar las novedades que dejó la persona del turno anterior. Verifico si quedó algún pago pendiente, si algún cliente debe presentar un comprobante o si existe algo que deba comunicarse al propietario. Después reviso el dinero disponible en caja y organizo los recibos para comenzar el turno con todo en orden.
+
+[04:20 aprox.]
+Entrevistador: ¿Cómo registra actualmente a un cliente nuevo, qué información solicita y dónde almacena esos datos?
+
+Participante P03: Cuando llega un cliente nuevo, le pido datos personales básicos: nombre completo, número de identificación, teléfono y algún medio de contacto. Después le explico los tipos de membresía disponibles y le pregunto qué plan desea contratar, desde qué fecha quiere comenzar y en qué horario piensa asistir.
+
+Participante P03: Normalmente anoto primero esa información en una ficha física porque es la forma más rápida cuando hay varias personas esperando. Después paso parte de los datos a una hoja de Excel. El inconveniente es que, cuando hay mucha gente, a veces solo se llena la ficha y la actualización digital queda pendiente. También puede faltar algún dato o escribirse el nombre de manera diferente en ambos registros. Luego, al buscar al cliente, puede generarse información duplicada. Sería mejor registrar todo directamente en un solo sistema.
+
+Entrevistador: De esos datos, ¿cuáles considera imprescindibles?
+
+Participante P03: Los nombres completos y el número de teléfono. Mediante el teléfono se puede contactar al cliente, enviar información sobre pagos atrasados o avisar cuando la membresía está próxima a vencer.
+
+[07:05 aprox.]
+Entrevistador: ¿Qué pasos realiza cuando un cliente llega, desde la verificación de su membresía hasta el registro de asistencia?
+
+Participante P03: Primero lo saludo y le pregunto su nombre para buscarlo en los registros. Lo busco en el cuaderno o en la hoja de Excel. Después reviso la fecha de vencimiento para confirmar que su membresía esté activa. Si todo está correcto, marco la asistencia y le permito ingresar.
+
+Participante P03: El proceso puede demorar cuando no encuentro rápidamente el nombre, cuando existen personas con datos parecidos o cuando la información está incompleta. En esos casos debo revisar recibos anteriores, buscar en otras hojas o preguntarle directamente al cliente.
+
+[08:50 aprox.]
+Entrevistador: Cuando una membresía está vencida o no aparece registrada, ¿cómo comprueba la información y qué procedimiento realiza?
+
+Participante P03: Primero reviso el cuaderno donde se anotan los pagos y después consulto la hoja de Excel para comprobar la fecha de vencimiento. Si el cliente indica que ya realizó el pago, le pregunto si tiene el recibo o el comprobante de transferencia. Cuando pagó mediante transferencia, reviso los mensajes o confirmaciones disponibles.
+
+[10:00 aprox.]
+Entrevistador: Describa paso a paso cómo registra un pago o la renovación de una membresía y cómo confirma el comprobante.
+
+Participante P03: Primero reviso el tipo de plan que tiene el cliente y confirmo el valor que debe cancelar. Después recibo el dinero en efectivo o verifico el comprobante si realizó una transferencia. Una vez confirmado el pago, anoto en el cuaderno el valor recibido, la fecha del pago y la nueva fecha de vencimiento.
+
+[11:05 aprox.]
+Entrevistador: Cuando realiza la venta de un producto, ¿cómo registra la transacción, actualiza la existencia y controla el dinero?
+
+Participante P03: Primero reviso que el producto esté disponible y le indico el precio al cliente. Después anoto en un cuaderno separado el nombre del producto, la cantidad vendida y el valor recibido. Si paga en efectivo, guardo el dinero en caja. Si paga mediante transferencia, recibo el comprobante antes de entregar el producto.
+
+[12:15 aprox.]
+Entrevistador: Al finalizar su jornada, ¿cómo verifica y entrega la información de pagos, ventas, asistencias y novedades?
+
+Participante P03: Primero cuento el dinero en efectivo y lo comparo con los recibos, renovaciones y ventas anotadas durante el turno. También separo en el resumen qué cantidad corresponde a pagos de membresía y qué parte pertenece a ventas de productos.
+
+Participante P03: Cuando existen transferencias, reviso los comprobantes y mensajes de confirmación. Después preparo un resumen escrito con la información más importante y le envío una fotografía al propietario por WhatsApp. Incluyo cuánto dinero se recibió, cuántas renovaciones se realizaron y qué productos se vendieron. Si ocurrió alguna novedad con un cliente, también se deja anotada para la persona del siguiente turno.
+
+[14:10 aprox.]
+Entrevistador: ¿Qué información de los clientes necesita consultar o modificar para realizar su trabajo?
+
+Participante P03: Necesito consultar el nombre y los datos de contacto, el tipo de membresía, la fecha de inicio y vencimiento, los pagos realizados y las asistencias registradas. También es útil conocer si existe alguna novedad pendiente, por ejemplo, un pago por confirmar o una consulta realizada anteriormente.
+
+Participante P03: No todos los trabajadores deberían tener acceso a toda la información. Los datos personales sensibles, el historial completo de pagos y las observaciones privadas deberían estar restringidos según el cargo. Tampoco sería adecuado que cualquier persona pueda eliminar pagos, modificar precios o cambiar información importante sin autorización.
+
+Participante P03: Lo ideal sería que cada trabajador tenga su propio usuario y que el sistema registre quién realizó cada modificación. De esa manera se protege la información y se identifica fácilmente el origen de cualquier error.
+
+[16:20 aprox.]
+Entrevistador: ¿Cómo comunica actualmente al propietario y a los entrenadores pagos, vencimientos, registros nuevos o novedades? ¿Por qué pueden producirse errores o demoras?
+
+Participante P03: La mayoría de las novedades se comunica por WhatsApp o verbalmente cuando el propietario o los entrenadores están en el gimnasio. Si llega un cliente nuevo que necesita hablar con un entrenador, se envía un mensaje para avisarle. También se comunican pagos pendientes, membresías próximas a vencer o problemas presentados durante la atención.
+
+Participante P03: El inconveniente es que los mensajes pueden mezclarse con otras conversaciones y después resulta difícil encontrarlos. También puede suceder que alguien no revise el grupo a tiempo o que una novedad se comunique únicamente de palabra. Si la persona se olvida, no queda respaldo. A veces la misma información debe repetirse varias veces para confirmar que todos la conocen.
+
+Participante P03: Sería útil contar con una sección de novedades donde se pueda escribir la situación, asignarla a una persona y marcarla como revisada o solucionada.
+
+[18:35 aprox.]
+Entrevistador: ¿Qué actividad de recepción le genera más errores, retrasos o trabajo repetitivo?
+
+Participante P03: Comprobar los pagos y las fechas de vencimiento. La información está dividida entre el cuaderno, la hoja de Excel, los recibos físicos y los mensajes de WhatsApp. Cuando un cliente dice que ya pagó, pero el dato no aparece actualizado, debo revisar todos esos lugares hasta encontrar el comprobante.
+
+Participante P03: Esto genera filas en recepción y puede resultar incómodo para el cliente, especialmente si tiene poco tiempo. Además, muchas veces la misma información se registra varias veces: primero en el cuaderno, después en el recibo y finalmente en Excel. También puede suceder que un dato se actualice en un lugar, pero no en los demás. Tener la información centralizada permitiría realizar búsquedas y verificaciones más rápido.
+
+[20:30 aprox.]
+Entrevistador: ¿Cuáles son las tres funciones que no deberían faltar en la primera versión del sistema?
+
+Participante P03: La primera sería un registro centralizado del cliente, sus pagos y membresías. Toda la información estaría en un solo lugar y no sería necesario revisar cuadernos, recibos o distintas hojas de Excel. También permitiría evitar registros duplicados y conocer quién realizó cada operación.
+
+Participante P03: La segunda sería una consulta rápida del estado de cada membresía. Al buscar al cliente deberían aparecer su plan, el último pago y la fecha de vencimiento. También sería importante recibir alertas cuando una membresía esté próxima a vencer.
+
+Participante P03: La tercera sería un cierre de caja con comprobantes y un resumen automático de los ingresos del turno. El sistema debería separar los pagos en efectivo, las transferencias, las renovaciones y las ventas de productos. Esto facilitaría la entrega del dinero al propietario y permitiría identificar rápidamente cualquier diferencia.
+
+Entrevistador: ¿Cuál es el tiempo máximo que podría esperar durante la búsqueda de un cliente?
+
+Participante P03: En una situación normal podría esperar uno o dos minutos, pero cuando se acumulan clientes eso causa inconvenientes. Lo recomendable sería tener un registro total en un solo lugar para encontrar rápidamente a las personas mediante nombres, apellidos y teléfono.
+
+Entrevistador: Muchas gracias por su participación.
+
+Participante P03: Gracias igualmente. Disculpe cualquier error. Somos personas. Si necesitan algo, con mucho gusto los atiendo.
