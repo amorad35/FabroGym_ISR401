@@ -18,9 +18,11 @@ Los scripts trabajan sobre matrices estructuradas derivadas de la evidencia real
 ## Entradas principales
 
 ```text
-06_Experimento/instrumentos/02_Matriz_Codificacion_Walkthroughs.csv
+06_Experimento/datos_crudos/codificacion_walkthroughs.csv
 06_Experimento/instrumentos/03_Matriz_Candidatos_RNF_Explicabilidad.csv
 ```
+
+La codificación de walkthroughs se consume desde `06_Experimento/datos_crudos/codificacion_walkthroughs.csv`, que constituye la fuente estructurada real utilizada por la cadena de análisis. No se mantiene una matriz vacía duplicada en `06_Experimento/instrumentos/` como entrada activa.
 
 El member checking puede incorporarse opcionalmente mediante un CSV estructurado con las columnas:
 
