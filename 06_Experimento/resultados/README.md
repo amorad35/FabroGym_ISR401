@@ -52,9 +52,9 @@ Si un análisis no puede calcularse con la evidencia disponible, se reporta como
 Cada salida debe poder relacionarse con:
 
 - la evidencia anonimizada o seudonimizada de origen;
-- `02_Matriz_Codificacion_Walkthroughs.csv`;
-- `03_Matriz_Candidatos_RNF_Explicabilidad.csv`;
-- `05_Matriz_Operacionalizacion_Explicabilidad.csv`;
+- `06_Experimento/datos_crudos/codificacion_walkthroughs.csv`;
+- `06_Experimento/instrumentos/03_Matriz_Candidatos_RNF_Explicabilidad.csv`;
+- `06_Experimento/instrumentos/05_Matriz_Operacionalizacion_Explicabilidad.csv`;
 - los scripts versionados de `06_Experimento/scripts_analisis/`;
 - el commit del repositorio utilizado para ejecutar el análisis.
 
