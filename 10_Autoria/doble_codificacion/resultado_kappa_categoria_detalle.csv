@@ -1,0 +1,17 @@
+﻿ID_Registro,Categoria_Mora,Categoria_Ponce,Acuerdo
+WALK-NTEC-01-F002,rutinas y personalizacion,rutinas y personalizacion,SI
+WALK-NTEC-01-F006,prevencion y recuperacion de errores,prevencion y recuperacion de errores,SI
+WALK-NTEC-02-F002,reportes y dashboard,reportes y dashboard,SI
+WALK-NTEC-02-F006,claridad e informacion,usabilidad y navegacion,NO
+WALK-NTEC-03-F003,rutinas y personalizacion,rutinas y personalizacion,SI
+WALK-NTEC-03-F009,adaptabilidad y visualizacion,adaptabilidad y visualizacion,SI
+WALK-TEC-01-F003,rutinas y personalizacion,rutinas y personalizacion,SI
+WALK-TEC-01-F008,comunicacion,comunicacion,SI
+WALK-TEC-01-F013,"clientes, membresias y pagos","clientes, membresias y pagos",SI
+WALK-TEC-02-F003,roles y acceso,roles y acceso,SI
+WALK-TEC-02-F008,rutinas y personalizacion,rutinas y personalizacion,SI
+WALK-TEC-02-F014,usabilidad y navegacion,claridad e informacion,NO
+WALK-TEC-03-F003,seguridad y trazabilidad operativa,seguridad y trazabilidad operativa,SI
+WALK-TEC-03-F008,usabilidad y navegacion,usabilidad y navegacion,SI
+WALK-TEC-03-F013,asistencia y automatizacion,asistencia y automatizacion,SI
+WALK-TEC-03-F018,adaptabilidad y visualizacion,usabilidad y navegacion,NO

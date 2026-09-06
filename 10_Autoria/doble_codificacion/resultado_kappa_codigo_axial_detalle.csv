@@ -1,0 +1,17 @@
+﻿ID_Registro,Codigo_Axial_Mora,Codigo_Axial_Ponce,Acuerdo
+WALK-NTEC-01-F002,rut,rut,SI
+WALK-NTEC-01-F006,err,err,SI
+WALK-NTEC-02-F002,rep,rep,SI
+WALK-NTEC-02-F006,info,usab,NO
+WALK-NTEC-03-F003,rut,rut,SI
+WALK-NTEC-03-F009,adap,adap,SI
+WALK-TEC-01-F003,rut,rut,SI
+WALK-TEC-01-F008,com,com,SI
+WALK-TEC-01-F013,cli,cli,SI
+WALK-TEC-02-F003,seg_rol,seg_rol,SI
+WALK-TEC-02-F008,rut,rut,SI
+WALK-TEC-02-F014,usab,info,NO
+WALK-TEC-03-F003,seg_aud,seg_aud,SI
+WALK-TEC-03-F008,usab,usab,SI
+WALK-TEC-03-F013,asis,asis,SI
+WALK-TEC-03-F018,adap,usab,NO

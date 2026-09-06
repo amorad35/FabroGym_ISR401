@@ -1,0 +1,2 @@
+﻿Campo,N,Acuerdo_observado,Acuerdo_esperado,Kappa,IC95_inferior,IC95_superior,Bootstrap,Seed
+Codigo_Axial,16,0.812500,0.125000,0.785714,0.535237,1.000000,10000,4012026
