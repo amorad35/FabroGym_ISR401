@@ -11,7 +11,7 @@ Principios:
 - documenta como NO APLICABLE cualquier inferencia no soportada.
 """
 from pathlib import Path
-import json, math
+import json, math, subprocess, sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -33,10 +33,10 @@ for p in (PROC, RES, TAB, FIG):
     p.mkdir(parents=True, exist_ok=True)
 
 FINAL_MAP = {
-    "RNF-EXP-C01": "RNF-EXP-01",
-    "RNF-EXP-C02": "RNF-EXP-02",
-    "RNF-EXP-C03": "RNF-EXP-03",
-    "RNF-EXP-C04": "RNF-EXP-04",
+    "RNF-EXP-C01": "RNF-16",
+    "RNF-EXP-C02": "RNF-17",
+    "RNF-EXP-C03": "RNF-18",
+    "RNF-EXP-C04": "RNF-19",
 }
 
 def hms_to_seconds(v):
@@ -288,6 +288,8 @@ def write_applicability():
          "justificacion":"Hay tres walkthroughs por perfil y no existe resultado cuantitativo independiente por participante preregistrado."},
         {"metrica_prueba":"Shapiro-Wilk / Levene","estado":"NO APLICABLE",
          "justificacion":"No se ejecuta una hipótesis inferencial sobre una variable cuantitativa del Enfoque 3."},
+        {"metrica_prueba":"Tamaño del efecto técnico vs no técnico por categorías WALK","estado":"APLICADO DESCRIPTIVAMENTE",
+         "justificacion":"Correlación biserial por rangos pareada + IC95% bootstrap sobre 18 categorías; tres sesiones por perfil. No se interpreta como inferencia poblacional."},
         {"metrica_prueba":"Bootstrap IC95% de índices ordinales generales de encuesta","estado":"APLICADO DESCRIPTIVAMENTE",
          "justificacion":"Solo describe seis preguntas ordinales generales; no se interpreta como explicabilidad ni como prueba de hipótesis."}
     ]).to_csv(TAB / "tabla_aplicabilidad_pruebas_estadisticas.csv", index=False, encoding="utf-8-sig")
@@ -312,42 +314,201 @@ def write_summary(survey, sessions, coding, final, exp, counts, vt, at, sat):
                       "porcentaje_categorias_ultimas_3":round(pcta,3),"cumple_categorias":bool(pcta<=5)}
     }
     (RES / "resumen_resultados.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
-    md = f"""# Resultados empíricos terminales — FabroGym\n\n## Evidencia multimedia\nLa ficha técnica v3.1 identifica 16 sesiones únicas: 10 `ENTR-*`, 3 `WALK-TEC-*` y 3 `WALK-NTEC-*`. La suma de los 16 videos es **{fmt_hms(vt)}** ({vt/60:.3f} min), por encima de 240 min; los audios suman **{fmt_hms(at)}**. No se suman audio y video como si fueran sesiones distintas.\n\n## Encuesta\nSe analizaron **{len(survey)} respuestas**. Las columnas directas finales de identificación están vacías en las 70 filas. El cuestionario no contiene un campo técnico/no técnico ni ítems Likert de explicabilidad; se reportan frecuencias e índices ordinales generales con IC95% bootstrap, sin reinterpretarlos como explicabilidad.\n\n## Walkthroughs\nSe analizaron **{len(coding)} fragmentos codificados**: {int((coding['Perfil']=='Tecnico').sum())} técnicos y {int((coding['Perfil']=='No tecnico').sum())} no técnicos, con {coding['Codigo_Normalizado'].nunique()} códigos normalizados y {coding['Categoria'].nunique()} categorías. La comparación entre perfiles es descriptiva/cualitativa conforme al protocolo v1.4.\n\n## Explicabilidad y member checking\nSe identificaron **{len(exp)} fragmentos pertinentes** y **{len(final)} RNF terminales**. El member checking con `MC-P01`, `MC-P02` y `MC-P03` produjo {int(counts.sum())} decisiones: {int(counts['Confirmado'])} confirmaciones, {int(counts['Ajustado'])} ajustes y {int(counts['No confirmado'])} no confirmaciones. Los RNF se terminalizan como `RNF-EXP-01` a `RNF-EXP-04`; el componente recomendador permanece **PROPUESTO**, no implementado.\n\nNo se calcula porcentaje de cobertura del marco de explicabilidad: no existe un denominador cerrado verificable.\n\n## Saturación\nEn las últimas tres sesiones aparecen en promedio **{avg3:.3f}** códigos nuevos sobre **{total}** acumulados: **{pct:.3f}%**. El criterio estricto <=5% **no se alcanza**, aunque la curva presenta inflexión visible desde la cuarta sesión. A nivel axial, las últimas tres sesiones representan **{pcta:.3f}%** de categorías nuevas; se informa solo como evidencia complementaria de estabilización.\n\n## Pruebas no aplicadas\nNo se fabrican Fleiss kappa, Mann-Whitney, Shapiro-Wilk ni Levene donde los datos/protocolo no los soportan. Consulte `tabla_aplicabilidad_pruebas_estadisticas.csv`.\n"""
+    md = f"""# Resultados empíricos terminales — FabroGym\n\n## Evidencia multimedia\nLa ficha técnica v3.1 identifica 16 sesiones únicas: 10 `ENTR-*`, 3 `WALK-TEC-*` y 3 `WALK-NTEC-*`. La suma de los 16 videos es **{fmt_hms(vt)}** ({vt/60:.3f} min), por encima de 240 min; los audios suman **{fmt_hms(at)}**. No se suman audio y video como si fueran sesiones distintas.\n\n## Encuesta\nSe analizaron **{len(survey)} respuestas**. Las columnas directas finales de identificación están vacías en las 70 filas. El cuestionario no contiene un campo técnico/no técnico ni ítems Likert de explicabilidad; se reportan frecuencias e índices ordinales generales con IC95% bootstrap, sin reinterpretarlos como explicabilidad.\n\n## Walkthroughs\nSe analizaron **{len(coding)} fragmentos codificados**: {int((coding['Perfil']=='Tecnico').sum())} técnicos y {int((coding['Perfil']=='No tecnico').sum())} no técnicos, con {coding['Codigo_Normalizado'].nunique()} códigos normalizados y {coding['Categoria'].nunique()} categorías. La comparación entre perfiles sigue siendo descriptiva/exploratoria; se añade tamaño del efecto por categorías con correlación biserial por rangos pareada e IC95% bootstrap, sin p-valor ni inferencia por participante.\n\n## Explicabilidad y member checking\nSe identificaron **{len(exp)} fragmentos pertinentes** y **{len(final)} RNF terminales**. El member checking con `MC-P01`, `MC-P02` y `MC-P03` produjo {int(counts.sum())} decisiones: {int(counts['Confirmado'])} confirmaciones, {int(counts['Ajustado'])} ajustes y {int(counts['No confirmado'])} no confirmaciones. Los RNF se terminalizan como `RNF-16` a `RNF-19`; el componente recomendador permanece **PROPUESTO**, no implementado.\n\nNo se calcula porcentaje de cobertura del marco de explicabilidad: no existe un denominador cerrado verificable.\n\n## Saturación\nEn las últimas tres sesiones aparecen en promedio **{avg3:.3f}** códigos nuevos sobre **{total}** acumulados: **{pct:.3f}%**. El criterio estricto <=5% **no se alcanza**, aunque la curva presenta inflexión visible desde la cuarta sesión. A nivel axial, las últimas tres sesiones representan **{pcta:.3f}%** de categorías nuevas; se informa solo como evidencia complementaria de estabilización.\n\n## Pruebas no aplicadas\nNo se fabrican Fleiss kappa, Mann-Whitney, Shapiro-Wilk ni Levene donde los datos/protocolo no los soportan. Consulte `tabla_aplicabilidad_pruebas_estadisticas.csv`.\n"""
     (RES / "RESUMEN_FASE2.md").write_text(md, encoding="utf-8")
     return summary
 
 def write_osf_deviations(summary):
-    sat = summary["saturacion"]
-    text = f"""# Deviations from preregistration — FabroGym\n\nRegistro OSF: https://osf.io/62ysc/  \nDOI OSF: 10.17605/OSF.IO/62YSC  \nProtocolo: v1.4  \nFecha del registro publicada: 2026-08-29\n\n## D1. Cronología de los walkthroughs\nLas seis sesiones WALK (`WALK-TEC-01..03` y `WALK-NTEC-01..03`) ocurrieron antes del registro OSF. Se mantienen como evidencia previa/formativa; no se presentan como datos confirmatorios recogidos después del sello temporal.\n\n## D2. Normalización de identificadores\nDocumentos tempranos usaron `WT-T01..03` y `WT-NT01..03`. La versión terminal normaliza a `WALK-TEC-01..03` y `WALK-NTEC-01..03`, manteniendo correspondencia directa por número y perfil. El PDF documental de member checking se conserva sin alterar.\n\n## D3. Análisis inferencial sugerido por la rúbrica\nEl protocolo v1.4 no preregistra hipótesis inferenciales para seis walkthroughs y excluye crear puntuaciones Likert, coeficientes de acuerdo o variables cuantitativas inexistentes. Por ello no se calculan Fleiss kappa ni Mann-Whitney; el contraste por perfil es descriptivo/cualitativo.\n\n## D4. Cuestionario\nEl CSV real contiene 70 respuestas, pero no registra perfil técnico/no técnico ni ítems de explicabilidad por dimensión. Se analiza descriptivamente y no se reinterpreta ninguna pregunta general como escala de explicabilidad.\n\n## D5. Saturación\nLa curva acumula {sat['codigos_total']} códigos. El promedio nuevo de las últimas tres sesiones equivale a {sat['porcentaje']:.3f}% del total, ligeramente por encima del umbral <=5%; por tanto no se declara saturación estricta de códigos. A nivel axial se observa {sat['porcentaje_categorias_ultimas_3']:.3f}%, reportado solo como evidencia complementaria de estabilización.\n\n## D6. Member checking\nLa actividad está documentada con `MC-P01`, `MC-P02` y `MC-P03`, fecha 2026-08-29, con 12 decisiones: 4 confirmaciones y 8 ajustes. No existe grabación audiovisual; esta ausencia se declara como riesgo frente a la redacción literal de la rúbrica y no se fabrica material inexistente.\n\n## D7. Ficha técnica y duración\nLa ficha v3.1 conserva `ENTR-01..10`, `WALK-TEC-01..03` y `WALK-NTEC-01..03`. Los 16 videos suman {summary['sesiones']['video_total']} y los audios {summary['sesiones']['audio_total']}; se usa una sola duración por sesión para el mínimo temporal.\n"""
+    text = """# Registro de desviaciones reales del protocolo — FabroGym
+
+## 1. Propósito
+
+Este archivo registra únicamente diferencias reales y verificables entre el procedimiento efectivamente seguido por FabroGym y el protocolo/prerregistro OSF v1.4.
+
+No se modifican retrospectivamente fechas, respuestas, instrumentos, evidencias ni resultados para hacerlos coincidir con el protocolo. Las condiciones metodológicas que son limitaciones, pero no cambios del procedimiento previsto, se separan explícitamente de las desviaciones.
+
+**Registro OSF:** `https://osf.io/62ysc/`  
+**DOI OSF:** `10.17605/OSF.IO/62YSC`  
+**Protocolo:** v1.4  
+**Fecha de publicación del registro:** 29/08/2026
+
+---
+
+## 2. Registro resumido
+
+| ID | Fecha/periodo | Desviación real | Motivo | Impacto | Tratamiento | Estado |
+|---|---|---|---|---|---|---|
+| DEV-OSF-01 | 12/08/2026–29/08/2026 | Las seis sesiones WALK ocurrieron antes de la publicación del prerregistro OSF. | El prerregistro se formalizó después de ejecutar las sesiones. | Los WALK no pueden presentarse como datos confirmatorios recogidos bajo un protocolo previamente registrado. | Se conserva la cronología real y los WALK se tratan como evidencia previa/formativa; el análisis posterior se declara como posterior al registro. | DOCUMENTADA |
+| DEV-AN-02 | 05/09/2026 | Se añadió al cierre 2B una verificación de acuerdo intercodificador mediante doble codificación sobre un subconjunto superior al 20 %, con Cohen's kappa e IC95 %. | La guía terminal exige doble codificación y medida de acuerdo con intervalo de confianza; el procedimiento no formaba parte del análisis preregistrado v1.4. | El resultado debe interpretarse como análisis adicional de cierre y no como prueba preregistrada. | Se conservan el subconjunto, las dos hojas de codificación, el script y los resultados del acuerdo; no se reescribe el protocolo histórico. | DOCUMENTADA |
+| DEV-AN-03 | 05/09/2026 | Se añadió tamaño del efecto + IC95 % para la comparación técnico vs no técnico. | La guía terminal específica lo exige, mientras que el pipeline previo trataba la comparación por perfiles como descriptiva/cualitativa y no aplicaba una prueba inferencial por participante. | El análisis adicional no debe presentarse como hipótesis confirmatoria preregistrada ni como inferencia poblacional. | Se usa una medida descriptivo-exploratoria por categorías, generada por script, con IC95 % bootstrap y sin p-valor por participante. | DOCUMENTADA |
+
+---
+
+# 3. DEV-OSF-01 — Walkthroughs anteriores al prerregistro
+
+## Condición esperada
+
+Una actividad que se presente como confirmatoria bajo un prerregistro debe ejecutarse después del sello temporal del registro correspondiente.
+
+## Situación real
+
+Las sesiones `WALK-TEC-01..03` y `WALK-NTEC-01..03` se realizaron entre el 12 y el 22 de agosto de 2026. El registro OSF se publicó el 29 de agosto de 2026.
+
+## Impacto y tratamiento
+
+Las sesiones conservan valor como evidencia empírica previa/formativa, pero no se presentan como recolección confirmatoria posterior al prerregistro. Se mantiene la secuencia real:
+
+**WALK → protocolo v1.4 → registro OSF → sistematización/análisis posterior.**
+
+## Evidencia
+
+- `02_Evidencias/Validacion_walkthrough/`
+- `06_Experimento/datos_crudos/sesiones_multimedia_desde_ficha_v3_1.csv`
+- `06_Experimento/protocolo.tex`
+- `06_Experimento/osf_registration.pdf`
+- DOI `10.17605/OSF.IO/62YSC`
+
+---
+
+# 4. DEV-AN-02 — Doble codificación y acuerdo intercodificador añadidos en cierre 2B
+
+## Condición previa
+
+El pipeline previo no trataba una medida de acuerdo intercodificador como análisis preregistrado aplicable.
+
+## Situación real
+
+Durante el cierre terminal 2B se incorporó una comprobación adicional sobre un subconjunto común superior al 20 % del corpus WALK, con dos hojas de codificación y cálculo reproducible de Cohen's kappa con IC95 %.
+
+## Motivo
+
+La guía específica de cierre exige doble codificación de al menos el 20 % y una medida de acuerdo acompañada de intervalo de confianza.
+
+## Impacto y tratamiento
+
+El resultado se informa como **análisis adicional de cierre**, no como análisis confirmatorio preregistrado. No se modifica la versión histórica del protocolo para simular que el procedimiento estaba previsto desde el inicio.
+
+## Evidencia terminal
+
+La evidencia correspondiente se conserva en el bloque de doble codificación preparado para `10_Autoria/doble_codificacion/`, incluyendo las dos hojas, el subconjunto común, el script de kappa y sus resultados.
+
+---
+
+# 5. DEV-AN-03 — Tamaño del efecto técnico vs no técnico añadido en cierre 2B
+
+## Condición previa
+
+Antes del cierre terminal, la comparación entre los tres WALK técnicos y los tres no técnicos se trataba como descriptiva/cualitativa y no se aplicaba una prueba inferencial por participante.
+
+## Situación real
+
+En F3-04 se añadió una medida de tamaño del efecto con IC95 % sobre las categorías temáticas comparables entre perfiles.
+
+## Motivo
+
+La guía específica de cierre exige reportar tamaño del efecto e intervalo de confianza para la comparación técnico vs no técnico.
+
+## Impacto y tratamiento
+
+Se incorpora como análisis **descriptivo-exploratorio**, no como prueba confirmatoria preregistrada. La unidad del cálculo es la categoría temática pareada y no una puntuación independiente por participante. No se genera un p-valor ni se afirma una diferencia poblacional.
+
+## Evidencia terminal
+
+- `06_Experimento/scripts_analisis/calcular_efecto_perfiles.py`
+- `06_Experimento/resultados/F3-04_TAMANIO_EFECTO.md`
+- `06_Experimento/resultados/tablas/tabla_efecto_perfiles.csv`
+- espejo reproducible correspondiente en `07_Datos/`
+
+---
+
+# 6. Condiciones metodológicas registradas que NO se clasifican como nuevas desviaciones
+
+Estas condiciones deben seguir reportándose por transparencia, pero no se presentan como cambios posteriores del protocolo salvo que exista evidencia específica de ello:
+
+- **Normalización de identificadores WALK:** es una corrección de nomenclatura y trazabilidad, no una nueva recolección ni un nuevo análisis.
+- **Cuestionario:** el conjunto analítico oficial permanece en `n=70`; no contiene perfil técnico/no técnico ni una escala de explicabilidad por dimensión, por lo que se analiza únicamente dentro del alcance real de sus variables.
+- **Saturación:** si el criterio estricto no se alcanza, se reporta como resultado/limitación y no se transforma en una desviación.
+- **Member checking sin grabación audiovisual:** la ausencia de grabación se declara como limitación documental; no se fabrica evidencia.
+- **Normalización terminal RF/RNF/RD:** es una corrección de especificación y trazabilidad, no una modificación retrospectiva de la evidencia primaria.
+- **Corte y proveniencia del cuestionario:** la muestra analítica permanece congelada en el corte documentado; esto se trata como procedencia del conjunto analítico, no como una desviación adicional mientras no contradiga una regla explícita del protocolo.
+
+---
+
+# 7. Regla para futuras actualizaciones
+
+Solo se añadirá una nueva entrada cuando exista:
+
+1. una condición prevista explícitamente por el protocolo;
+2. una diferencia real frente a esa condición;
+3. una fecha o periodo verificable;
+4. un motivo sustentable;
+5. evidencia del impacto y del tratamiento aplicado.
+
+Las actividades pendientes no se registran como si ya hubieran ocurrido. Las entradas históricas no se eliminan para hacer coincidir retrospectivamente el protocolo con el estado final.
+"""
+    text = text.replace("__DEVIATIONS_MD__", "") if False else text
     (ROOT / "osf_deviations.md").write_text(text, encoding="utf-8")
+    if ROOT.name == "07_Datos":
+        (ROOT / "desviaciones.md").write_text(text, encoding="utf-8")
+
+    reg = pd.DataFrame([
+        {
+            "ID":"DEV-OSF-01",
+            "Fecha_o_periodo":"2026-08-12/2026-08-29",
+            "Tipo":"Temporalidad del prerregistro",
+            "Condicion_prevista":"Prerregistro formalizado antes de la recolección que se pretenda presentar como confirmatoria",
+            "Situacion_real":"Las seis sesiones WALK ocurrieron antes de la publicación OSF del 29/08/2026",
+            "Motivo":"El prerregistro se formalizó después de ejecutar las sesiones",
+            "Impacto":"Los WALK no se interpretan como datos confirmatorios recogidos bajo protocolo previamente registrado",
+            "Tratamiento":"Conservar cronología real; clasificar WALK como evidencia previa/formativa; separar recolección original de análisis posterior",
+            "Evidencia":"02_Evidencias/Validacion_walkthrough/ | 06_Experimento/datos_crudos/sesiones_multimedia_desde_ficha_v3_1.csv | 06_Experimento/osf_registration.pdf",
+            "Estado":"DOCUMENTADA",
+        },
+        {
+            "ID":"DEV-AN-02",
+            "Fecha_o_periodo":"2026-09-05",
+            "Tipo":"Análisis adicional de cierre",
+            "Condicion_prevista":"Pipeline/prerregistro v1.4 sin medida de acuerdo intercodificador terminal",
+            "Situacion_real":"Se incorpora doble codificación >20% y Cohen's kappa con IC95% durante el cierre 2B",
+            "Motivo":"Exigencia de la guía terminal específica",
+            "Impacto":"No debe presentarse como prueba confirmatoria preregistrada",
+            "Tratamiento":"Conservar hojas, subconjunto, script y resultados; declarar el análisis como adicional de cierre",
+            "Evidencia":"10_Autoria/doble_codificacion/",
+            "Estado":"DOCUMENTADA",
+        },
+        {
+            "ID":"DEV-AN-03",
+            "Fecha_o_periodo":"2026-09-05",
+            "Tipo":"Análisis adicional de cierre",
+            "Condicion_prevista":"Comparación técnico/no técnico tratada previamente como descriptiva/cualitativa sin inferencia por participante",
+            "Situacion_real":"Se incorpora tamaño del efecto + IC95% por categorías durante F3-04",
+            "Motivo":"Exigencia de la guía terminal específica",
+            "Impacto":"No debe interpretarse como hipótesis confirmatoria preregistrada ni como inferencia poblacional",
+            "Tratamiento":"Correlación biserial por rangos pareada + IC95% bootstrap; sin p-valor por participante",
+            "Evidencia":"06_Experimento/scripts_analisis/calcular_efecto_perfiles.py | 06_Experimento/resultados/F3-04_TAMANIO_EFECTO.md",
+            "Estado":"DOCUMENTADA",
+        },
+    ])
+    reg.to_csv(ROOT / "desviaciones_registro.csv", index=False, encoding="utf-8-sig")
 
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name="TitleCenter2", parent=styles["Title"], alignment=TA_CENTER, fontSize=15, leading=18, spaceAfter=10))
     styles.add(ParagraphStyle(name="BodyX", parent=styles["BodyText"], fontSize=9.4, leading=12.7, spaceAfter=6))
     styles.add(ParagraphStyle(name="H2X", parent=styles["Heading2"], fontSize=10.8, leading=13, spaceBefore=6, spaceAfter=3))
     doc = SimpleDocTemplate(str(ROOT / "osf_deviations.pdf"), pagesize=A4, leftMargin=18*mm, rightMargin=18*mm, topMargin=16*mm, bottomMargin=16*mm)
-    story = [Paragraph("FabroGym — Deviations from preregistration", styles["TitleCenter2"]),
-             Paragraph("Entrega 4 (2B) — Enfoque 3: Explicabilidad como Requisito No Funcional", styles["BodyX"])]
-    meta = [["Campo","Valor"],["Registro OSF","https://osf.io/62ysc/"],["DOI OSF","10.17605/OSF.IO/62YSC"],["Protocolo","v1.4"],["Fecha publicada","29-08-2026"]]
-    t = Table(meta, colWidths=[42*mm,120*mm], repeatRows=1)
-    t.setStyle(TableStyle([("BACKGROUND",(0,0),(-1,0),colors.lightgrey),("GRID",(0,0),(-1,-1),.4,colors.grey),
-                           ("FONTNAME",(0,0),(-1,0),"Helvetica-Bold"),("FONTNAME",(0,1),(0,-1),"Helvetica-Bold"),
-                           ("FONTSIZE",(0,0),(-1,-1),8.4),("VALIGN",(0,0),(-1,-1),"TOP"),
-                           ("LEFTPADDING",(0,0),(-1,-1),5),("RIGHTPADDING",(0,0),(-1,-1),5),
-                           ("TOPPADDING",(0,0),(-1,-1),4),("BOTTOMPADDING",(0,0),(-1,-1),4)]))
-    story += [t, Spacer(1,6)]
-    sections = [
-        ("D1. Cronología de los walkthroughs", "Las seis sesiones WALK (WALK-TEC-01..03 y WALK-NTEC-01..03) ocurrieron antes del registro OSF. Se mantienen como evidencia previa/formativa y no se presentan como datos confirmatorios posteriores al sello temporal."),
-        ("D2. Normalización de identificadores", "Documentos tempranos usaron WT-T01..03 y WT-NT01..03. La versión terminal adopta WALK-TEC-01..03 y WALK-NTEC-01..03. El PDF documental de member checking se conserva sin alterar; las tablas procesadas usan los identificadores terminales."),
-        ("D3. Análisis inferencial", "El protocolo v1.4 no preregistra hipótesis inferenciales para los seis walkthroughs y excluye crear variables inexistentes. No se calculan Fleiss kappa ni Mann-Whitney; el contraste técnico/no técnico es descriptivo y cualitativo."),
-        ("D4. Cuestionario", "El archivo real contiene 70 respuestas, pero no registra perfil técnico/no técnico ni ítems de explicabilidad por dimensión. Se conserva como evidencia descriptiva; ninguna pregunta general se reinterpreta como Likert de explicabilidad."),
-        ("D5. Saturación", f"La curva acumula {sat['codigos_total']} códigos normalizados. El promedio nuevo de las últimas tres sesiones equivale a {sat['porcentaje']:.3f}% del total, ligeramente superior al umbral <=5%. No se declara saturación estricta de códigos. A nivel axial se observa {sat['porcentaje_categorias_ultimas_3']:.3f}%, como evidencia complementaria de estabilización."),
-        ("D6. Member checking", "La actividad está documentada con MC-P01, MC-P02 y MC-P03, fechada 29-08-2026, con 12 decisiones: 4 confirmaciones y 8 ajustes. No existe grabación audiovisual. Esta ausencia se declara como riesgo frente a la redacción literal de la rúbrica y no se fabrica una grabación inexistente."),
-        ("D7. Ficha técnica y duración", f"La ficha v3.1 conserva ENTR-01..10, WALK-TEC-01..03 y WALK-NTEC-01..03. Los 16 videos suman {summary['sesiones']['video_total']} y los audios {summary['sesiones']['audio_total']}. Para el mínimo temporal se usa una sola duración por sesión, evitando doble conteo.")
+    story = [
+        Paragraph("FabroGym — Registro de desviaciones reales", styles["TitleCenter2"]),
+        Paragraph("Entrega 4 (2B) — protocolo v1.4 / OSF 10.17605/OSF.IO/62YSC", styles["BodyX"]),
     ]
-    for h,b in sections:
-        story.append(Paragraph(h, styles["H2X"])); story.append(Paragraph(b, styles["BodyX"]))
-    story.append(Spacer(1,5)); story.append(Paragraph("<b>Principio de transparencia.</b> Este documento no modifica fechas, firmas, respuestas ni evidencia primaria. Las limitaciones se reportan para mantener coherencia entre OSF, evidencia, ERS/SRS y manuscrito.", styles["BodyX"]))
+    for row in reg.to_dict("records"):
+        story.append(Paragraph(f"{row['ID']} — {row['Tipo']}", styles["H2X"]))
+        story.append(Paragraph(f"<b>Fecha/periodo:</b> {row['Fecha_o_periodo']}", styles["BodyX"]))
+        story.append(Paragraph(f"<b>Situación real:</b> {row['Situacion_real']}", styles["BodyX"]))
+        story.append(Paragraph(f"<b>Motivo:</b> {row['Motivo']}", styles["BodyX"]))
+        story.append(Paragraph(f"<b>Impacto:</b> {row['Impacto']}", styles["BodyX"]))
+        story.append(Paragraph(f"<b>Tratamiento:</b> {row['Tratamiento']}", styles["BodyX"]))
+    story.append(Spacer(1,5))
+    story.append(Paragraph("<b>Principio de transparencia.</b> Las limitaciones que no constituyen diferencias reales frente al protocolo se reportan por separado y no se inflan como desviaciones.", styles["BodyX"]))
     doc.build(story)
 
 def main():
@@ -355,6 +516,8 @@ def main():
     vt, at = analyze_multimedia(sessions)
     analyze_survey(survey)
     sat = analyze_walkthroughs(coding, curve, axial, profile)
+    effect_script = Path(__file__).with_name("calcular_efecto_perfiles.py")
+    subprocess.run([sys.executable, str(effect_script)], check=True)
     final, exp, counts = analyze_explainability(coding, candidates, fragments, mc)
     write_applicability()
     summary = write_summary(survey, sessions, coding, final, exp, counts, vt, at, sat)
@@ -363,6 +526,7 @@ def main():
     print(f"Sesiones: {len(sessions)}; video total: {fmt_hms(vt)}; audio total: {fmt_hms(at)}")
     print(f"Encuesta: n={len(survey)}; sin perfil técnico/no técnico; sin Likert de explicabilidad")
     print(f"Walkthroughs: {len(coding)} fragmentos; códigos={coding['Codigo_Normalizado'].nunique()}; categorías={coding['Categoria'].nunique()}")
+    print("F3-04: tamaño del efecto técnico/no técnico + IC95% regenerado")
     print(f"Saturación códigos últimas 3: {sat[2]:.3f}% -> {'CUMPLE' if sat[2] <= 5 else 'NO CUMPLE ESTRICTAMENTE'}")
     print(f"Member checking: {int(counts.sum())} decisiones; RNF terminales={len(final)}")
 
