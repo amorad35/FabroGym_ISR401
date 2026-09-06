@@ -1,0 +1,53 @@
+﻿tipo,id_anterior,id_nuevo,nombre_requisito,accion,observaciones
+RF,RF-AUT-01,RF-01,Garantizar tratamiento lícito y minimización de datos,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-AUT-02,RF-02,Controlar acceso por roles y permisos,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-AUT-03,RF-03,Asegurar trazabilidad de eventos críticos,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-CLI-01,RF-04,Registrar datos mínimos de cliente,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-CLI-02,RF-05,Consultar ficha de cliente,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-CLI-03,RF-06,Actualizar y reactivar cliente,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-MEM-01,RF-07,Configurar catálogo de planes,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-MEM-02,RF-08,Activar y renovar membresía,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-MEM-03,RF-09,Consultar vigencia,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-MEM-04,RF-10,Alertar vencimientos,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-PAG-01,RF-11,Registrar pago y comprobante,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-PAG-02,RF-12,Resolver pagos pendientes,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-ASI-01,RF-13,Registrar asistencia,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-ASI-02,RF-14,Consultar asistencia,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-INV-01,RF-15,Administrar productos,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-INV-02,RF-16,Registrar movimientos de stock,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-VEN-01,RF-17,Registrar venta,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-INV-03,RF-18,Alertar stock y rotación,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-CAJ-01,RF-19,Cerrar turno y conciliar caja,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-NOV-01,RF-20,Gestionar novedades internas,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-INS-01,RF-21,Gestionar horario y disponibilidad de instructor,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-RUT-01,RF-22,Administrar rutinas,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-RUT-02,RF-23,Registrar seguimiento,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-RUT-03,RF-24,Registrar seguimiento operativo,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RF,RF-REP-01,RF-25,Consultar panel y reportes,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-AF-01,RNF-01,Adecuación funcional,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-ED-01,RNF-02,Eficiencia de desempeño,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-ED-02,RNF-03,Eficiencia de desempeño,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-COM-01,RNF-04,Compatibilidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-IU-01,RNF-05,Interacción de usuario,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-IU-02,RNF-06,Interacción de usuario,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-FIA-01,RNF-07,Fiabilidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-FIA-02,RNF-08,Fiabilidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-SEG-01,RNF-09,Seguridad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-SEG-02,RNF-10,Seguridad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-SEG-03,RNF-11,Seguridad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-MAN-01,RNF-12,Mantenibilidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-MAN-02,RNF-13,Mantenibilidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-POR-01,RNF-14,Portabilidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-FLE-01,RNF-15,Flexibilidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-EXP-01,RNF-16,Explicar objetivo y restricciones de la recomendación,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-EXP-02,RNF-17,Registrar supervisión humana y procedencia profesional,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-EXP-03,RNF-18,Mantener historial trazable de rutinas,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,RNF-EXP-04,RNF-19,Mostrar el motivo principal de la recomendación,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RD,RD-PRI-01,RD-01,Restricción de diseño/privacidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RD,RD-PRI-02,RD-02,Restricción de diseño/privacidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RD,RD-PRI-03,RD-03,Restricción de diseño/privacidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RD,RD-IA-01,RD-04,Restricción de diseño/privacidad,RENOMBRADO,Cambio exclusivo de identificador; contenido y trazas conservados.
+RNF,,RNF-20,Validar la pertinencia de la recomendación de rutina,INCORPORADO,Nuevo RNF propuesto exigido por la guía específica; sin evidencia de prueba ejecutada.
+RNF,,RNF-21,Controlar equidad y no discriminación,INCORPORADO,Nuevo RNF propuesto exigido por la guía específica; sin evidencia de prueba ejecutada.
+RNF,,RNF-22,Monitorear el componente después del despliegue,INCORPORADO,Nuevo RNF propuesto exigido por la guía específica; sin evidencia de prueba ejecutada.
+RNF,,RNF-23,Clasificar y justificar el riesgo del componente,INCORPORADO,Nuevo RNF propuesto exigido por la guía específica; sin evidencia de prueba ejecutada.
