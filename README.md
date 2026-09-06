@@ -9,15 +9,15 @@ FabroGym documenta la ingeniería de requisitos de un sistema de gestión de gim
 | Componente | Estado de cierre |
 |---|---|
 | ERS/SRS | `01_ERS/ERS_SRS_2B_v2.0.pdf` y fuente LaTeX |
-| Trazabilidad | catálogo terminal + matriz 2B con 97 vínculos cerrados |
-| MVP | parche validado con objetivo 16/19 RF Must; verificar sustitución final en `05_MVP/` |
+| Trazabilidad | catálogo normalizado (25 RF, 23 RNF y 4 RD) + 97 trazas históricas y 8 planes de verificación IA |
+| MVP | cobertura histórica declarada como 16/19 RF Must; estado sujeto a verificación terminal C3 en `05_MVP/` |
 | Análisis empírico | reproducible desde `06_Experimento/scripts_analisis/run_all.py` |
-| Manuscrito | `07_Publicacion/manuscrito_final.pdf` + `.tex`, plantilla Springer Nature |
-| Dataset Zenodo | **PREPARADO PARA DEPÓSITO DESPUÉS DE FASE 6** en `07_Publicacion/dataset_zenodo/` |
+| Manuscrito | `07_Publicacion/manuscrito_fuente/manuscrito_final.pdf` + `.tex`, plantilla Springer Nature |
+| Dataset Zenodo | **PUBLICADO**, versión 2.0.0; la copia local es el snapshot del depósito publicado |
 | Registro OSF | publicado: https://osf.io/62ysc/ — DOI 10.17605/OSF.IO/62YSC |
-| DOI Zenodo | `PENDIENTE_POST_FASE6` — no inventado |
-| Software Heritage SWHID | `PENDIENTE_POST_FASE6` — no inventado |
-| F-UJI / FAIR | `PENDIENTE_POST_ZENODO` — no se declara puntaje sin ejecutar la herramienta |
+| DOI Zenodo | [`10.5281/zenodo.22237884`](https://doi.org/10.5281/zenodo.22237884) — versión específica publicada |
+| Software Heritage SWHID | `PENDIENTE_FASE6` — se incorporará solo cuando exista un SWHID real y verificable |
+| F-UJI / FAIR | `PENDIENTE_DE_EJECUCION` — el DOI Zenodo ya existe; no se declara puntaje hasta ejecutar F-UJI |
 
 
 ## Equipo y ORCID
@@ -30,7 +30,7 @@ FabroGym documenta la ingeniería de requisitos de un sistema de gestión de gim
 | Mery Helenmey Ponce Rivera | Verificador / calidad de requisitos | 0009-0006-6041-9198 |
 | David Octavio Vaca Romero | Apoyo documental / evidencias | 0009-0000-4457-3095 |
 
-**Cita recomendada antes del depósito:** Equipo PFC FabroGym (2026), *FabroGym: explainability requirements and reproducible requirements-engineering artifacts*, versión 2.0, Universidad Técnica Estatal de Quevedo, GitHub. Después del depósito final, sustituir esta cita por la emitida con el DOI Zenodo real y `CITATION.cff` actualizado.
+**Cita del depósito publicado:** Equipo PFC FabroGym (2026), *FabroGym: explainability requirements and reproducible requirements-engineering artifacts*, versión 2.0, Universidad Técnica Estatal de Quevedo, GitHub. Depósito publicado: Zenodo 2.0.0, DOI 10.5281/zenodo.22237884.
 
 ## Identificadores empíricos congelados
 
@@ -59,14 +59,7 @@ Las tablas y figuras del manuscrito deben provenir de esta ruta reproducible. No
 
 ## Paquete de replicación FAIR
 
-La carpeta `07_Publicacion/dataset_zenodo/` está preparada como **predepósito**. Como el equipo decidió obtener el DOI solo al terminar todas las fases, el procedimiento correcto es:
-
-1. finalizar Fase 6 y el estado definitivo del repositorio;
-2. ejecutar `python scripts_release/build_zenodo_package.py` desde la raíz del repositorio;
-3. ejecutar `python scripts_release/validate_public_release.py 07_Publicacion/dataset_zenodo`;
-4. revisar manualmente privacidad y el manifiesto;
-5. crear/publicar el depósito Zenodo y obtener el DOI real;
-6. actualizar DOI, SWHID y F-UJI con `POST_FASE6_ZENODO_SWH_FUJI.md`.
+El depósito Zenodo ya fue publicado como versión 2.0.0: https://doi.org/10.5281/zenodo.22237884. La carpeta `07_Publicacion/dataset_zenodo/` se conserva en esta tarea como snapshot histórico del paquete publicado y no se modifica. La ERS académica vigente 2.0 y la normalización de identificadores son correcciones posteriores del repositorio; una eventual versión correctiva del depósito deberá evaluarse y publicarse de forma controlada en una fase posterior, sin afirmar identidad byte a byte con la versión 2.0.0.
 
 ## Privacidad y zonas [P]/[R]
 

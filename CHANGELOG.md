@@ -2,6 +2,23 @@
 
 Todos los cambios relevantes del proyecto FabroGym se documentan aquí siguiendo la estructura de Keep a Changelog.
 
+## [2B-v2.0-uml-secuencia-saneado] - 2026-09-05
+
+### Cambiado
+- Se sustituyeron en la fuente UML canónica y en el mirror de compilación los 19 diagramas de secuencia por las exportaciones saneadas desde Visual Paradigm, con nombres y rótulos internos RF normalizados.
+- Se actualizó `FabroGym_Diagramas_UML.vpp` con la fuente editable saneada y se eliminaron del árbol activo los 19 nombres históricos de secuencia.
+- Se actualizaron las rutas y leyendas del anexo UML de la ERS/SRS v2.0 y se retiró el bloqueo temporal de identificadores internos.
+
+## [2B-v2.0-normalizacion-ids] - 2026-09-04
+
+### Cambiado
+- Se consolidó `01_ERS/ERS_SRS_2B_v2.0.*` como única ERS/SRS académica vigente y se subordinó 2.1/2.2 al historial interno no vigente.
+- Se normalizaron 25 RF, 19 RNF preexistentes y 4 RD a numeración continua; se añadieron cuatro RNF propuestos exigidos para recomendación, equidad, monitoreo y riesgo.
+- Se sincronizaron catálogo, matriz, priorización y consumidores directos sin modificar el método analítico ni los datos crudos.
+- Se verificaron 54 PNG UML byte a byte y se incorporaron sus tres fuentes editables originales; los 19 raster de secuencia conservan IDs visuales históricos documentados mediante el mapa de migración.
+- Se sincronizó `01_ERS/modelado_final/` como mirror byte a byte de los 54 PNG canónicos de `03_Modelado/Diagramas_UML/`, se corrigió la ruta de la matriz y se documentaron sus 105 filas (97 trazas migradas y 8 planes de verificación).
+- Se corrigió el estado del depósito Zenodo: versión 2.0.0 publicada, DOI 10.5281/zenodo.22237884.
+
 ## [2B-v2.0-predeposit] - 2026-09-01
 
 ### Añadido
