@@ -194,7 +194,7 @@ The four candidate NFRs generated 12 member-checking decisions. Four decisions (
 \caption{Member-checking decisions across four candidate explainability NFRs (12 decisions).}\label{fig:mc}
 \end{figure}
 
-The most consequential adjustments narrowed overclaims. For RNF-EXP-01, the final wording removed a general reference to observations and retained only the objective/need plus relevant recorded constraints. For RNF-EXP-02, participants retained the need to show trainer review and professional provenance but avoided inventing states not observed in the evidence. For RNF-EXP-03, all three participants removed an automatic comparison between routine versions and kept an inspectable history with dates and available observations. For RNF-EXP-04, all three removed the claim that the system must compare alternatives and retained only the principal criterion behind a future suggestion or automatic assignment.
+The most consequential adjustments narrowed overclaims. For RNF-16, the final wording removed a general reference to observations and retained only the objective/need plus relevant recorded constraints. For RNF-17, participants retained the need to show trainer review and professional provenance but avoided inventing states not observed in the evidence. For RNF-18, all three participants removed an automatic comparison between routine versions and kept an inspectable history with dates and available observations. For RNF-19, all three removed the claim that the system must compare alternatives and retained only the principal criterion behind a future suggestion or automatic assignment.
 
 \begin{table}[H]
 \caption{Terminal explainability NFRs after member checking.}\label{tab:rnf}
@@ -203,10 +203,10 @@ The most consequential adjustments narrowed overclaims. For RNF-EXP-01, the fina
 \toprule
 ID & Terminal requirement & Metric/threshold & Verification \\
 \midrule
-RNF-EXP-01 & A proposed routine recommendation shall show its primary objective or need and, when present, relevant recorded client constraints. & 100\% of test recommendations show the objective/need and applicable constraints. & Functional cases with different objectives and constraints; inspect visible routine information.\\
-RNF-EXP-02 & Every assigned or proposed routine shall indicate whether it was reviewed/validated by an authorized trainer and, when recorded, the provenance of an external professional indication. & 100\% show review state; cases with external indications show provenance. & Functional cases with reviewed/unreviewed routines and with/without external indications.\\
-RNF-EXP-03 & The system shall allow consultation of the current routine and the history of registered routines, showing date and associated observations when available. & 100\% of test routines remain consultable with date; observations appear when present. & Register multiple routines and verify later retrieval, dates, and available observations.\\
-RNF-EXP-04 & When the system suggests an initial routine or automatically assigns a routine/class, it shall briefly show the principal criterion used for the suggestion or assignment. & 100\% of evaluated future suggestions/automatic assignments show a principal criterion. & Cases with different profiles/objectives; inspect the criterion shown before confirmation.\\
+RNF-16 & A proposed routine recommendation shall show its primary objective or need and, when present, relevant recorded client constraints. & 100\% of test recommendations show the objective/need and applicable constraints. & Functional cases with different objectives and constraints; inspect visible routine information.\\
+RNF-17 & Every assigned or proposed routine shall indicate whether it was reviewed/validated by an authorized trainer and, when recorded, the provenance of an external professional indication. & 100\% show review state; cases with external indications show provenance. & Functional cases with reviewed/unreviewed routines and with/without external indications.\\
+RNF-18 & The system shall allow consultation of the current routine and the history of registered routines, showing date and associated observations when available. & 100\% of test routines remain consultable with date; observations appear when present. & Register multiple routines and verify later retrieval, dates, and available observations.\\
+RNF-19 & When the system suggests an initial routine or automatically assigns a routine/class, it shall briefly show the principal criterion used for the suggestion or assignment. & 100\% of evaluated future suggestions/automatic assignments show a principal criterion. & Cases with different profiles/objectives; inspect the criterion shown before confirmation.\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -297,7 +297,7 @@ The consolidated contribution is a transparent requirements-engineering pathway 
 Future work has three concrete directions. First, additional walkthroughs should test whether the code-level curve falls below the prespecified 5\% threshold and whether profile-specific patterns persist. Second, a dedicated explainability instrument should collect dimension-level ratings from technical and non-technical users, enabling preregistered inferential comparisons and confidence intervals. Third, after implementing a routine recommender, the four RNF should be converted into executable acceptance tests and evaluated across alternative explanation interfaces and recommendation architectures, connecting RE specification to system-level explainability evaluation \cite{chazette2022,gedikli2014,zhangchen2020}.
 
 \section*{Data and materials availability}
-The preregistration is publicly identified at OSF (DOI: \href{https://doi.org/10.17605/OSF.IO/62YSC}{10.17605/OSF.IO/62YSC}). The final replication package is prepared for Zenodo but its persistent DOI must be inserted only after the external deposit is actually published; no Zenodo DOI is invented in this manuscript version. Public materials include anonymized transcripts, the anonymized questionnaire, requirement corpora, traceability, processed results, and reproducible scripts. Identifiable audio/video and original consent materials remain restricted and are not part of the open dataset. Data publication follows FAIR and software-citation principles \cite{wilkinson2016,smith2016,dicosmo2020}.
+The preregistration is publicly identified at OSF (DOI: \href{https://doi.org/10.17605/OSF.IO/62YSC}{10.17605/OSF.IO/62YSC}). The replication package was published on Zenodo as version 2.0.0 (DOI: \href{https://doi.org/10.5281/zenodo.22237884}{10.5281/zenodo.22237884}). The later identifier normalization in the repository is not claimed to be byte-identical to that published snapshot. Public materials include anonymized transcripts, the anonymized questionnaire, requirement corpora, traceability, processed results, and reproducible scripts. Identifiable audio/video and original consent materials remain restricted and are not part of the open dataset. Data publication follows FAIR and software-citation principles \cite{wilkinson2016,smith2016,dicosmo2020}.
 
 \section*{Use of AI-assisted technologies}
 OpenAI ChatGPT (GPT-5.6 Sol) was used under human review for language polishing, consistency checking, LaTeX/document assembly, and cross-checking the manuscript against the versioned project artifacts. The ChatGPT product session did not expose a user-configurable sampling temperature; therefore, no numerical temperature value is reported. The tool was not used as a substitute for primary evidence, to create participants or interviews, to fabricate statistical results, or to invent references. All numerical claims in the Results section are derived from versioned project data and reproducible analysis outputs. The proposed recommendation/AI component of FabroGym is not presented as implemented.
@@ -381,10 +381,10 @@ The candidate-to-final mapping in Table~\ref{tab:mc-audit} makes visible where m
 \toprule
 Candidate $\rightarrow$ final & Confirm & Adjust & Reject & Final decision \\
 \midrule
-RNF-EXP-C01 $\rightarrow$ RNF-EXP-01 & 2 & 1 & 0 & Retained with narrower wording on objective/need and relevant recorded constraints.\\
-RNF-EXP-C02 $\rightarrow$ RNF-EXP-02 & 2 & 1 & 0 & Retained with trainer-review status and external-professional provenance when recorded.\\
-RNF-EXP-C03 $\rightarrow$ RNF-EXP-03 & 0 & 3 & 0 & Retained after removing automatic comparison; history, dates and available observations remain.\\
-RNF-EXP-C04 $\rightarrow$ RNF-EXP-04 & 0 & 3 & 0 & Retained after removing alternative comparison; only the principal suggestion/assignment criterion remains.\\
+RNF-EXP-C01 $\rightarrow$ RNF-16 & 2 & 1 & 0 & Retained with narrower wording on objective/need and relevant recorded constraints.\\
+RNF-EXP-C02 $\rightarrow$ RNF-17 & 2 & 1 & 0 & Retained with trainer-review status and external-professional provenance when recorded.\\
+RNF-EXP-C03 $\rightarrow$ RNF-18 & 0 & 3 & 0 & Retained after removing automatic comparison; history, dates and available observations remain.\\
+RNF-EXP-C04 $\rightarrow$ RNF-19 & 0 & 3 & 0 & Retained after removing alternative comparison; only the principal suggestion/assignment criterion remains.\\
 \bottomrule
 \end{tabularx}
 \end{table}

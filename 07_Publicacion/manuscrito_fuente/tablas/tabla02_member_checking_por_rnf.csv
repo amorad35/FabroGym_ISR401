@@ -1,5 +1,5 @@
 ﻿ID_Candidato,ID_RNF_Final,Confirmado,Ajustado,No_confirmado,Decision_final
-RNF-EXP-C01,RNF-EXP-01,2,1,0,Incorporar_con_ajuste
-RNF-EXP-C02,RNF-EXP-02,2,1,0,Incorporar_con_ajuste
-RNF-EXP-C03,RNF-EXP-03,0,3,0,Incorporar_con_ajuste
-RNF-EXP-C04,RNF-EXP-04,0,3,0,Incorporar_con_ajuste
+RNF-EXP-C01,RNF-16,2,1,0,Incorporar_con_ajuste
+RNF-EXP-C02,RNF-17,2,1,0,Incorporar_con_ajuste
+RNF-EXP-C03,RNF-18,0,3,0,Incorporar_con_ajuste
+RNF-EXP-C04,RNF-19,0,3,0,Incorporar_con_ajuste
