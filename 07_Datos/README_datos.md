@@ -22,6 +22,30 @@
 
 Los insumos de `datos_crudos/` proceden de `06_Experimento/datos_crudos/` y se copiaron sin cambiar nombres, codificación ni valores. Los scripts proceden de `06_Experimento/scripts_analisis/`. El archivo `datos_crudos/PROVENIENCIA_FUENTES.md` documenta las fuentes inmediatas.
 
+### Corte analítico del cuestionario
+
+La muestra analítica oficial del cuestionario está formada por **70 respuestas**. El archivo canónico es:
+
+```text
+datos_crudos/encuesta_clientes_anonimizada.csv
+```
+
+El corte utilizado por el proyecto quedó congelado hasta **31/08/2026 23:58:25**. Las respuestas recibidas después de ese corte no se incorporan retroactivamente a los análisis ya versionados.
+
+Las 70 respuestas incluidas registran consentimiento afirmativo y las dos columnas finales de identificación se encuentran vacías. Los artefactos históricos con conteos anteriores no sustituyen a este conjunto analítico.
+
+## Separación entre entrada y productos del análisis
+
+La estructura distingue tres capas:
+
+- `datos_crudos/`: insumos fuente congelados e inmutables para el pipeline;
+- `datos_procesados/`: salidas generadas únicamente por `scripts/run_all.py`;
+- `resultados/`: tablas, figuras, resúmenes y otros productos analíticos.
+
+`datos_crudos/PROVENIENCIA_FUENTES.md` clasifica la procedencia de cada familia de insumos. `datos_procesados/README_PROCESAMIENTO.md` documenta el mapeo fuente → transformación → salida.
+
+La matriz de codificación, el libro de códigos y otras matrices analíticas humanas se declaran como **insumos fuente congelados**, no como observaciones que hayan salido directamente de un instrumento. Esta clasificación evita confundir evidencia primaria con decisiones analíticas del equipo.
+
 ## Requisitos y preparación
 
 Se requiere Python 3. La reproducción fue verificada específicamente con Python 3.12.13 y las versiones aceptadas por `scripts/requirements.txt`; para repetir exactamente esta prueba, use esa versión de Python.
