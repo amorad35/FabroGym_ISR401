@@ -6,14 +6,12 @@ Este paquete está pensado para **reemplazar/añadir únicamente** los archivos 
 
 Se mantienen 12 RF existentes y se incorporan:
 
-- RF-MEM-01 — Configurar planes y promociones.
-- RF-PAG-01 — Registrar pago y comprobante interno.
-- RF-INV-01 — Administrar productos.
-- RF-NOV-01 — Gestionar novedades internas.
+- RF-07 — Configurar planes y promociones.
+- RF-11 — Registrar pago y comprobante interno.
+- RF-15 — Administrar productos.
+- RF-20 — Gestionar novedades internas.
 
-Cobertura final documentada: **16/19 = 84,2 %**.
-
-No se cuentan como implementados RF-INV-02, RF-VEN-01 ni RF-CAJ-01.
+La fuente histórica declara **16/19 = 84,2 %**, pero existe una cifra divergente de 12/19. Este bloque no resuelve la cobertura por inferencia: los 19 RF Must quedan **sujetos a verificación terminal C3** contra código y pruebas.
 
 ## Archivos del parche
 
