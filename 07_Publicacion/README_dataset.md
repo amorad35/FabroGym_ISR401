@@ -4,7 +4,7 @@
 **Replication package for Explainability Requirements for Fitness Routine Recommendations: A Field Case Study in Ecuador**
 
 ## Status
-This directory is a **pre-deposit release candidate**. The team intentionally will create the Zenodo record **after Phase 6**. Therefore no Zenodo DOI, Software Heritage SWHID, or F-UJI score is claimed yet.
+This directory preserves the local snapshot of the dataset published on Zenodo as version **2.0.0**, DOI **10.5281/zenodo.22237884**. The later RF/RNF normalization in the repository is not claimed to be byte-identical to that published snapshot. Software Heritage SWHID and F-UJI score remain unclaimed.
 
 ## Study scope
 FabroGym is a requirements-engineering field case study in a local-gym domain. The empirical focus is explainability as a non-functional requirement for a **proposed** fitness-routine recommendation component. The recommender is not presented as implemented in the MVP.
@@ -22,7 +22,7 @@ The preserved session identifiers are:
 - Walkthrough coding: 76 coded fragments; 49 technical and 27 non-technical.
 - 37 normalized codes and 18 thematic categories.
 - 9 explainability-pertinent fragments.
-- 4 final explainability RNFs: RNF-EXP-01 … RNF-EXP-04.
+- 4 evidence-derived explainability RNFs, normalized in the repository as RNF-16 … RNF-19.
 - Member checking: 12 decisions (4 Confirmado, 8 Ajustado, 0 No confirmado).
 - Strict code-saturation criterion over the last three WALK sessions: 6.306%, therefore the <=5% threshold is **not claimed as met**.
 - Axial-category stabilization: 1.852%, reported only as complementary evidence.
@@ -65,10 +65,8 @@ python scripts/run_all.py
 
 The script regenerates the empirical tables and figures from the public raw inputs. Statistical procedures that the instrument does not support are explicitly marked as not applicable rather than manufactured.
 
-## Important pre-deposit finalization
-The ten `ENTR-*` transcripts already exist in the public repository under `02_Evidencias/Transcripciones/`. They are copied into this package by `scripts_release/build_zenodo_package.py` **after Phase 6**, when the repository state is frozen. The current pre-deposit bundle includes a manifest of those required source paths and the six WALK transcripts already used by the analysis.
-
-Do not publish the Zenodo record until the finalizer reports all 16 transcript identifiers present and the privacy scan passes.
+## Relationship to the published deposit
+The Zenodo record is already published at https://doi.org/10.5281/zenodo.22237884. This local directory is retained as the version-2.0.0 publication snapshot and is not modified during ERS/ID normalization. A later corrective Zenodo version must be evaluated separately and must repeat manifest, checksum, privacy and reproducibility validation.
 
 ## Preregistration and deviations
 OSF record: https://osf.io/62ysc/  
@@ -82,4 +80,4 @@ The six WALK sessions occurred before OSF registration. They are not represented
 - Identifiable/restricted evidence: excluded and never included in this package.
 
 ## Citation
-After the final Zenodo publication, use the **real Zenodo DOI** inserted into `CITATION.cff`. Until then, cite the GitHub repository and OSF preregistration separately; do not substitute the OSF DOI for the dataset DOI.
+Cite the published dataset with DOI **10.5281/zenodo.22237884** and the OSF preregistration separately; do not substitute one DOI for the other.
