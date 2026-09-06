@@ -9,7 +9,7 @@
 ## Demo 1 - Cliente, pago, membresia y asistencia
 **Objetivo:** demostrar el flujo operativo principal de recepcion.
 
-**Requisitos trazados:** RF-CLI-01, RF-CLI-02, RF-MEM-02, RF-MEM-03, RF-PAG-01, RF-ASI-01.
+**Requisitos trazados:** RF-04, RF-05, RF-08, RF-09, RF-11, RF-13.
 
 **Pasos:**
 1. Iniciar sesion con rol de recepcion.
@@ -24,7 +24,7 @@
 ## Demo 2 - Inventario, venta y cierre de caja
 **Objetivo:** mostrar control operativo y reduccion de errores en ventas e inventario.
 
-**Requisitos trazados:** RF-INV-01, RF-INV-02, RF-VEN-01, RF-CAJ-01, RF-AUT-03.
+**Requisitos trazados:** RF-15, RF-16, RF-17, RF-19, RF-03.
 
 **Pasos:**
 1. Crear o consultar un producto con stock minimo.

@@ -16,7 +16,7 @@ Diez entrevistas ENTR-01 a ENTR-10 y seis walkthroughs: WALK-TEC-01..03 y WALK-N
 Porque forman parte del acumulado empírico aceptado, pero su técnica real fue walkthrough. Cambiarles el nombre sería incorrecto.
 
 ## P6. ¿Qué resultados empíricos se obtuvieron?
-76 fragmentos codificados, 37 códigos normalizados, 18 categorías, 9 fragmentos pertinentes a explicabilidad y 4 RNF-EXP finales.
+76 fragmentos codificados, 37 códigos normalizados, 18 categorías, 9 fragmentos pertinentes a explicabilidad y 4 RNF de explicabilidad normalizados como RNF-16 a RNF-19.
 
 ## P7. ¿Por qué no aplicaron Mann-Whitney?
 Porque no existe una variable cuantitativa válida por participante ni tamaño suficiente por perfil; se reporta comparación cualitativa/descriptiva.
@@ -37,26 +37,25 @@ Valida con participantes previos la interpretación de los RNF; produjo 12 decis
 Porque la actividad sí está documentada, pero no existe grabación. Se declara como limitación/riesgo y no se fabrica evidencia.
 
 ## P13. ¿Cuántos requisitos finales tiene la ERS?
-48 requisitos terminales: RF, RNF de calidad, restricciones de diseño y 4 RNF-EXP de explicabilidad.
+52 requisitos terminales: 25 RF, 23 RNF —incluidos 4 de explicabilidad derivados de evidencia y 4 complementarios propuestos— y 4 restricciones de diseño.
 
 ## P14. ¿Qué demuestra la trazabilidad?
 Que cada requisito importante se conecta con evidencia, caso de uso, criterio de aceptación, componente, mockup/MVP o documento final.
 
 ## P15. ¿Qué cubre el MVP?
-La meta defendida es 16 de 19 RF Must, equivalente a 84.2 %, con datos y credenciales de demostración.
+Las fuentes históricas divergen entre 12/19 y 16/19 RF Must. La cobertura vigente queda sujeta a verificación terminal C3 contra código y pruebas; esta normalización no declara una cifra como implementada.
 
 ## P16. ¿Cuáles son los dos escenarios de demo?
 Demo 1: cliente, pago, membresía y asistencia. Demo 2: inventario, venta, cierre de caja y auditoría.
 
-## P17. ¿Qué se publicará en Zenodo?
-Solo datos anonimizados, requisitos, trazabilidad, resultados, figuras, tablas y scripts. No audios, videos, firmas ni datos identificables.
+## P17. ¿Qué se publicó en Zenodo?
+Se publicó el paquete de replicación anonimizado de FabroGym como versión 2.0.0, con DOI específico `10.5281/zenodo.22237884`. El paquete público contiene datos anonimizados, requisitos, trazabilidad, resultados, figuras, tablas y scripts; no incluye audios, videos, firmas ni datos identificables.
 
 ## P18. ¿Qué diferencia hay entre OSF y Zenodo?
-OSF registra el protocolo y desviaciones; Zenodo publica el paquete final de replicación con DOI persistente.
+OSF conserva el prerregistro del protocolo y sus desviaciones (DOI `10.17605/OSF.IO/62YSC`); Zenodo publica y preserva el paquete de replicación versionado. En FabroGym, Zenodo 2.0.0 está publicado con DOI `10.5281/zenodo.22237884`.
 
 ## P19. ¿Cómo manejaron la privacidad?
 Con minimización, seudonimización, separación pública/restringida y exclusión de audios, videos, firmas, cédulas y datos identificables del paquete abierto.
 
 ## P20. ¿Cuál es la principal amenaza a la validez?
 La cronología entre walkthroughs y OSF, la falta de instrumento Likert de explicabilidad y el alcance de un solo gimnasio. Todo se declara y mitiga con transparencia.
-
