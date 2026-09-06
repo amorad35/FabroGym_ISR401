@@ -1,0 +1,13 @@
+﻿Capa,Artefacto_o_familia,Tipo,Regla
+P,07_Datos/datos_crudos/encuesta_clientes_anonimizada.csv,Cuestionario analítico anonimizado,Publicable si las columnas de identificación permanecen vacías.
+P,07_Datos/datos_crudos/codificacion_walkthroughs.csv,Matriz de codificación seudonimizada,"Usar códigos WALK, nunca identidades reales."
+P,02_Evidencias/Transcripciones/,Transcripciones anonimizadas/seudonimizadas,Solo versiones aptas para publicación.
+P,02_Evidencias/Consentimientos/*_Censurado.pdf,Consentimientos censurados,Revisión visual obligatoria.
+P,02_Evidencias/Validacion_walkthrough/*_Acta.pdf,Actas enmascaradas,Revisión visual obligatoria.
+P,07_Datos/datos_procesados/,Datos generados/procesados,Sin identificadores directos.
+P,07_Datos/resultados/,"Tablas, figuras y resúmenes",Sin identificadores directos.
+R,Consentimientos originales firmados,Evidencia original,Fuera de GitHub/Zenodo; almacenamiento restringido.
+R,Audios y videos reales,Evidencia audiovisual identificable,Fuera de GitHub/Zenodo.
+R,Transcripciones sin anonimizar,Texto identificable,Fuera del repositorio público.
+R,"Cédulas, firmas, teléfonos, correos y direcciones personales",Identificadores directos,Nunca publicar.
+P/R,Fotografías de aplicación F3-01,Evidencia fotográfica,"P solo si es apta para publicación; de lo contrario original en R y, si procede, versión pública segura."
