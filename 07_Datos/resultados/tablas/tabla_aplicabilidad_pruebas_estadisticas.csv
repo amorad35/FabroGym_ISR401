@@ -3,4 +3,5 @@ Satisfacción Likert por dimensión de explicabilidad + IC95%,NO APLICABLE,El cu
 Fleiss kappa entre rondas de validación,NO CALCULADO,No existen dos rondas equivalentes de clasificación; el protocolo v1.4 preregistró decisión nominal de member checking y excluyó kappa.
 U de Mann-Whitney técnico vs no técnico,NO APLICABLE,Hay tres walkthroughs por perfil y no existe resultado cuantitativo independiente por participante preregistrado.
 Shapiro-Wilk / Levene,NO APLICABLE,No se ejecuta una hipótesis inferencial sobre una variable cuantitativa del Enfoque 3.
+Tamaño del efecto técnico vs no técnico por categorías WALK,APLICADO DESCRIPTIVAMENTE,Correlación biserial por rangos pareada + IC95% bootstrap sobre 18 categorías; tres sesiones por perfil. No se interpreta como inferencia poblacional.
 Bootstrap IC95% de índices ordinales generales de encuesta,APLICADO DESCRIPTIVAMENTE,Solo describe seis preguntas ordinales generales; no se interpreta como explicabilidad ni como prueba de hipótesis.
