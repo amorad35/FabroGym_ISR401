@@ -43,15 +43,20 @@ El guion o instrumento realmente utilizado en cada sesión se conserva como evid
 ```text
 06_Experimento/instrumentos/
 ├── 01_Guia_Walkthrough_Explicabilidad.pdf
-├── 02_Matriz_Codificacion_Walkthroughs.csv
 ├── 03_Matriz_Candidatos_RNF_Explicabilidad.csv
 ├── 04_Ficha_Caracterizacion_Participante.pdf
 ├── 05_Matriz_Operacionalizacion_Explicabilidad.csv
 └── 06_Acta_Member_Checking.pdf
 ```
 
+La **codificación temática canónica de los walkthroughs** se conserva como dato crudo estructurado en:
+
+```text
+06_Experimento/datos_crudos/codificacion_walkthroughs.csv
+```
+
 - `01_Guia_Walkthrough_Explicabilidad.pdf` estructura la **sistematización posterior** de la evidencia disponible; no se presenta como el instrumento aplicado retroactivamente en las seis sesiones.
-- `02_Matriz_Codificacion_Walkthroughs.csv` registra unidades temáticas trazables de los walkthroughs.
+- `06_Experimento/datos_crudos/codificacion_walkthroughs.csv` registra las unidades temáticas trazables de los walkthroughs utilizadas por la cadena de análisis reproducible.
 - `03_Matriz_Candidatos_RNF_Explicabilidad.csv` registra candidatos a RNF derivados únicamente de fragmentos verificables pertinentes para explicabilidad.
 - `04_Ficha_Caracterizacion_Participante.pdf` permite documentar información de perfil solo cuando pueda verificarse.
 - `05_Matriz_Operacionalizacion_Explicabilidad.csv` documenta las variables y tratamientos definidos para el análisis.
