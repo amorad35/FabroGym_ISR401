@@ -1,0 +1,37 @@
+﻿comparacion,Categoria,valor_tecnico,valor_no_tecnico,diferencia_Tec_menos_NoTec,direccion_categoria
+Presencia de categorias por sesiones,Adaptabilidad y visualizacion,1,1,0,Igual
+Presencia de categorias por sesiones,Asistencia y automatizacion,2,2,0,Igual
+Presencia de categorias por sesiones,Claridad e informacion,1,2,-1,No_tecnico_mayor
+Presencia de categorias por sesiones,"Clientes, membresias y pagos",2,2,0,Igual
+Presencia de categorias por sesiones,Comunicacion,2,0,2,Tecnico_mayor
+Presencia de categorias por sesiones,Escalabilidad y mantenibilidad,2,0,2,Tecnico_mayor
+Presencia de categorias por sesiones,Inventario y ventas,2,1,1,Tecnico_mayor
+Presencia de categorias por sesiones,Legal y privacidad,1,0,1,Tecnico_mayor
+Presencia de categorias por sesiones,Prevencion y recuperacion de errores,0,2,-2,No_tecnico_mayor
+Presencia de categorias por sesiones,Reportes y dashboard,2,1,1,Tecnico_mayor
+Presencia de categorias por sesiones,Roles y acceso,2,1,1,Tecnico_mayor
+Presencia de categorias por sesiones,Rutinas y personalizacion,3,2,1,Tecnico_mayor
+Presencia de categorias por sesiones,Seguridad y continuidad,1,0,1,Tecnico_mayor
+Presencia de categorias por sesiones,Seguridad y trazabilidad operativa,2,0,2,Tecnico_mayor
+Presencia de categorias por sesiones,Usabilidad y navegacion,3,3,0,Igual
+Presencia de categorias por sesiones,Validacion de datos,1,0,1,Tecnico_mayor
+Presencia de categorias por sesiones,Validacion e ingenieria de requisitos,1,0,1,Tecnico_mayor
+Presencia de categorias por sesiones,Validacion general,1,1,0,Igual
+Fragmentos codificados por categoria,Adaptabilidad y visualizacion,2,2,0,Igual
+Fragmentos codificados por categoria,Asistencia y automatizacion,2,2,0,Igual
+Fragmentos codificados por categoria,Claridad e informacion,4,4,0,Igual
+Fragmentos codificados por categoria,"Clientes, membresias y pagos",5,2,3,Tecnico_mayor
+Fragmentos codificados por categoria,Comunicacion,3,0,3,Tecnico_mayor
+Fragmentos codificados por categoria,Escalabilidad y mantenibilidad,2,0,2,Tecnico_mayor
+Fragmentos codificados por categoria,Inventario y ventas,5,1,4,Tecnico_mayor
+Fragmentos codificados por categoria,Legal y privacidad,1,0,1,Tecnico_mayor
+Fragmentos codificados por categoria,Prevencion y recuperacion de errores,0,2,-2,No_tecnico_mayor
+Fragmentos codificados por categoria,Reportes y dashboard,2,1,1,Tecnico_mayor
+Fragmentos codificados por categoria,Roles y acceso,2,1,1,Tecnico_mayor
+Fragmentos codificados por categoria,Rutinas y personalizacion,7,3,4,Tecnico_mayor
+Fragmentos codificados por categoria,Seguridad y continuidad,1,0,1,Tecnico_mayor
+Fragmentos codificados por categoria,Seguridad y trazabilidad operativa,3,0,3,Tecnico_mayor
+Fragmentos codificados por categoria,Usabilidad y navegacion,6,7,-1,No_tecnico_mayor
+Fragmentos codificados por categoria,Validacion de datos,2,0,2,Tecnico_mayor
+Fragmentos codificados por categoria,Validacion e ingenieria de requisitos,1,0,1,Tecnico_mayor
+Fragmentos codificados por categoria,Validacion general,1,2,-1,No_tecnico_mayor
