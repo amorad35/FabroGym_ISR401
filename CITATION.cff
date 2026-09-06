@@ -4,6 +4,7 @@ type: software
 title: "FabroGym: explainability requirements and reproducible requirements-engineering artifacts"
 version: "2.0"
 date-released: "2026-09-01"
+doi: "10.5281/zenodo.22237884"
 abstract: "FabroGym is an ISR-401 requirements-engineering project for a local gym, including a terminal SRS, traceability, an MVP, and a reproducible field-study package on explainability requirements for a proposed fitness-routine recommendation component."
 authors:
   - family-names: "Alvia Villegas"
@@ -28,9 +29,14 @@ keywords:
   - "Non-functional requirements"
   - "Field study"
 repository-code: "https://github.com/amorad35/FabroGym_ISR401"
-url: "https://github.com/amorad35/FabroGym_ISR401"
+url: "https://doi.org/10.5281/zenodo.22237884"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22237884"
+    description: "Zenodo DOI de la versión publicada 2.0.0 del paquete de replicación."
+  - type: doi
+    value: "10.17605/OSF.IO/62YSC"
+    description: "DOI del prerregistro cualitativo en OSF."
   - type: url
     value: "https://osf.io/62ysc/"
-    description: "OSF preregistration record; DOI 10.17605/OSF.IO/62YSC."
-# AFTER PHASE 6 / ZENODO: add root doi: <ZENODO_DOI> and identifiers of type doi and swh.
+    description: "Registro público OSF."
