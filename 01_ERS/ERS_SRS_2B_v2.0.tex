@@ -3,8 +3,8 @@
 \usepackage[inner=28mm,outer=22mm,top=22mm,bottom=23mm,headheight=15pt]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{newtxtext,newtxmath}
-\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage[provide=*,spanish]{babel}
 \usepackage{microtype,graphicx,longtable,booktabs,tabularx,array,xcolor,enumitem,hyperref,fancyhdr,caption,float,pdflscape,seqsplit,cite,lastpage,pdfpages}
 \usepackage[most]{tcolorbox}
 \graphicspath{{../03_Modelado/Diagramas_UML/}{modelado_final/}}
@@ -12,11 +12,11 @@
 \definecolor{teal}{HTML}{2A7F85}
 \definecolor{coral}{HTML}{C85A3E}
 \definecolor{lightblue}{HTML}{EAF3F6}
-\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=teal,citecolor=navy,pdftitle={FabroGym ERS/SRS 2B v2.2},pdfauthor={Equipo FabroGym ISR-401}}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=teal,citecolor=navy,pdftitle={FabroGym ERS/SRS 2B v2.0},pdfauthor={Equipo FabroGym ISR-401}}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE]{\small FabroGym -- ERS/SRS 2B}
-\fancyhead[RO]{\small Entrega 4 (2B) -- v2.2}
+\fancyhead[RO]{\small Entrega 4 (2B) -- v2.0}
 \fancyfoot[LE,RO]{\thepage\ de \pageref{LastPage}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{4pt}
@@ -38,13 +38,13 @@
 \vspace{0.55cm}
 {\LARGE\bfseries Especificación de Requisitos de Software (ERS/SRS)\par}
 \vspace{0.25cm}
-{\Large\bfseries Entrega 4 (2B / Defensa Final) -- Versión 2.2\par}
+{\Large\bfseries Entrega 4 (2B / Defensa Final) -- Versión 2.0\par}
 \vspace{0.18cm}
 {\large FabroGym -- sistema de gestión administrativa y operativa para un gimnasio\par}
 \vspace{0.5cm}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
 Proyecto & FabroGym \\\hline
-Versión & 2.2 -- cierre técnico 2B con UML definitivo \\\hline
+Versión & 2.0 -- entrega académica vigente con UML definitivo \\\hline
 Fecha de corte documental & 1 de septiembre de 2026 \\\hline
 Repositorio & \url{https://github.com/amorad35/FabroGym_ISR401} \\\hline
 Registro OSF & \url{https://osf.io/62ysc/} -- DOI \href{https://doi.org/10.17605/OSF.IO/62YSC}{10.17605/OSF.IO/62YSC} \\\hline
@@ -72,13 +72,13 @@ Vaca Romero David Octavio & Apoyo documental / evidencias & 0009-0000-4457-3095\
 \newpage
 
 \section{Control de versión y estado}
-La versión 2.2 sustituye la ERS/SRS 2B v2.1 como especificación final de cierre de la Entrega 4. Mantiene el catálogo terminal y los resultados 2B, y reemplaza el anexo técnico heredado por el conjunto UML definitivo del equipo. Se integran 54 diagramas: contexto, casos de uso general e individuales, actividades, secuencias, estados, clases, componentes, despliegue e i*. El modelado se presenta como evidencia técnica vigente y se subordina a los 48 requisitos terminales, a la trazabilidad 2B y al estado real del MVP. No se inventan aprobaciones, firmas, SWHID, pruebas ni grabaciones inexistentes. El DOI Zenodo \texttt{10.5281/zenodo.22237884} fue reservado por el servicio Zenodo para el paquete final de replicación.
+Para la Entrega 4 (2B / Defensa Final), la única versión académica vigente es la \textbf{2.0}. Las denominaciones 2.1 y 2.2 se conservan exclusivamente como revisiones internas históricas empleadas durante la consolidación; no constituyen entregables vigentes distintos. La versión 2.0 integra 54 diagramas UML, 25 RF, 23 RNF y 4 restricciones de diseño. El componente inteligente continúa propuesto y no se atribuyen pruebas o capacidades no ejecutadas. El paquete de datos fue publicado en Zenodo como versión 2.0.0 con DOI específico \zenododoi.
 
 \begin{tabularx}{\textwidth}{p{2cm}p{2.4cm}X}\toprule
 Versión & Fecha & Cambio principal \\ \midrule
-2.2 & 2026-09-01 & Integración del conjunto UML definitivo del equipo (54 diagramas) y sustitución del anexo técnico heredado por modelado vigente y trazable.\\
-2.1 & 2026-09-01 & Ampliación acumulativa: conserva el cierre 2B y reincorpora 64 páginas de detalle técnico heredado (mockups, historias/casos de uso, UML y catálogo de interfaces), claramente marcado como anexo y subordinado a los estados terminales v2.1.\\
-2.0 & 2026-09-01 & Cierre 2B: 25 RF, 15 RNF de calidad, 4 restricciones de diseño y 4 RNF de explicabilidad derivados y sometidos a member checking; integración de 16 sesiones, encuesta de 70 respuestas, análisis reproducible, OSF v1.4 y trazabilidad terminal de 97 filas.\\
+2.2 (interna, no vigente) & 2026-09-01 & Revisión interna de integración del conjunto UML definitivo; queda subordinada a la versión académica 2.0.\\
+2.1 (interna, no vigente) & 2026-09-01 & Ampliación acumulativa: conserva el cierre 2B y reincorpora 64 páginas de detalle técnico heredado (mockups, historias/casos de uso, UML y catálogo de interfaces), claramente marcado como anexo histórico y subordinado a la versión académica vigente 2.0.\\
+2.0 & 2026-09-01 & Cierre 2B terminal: 25 RF, 23 RNF, 4 restricciones de diseño y 105 filas de trazabilidad (97 trazas preexistentes migradas y 8 planes de verificación del componente inteligente); integración de 16 sesiones, encuesta de 70 respuestas, análisis reproducible y OSF v1.4.\\
 1.5.8 & 2026-08-02 & Consolidación 2A con diez entrevistas, codificación temática inicial, 44 identificadores y 70 mockups.\\
 1.5.4 & 2026-08-02 & Compatibilidad de compilación y consolidación visual.\\
 0.2.0 & 2026-07-12 & Entrega anterior utilizada como referencia estructural.\\
@@ -104,7 +104,7 @@ Término & Definición \\ \midrule
 RF & Requisito funcional.\\
 RNF & Requisito no funcional / requisito de calidad.\\
 RD & Restricción de diseño o alcance.\\
-RNF-EXP & Requisito no funcional de explicabilidad derivado del Enfoque 3.\\
+RNF de explicabilidad & Requisito no funcional derivado del Enfoque 3; conserva Explicabilidad como característica.\\
 EV & Identificador de evidencia.\\
 CU / HU / CA & Caso de uso / historia de usuario / criterio de aceptación.\\
 WALK-TEC / WALK-NTEC & Walkthrough técnico / no técnico; se preserva la técnica original.\\
@@ -120,7 +120,7 @@ La prioridad de decisión es: guía/rúbrica 2B y paquete ético; evidencia prim
 La evidencia audiovisual se compone de diez entrevistas iniciales (ENTR-01 a ENTR-10) y seis walkthroughs (WALK-NTEC-01 a WALK-NTEC-03; WALK-TEC-01 a WALK-TEC-03). Los seis walkthroughs forman parte del acumulado de 16 sesiones aceptado para el cierre, sin renombrarlos como entrevistas. La ficha técnica v3.1 reporta 16 videos con duración total de \textbf{06:18:08} y 16 audios con duración total de \textbf{06:18:14}; para el mínimo temporal se cuenta una duración por sesión y no se duplican audio y video.
 
 \begin{table}[H]\centering\small
-\begin{tabularx}{\textwidth}{lrrX}\toprule
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.1cm} >{\centering\arraybackslash}p{1.8cm} >{\raggedright\arraybackslash}p{5.1cm} X}\toprule
 Fuente & N & Desagregación & Uso en requisitos \\ \midrule
 Entrevistas ENTR & 10 & propietarios/administración, recepción e instructores & necesidades operativas, privacidad, reglas de negocio, RF y RNF base.\\
 Walkthroughs WALK & 6 & 3 técnicos + 3 no técnicos & validación formativa, codificación terminal y explicabilidad.\\
@@ -157,10 +157,10 @@ Cliente & Beneficiario de la operación; su autoservicio no es esencial al MVP a
 Se asumen navegadores modernos, credenciales demostrativas y datos sintéticos. La demostración no equivale a un despliegue productivo. La producción requeriría un backend persistente, cifrado en tránsito, controles de acceso verificables, respaldo y procedimiento formal de derechos del titular.
 
 \section{Catálogo terminal de requisitos}
-El catálogo canónico elimina IDs duplicados de versiones previas. Antes de incorporar explicabilidad contiene 44 IDs únicos (25 RF, 15 RNF y 4 RD); con los cuatro RNF-EXP derivados y revisados, la ERS 2B contiene \textbf{48 requisitos terminales}. Los requisitos de explicabilidad se agregan con IDs nuevos y no reciclan IDs históricos.
+El catálogo canónico elimina IDs duplicados de versiones previas. La migración determinista conserva 25 RF, 19 RNF preexistentes y 4 RD sin pérdida ni duplicación. Además se incorporan RNF-20 a RNF-23 como propuestas normativas para recomendación, equidad, monitoreo y riesgo. La ERS contiene \textbf{52 requisitos terminales}: 25 RF, 23 RNF y 4 RD. El mapa completo está en \path{04_Trazabilidad/mapeo_ids_2B.csv}.
 
 \subsection{Requisitos funcionales}
-\subsubsection{RF-AUT-01 -- Garantizar tratamiento lícito y minimización de datos}
+\subsubsection{RF-01 -- Garantizar tratamiento lícito y minimización de datos}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá permitir iniciar y cerrar sesión mediante credenciales individuales no biométricas. \\ \hline
 Actor/rol & Personal autorizado \\ \hline
@@ -172,7 +172,7 @@ Mockups & MU-01 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dadas credenciales de demostración válidas, cuando el usuario inicia sesión, entonces se crea una sesión del rol correspondiente; con credenciales inválidas se deniega el acceso sin revelar qué campo falló.
-\subsubsection{RF-AUT-02 -- Controlar acceso por roles y permisos}
+\subsubsection{RF-02 -- Controlar acceso por roles y permisos}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá autorizar cada operación según el rol Administrador, Recepción o Instructor y denegar por defecto las no asignadas. \\ \hline
 Actor/rol & Administrador \\ \hline
@@ -184,7 +184,7 @@ Mockups & MU-22;MU-32 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un usuario autenticado, cuando intenta una operación fuera de su rol, entonces el sistema la deniega; cuando la operación está autorizada, permite continuar.
-\subsubsection{RF-AUT-03 -- Asegurar trazabilidad de eventos críticos}
+\subsubsection{RF-03 -- Asegurar trazabilidad de eventos críticos}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar autor, fecha, acción y valores anterior/nuevo para pagos, precios, inventario, membresías y permisos. \\ \hline
 Actor/rol & Administrador \\ \hline
@@ -195,7 +195,7 @@ Componente & Auditoría \\ \hline
 Mockups & MU-25 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
-\subsubsection{RF-CLI-01 -- Registrar datos mínimos de cliente}
+\subsubsection{RF-04 -- Registrar datos mínimos de cliente}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar un cliente con código interno, nombre de uso y un medio de contacto, sin salud, biometría, dirección ni imagen corporal. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -207,7 +207,7 @@ Mockups & MU-12;MU-37 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un operador autorizado, cuando registra código interno, nombre de uso y contacto permitido, entonces se crea un cliente único sin solicitar salud, biometría, dirección ni imagen corporal.
-\subsubsection{RF-CLI-02 -- Consultar ficha de cliente}
+\subsubsection{RF-05 -- Consultar ficha de cliente}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá buscar clientes por código, nombre normalizado o contacto y mostrar membresía, último pago, asistencia y novedades según permisos. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -219,7 +219,7 @@ Mockups & MU-11;MU-36 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un criterio de búsqueda válido, cuando se consulta un cliente, entonces se muestra su ficha operativa permitida sin exponer información fuera del rol.
-\subsubsection{RF-CLI-03 -- Actualizar y reactivar cliente}
+\subsubsection{RF-06 -- Actualizar y reactivar cliente}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá actualizar o reactivar un registro existente y advertir coincidencias antes de crear otro cliente. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -231,7 +231,7 @@ Mockups & MU-11;MU-36 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un cliente existente, cuando se actualiza o reactiva, entonces se conserva el mismo identificador y se advierten coincidencias antes de crear otro registro.
-\subsubsection{RF-MEM-01 -- Configurar catálogo de planes}
+\subsubsection{RF-07 -- Configurar catálogo de planes}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá administrar nombre, duración, precio, vigencia y estado de planes y promociones. \\ \hline
 Actor/rol & Administrador \\ \hline
@@ -243,7 +243,7 @@ Mockups & MU-68 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un administrador, cuando crea o modifica un plan, entonces quedan registrados nombre, duración, precio, vigencia y estado y el catálogo refleja el cambio.
-\subsubsection{RF-MEM-02 -- Activar y renovar membresía}
+\subsubsection{RF-08 -- Activar y renovar membresía}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá activar o renovar una membresía calculando inicio y vencimiento desde un plan vigente y un pago confirmado. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -255,7 +255,7 @@ Mockups & MU-14;MU-39 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un plan vigente y un pago confirmado, cuando se activa o renueva una membresía, entonces el inicio y vencimiento se calculan y persisten de forma consistente.
-\subsubsection{RF-MEM-03 -- Consultar vigencia}
+\subsubsection{RF-09 -- Consultar vigencia}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá mostrar estado, plan, fecha de inicio y vencimiento de la membresía. \\ \hline
 Actor/rol & Personal autorizado \\ \hline
@@ -267,7 +267,7 @@ Mockups & MU-13;MU-38;MU-63(F) \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un cliente localizado, cuando se consulta su membresía, entonces se muestran estado, plan, inicio y vencimiento.
-\subsubsection{RF-MEM-04 -- Alertar vencimientos}
+\subsubsection{RF-10 -- Alertar vencimientos}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá listar diariamente membresías que vencen en los próximos tres días y las vencidas, sin enviar mensajes externos automáticamente. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -279,7 +279,7 @@ Mockups & MU-10;MU-13;MU-38 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dada la fecha de corte, cuando se consulta la alerta, entonces se listan las membresías vencidas y las que vencen dentro de tres días sin enviar mensajes externos automáticamente.
-\subsubsection{RF-PAG-01 -- Registrar pago y comprobante}
+\subsubsection{RF-11 -- Registrar pago y comprobante}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar monto, concepto, medio, referencia y fecha de un pago, y generar un comprobante interno. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -291,7 +291,7 @@ Mockups & MU-15;MU-16;MU-40;MU-41 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un pago válido, cuando se registra, entonces se conservan monto, concepto, medio, referencia y fecha y se genera un comprobante interno.
-\subsubsection{RF-PAG-02 -- Resolver pagos pendientes}
+\subsubsection{RF-12 -- Resolver pagos pendientes}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá permitir confirmar, rechazar o corregir un pago pendiente conservando motivo y auditoría. \\ \hline
 Actor/rol & Administrador \\ \hline
@@ -302,7 +302,7 @@ Componente & Pagos \\ \hline
 Mockups & MU-15;MU-40 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
-\subsubsection{RF-ASI-01 -- Registrar asistencia}
+\subsubsection{RF-13 -- Registrar asistencia}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar una asistencia no biométrica en una acción tras validar identidad operativa y vigencia, o documentar una excepción autorizada. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -314,7 +314,7 @@ Mockups & MU-20;MU-30;MU-46;MU-47 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un cliente con vigencia válida, cuando se registra asistencia, entonces se crea un único evento no biométrico; si requiere excepción, se documenta de forma autorizada.
-\subsubsection{RF-ASI-02 -- Consultar asistencia}
+\subsubsection{RF-14 -- Consultar asistencia}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá filtrar asistencias por cliente, fecha y turno, y mostrar conteos operativos. \\ \hline
 Actor/rol & Personal autorizado \\ \hline
@@ -326,7 +326,7 @@ Mockups & MU-20;MU-46;MU-56;MU-65(F) \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un usuario autorizado, cuando filtra asistencias por cliente, fecha o turno, entonces se muestran el detalle y los conteos correspondientes.
-\subsubsection{RF-INV-01 -- Administrar productos}
+\subsubsection{RF-15 -- Administrar productos}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar productos con código, nombre, precio, unidad, stock mínimo y estado. \\ \hline
 Actor/rol & Administrador \\ \hline
@@ -338,7 +338,7 @@ Mockups & MU-19;MU-28;MU-44;MU-45 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un administrador, cuando registra un producto, entonces se almacenan código, nombre, precio, unidad, stock mínimo y estado.
-\subsubsection{RF-INV-02 -- Registrar movimientos de stock}
+\subsubsection{RF-16 -- Registrar movimientos de stock}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar entradas y ajustes con cantidad, motivo, responsable y saldo resultante. \\ \hline
 Actor/rol & Personal autorizado \\ \hline
@@ -350,7 +350,7 @@ Mockups & MU-69 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un producto existente, cuando se registra una entrada o ajuste, entonces se guardan cantidad, motivo, responsable y saldo resultante.
-\subsubsection{RF-VEN-01 -- Registrar venta}
+\subsubsection{RF-17 -- Registrar venta}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar una venta con ítems y medio de pago, y descontar existencias en la misma transacción. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -362,7 +362,7 @@ Mockups & MU-18;MU-27;MU-42;MU-43 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dados ítems con stock suficiente, cuando se registra una venta, entonces la venta y el descuento de existencias ocurren en la misma operación demostrativa.
-\subsubsection{RF-INV-03 -- Alertar stock y rotación}
+\subsubsection{RF-18 -- Alertar stock y rotación}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá listar productos en o bajo stock mínimo y resumir entradas, salidas y ventas por período. \\ \hline
 Actor/rol & Administrador \\ \hline
@@ -373,7 +373,7 @@ Componente & Inventario \\ \hline
 Mockups & MU-10;MU-19;MU-44 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
-\subsubsection{RF-CAJ-01 -- Cerrar turno y conciliar caja}
+\subsubsection{RF-19 -- Cerrar turno y conciliar caja}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá calcular pagos y ventas por medio, comparar valores declarados y registrar diferencias y entrega de turno. \\ \hline
 Actor/rol & Recepción \\ \hline
@@ -385,7 +385,7 @@ Mockups & MU-70 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un turno abierto, cuando se ejecuta el cierre, entonces se calculan pagos y ventas por medio, se compara el valor declarado y se registra la diferencia.
-\subsubsection{RF-NOV-01 -- Gestionar novedades internas}
+\subsubsection{RF-20 -- Gestionar novedades internas}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá crear una novedad con categoría, detalle mínimo, responsable, vencimiento y estados pendiente, en proceso, resuelta o cancelada. \\ \hline
 Actor/rol & Personal autorizado \\ \hline
@@ -397,7 +397,7 @@ Mockups & MU-21;MU-31;MU-50;MU-51;MU-61 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un usuario autorizado, cuando crea una novedad, entonces se guardan categoría, detalle, responsable, vencimiento y estado y se conserva el historial de estado.
-\subsubsection{RF-INS-01 -- Gestionar horario y disponibilidad de instructor}
+\subsubsection{RF-21 -- Gestionar horario y disponibilidad de instructor}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar turnos, capacidad, disponibilidad y novedades operativas del instructor, sin datos de salud. \\ \hline
 Actor/rol & Administrador \\ \hline
@@ -408,7 +408,7 @@ Componente & Instructores \\ \hline
 Mockups & MU-23;MU-33;MU-48;MU-49;MU-58 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
-\subsubsection{RF-RUT-01 -- Administrar rutinas}
+\subsubsection{RF-22 -- Administrar rutinas}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá crear una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y días, y asignarla a un cliente sintético o autorizado. \\ \hline
 Actor/rol & Instructor \\ \hline
@@ -420,7 +420,7 @@ Mockups & MU-17;MU-29;MU-54;MU-55;MU-64(F) \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dado un instructor autorizado, cuando crea y asigna una rutina, entonces se registran objetivo, ejercicios, series, repeticiones, descanso y días sin datos de salud reales.
-\subsubsection{RF-RUT-02 -- Registrar seguimiento}
+\subsubsection{RF-23 -- Registrar seguimiento}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá crear una nueva versión al modificar ejercicios o parámetros y conservar las versiones anteriores en solo lectura. \\ \hline
 Actor/rol & Instructor \\ \hline
@@ -432,7 +432,7 @@ Mockups & MU-17;MU-54 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
 \textbf{Criterio de aceptación terminal.} Dada una rutina existente, cuando se modifica un ejercicio o parámetro, entonces se crea una nueva versión y las versiones anteriores permanecen en solo lectura.
-\subsubsection{RF-RUT-03 -- Registrar seguimiento operativo}
+\subsubsection{RF-24 -- Registrar seguimiento operativo}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá registrar fecha, cumplimiento de ejercicios, repeticiones y observación operativa, excluyendo diagnósticos, lesiones, peso y medidas reales. \\ \hline
 Actor/rol & Instructor \\ \hline
@@ -443,7 +443,7 @@ Componente & Rutinas \\ \hline
 Mockups & MU-59;MU-60 \\ \hline
 Estado & ESPECIFICADO; cobertura MVP se verifica en C3 \\ \hline
 \end{tabularx}
-\subsubsection{RF-REP-01 -- Consultar panel y reportes}
+\subsubsection{RF-25 -- Consultar panel y reportes}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.2cm}|X|}\hline
 Enunciado & El sistema deberá mostrar indicadores filtrables de membresías, pagos, asistencias, ventas, caja, inventario y novedades, con exportación CSV. \\ \hline
 Actor/rol & Administrador \\ \hline
@@ -462,27 +462,27 @@ Los RNF siguientes se redactan con condición de medición y umbral verificable.
 \begin{longtable}{p{2.4cm}p{3.2cm}p{10.0cm}p{4.0cm}}
 \toprule ID & Característica & Requisito / métrica / umbral & Fuente \\ \midrule\endfirsthead
 \toprule ID & Característica & Requisito / métrica / umbral & Fuente \\ \midrule\endhead
-RNF-AF-01 & Adecuación funcional & En cada versión candidata, el 100 \% de los RF Must tendrá al menos un criterio de aceptación ejecutable y una evidencia de prueba; no se libera si alguno falla. & ISO/IEC/IEEE 29148 \\ 
-RNF-ED-01 & Eficiencia de desempeño & Con 10 000 clientes sintéticos y 20 sesiones concurrentes, el percentil 95 de búsqueda y consulta de membresía será $\leq$ 5 s y la tasa de error $\leq$ 1 \%. & ISO/IEC 25010 \\ 
-RNF-ED-02 & Eficiencia de desempeño & El registro de asistencia confirmada completará el flujo en $\leq$ 30 s para al menos 9 de 10 tareas de una prueba moderada. & ISO/IEC 25010 \\ 
-RNF-COM-01 & Compatibilidad & Las funciones Must superarán el 100 \% de sus pruebas en las dos versiones estables más recientes de Chrome, Edge y Firefox disponibles al corte. & ISO/IEC 25010 \\ 
-RNF-IU-01 & Interacción de usuario & Al menos 9 de 10 tareas críticas de alta, renovación, pago, asistencia y venta se completarán sin ayuda por cada perfil en walkthrough; la aceptación se verificará con registro reproducible por perfil. & ISO/IEC 25010 / Rúbrica \\ 
-RNF-IU-02 & Interacción de usuario & Las pantallas Must cumplirán WCAG 2.2 nivel AA en criterios aplicables mediante auditoría automática y revisión manual, sin errores críticos. & WCAG 2.2 \\ 
-RNF-FIA-01 & Fiabilidad & Tras 100 operaciones transaccionales de pago, venta y asistencia con una interrupción simulada, no habrá registros parciales y la recuperación será $\leq$ 10 min. & ISO/IEC 25010 \\ 
-RNF-FIA-02 & Fiabilidad & Una copia diaria cifrada permitirá restaurar una base sintética de prueba con RPO $\leq$ 24 h y RTO $\leq$ 4 h en un simulacro documentado. & ISO/IEC 25010 / OWASP \\ 
-RNF-SEG-01 & Seguridad & El 100 \% de las pruebas negativas de autorización impedirá acceso a funciones o datos fuera del rol y registrará el intento sin exponer datos personales. & LOPDP / OWASP \\ 
-RNF-SEG-02 & Seguridad & Por defecto se almacenarán solo código interno, nombre de uso y contacto opcional; salud, biometría, peso, medidas, dirección e imagen corporal real tendrán cobertura de captura igual a 0 \% en desarrollo y pruebas. & LOPDP / SPDP \\ 
-RNF-SEG-03 & Seguridad & Las sesiones expirarán tras 15 min de inactividad; secretos no se almacenarán en texto claro y todo tráfico de un despliegue conectado usará TLS 1.2 o superior. & OWASP / NIST \\ 
-RNF-MAN-01 & Mantenibilidad & La suite automatizada cubrirá $\geq$ 70 \% de líneas de los módulos de dominio antes de etiquetar una versión candidata. & ISO/IEC 25010 \\ 
-RNF-MAN-02 & Mantenibilidad & Los módulos Clientes, Membresías, Pagos, Asistencia, Inventario, Caja y Rutinas tendrán interfaces explícitas; un cambio de regla en un módulo no exigirá modificar más de un módulo consumidor. & ISO/IEC/IEEE 29148 \\ 
-RNF-POR-01 & Portabilidad & El sistema web y sus pruebas se desplegarán con una única instrucción documentada en Windows 11 y una distribución Linux LTS, sin editar código fuente. & ISO/IEC 25010 \\ 
-RNF-FLE-01 & Flexibilidad & Planes, precios, stock mínimo, roles operativos y ventanas de alerta se modificarán por configuración autorizada sin recompilar ni editar código. & ISO/IEC 25010 \\ 
+RNF-01 & Adecuación funcional & En cada versión candidata, el 100 \% de los RF Must tendrá al menos un criterio de aceptación ejecutable y una evidencia de prueba; no se libera si alguno falla. & ISO/IEC/IEEE 29148 \\
+RNF-02 & Eficiencia de desempeño & Con 10 000 clientes sintéticos y 20 sesiones concurrentes, el percentil 95 de búsqueda y consulta de membresía será $\leq$ 5 s y la tasa de error $\leq$ 1 \%. & ISO/IEC 25010 \\
+RNF-03 & Eficiencia de desempeño & El registro de asistencia confirmada completará el flujo en $\leq$ 30 s para al menos 9 de 10 tareas de una prueba moderada. & ISO/IEC 25010 \\
+RNF-04 & Compatibilidad & Las funciones Must superarán el 100 \% de sus pruebas en las dos versiones estables más recientes de Chrome, Edge y Firefox disponibles al corte. & ISO/IEC 25010 \\
+RNF-05 & Interacción de usuario & Al menos 9 de 10 tareas críticas de alta, renovación, pago, asistencia y venta se completarán sin ayuda por cada perfil en walkthrough; la aceptación se verificará con registro reproducible por perfil. & ISO/IEC 25010 / Rúbrica \\
+RNF-06 & Interacción de usuario & Las pantallas Must cumplirán WCAG 2.2 nivel AA en criterios aplicables mediante auditoría automática y revisión manual, sin errores críticos. & WCAG 2.2 \\
+RNF-07 & Fiabilidad & Tras 100 operaciones transaccionales de pago, venta y asistencia con una interrupción simulada, no habrá registros parciales y la recuperación será $\leq$ 10 min. & ISO/IEC 25010 \\
+RNF-08 & Fiabilidad & Una copia diaria cifrada permitirá restaurar una base sintética de prueba con RPO $\leq$ 24 h y RTO $\leq$ 4 h en un simulacro documentado. & ISO/IEC 25010 / OWASP \\
+RNF-09 & Seguridad & El 100 \% de las pruebas negativas de autorización impedirá acceso a funciones o datos fuera del rol y registrará el intento sin exponer datos personales. & LOPDP / OWASP \\
+RNF-10 & Seguridad & Por defecto se almacenarán solo código interno, nombre de uso y contacto opcional; salud, biometría, peso, medidas, dirección e imagen corporal real tendrán cobertura de captura igual a 0 \% en desarrollo y pruebas. & LOPDP / SPDP \\
+RNF-11 & Seguridad & Las sesiones expirarán tras 15 min de inactividad; secretos no se almacenarán en texto claro y todo tráfico de un despliegue conectado usará TLS 1.2 o superior. & OWASP / NIST \\
+RNF-12 & Mantenibilidad & La suite automatizada cubrirá $\geq$ 70 \% de líneas de los módulos de dominio antes de etiquetar una versión candidata. & ISO/IEC 25010 \\
+RNF-13 & Mantenibilidad & Los módulos Clientes, Membresías, Pagos, Asistencia, Inventario, Caja y Rutinas tendrán interfaces explícitas; un cambio de regla en un módulo no exigirá modificar más de un módulo consumidor. & ISO/IEC/IEEE 29148 \\
+RNF-14 & Portabilidad & El sistema web y sus pruebas se desplegarán con una única instrucción documentada en Windows 11 y una distribución Linux LTS, sin editar código fuente. & ISO/IEC 25010 \\
+RNF-15 & Flexibilidad & Planes, precios, stock mínimo, roles operativos y ventanas de alerta se modificarán por configuración autorizada sin recompilar ni editar código. & ISO/IEC 25010 \\
 \bottomrule\end{longtable}
 \end{landscape}
 
 \subsection{RNF de explicabilidad derivados y revisados}
 Estos requisitos se aplican al \textbf{componente de recomendación propuesto}. Su estado es ESPECIFICADO y no implementado en el MVP actual. La cadena de trazabilidad es evidencia WALK $\rightarrow$ candidato RNF $\rightarrow$ member checking $\rightarrow$ decisión $\rightarrow$ RNF final.
-\subsubsection{RNF-EXP-01 -- derivado de RNF-EXP-C01}
+\subsubsection{RNF-16 -- derivado de RNF-EXP-C01}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
 Enunciado & El componente propuesto de recomendación de rutinas deberá mostrar, junto con cada rutina recomendada, el objetivo o necesidad principal asociada a la rutina y, cuando existan, las restricciones relevantes registradas para el cliente. \\ \hline
 Qué se explica & Objetivo/necesidad principal y restricciones relevantes registradas. \\ \hline
@@ -490,14 +490,17 @@ A quién & Cliente e instructor autorizado. \\ \hline
 Formato & Resumen visible en la vista de la rutina, en lenguaje claro y no técnico. \\ \hline
 Momento & Al consultar la recomendación y antes de aceptarla o aplicarla. \\ \hline
 Métrica & Porcentaje de recomendaciones que muestran el objetivo/necesidad principal y las restricciones relevantes cuando existan. \\ \hline
+Unidad & Porcentaje. \\ \hline
 Umbral & 100\% de las recomendaciones generadas en las pruebas deben mostrar el objetivo o necesidad principal y las restricciones registradas cuando existan. \\ \hline
 Método de comprobación & Prueba funcional con casos de objetivos y restricciones distintas, verificando la información visible en la rutina. \\ \hline
+Responsable & Responsable de calidad con entrenador autorizado. \\ \hline
+Frecuencia & En cada versión candidata del componente propuesto. \\ \hline
 Fuentes & WALK-TEC-02-F006; WALK-TEC-02-F007; WALK-NTEC-03-F003 \\ \hline
 Resultado de member checking & 2 Confirmado; 1 Ajustado \\ \hline
 Decisión final & Incorporar\_con\_ajuste \\ \hline
 Estado & ESPECIFICADO \\ \hline
 \end{tabularx}
-\subsubsection{RNF-EXP-02 -- derivado de RNF-EXP-C02}
+\subsubsection{RNF-17 -- derivado de RNF-EXP-C02}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
 Enunciado & Toda rutina asignada o propuesta deberá indicar si ha sido revisada o validada por un entrenador autorizado y, cuando exista una indicación profesional externa registrada, identificar dicha procedencia como contexto relevante de la rutina. \\ \hline
 Qué se explica & Revisión humana de la rutina y procedencia profesional externa cuando aplique. \\ \hline
@@ -505,14 +508,17 @@ A quién & Cliente e instructor autorizado. \\ \hline
 Formato & Etiqueta de estado y texto breve de procedencia en la cabecera de la rutina. \\ \hline
 Momento & Antes de que la rutina sea utilizada por el cliente. \\ \hline
 Métrica & Porcentaje de rutinas asignadas o propuestas que muestran su condición de revisión y la procedencia profesional externa cuando exista. \\ \hline
+Unidad & Porcentaje. \\ \hline
 Umbral & 100\% de las rutinas evaluadas deben indicar su condición de revisión; cuando exista una indicación profesional externa registrada, su procedencia debe ser visible. \\ \hline
 Método de comprobación & Pruebas funcionales con rutinas revisadas/no revisadas y casos con indicación profesional externa, verificando la información visible. \\ \hline
+Responsable & Entrenador autorizado. \\ \hline
+Frecuencia & En cada versión candidata del componente propuesto. \\ \hline
 Fuentes & WALK-TEC-02-F008; WALK-TEC-02-F009 \\ \hline
 Resultado de member checking & 2 Confirmado; 1 Ajustado \\ \hline
 Decisión final & Incorporar\_con\_ajuste \\ \hline
 Estado & ESPECIFICADO \\ \hline
 \end{tabularx}
-\subsubsection{RNF-EXP-03 -- derivado de RNF-EXP-C03}
+\subsubsection{RNF-18 -- derivado de RNF-EXP-C03}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
 Enunciado & El sistema deberá permitir consultar la rutina vigente y el historial de rutinas registradas, mostrando la fecha y las observaciones asociadas cuando estén disponibles. \\ \hline
 Qué se explica & Historial, fecha y observaciones disponibles de las rutinas registradas. \\ \hline
@@ -520,14 +526,17 @@ A quién & Cliente e instructor autorizado. \\ \hline
 Formato & Historial cronológico de rutinas con fecha y observaciones disponibles. \\ \hline
 Momento & Al consultar la rutina vigente o el historial de rutinas. \\ \hline
 Métrica & Porcentaje de rutinas registradas consultables con fecha y observaciones cuando estén disponibles. \\ \hline
+Unidad & Porcentaje. \\ \hline
 Umbral & 100\% de las rutinas registradas durante las pruebas deben ser consultables en el historial con su fecha; las observaciones deben mostrarse cuando existan. \\ \hline
 Método de comprobación & Crear y registrar varias rutinas de prueba y verificar su consulta posterior, fecha y observaciones disponibles. \\ \hline
+Responsable & Responsable de calidad. \\ \hline
+Frecuencia & En cada versión candidata del componente propuesto. \\ \hline
 Fuentes & WALK-TEC-01-F003; WALK-TEC-01-F014 \\ \hline
 Resultado de member checking & 0 Confirmado; 3 Ajustado \\ \hline
 Decisión final & Incorporar\_con\_ajuste \\ \hline
 Estado & ESPECIFICADO \\ \hline
 \end{tabularx}
-\subsubsection{RNF-EXP-04 -- derivado de RNF-EXP-C04}
+\subsubsection{RNF-19 -- derivado de RNF-EXP-C04}
 \begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
 Enunciado & Cuando el sistema sugiera una rutina inicial o realice una asignación automática de una rutina o clase, deberá mostrar de forma breve el criterio principal utilizado para realizar dicha sugerencia o asignación. \\ \hline
 Qué se explica & Criterio principal utilizado para una sugerencia u eventual asignación automática. \\ \hline
@@ -535,25 +544,78 @@ A quién & Instructor y, cuando corresponda, cliente. \\ \hline
 Formato & Texto breve 'Motivo de la recomendación' asociado a la sugerencia. \\ \hline
 Momento & En el momento de mostrar la sugerencia y antes de confirmarla. \\ \hline
 Métrica & Porcentaje de sugerencias o asignaciones automáticas evaluadas que muestran un criterio principal visible. \\ \hline
+Unidad & Porcentaje. \\ \hline
 Umbral & 100\% de las sugerencias o asignaciones automáticas evaluadas deben mostrar de forma breve el criterio principal utilizado. \\ \hline
 Método de comprobación & Pruebas con perfiles u objetivos distintos, verificando que cada sugerencia o asignación automática muestre el criterio principal utilizado. \\ \hline
+Responsable & Responsable de calidad con entrenador autorizado. \\ \hline
+Frecuencia & En cada versión candidata del componente propuesto. \\ \hline
 Fuentes & WALK-NTEC-01-F008; WALK-TEC-03-F014; WALK-TEC-02-F006 \\ \hline
 Resultado de member checking & 0 Confirmado; 3 Ajustado \\ \hline
 Decisión final & Incorporar\_con\_ajuste \\ \hline
 Estado & ESPECIFICADO \\ \hline
 \end{tabularx}
 
+
+\subsection{RNF complementarios del componente inteligente propuesto}
+Los siguientes requisitos proceden de la guía específica y del diseño preventivo, no de observaciones de campo. Sus umbrales son objetivos de verificación futura. Ninguno se presenta como implementado o medido en el MVP.
+
+\subsubsection{RNF-20 -- pertinencia de la recomendación propuesta}
+\begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
+Enunciado & El componente propuesto de recomendación deberá alcanzar una pertinencia validada por entrenador autorizado en al menos 80\% de los casos sintéticos de prueba definidos antes de cada versión candidata. \\ \hline
+Métrica / unidad & Casos calificados como pertinentes divididos para casos evaluados / porcentaje. \\ \hline
+Umbral & $\geq 80\%$. \\ \hline
+Método de verificación & Prueba ciega sobre casos sintéticos predefinidos; un entrenador autorizado registra pertinente/no pertinente. \\ \hline
+Responsable / frecuencia & Responsable de calidad con entrenador autorizado / cada versión candidata. \\ \hline
+Diseño / prueba & Motor de recomendación propuesto / PV-RNF-20. \\ \hline
+Origen / estado & DERIVADO DE NORMA/DISEÑO; PROPUESTO; no existe prueba ejecutada. \\ \hline
+\end{tabularx}
+
+\subsubsection{RNF-21 -- equidad de la recomendación propuesta}
+\begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
+Enunciado & En un conjunto de prueba sintético y balanceado, la diferencia máxima entre grupos de edad, condición física declarada y sexo en la tasa de recomendaciones calificadas como no pertinentes por un entrenador autorizado deberá ser menor o igual a 10 puntos porcentuales. \\ \hline
+Métrica / unidad & Máxima diferencia absoluta entre tasas por grupo / puntos porcentuales. \\ \hline
+Umbral & $\leq 10$ puntos porcentuales. \\ \hline
+Método de verificación & Evaluación estratificada con datos sintéticos balanceados y revisión por entrenador. \\ \hline
+Responsable / frecuencia & Responsable de calidad con entrenador autorizado / cada versión candidata y ante cambios de datos o reglas. \\ \hline
+Diseño / prueba & Módulo de evaluación de equidad propuesto / PV-RNF-21. \\ \hline
+Origen / estado & DERIVADO DE NORMA/DISEÑO; PROPUESTO; no existe evidencia de campo ni prueba ejecutada. \\ \hline
+\end{tabularx}
+
+\subsubsection{RNF-22 -- monitoreo posterior al despliegue}
+\begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
+Enunciado & Después de un eventual despliegue, el sistema deberá registrar el 100\% de las recomendaciones emitidas, aceptadas, modificadas o rechazadas y producir mensualmente indicadores de aceptación, sustitución humana e incidentes para revisión del responsable del producto. \\ \hline
+Métrica / unidad & Eventos con registro completo divididos para eventos emitidos / porcentaje. \\ \hline
+Umbral & 100\% de integridad del registro. \\ \hline
+Método de verificación & Prueba de integridad del registro y revisión del informe mensual. \\ \hline
+Responsable / frecuencia & Responsable del producto / mensual y después de cada cambio de versión. \\ \hline
+Diseño / prueba & Registro de monitoreo propuesto / PV-RNF-22. \\ \hline
+Origen / estado & DERIVADO DE NORMA/DISEÑO; PROPUESTO; no existe despliegue ni monitoreo ejecutado. \\ \hline
+\end{tabularx}
+
+\subsubsection{RNF-23 -- clasificación y control del riesgo}
+\begin{tabularx}{\textwidth}{|>{\bfseries}p{4.0cm}|X|}\hline
+Enunciado & Antes de habilitar o cambiar el componente propuesto, el responsable del producto deberá clasificar y justificar el 100\% de los riesgos de recomendación en una matriz versionada. El riesgo inicial se clasifica como alto por el posible impacto físico de una recomendación inadecuada; ninguna versión se habilitará sin supervisión humana y aceptación explícita del riesgo residual. \\ \hline
+Métrica / unidad & Versiones con evaluación y aprobación de riesgo divididas para versiones candidatas / porcentaje. \\ \hline
+Umbral & 100\% antes de habilitación. \\ \hline
+Método de verificación & Revisión documental de matriz, controles, justificación y aprobación antes de activar la versión. \\ \hline
+Responsable / frecuencia & Responsable del producto y entrenador autorizado / antes de cada habilitación o cambio material. \\ \hline
+Diseño / prueba & Matriz de riesgos y control de activación propuestos / PV-RNF-23. \\ \hline
+Origen / estado & DERIVADO DE NORMA/DISEÑO; PROPUESTO; no existe evaluación ejecutada. \\ \hline
+\end{tabularx}
+
+La operacionalización auditable de RNF-16 a RNF-23 se conserva en \path{04_Trazabilidad/plan_verificacion_rnf_ia.csv}.
+
 \subsection{Restricciones de diseño y privacidad}
 \begin{tabularx}{\textwidth}{p{2.5cm}X p{3.2cm}}\toprule
 ID & Restricción & Fuente \\ \midrule
-RD-PRI-01 & Excluir datos reales de salud y biometría automatizada; usar minimización, seudonimización y datos sintéticos en diseño y pruebas. & LOPDP / SPDP \\ 
-RD-PRI-02 & Aplicar privacidad desde el diseño y por defecto, mínimo privilegio y conservación limitada. & LOPDP / SPDP \\ 
-RD-PRI-03 & Prever mecanismos trazables de acceso, rectificación, actualización, eliminación, oposición y portabilidad antes de producción. & LOPDP \\ 
-RD-IA-01 & No incorporar IA o aprendizaje automático al producto mientras no exista necesidad elicitada, evaluación de riesgo, adenda y validación. & Paquete ético / memo de alcance \\ 
+RD-01 & Excluir datos reales de salud y biometría automatizada; usar minimización, seudonimización y datos sintéticos en diseño y pruebas. & LOPDP / SPDP \\
+RD-02 & Aplicar privacidad desde el diseño y por defecto, mínimo privilegio y conservación limitada. & LOPDP / SPDP \\
+RD-03 & Prever mecanismos trazables de acceso, rectificación, actualización, eliminación, oposición y portabilidad antes de producción. & LOPDP \\
+RD-04 & No incorporar IA o aprendizaje automático al producto mientras no exista necesidad elicitada, evaluación de riesgo, adenda y validación. & Paquete ético / memo de alcance \\
 \bottomrule\end{tabularx}
 
 \section{Priorización y alcance del MVP}
-La priorización MoSCoW/Kano se conserva del cierre de requisitos. Hay 19 RF Must y 6 RF Should. La lista Must es la referencia para C3. La versión pública del repositorio todavía documentaba 12/19; el paquete de parche 2B entregado por el equipo declara como objetivo 16/19 al añadir RF-MEM-01, RF-PAG-01, RF-INV-01 y RF-NOV-01. Esta ERS no transforma ese objetivo en una prueba ejecutada: la cobertura definitiva debe confirmarse contra el código del parche antes de marcar cada RF como IMPLEMENTADO.
+La priorización MoSCoW/Kano se conserva del cierre de requisitos. Hay 19 RF Must y 6 RF Should. La lista Must es la referencia para C3. Las fuentes históricas presentan una contradicción entre 12/19 y 16/19 RF Must cubiertos. Esta ERS no resuelve esa diferencia por inferencia: la cobertura MVP queda \textbf{sujeta a verificación terminal C3} contra el código y las pruebas antes de marcar cada RF como IMPLEMENTADO.
 
 \small
 \setlength{\tabcolsep}{4pt}
@@ -562,31 +624,31 @@ La priorización MoSCoW/Kano se conserva del cierre de requisitos. Hay 19 RF Mus
 \endfirsthead
 \toprule RF & MoSCoW & Kano & WSJF & Objetivo \\ \midrule
 \endhead
-RF-AUT-01 & Must & Básico & 9.67 & El sistema deberá permitir iniciar y cerrar sesión mediante credenciales individuales no biométricas. \\ 
-RF-CLI-02 & Must & Desempeño & 7.00 & El sistema deberá buscar clientes por código, nombre normalizado o contacto y mostrar membresía, último pago, asistencia y novedades según permisos. \\ 
-RF-MEM-03 & Must & Básico & 7.00 & El sistema deberá mostrar estado, plan, fecha de inicio y vencimiento de la membresía. \\ 
-RF-MEM-02 & Must & Básico & 6.75 & El sistema deberá activar o renovar una membresía calculando inicio y vencimiento desde un plan vigente y un pago confirmado. \\ 
-RF-PAG-01 & Must & Básico & 6.75 & El sistema deberá registrar monto, concepto, medio, referencia y fecha de un pago, y generar un comprobante interno. \\ 
-RF-CLI-01 & Must & Desempeño & 6.00 & El sistema deberá registrar un cliente con código interno, nombre de uso y un medio de contacto, sin salud, biometría, dirección ni imagen corporal. \\ 
-RF-ASI-01 & Must & Básico & 6.00 & El sistema deberá registrar una asistencia no biométrica en una acción tras validar identidad operativa y vigencia, o documentar una excepción autorizada. \\ 
-RF-ASI-02 & Must & Desempeño & 6.00 & El sistema deberá filtrar asistencias por cliente, fecha y turno, y mostrar conteos operativos. \\ 
-RF-VEN-01 & Must & Básico & 6.00 & El sistema deberá registrar una venta con ítems y medio de pago, y descontar existencias en la misma transacción. \\ 
-RF-MEM-04 & Must & Desempeño & 5.25 & El sistema deberá listar diariamente membresías que vencen en los próximos tres días y las vencidas, sin enviar mensajes externos automáticamente. \\ 
-RF-AUT-02 & Must & Básico & 5.20 & El sistema deberá autorizar cada operación según el rol Administrador, Recepción o Instructor y denegar por defecto las no asignadas. \\ 
-RF-INV-01 & Must & Desempeño & 5.00 & El sistema deberá registrar productos con código, nombre, precio, unidad, stock mínimo y estado. \\ 
-RF-CAJ-01 & Must & Desempeño & 4.80 & El sistema deberá calcular pagos y ventas por medio, comparar valores declarados y registrar diferencias y entrega de turno. \\ 
-RF-CLI-03 & Must & Desempeño & 4.75 & El sistema deberá actualizar o reactivar un registro existente y advertir coincidencias antes de crear otro cliente. \\ 
-RF-NOV-01 & Must & Desempeño & 4.75 & El sistema deberá crear una novedad con categoría, detalle mínimo, responsable, vencimiento y estados pendiente, en proceso, resuelta o cancelada. \\ 
-RF-RUT-02 & Must & Desempeño & 4.75 & El sistema deberá crear una nueva versión al modificar ejercicios o parámetros y conservar las versiones anteriores en solo lectura. \\ 
-RF-INV-02 & Must & Desempeño & 4.60 & El sistema deberá registrar entradas y ajustes con cantidad, motivo, responsable y saldo resultante. \\ 
-RF-MEM-01 & Must & Desempeño & 4.40 & El sistema deberá administrar nombre, duración, precio, vigencia y estado de planes y promociones. \\ 
-RF-RUT-01 & Must & Básico & 4.20 & El sistema deberá crear una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y días, y asignarla a un cliente sintético o autorizado. \\ 
-RF-AUT-03 & Should & Desempeño &  & El sistema deberá registrar autor, fecha, acción y valores anterior/nuevo para pagos, precios, inventario, membresías y permisos. \\ 
-RF-PAG-02 & Should & Desempeño &  & El sistema deberá permitir confirmar, rechazar o corregir un pago pendiente conservando motivo y auditoría. \\ 
-RF-INV-03 & Should & Desempeño &  & El sistema deberá listar productos en o bajo stock mínimo y resumir entradas, salidas y ventas por período. \\ 
-RF-INS-01 & Should & Desempeño &  & El sistema deberá registrar turnos, capacidad, disponibilidad y novedades operativas del instructor, sin datos de salud. \\ 
-RF-RUT-03 & Should & Desempeño &  & El sistema deberá registrar fecha, cumplimiento de ejercicios, repeticiones y observación operativa, excluyendo diagnósticos, lesiones, peso y medidas reales. \\ 
-RF-REP-01 & Should & Desempeño &  & El sistema deberá mostrar indicadores filtrables de membresías, pagos, asistencias, ventas, caja, inventario y novedades, con exportación CSV. \\
+RF-01 & Must & Básico & 9.67 & El sistema deberá permitir iniciar y cerrar sesión mediante credenciales individuales no biométricas. \\
+RF-05 & Must & Desempeño & 7.00 & El sistema deberá buscar clientes por código, nombre normalizado o contacto y mostrar membresía, último pago, asistencia y novedades según permisos. \\
+RF-09 & Must & Básico & 7.00 & El sistema deberá mostrar estado, plan, fecha de inicio y vencimiento de la membresía. \\
+RF-08 & Must & Básico & 6.75 & El sistema deberá activar o renovar una membresía calculando inicio y vencimiento desde un plan vigente y un pago confirmado. \\
+RF-11 & Must & Básico & 6.75 & El sistema deberá registrar monto, concepto, medio, referencia y fecha de un pago, y generar un comprobante interno. \\
+RF-04 & Must & Desempeño & 6.00 & El sistema deberá registrar un cliente con código interno, nombre de uso y un medio de contacto, sin salud, biometría, dirección ni imagen corporal. \\
+RF-13 & Must & Básico & 6.00 & El sistema deberá registrar una asistencia no biométrica en una acción tras validar identidad operativa y vigencia, o documentar una excepción autorizada. \\
+RF-14 & Must & Desempeño & 6.00 & El sistema deberá filtrar asistencias por cliente, fecha y turno, y mostrar conteos operativos. \\
+RF-17 & Must & Básico & 6.00 & El sistema deberá registrar una venta con ítems y medio de pago, y descontar existencias en la misma transacción. \\
+RF-10 & Must & Desempeño & 5.25 & El sistema deberá listar diariamente membresías que vencen en los próximos tres días y las vencidas, sin enviar mensajes externos automáticamente. \\
+RF-02 & Must & Básico & 5.20 & El sistema deberá autorizar cada operación según el rol Administrador, Recepción o Instructor y denegar por defecto las no asignadas. \\
+RF-15 & Must & Desempeño & 5.00 & El sistema deberá registrar productos con código, nombre, precio, unidad, stock mínimo y estado. \\
+RF-19 & Must & Desempeño & 4.80 & El sistema deberá calcular pagos y ventas por medio, comparar valores declarados y registrar diferencias y entrega de turno. \\
+RF-06 & Must & Desempeño & 4.75 & El sistema deberá actualizar o reactivar un registro existente y advertir coincidencias antes de crear otro cliente. \\
+RF-20 & Must & Desempeño & 4.75 & El sistema deberá crear una novedad con categoría, detalle mínimo, responsable, vencimiento y estados pendiente, en proceso, resuelta o cancelada. \\
+RF-23 & Must & Desempeño & 4.75 & El sistema deberá crear una nueva versión al modificar ejercicios o parámetros y conservar las versiones anteriores en solo lectura. \\
+RF-16 & Must & Desempeño & 4.60 & El sistema deberá registrar entradas y ajustes con cantidad, motivo, responsable y saldo resultante. \\
+RF-07 & Must & Desempeño & 4.40 & El sistema deberá administrar nombre, duración, precio, vigencia y estado de planes y promociones. \\
+RF-22 & Must & Básico & 4.20 & El sistema deberá crear una rutina con objetivo operativo, ejercicios, series, repeticiones, descanso y días, y asignarla a un cliente sintético o autorizado. \\
+RF-03 & Should & Desempeño &  & El sistema deberá registrar autor, fecha, acción y valores anterior/nuevo para pagos, precios, inventario, membresías y permisos. \\
+RF-12 & Should & Desempeño &  & El sistema deberá permitir confirmar, rechazar o corregir un pago pendiente conservando motivo y auditoría. \\
+RF-18 & Should & Desempeño &  & El sistema deberá listar productos en o bajo stock mínimo y resumir entradas, salidas y ventas por período. \\
+RF-21 & Should & Desempeño &  & El sistema deberá registrar turnos, capacidad, disponibilidad y novedades operativas del instructor, sin datos de salud. \\
+RF-24 & Should & Desempeño &  & El sistema deberá registrar fecha, cumplimiento de ejercicios, repeticiones y observación operativa, excluyendo diagnósticos, lesiones, peso y medidas reales. \\
+RF-25 & Should & Desempeño &  & El sistema deberá mostrar indicadores filtrables de membresías, pagos, asistencias, ventas, caja, inventario y novedades, con exportación CSV. \\
 \bottomrule
 \caption{Priorización terminal de los 25 RF.}
 \end{longtable}
@@ -595,67 +657,67 @@ RF-REP-01 & Should & Desempeño &  & El sistema deberá mostrar indicadores filt
 
 \section{Historias de usuario y criterios de aceptación Must}
 Las 19 historias Must mantienen correspondencia uno a uno con CU-01..CU-19 y CA-01..CA-19. Para conservar un artefacto ejecutable, el criterio se expresa como escenario observable y puede materializarse en Gherkin en el paquete de pruebas.
-\subsubsection{HU-01 / CU-01 / RF-AUT-01}
+\subsubsection{HU-01 / CU-01 / RF-01}
 \textbf{Connextra.} Como Personal autorizado, quiero garantizar tratamiento lícito y minimización de datos, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-01.} Dadas credenciales de demostración válidas, cuando el usuario inicia sesión, entonces se crea una sesión del rol correspondiente; con credenciales inválidas se deniega el acceso sin revelar qué campo falló.
-\subsubsection{HU-02 / CU-02 / RF-AUT-02}
+\subsubsection{HU-02 / CU-02 / RF-02}
 \textbf{Connextra.} Como Administrador, quiero controlar acceso por roles y permisos, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-02.} Dado un usuario autenticado, cuando intenta una operación fuera de su rol, entonces el sistema la deniega; cuando la operación está autorizada, permite continuar.
-\subsubsection{HU-03 / CU-03 / RF-CLI-01}
+\subsubsection{HU-03 / CU-03 / RF-04}
 \textbf{Connextra.} Como Recepción, quiero registrar datos mínimos de cliente, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-03.} Dado un operador autorizado, cuando registra código interno, nombre de uso y contacto permitido, entonces se crea un cliente único sin solicitar salud, biometría, dirección ni imagen corporal.
-\subsubsection{HU-04 / CU-04 / RF-CLI-02}
+\subsubsection{HU-04 / CU-04 / RF-05}
 \textbf{Connextra.} Como Recepción, quiero consultar ficha de cliente, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-04.} Dado un criterio de búsqueda válido, cuando se consulta un cliente, entonces se muestra su ficha operativa permitida sin exponer información fuera del rol.
-\subsubsection{HU-05 / CU-05 / RF-CLI-03}
+\subsubsection{HU-05 / CU-05 / RF-06}
 \textbf{Connextra.} Como Recepción, quiero actualizar y reactivar cliente, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-05.} Dado un cliente existente, cuando se actualiza o reactiva, entonces se conserva el mismo identificador y se advierten coincidencias antes de crear otro registro.
-\subsubsection{HU-06 / CU-06 / RF-MEM-01}
+\subsubsection{HU-06 / CU-06 / RF-07}
 \textbf{Connextra.} Como Administrador, quiero configurar catálogo de planes, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-06.} Dado un administrador, cuando crea o modifica un plan, entonces quedan registrados nombre, duración, precio, vigencia y estado y el catálogo refleja el cambio.
-\subsubsection{HU-07 / CU-07 / RF-MEM-02}
+\subsubsection{HU-07 / CU-07 / RF-08}
 \textbf{Connextra.} Como Recepción, quiero activar y renovar membresía, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-07.} Dado un plan vigente y un pago confirmado, cuando se activa o renueva una membresía, entonces el inicio y vencimiento se calculan y persisten de forma consistente.
-\subsubsection{HU-08 / CU-08 / RF-MEM-03}
+\subsubsection{HU-08 / CU-08 / RF-09}
 \textbf{Connextra.} Como Personal autorizado, quiero consultar vigencia, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-08.} Dado un cliente localizado, cuando se consulta su membresía, entonces se muestran estado, plan, inicio y vencimiento.
-\subsubsection{HU-09 / CU-09 / RF-MEM-04}
+\subsubsection{HU-09 / CU-09 / RF-10}
 \textbf{Connextra.} Como Recepción, quiero alertar vencimientos, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-09.} Dada la fecha de corte, cuando se consulta la alerta, entonces se listan las membresías vencidas y las que vencen dentro de tres días sin enviar mensajes externos automáticamente.
-\subsubsection{HU-10 / CU-10 / RF-PAG-01}
+\subsubsection{HU-10 / CU-10 / RF-11}
 \textbf{Connextra.} Como Recepción, quiero registrar pago y comprobante, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-10.} Dado un pago válido, cuando se registra, entonces se conservan monto, concepto, medio, referencia y fecha y se genera un comprobante interno.
-\subsubsection{HU-11 / CU-11 / RF-ASI-01}
+\subsubsection{HU-11 / CU-11 / RF-13}
 \textbf{Connextra.} Como Recepción, quiero registrar asistencia, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-11.} Dado un cliente con vigencia válida, cuando se registra asistencia, entonces se crea un único evento no biométrico; si requiere excepción, se documenta de forma autorizada.
-\subsubsection{HU-12 / CU-12 / RF-ASI-02}
+\subsubsection{HU-12 / CU-12 / RF-14}
 \textbf{Connextra.} Como Personal autorizado, quiero consultar asistencia, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-12.} Dado un usuario autorizado, cuando filtra asistencias por cliente, fecha o turno, entonces se muestran el detalle y los conteos correspondientes.
-\subsubsection{HU-13 / CU-13 / RF-INV-01}
+\subsubsection{HU-13 / CU-13 / RF-15}
 \textbf{Connextra.} Como Administrador, quiero administrar productos, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-13.} Dado un administrador, cuando registra un producto, entonces se almacenan código, nombre, precio, unidad, stock mínimo y estado.
-\subsubsection{HU-14 / CU-14 / RF-INV-02}
+\subsubsection{HU-14 / CU-14 / RF-16}
 \textbf{Connextra.} Como Personal autorizado, quiero registrar movimientos de stock, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-14.} Dado un producto existente, cuando se registra una entrada o ajuste, entonces se guardan cantidad, motivo, responsable y saldo resultante.
-\subsubsection{HU-15 / CU-15 / RF-VEN-01}
+\subsubsection{HU-15 / CU-15 / RF-17}
 \textbf{Connextra.} Como Recepción, quiero registrar venta, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-15.} Dados ítems con stock suficiente, cuando se registra una venta, entonces la venta y el descuento de existencias ocurren en la misma operación demostrativa.
-\subsubsection{HU-16 / CU-16 / RF-CAJ-01}
+\subsubsection{HU-16 / CU-16 / RF-19}
 \textbf{Connextra.} Como Recepción, quiero cerrar turno y conciliar caja, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-16.} Dado un turno abierto, cuando se ejecuta el cierre, entonces se calculan pagos y ventas por medio, se compara el valor declarado y se registra la diferencia.
-\subsubsection{HU-17 / CU-17 / RF-NOV-01}
+\subsubsection{HU-17 / CU-17 / RF-20}
 \textbf{Connextra.} Como Personal autorizado, quiero gestionar novedades internas, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-17.} Dado un usuario autorizado, cuando crea una novedad, entonces se guardan categoría, detalle, responsable, vencimiento y estado y se conserva el historial de estado.
-\subsubsection{HU-18 / CU-18 / RF-RUT-01}
+\subsubsection{HU-18 / CU-18 / RF-22}
 \textbf{Connextra.} Como Instructor, quiero administrar rutinas, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-18.} Dado un instructor autorizado, cuando crea y asigna una rutina, entonces se registran objetivo, ejercicios, series, repeticiones, descanso y días sin datos de salud reales.
-\subsubsection{HU-19 / CU-19 / RF-RUT-02}
+\subsubsection{HU-19 / CU-19 / RF-23}
 \textbf{Connextra.} Como Instructor, quiero registrar seguimiento, para completar la operación de forma trazable y consistente.\\
 \textbf{Gherkin / CA-19.} Dada una rutina existente, cuando se modifica un ejercicio o parámetro, entonces se crea una nueva versión y las versiones anteriores permanecen en solo lectura.
 
 
 \section{Modelado del sistema}
-El modelado de esta versión corresponde al conjunto UML definitivo del equipo y reemplaza las figuras de síntesis provisionales utilizadas en v2.0--v2.1. La carpeta fuente se conserva en \path{03_Modelado/Diagramas_UML/}. La revisión de integración comprobó correspondencia nominal entre los 19 casos de uso Must, sus diagramas individuales y los 19 diagramas de secuencia; los RF Should permanecen especificados y trazados aunque no tengan CU individual obligatorio.
+El modelado de esta versión corresponde al conjunto UML definitivo del equipo y reemplaza las figuras de síntesis provisionales usadas durante las revisiones internas 2.1 y 2.2. La carpeta fuente se conserva en \path{03_Modelado/Diagramas_UML/}. La revisión de integración comprobó correspondencia nominal entre los 19 casos de uso Must, sus diagramas individuales y los 19 diagramas de secuencia; los RF Should permanecen especificados y trazados aunque no tengan CU individual obligatorio.
 
 \begin{table}[H]\centering\small
 \begin{tabularx}{\textwidth}{XrX}\toprule
@@ -749,44 +811,44 @@ El MVP estático separa interfaz y módulos lógicos en JavaScript y utiliza alm
 La configuración por defecto minimiza datos y prohíbe salud, biometría, peso, medidas corporales, dirección e imagen corporal real. Las pruebas y demostraciones deben usar datos sintéticos. Las evidencias identificables se mantienen en la zona restringida cifrada y no forman parte del repositorio público ni del depósito FAIR \cite{lopdp2021,spdp2025}.
 
 \subsection{Seguridad y sesiones}
-El diseño terminal exige control por rol, denegación por defecto, expiración de sesión, protección de secretos y TLS en un despliegue conectado. Estos objetivos se verifican por RNF-SEG-01..03; no se confunden con las credenciales académicas simples del prototipo demostrativo \cite{owasp2025,nist2025}.
+El diseño terminal exige control por rol, denegación por defecto, expiración de sesión, protección de secretos y TLS en un despliegue conectado. Estos objetivos se verifican por RNF-09, RNF-10 y RNF-11; no se confunden con las credenciales académicas simples del prototipo demostrativo \cite{owasp2025,nist2025}.
 
 \subsection{Accesibilidad y compatibilidad}
 Las pantallas Must deberán cumplir criterios aplicables de WCAG 2.2 AA y funcionar en las dos versiones estables recientes de Chrome, Edge y Firefox al momento de la prueba \cite{wcag2024}.
 
 \section{Trazabilidad terminal}
-La matriz externa \texttt{04\_Trazabilidad/matriz\_trazabilidad\_2B.csv} contiene 97 filas cerradas. Cada fila relaciona fuente/ley, objetivo, stakeholder, evidencia, requisito, CU, HU, CA, componente y mockups. La figura resume el encadenamiento utilizado.
+La matriz externa \texttt{04\_Trazabilidad/matriz\_trazabilidad.csv} contiene 105 filas: 97 trazas preexistentes migradas y 8 planes de verificación asociados al componente inteligente. Cada fila relaciona fuente/ley, objetivo, stakeholder, evidencia, requisito, CU, HU, CA, componente y mockups. La figura resume el encadenamiento utilizado.
 \begin{figure}[H]\centering\includegraphics[width=.95\textwidth]{figuras_2B/fig_trazabilidad_2B.pdf}\caption{Cadena de trazabilidad de extremo a extremo.}\label{fig:traza}\end{figure}
 
 \begin{landscape}\scriptsize
 \begin{longtable}{p{2.2cm}p{4.0cm}p{4.0cm}p{2.2cm}p{2.2cm}p{2.2cm}p{3.5cm}}
 \toprule RF & Evidencias & Stakeholder & CU & HU & CA & Mockups \\ \midrule\endfirsthead
 \toprule RF & Evidencias & Stakeholder & CU & HU & CA & Mockups \\ \midrule\endhead
-RF-AUT-01 & EV-ENTR02-07 & Personal autorizado & CU-01 & HU-01 & CA-01 & MU-01 \\ 
-RF-AUT-02 & EV-ENTR02-07;EV-ENTR03-06;EV-ENTR08-04 & Administrador & CU-02 & HU-02 & CA-02 & MU-22;MU-32 \\ 
-RF-AUT-03 & EV-ENTR02-04;EV-ENTR02-07;EV-ENTR03-06 & Administrador &  &  & CA-N/A & MU-25 \\ 
-RF-CLI-01 & EV-ENTR01-02;EV-ENTR02-02;EV-ENTR03-02;EV-ENTR08-01 & Recepción & CU-03 & HU-03 & CA-03 & MU-12;MU-37 \\ 
-RF-CLI-02 & EV-ENTR02-03;EV-ENTR02-08;EV-ENTR08-05 & Recepción & CU-04 & HU-04 & CA-04 & MU-11;MU-36 \\ 
-RF-CLI-03 & EV-ENTR02-02;EV-ENTR03-02;EV-ENTR04-01;EV-ENTR05-02 & Recepción & CU-05 & HU-05 & CA-05 & MU-11;MU-36 \\ 
-RF-MEM-01 & EV-ENTR02-01;EV-ENTR04-01 & Administrador & CU-06 & HU-06 & CA-06 & MU-68 \\ 
-RF-MEM-02 & EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-01;EV-ENTR04-03 & Recepción & CU-07 & HU-07 & CA-07 & MU-14;MU-39 \\ 
-RF-MEM-03 & EV-ENTR01-03;EV-ENTR02-03;EV-ENTR03-03;EV-ENTR08-02 & Personal autorizado & CU-08 & HU-08 & CA-08 & MU-13;MU-38;MU-63(F) \\ 
-RF-MEM-04 & EV-ENTR01-03;EV-ENTR05-02;EV-ENTR07-02 & Recepción & CU-09 & HU-09 & CA-09 & MU-10;MU-13;MU-38 \\ 
-RF-PAG-01 & EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-02;EV-ENTR08-03 & Recepción & CU-10 & HU-10 & CA-10 & MU-15;MU-16;MU-40;MU-41 \\ 
-RF-PAG-02 & EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-07 & Administrador &  &  & CA-N/A & MU-15;MU-40 \\ 
-RF-ASI-01 & EV-ENTR02-03;EV-ENTR03-03;EV-ENTR04-02;EV-ENTR07-07;EV-ENTR08-02 & Recepción & CU-11 & HU-11 & CA-11 & MU-20;MU-30;MU-46;MU-47 \\ 
-RF-ASI-02 & EV-ENTR03-01;EV-ENTR07-01;EV-ENTR08-05;EV-ENTR09-06 & Personal autorizado & CU-12 & HU-12 & CA-12 & MU-20;MU-46;MU-56;MU-65(F) \\ 
-RF-INV-01 & EV-ENTR01-01;EV-ENTR02-05 & Administrador & CU-13 & HU-13 & CA-13 & MU-19;MU-28;MU-44;MU-45 \\ 
-RF-INV-02 & EV-ENTR01-04;EV-ENTR04-04;EV-ENTR07-03 & Personal autorizado & CU-14 & HU-14 & CA-14 & MU-69 \\ 
-RF-VEN-01 & EV-ENTR02-05;EV-ENTR03-01;EV-ENTR04-04;EV-ENTR07-03;EV-ENTR08-03 & Recepción & CU-15 & HU-15 & CA-15 & MU-18;MU-27;MU-42;MU-43 \\ 
-RF-INV-03 & EV-ENTR01-04;EV-ENTR02-05;EV-ENTR05-04;EV-ENTR06-04 & Administrador &  &  & CA-N/A & MU-10;MU-19;MU-44 \\ 
-RF-CAJ-01 & EV-ENTR02-01;EV-ENTR02-06;EV-ENTR03-05;EV-ENTR04-05;EV-ENTR07-03;EV-ENTR08-04 & Recepción & CU-16 & HU-16 & CA-16 & MU-70 \\ 
-RF-NOV-01 & EV-ENTR02-01;EV-ENTR02-08;EV-ENTR03-07;EV-ENTR04-06;EV-ENTR05-01 & Personal autorizado & CU-17 & HU-17 & CA-17 & MU-21;MU-31;MU-50;MU-51;MU-61 \\ 
-RF-INS-01 & EV-ENTR07-06;EV-ENTR09-03;EV-ENTR10-02 & Administrador &  &  & CA-N/A & MU-23;MU-33;MU-48;MU-49;MU-58 \\ 
-RF-RUT-01 & EV-ENTR01-05;EV-ENTR05-04;EV-ENTR09-01;EV-ENTR09-02;EV-ENTR09-03 & Instructor & CU-18 & HU-18 & CA-18 & MU-17;MU-29;MU-54;MU-55;MU-64(F) \\ 
-RF-RUT-02 & EV-ENTR01-05;EV-ENTR09-01;EV-ENTR09-04;EV-ENTR10-01;EV-ENTR10-03 & Instructor & CU-19 & HU-19 & CA-19 & MU-17;MU-54 \\ 
-RF-RUT-03 & EV-ENTR09-04;EV-ENTR09-05;EV-ENTR09-06;EV-ENTR10-03;EV-ENTR10-04 & Instructor &  &  & CA-N/A & MU-59;MU-60 \\ 
-RF-REP-01 & EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-ENTR09-05 & Administrador &  &  & CA-N/A & MU-10;MU-24;MU-34 \\ 
+RF-01 & EV-ENTR02-07 & Personal autorizado & CU-01 & HU-01 & CA-01 & MU-01 \\
+RF-02 & EV-ENTR02-07;EV-ENTR03-06;EV-ENTR08-04 & Administrador & CU-02 & HU-02 & CA-02 & MU-22;MU-32 \\
+RF-03 & EV-ENTR02-04;EV-ENTR02-07;EV-ENTR03-06 & Administrador &  &  & CA-N/A & MU-25 \\
+RF-04 & EV-ENTR01-02;EV-ENTR02-02;EV-ENTR03-02;EV-ENTR08-01 & Recepción & CU-03 & HU-03 & CA-03 & MU-12;MU-37 \\
+RF-05 & EV-ENTR02-03;EV-ENTR02-08;EV-ENTR08-05 & Recepción & CU-04 & HU-04 & CA-04 & MU-11;MU-36 \\
+RF-06 & EV-ENTR02-02;EV-ENTR03-02;EV-ENTR04-01;EV-ENTR05-02 & Recepción & CU-05 & HU-05 & CA-05 & MU-11;MU-36 \\
+RF-07 & EV-ENTR02-01;EV-ENTR04-01 & Administrador & CU-06 & HU-06 & CA-06 & MU-68 \\
+RF-08 & EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-01;EV-ENTR04-03 & Recepción & CU-07 & HU-07 & CA-07 & MU-14;MU-39 \\
+RF-09 & EV-ENTR01-03;EV-ENTR02-03;EV-ENTR03-03;EV-ENTR08-02 & Personal autorizado & CU-08 & HU-08 & CA-08 & MU-13;MU-38;MU-63(F) \\
+RF-10 & EV-ENTR01-03;EV-ENTR05-02;EV-ENTR07-02 & Recepción & CU-09 & HU-09 & CA-09 & MU-10;MU-13;MU-38 \\
+RF-11 & EV-ENTR01-02;EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-02;EV-ENTR08-03 & Recepción & CU-10 & HU-10 & CA-10 & MU-15;MU-16;MU-40;MU-41 \\
+RF-12 & EV-ENTR02-04;EV-ENTR03-04;EV-ENTR07-07 & Administrador &  &  & CA-N/A & MU-15;MU-40 \\
+RF-13 & EV-ENTR02-03;EV-ENTR03-03;EV-ENTR04-02;EV-ENTR07-07;EV-ENTR08-02 & Recepción & CU-11 & HU-11 & CA-11 & MU-20;MU-30;MU-46;MU-47 \\
+RF-14 & EV-ENTR03-01;EV-ENTR07-01;EV-ENTR08-05;EV-ENTR09-06 & Personal autorizado & CU-12 & HU-12 & CA-12 & MU-20;MU-46;MU-56;MU-65(F) \\
+RF-15 & EV-ENTR01-01;EV-ENTR02-05 & Administrador & CU-13 & HU-13 & CA-13 & MU-19;MU-28;MU-44;MU-45 \\
+RF-16 & EV-ENTR01-04;EV-ENTR04-04;EV-ENTR07-03 & Personal autorizado & CU-14 & HU-14 & CA-14 & MU-69 \\
+RF-17 & EV-ENTR02-05;EV-ENTR03-01;EV-ENTR04-04;EV-ENTR07-03;EV-ENTR08-03 & Recepción & CU-15 & HU-15 & CA-15 & MU-18;MU-27;MU-42;MU-43 \\
+RF-18 & EV-ENTR01-04;EV-ENTR02-05;EV-ENTR05-04;EV-ENTR06-04 & Administrador &  &  & CA-N/A & MU-10;MU-19;MU-44 \\
+RF-19 & EV-ENTR02-01;EV-ENTR02-06;EV-ENTR03-05;EV-ENTR04-05;EV-ENTR07-03;EV-ENTR08-04 & Recepción & CU-16 & HU-16 & CA-16 & MU-70 \\
+RF-20 & EV-ENTR02-01;EV-ENTR02-08;EV-ENTR03-07;EV-ENTR04-06;EV-ENTR05-01 & Personal autorizado & CU-17 & HU-17 & CA-17 & MU-21;MU-31;MU-50;MU-51;MU-61 \\
+RF-21 & EV-ENTR07-06;EV-ENTR09-03;EV-ENTR10-02 & Administrador &  &  & CA-N/A & MU-23;MU-33;MU-48;MU-49;MU-58 \\
+RF-22 & EV-ENTR01-05;EV-ENTR05-04;EV-ENTR09-01;EV-ENTR09-02;EV-ENTR09-03 & Instructor & CU-18 & HU-18 & CA-18 & MU-17;MU-29;MU-54;MU-55;MU-64(F) \\
+RF-23 & EV-ENTR01-05;EV-ENTR09-01;EV-ENTR09-04;EV-ENTR10-01;EV-ENTR10-03 & Instructor & CU-19 & HU-19 & CA-19 & MU-17;MU-54 \\
+RF-24 & EV-ENTR09-04;EV-ENTR09-05;EV-ENTR09-06;EV-ENTR10-03;EV-ENTR10-04 & Instructor &  &  & CA-N/A & MU-59;MU-60 \\
+RF-25 & EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-ENTR09-05 & Administrador &  &  & CA-N/A & MU-10;MU-24;MU-34 \\
 \bottomrule\end{longtable}\end{landscape}
 
 \section{Plan de verificación y aceptación}
@@ -795,8 +857,8 @@ RF-REP-01 & EV-ENTR01-05;EV-ENTR05-05;EV-ENTR06-04;EV-ENTR07-04;EV-ENTR08-05;EV-
 Tipo & Aplicación & Evidencia esperada \\ \midrule
 Prueba funcional & RF Must y Should prototipados & pasos, entradas, resultado esperado/obtenido, captura o registro.\\
 Inspección & privacidad, alcance, minimización & revisión de formularios, campos y repositorio público.\\
-Prueba de rendimiento & RNF-ED & dataset sintético, tiempos, percentil y tasa de error.\\
-Walkthrough & RNF-IU y explicabilidad & acta/transcripción anonimizada y codificación.\\
+Prueba de rendimiento & RNF-02 y RNF-03 & dataset sintético, tiempos, percentil y tasa de error.\\
+Walkthrough & RNF-05, RNF-06 y RNF-16 a RNF-19 & acta/transcripción anonimizada y codificación.\\
 Auditoría técnica & seguridad, compatibilidad y accesibilidad & checklist, navegador, herramienta y versión.\\
 Restauración/simulacro & fiabilidad y respaldo & bitácora de prueba y tiempo de recuperación.\\
 \bottomrule\end{tabularx}
@@ -806,7 +868,7 @@ La ERS especifica métodos y umbrales, pero no declara ejecutadas pruebas que no
 
 \section{Cierre empírico relevante para la ERS}
 \subsection{Resultados de explicabilidad}
-Los cuatro RNF-EXP finales se incorporan porque cuentan con fragmentos de evidencia, operacionalización y decisión de member checking. El componente recomendado sigue PROPUESTO. No se calcula un porcentaje global de cobertura del marco de explicabilidad porque el instrumento no fija un universo cerrado y verificable de dimensiones; reportar un porcentaje habría creado un denominador no soportado.
+Los cuatro RNF de explicabilidad (RNF-16 a RNF-19) se incorporan porque cuentan con fragmentos de evidencia, operacionalización y decisión de member checking. El componente recomendado sigue PROPUESTO. No se calcula un porcentaje global de cobertura del marco de explicabilidad porque el instrumento no fija un universo cerrado y verificable de dimensiones; reportar un porcentaje habría creado un denominador no soportado.
 
 \subsection{Desviaciones del prerregistro}
 El registro OSF fue publicado el 29-08-2026. Los seis WALK ocurrieron antes de ese registro, por lo que se declaran como evidencia previa/formativa y se reporta la desviación. También se documentan la normalización de identificadores, la no aplicación de pruebas inferenciales no soportadas, la naturaleza descriptiva de la encuesta, el resultado de saturación y la ausencia de grabación del member checking. El archivo terminal es \texttt{06\_Experimento/osf\_deviations.pdf} \cite{nosek2018}.
@@ -822,10 +884,10 @@ El análisis 2B dispone de una entrada única \texttt{06\_Experimento/scripts\_a
 \textbf{Saturación estricta.} La curva de códigos queda en 6,306\% para las últimas tres sesiones y no satisface literalmente el umbral de 5\%; la estabilización axial de 1,852\% es evidencia complementaria, no sustitución matemática.
 \end{riskbox}
 \begin{riskbox}
-\textbf{DOI Zenodo.} El paquete final de replicación está identificado mediante DOI Zenodo \href{https://doi.org/10.5281/zenodo.22237884}{10.5281/zenodo.22237884}. El identificador se incorporó de forma consistente en esta ERS, el README, CITATION.cff y el manuscrito.
+\textbf{DOI Zenodo.} El paquete final de replicación publicado está identificado mediante DOI Zenodo \href{https://doi.org/10.5281/zenodo.22237884}{10.5281/zenodo.22237884}. El identificador se incorporó de forma consistente en esta ERS, el README de publicación y el manuscrito fuente. La actualización de \texttt{CITATION.cff} permanece fuera de este bloque y no se declara resuelta aquí.
 \end{riskbox}
 \begin{riskbox}
-\textbf{Modelado final del equipo.} Se integró el conjunto definitivo de 54 diagramas y se verificó su correspondencia nominal con los 19 RF Must, las entidades de dominio, componentes y despliegue. Los diagramas no modifican por sí mismos el alcance funcional: en caso de contradicción prevalecen los 48 requisitos terminales y la trazabilidad 2B.
+\textbf{Modelado final del equipo.} Se integró el conjunto definitivo de 54 diagramas y se verificó su correspondencia nominal con los 19 RF Must, las entidades de dominio, componentes y despliegue. Los diagramas no modifican por sí mismos el alcance funcional: en caso de contradicción prevalecen los 52 requisitos terminales y la trazabilidad 2B.
 \end{riskbox}
 
 \appendix
@@ -836,22 +898,22 @@ La tabla conserva exactamente los identificadores terminales de sesión, la téc
 \begin{longtable}{p{2.2cm}p{3.2cm}p{4.2cm}p{2.7cm}p{7.8cm}p{2.2cm}}
 \toprule Código & Técnica & Perfil & Fecha & Archivo de video & Duración \\ \midrule\endfirsthead
 \toprule Código & Técnica & Perfil & Fecha & Archivo de video & Duración \\ \midrule\endhead
-ENTR-01 & Entrevista & Propietario/administracion & 2026-07-28 & 2026-07-28\_Video\_ENTR-01\_DuenoGym.mp4 & 00:11:09 \\ 
-ENTR-02 & Entrevista & Recepcionista & 2026-07-27 & 2026-07-27\_Video\_ENTR-02\_RecepcionistaGym.mp4 & 00:22:13 \\ 
-ENTR-03 & Entrevista & Recepcionista & 2026-07-27 & 2026-07-27\_Video\_ENTR-03\_RecepcionistaGym.mp4 & 00:22:17 \\ 
-ENTR-04 & Entrevista & Recepcionista & 2026-07-27 & 2026-07-27\_Video\_ENTR-04\_RecepcionistaGym.mp4 & 00:24:05 \\ 
-ENTR-05 & Entrevista & Recepcionista & 2026-07-28 & 2026-07-28\_Video\_ENTR-05\_RecepcionistaGym.mp4 & 00:20:10 \\ 
-ENTR-06 & Entrevista & Propietario/administracion & 2026-07-29 & 2026-07-29\_Video\_ENTR-06\_DuenoGym.mp4 & 00:27:51 \\ 
-ENTR-07 & Entrevista & Propietario/administracion & 2026-07-28 & 2026-07-28\_Video\_ENTR-07\_DuenoGym.mp4 & 00:37:56 \\ 
-ENTR-08 & Entrevista & Recepcionista & 2026-07-28 & 2026-07-28\_Video\_ENTR-08\_RecepcionistaGym.mp4 & 00:17:41 \\ 
-ENTR-09 & Entrevista & Instructor & 2026-07-28 & 2026-07-28\_Video\_ENTR-09\_InstructorGym.mp4 & 00:21:06 \\ 
-ENTR-10 & Entrevista & Instructor & 2026-07-25 & 2026-07-25\_Video\_ENTR-10\_InstructorGym.mp4 & 00:18:07 \\ 
-WALK-NTEC-01 & Walkthrough no tecnico & Instructor & 2026-08-16 & 2026-08-16\_Video\_WALK-NTEC-01\_Instructor.mp4 & 00:17:53 \\ 
-WALK-NTEC-02 & Walkthrough no tecnico & Recepcionista & 2026-08-16 & 2026-08-16\_Video\_WALK-NTEC-02\_Recepcionista.mp4 & 00:17:57 \\ 
-WALK-NTEC-03 & Walkthrough no tecnico & Propietario/administracion & 2026-08-22 & 2026-08-22\_Video\_WALK-NTEC-03\_DuenoGym.mp4 & 00:22:58 \\ 
-WALK-TEC-01 & Walkthrough tecnico & Ingenieria de software & 2026-08-12 & 2026-08-12\_Video\_WALK-TEC-01\_Ing.Soft.mp4 & 00:24:46 \\ 
-WALK-TEC-02 & Walkthrough tecnico & Ingenieria de software & 2026-08-12 & 2026-08-12\_Video\_WALK-TEC-02\_Ing.Soft.mp4 & 00:26:39 \\ 
-WALK-TEC-03 & Walkthrough tecnico & Ingenieria de software & 2026-08-13 & 2026-08-13\_Video\_WALK-TEC-03\_Ing.Soft.mp4 & 00:45:20 \\ 
+ENTR-01 & Entrevista & Propietario/administracion & 2026-07-28 & 2026-07-28\_Video\_ENTR-01\_DuenoGym.mp4 & 00:11:09 \\
+ENTR-02 & Entrevista & Recepcionista & 2026-07-27 & 2026-07-27\_Video\_ENTR-02\_RecepcionistaGym.mp4 & 00:22:13 \\
+ENTR-03 & Entrevista & Recepcionista & 2026-07-27 & 2026-07-27\_Video\_ENTR-03\_RecepcionistaGym.mp4 & 00:22:17 \\
+ENTR-04 & Entrevista & Recepcionista & 2026-07-27 & 2026-07-27\_Video\_ENTR-04\_RecepcionistaGym.mp4 & 00:24:05 \\
+ENTR-05 & Entrevista & Recepcionista & 2026-07-28 & 2026-07-28\_Video\_ENTR-05\_RecepcionistaGym.mp4 & 00:20:10 \\
+ENTR-06 & Entrevista & Propietario/administracion & 2026-07-29 & 2026-07-29\_Video\_ENTR-06\_DuenoGym.mp4 & 00:27:51 \\
+ENTR-07 & Entrevista & Propietario/administracion & 2026-07-28 & 2026-07-28\_Video\_ENTR-07\_DuenoGym.mp4 & 00:37:56 \\
+ENTR-08 & Entrevista & Recepcionista & 2026-07-28 & 2026-07-28\_Video\_ENTR-08\_RecepcionistaGym.mp4 & 00:17:41 \\
+ENTR-09 & Entrevista & Instructor & 2026-07-28 & 2026-07-28\_Video\_ENTR-09\_InstructorGym.mp4 & 00:21:06 \\
+ENTR-10 & Entrevista & Instructor & 2026-07-25 & 2026-07-25\_Video\_ENTR-10\_InstructorGym.mp4 & 00:18:07 \\
+WALK-NTEC-01 & Walkthrough no tecnico & Instructor & 2026-08-16 & 2026-08-16\_Video\_WALK-NTEC-01\_Instructor.mp4 & 00:17:53 \\
+WALK-NTEC-02 & Walkthrough no tecnico & Recepcionista & 2026-08-16 & 2026-08-16\_Video\_WALK-NTEC-02\_Recepcionista.mp4 & 00:17:57 \\
+WALK-NTEC-03 & Walkthrough no tecnico & Propietario/administracion & 2026-08-22 & 2026-08-22\_Video\_WALK-NTEC-03\_DuenoGym.mp4 & 00:22:58 \\
+WALK-TEC-01 & Walkthrough tecnico & Ingenieria de software & 2026-08-12 & 2026-08-12\_Video\_WALK-TEC-01\_Ing.Soft.mp4 & 00:24:46 \\
+WALK-TEC-02 & Walkthrough tecnico & Ingenieria de software & 2026-08-12 & 2026-08-12\_Video\_WALK-TEC-02\_Ing.Soft.mp4 & 00:26:39 \\
+WALK-TEC-03 & Walkthrough tecnico & Ingenieria de software & 2026-08-13 & 2026-08-13\_Video\_WALK-TEC-03\_Ing.Soft.mp4 & 00:45:20 \\
 \bottomrule\end{longtable}\normalsize
 \end{landscape}
 
@@ -864,8 +926,8 @@ RF Should & 6 \\
 RNF de calidad & 15 \\
 Restricciones de diseño & 4 \\
 RNF de explicabilidad finales & 4 \\
-Total de requisitos terminales en esta ERS & 48 \\
-Filas cerradas de trazabilidad & 97 \\
+Total de requisitos terminales en esta ERS & 52 \\
+Filas de trazabilidad preexistentes / planes IA añadidos & 97 / 8 \\
 Sesiones acumuladas & 16 \\
 Duración de videos & 06:18:08 \\
 Respuestas de encuesta & 70 \\
@@ -874,13 +936,13 @@ Códigos normalizados WALK & 37 \\
 Categorías WALK & 18 \\
 Fragmentos pertinentes de explicabilidad & 9 \\
 Decisiones de member checking & 12 \\
-RNF-EXP finales & 4 \\
+RNF de explicabilidad derivados de evidencia & 4 \\
 Promedio códigos nuevos últimas 3 sesiones / total & 6,306\% \\
 Estabilización axial complementaria & 1,852\% \\
 \bottomrule\end{tabularx}
 
 \section{Criterios de calidad de esta especificación}
-Antes del corte final, cada requisito debe conservar: identificador único; necesidad/fuente; redacción singular; verificabilidad; prioridad; estado; relación con evidencia; y, cuando sea Must, CU/HU/CA y representación de interfaz. Los RNF deben conservar métrica, umbral, condición y método. Los RNF-EXP deben conservar además su evidencia WALK y decisión de member checking.
+Antes del corte final, cada requisito debe conservar: identificador único; necesidad/fuente; redacción singular; verificabilidad; prioridad; estado; relación con evidencia; y, cuando sea Must, CU/HU/CA y representación de interfaz. Los RNF deben conservar métrica, umbral, condición y método. Los RNF-16 a RNF-19 deben conservar además su evidencia WALK y decisión de member checking.
 
 
 
@@ -969,81 +1031,82 @@ Antes del corte final, cada requisito debe conservar: identificador único; nece
 
 \clearpage
 \subsection{Diagramas de secuencia de los 19 RF Must}
+Los 19 diagramas de secuencia fueron reexportados desde la fuente editable de Visual Paradigm con los identificadores vigentes. Sus nombres de archivo, rótulos internos y leyendas emplean de manera coherente la numeración terminal RF-01 a RF-23 aplicable a los 19 requisitos Must.
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_01_RF-AUT-01.png}
-\caption{Secuencia de RF-AUT-01: Autenticar usuario.}\label{fig:ds-01}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_01_RF-01.png}
+\caption{Secuencia de RF-01: Autenticar usuario.}\label{fig:ds-01}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_02_RF-AUT-02.png}
-\caption{Secuencia de RF-AUT-02: Aplicar permisos por rol.}\label{fig:ds-02}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_02_RF-02.png}
+\caption{Secuencia de RF-02: Aplicar permisos por rol.}\label{fig:ds-02}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_03_RF-CLI-01.png}
-\caption{Secuencia de RF-CLI-01: Registrar cliente mínimo.}\label{fig:ds-03}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_03_RF-04.png}
+\caption{Secuencia de RF-04: Registrar cliente mínimo.}\label{fig:ds-03}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_04_RF-CLI-02.png}
-\caption{Secuencia de RF-CLI-02: Buscar y consultar cliente.}\label{fig:ds-04}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_04_RF-05.png}
+\caption{Secuencia de RF-05: Buscar y consultar cliente.}\label{fig:ds-04}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_05_RF-CLI-03.png}
-\caption{Secuencia de RF-CLI-03: Actualizar o reactivar cliente.}\label{fig:ds-05}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_05_RF-06.png}
+\caption{Secuencia de RF-06: Actualizar o reactivar cliente.}\label{fig:ds-05}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_06_RF-MEM-01.png}
-\caption{Secuencia de RF-MEM-01: Configurar planes y promociones.}\label{fig:ds-06}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_06_RF-07.png}
+\caption{Secuencia de RF-07: Configurar planes y promociones.}\label{fig:ds-06}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_07_RF-MEM-02.png}
-\caption{Secuencia de RF-MEM-02: Activar o renovar membresía.}\label{fig:ds-07}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_07_RF-08.png}
+\caption{Secuencia de RF-08: Activar o renovar membresía.}\label{fig:ds-07}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_08_RF-MEM-03.png}
-\caption{Secuencia de RF-MEM-03: Consultar vigencia.}\label{fig:ds-08}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_08_RF-09.png}
+\caption{Secuencia de RF-09: Consultar vigencia.}\label{fig:ds-08}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_09_RF-MEM-04.png}
-\caption{Secuencia de RF-MEM-04: Alertar vencimientos.}\label{fig:ds-09}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_09_RF-10.png}
+\caption{Secuencia de RF-10: Alertar vencimientos.}\label{fig:ds-09}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_10_RF-PAG-01.png}
-\caption{Secuencia de RF-PAG-01: Registrar pago y comprobante.}\label{fig:ds-10}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_10_RF-11.png}
+\caption{Secuencia de RF-11: Registrar pago y comprobante.}\label{fig:ds-10}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_11_RF-ASI-01.png}
-\caption{Secuencia de RF-ASI-01: Registrar asistencia.}\label{fig:ds-11}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_11_RF-13.png}
+\caption{Secuencia de RF-13: Registrar asistencia.}\label{fig:ds-11}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_12_RF-ASI-02.png}
-\caption{Secuencia de RF-ASI-02: Consultar asistencia.}\label{fig:ds-12}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_12_RF-14.png}
+\caption{Secuencia de RF-14: Consultar asistencia.}\label{fig:ds-12}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_13_RF-INV-01.png}
-\caption{Secuencia de RF-INV-01: Administrar productos.}\label{fig:ds-13}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_13_RF-15.png}
+\caption{Secuencia de RF-15: Administrar productos.}\label{fig:ds-13}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_14_RF-INV-02.png}
-\caption{Secuencia de RF-INV-02: Registrar movimientos de stock.}\label{fig:ds-14}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_14_RF-16.png}
+\caption{Secuencia de RF-16: Registrar movimientos de stock.}\label{fig:ds-14}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_15_RF-VEN-01.png}
-\caption{Secuencia de RF-VEN-01: Registrar venta.}\label{fig:ds-15}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_15_RF-17.png}
+\caption{Secuencia de RF-17: Registrar venta.}\label{fig:ds-15}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_16_RF-CAJ-01.png}
-\caption{Secuencia de RF-CAJ-01: Cerrar turno y conciliar caja.}\label{fig:ds-16}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_16_RF-19.png}
+\caption{Secuencia de RF-19: Cerrar turno y conciliar caja.}\label{fig:ds-16}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_17_RF-NOV-01.png}
-\caption{Secuencia de RF-NOV-01: Gestionar novedades internas.}\label{fig:ds-17}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_17_RF-20.png}
+\caption{Secuencia de RF-20: Gestionar novedades internas.}\label{fig:ds-17}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_18_RF-RUT-01.png}
-\caption{Secuencia de RF-RUT-01: Crear y asignar rutina.}\label{fig:ds-18}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_18_RF-22.png}
+\caption{Secuencia de RF-22: Crear y asignar rutina.}\label{fig:ds-18}
 \end{figure}\end{landscape}
 \begin{landscape}\begin{figure}[p]\centering
-\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_19_RF-RUT-02.png}
-\caption{Secuencia de RF-RUT-02: Versionar y ajustar rutina.}\label{fig:ds-19}
+\includegraphics[width=.96\linewidth,height=.76\textheight,keepaspectratio]{04_Secuencia/DS_19_RF-23.png}
+\caption{Secuencia de RF-23: Versionar y ajustar rutina.}\label{fig:ds-19}
 \end{figure}\end{landscape}
 
 \clearpage
