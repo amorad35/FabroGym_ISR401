@@ -42,8 +42,9 @@ Las capturas de pantalla exigidas como evidencia de trabajo individual se conser
 | Registrar el depósito Zenodo verificable del paquete | `07_Datos/registro_deposito.md` | `94589ad7df7df603b2e0f9d22f941261b736eb12` | Documentación / publicación |
 | Crear el índice y reglas de integridad de evidencia de autoría | `10_Autoria/README.md` | `cd7647fc96a01bccf9d722c0ef8828fa09f12e4b` | Autoría documental / consolidación |
 | Incorporar la bitácora de sesiones del equipo para respaldar cronología y trazabilidad de aportes | `10_Autoria/bitacora_sesiones.csv` | `88e78574353674875f0c3a4401d067535f2b41f6` | Autoría documental / trazabilidad |
+| Normalizar e incorporar evidencia fotográfica del equipo conservando los originales y su relación con metadatos | `10_Autoria/fotos_equipo/` | `c1593702cb90ef9b234e1061210ac0bf82a6d21d` | Evidencia de autoría / fotografía |
 
-**Síntesis de contribución verificable:** participación en MVP, documentación experimental, consolidación del paquete `07_Datos`, documentación de reproducibilidad/publicación, organización de la evidencia de autoría y registro de la bitácora de sesiones.
+**Síntesis de contribución verificable:** participación en MVP, documentación experimental, consolidación del paquete `07_Datos`, documentación de reproducibilidad/publicación, organización de la evidencia de autoría, registro de la bitácora de sesiones y normalización de evidencia fotográfica del equipo.
 
 ---
 
@@ -62,8 +63,11 @@ Las capturas de pantalla exigidas como evidencia de trabajo individual se conser
 | Fijar los hashes SHA-256 finales del paquete reproducible | `07_Datos/checksums_datos.sha256` | `0f15fb320a88fccaa91d6491c3bc0e4d869372d8` | Verificación de integridad / reproducibilidad |
 | Registrar su codificación independiente sobre el subconjunto común de doble codificación | `10_Autoria/doble_codificacion/02_codificacion_mora.csv` y `.xlsx` | `e86e0488d1b70587b17566450ac4ed34ec10598f` | Evidencia empírica / doble codificación |
 | Incorporar el cálculo reproducible de acuerdo e IC95 % de la doble codificación | `10_Autoria/doble_codificacion/` | `57edc42b7ff37a0a1b0a1c79e00abe1f737d4a9e` | Análisis reproducible / acuerdo entre codificadores |
+| Actualizar los checksums definitivos de `07_Datos` después de la integración final | `07_Datos/checksums_datos.sha256` | `5ea7e897ce23f3e6789d70067d4262c4eb1cd9c7` | Verificación de integridad / reproducibilidad |
+| Incorporar en A3 las fuentes editables del modelado UML e i* junto con sus exportaciones finales | `10_Autoria/fuentes_editables/` | `37b04f8c3aff4352c844d1091c51371bba2ae322` | Autoría / modelado editable |
+| Incorporar cinco fotografías originales de aplicación del cuestionario como evidencia de campo | `02_Evidencias/Cuestionario/Fotos_Aplicacion/` | `5ad09c3ca5b0f55c4da4e18e7989ffba31fd587c` | Evidencia empírica / cuestionario |
 
-**Síntesis de contribución verificable:** participación en metadatos académicos, registro OSF, documentación del experimento, integración de fuentes editables de modelado, integridad reproducible de `07_Datos`, doble codificación y cálculo reproducible del acuerdo entre codificadores.
+**Síntesis de contribución verificable:** participación en metadatos académicos, registro OSF, documentación del experimento, integración y evidencia de fuentes editables de modelado, integridad reproducible de `07_Datos`, doble codificación, cálculo reproducible del acuerdo entre codificadores y evidencia fotográfica de aplicación del cuestionario.
 
 ---
 
@@ -79,8 +83,9 @@ Las capturas de pantalla exigidas como evidencia de trabajo individual se conser
 | Registrar su codificación independiente del subconjunto común | `10_Autoria/doble_codificacion/03_codificacion_ponce.csv` y `.xlsx` | `ae278a145989ecef7de869ec35031fe1bdc1bdaa` | Evidencia empírica / doble codificación |
 | Corregir la estructura final del CSV de codificación de Ponce para su lectura y versionado | `10_Autoria/doble_codificacion/03_codificacion_ponce.csv` | `1b30176d5db7f072a0c5aea2e40147bbd661acb9` | Corrección documental / calidad de datos |
 | Documentar y verificar el uso de IA por artefacto en el cierre 2B | `10_Autoria/declaracion_uso_ia.md` | `c6c206a5c129dfb00a76eb1228dbe4f500634b72` | Transparencia de autoría / uso de IA |
+| Incorporar correspondencia fechada de solicitudes, autorizaciones y confirmaciones de cita con la organización | `10_Autoria/correspondencia/` | `87d667969192f9f86c19ae70848acec06008ea30` | Evidencia de coordinación / autoría |
 
-**Síntesis de contribución verificable:** participación en actualización de mockups de roles del sistema, organización de consentimientos censurados, doble codificación independiente y documentación final/verificación humana del uso de IA.
+**Síntesis de contribución verificable:** participación en actualización de mockups de roles del sistema, organización de consentimientos censurados, doble codificación independiente, documentación final/verificación humana del uso de IA y consolidación de correspondencia verificable con la organización.
 
 ---
 
