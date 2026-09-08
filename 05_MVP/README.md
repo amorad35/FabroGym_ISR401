@@ -1,69 +1,67 @@
-# FabroGym — Producto Mínimo Viable (MVP)
+# FabroGym — Producto Mínimo Viable (MVP) · Entrega 4 (2B)
 
 ## 1. Descripción
 
-FabroGym es un Producto Mínimo Viable desarrollado como una aplicación web estática para demostrar procesos administrativos y operativos de un gimnasio.
+Prototipo web estático de FabroGym construido con **HTML5, CSS3 y JavaScript**, datos exclusivamente sintéticos y persistencia local mediante `localStorage`. No requiere base de datos externa para la demostración.
 
-El MVP utiliza **HTML5, CSS3 y JavaScript**, datos sintéticos y `localStorage`. No requiere una base de datos externa para su ejecución demostrativa.
+Esta versión cierra el criterio **C3** con **16 de 19 RF Must implementados (84,2 %)**. Permanecen fuera del alcance del MVP `RF-16`, `RF-17` y `RF-19`.
 
-## 2. Contenido
+## 2. Estructura
 
 ```text
 05_MVP/
 ├── README.md
+├── docker-compose.yml
 ├── video_demo.mp4
+├── verificacion/
+│   ├── MATRIZ_COBERTURA_C3.csv
+│   ├── VERIFICACION_C3.md
+│   ├── resultado_pruebas_ui.json
+│   └── captura_cobertura_c3.png
 └── MVP_HTML/
     ├── Dockerfile
-    ├── README.md
+    ├── .dockerignore
+    ├── README_DOCKER.md
+    ├── README_2B_PATCH.md
+    ├── ABRIR_PROTOTIPO.bat
     ├── index.html
-    ├── styles.css
-    └── app.js
+    └── assets/
+        ├── css/styles.css
+        └── js/
+            ├── data.js
+            └── app.js
 ```
 
-## 3. Código fuente
+## 3. Ejecución local
 
-El código fuente disponible en este repositorio se encuentra en:
+Opción directa: abrir `05_MVP/MVP_HTML/index.html` en Chrome, Edge o Firefox.
 
-```text
-05_MVP/MVP_HTML/
-```
-
-El código fuente del MVP se encuentra disponible en este repositorio, dentro de 05_MVP/MVP_HTML/. No se utiliza un repositorio independiente para esta versión del proyecto.
-
-## 4. Ejecución local
-
-### Opción rápida
-
-1. Abrir `05_MVP/MVP_HTML/`.
-2. Abrir `index.html` con Chrome, Edge o Firefox.
-
-También puede utilizarse un servidor local:
+Opción con servidor local:
 
 ```bash
 cd 05_MVP/MVP_HTML
 python -m http.server 8080
 ```
 
-Luego abrir:
+Luego abrir `http://localhost:8080`.
 
-```text
-http://localhost:8080
-```
+## 4. Ejecución con Docker
 
-### Opción con Docker
-
-Desde `05_MVP/MVP_HTML/`:
+Desde `05_MVP/`:
 
 ```bash
-docker build -t fabrogym-mvp .
-docker run --rm -p 8080:80 fabrogym-mvp
+docker compose up --build
 ```
 
-Luego abrir:
+Abrir `http://localhost:8080`.
 
-```text
-http://localhost:8080
+Para detener:
+
+```bash
+docker compose down
 ```
+
+También se puede construir directamente con el `Dockerfile` de `MVP_HTML/`. Consulte `MVP_HTML/README_DOCKER.md`.
 
 ## 5. Credenciales de demostración
 
@@ -73,32 +71,38 @@ http://localhost:8080
 | Recepción | `recepcion` | `recep123` |
 | Instructor | `instructor` | `instr123` |
 
-Las credenciales son exclusivamente académicas y no corresponden a usuarios reales.
+Son credenciales académicas y sintéticas.
 
-## 6. Cobertura documentada
-
-La versión actual documenta 12 RF Must implementados de 19 priorizados:
+## 6. Cobertura C3
 
 ```text
-12 / 19 × 100 = 63,2 %
+16 / 19 × 100 = 84,21 %
 ```
 
-La cobertura deberá actualizarse si el MVP o la priorización cambian.
+RF Must implementados:
 
-## 7. Video de demostración
+`RF-01`, `RF-02`, `RF-04`, `RF-05`, `RF-06`, `RF-07`, `RF-08`, `RF-09`, `RF-10`, `RF-11`, `RF-13`, `RF-14`, `RF-15`, `RF-20`, `RF-22`, `RF-23`.
 
-Archivo disponible:
+RF Must no implementados y no contabilizados:
 
-```text
-05_MVP/video_demo.mp4
-```
+- `RF-16` — entradas y ajustes de stock;
+- `RF-17` — venta y descuento de existencias;
+- `RF-19` — conciliación y cierre de caja.
 
-El video utiliza únicamente datos ficticios y evidencia el recorrido funcional del MVP.
+La trazabilidad detallada está en `verificacion/MATRIZ_COBERTURA_C3.csv`.
 
-## 8. Privacidad
+## 7. Verificación técnica
 
-El MVP debe utilizar exclusivamente datos sintéticos. No deben incorporarse nombres, identificaciones, teléfonos, fotografías, datos médicos, credenciales reales ni información que permita identificar a participantes o clientes.
+Sobre esta copia exacta se ejecutaron **31/31 comprobaciones de interfaz y lógica en Chromium**, incluyendo autenticación, permisos, alta/búsqueda/actualización de clientes, validación de duplicados, pagos confirmados, renovación de membresía, asistencias y excepciones, filtros, inventario, novedades, rutinas, versionado y pantalla de cobertura. El resultado registrado no produjo errores JavaScript.
 
-## 9. Limitaciones
+Consulte `verificacion/VERIFICACION_C3.md` y `verificacion/resultado_pruebas_ui.json`.
 
-Esta versión es académica y demostrativa. No representa una versión preparada para producción ni incorpora facturación electrónica, pasarelas bancarias, biometría o inteligencia artificial en operación.
+## 8. Video de demostración
+
+`video_demo.mp4` se conserva dentro de la carpeta MVP como evidencia de demostración. Tras integrar cambios adicionales posteriores a esta versión, debe comprobarse que el video siga representando el estado final del prototipo antes del corte.
+
+## 9. Privacidad y alcance
+
+El MVP utiliza únicamente datos ficticios. No deben introducirse nombres, identificaciones, teléfonos, fotografías, datos médicos, credenciales reales ni otra información que permita identificar participantes o clientes reales.
+
+Es un prototipo académico demostrativo. No incluye facturación electrónica, pasarelas bancarias, biometría ni un componente de IA en operación.
