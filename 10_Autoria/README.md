@@ -120,6 +120,28 @@ Deben conservar sus metadatos originales y respetar las condiciones de privacida
 
 No se modifican los metadatos de captura para alterar fecha, dispositivo o procedencia.
 
+Dentro de `fotos_equipo/` se organiza también la evidencia fotográfica de aplicación del cuestionario de la siguiente forma:
+
+```text
+10_Autoria/
+└── fotos_equipo/
+    ├── 01_fotos_equipo/
+    │   └── [fotografías originales del equipo]
+    ├── fotos_cuestionario/
+    │   └── [copias públicas enmascaradas de las fotografías de aplicación]
+    └── originales_cuestionario.7z
+        └── [fotografías originales de aplicación con EXIF conservado]
+```
+
+Las fotografías de aplicación del cuestionario se mantienen en dos versiones con funciones distintas:
+
+- **originales:** se conservan sin edición dentro de `originales_cuestionario.7z` para preservar la fecha de captura, dispositivo y demás metadatos EXIF originales;
+- **enmascaradas:** se almacenan en `fotos_equipo/fotos_cuestionario/` y son las copias utilizadas para revisión o publicación cuando sea necesario ocultar el rostro de las personas visibles.
+
+El enmascaramiento no sustituye ni modifica los originales. Nunca se sobrescribe una fotografía original con su versión enmascarada.
+
+`originales_cuestionario.7z` debe mantenerse como evidencia restringida/protegida y no debe exponerse en una publicación abierta si contiene personas identificables. La contraseña o clave de acceso, cuando corresponda, no se registra en el repositorio.
+
 ### A7 — `doble_codificacion/`
 
 Evidencia de doble codificación independiente sobre el mismo subconjunto del corpus de walkthroughs.
@@ -191,7 +213,13 @@ Cada registro debe incluir:
 - SHA-256;
 - observaciones de procedencia cuando sean necesarias.
 
-El inventario se genera a partir de los archivos originales, sin alterar sus metadatos.
+El inventario se genera a partir de los **archivos originales**, sin alterar sus metadatos.
+
+Para las fotografías de aplicación del cuestionario, los valores de fecha, dispositivo y SHA-256 registrados en `exif_inventario.csv` corresponden a las fotografías originales conservadas en `fotos_equipo/originales_cuestionario.7z`, no a las copias enmascaradas.
+
+Las copias ubicadas en `fotos_equipo/fotos_cuestionario/` pueden haber sido editadas únicamente para ocultar rostros u otros elementos identificables. Por ese motivo, sus metadatos o hash pueden diferir de los originales y no se utilizan como fuente primaria del inventario A11.
+
+La relación entre ambas versiones se mantiene mediante el mismo identificador/nombre lógico de fotografía y la documentación del inventario, de modo que pueda comprobarse qué original con EXIF respalda cada copia enmascarada.
 
 ### A12 — `.mailmap`
 
@@ -259,7 +287,9 @@ Antes de incorporar cualquier archivo se debe comprobar que no publique indebida
 - información restringida del gimnasio;
 - evidencia identificable de participantes sin autorización.
 
-Cuando una evidencia legítima contenga información que no deba ser pública, se conserva en la zona restringida correspondiente y en `10_Autoria/` se documenta únicamente la referencia verificable permitida.
+Cuando una evidencia legítima contenga información que no deba ser pública, se conserva protegida como evidencia restringida. En el caso específico de las fotografías de aplicación del cuestionario, `fotos_equipo/fotos_cuestionario/` contiene únicamente las copias enmascaradas y `fotos_equipo/originales_cuestionario.7z` conserva las fotografías originales con sus metadatos EXIF.
+
+El paquete `originales_cuestionario.7z` no se considera una copia pública para difusión: debe mantenerse protegido y su clave de acceso no se incorpora al repositorio ni a los artefactos de publicación.
 
 ---
 
