@@ -1,0 +1,157 @@
+[
+  {
+    "test": "RF-01 rechaza credenciales inválidas",
+    "ok": true,
+    "detail": "Credenciales incorrectas"
+  },
+  {
+    "test": "RF-01 inicia sesión válida",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-02 administrador ve Planes",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-02 instructor no ve Planes",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-02 instructor no ve Clientes",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-02 instructor ve Rutinas",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-07 crea plan",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-04 registra cliente",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-05 busca por contacto",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-05 busca nombre normalizado",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-05 busca por código",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-06 advierte coincidencia antes de crear",
+    "ok": true,
+    "detail": "5->5"
+  },
+  {
+    "test": "RF-08 rechaza renovación sin pago confirmado",
+    "ok": true,
+    "detail": "Renovación rechazada: se requiere un pago de membresía confirmado y no aplicado"
+  },
+  {
+    "test": "RF-11 registra pago confirmado",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-11 genera comprobante interno",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-08 renueva con pago confirmado",
+    "ok": true,
+    "detail": "Membresía renovada con pago PAG-1788874720104-4CA6 hasta 2026-11-07"
+  },
+  {
+    "test": "RF-09 muestra inicio y vencimiento",
+    "ok": true,
+    "detail": "CL\nCliente Prueba\nFG-TEST-001 · 0987654321\n\tMensual\nInicio 2026-10-09 · vence 2026-11-07\nVigente\t2026-09-08 · $25.00\nConfirmado\n\t—\t0 abiertas\t\nEditar\nRenovar"
+  },
+  {
+    "test": "RF-20 crea novedad",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-05 muestra último pago",
+    "ok": true,
+    "detail": "CL\nCliente Prueba\nFG-TEST-001 · 0987654321\n\tMensual\nInicio 2026-10-09 · vence 2026-11-07\nVigente\t2026-09-08 · $25.00\nConfirmado\n\t—\t1 abiertas\t\nEditar\nRenovar"
+  },
+  {
+    "test": "RF-05 muestra novedades abiertas",
+    "ok": true,
+    "detail": "CL\nCliente Prueba\nFG-TEST-001 · 0987654321\n\tMensual\nInicio 2026-10-09 · vence 2026-11-07\nVigente\t2026-09-08 · $25.00\nConfirmado\n\t—\t1 abiertas\t\nEditar\nRenovar"
+  },
+  {
+    "test": "RF-13 rechaza no vigente sin excepción",
+    "ok": true,
+    "detail": "Ingreso rechazado: membresía no vigente"
+  },
+  {
+    "test": "RF-13 documenta excepción autorizada",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-14 filtra cliente fecha turno",
+    "ok": true,
+    "detail": "1 registro"
+  },
+  {
+    "test": "RF-15 crea producto",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-22 crea rutina completa",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "RF-23 incrementa versión",
+    "ok": true,
+    "detail": "Rutina C3\nv2 · Activa\n\nCliente Prueba · Instructor Alfa\n\nObjetivo\nMejorar resistencia general\nEjercicio\nSentadilla goblet\nSeries × repeticiones\n5 × 10\nDescanso\n90 segundos\nDías\nMartes y jueves\nVersiones previas\n1\nCrear nueva versión\nHistorial solo lectura\nv1: Sentadilla guiada · 4×10 · Martes y jueves"
+  },
+  {
+    "test": "RF-23 conserva versión previa solo lectura",
+    "ok": true,
+    "detail": "Rutina C3\nv2 · Activa\n\nCliente Prueba · Instructor Alfa\n\nObjetivo\nMejorar resistencia general\nEjercicio\nSentadilla goblet\nSeries × repeticiones\n5 × 10\nDescanso\n90 segundos\nDías\nMartes y jueves\nVersiones previas\n1\nCrear nueva versión\nHistorial solo lectura\nv1: Sentadilla guiada · 4×10 · Martes y jueves"
+  },
+  {
+    "test": "RF-10 lista alertas ≤3 días",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "C3 muestra 16/19 y 84,2 %",
+    "ok": true,
+    "detail": "Cobertura de requisitos Must\n\nEntrega 4 (2B) · Criterio C3 · cobertura mínima requerida: 80 %.\n\n84,2 %\n16 / 19 RF Must\n\nLos 16 RF listados están implementados en esta versión; tres RF Must permanecen fuera del alcance del MVP.\n\nNo contados como imple"
+  },
+  {
+    "test": "C3 excluye RF-16 RF-17 RF-19",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "test": "Sin errores JavaScript",
+    "ok": true,
+    "detail": ""
+  }
+]

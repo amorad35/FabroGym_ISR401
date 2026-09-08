@@ -1,0 +1,20 @@
+﻿ID_RF,Descripcion,Estado_MVP,Evidencia_funcional
+RF-01,Iniciar y cerrar sesión con credenciales individuales no biométricas,IMPLEMENTADO,Login/logout y rechazo de credenciales inválidas.
+RF-02,Autorizar operaciones según rol y denegar por defecto,IMPLEMENTADO,Mapa explícito de permisos Administrador/Recepción/Instructor; rol no reconocido sin acceso.
+RF-04,"Registrar cliente con código interno, nombre de uso y contacto",IMPLEMENTADO,Alta con datos mínimos y sintéticos.
+RF-05,"Buscar cliente por código, nombre normalizado o contacto y consultar estado operativo",IMPLEMENTADO,"Búsqueda por los tres campos; muestra membresía, último pago, última asistencia y novedades abiertas."
+RF-06,Actualizar/reactivar y advertir coincidencias antes de duplicar,IMPLEMENTADO,Edición/reactivación; código duplicado bloqueado y coincidencia nombre/contacto advertida.
+RF-07,Administrar planes y promociones,IMPLEMENTADO,"Nombre, duración, precio, descuento, vigencia y estado."
+RF-08,Activar/renovar membresía desde plan vigente y pago confirmado,IMPLEMENTADO,Renovación rechaza plan no vigente o ausencia de pago confirmado; un pago se aplica una sola vez.
+RF-09,"Mostrar plan, inicio, vencimiento y estado de membresía",IMPLEMENTADO,Consulta visible en tabla de clientes.
+RF-10,Listar vencidas y próximas a vencer en tres días,IMPLEMENTADO,Panel diario distingue vencidas y ≤3 días; no envía mensajes externos.
+RF-11,Registrar pago y comprobante interno,IMPLEMENTADO,"Monto, concepto, medio, referencia, fecha, estado confirmado y comprobante descargable."
+RF-13,Registrar asistencia no biométrica o excepción autorizada,IMPLEMENTADO,Valida vigencia y duplicados; excepción requiere motivo y responsable autorizado.
+RF-14,"Filtrar asistencias por cliente, fecha y turno y mostrar conteos",IMPLEMENTADO,"Filtros combinables, contador y exportación CSV."
+RF-15,Administrar productos,IMPLEMENTADO,"Código, nombre, precio, unidad, stock mínimo y estado."
+RF-20,Gestionar novedades internas,IMPLEMENTADO,"Categoría, detalle, responsable, vencimiento, estado y vínculo opcional a cliente."
+RF-22,Crear y asignar rutina con parámetros operativos,IMPLEMENTADO,"Objetivo, ejercicio, series, repeticiones, descanso, días, cliente e instructor."
+RF-23,Versionar rutinas y conservar versiones anteriores en solo lectura,IMPLEMENTADO,Cada modificación crea versión nueva y archiva snapshot anterior sin controles de edición.
+RF-16,Registrar entradas y ajustes de stock,NO IMPLEMENTADO,Fuera del alcance mínimo de esta versión.
+RF-17,Registrar venta y descontar existencias,NO IMPLEMENTADO,Fuera del alcance mínimo de esta versión.
+RF-19,Conciliar pagos/ventas y cierre de caja,NO IMPLEMENTADO,Fuera del alcance mínimo de esta versión.

@@ -1,32 +1,50 @@
-# FabroGym — parche MVP Entrega 4 (2B)
-
-Este paquete está pensado para **reemplazar/añadir únicamente** los archivos equivalentes dentro del prototipo `FabroGym_HTML_Interactivo_Escala_Equilibrada` utilizado en validaciones.
+# FabroGym MVP — cierre C3 de Entrega 4 (2B)
 
 ## Cobertura Must
 
-Se mantienen 12 RF existentes y se incorporan:
+La priorización vigente contiene 19 RF Must. Esta versión implementa y documenta 16:
 
-- RF-07 — Configurar planes y promociones.
-- RF-11 — Registrar pago y comprobante interno.
-- RF-15 — Administrar productos.
-- RF-20 — Gestionar novedades internas.
+- RF-01, RF-02;
+- RF-04, RF-05, RF-06;
+- RF-07, RF-08, RF-09, RF-10;
+- RF-11;
+- RF-13, RF-14;
+- RF-15;
+- RF-20;
+- RF-22, RF-23.
 
-La fuente histórica declara **16/19 = 84,2 %**, pero existe una cifra divergente de 12/19. Este bloque no resuelve la cobertura por inferencia: los 19 RF Must quedan **sujetos a verificación terminal C3** contra código y pruebas.
+Cobertura:
 
-## Archivos del parche
+```text
+16 / 19 = 84,21 %
+```
 
-- `index.html`
-- `assets/css/styles.css`
-- `assets/js/data.js`
-- `assets/js/app.js`
-- `ABRIR_PROTOTIPO.bat`
+No se contabilizan como implementados:
 
-Conservar las demás carpetas `assets/` y `pages/` del prototipo original.
+- RF-16 — entradas y ajustes de stock;
+- RF-17 — venta y descuento de existencias;
+- RF-19 — conciliación y cierre de caja.
 
-## Credenciales sintéticas
+## Cambios funcionales de cierre
 
-- Administrador: `admin / admin123`
-- Recepción: `recepcion / recep123`
-- Instructor: `instructor / instr123`
+- búsqueda de clientes por código, nombre normalizado o contacto;
+- consulta de último pago, última asistencia y novedades abiertas;
+- advertencia de coincidencias antes de crear duplicados;
+- renovación de membresía condicionada a plan vigente y pago confirmado no aplicado;
+- fechas de inicio y vencimiento visibles;
+- alertas de membresías vencidas o con vencimiento en los próximos tres días;
+- asistencia con excepción autorizada documentada;
+- filtros de asistencia por cliente, fecha y turno con conteo;
+- rutinas con objetivo, series, repeticiones, descanso y días;
+- versionado real de rutinas con historial anterior en solo lectura;
+- IDs sincronizados con el catálogo normalizado RF-01...RF-25.
 
-Todos los datos son sintéticos y el MVP usa `localStorage`. No procesa pagos reales, biometría, datos de salud ni IA operativa.
+## Docker
+
+El despliegue se ejecuta desde `05_MVP/` con:
+
+```bash
+docker compose up --build
+```
+
+El `Dockerfile` está en `MVP_HTML/` y sirve el prototipo mediante Nginx.
