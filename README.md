@@ -10,9 +10,9 @@ FabroGym documenta la ingeniería de requisitos de un sistema de gestión de gim
 |---|---|
 | ERS/SRS | `01_ERS/ERS_SRS_2B_v2.0.pdf` y fuente LaTeX |
 | Trazabilidad | catálogo normalizado (25 RF, 23 RNF y 4 RD) + 97 trazas históricas y 8 planes de verificación IA |
-| MVP | cobertura histórica declarada como 16/19 RF Must; estado sujeto a verificación terminal C3 en `05_MVP/` |
+| MVP | cobertura C3 verificada: **16/19 RF Must (84,21 %)**; evidencia técnica en `05_MVP/verificacion/` |
 | Análisis empírico | reproducible desde `06_Experimento/scripts_analisis/run_all.py` |
-| Manuscrito | `07_Publicacion/manuscrito_fuente/manuscrito_final.pdf` + `.tex`, plantilla Springer Nature |
+| Manuscrito | `07_Publicacion/manuscrito_final.pdf` + `07_Publicacion/manuscrito_final.tex`, plantilla Springer Nature |
 | Dataset Zenodo | **PUBLICADO**, versión 2.0.0; la copia local es el snapshot del depósito publicado |
 | Registro OSF | publicado: https://osf.io/62ysc/ — DOI 10.17605/OSF.IO/62YSC |
 | DOI Zenodo | [`10.5281/zenodo.22237884`](https://doi.org/10.5281/zenodo.22237884) — versión específica publicada |
@@ -44,6 +44,42 @@ Los seis `WALK-*` conservan su técnica original. No se renombran como entrevist
 ## Resultados reproducibles de referencia
 
 La ejecución versionada del análisis trabaja con 16 sesiones audiovisuales, 70 respuestas del cuestionario, 76 fragmentos de walkthrough codificados, 37 códigos normalizados, 18 categorías temáticas, 9 fragmentos pertinentes para explicabilidad y cuatro RNF de explicabilidad terminales. La curva por códigos produce 6.306 % en las últimas tres sesiones, por lo que **no se declara saturación estricta ≤5 %**; la estabilización axial de 1.852 % se informa solo como evidencia complementaria.
+
+
+## Compilar el ERS/SRS
+
+La versión académica vigente del ERS/SRS es `ERS_SRS_2B_v2.0`. La compilación debe realizarse desde la carpeta `01_ERS/`, conservando la estructura del repositorio.
+
+**Compilador:** `pdflatex`  
+**Archivo principal:** `ERS_SRS_2B_v2.0.tex`  
+**Directorio de ejecución:** `01_ERS/`  
+**PDF esperado:** `01_ERS/ERS_SRS_2B_v2.0.pdf`
+
+### Dependencias documentales
+
+La compilación requiere conservar junto al archivo principal:
+
+- `01_ERS/referencias.bib`
+- `01_ERS/figuras_2B/`
+- `01_ERS/modelado_final/`
+- `03_Modelado/Diagramas_UML/`
+
+El archivo LaTeX utiliza, entre otros, los paquetes `geometry`, `inputenc`, `fontenc`, `lmodern`, `babel`, `microtype`, `graphicx`, `longtable`, `booktabs`, `tabularx`, `array`, `xcolor`, `enumitem`, `hyperref`, `fancyhdr`, `caption`, `float`, `pdflscape`, `seqsplit`, `cite`, `lastpage`, `pdfpages` y `tcolorbox`.
+
+### Comando de compilación
+
+Desde `01_ERS/`, ejecutar **tres veces**:
+
+```bash
+pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
+pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
+pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
+```
+
+Las tres pasadas permiten actualizar correctamente referencias internas, numeración, tabla de contenidos, lista de figuras, lista de tablas y referencias de página.
+
+No se debe copiar únicamente el archivo `.tex`: deben conservarse las carpetas y archivos auxiliares indicados anteriormente para que las figuras y el modelado UML puedan resolverse correctamente durante la compilación.
+
 
 ## Reproducir el análisis
 
