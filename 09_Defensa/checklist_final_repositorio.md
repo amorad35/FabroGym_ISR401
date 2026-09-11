@@ -1,23 +1,39 @@
 # Checklist final del repositorio - FabroGym 2B
 
-## Debe existir antes del corte
-- [ ] `01_ERS/ERS_SRS_2B_v2.0.pdf` y `.tex`.
-- [ ] `04_Trazabilidad/catalogo_requisitos.csv` y `catalogo_requisitos.json`.
-- [ ] `04_Trazabilidad/matriz_trazabilidad.csv` con 105 filas de datos.
-- [ ] `05_MVP/` con cobertura sujeta a verificación terminal C3.
-- [ ] `06_Experimento/` con datos crudos, procesados, resultados y `scripts_analisis/run_all.py`.
-- [ ] `07_Publicacion/manuscrito_fuente/manuscrito_final.pdf`, `.tex`, `referencias.bib`, `tablas/`, `figuras/`.
-- [ ] `07_Publicacion/dataset_zenodo/` conservado como snapshot histórico de Zenodo 2.0.0, DOI 10.5281/zenodo.22237884.
-- [ ] `08_Etica/` normalizado con paquete etico y adenda, solo cuando este firmado realmente.
-- [ ] `09_Defensa/presentacion.pdf`, `.pptx`, `guion.pdf`, `folleto_una_hoja.pdf`.
-- [ ] `09_Defensa/video_defensa.mp4` grabado por el equipo.
-- [ ] `README.md`, `CITATION.cff`, `FAIR_CHECKLIST.md`, `LICENSE` y `CHANGELOG.md` coherentes con Zenodo 2.0.0 y el DOI `10.5281/zenodo.22237884`.
+## Documentación principal
 
-## No debe estar en zona publica
-- [ ] Audios reales.
-- [ ] Videos reales de entrevistas/walkthroughs.
-- [ ] Firmas, cedulas, correos, telefonos o nombres reales identificables.
-- [ ] Contraseñas del contenedor restringido.
-- [ ] No existen DOI ficticios ni marcadores de predepósito en artefactos activos.
-- [ ] El SWHID solo se declara si Software Heritage devuelve un identificador real y verificable.
-- [ ] El puntaje F-UJI solo se declara después de ejecutar y conservar la evaluación real.
+- [ ] `01_ERS/ERS_SRS_2B_v2.0.pdf` existe y corresponde a la versión académica vigente.
+- [ ] `01_ERS/ERS_SRS_2B_v2.0.tex` existe y compila desde `01_ERS/`.
+- [ ] El README raíz documenta compilador, archivo principal, dependencias, directorio y comandos de compilación.
+- [ ] `04_Trazabilidad/` contiene catálogos y matrices coherentes con 25 RF, 23 RNF y 4 RD.
+
+## Defensa
+
+- [ ] `09_Defensa/presentacion.pptx` corresponde a la versión definitiva.
+- [ ] `09_Defensa/presentacion.pdf` fue exportado desde esa presentación.
+- [ ] `09_Defensa/guion.pdf` está alineado con la presentación definitiva.
+- [ ] `09_Defensa/video_defensa.mp4` contiene la grabación real de la defensa.
+- [ ] La carpeta no contiene documentos que obliguen a ejecutar escenarios operativos en vivo.
+- [ ] `MANIFEST_DEFENSA.csv` fue regenerado después de los cambios finales.
+
+## Autoría
+
+- [ ] `10_Autoria/bitacora_sesiones.csv` incluye las sesiones reales hasta el cierre.
+- [ ] `10_Autoria/aporte_individual.md` diferencia aportes históricos y cierre terminal.
+- [ ] `10_Autoria/verificacion_previa.pdf` existe y fue firmado/revisado después del preflight.
+- [ ] `.mailmap` se conserva en la raíz.
+
+## Ciencia abierta y preservación
+
+- [ ] Zenodo se declara con DOI real `10.5281/zenodo.22237884`.
+- [ ] OSF se declara con DOI real `10.17605/OSF.IO/62YSC`.
+- [ ] F-UJI se ejecuta solo contra un DOI real y se conserva `fair_assessment.pdf` si se incorpora al repositorio.
+- [ ] Software Heritage se actualiza solo después del último commit/tag y se copia un SWHID real.
+- [ ] `CITATION.cff`, `FAIR_CHECKLIST.md`, `README.md`, `LICENSE` y `CHANGELOG.md` no contienen identificadores inventados.
+
+## Revisión final
+
+- [ ] Ejecutar análisis reproducible.
+- [ ] Verificar hashes/checksums.
+- [ ] Revisar privacidad pública.
+- [ ] Crear tag anotado final solo cuando el repositorio esté completo.

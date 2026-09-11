@@ -43,8 +43,9 @@ Las capturas de pantalla exigidas como evidencia de trabajo individual se conser
 | Crear el índice y reglas de integridad de evidencia de autoría | `10_Autoria/README.md` | `cd7647fc96a01bccf9d722c0ef8828fa09f12e4b` | Autoría documental / consolidación |
 | Incorporar la bitácora de sesiones del equipo para respaldar cronología y trazabilidad de aportes | `10_Autoria/bitacora_sesiones.csv` | `88e78574353674875f0c3a4401d067535f2b41f6` | Autoría documental / trazabilidad |
 | Normalizar e incorporar evidencia fotográfica del equipo conservando los originales y su relación con metadatos | `10_Autoria/fotos_equipo/` | `c1593702cb90ef9b234e1061210ac0bf82a6d21d` | Evidencia de autoría / fotografía |
+| Actualizar el README raíz con instrucciones reproducibles de compilación del ERS/SRS y sincronizar estado del MVP/manuscrito | `README.md` | `fa7873c35aa63575745378b94427b8b75ac0519b` | Documentación / reproducibilidad / cierre |
 
-**Síntesis de contribución verificable:** participación en MVP, documentación experimental, consolidación del paquete `07_Datos`, documentación de reproducibilidad/publicación, organización de la evidencia de autoría, registro de la bitácora de sesiones y normalización de evidencia fotográfica del equipo.
+**Síntesis de contribución verificable:** participación en MVP, documentación experimental, consolidación del paquete `07_Datos`, documentación de reproducibilidad/publicación, organización de la evidencia de autoría, registro de la bitácora de sesiones, normalización de evidencia fotográfica y actualización del README raíz con el procedimiento reproducible de compilación del ERS/SRS.
 
 ---
 
@@ -102,7 +103,29 @@ Las capturas de pantalla exigidas como evidencia de trabajo individual se conser
 
 ---
 
-## 8. Relación con otras evidencias de autoría
+## 8. Cierre terminal en curso — 11 de septiembre de 2026
+
+A las **14:54 (UTC-05:00)**, la sesión terminal de cierre se desarrolla de forma **Remota — Discord** con participación de:
+
+- **Mera Arias Erick Jhair** (`Emeraxs`);
+- **Mora Duarte Alex José** (`amorad35`);
+- **Ponce Rivera Mery Helenmey** (`Mery-003`).
+
+La composición histórica del proyecto se conserva con los cinco integrantes declarados en las secciones anteriores. Sin embargo, para la sesión terminal del 11 de septiembre se registra únicamente la participación efectiva de Mera, Mora y Ponce.
+
+### Evidencia versionada disponible a esta hora
+
+| Integrante | Actividad verificable del 11/09/2026 | Artefacto / ruta | Commit | Estado |
+|---|---|---|---|---|
+| Mera Arias Erick Jhair | Actualización del README raíz con compilación reproducible del ERS/SRS y sincronización del estado del MVP/manuscrito | `README.md` | `fa7873c35aa63575745378b94427b8b75ac0519b` | VERIFICADO |
+| Mora Duarte Alex José | Trabajo colaborativo de cierre en Discord sobre revisión de entrega y artefactos finales | `09_Defensa/`, `10_Autoria/` | — | PENDIENTE DE COMMIT |
+| Ponce Rivera Mery Helenmey | Trabajo colaborativo de cierre en Discord sobre revisión de entrega y artefactos finales | `09_Defensa/`, `10_Autoria/` | — | PENDIENTE DE COMMIT |
+
+Las modificaciones locales realizadas durante esta sesión sobre `05_MVP/`, `09_Defensa/` y `10_Autoria/` **no se atribuyen todavía como contribuciones Git verificadas** mientras no existan commits reales en el repositorio. Una vez efectuados esos commits, esta sección debe sustituir los estados `PENDIENTE DE COMMIT` por los hashes reales correspondientes.
+
+---
+
+## 9. Relación con otras evidencias de autoría
 
 La contribución individual aquí descrita se contrasta con:
 
@@ -114,8 +137,8 @@ La contribución individual aquí descrita se contrasta con:
 
 Los commits de combinación (`merge`) no se utilizan por sí solos como evidencia principal de contribución cuando existe un commit específico que describe mejor el trabajo realizado.
 
-## 9. Declaración de integridad
+## 10. Declaración de integridad
 
 Las contribuciones incluidas en este documento se basan en evidencia versionada verificable. No se atribuyen tareas, archivos ni commits a integrantes distintos de los observados en el historial revisado.
 
-La ratificación final de esta relación de aportes debe realizarse por los cinco integrantes del equipo en la versión de cierre. Las firmas no se simulan ni se sustituyen por nombres mecanografiados.
+La relación histórica de aportes conserva a los cinco integrantes declarados del proyecto. La sesión terminal del 11 de septiembre de 2026 registra únicamente a Mera, Mora y Ponce como participantes efectivos del cierre en curso. La ratificación y las firmas que correspondan deben ser reales; no se simulan ni se sustituyen por nombres mecanografiados.

@@ -1,16 +1,24 @@
-# 09_Defensa - FabroGym Entrega 4 (2B)
+# README_Defensa - FabroGym 2B
 
-Archivos listos para subir:
-- `presentacion.pptx`
-- `presentacion.pdf`
-- `guion.pdf`
-- `folleto_una_hoja.pdf`
-- `banco_preguntas_respuestas.pdf` y `.md`
-- `escenarios_demo.pdf` y `.md`
-- `checklist_demo_offline.pdf` y `.md`
-- `checklist_final_repositorio.pdf` y `.md`
-- `reparto_intervencion.pdf` y `.md`
+## Material listo para defensa
 
-Accion humana obligatoria:
-- Grabar el video real de defensa y guardarlo como `09_Defensa/video_defensa.mp4`.
-- No subir un video simulado ni reemplazarlo con material que no corresponda a la defensa real.
+- Presentación definitiva: `presentacion.pptx` y `presentacion.pdf`.
+- Guion oral definitivo: `guion.pdf`.
+- Folleto de apoyo: `folleto_una_hoja.pdf`.
+- Banco de preguntas: `banco_preguntas_respuestas.md` y `.pdf`.
+- Alcance del prototipo: `alcance_prototipo.md` y `.pdf`.
+- Checklist de defensa: `checklist_defensa_final.md` y `.pdf`.
+- Checklist final del repositorio: `checklist_final_repositorio.md` y `.pdf`.
+- Reparto de intervención: `reparto_intervencion.md` y `.pdf`.
+
+## Criterio narrativo
+
+La defensa no se presenta como demostración operativa del MVP. El prototipo base se usa para sustentar cobertura y materialización parcial de requisitos: 16/19 RF Must, 84.2 % de cobertura y 31/31 comprobaciones UI.
+
+## Archivo que debe agregarse antes del cierre final
+
+- `video_defensa.mp4`: grabación real de la defensa realizada por el equipo.
+
+## Advertencia
+
+No incorporar archivos que prometan ejecutar dos escenarios operativos en vivo. Si el tribunal pregunta por el MVP, responder desde cobertura, alcance, evidencias, límites y trazabilidad.
