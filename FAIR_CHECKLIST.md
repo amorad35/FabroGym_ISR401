@@ -1,10 +1,10 @@
 # FAIR_CHECKLIST — FabroGym 2B
 
 **Proyecto:** FabroGym — ISR-401  
-**Estado documental:** cierre final 2B  
+**Estado documental:** cierre final 2B — verificaciones pre-tag cerradas  
 **Repositorio:** `https://github.com/amorad35/FabroGym_ISR401`
 
-Este archivo documenta el estado FAIR y de preservación que puede verificarse con evidencia real del proyecto.
+Este archivo documenta el estado FAIR y de preservación verificable del proyecto antes del congelamiento mediante tag.
 
 ## Estado actual
 
@@ -15,8 +15,8 @@ Este archivo documenta el estado FAIR y de preservación que puede verificarse c
 | Findable | Título, descripción, autores y palabras clave | Zenodo + `CITATION.cff` | **VERIFICADO** |
 | Findable | Citación legible por máquina | `CITATION.cff` | **DISPONIBLE** |
 | Accessible | Paquete público | Zenodo / GitHub | **DISPONIBLE** |
-| Accessible | Separación público/restringido | `08_Etica/` + auditor de privacidad | **DOCUMENTADA** |
-| Accessible | Auditoría automática de privacidad | `07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md` | **0 BLOQUEOS AUTOMÁTICOS** |
+| Accessible | Separación público/restringido | `08_Etica/` + auditor de privacidad | **VERIFICADA** |
+| Accessible | Auditoría de privacidad | `07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md` | **0 BLOQUEOS / B6 MANUAL CERRADO** |
 | Interoperable | Formatos abiertos/estructurados | CSV, JSON, TXT, MD, SVG | **DISPONIBLE** |
 | Interoperable | Identificadores estables | ENTR, WALK, MC, RF, RNF y RD | **DISPONIBLE** |
 | Interoperable | Diccionario de datos | `07_Datos/diccionario_datos.csv` | **DISPONIBLE** |
@@ -25,7 +25,7 @@ Este archivo documenta el estado FAIR y de preservación que puede verificarse c
 | Reusable | Reproducibilidad | `07_Datos/scripts/run_all.py` + `requirements.txt` | **VERIFICADA** |
 | Reusable | Versionado | Git + `CHANGELOG.md` + Zenodo 2.0.0 | **DISPONIBLE** |
 | Reusable | Evaluación FAIR externa | `fair_assessment.pdf` | **88 % — FAIR moderate** |
-| Preservación | Software Heritage | Snapshot archivado | **VERIFICADO, NO AÚN SNAPSHOT FINAL** |
+| Preservación | Software Heritage | Snapshot real previo al tag final | **VERIFICADO; ACTUALIZACIÓN POST-TAG PENDIENTE** |
 
 ## F-UJI
 
@@ -43,11 +43,7 @@ Este archivo documenta el estado FAIR y de preservación que puede verificarse c
 | Interoperable | 4/6 | moderate |
 | Reusable | 6/6 | moderate |
 
-La evidencia se conserva como:
-
-```text
-fair_assessment.pdf
-```
+La evidencia se conserva como `fair_assessment.pdf`.
 
 ## Software Heritage
 
@@ -69,11 +65,11 @@ Directory SWHID:
 swh:1:dir:864d5a537b9e2fa6931f7f2b3ad23a06275432fa
 ```
 
-El snapshot existente es real y verificable, pero corresponde a una revisión anterior al cierre actual. Por ello no debe describirse todavía como el snapshot definitivo de la entrega.
+Este snapshot es real y verificable. Corresponde al estado anterior al tag final; después de publicar el tag de entrega se ejecutará **Software Heritage → Save again** para preservar el estado congelado. Esta operación es deliberadamente posterior al tag y no constituye un pendiente de contenido del proyecto.
 
 ## Reproducibilidad canónica B1
 
-Para la Entrega Final existe una única cadena canónica:
+La cadena canónica del cierre es:
 
 ```bash
 cd 07_Datos
@@ -85,29 +81,17 @@ python scripts/run_all.py
 
 ## Privacidad
 
-El reporte vigente:
-
-```text
-07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md
-```
-
-documenta:
+El reporte `07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md` documenta:
 
 - **0 hallazgos automáticos bloqueantes**;
 - capa restringida documentada;
 - 5 fotografías A6 con EXIF técnicamente válido;
-- necesidad de confirmaciones humanas antes del tag.
-
-Antes del tag se debe confirmar manualmente:
-
-- cifrado/protección de los contenedores restringidos;
-- ausencia de contraseñas/clave en Git;
-- suficiencia del enmascaramiento/consentimiento de las copias públicas;
-- ausencia de identificadores no autorizados en consentimientos/actas públicas.
+- confirmaciones humanas de cifrado, ausencia de claves y revisión visual **cerradas**;
+- **0 confirmaciones humanas pendientes**.
 
 ## Estado de cierre FAIR
 
-Ya están cerrados documentalmente:
+Cerrado antes del tag:
 
 - [x] Zenodo v2.0.0 con DOI real.
 - [x] OSF con DOI real.
@@ -116,13 +100,15 @@ Ya están cerrados documentalmente:
 - [x] SWHID real archivado.
 - [x] `07_Datos/` declarado como paquete canónico.
 - [x] Auditoría automática de privacidad con 0 bloqueos.
+- [x] Confirmaciones humanas B6 cerradas.
+- [x] Verificación final desde clon limpio ejecutada.
+- [x] Checksums definitivos regenerados/verificados.
 - [x] README raíz y `CHANGELOG.md` normalizados para A5/B1.
 
-Operaciones que deben ocurrir **después del último commit de contenido**:
+Operaciones de congelamiento/post-tag:
 
-- [ ] Ejecutar la verificación final desde clon limpio.
-- [ ] Regenerar/verificar los checksums definitivos.
 - [ ] Crear y publicar el tag anotado de la versión entregada.
+- [ ] Verificar en GitHub que el tag remoto existe.
 - [ ] Ejecutar Software Heritage → **Save again** sobre el estado congelado.
 
-> No se debe realizar un nuevo commit únicamente para perseguir un SWHID posterior, porque cualquier nuevo commit volvería a cambiar el estado que se intenta preservar.
+> No se debe realizar un nuevo commit únicamente para perseguir un SWHID posterior: primero se congela con el tag y luego se solicita la nueva preservación.

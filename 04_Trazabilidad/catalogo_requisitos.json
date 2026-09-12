@@ -27,7 +27,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-02",
@@ -46,7 +46,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-03",
@@ -65,7 +65,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-04",
@@ -84,7 +84,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-05",
@@ -103,7 +103,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-06",
@@ -122,7 +122,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-07",
@@ -141,7 +141,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-08",
@@ -160,7 +160,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-09",
@@ -179,7 +179,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-10",
@@ -198,7 +198,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-11",
@@ -217,7 +217,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-12",
@@ -236,7 +236,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-13",
@@ -255,7 +255,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-14",
@@ -274,7 +274,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-15",
@@ -293,7 +293,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-16",
@@ -312,7 +312,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-17",
@@ -331,7 +331,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-18",
@@ -350,7 +350,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-19",
@@ -369,7 +369,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-20",
@@ -388,7 +388,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-21",
@@ -407,7 +407,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-22",
@@ -426,7 +426,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-23",
@@ -445,7 +445,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-24",
@@ -464,7 +464,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RF-25",
@@ -483,7 +483,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "POR_VERIFICAR_2B"
+      "Estado_MVP": "IMPLEMENTADO"
     },
     {
       "ID": "RNF-01",
@@ -564,7 +564,7 @@
     {
       "ID": "RNF-05",
       "Tipo": "RNF",
-      "Enunciado_terminal": "Al menos 9 de 10 tareas críticas de alta, renovación, pago, asistencia y venta se completarán sin ayuda por cada perfil en walkthrough; la medición está pendiente.",
+      "Enunciado_terminal": "Al menos 9 de 10 tareas críticas de alta, renovación, pago, asistencia y venta se completarán sin ayuda por cada perfil en walkthrough; la aceptación se verificará con registro reproducible por perfil.",
       "Fuente": "ISO/IEC 25010 / Rúbrica",
       "Articulo": "",
       "Objetivo": "Interacción de usuario",
