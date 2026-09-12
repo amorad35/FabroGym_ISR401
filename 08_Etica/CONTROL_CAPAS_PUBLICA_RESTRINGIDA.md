@@ -4,40 +4,62 @@
 
 FabroGym separa la evidencia en dos capas:
 
-- **[P] Pública:** datos anonimizados o seudonimizados, transcripciones anonimizadas, matrices de análisis, scripts, resultados, instrumentos no identificables y copias censuradas/enmascaradas aptas para publicación.
-- **[R] Restringida:** consentimientos originales firmados, firmas, cédulas, audios, videos identificables, transcripciones sin anonimizar, fotografías identificables sin autorización de publicación y cualquier otro dato personal directo.
+- **[P] Pública:** datos anonimizados o seudonimizados, transcripciones anonimizadas, matrices de análisis, scripts, resultados, instrumentos no identificables y copias censuradas/enmascaradas aptas para revisión pública.
+- **[R] Restringida:** consentimientos originales firmados, firmas, cédulas, audios, videos identificables, transcripciones sin anonimizar, fotografías identificables sin autorización de publicación y demás datos personales directos.
 
-La capa [R] debe permanecer fuera de GitHub y de Zenodo, almacenada bajo acceso restringido y cifrado/protegido.
+La guía específica de FabroGym exige conservar una **capa restringida cifrada**. Por ello, la existencia de un contenedor cifrado y expresamente documentado no equivale a publicar su contenido en claro.
 
-## Situación verificada antes de la integración final
+## Excepción documentada del proyecto
 
-En el repositorio público actual ya existe una política de separación [P]/[R] y las carpetas públicas de consentimientos y walkthroughs usan copias censuradas/enmascaradas. La revisión de nombres del repositorio no muestra los consentimientos originales como archivos públicos; sí existen referencias documentales a sus rutas o hashes, lo cual no equivale a publicar los originales.
+Se conserva como artefacto restringido versionado:
 
-El `.gitignore` actual no contiene todavía reglas específicas para impedir que material restringido se añada por accidente. Este paquete añade esas barreras.
+`02_Evidencias/00_Restringido/evidencias_restringidas.7z`
 
-## F3-01 — evidencia A6 verificada
+Condiciones obligatorias:
 
-Las cinco fotografías de aplicación del cuestionario requeridas para A6 se encuentran documentadas y conservan fecha EXIF y dispositivo. Por tanto, el requisito técnico de evidencia fotográfica y metadatos de A6 se considera cubierto.
+1. el contenedor debe permanecer cifrado/protegido;
+2. la contraseña o clave **no puede** registrarse en GitHub, README, commits, scripts ni artefactos públicos;
+3. los originales no deben extraerse dentro de rutas públicas del repositorio;
+4. la capa pública/Zenodo debe contener únicamente derivados anonimizados, seudonimizados, censurados o agregados;
+5. la existencia del contenedor se documenta, pero su contenido no se inspecciona ni se expone automáticamente.
 
-La revisión de privacidad y autorización de publicación se controla de forma independiente dentro de F3-07/B6. Antes del cierre definitivo de la capa pública se debe comprobar que:
+El archivo:
 
-1. no se muestran nombres, respuestas individuales, teléfonos, correos, cédulas ni pantallas con datos personales;
-2. si aparece una persona reconocible, existe autorización de publicación o se dispone de una versión pública no identificable;
-3. el original identificable se conserva únicamente en [R] cuando corresponda;
-4. se preservan en el original la fecha y los metadatos exigidos.
+`02_Evidencias/00_Restringido/fichas_tecnicas.csv`
 
-De esta forma, **A6 queda cubierto por la evidencia fotográfica y EXIF**, mientras que el cierre de **F3-07/B6** depende exclusivamente de la verificación final de privacidad y custodia.
+se conserva como inventario técnico de evidencia. La guía específica validó este formato porque registra códigos de sesión, duración, códec, tamaño y SHA-256.
 
-## Verificación de la capa restringida
+## Fotografías originales A11
 
-GitHub no puede demostrar que la capa [R] está cifrada porque precisamente esa capa debe estar fuera del repositorio. Antes de cerrar F3-07, un integrante debe confirmar localmente:
+El archivo:
 
-- [ ] originales restringidos fuera de la carpeta clonada;
-- [ ] almacenamiento restringido cifrado/protegido;
-- [ ] acceso limitado a integrantes autorizados;
-- [ ] consentimientos originales disponibles para las sesiones que los requieren;
-- [ ] audios/videos reales fuera del repositorio público;
-- [ ] fotografías F3-01 clasificadas como [P] o [R];
-- [x] auditoría automática final ejecutada después de integrar los paquetes públicos.
+`10_Autoria/fotos_equipo/02_Fotos_Aplicacion/A11 Fotos_Originales_Cuestionario.7z`
 
-No se registran en Git contraseñas, claves ni rutas privadas sensibles.
+solo puede mantenerse versionado si está cifrado/protegido y su clave permanece fuera del repositorio. Si no cumple esa condición, debe retirarse antes del tag final. Las copias públicas deben estar autorizadas o suficientemente enmascaradas.
+
+## Verificación automática
+
+Ejecutar desde la raíz:
+
+```bash
+python 07_Datos/scripts/verificar_privacidad_publica.py
+```
+
+El verificador:
+
+- no abre los `.7z`;
+- no conoce contraseñas;
+- no marca como error la sola presencia de los contenedores restringidos documentados;
+- sí bloquea archivos restringidos adicionales no documentados, multimedia no clasificada o identificadores directos en datos públicos;
+- genera `07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md`.
+
+## Confirmación humana obligatoria antes del tag
+
+- [ ] `evidencias_restringidas.7z` está cifrado/protegido.
+- [ ] Su contraseña/clave no aparece en el repositorio.
+- [ ] Los originales no están extraídos en rutas públicas.
+- [ ] Las fotografías A11 originales, si permanecen versionadas, están cifradas/protegidas.
+- [ ] Las copias públicas de fotografías, consentimientos y actas no exponen identificadores no autorizados.
+- [ ] La capa publicada en Zenodo contiene solo datos derivados aptos para publicación.
+
+La auditoría automática complementa, pero no sustituye, esta revisión humana.
