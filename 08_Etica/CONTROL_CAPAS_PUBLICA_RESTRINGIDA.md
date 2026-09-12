@@ -15,16 +15,18 @@ En el repositorio público actual ya existe una política de separación [P]/[R]
 
 El `.gitignore` actual no contiene todavía reglas específicas para impedir que material restringido se añada por accidente. Este paquete añade esas barreras.
 
-## F3-01 — dependencia pendiente
+## F3-01 — evidencia A6 verificada
 
-Las fotografías de aplicación del cuestionario todavía están en progreso. Antes de publicarlas:
+Las cinco fotografías de aplicación del cuestionario requeridas para A6 se encuentran documentadas y conservan fecha EXIF y dispositivo. Por tanto, el requisito técnico de evidencia fotográfica y metadatos de A6 se considera cubierto.
 
-1. comprobar que no muestran nombres, respuestas individuales, teléfonos, correos, cédulas ni pantallas con datos personales;
-2. si aparece una persona reconocible, confirmar autorización de publicación o generar una versión pública no identificable;
-3. conservar el original identificable únicamente en [R] cuando corresponda;
-4. preservar en el original la fecha/metadatos exigidos.
+La revisión de privacidad y autorización de publicación se controla de forma independiente dentro de F3-07/B6. Antes del cierre definitivo de la capa pública se debe comprobar que:
 
-Por esta dependencia, **F3-07 permanece EN PROGRESO** hasta revisar las fotografías finales.
+1. no se muestran nombres, respuestas individuales, teléfonos, correos, cédulas ni pantallas con datos personales;
+2. si aparece una persona reconocible, existe autorización de publicación o se dispone de una versión pública no identificable;
+3. el original identificable se conserva únicamente en [R] cuando corresponda;
+4. se preservan en el original la fecha y los metadatos exigidos.
+
+De esta forma, **A6 queda cubierto por la evidencia fotográfica y EXIF**, mientras que el cierre de **F3-07/B6** depende exclusivamente de la verificación final de privacidad y custodia.
 
 ## Verificación de la capa restringida
 
@@ -36,6 +38,6 @@ GitHub no puede demostrar que la capa [R] está cifrada porque precisamente esa 
 - [ ] consentimientos originales disponibles para las sesiones que los requieren;
 - [ ] audios/videos reales fuera del repositorio público;
 - [ ] fotografías F3-01 clasificadas como [P] o [R];
-- [ ] auditoría automática final ejecutada después de integrar todos los paquetes.
+- [x] auditoría automática final ejecutada después de integrar los paquetes públicos.
 
 No se registran en Git contraseñas, claves ni rutas privadas sensibles.

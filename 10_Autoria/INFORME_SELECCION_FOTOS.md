@@ -19,4 +19,6 @@ El archivo RAR fuente se conserva como insumo recibido, pero esos elementos no d
 
 ## Cuestionario
 
-Las cinco fotos del cuestionario sí contienen fecha EXIF y dispositivo. Se conservan sin modificación, pero quedan en una carpeta de revisión de privacidad hasta verificar consentimiento de publicación.
+Las cinco fotos del cuestionario contienen fecha EXIF y dispositivo, por lo que la evidencia requerida para A6 queda documentada. Se conservan sin modificación para preservar sus metadatos originales.
+
+La clasificación de privacidad y la autorización de publicación de las fotografías se gestionan de forma separada dentro del control F3-07/B6 y no afectan la verificación técnica del requisito A6 relativo a cantidad de fotografías y metadatos.
