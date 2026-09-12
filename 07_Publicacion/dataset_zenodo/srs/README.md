@@ -1,19 +1,31 @@
-# Referencia canónica de la ERS/SRS — FabroGym
+# Referencia a la ERS/SRS canónica de FabroGym
 
-Para la **Entrega 4 (2B)**, la única ERS/SRS académica vigente del repositorio es:
+Este directorio **no mantiene una copia duplicada de la ERS/SRS**.
 
-- `01_ERS/ERS_SRS_2B_v2.0.pdf`
-- `01_ERS/ERS_SRS_2B_v2.0.tex`
-
-Esta carpeta **no contiene una segunda copia** del ERS/SRS. Se conserva únicamente este archivo de referencia para evitar versiones divergentes y cumplir el criterio A5 de la rúbrica de cierre.
-
-Desde esta ubicación (`07_Publicacion/dataset_zenodo/srs/`), las rutas relativas a la versión canónica son:
+La única versión académica vigente de FabroGym para la Entrega 4 (2B) es:
 
 - `../../../01_ERS/ERS_SRS_2B_v2.0.pdf`
 - `../../../01_ERS/ERS_SRS_2B_v2.0.tex`
 
-El conjunto UML necesario para la evidencia técnica se mantiene de forma independiente en `../modelado/`; no constituye una segunda ERS/SRS.
+La versión `ERS_SRS_2B_v2.2` corresponde a una revisión histórica y **no debe conservarse como versión vigente ni duplicada dentro de `07_Publicacion/dataset_zenodo/srs/`**.
 
-## Relación con Zenodo
+## Regla de unicidad
 
-El depósito Zenodo ya publicado (versión 2.0.0, DOI `10.5281/zenodo.22237884`) se conserva como registro histórico externo e inmutable. La normalización local de la entrega académica no modifica retrospectivamente ese depósito. Para la evaluación del repositorio vigente, la fuente de verdad de la ERS/SRS es exclusivamente `01_ERS/ERS_SRS_2B_v2.0.*`.
+Para evitar divergencias entre copias, la ERS/SRS oficial se mantiene únicamente en:
+
+`01_ERS/`
+
+Por tanto, este directorio `srs/` funciona solo como **puntero documental** hacia la versión canónica.
+
+## Relación con el paquete de publicación
+
+El paquete `dataset_zenodo` conserva los datos, transcripciones, resultados, metadatos y demás artefactos de publicación que le corresponden, pero no replica la ERS/SRS académica.
+
+La versión publicada previamente en Zenodo se conserva como registro histórico externo y no se modifica retrospectivamente desde este repositorio.
+
+## Estado de cierre A5
+
+- ERS/SRS canónica: `01_ERS/ERS_SRS_2B_v2.0.*`
+- Copias divergentes dentro de `dataset_zenodo/srs/`: eliminadas
+- Este directorio: referencia documental únicamente
+- Estado: **A5 normalizado para el cierre 2B**
