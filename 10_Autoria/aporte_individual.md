@@ -40,6 +40,9 @@ Los aportes históricos de integrantes que ya no forman parte del equipo final p
 | Actualizar bitácora, aporte individual y materiales de defensa del cierre | `09_Defensa/`; `10_Autoria/` | `d4e34c1cf763728a6938b0fc99f9f76f20a0f095` | Cierre documental |
 | Incorporar evaluación FAIR/F-UJI y metadatos de preservación/citación | `fair_assessment.pdf`; `FAIR_CHECKLIST.md`; `CITATION.cff`; `README.md`; `CHANGELOG.md` | `889475ed74a492466133730f1fee56ee0f64a5de` | FAIR / preservación / metadatos |
 
+| Actualizar el reporte de revisión de privacidad pública con la lógica vigente | `07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md` | `bed95950312096597d5167f555f2de04e89fae60` | Privacidad / cierre B6 |
+| Actualizar checklist final, README de autoría y checklist FAIR del cierre | `09_Defensa/checklist_final_repositorio.md`; `10_Autoria/README.md`; `FAIR_CHECKLIST.md` | `d4a07e097906402db182de0de7c958a6095b90fd` | Cierre documental / verificación |
+
 **Síntesis:** participación verificable en MVP, experimento, paquete `07_Datos`, reproducibilidad, publicación científica, autoría, defensa y cierre FAIR/F-UJI.
 
 ---
@@ -63,6 +66,10 @@ Los aportes históricos de integrantes que ya no forman parte del equipo final p
 | Corregir adaptación responsive del MVP sin alterar lógica | `05_MVP/` | `ce9dcfc7977ab6717d68ee2e71a680c8611fe03f` | Integración técnica / interfaz |
 | Registrar checksums finales de integridad del MVP | `05_MVP/` | `20329ff70cbbc35f26611f2eba5ee52b8b5f2b52` | Integridad / reproducibilidad |
 
+| Consolidar `07_Datos` como paquete canónico de análisis | `07_Datos/README_datos.md` | `2d57a9144aa5eefc18cc8a256805efaa65e1a223` | Reproducibilidad / B1 |
+| Aclarar el rol de publicación frente a la cadena canónica | `07_Publicacion/README_Publicacion.md` | `361b46b8049d9083bb2d50ff414af0c9e90e1538` | Publicación / B1 |
+| Consolidar el cierre canónico y estado final 2B | `README.md`; `CHANGELOG.md` | `df7550601b421c47e71c8e41865560c4dcbe4a5d` | Cierre canónico / documentación |
+
 **Síntesis:** participación verificable en OSF, metadatos, modelado editable, doble codificación, integridad de datos, evidencia de campo y cierre técnico responsive del MVP.
 
 ---
@@ -83,6 +90,9 @@ Los aportes históricos de integrantes que ya no forman parte del equipo final p
 | Incorporar el video real de defensa | `09_Defensa/video_defensa.mp4` | `631579ced1e93029829166dde5db03cae6299806` | Evidencia audiovisual / defensa |
 | Sincronizar documentación y manifiesto de cierre de defensa | `09_Defensa/` | `2b8b50cd440702e791e784abf33654167749a635` | Defensa / integridad |
 | Incorporar el aporte individual firmado del equipo actual | `10_Autoria/aporte_individual_FIRMA.pdf` | `ab26e952f59a862486921d4c86bb13ecc98eaec5` | Autoría / conformidad |
+
+| Actualizar verificación de privacidad pública y evidencia A6 | `07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md`; `10_Autoria/exif_inventario.csv` | `ade8366361cf0c32d302d4b879a5446ee39884ca` | Privacidad / evidencia de campo |
+| Cerrar evidencia A6 y trazabilidad de fotografías | `02_Evidencias/Cuestionario/Fotos_Aplicacion/`; `10_Autoria/exif_inventario.csv`; documentación A6 | `5542e050ca8a492ffd528f01cbde497b958ad922` | Evidencia A6 / trazabilidad |
 
 **Síntesis:** participación verificable en mockups, ética, doble codificación, uso de IA, coordinación, defensa final y evidencia firmada de autoría.
 
@@ -117,4 +127,8 @@ Las contribuciones incluidas se basan en evidencia versionada verificable. No se
 
 El equipo actual de cierre está conformado por **Mera Arias Erick Jhair, Mora Duarte Alex José y Ponce Rivera Mery Helenmey**. Los aportes históricos de otros integrantes permanecen visibles en Git y no se eliminan ni se atribuyen a este equipo.
 
-> Nota de cierre: si después de esta actualización se realizan nuevos commits de A5, B6, `07_Datos`, checksums generales o tag final, este archivo deberá recibir una última sincronización antes del congelamiento definitivo.
+## 9. Corte documental de cierre
+
+Este documento queda sincronizado con los aportes de contenido versionados hasta el commit `d4a07e097906402db182de0de7c958a6095b90fd` del 12/09/2026. Los commits de merge no se usan como evidencia principal de aporte individual.
+
+La regeneración de `checksums.sha256` y la creación/publicación del tag anotado son operaciones de congelamiento de la entrega y no obligan a reabrir este resumen salvo que se modifique nuevamente el contenido académico o documental.
