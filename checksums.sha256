@@ -1,10 +1,3 @@
-# FabroGym ISR-401 — checksums SHA-256 de cierre
-# Alcance: archivos multimedia del repositorio, datos crudos de 07_Datos,
-# paquete 07_Publicacion/dataset_zenodo y contenedores .7z restringidos.
-# Las sumas internas de archivos contenidos dentro de los .7z se conservan
-# en sus manifiestos específicos y no se incluyen aquí como rutas extraídas,
-# para que este archivo sea comprobable sobre un clon limpio con sha256sum -c.
-
 c1b678ab0b71638504354ee1a5a971ff7dec9a3d131f4325bba339ca20f82f98  01_ERS/modelado_final/01_Contexto/CTX_CONTEXTO_FabroGym.png
 f7fa434e34ded4a75a51a43b323bb5189c819c90ee72d022bbbaa91f93ae29dd  01_ERS/modelado_final/02_Casos_de_Uso/00_General/CU_GENERAL_FabroGym.png
 81f6cf2e856947e923b595816dcb386848d823d3bcc553855f5046a69176d793  01_ERS/modelado_final/02_Casos_de_Uso/01_Individuales/DCU_01_CU-01_Autenticar_usuario.png
