@@ -10,25 +10,20 @@ La exposición se centra en requisitos, evidencia empírica, trazabilidad, model
 
 - `presentacion.pptx`: presentación definitiva de 17 diapositivas.
 - `presentacion.pdf`: versión PDF exportada desde la presentación definitiva.
-- `guion.pdf`: guion oral corregido, alineado con la presentación definitiva.
+- `guion.pdf`: guion oral corregido y alineado con la presentación definitiva.
+- `video_defensa.mp4`: grabación real de la defensa del equipo.
 - `folleto_una_hoja.pdf`: material sintético de apoyo.
 - `banco_preguntas_respuestas.md` y `.pdf`: preguntas probables del tribunal y respuestas sugeridas.
 - `alcance_prototipo.md` y `.pdf`: alcance del prototipo base como evidencia de cobertura.
-- `checklist_defensa_final.md` y `.pdf`: verificación previa a la exposición, sin enfoque de ejecución del MVP.
-- `checklist_final_repositorio.md` y `.pdf`: lista de cierre del repositorio antes del tag final.
-- `reparto_intervencion.md` y `.pdf`: distribución sugerida para tres expositores.
-- `MANIFEST_DEFENSA.csv`: manifiesto SHA-256 de los archivos incluidos en esta carpeta.
+- `checklist_defensa_final.md` y `.pdf`: verificación de la exposición.
+- `checklist_final_repositorio.md` y `.pdf`: lista de cierre general del repositorio.
+- `reparto_intervencion.md` y `.pdf`: distribución para tres expositores.
+- `MANIFEST_DEFENSA.csv`: manifiesto SHA-256 regenerado después de incorporar el video.
 
-## Acción humana pendiente
+## Estado del video
 
-Antes del commit final debe incorporarse el video real de defensa como:
-
-```text
-09_Defensa/video_defensa.mp4
-```
-
-No debe subirse un video simulado ni un material que no corresponda a la defensa real del equipo.
+`video_defensa.mp4` se encuentra incorporado en esta carpeta como evidencia real de la defensa.
 
 ## Control de coherencia
 
-No se mantienen archivos antiguos que obliguen a ejecutar escenarios operativos en vivo. Cualquier mención al prototipo debe describir cobertura, alcance, verificación e interfaz como evidencia de apoyo.
+No se mantienen archivos antiguos que obliguen a ejecutar escenarios operativos en vivo. Cualquier mención al prototipo describe cobertura, alcance, verificación e interfaz como evidencia de apoyo.

@@ -1,9 +1,10 @@
 # README_Defensa - FabroGym 2B
 
-## Material listo para defensa
+## Material final disponible
 
 - Presentación definitiva: `presentacion.pptx` y `presentacion.pdf`.
 - Guion oral definitivo: `guion.pdf`.
+- Video real de defensa: `video_defensa.mp4`.
 - Folleto de apoyo: `folleto_una_hoja.pdf`.
 - Banco de preguntas: `banco_preguntas_respuestas.md` y `.pdf`.
 - Alcance del prototipo: `alcance_prototipo.md` y `.pdf`.
@@ -15,9 +16,9 @@
 
 La defensa no se presenta como demostración operativa del MVP. El prototipo base se usa para sustentar cobertura y materialización parcial de requisitos: 16/19 RF Must, 84.2 % de cobertura y 31/31 comprobaciones UI.
 
-## Archivo que debe agregarse antes del cierre final
+## Estado de cierre de la carpeta
 
-- `video_defensa.mp4`: grabación real de la defensa realizada por el equipo.
+El video real ya está incorporado y `MANIFEST_DEFENSA.csv` fue regenerado después de agregarlo y actualizar los documentos de control.
 
 ## Advertencia
 
