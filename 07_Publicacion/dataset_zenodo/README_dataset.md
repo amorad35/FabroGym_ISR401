@@ -59,7 +59,7 @@ dataset_zenodo/
 ├── resultados/
 ├── scripts/
 ├── paper/                    # manuscript source, PDF, tables, figures, bibliography
-├── srs/                      # ERS/SRS v2.0 snapshot and figures
+├── srs/                      # pointer only to canonical ERS/SRS in ../../01_ERS
 └── provenance/
 ```
 
@@ -98,4 +98,4 @@ This package contains no audio/video bytes, original signed consent forms, ident
 
 
 ## ERS/SRS and UML final
-The package includes ERS/SRS 2B v2.2 and the definitive 54-diagram UML set under `srs/` and `modelado/`.
+The package **does not duplicate the ERS/SRS**. The single canonical academic version is `../../01_ERS/ERS_SRS_2B_v2.0.pdf` / `.tex`; `srs/README.md` points to that source of truth. The definitive UML set remains available independently under `modelado/`.

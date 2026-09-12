@@ -1,18 +1,24 @@
-FabroGym Zenodo package validation - DOI-updated final candidate
+FabroGym local academic-delivery package validation — A5 normalized
 
-Zenodo DOI: 10.5281/zenodo.22237884
+Zenodo DOI (historical published record): 10.5281/zenodo.22237884
 Interview transcripts: 10 (expected 10)
 Walkthrough transcripts: 6 (expected 6)
 General ENTR coding rows: 59 (expected 59)
 Walkthrough coding rows: 76 (expected 76)
 Forbidden media/archive extensions found: 0
-Manifest data files: 154
+Manifest entries after A5 normalization: 199
 
 Methodological separation: PASS
 - ENTR coding preserved for elicitation / general requirement traceability.
 - WALK coding preserved for terminal explainability analysis.
 
-Restricted files: none
+Restricted files in public package: none
 
-PDF snapshots updated with reserved Zenodo DOI: ERS/SRS and manuscript.
-Checksums regenerated after DOI propagation.
+A5 ERS/SRS normalization: PASS
+- No ERS/SRS PDF or TEX copy is embedded under dataset_zenodo/srs/.
+- The only canonical academic ERS/SRS is ../../01_ERS/ERS_SRS_2B_v2.0.*.
+- dataset_zenodo/srs/README.md contains the reference pointer.
+- The independent UML evidence remains under dataset_zenodo/modelado/.
+- The published Zenodo 2.0.0 record is not modified retrospectively.
+
+MANIFEST.csv and checksums.sha256 were regenerated after the A5 normalization.
