@@ -99,7 +99,7 @@ Consulte `verificacion/VERIFICACION_C3.md` y `verificacion/resultado_pruebas_ui.
 
 ## 8. Video de demostración
 
-`video_demo.mp4` se conserva dentro de la carpeta MVP como evidencia de demostración. Tras integrar cambios adicionales posteriores a esta versión, debe comprobarse que el video siga representando el estado final del prototipo antes del corte.
+`video_demo.mp4` se conserva dentro de la carpeta MVP como evidencia de demostración y corresponde al alcance funcional documentado para esta versión.
 
 ## 9. Privacidad y alcance
 
