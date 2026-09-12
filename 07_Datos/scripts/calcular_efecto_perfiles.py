@@ -189,13 +189,13 @@ def main():
 
     summary_headers = list(summary[0].keys())
     with out.open("w", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=summary_headers)
+        w = csv.DictWriter(f, fieldnames=summary_headers, lineterminator="\n")
         w.writeheader()
         w.writerows(summary)
 
     detail_headers = list(detail_rows[0].keys())
     with detail.open("w", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=detail_headers)
+        w = csv.DictWriter(f, fieldnames=detail_headers, lineterminator="\n")
         w.writeheader()
         w.writerows(detail_rows)
 
