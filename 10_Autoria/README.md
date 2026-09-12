@@ -1,327 +1,253 @@
 # 10_Autoria — Evidencia de autoría y trabajo propio
 
+**Proyecto:** FabroGym — ISR-401  
+**Entrega:** Entrega 4 (2B / Defensa Final)  
+**Repositorio:** `https://github.com/amorad35/FabroGym_ISR401`
+
 ## 1. Propósito
 
-Esta carpeta reúne la evidencia verificable de autoría, contribución individual y trabajo propio del equipo FabroGym para la Entrega 4 (2B / Defensa Final) de ISR-401.
+Esta carpeta reúne la evidencia verificable de autoría, contribución individual y trabajo propio del equipo FabroGym.
 
-Su objetivo es permitir que un tercero pueda comprobar, a partir de evidencia real y trazable, quién participó en cada actividad, qué artefactos produjo o revisó, qué decisiones tomó y qué commits del repositorio respaldan esa contribución.
+La rúbrica final exige que `10_Autoria/` exista con los elementos A1 a A12 como un conjunto completo. Esta carpeta complementa el historial Git y los artefactos técnicos; no los sustituye.
 
-La carpeta `10_Autoria/` no sustituye al historial Git ni a los artefactos técnicos del proyecto. Los complementa con evidencia de proceso, trabajo colaborativo y procedencia.
+## 2. Equipo actual de cierre
 
----
+El equipo que realiza el cierre y la defensa final está conformado por:
 
-## 2. Principios de integridad
+- **Mera Arias Erick Jhair** — Git: `Emeraxs`
+- **Mora Duarte Alex José** — Git: `amorad35`
+- **Ponce Rivera Mery Helenmey** — Git: `Mery-003`
 
-Toda evidencia incorporada en esta carpeta debe cumplir las siguientes reglas:
+Las contribuciones históricas de integrantes que participaron anteriormente permanecen visibles en el historial Git y en los artefactos donde corresponden. No se eliminan, reasignan ni presentan como trabajo de los tres integrantes actuales.
+
+## 3. Principios de integridad
+
+Toda evidencia incorporada en `10_Autoria/` debe:
 
 - corresponder a una actividad real;
-- conservar su fecha y procedencia reales;
+- conservar fecha y procedencia reales;
 - no ser retrofechada;
 - no ser reconstruida artificialmente para aparentar trabajo previo;
-- no contener nombres, firmas, documentos o datos personales de terceros cuando no deban publicarse;
-- no declarar sesiones, capturas, grabaciones, fotografías, comunicaciones, codificaciones o firmas que no existan;
-- no utilizar archivos vacíos, de relleno o placeholders;
-- conservar los identificadores de commit reales cuando se cite trabajo versionado;
-- mantener coherencia entre el artefacto, la persona responsable y el historial Git.
+- no contener placeholders ni archivos vacíos que anuncien evidencia inexistente;
+- utilizar hashes de commit reales cuando se cite trabajo versionado;
+- mantener coherencia entre artefacto, persona responsable e historial Git;
+- respetar las reglas de privacidad y la separación entre capa pública y restringida.
 
-Cualquier evidencia que no pueda verificarse de forma independiente no debe presentarse como acreditada.
-
----
-
-## 3. Estructura de evidencia A1–A12
-
-La evidencia de autoría se organiza conforme a la guía específica de FabroGym.
+## 4. Estructura A1–A12
 
 ### A1 — `bitacora_sesiones.csv`
 
-Registro cronológico de las sesiones reales de trabajo del equipo.
+Registro cronológico de sesiones reales de trabajo.
 
-Cada fila debe incluir, como mínimo:
+Cada fila debe documentar, según corresponda:
 
 - identificador de sesión;
-- fecha;
-- hora de inicio;
-- hora de fin;
+- fecha y horario;
 - modalidad;
-- integrantes participantes;
-- usuario Git de cada participante;
-- artefacto o ruta trabajada;
+- participantes;
+- usuarios Git;
+- rutas trabajadas;
 - decisiones tomadas;
-- commits producidos durante la sesión.
+- commits reales producidos;
+- fuente de evidencia y observaciones.
 
-La bitácora debe construirse a partir de actividades y commits verificables. No se crean sesiones ficticias para cubrir días sin evidencia.
+No deben quedar marcadores como `PENDIENTE_COMMIT_*` en la versión congelada.
 
 ### A2 — `capturas/`
 
-Capturas de pantalla utilizadas como evidencia de trabajo individual.
+Capturas reales de trabajo individual o colaborativo sobre FabroGym.
 
-Cada integrante debe aportar capturas reales en las que se observe:
+Deben permitir relacionar la captura con:
 
-- la herramienta utilizada;
-- el archivo o artefacto de FabroGym abierto;
-- el reloj o fecha visible del sistema;
-- el nombre de la sesión de usuario o identidad de trabajo.
+- herramienta utilizada;
+- artefacto trabajado;
+- usuario o integrante;
+- fecha/hora cuando esté disponible.
 
-Nomenclatura:
+### A3 — `fuentes_editables/`
 
-```text
-AAAA-MM-DD_usuario_artefacto.png
-```
+Fuentes editables de diagramas y modelos utilizados en el proyecto.
 
-Las capturas deben corresponder al trabajo efectivamente realizado.
-
-### A3 — Fuentes editables de diagramas
-
-Se conservan los archivos fuente editables de los diagramas entregados junto con sus exportaciones utilizadas en el proyecto.
-
-Ejemplos de formatos:
+Incluye, cuando corresponda:
 
 ```text
 *.vpp
 *.drawio
 *.puml
-*.svg
-*.png
 ```
 
-La imagen exportada no sustituye al archivo editable cuando este exista.
-
-Las fuentes editables deben permanecer vinculadas a los diagramas realmente incorporados en `03_Modelado/` y en la ERS/SRS.
+Las exportaciones PNG/PDF/SVG no sustituyen la fuente editable cuando esta existe.
 
 ### A4 — `grabaciones/`
 
-Grabaciones reales de sesiones de trabajo colaborativo.
+Grabaciones reales de sesiones de trabajo del equipo.
 
-Cada grabación debe mostrar trabajo efectivo sobre FabroGym y permitir identificar:
-
-- edición o revisión de artefactos;
-- discusión técnica del equipo;
-- decisiones tomadas durante la sesión.
-
-Las grabaciones se conservan únicamente cuando hayan sido producidas durante una sesión efectiva de trabajo.
+Deben corresponder a actividades efectivas de revisión, edición, discusión o toma de decisiones sobre FabroGym.
 
 ### A5 — `notas_campo/`
 
-Notas manuscritas o registros de campo reales obtenidos durante actividades de elicitación o validación.
+Notas reales obtenidas durante actividades de elicitación, observación o validación.
 
-Deben conservar:
-
-- fecha visible;
-- relación clara con la sesión correspondiente;
-- legibilidad suficiente para su revisión.
-
-No se reconstruyen notas con posterioridad para simular evidencia de una sesión pasada.
+No se reconstruyen notas posteriormente para aparentar evidencia de campo.
 
 ### A6 — `fotos_equipo/`
 
-Fotografías reales del equipo durante actividades relacionadas con el proyecto.
-
-Deben conservar sus metadatos originales y respetar las condiciones de privacidad y consentimiento aplicables.
-
-No se modifican los metadatos de captura para alterar fecha, dispositivo o procedencia.
-
-Dentro de `fotos_equipo/` se organiza también la evidencia fotográfica de aplicación del cuestionario de la siguiente forma:
+La evidencia fotográfica de autoría se organiza en:
 
 ```text
 10_Autoria/
 └── fotos_equipo/
     ├── 01_fotos_equipo/
-    │   └── [fotografías originales del equipo]
-    ├── fotos_cuestionario/
-    │   └── [copias públicas enmascaradas de las fotografías de aplicación]
-    └── originales_cuestionario.7z
-        └── [fotografías originales de aplicación con EXIF conservado]
+    └── 02_Fotos_Aplicacion/
+        └── A11 Fotos_Originales_Cuestionario.7z
 ```
 
-Las fotografías de aplicación del cuestionario se mantienen en dos versiones con funciones distintas:
+Además, las **cinco copias públicas enmascaradas de aplicación del cuestionario** se encuentran en:
 
-- **originales:** se conservan sin edición dentro de `originales_cuestionario.7z` para preservar la fecha de captura, dispositivo y demás metadatos EXIF originales;
-- **enmascaradas:** se almacenan en `fotos_equipo/fotos_cuestionario/` y son las copias utilizadas para revisión o publicación cuando sea necesario ocultar el rostro de las personas visibles.
+```text
+02_Evidencias/Cuestionario/Fotos_Aplicacion/
+```
 
-El enmascaramiento no sustituye ni modifica los originales. Nunca se sobrescribe una fotografía original con su versión enmascarada.
+Los originales utilizados para preservar EXIF se conservan dentro del contenedor restringido:
 
-`originales_cuestionario.7z` debe mantenerse como evidencia restringida/protegida y no debe exponerse en una publicación abierta si contiene personas identificables. La contraseña o clave de acceso, cuando corresponda, no se registra en el repositorio.
+```text
+10_Autoria/fotos_equipo/02_Fotos_Aplicacion/
+A11 Fotos_Originales_Cuestionario.7z
+```
+
+Ese contenedor debe permanecer cifrado/protegido y su contraseña o clave no debe almacenarse en el repositorio.
 
 ### A7 — `doble_codificacion/`
 
-Evidencia de doble codificación independiente sobre el mismo subconjunto del corpus de walkthroughs.
+Evidencia de doble codificación independiente de un subconjunto común del corpus de walkthroughs.
 
-Debe contener:
+Debe conservar:
 
-- hoja de codificación del primer integrante;
-- hoja de codificación del segundo integrante;
-- identificación del subconjunto común codificado;
-- script utilizado para calcular el acuerdo;
-- resultado del coeficiente de acuerdo;
-- intervalo de confianza correspondiente.
-
-Las dos codificaciones deben realizarse de forma independiente antes de calcular el acuerdo.
+- las dos hojas independientes;
+- el subconjunto codificado;
+- el script de cálculo;
+- kappa/acuerdo e intervalo de confianza.
 
 ### A8 — `correspondencia/`
 
 Comunicaciones reales y fechadas con la organización relacionadas con el proyecto.
 
-Pueden incluir:
-
-- solicitudes;
-- autorizaciones;
-- confirmaciones de cita;
-- coordinación de sesiones;
-- comunicaciones de seguimiento.
-
-Antes de su publicación debe revisarse la presencia de datos personales o información que deba mantenerse restringida.
+Antes de publicar cualquier pieza se revisa que no exponga datos personales no autorizados.
 
 ### A9 — `declaracion_uso_ia.md`
 
-Declaración de uso de herramientas de inteligencia artificial en el proyecto.
+Declaración del uso de herramientas de IA por sección o artefacto relevante.
 
-Debe indicar, por sección o artefacto relevante:
+Debe indicar:
 
-- herramienta utilizada;
-- propósito de uso;
-- persona responsable de revisar el resultado;
-- método de verificación aplicado;
-- secciones en las que no se utilizó IA, cuando corresponda.
+- herramienta;
+- propósito;
+- responsable de revisión;
+- método de verificación;
+- secciones donde no se utilizó IA, cuando corresponda.
 
-El uso de IA no sustituye la responsabilidad académica de los integrantes que firman los artefactos.
+### A10 — `aporte_individual.md` y evidencia firmada
 
-### A10 — `aporte_individual.md`
+`aporte_individual.md` documenta la contribución verificable de los **tres integrantes actuales de cierre**:
 
-Registro de contribución individual del equipo.
+- Mera Arias Erick Jhair;
+- Mora Duarte Alex José;
+- Ponce Rivera Mery Helenmey.
 
-Para cada integrante debe documentarse:
+Para cada integrante se registran actividades, rutas, rol y commits reales.
 
-- actividad realizada;
-- artefacto o ruta correspondiente;
-- rol ejercido;
-- commits que acreditan la contribución;
-- tipo de participación: autoría, revisión, validación o integración.
+La conformidad firmada del equipo actual se conserva como:
 
-Los commits citados deben existir realmente en el historial del repositorio y corresponder al integrante declarado.
+```text
+10_Autoria/aporte_individual_FIRMA.pdf
+```
 
-La versión de cierre debe ser revisada y firmada por los cinco integrantes declarados del equipo.
+La versión firmada corresponde a los tres integrantes actuales de cierre. Los aportes históricos de otros integrantes permanecen en Git y no se borran ni se reasignan.
 
 ### A11 — `exif_inventario.csv`
 
-Inventario técnico de las fotografías utilizadas como evidencia.
+Inventario técnico de fotografías utilizadas como evidencia.
 
-Cada registro debe incluir:
+Para las cinco fotografías de aplicación del cuestionario, el inventario conserva:
 
-- nombre del archivo;
-- fecha de captura obtenida de metadatos;
+- fecha EXIF del original;
 - dispositivo;
 - SHA-256;
-- observaciones de procedencia cuando sean necesarias.
+- estado EXIF;
+- relación entre original restringido y copia pública enmascarada.
 
-El inventario se genera a partir de los **archivos originales**, sin alterar sus metadatos.
+Las copias públicas pueden tener hash distinto del original por el enmascaramiento; el inventario primario se basa en los originales preservados.
 
-Para las fotografías de aplicación del cuestionario, los valores de fecha, dispositivo y SHA-256 registrados en `exif_inventario.csv` corresponden a las fotografías originales conservadas en `fotos_equipo/originales_cuestionario.7z`, no a las copias enmascaradas.
+### A12 — `/.mailmap`
 
-Las copias ubicadas en `fotos_equipo/fotos_cuestionario/` pueden haber sido editadas únicamente para ocultar rostros u otros elementos identificables. Por ese motivo, sus metadatos o hash pueden diferir de los originales y no se utilizan como fuente primaria del inventario A11.
-
-La relación entre ambas versiones se mantiene mediante el mismo identificador/nombre lógico de fotografía y la documentación del inventario, de modo que pueda comprobarse qué original con EXIF respalda cada copia enmascarada.
-
-### A12 — `.mailmap`
-
-La evidencia A12 se mantiene en la raíz del repositorio:
+La evidencia A12 se mantiene en la raíz:
 
 ```text
 /.mailmap
 ```
 
-Su función es unificar las identidades históricas de Git con los nombres y correos institucionales de los integrantes declarados.
+Su función es normalizar identidades históricas de Git hacia nombres y correos institucionales sin reescribir el historial.
 
-No debe crearse una segunda copia independiente dentro de `10_Autoria/`.
+No se crea una segunda `.mailmap` dentro de `10_Autoria/`.
 
----
+## 5. Relación con el historial Git
 
-## 4. Relación con el historial Git
-
-El historial Git constituye evidencia central de autoría.
-
-Para cada contribución citada en A1 o A10 deben utilizarse hashes de commit reales.
+El historial Git es evidencia central de autoría.
 
 Reglas:
 
-- cada integrante realiza sus commits con su identidad real;
-- se utiliza correo institucional;
-- no se atribuyen a una persona commits realizados por otra;
+- cada contribución citada debe apuntar a commits reales;
+- los integrantes activos deben usar identidad real y correo institucional;
+- no se atribuyen a una persona commits producidos por otra;
 - no se reescribe el historial para fabricar distribución de trabajo;
 - los mensajes de commit deben describir el cambio realizado.
 
-La evidencia documental de `10_Autoria/` debe ser consistente con el historial Git.
+Para la revisión final se recomienda comprobar:
 
----
-
-## 5. Contribución individual y defensa
-
-La contribución individual no se acredita únicamente mediante una declaración escrita.
-
-Debe poder demostrarse mediante una combinación verificable de:
-
-- commits;
-- artefactos producidos o revisados;
-- sesiones registradas;
-- capturas;
-- fuentes editables;
-- evidencia de revisión;
-- participación en la defensa.
-
-Cada integrante debe poder explicar técnicamente los artefactos y decisiones que se le atribuyen.
-
----
-
-## 6. Privacidad y publicación
-
-`10_Autoria/` contiene evidencia del trabajo del equipo, no evidencia personal de participantes del estudio.
-
-Antes de incorporar cualquier archivo se debe comprobar que no publique indebidamente:
-
-- cédulas;
-- firmas de terceros;
-- teléfonos;
-- correos privados;
-- direcciones;
-- credenciales;
-- datos biométricos;
-- información restringida del gimnasio;
-- evidencia identificable de participantes sin autorización.
-
-Cuando una evidencia legítima contenga información que no deba ser pública, se conserva protegida como evidencia restringida. En el caso específico de las fotografías de aplicación del cuestionario, `fotos_equipo/fotos_cuestionario/` contiene únicamente las copias enmascaradas y `fotos_equipo/originales_cuestionario.7z` conserva las fotografías originales con sus metadatos EXIF.
-
-El paquete `originales_cuestionario.7z` no se considera una copia pública para difusión: debe mantenerse protegido y su clave de acceso no se incorpora al repositorio ni a los artefactos de publicación.
-
----
-
-## 7. Verificación previa al cierre
-
-Antes de la entrega final, una persona del equipo distinta de quien produjo cada artefacto debe revisar la evidencia de autoría.
-
-La comprobación final debe verificar:
-
-1. que `10_Autoria/` contiene evidencia real para A1–A11 y que A12 se referencia correctamente desde `/.mailmap`;
-2. que no existen archivos vacíos o placeholders;
-3. que las fechas y metadatos no han sido alterados;
-4. que los commits citados existen;
-5. que los autores de los commits corresponden a integrantes declarados;
-6. que las rutas citadas existen;
-7. que la doble codificación conserva las dos hojas independientes y el cálculo reproducible;
-8. que las fotografías conservan los metadatos originales requeridos;
-9. que la declaración de uso de IA cubre los artefactos correspondientes;
-10. que la contribución individual puede demostrarse documentalmente y durante la defensa.
-
-La verificación firmada de cierre se incorpora como:
-
-```text
-10_Autoria/verificacion_previa.pdf
+```bash
+git shortlog -sne --all --use-mailmap
 ```
 
----
+## 6. Privacidad
 
-## 8. Regla de incorporación de evidencia
+`10_Autoria/` contiene evidencia del trabajo del equipo y debe respetar la política definida en `08_Etica/`.
 
-Esta carpeta se construye únicamente con evidencia real generada durante el desarrollo y cierre de FabroGym.
+Antes del tag final se debe confirmar:
 
-No se crean carpetas o archivos vacíos únicamente para completar visualmente A1–A12.
+- que los contenedores restringidos estén cifrados/protegidos;
+- que sus contraseñas no estén almacenadas en Git;
+- que las copias públicas enmascaradas no revelen identificadores no autorizados;
+- que los consentimientos, actas y correspondencia pública estén adecuadamente censurados.
 
-Cada elemento se incorpora únicamente cuando existe evidencia verificable y puede mantenerse íntegro hasta la versión final del repositorio.
+El reporte automático vigente se conserva en:
+
+```text
+07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md
+```
+
+y actualmente documenta **0 hallazgos automáticos bloqueantes**.
+
+## 7. Verificación de cierre
+
+Antes de congelar la entrega se debe comprobar:
+
+1. A1–A12 presentes y coherentes;
+2. ausencia de archivos vacíos/placeholder;
+3. hashes de commit citados existentes;
+4. autores normalizados mediante `.mailmap`;
+5. doble codificación reproducible;
+6. cinco fotografías A6 con EXIF válido y copias públicas enmascaradas;
+7. declaración de uso de IA consistente;
+8. `aporte_individual.md` sincronizado con los commits finales;
+9. privacidad automática sin bloqueos y revisión humana completada;
+10. `git status` limpio antes de crear el tag.
+
+> `verificacion_previa.pdf` puede conservarse como evidencia complementaria interna si el equipo decide generarlo, pero **no forma parte de los doce elementos A1–A12 exigidos por B2**.
+
+## 8. Estado de esta carpeta
+
+`10_Autoria/` se mantiene como evidencia viva hasta el último commit previo al tag.
+
+Antes de congelar la entrega únicamente deben sincronizarse los documentos de autoría si existen commits posteriores y eliminarse cualquier marcador pendiente que haya quedado en la bitácora.
+
+No se deben crear evidencias ficticias ni modificar evidencia histórica ya válida.
