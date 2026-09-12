@@ -1,40 +1,48 @@
-# F4-A11 — EXIF inventario final preparado
+# F4-A11 — Inventario EXIF y fotografías de aplicación
 
 ## Resultado técnico
 
-Se procesaron los dos RAR originales recibidos desde el teléfono.
+El inventario conserva la información técnica obtenida de los archivos originales recibidos.
 
-- Fotografías A6 seleccionadas para `10_Autoria/fotos_equipo/`: **6**
+- Fotografías A6 seleccionadas del equipo: **6**
 - Fotografías de aplicación del cuestionario: **5**
 - Total de filas en `exif_inventario.csv`: **11**
 - Filas con fecha EXIF real: **11**
 - Fechas inventadas: **0**
-- Metadatos EXIF modificados: **0**
+- Metadatos EXIF modificados en los originales: **0**
 
-Las seis fotografías A6 seleccionadas contienen al menos dos personas del equipo en el gimnasio según revisión visual del material recibido.
+## Fotografías del cuestionario
 
-## Privacidad del cuestionario
+Las cinco fotografías originales del cuestionario contienen personas identificables. Para preservar la evidencia original y sus metadatos EXIF se conservan dentro del contenedor restringido:
 
-Las cinco fotografías originales del cuestionario contienen personas identificables.
-Por eso se entregan dentro de:
+`10_Autoria/fotos_equipo/02_Fotos_Aplicacion/A11 Fotos_Originales_Cuestionario.7z`
 
-`PENDIENTE_PRIVACIDAD_NO_SUBIR_A_GIT/Fotos_Aplicacion_Cuestionario_originales/`
+El contenedor debe permanecer cifrado/protegido y su contraseña o clave no debe registrarse en el repositorio.
 
-No deben copiarse al repositorio público hasta comprobar que el consentimiento real autoriza la publicación de la imagen.
-
-La ruta prevista, solo si la publicación está autorizada, es:
+Las copias destinadas a revisión pública se conservan en:
 
 `02_Evidencias/Cuestionario/Fotos_Aplicacion/`
 
-A11 ya registra su EXIF y SHA-256 real sin alterar los archivos.
+Estas copias se tratan como versiones públicas enmascaradas. El enmascaramiento puede modificar el hash o los metadatos de la copia pública; por ello, `exif_inventario.csv` conserva como fuente primaria la fecha, dispositivo y SHA-256 de los archivos originales.
 
-## Archivos excluidos de `foto equipo.rar`
+El estado de las cinco filas `F3-01_APLICACION_CUESTIONARIO` queda registrado como:
 
-El RAR contenía **18 archivos que no se incorporaron como A6**. Se excluyeron porque no cumplen el criterio visual de una foto de equipo con al menos dos integrantes, son imágenes de entorno/individuales, son irrelevantes o contienen documentación/datos que no corresponde publicar como evidencia A6.
+`PUBLICA_ENMASCARADA_ORIGINAL_RESTRINGIDO`
 
-No se copiaron esos archivos al paquete final.
+Esto indica que existe una copia pública enmascarada y que el original con EXIF se conserva en la capa restringida.
 
 ## Regla de integridad
 
-Este paquete no inventó fechas, modelos de dispositivo ni metadatos.
-Cuando el modelo exacto del teléfono no está disponible en EXIF, el CSV lo indica expresamente.
+No se inventan fechas, modelos de dispositivo ni metadatos. Los originales no se sobrescriben con las versiones enmascaradas y la evidencia restringida conserva su función de respaldo técnico.
+
+## Correspondencia con las copias públicas actuales
+
+El inventario mantiene en la columna `Nombre` el nombre del archivo original del que se obtuvo el EXIF y el SHA-256. La columna `Ruta_final_o_prevista` apunta a la copia pública enmascarada existente actualmente en el repositorio:
+
+- `IMG_20260721_102618.jpg` → `Aplicacion_Cuestionario_01..jpg`
+- `IMG_20260721_104307.jpg` → `Aplicacion_Cuestionario_02.jpg`
+- `IMG_20260721_154701.jpg` → `Aplicacion_Cuestionario_03.jpg`
+- `IMG_20260721_154901.jpg` → `Aplicacion_Cuestionario_04.jpg`
+- `IMG_20260825_142844.jpg` → `Aplicacion_Cuestionario_05.jpg`
+
+La diferencia de nombre no altera la trazabilidad: los valores EXIF y SHA-256 registrados corresponden al original, mientras que la ruta corresponde a la copia pública enmascarada.
