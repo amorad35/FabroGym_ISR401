@@ -1,7 +1,7 @@
 # FAIR_CHECKLIST — FabroGym 2B
 
 **Proyecto:** FabroGym — ISR-401  
-**Estado documental:** cierre final 2B — verificaciones pre-tag cerradas  
+**Estado documental:** cierre final 2B — preparación pre-tag; verificación final sobre el commit candidato  
 **Repositorio:** `https://github.com/amorad35/FabroGym_ISR401`
 
 Este archivo documenta el estado FAIR y de preservación verificable del proyecto antes del congelamiento mediante tag.
@@ -91,7 +91,7 @@ El reporte `07_Datos/resultados/REVISION_PRIVACIDAD_PUBLICA.md` documenta:
 
 ## Estado de cierre FAIR
 
-Cerrado antes del tag:
+Evidencias disponibles antes del tag:
 
 - [x] Zenodo v2.0.0 con DOI real.
 - [x] OSF con DOI real.
@@ -101,9 +101,11 @@ Cerrado antes del tag:
 - [x] `07_Datos/` declarado como paquete canónico.
 - [x] Auditoría automática de privacidad con 0 bloqueos.
 - [x] Confirmaciones humanas B6 cerradas.
-- [x] Verificación final desde clon limpio ejecutada.
-- [x] Checksums definitivos regenerados/verificados.
 - [x] README raíz y `CHANGELOG.md` normalizados para A5/B1.
+
+La comprobación desde clon limpio y la verificación de checksums
+se ejecutan sobre el commit candidato inmediatamente antes del tag
+final y quedan documentadas en la verificación de cierre.
 
 Operaciones de congelamiento/post-tag:
 
