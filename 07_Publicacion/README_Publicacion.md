@@ -2,14 +2,14 @@
 
 ## Propósito
 
-Esta carpeta conserva el manuscrito y el snapshot local del paquete de datos publicado para la Entrega 4 (2B) de Ingeniería de Requerimientos (ISR-401).
+Esta carpeta conserva el manuscrito y el paquete local de replicación utilizado para la Entrega 4 (2B) de Ingeniería de Requerimientos (ISR-401). El registro Zenodo publicado se mantiene como evidencia histórica externa; la copia local de entrega puede incorporar normalizaciones exigidas por la rúbrica y no se declara byte a byte idéntica al depósito remoto.
 
 ## Contenido
 
 - `manuscrito_borrador.pdf`: versión 1.0 del artículo paralelo.
 - `manuscrito_fuente/`: fuente LaTeX, bibliografía y figuras.
 - `analisis_revistas.md`: comparación de seis revistas candidatas.
-- `dataset_zenodo/`: snapshot local del paquete de replicación publicado en Zenodo 2.0.0.
+- `dataset_zenodo/`: copia local de trabajo del paquete de replicación asociado al Zenodo 2.0.0; para A5 referencia la ERS/SRS canónica de `01_ERS/` y no incorpora una segunda copia del documento.
 
 ## Estado de la evidencia
 
@@ -58,4 +58,4 @@ Los datos y la documentación pública anonimizada se documentan bajo CC BY 4.0.
 
 ## Estado de Zenodo
 
-El depósito publicado es la versión 2.0.0 con DOI específico https://doi.org/10.5281/zenodo.22237884. `dataset_zenodo/` se conserva como snapshot histórico; la normalización RF/RNF posterior requeriría una versión correctiva controlada y no altera el depósito remoto en esta tarea.
+El depósito publicado es la versión 2.0.0 con DOI específico https://doi.org/10.5281/zenodo.22237884 y no se modifica retrospectivamente. Para la entrega académica vigente, `dataset_zenodo/` funciona como copia local normalizada: la única ERS/SRS vigente permanece en `01_ERS/ERS_SRS_2B_v2.0.*`, mientras `dataset_zenodo/srs/README.md` la referencia sin duplicarla. Una futura versión correctiva de Zenodo deberá publicarse como versión nueva y volver a validar manifiesto, checksums, privacidad y reproducibilidad.

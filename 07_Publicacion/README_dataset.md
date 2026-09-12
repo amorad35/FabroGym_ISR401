@@ -4,7 +4,7 @@
 **Replication package for Explainability Requirements for Fitness Routine Recommendations: A Field Case Study in Ecuador**
 
 ## Status
-This directory preserves the local snapshot of the dataset published on Zenodo as version **2.0.0**, DOI **10.5281/zenodo.22237884**. The later RF/RNF normalization in the repository is not claimed to be byte-identical to that published snapshot. Software Heritage SWHID and F-UJI score remain unclaimed.
+The Zenodo record remains published as version **2.0.0**, DOI **10.5281/zenodo.22237884**. This directory is the repository-side academic-delivery copy and is not claimed to be byte-identical to the immutable Zenodo deposit. To satisfy rubric item A5, the delivery package references the single canonical ERS/SRS in `../01_ERS/` instead of embedding a divergent second copy. Software Heritage SWHID and F-UJI score remain unclaimed.
 
 ## Study scope
 FabroGym is a requirements-engineering field case study in a local-gym domain. The empirical focus is explainability as a non-functional requirement for a **proposed** fitness-routine recommendation component. The recommender is not presented as implemented in the MVP.
@@ -66,7 +66,7 @@ python scripts/run_all.py
 The script regenerates the empirical tables and figures from the public raw inputs. Statistical procedures that the instrument does not support are explicitly marked as not applicable rather than manufactured.
 
 ## Relationship to the published deposit
-The Zenodo record is already published at https://doi.org/10.5281/zenodo.22237884. This local directory is retained as the version-2.0.0 publication snapshot and is not modified during ERS/ID normalization. A later corrective Zenodo version must be evaluated separately and must repeat manifest, checksum, privacy and reproducibility validation.
+The Zenodo record is already published at https://doi.org/10.5281/zenodo.22237884 and remains an immutable historical record. This repository-side copy is normalized for final academic delivery and is not asserted to be byte-identical to the published deposit. The ERS/SRS source of truth is `../01_ERS/ERS_SRS_2B_v2.0.*`; the local replication package must reference it rather than duplicate it. A later corrective Zenodo version must be evaluated separately and must repeat manifest, checksum, privacy and reproducibility validation.
 
 ## Preregistration and deviations
 OSF record: https://osf.io/62ysc/  
