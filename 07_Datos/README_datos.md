@@ -1,16 +1,32 @@
 # Paquete canónico de datos de FabroGym
 
-`07_Datos/` reúne los insumos públicos anonimizados, la cadena de análisis y sus productos reproducibles para la Entrega 4 (2B). No contiene audios, videos, consentimientos, firmas ni otros materiales restringidos.
+`07_Datos/` es el **único paquete canónico, ejecutable y evaluable de datos y análisis para la Entrega 4 (2B)**.
+
+Reúne los insumos públicos anonimizados, la cadena consolidada de análisis y sus productos reproducibles. La existencia de datos o scripts históricos en `06_Experimento/` documenta procedencia y evolución metodológica, pero **no constituye una segunda cadena canónica**.
+
+## Regla de unicidad B1
+
+Para la evaluación final:
+
+```text
+Paquete canónico:        07_Datos/
+Orquestador oficial:     07_Datos/scripts/run_all.py
+Dependencias oficiales:  07_Datos/scripts/requirements.txt
+Datos crudos oficiales:  07_Datos/datos_crudos/
+Salidas oficiales:       07_Datos/datos_procesados/ y 07_Datos/resultados/
+```
+
+`06_Experimento/` se conserva como fuente metodológica/histórica. `07_Publicacion/` conserva artefactos de publicación y depósitos históricos. Ninguna de esas carpetas sustituye a `07_Datos/` para B1.
 
 ## Estructura
 
 ```text
 07_Datos/
-├── datos_crudos/          # Insumos públicos copiados sin alterar
-├── datos_procesados/      # CSV generados por el pipeline
-├── scripts/               # Cadena de análisis y dependencias
-├── resultados/            # Tablas, figuras y resúmenes generados
-├── diccionario_datos.csv  # Diccionario de columnas reales
+├── datos_crudos/
+├── datos_procesados/
+├── scripts/
+├── resultados/
+├── diccionario_datos.csv
 ├── README_datos.md
 ├── LICENSE-DATA.txt
 ├── checksums_datos.sha256
@@ -20,9 +36,13 @@
 
 ## Procedencia
 
-Los insumos de `datos_crudos/` proceden de `06_Experimento/datos_crudos/` y se copiaron sin cambiar nombres, codificación ni valores. Los scripts proceden de `06_Experimento/scripts_analisis/`. El archivo `datos_crudos/PROVENIENCIA_FUENTES.md` documenta las fuentes inmediatas.
+Los insumos de `datos_crudos/` proceden de evidencia y matrices previamente versionadas, incluida la documentación metodológica de `06_Experimento/`. Los scripts consolidados derivan de la cadena desarrollada durante el proyecto.
 
-### Corte analítico del cuestionario
+`datos_crudos/PROVENIENCIA_FUENTES.md` documenta la fuente inmediata de cada familia de insumos.
+
+Esta procedencia **no convierte `06_Experimento/` en un segundo paquete activo**.
+
+## Corte analítico del cuestionario
 
 La muestra analítica oficial del cuestionario está formada por **70 respuestas**. El archivo canónico es:
 
@@ -30,60 +50,63 @@ La muestra analítica oficial del cuestionario está formada por **70 respuestas
 datos_crudos/encuesta_clientes_anonimizada.csv
 ```
 
-El corte utilizado por el proyecto quedó congelado hasta **31/08/2026 23:58:25**. Las respuestas recibidas después de ese corte no se incorporan retroactivamente a los análisis ya versionados.
+El corte utilizado por el proyecto quedó congelado hasta **31/08/2026 23:58:25**. Las respuestas posteriores no se incorporan retroactivamente.
 
-Las 70 respuestas incluidas registran consentimiento afirmativo y las dos columnas finales de identificación se encuentran vacías. Los artefactos históricos con conteos anteriores no sustituyen a este conjunto analítico.
+## Separación entre entrada y productos
 
-## Separación entre entrada y productos del análisis
+- `datos_crudos/`: insumos fuente congelados;
+- `datos_procesados/`: salidas generadas por `scripts/run_all.py`;
+- `resultados/`: tablas, figuras y resúmenes reproducibles.
 
-La estructura distingue tres capas:
+## Requisitos
 
-- `datos_crudos/`: insumos fuente congelados e inmutables para el pipeline;
-- `datos_procesados/`: salidas generadas únicamente por `scripts/run_all.py`;
-- `resultados/`: tablas, figuras, resúmenes y otros productos analíticos.
+Se requiere Python 3. La reproducción fue verificada con Python 3.12.13 y las dependencias declaradas en:
 
-`datos_crudos/PROVENIENCIA_FUENTES.md` clasifica la procedencia de cada familia de insumos. `datos_procesados/README_PROCESAMIENTO.md` documenta el mapeo fuente → transformación → salida.
+```text
+scripts/requirements.txt
+```
 
-La matriz de codificación, el libro de códigos y otras matrices analíticas humanas se declaran como **insumos fuente congelados**, no como observaciones que hayan salido directamente de un instrumento. Esta clasificación evita confundir evidencia primaria con decisiones analíticas del equipo.
-
-## Requisitos y preparación
-
-Se requiere Python 3. La reproducción fue verificada específicamente con Python 3.12.13 y las versiones aceptadas por `scripts/requirements.txt`; para repetir exactamente esta prueba, use esa versión de Python.
-
-Desde la raíz de `07_Datos/`, instale las dependencias:
+Instalación:
 
 ```bash
 python -m pip install -r scripts/requirements.txt
 ```
 
-## Ejecución reproducible
+## Ejecución reproducible — única orden oficial
 
-Desde la raíz de `07_Datos/`, la cadena completa se ejecuta con una sola orden:
+Desde la raíz de `07_Datos/`:
 
 ```bash
 python scripts/run_all.py
 ```
 
-No se requieren pasos manuales intermedios. El proceso valida los insumos y vuelve a generar:
+No se requieren pasos manuales intermedios.
 
-- `datos_procesados/`: diez CSV derivados;
-- `resultados/tablas/`: tablas CSV del análisis;
-- `resultados/figuras/`: figuras equivalentes en PNG y SVG;
-- `resultados/resumen_resultados.json` y `resultados/RESUMEN_FASE2.md`.
+El pipeline regenera:
 
-El pipeline también produce copias auxiliares de las desviaciones (`osf_deviations.md` y `osf_deviations.pdf`) en su raíz de ejecución. Para el paquete canónico se conserva la versión exigida con el nombre `desviaciones.md`.
+- `datos_procesados/`;
+- tablas de resultados;
+- figuras;
+- resúmenes analíticos;
+- artefactos de desviaciones definidos por la cadena.
 
-## Privacidad y redistribución
+## Privacidad
 
-Este paquete incluye únicamente matrices, respuestas y transcripciones WALK públicas anonimizadas o seudonimizadas. Los códigos `ENTR-*`, `WALK-*` y `MC-P*` no deben sustituirse por identidades reales. El material identificable o restringido no se redistribuye. Consulte `LICENSE-DATA.txt`.
+Este paquete incluye únicamente datos públicos anonimizados o seudonimizados aptos para el análisis reproducible. La evidencia identificable/restringida se gobierna mediante la política de `08_Etica/` y no forma parte de los datos crudos públicos de B1.
 
 ## Relación con Zenodo
 
-El depósito de datos actualmente publicado es FabroGym versión 2.0.0, DOI específico [10.5281/zenodo.22237884](https://doi.org/10.5281/zenodo.22237884), publicado el 1 de septiembre de 2026. `07_Datos/` reorganiza y reutiliza artefactos versionados del repositorio; no se afirma que sea idéntico byte a byte al depósito 2.0.0. Una eventual versión correctiva de Zenodo se evaluará posteriormente en la Fase 6; este procedimiento no crea ni modifica depósitos remotos.
+El depósito Zenodo 2.0.0 (DOI `10.5281/zenodo.22237884`) es un registro histórico publicado. `07_Datos/` es el paquete canónico de la **entrega académica vigente** y no se afirma que sea idéntico byte a byte a ese depósito histórico.
 
 ## Limitaciones
 
-- El cuestionario no contiene perfil técnico/no técnico ni una escala Likert de explicabilidad; sus resultados son descriptivos y no se reinterpretan como medición de explicabilidad.
-- La saturación estricta de códigos no alcanza el umbral del 5 %; la estabilización axial se informa como evidencia complementaria.
-- Los SHA-256 declarados para multimedia identifican archivos restringidos ausentes de este paquete; no se vuelve a validar aquí su correspondencia física.
+- El cuestionario no contiene perfil técnico/no técnico ni una escala Likert de explicabilidad.
+- La saturación estricta de códigos no alcanza el umbral del 5 %.
+- Los SHA-256 de multimedia restringida documentan evidencia que no forma parte de la capa pública de datos.
 - El member checking dispone de evidencia documental pública, pero no de grabación audiovisual.
+
+## Estado B1
+
+**CANÓNICO / EJECUTABLE / EVALUABLE: `07_Datos/`**
+
+No existe otra carpeta que deba utilizarse como cadena oficial para reproducir los resultados de la Entrega Final.
