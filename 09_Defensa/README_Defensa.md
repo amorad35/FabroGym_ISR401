@@ -9,7 +9,6 @@
 - Banco de preguntas: `banco_preguntas_respuestas.md` y `.pdf`.
 - Alcance del prototipo: `alcance_prototipo.md` y `.pdf`.
 - Checklist de defensa: `checklist_defensa_final.md` y `.pdf`.
-- Checklist final del repositorio: `checklist_final_repositorio.md` y `.pdf`.
 - Reparto de intervención: `reparto_intervencion.md` y `.pdf`.
 
 ## Criterio narrativo
@@ -18,8 +17,4 @@ La defensa no se presenta como demostración operativa del MVP. El prototipo bas
 
 ## Estado de cierre de la carpeta
 
-El video real ya está incorporado y `MANIFEST_DEFENSA.csv` fue regenerado después de agregarlo y actualizar los documentos de control.
-
-## Advertencia
-
-No incorporar archivos que prometan ejecutar dos escenarios operativos en vivo. Si el tribunal pregunta por el MVP, responder desde cobertura, alcance, evidencias, límites y trazabilidad.
+El video real ya está incorporado y `MANIFEST_DEFENSA.csv` mantiene el inventario SHA-256 de los artefactos vigentes de la carpeta.

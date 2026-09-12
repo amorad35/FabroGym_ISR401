@@ -242,7 +242,10 @@ Antes de congelar la entrega se debe comprobar:
 9. privacidad automática sin bloqueos y revisión humana completada;
 10. `git status` limpio antes de crear el tag.
 
-> `verificacion_previa.pdf` puede conservarse como evidencia complementaria interna si el equipo decide generarlo, pero **no forma parte de los doce elementos A1–A12 exigidos por B2**.
+La verificación previa firmada se conserva como
+`10_Autoria/verificacion_previa.pdf`, conforme a la guía específica
+de cierre. Este archivo complementa A1–A12 y no sustituye ninguno
+de esos elementos.
 
 ## 8. Estado de esta carpeta
 

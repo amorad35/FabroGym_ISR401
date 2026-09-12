@@ -65,7 +65,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_APLICA"
     },
     {
       "ID": "RF-04",
@@ -236,7 +236,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_APLICA"
     },
     {
       "ID": "RF-13",
@@ -312,7 +312,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_IMPLEMENTADO"
     },
     {
       "ID": "RF-17",
@@ -331,7 +331,7 @@
       "MoSCoW": "Must",
       "Kano": "Básico",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_IMPLEMENTADO"
     },
     {
       "ID": "RF-18",
@@ -350,7 +350,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_APLICA"
     },
     {
       "ID": "RF-19",
@@ -369,7 +369,7 @@
       "MoSCoW": "Must",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_IMPLEMENTADO"
     },
     {
       "ID": "RF-20",
@@ -407,7 +407,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_APLICA"
     },
     {
       "ID": "RF-22",
@@ -464,7 +464,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_APLICA"
     },
     {
       "ID": "RF-25",
@@ -483,7 +483,7 @@
       "MoSCoW": "Should",
       "Kano": "Desempeño",
       "Estado_requisito": "ESPECIFICADO",
-      "Estado_MVP": "IMPLEMENTADO"
+      "Estado_MVP": "NO_APLICA"
     },
     {
       "ID": "RNF-01",

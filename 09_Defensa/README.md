@@ -16,9 +16,8 @@ La exposición se centra en requisitos, evidencia empírica, trazabilidad, model
 - `banco_preguntas_respuestas.md` y `.pdf`: preguntas probables del tribunal y respuestas sugeridas.
 - `alcance_prototipo.md` y `.pdf`: alcance del prototipo base como evidencia de cobertura.
 - `checklist_defensa_final.md` y `.pdf`: verificación de la exposición.
-- `checklist_final_repositorio.md` y `.pdf`: lista de cierre general del repositorio.
 - `reparto_intervencion.md` y `.pdf`: distribución para tres expositores.
-- `MANIFEST_DEFENSA.csv`: manifiesto SHA-256 regenerado después de incorporar el video.
+- `MANIFEST_DEFENSA.csv`: inventario SHA-256 de los artefactos vigentes de la carpeta.
 
 ## Estado del video
 

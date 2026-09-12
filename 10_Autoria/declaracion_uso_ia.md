@@ -27,7 +27,7 @@ Cuando una salida de IA propone código, texto académico o una transformación 
 
 > **Nota de trazabilidad del modelo.** Para sesiones históricas en las que la interfaz no dejó un registro verificable del modelo exacto o de parámetros como temperatura, el equipo no reconstruye retrospectivamente valores no observados. Se documenta el modelo visible en la sesión de cierre y se deja constancia de que la temperatura no fue expuesta ni configurada manualmente.
 
-> Con base en el expediente revisado para este cierre no se identificó otra herramienta de IA que deba declararse. Si un integrante hubiera utilizado otra herramienta de IA fuera del expediente documentado, deberá incorporarla antes del commit definitivo; no debe agregarse una herramienta que no haya sido utilizada realmente.
+> Con base en el expediente revisado para este cierre no se identificó otra herramienta de IA que deba declararse.
 
 ---
 
@@ -63,7 +63,7 @@ Cuando una salida de IA propone código, texto académico o una transformación 
 | Manuscrito — Conclusiones | Sí | ChatGPT | Apoyo de redacción y síntesis final. | Ponce | Confirmación de que cada conclusión deriva de resultados reales y no incorpora hallazgos nuevos no sustentados. | **CERRADO** |
 | Ética y privacidad `08_Etica/` | Sí, como apoyo documental | ChatGPT | Revisión de estructura, separación pública/restringida y controles de privacidad. | Ponce | Contraste con documentos éticos reales; la IA no genera firmas, consentimientos o autorizaciones inexistentes. | **CERRADO** |
 | MVP / código de aplicación | Sí, como apoyo de desarrollo y revisión | ChatGPT | Apoyo para revisar/corregir código del MVP, alinear funcionalidades con requisitos y documentar cambios técnicos. | Ponce | Contraste con historial/diffs disponibles, `05_MVP/MVP_HTML/assets/js/app.js`, documentación del parche y pruebas del MVP. | **CERRADO** |
-| Defensa / material de presentación | Sí, como apoyo de preparación | ChatGPT | Apoyo para síntesis, banco de preguntas y respuestas, escenarios de demostración, checklist y preparación del guion/material de defensa. | Ponce | Contraste con artefactos finales del repositorio, especialmente `09_Defensa/banco_preguntas_respuestas.md`, `09_Defensa/escenarios_demo.md` y checklist asociado. | **CERRADO** |
+| Defensa / material de presentación | Sí, como apoyo de preparación | ChatGPT | Apoyo para síntesis, banco de preguntas y respuestas, escenarios de demostración y preparación del guion/material de defensa. | Ponce | Contraste con artefactos finales del repositorio, especialmente `09_Defensa/banco_preguntas_respuestas.md` y `09_Defensa/escenarios_demo.md`. | **CERRADO** |
 | `10_Autoria/` — estructura, plantillas y controles | Sí | ChatGPT | Apoyo para organizar evidencia A1–A12, preparar plantillas y reglas de integridad. | Ponce | Solo aceptar evidencia real; contraste de archivos con fechas, metadatos y Git cuando corresponde. | **CERRADO** |
 | A8 — `correspondencia/` | Sí, únicamente para estructura documental | ChatGPT | Preparar carpetas, inventario y guía de privacidad. | Ponce | Las capturas/mensajes corresponden a comunicaciones reales; la IA no genera correspondencia histórica. | **CERRADO** |
 | A9 — `declaracion_uso_ia.md` | Sí | ChatGPT | Preparar, revisar y consolidar esta declaración a partir de los usos documentados y del cierre realizado por el equipo. | Ponce | Revisión final línea por línea, eliminación de estados pendientes y comprobación de coherencia con los artefactos documentados. | **FINAL** |
@@ -114,13 +114,13 @@ Para el cierre de esta declaración se efectuó la consolidación de las filas p
 1. **Ponce** queda registrado como verificador humano del documento.
 2. Las cinco secciones pendientes del manuscrito —título/resumen/palabras clave, Introducción, Trabajo relacionado, Discusión y Conclusiones— quedan declaradas con **uso de ChatGPT como apoyo de redacción/revisión**, no como fuente de datos ni como autor académico.
 3. El **MVP/código** queda declarado con uso de ChatGPT como apoyo de desarrollo, revisión y corrección técnica.
-4. La **defensa** queda declarada con uso de ChatGPT como apoyo de preparación, síntesis, preguntas, escenarios y checklist; esta declaración no implica que la IA haya realizado la defensa ni generado evidencia audiovisual de ella.
+4. La **defensa** queda declarada con uso de ChatGPT como apoyo de preparación, síntesis, preguntas, escenarios y guion/material de apoyo; esta declaración no implica que la IA haya realizado la defensa ni generado evidencia audiovisual de ella.
 5. Para **UML, diagramas y mockups originales** no se atribuye a IA la autoría original porque el expediente revisado no demuestra ese hecho. Sí se declara el uso de ChatGPT en la **revisión y normalización 2B** de dichos artefactos.
 6. F3-02/A7 queda cerrado como uso de IA de apoyo técnico con confirmación humana sobre las codificaciones reales.
 7. No quedan marcadores `POR CONFIRMAR`, `Requiere nombre del verificador` ni `Requiere confirmación humana` en esta versión.
 8. No se declara ninguna herramienta adicional de IA sin evidencia de uso real.
 
-**Esta consolidación no autoriza a inventar hechos históricos ni a sustituir evidencia primaria. Si antes del commit definitivo el equipo identifica un uso real de otra herramienta de IA que no figure aquí, debe añadirse de forma transparente.**
+**Esta consolidación no autoriza a inventar hechos históricos ni a sustituir evidencia primaria.**
 
 ---
 
