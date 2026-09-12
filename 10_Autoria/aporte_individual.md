@@ -1,144 +1,120 @@
 # Aporte individual — FabroGym
 
+**Proyecto:** FabroGym — ISR-401  
+**Entrega:** Entrega 4 (2B / Defensa Final)  
+**Repositorio:** `https://github.com/amorad35/FabroGym_ISR401`  
+**Equipo actual de cierre:** Mera Arias Erick Jhair, Mora Duarte Alex José y Ponce Rivera Mery Helenmey.
+
 ## 1. Propósito
 
-Este documento consolida contribuciones individuales verificables de los integrantes del equipo FabroGym a partir del historial Git del repositorio oficial. Cada aporte incluido se vincula con una actividad concreta, una ruta de artefacto y uno o más identificadores de commit.
+Este documento consolida contribuciones individuales verificables de los tres integrantes que conforman actualmente el equipo de cierre de FabroGym. Cada aporte se vincula con una actividad concreta, una ruta del repositorio y uno o más commits reales.
 
-La relación se utiliza como evidencia de autoría y contribución individual para la Entrega 4 (2B / Defensa Final). No sustituye el historial Git, la bitácora de sesiones ni las capturas de trabajo; los complementa.
+Los aportes históricos de integrantes que ya no forman parte del equipo final permanecen íntegros en el historial Git y no se eliminan, reasignan ni presentan como trabajo de los tres integrantes actuales.
 
 ## 2. Criterio de inclusión
 
-Solo se registran contribuciones respaldadas por commits existentes en el repositorio `amorad35/FabroGym_ISR401`. No se atribuyen tareas a un integrante cuando el historial revisado no permite verificar esa relación.
-
-Las capturas de pantalla exigidas como evidencia de trabajo individual se conservan separadamente en `10_Autoria/capturas/` y no forman parte del contenido de este archivo.
-
----
-
-## 3. Alvia Villegas Erick Adalberto
-
-**Usuario Git verificado:** `Erick-Alvia`
-
-| Actividad verificable | Artefacto / ruta | Commit | Tipo de aporte |
-|---|---|---|---|
-| Organizar la estructura inicial de evidencias y consentimientos mediante archivos README | `02_Evidencias/Consentimientos/README.md` y archivos README asociados de evidencias | `38e0f7e77a008c7aa08ba8e832379dd66da8c54f` | Organización documental |
-| Ajustar la estructura documental de los casos de uso UML | `03_Modelado/Diagramas_UML/02_Casos_de_Uso/README.md` | `256d9d238b292cabc3769c54ab381e84fc0dd953` | Revisión / limpieza documental |
-| Normalizar su identidad histórica de Git mediante `.mailmap` | `/.mailmap` | `c3975a92f246734f93f064e22fa7a842b55bf9b9` | Autoría / control de identidad Git |
-
-**Síntesis de contribución verificable:** participación en organización de evidencias, mantenimiento de la estructura documental del modelado UML y normalización de identidad Git para el cierre de autoría.
+- Solo se registran contribuciones respaldadas por commits existentes en el repositorio oficial.
+- No se atribuyen tareas a un integrante si el historial Git no permite verificar esa relación.
+- Los commits de merge no se usan por sí solos como evidencia principal cuando existe un commit específico.
+- Las actividades colaborativas en Discord se documentan en `10_Autoria/bitacora_sesiones.csv` y se contrastan con la actividad Git verificable.
+- La evidencia firmada se conserva separadamente en `10_Autoria/aporte_individual_FIRMA.pdf`.
 
 ---
 
-## 4. Mera Arias Erick Jhair
+## 3. Mera Arias Erick Jhair
 
 **Usuario Git verificado:** `Emeraxs`
 
 | Actividad verificable | Artefacto / ruta | Commit | Tipo de aporte |
 |---|---|---|---|
-| Incorporar y ajustar el MVP académico | `05_MVP/` | `f24ae7f94055b501849067ec778676ba01625053` | Autoría / integración técnica |
-| Congelar el paquete experimental destinado al prerregistro OSF | `06_Experimento/` | `9ef8ff6f4f3bd4d8671519a4798940b7b93e05eb` | Consolidación documental / experimento |
-| Documentar reproducción, estructura, procedencia y uso del paquete canónico de datos | `07_Datos/README_datos.md` | `7a99ec78711d708f603f8cf92f93220d174b4f53` | Autoría documental |
-| Incorporar el diccionario de datos del paquete reproducible | `07_Datos/diccionario_datos.csv` | `9e0a4a8e9dbec2a30b31f84d030d18622756866a` | Documentación de datos |
-| Incorporar la licencia del paquete público anonimizado | `07_Datos/LICENSE-DATA.txt` | `f920fdec7beab161fa250891f86fd6ebeca5c683` | Documentación / publicación |
-| Registrar el depósito Zenodo verificable del paquete | `07_Datos/registro_deposito.md` | `94589ad7df7df603b2e0f9d22f941261b736eb12` | Documentación / publicación |
-| Crear el índice y reglas de integridad de evidencia de autoría | `10_Autoria/README.md` | `cd7647fc96a01bccf9d722c0ef8828fa09f12e4b` | Autoría documental / consolidación |
-| Incorporar la bitácora de sesiones del equipo para respaldar cronología y trazabilidad de aportes | `10_Autoria/bitacora_sesiones.csv` | `88e78574353674875f0c3a4401d067535f2b41f6` | Autoría documental / trazabilidad |
-| Normalizar e incorporar evidencia fotográfica del equipo conservando los originales y su relación con metadatos | `10_Autoria/fotos_equipo/` | `c1593702cb90ef9b234e1061210ac0bf82a6d21d` | Evidencia de autoría / fotografía |
-| Actualizar el README raíz con instrucciones reproducibles de compilación del ERS/SRS y sincronizar estado del MVP/manuscrito | `README.md` | `fa7873c35aa63575745378b94427b8b75ac0519b` | Documentación / reproducibilidad / cierre |
+| Incorporar y ajustar el MVP académico | `05_MVP/` | `f24ae7f94055b501849067ec778676ba01625053` | Integración técnica |
+| Congelar el paquete experimental destinado al prerregistro OSF | `06_Experimento/` | `9ef8ff6f4f3bd4d8671519a4798940b7b93e05eb` | Experimento / consolidación |
+| Documentar reproducción, procedencia y uso del paquete canónico | `07_Datos/README_datos.md` | `7a99ec78711d708f603f8cf92f93220d174b4f53` | Reproducibilidad |
+| Incorporar diccionario de datos | `07_Datos/diccionario_datos.csv` | `9e0a4a8e9dbec2a30b31f84d030d18622756866a` | Documentación de datos |
+| Incorporar licencia del paquete anonimizado | `07_Datos/LICENSE-DATA.txt` | `f920fdec7beab161fa250891f86fd6ebeca5c683` | Publicación / licencia |
+| Registrar el depósito Zenodo | `07_Datos/registro_deposito.md` | `94589ad7df7df603b2e0f9d22f941261b736eb12` | Ciencia abierta |
+| Crear el índice y reglas de integridad de `10_Autoria` | `10_Autoria/README.md` | `cd7647fc96a01bccf9d722c0ef8828fa09f12e4b` | Autoría documental |
+| Incorporar bitácora de sesiones | `10_Autoria/bitacora_sesiones.csv` | `88e78574353674875f0c3a4401d067535f2b41f6` | Trazabilidad de autoría |
+| Normalizar evidencia fotográfica del equipo | `10_Autoria/fotos_equipo/` | `c1593702cb90ef9b234e1061210ac0bf82a6d21d` | Evidencia de autoría |
+| Documentar compilación reproducible del ERS/SRS | `README.md` | `fa7873c35aa63575745378b94427b8b75ac0519b` | Reproducibilidad documental |
+| Actualizar bitácora, aporte individual y materiales de defensa del cierre | `09_Defensa/`; `10_Autoria/` | `d4e34c1cf763728a6938b0fc99f9f76f20a0f095` | Cierre documental |
+| Incorporar evaluación FAIR/F-UJI y metadatos de preservación/citación | `fair_assessment.pdf`; `FAIR_CHECKLIST.md`; `CITATION.cff`; `README.md`; `CHANGELOG.md` | `889475ed74a492466133730f1fee56ee0f64a5de` | FAIR / preservación / metadatos |
 
-**Síntesis de contribución verificable:** participación en MVP, documentación experimental, consolidación del paquete `07_Datos`, documentación de reproducibilidad/publicación, organización de la evidencia de autoría, registro de la bitácora de sesiones, normalización de evidencia fotográfica y actualización del README raíz con el procedimiento reproducible de compilación del ERS/SRS.
+**Síntesis:** participación verificable en MVP, experimento, paquete `07_Datos`, reproducibilidad, publicación científica, autoría, defensa y cierre FAIR/F-UJI.
 
 ---
 
-## 5. Mora Duarte Alex José
+## 4. Mora Duarte Alex José
 
 **Usuario Git verificado:** `amorad35`
 
 | Actividad verificable | Artefacto / ruta | Commit | Tipo de aporte |
 |---|---|---|---|
-| Incorporar metadatos ORCID de los integrantes en la citación del proyecto | `CITATION.cff` | `8431a3be8451df678a5c14d1d911f35265b4b012` | Documentación / metadatos |
-| Incorporar evidencia del registro OSF y retirar el marcador anterior | `06_Experimento/osf_registration.pdf` y documentación relacionada | `ee9901dd500751a7f1e912cdb784278719aa2f95` | Integración de evidencia / publicación científica |
-| Actualizar el README del experimento con el registro OSF | `06_Experimento/README.md` | `00634f8ce4b225af6a27a60670398161a1264dff` | Autoría documental |
-| Incorporar el proyecto fuente editable de los diagramas UML | `03_Modelado/Diagramas_UML/` | `981f2b290e70e008c4ca3a1d7c5ac85a6254ba67` | Integración de modelado editable |
-| Incorporar el modelo i* Strategic Dependency editable | `03_Modelado/Diagramas_UML/` | `ab266852820586621b6ed4ac1e3d8cf452b6df59` | Modelado / integración |
-| Incorporar el modelo i* Strategic Rationale editable | `03_Modelado/Diagramas_UML/` | `8c240a7337e28887f9e296ddd9c6878c24667504` | Modelado / integración |
-| Fijar los hashes SHA-256 finales del paquete reproducible | `07_Datos/checksums_datos.sha256` | `0f15fb320a88fccaa91d6491c3bc0e4d869372d8` | Verificación de integridad / reproducibilidad |
-| Registrar su codificación independiente sobre el subconjunto común de doble codificación | `10_Autoria/doble_codificacion/02_codificacion_mora.csv` y `.xlsx` | `e86e0488d1b70587b17566450ac4ed34ec10598f` | Evidencia empírica / doble codificación |
-| Incorporar el cálculo reproducible de acuerdo e IC95 % de la doble codificación | `10_Autoria/doble_codificacion/` | `57edc42b7ff37a0a1b0a1c79e00abe1f737d4a9e` | Análisis reproducible / acuerdo entre codificadores |
-| Actualizar los checksums definitivos de `07_Datos` después de la integración final | `07_Datos/checksums_datos.sha256` | `5ea7e897ce23f3e6789d70067d4262c4eb1cd9c7` | Verificación de integridad / reproducibilidad |
-| Incorporar en A3 las fuentes editables del modelado UML e i* junto con sus exportaciones finales | `10_Autoria/fuentes_editables/` | `37b04f8c3aff4352c844d1091c51371bba2ae322` | Autoría / modelado editable |
-| Incorporar cinco fotografías originales de aplicación del cuestionario como evidencia de campo | `02_Evidencias/Cuestionario/Fotos_Aplicacion/` | `5ad09c3ca5b0f55c4da4e18e7989ffba31fd587c` | Evidencia empírica / cuestionario |
+| Incorporar metadatos ORCID en la citación | `CITATION.cff` | `8431a3be8451df678a5c14d1d911f35265b4b012` | Metadatos |
+| Incorporar evidencia del registro OSF | `06_Experimento/osf_registration.pdf` | `ee9901dd500751a7f1e912cdb784278719aa2f95` | Ciencia abierta |
+| Actualizar README del experimento con OSF | `06_Experimento/README.md` | `00634f8ce4b225af6a27a60670398161a1264dff` | Documentación |
+| Incorporar fuente editable UML | `03_Modelado/Diagramas_UML/` | `981f2b290e70e008c4ca3a1d7c5ac85a6254ba67` | Modelado |
+| Incorporar modelos i* editables | `03_Modelado/Diagramas_UML/` | `ab266852820586621b6ed4ac1e3d8cf452b6df59`; `8c240a7337e28887f9e296ddd9c6878c24667504` | Modelado |
+| Registrar codificación independiente | `10_Autoria/doble_codificacion/02_codificacion_mora.csv`; `.xlsx` | `e86e0488d1b70587b17566450ac4ed34ec10598f` | Doble codificación |
+| Incorporar cálculo reproducible de acuerdo e IC95 % | `10_Autoria/doble_codificacion/` | `57edc42b7ff37a0a1b0a1c79e00abe1f737d4a9e` | Análisis reproducible |
+| Actualizar checksums de `07_Datos` | `07_Datos/checksums_datos.sha256` | `5ea7e897ce23f3e6789d70067d4262c4eb1cd9c7` | Integridad |
+| Incorporar fuentes editables de modelado en A3 | `10_Autoria/fuentes_editables/` | `37b04f8c3aff4352c844d1091c51371bba2ae322` | Autoría / modelado |
+| Incorporar cinco fotografías originales del cuestionario | `02_Evidencias/Cuestionario/Fotos_Aplicacion/` | `5ad09c3ca5b0f55c4da4e18e7989ffba31fd587c` | Evidencia de campo |
+| Corregir adaptación responsive del MVP sin alterar lógica | `05_MVP/` | `ce9dcfc7977ab6717d68ee2e71a680c8611fe03f` | Integración técnica / interfaz |
+| Registrar checksums finales de integridad del MVP | `05_MVP/` | `20329ff70cbbc35f26611f2eba5ee52b8b5f2b52` | Integridad / reproducibilidad |
 
-**Síntesis de contribución verificable:** participación en metadatos académicos, registro OSF, documentación del experimento, integración y evidencia de fuentes editables de modelado, integridad reproducible de `07_Datos`, doble codificación, cálculo reproducible del acuerdo entre codificadores y evidencia fotográfica de aplicación del cuestionario.
+**Síntesis:** participación verificable en OSF, metadatos, modelado editable, doble codificación, integridad de datos, evidencia de campo y cierre técnico responsive del MVP.
 
 ---
 
-## 6. Ponce Rivera Mery Helenmey
+## 5. Ponce Rivera Mery Helenmey
 
 **Usuario Git verificado:** `Mery-003`
 
 | Actividad verificable | Artefacto / ruta | Commit | Tipo de aporte |
 |---|---|---|---|
-| Actualizar los mockups correspondientes al rol Instructor | `03_Modelado/Mockups/04_Instructor/` | `6be79a82c1c169ffae9865e30ee1569057f93a1d` | Modelado / mockups |
-| Actualizar los mockups correspondientes al rol Cliente | `03_Modelado/Mockups/05_Cliente/` | `f7c9524023ef3156026b4dd1fe82f0b85cd62b22` | Modelado / mockups |
-| Reorganizar consentimientos censurados del experimento y walkthroughs | `02_Evidencias/Consentimientos/` | `1c601523dba2aab510b2f1392bc21c32ab7513a0` | Organización de evidencia / ética |
-| Registrar su codificación independiente del subconjunto común | `10_Autoria/doble_codificacion/03_codificacion_ponce.csv` y `.xlsx` | `ae278a145989ecef7de869ec35031fe1bdc1bdaa` | Evidencia empírica / doble codificación |
-| Corregir la estructura final del CSV de codificación de Ponce para su lectura y versionado | `10_Autoria/doble_codificacion/03_codificacion_ponce.csv` | `1b30176d5db7f072a0c5aea2e40147bbd661acb9` | Corrección documental / calidad de datos |
-| Documentar y verificar el uso de IA por artefacto en el cierre 2B | `10_Autoria/declaracion_uso_ia.md` | `c6c206a5c129dfb00a76eb1228dbe4f500634b72` | Transparencia de autoría / uso de IA |
-| Incorporar correspondencia fechada de solicitudes, autorizaciones y confirmaciones de cita con la organización | `10_Autoria/correspondencia/` | `87d667969192f9f86c19ae70848acec06008ea30` | Evidencia de coordinación / autoría |
+| Actualizar mockups del rol Instructor | `03_Modelado/Mockups/04_Instructor/` | `6be79a82c1c169ffae9865e30ee1569057f93a1d` | Modelado |
+| Actualizar mockups del rol Cliente | `03_Modelado/Mockups/05_Cliente/` | `f7c9524023ef3156026b4dd1fe82f0b85cd62b22` | Modelado |
+| Reorganizar consentimientos censurados | `02_Evidencias/Consentimientos/` | `1c601523dba2aab510b2f1392bc21c32ab7513a0` | Ética / evidencia |
+| Registrar codificación independiente | `10_Autoria/doble_codificacion/03_codificacion_ponce.csv`; `.xlsx` | `ae278a145989ecef7de869ec35031fe1bdc1bdaa` | Doble codificación |
+| Corregir CSV de codificación independiente | `10_Autoria/doble_codificacion/03_codificacion_ponce.csv` | `1b30176d5db7f072a0c5aea2e40147bbd661acb9` | Calidad de datos |
+| Documentar y verificar el uso de IA | `10_Autoria/declaracion_uso_ia.md` | `c6c206a5c129dfb00a76eb1228dbe4f500634b72` | Transparencia / IA |
+| Incorporar correspondencia verificable con la organización | `10_Autoria/correspondencia/` | `87d667969192f9f86c19ae70848acec06008ea30` | Coordinación |
+| Incorporar el video real de defensa | `09_Defensa/video_defensa.mp4` | `631579ced1e93029829166dde5db03cae6299806` | Evidencia audiovisual / defensa |
+| Sincronizar documentación y manifiesto de cierre de defensa | `09_Defensa/` | `2b8b50cd440702e791e784abf33654167749a635` | Defensa / integridad |
+| Incorporar el aporte individual firmado del equipo actual | `10_Autoria/aporte_individual_FIRMA.pdf` | `ab26e952f59a862486921d4c86bb13ecc98eaec5` | Autoría / conformidad |
 
-**Síntesis de contribución verificable:** participación en actualización de mockups de roles del sistema, organización de consentimientos censurados, doble codificación independiente, documentación final/verificación humana del uso de IA y consolidación de correspondencia verificable con la organización.
-
----
-
-## 7. Vaca Romero David Octavio
-
-**Usuario Git verificado:** `David-Bs1`
-
-| Actividad verificable | Artefacto / ruta | Commit | Tipo de aporte |
-|---|---|---|---|
-| Incorporar el mockup de registro de horario por asistente | `03_Modelado/Mockups/03_Recepcionista/MU-49_Registro_de_horario_por_el_asistente.png` | `85c018b9d6dd903c775a9df02618fcc1f4064f7f` | Modelado / mockup |
-| Incorporar los checksums SHA-256 definitivos para el cierre de Entrega 4 | `/checksums.sha256` | `8e664455294b272b007c8f8a600781a1d5a809f7` | Verificación de integridad / cierre |
-
-**Síntesis de contribución verificable:** participación en modelado mediante mockups y en la verificación de integridad del repositorio para el cierre de la Entrega 4.
+**Síntesis:** participación verificable en mockups, ética, doble codificación, uso de IA, coordinación, defensa final y evidencia firmada de autoría.
 
 ---
 
-## 8. Cierre terminal en curso — 11 de septiembre de 2026
+## 6. Sesión de cierre verificada — 11 de septiembre de 2026
 
-A las **14:54 (UTC-05:00)**, la sesión terminal de cierre se desarrolla de forma **Remota — Discord** con participación de:
+Entre las **22:07 y 22:52 (UTC-05:00)**, Mera, Mora y Ponce permanecen reunidos de forma **Remota — Discord** para el bloque de cierre. La modalidad y participación son confirmadas directamente por el equipo; las actividades concretas se contrastan con el historial Git.
 
-- **Mera Arias Erick Jhair** (`Emeraxs`);
-- **Mora Duarte Alex José** (`amorad35`);
-- **Ponce Rivera Mery Helenmey** (`Mery-003`).
+| Integrante | Actividad versionada durante el bloque | Commit(s) |
+|---|---|---|
+| Mera Arias Erick Jhair | FAIR/F-UJI, metadatos, citación y preservación | `889475ed74a492466133730f1fee56ee0f64a5de` |
+| Ponce Rivera Mery Helenmey | Video final, cierre documental de defensa y aporte firmado | `631579ced1e93029829166dde5db03cae6299806`; `2b8b50cd440702e791e784abf33654167749a635`; `ab26e952f59a862486921d4c86bb13ecc98eaec5` |
+| Mora Duarte Alex José | Corrección responsive del MVP y checksums de integridad | `ce9dcfc7977ab6717d68ee2e71a680c8611fe03f`; `20329ff70cbbc35f26611f2eba5ee52b8b5f2b52` |
 
-La composición histórica del proyecto se conserva con los cinco integrantes declarados en las secciones anteriores. Sin embargo, para la sesión terminal del 11 de septiembre se registra únicamente la participación efectiva de Mera, Mora y Ponce.
+El merge `d0a32b007deba27353d57d877b84e1d28047b55f` es un commit técnico de integración y no se utiliza como evidencia principal de contribución individual.
 
-### Evidencia versionada disponible a esta hora
+## 7. Relación con otras evidencias
 
-| Integrante | Actividad verificable del 11/09/2026 | Artefacto / ruta | Commit | Estado |
-|---|---|---|---|---|
-| Mera Arias Erick Jhair | Actualización del README raíz con compilación reproducible del ERS/SRS y sincronización del estado del MVP/manuscrito | `README.md` | `fa7873c35aa63575745378b94427b8b75ac0519b` | VERIFICADO |
-| Mora Duarte Alex José | Trabajo colaborativo de cierre en Discord sobre revisión de entrega y artefactos finales | `09_Defensa/`, `10_Autoria/` | — | PENDIENTE DE COMMIT |
-| Ponce Rivera Mery Helenmey | Trabajo colaborativo de cierre en Discord sobre revisión de entrega y artefactos finales | `09_Defensa/`, `10_Autoria/` | — | PENDIENTE DE COMMIT |
+Esta relación se contrasta con:
 
-Las modificaciones locales realizadas durante esta sesión sobre `05_MVP/`, `09_Defensa/` y `10_Autoria/` **no se atribuyen todavía como contribuciones Git verificadas** mientras no existan commits reales en el repositorio. Una vez efectuados esos commits, esta sección debe sustituir los estados `PENDIENTE DE COMMIT` por los hashes reales correspondientes.
+- `10_Autoria/bitacora_sesiones.csv`;
+- `10_Autoria/aporte_individual_FIRMA.pdf`;
+- `10_Autoria/capturas/`;
+- `.mailmap`;
+- historial Git del repositorio;
+- artefactos existentes en las rutas citadas.
 
----
+## 8. Declaración de integridad
 
-## 9. Relación con otras evidencias de autoría
+Las contribuciones incluidas se basan en evidencia versionada verificable. No se fabrican commits ni se reasignan aportes históricos.
 
-La contribución individual aquí descrita se contrasta con:
+El equipo actual de cierre está conformado por **Mera Arias Erick Jhair, Mora Duarte Alex José y Ponce Rivera Mery Helenmey**. Los aportes históricos de otros integrantes permanecen visibles en Git y no se eliminan ni se atribuyen a este equipo.
 
-- `10_Autoria/bitacora_sesiones.csv` para la cronología de sesiones de trabajo;
-- `10_Autoria/capturas/` para evidencia visual individual de trabajo;
-- `/.mailmap` para normalización de identidades Git;
-- historial Git del repositorio para verificar autor, fecha, mensaje y contenido de cada commit citado;
-- artefactos existentes en las rutas indicadas en las tablas anteriores.
-
-Los commits de combinación (`merge`) no se utilizan por sí solos como evidencia principal de contribución cuando existe un commit específico que describe mejor el trabajo realizado.
-
-## 10. Declaración de integridad
-
-Las contribuciones incluidas en este documento se basan en evidencia versionada verificable. No se atribuyen tareas, archivos ni commits a integrantes distintos de los observados en el historial revisado.
-
-La relación histórica de aportes conserva a los cinco integrantes declarados del proyecto. La sesión terminal del 11 de septiembre de 2026 registra únicamente a Mera, Mora y Ponce como participantes efectivos del cierre en curso. La ratificación y las firmas que correspondan deben ser reales; no se simulan ni se sustituyen por nombres mecanografiados.
+> Nota de cierre: si después de esta actualización se realizan nuevos commits de A5, B6, `07_Datos`, checksums generales o tag final, este archivo deberá recibir una última sincronización antes del congelamiento definitivo.
