@@ -9,16 +9,37 @@ FabroGym documenta la ingeniería de requisitos de un sistema de gestión de gim
 | Componente | Estado de cierre |
 |---|---|
 | ERS/SRS | `01_ERS/ERS_SRS_2B_v2.0.pdf` y fuente LaTeX |
-| Trazabilidad | catálogo normalizado (25 RF, 23 RNF y 4 RD) + 97 trazas históricas y 8 planes de verificación IA |
-| MVP | cobertura C3 verificada: **16/19 RF Must (84,21 %)**; evidencia técnica en `05_MVP/verificacion/` |
+| Trazabilidad | 25 RF, 23 RNF y 4 RD + 97 trazas históricas + 8 planes de verificación IA |
+| MVP | cobertura C3 verificada: **16/19 RF Must (84,21 %)** |
 | Análisis empírico | reproducible desde `06_Experimento/scripts_analisis/run_all.py` |
-| Manuscrito | `07_Publicacion/manuscrito_final.pdf` + `07_Publicacion/manuscrito_final.tex`, plantilla Springer Nature |
-| Dataset Zenodo | **PUBLICADO**, versión 2.0.0; la copia local es el snapshot del depósito publicado |
-| Registro OSF | publicado: https://osf.io/62ysc/ — DOI 10.17605/OSF.IO/62YSC |
-| DOI Zenodo | [`10.5281/zenodo.22237884`](https://doi.org/10.5281/zenodo.22237884) — versión específica publicada |
-| Software Heritage SWHID | `PENDIENTE_FASE6` — se incorporará solo cuando exista un SWHID real y verificable |
-| F-UJI / FAIR | `PENDIENTE_DE_EJECUCION` — el DOI Zenodo ya existe; no se declara puntaje hasta ejecutar F-UJI |
+| Manuscrito | `07_Publicacion/manuscrito_final.pdf` + `.tex` |
+| Zenodo | **PUBLICADO**, versión 2.0.0 — DOI `10.5281/zenodo.22237884` |
+| OSF | **PUBLICADO** — DOI `10.17605/OSF.IO/62YSC` |
+| Software Heritage | **SNAPSHOT ARCHIVADO** — `swh:1:snp:be5a4db361a11e5287ed1f925ed1b387cf73588e` |
+| F-UJI / FAIR | **EJECUTADO** — **88 %**, FAIR **moderate**, F-UJI 4.0.0 / métrica 0.8 |
 
+> **Nota de preservación:** Software Heritage muestra actualmente la revisión `swh:1:rev:56ae64739c8dfcb93de77b9085afaf74b029e5fd`. El `main` de GitHub contiene commits posteriores, por lo que se debe ejecutar **Save again** después del commit/tag final.
+
+## Evidencia FAIR y preservación
+
+### F-UJI
+
+El DOI `10.5281/zenodo.22237884` fue evaluado el 11 de septiembre de 2026:
+
+- Resultado global: **88 %**
+- FAIR level: **moderate**
+- Findable: **7/7 — advanced**
+- Accessible: **6/7 — moderate**
+- Interoperable: **4/6 — moderate**
+- Reusable: **6/6 — moderate**
+- Evidencia: `fair_assessment.pdf`
+
+### Software Heritage
+
+- Snapshot SWHID: `swh:1:snp:be5a4db361a11e5287ed1f925ed1b387cf73588e`
+- Revision archivada: `swh:1:rev:56ae64739c8dfcb93de77b9085afaf74b029e5fd`
+- Directory SWHID: `swh:1:dir:864d5a537b9e2fa6931f7f2b3ad23a06275432fa`
+- Permalink: https://archive.softwareheritage.org/swh:1:snp:be5a4db361a11e5287ed1f925ed1b387cf73588e;origin=https://github.com/amorad35/FabroGym_ISR401
 
 ## Equipo y ORCID
 
@@ -30,56 +51,15 @@ FabroGym documenta la ingeniería de requisitos de un sistema de gestión de gim
 | Mery Helenmey Ponce Rivera | Verificador / calidad de requisitos | 0009-0006-6041-9198 |
 | David Octavio Vaca Romero | Apoyo documental / evidencias | 0009-0000-4457-3095 |
 
-**Cita del depósito publicado:** Equipo PFC FabroGym (2026), *FabroGym: explainability requirements and reproducible requirements-engineering artifacts*, versión 2.0, Universidad Técnica Estatal de Quevedo, GitHub. Depósito publicado: Zenodo 2.0.0, DOI 10.5281/zenodo.22237884.
-
-## Identificadores empíricos congelados
-
-- Entrevistas iniciales: `ENTR-01` … `ENTR-10`.
-- Walkthroughs no técnicos: `WALK-NTEC-01` … `WALK-NTEC-03`.
-- Walkthroughs técnicos: `WALK-TEC-01` … `WALK-TEC-03`.
-- Member checking: `MC-P01`, `MC-P02`, `MC-P03`.
-
-Los seis `WALK-*` conservan su técnica original. No se renombran como entrevistas aunque formen parte del acumulado de 16 sesiones aceptado para el cierre académico.
-
-## Resultados reproducibles de referencia
-
-La ejecución versionada del análisis trabaja con 16 sesiones audiovisuales, 70 respuestas del cuestionario, 76 fragmentos de walkthrough codificados, 37 códigos normalizados, 18 categorías temáticas, 9 fragmentos pertinentes para explicabilidad y cuatro RNF de explicabilidad terminales. La curva por códigos produce 6.306 % en las últimas tres sesiones, por lo que **no se declara saturación estricta ≤5 %**; la estabilización axial de 1.852 % se informa solo como evidencia complementaria.
-
-
 ## Compilar el ERS/SRS
 
-La versión académica vigente del ERS/SRS es `ERS_SRS_2B_v2.0`. La compilación debe realizarse desde la carpeta `01_ERS/`, conservando la estructura del repositorio.
-
-**Compilador:** `pdflatex`  
-**Archivo principal:** `ERS_SRS_2B_v2.0.tex`  
-**Directorio de ejecución:** `01_ERS/`  
-**PDF esperado:** `01_ERS/ERS_SRS_2B_v2.0.pdf`
-
-### Dependencias documentales
-
-La compilación requiere conservar junto al archivo principal:
-
-- `01_ERS/referencias.bib`
-- `01_ERS/figuras_2B/`
-- `01_ERS/modelado_final/`
-- `03_Modelado/Diagramas_UML/`
-
-El archivo LaTeX utiliza, entre otros, los paquetes `geometry`, `inputenc`, `fontenc`, `lmodern`, `babel`, `microtype`, `graphicx`, `longtable`, `booktabs`, `tabularx`, `array`, `xcolor`, `enumitem`, `hyperref`, `fancyhdr`, `caption`, `float`, `pdflscape`, `seqsplit`, `cite`, `lastpage`, `pdfpages` y `tcolorbox`.
-
-### Comando de compilación
-
-Desde `01_ERS/`, ejecutar **tres veces**:
+Desde `01_ERS/`, ejecutar tres veces:
 
 ```bash
 pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
 pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
 pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
 ```
-
-Las tres pasadas permiten actualizar correctamente referencias internas, numeración, tabla de contenidos, lista de figuras, lista de tablas y referencias de página.
-
-No se debe copiar únicamente el archivo `.tex`: deben conservarse las carpetas y archivos auxiliares indicados anteriormente para que las figuras y el modelado UML puedan resolverse correctamente durante la compilación.
-
 
 ## Reproducir el análisis
 
@@ -91,26 +71,12 @@ pip install -r 06_Experimento/scripts_analisis/requirements.txt
 python 06_Experimento/scripts_analisis/run_all.py
 ```
 
-Las tablas y figuras del manuscrito deben provenir de esta ruta reproducible. No se admiten cifras manuales sin respaldo de script.
+## Paquete FAIR
 
-## Paquete de replicación FAIR
-
-El depósito Zenodo ya fue publicado como versión 2.0.0: https://doi.org/10.5281/zenodo.22237884. La carpeta `07_Publicacion/dataset_zenodo/` se conserva en esta tarea como snapshot histórico del paquete publicado y no se modifica. La ERS académica vigente 2.0 y la normalización de identificadores son correcciones posteriores del repositorio; una eventual versión correctiva del depósito deberá evaluarse y publicarse de forma controlada en una fase posterior, sin afirmar identidad byte a byte con la versión 2.0.0.
-
-## Privacidad y zonas [P]/[R]
-
-Solo material anonimizado/seudonimizado debe permanecer en la zona pública. **No** se publican audios o videos identificables, consentimientos originales, cédulas, firmas, rostros, voces, correos, teléfonos, IP ni documentos originales identificables. El material restringido permanece fuera del paquete Zenodo y debe almacenarse cifrado conforme al protocolo.
-
-El member checking sí ocurrió y tiene evidencia documental con `MC-P01..03`; **no existe grabación audiovisual de esa actividad** y no se fabrica una.
-
-## Ética
-
-La documentación ética debe residir finalmente en `08_Etica/`. A13 y la Adenda solo pueden figurar como firmados cuando las firmas reales existan. No se retrofecha documentación.
+Zenodo 2.0.0: https://doi.org/10.5281/zenodo.22237884. La evaluación F-UJI real se conserva como `fair_assessment.pdf`. Consulte también `FAIR_CHECKLIST.md` y `CITATION.cff`.
 
 ## Licencias
 
 - Código del MVP y scripts: **MIT**.
 - Documentación y dataset anonimizado: **CC BY 4.0**.
-- `02_Evidencias/00_Restringido/`: **excluido de la licencia abierta** y del depósito Zenodo.
-
-Consulte `LICENSE` y `CITATION.cff`.
+- Evidencia restringida: excluida del paquete público.

@@ -40,3 +40,6 @@ identifiers:
   - type: url
     value: "https://osf.io/62ysc/"
     description: "Registro público OSF."
+  - type: swh
+    value: "swh:1:snp:be5a4db361a11e5287ed1f925ed1b387cf73588e"
+    description: "Snapshot verificable archivado en Software Heritage el 11 de septiembre de 2026; debe refrescarse después del commit/tag final si el repositorio cambia."
