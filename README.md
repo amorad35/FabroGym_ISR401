@@ -58,13 +58,42 @@ Las contribuciones históricas de Erick Adalberto Alvia Villegas y David Octavio
 
 ## Compilar el ERS/SRS
 
-Desde `01_ERS/`, ejecutar tres veces:
+### Compilador
+
+- `pdflatex` (distribución TeX Live o MiKTeX compatible con los paquetes utilizados por el documento).
+
+### Archivo principal
+
+- `01_ERS/ERS_SRS_2B_v2.0.tex`
+
+### Dependencias versionadas
+
+- `01_ERS/referencias.bib`
+- `01_ERS/figuras_2B/`
+- `01_ERS/modelado_final/`
+- `03_Modelado/Diagramas_UML/` como ubicación canónica del modelado UML
+
+### Directorio de ejecución
+
+Desde la raíz del repositorio:
+
+```bash
+cd 01_ERS
+```
+
+### Orden exacta de compilación
+
+Ejecutar tres veces:
 
 ```bash
 pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
 pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
 pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
 ```
+
+### PDF esperado
+
+- `01_ERS/ERS_SRS_2B_v2.0.pdf`
 
 ## Reproducir el análisis — cadena oficial B1
 
