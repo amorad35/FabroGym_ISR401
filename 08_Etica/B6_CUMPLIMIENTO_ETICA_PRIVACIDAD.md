@@ -1,54 +1,67 @@
 # B6 — Cumplimiento de ética y protección de datos
 
 **Proyecto:** FabroGym — ISR-401  
-**Entrega:** Entrega 4 (2B / Defensa Final)  
-**Propósito:** dejar evidencia explícita y localizable de los elementos de ética y privacidad exigidos por la rúbrica de cierre.
+**Entrega:** Entrega 4 (2B / Defensa Final)
 
-## 1. Alcance
+## 1. Matriz de cumplimiento
 
-Este archivo es una **síntesis de cierre**. No reemplaza el Protocolo de Investigación (A1), el Consentimiento Informado (A3), el Plan de Gestión de Datos (A4), el Compromiso de Confidencialidad (A7) ni los anexos de Categoría A.
-
-Su función es evitar que los elementos de cumplimiento queden dispersos entre varios documentos.
-
-## 2. Matriz de cumplimiento B6
-
-| Requisito de cierre | Evidencia / decisión |
+| Requisito | Evidencia / decisión |
 |---|---|
-| **Base de licitud / fundamento de participación** | Participación voluntaria y consentimiento informado para la evidencia primaria de campo. El expediente ya identifica A3 como el documento que comunica la naturaleza del estudio y registra dicha participación voluntaria. |
-| **Finalidad** | Uso exclusivamente académico para levantamiento, análisis, especificación y validación de requisitos; además, trazabilidad, reproducibilidad y publicación académica anonimizada. Se excluyen usos comerciales o productivos sobre personas. |
-| **Plazo de conservación** | Las copias restringidas o reidentificables en poder del equipo se mantienen únicamente hasta el cierre formal del periodo académico 2026-2027 PPA y la finalización de la evaluación de la Entrega 4. Después deben eliminarse de los dispositivos y espacios personales/no institucionales. Si la UTEQ exige custodia adicional, la evidencia correspondiente debe quedar únicamente en almacenamiento institucional autorizado. |
-| **Responsable del tratamiento/custodia académica** | Equipo actual de cierre: Mera Arias Erick Jhair, Mora Duarte Alex José y Ponce Rivera Mery Helenmey, bajo supervisión académica del Ing. Gleiston Guerrero Ulloa, PhD. Esta asignación es operativa para el expediente académico. |
+| **Base de licitud / fundamento de participación** | Participación voluntaria y consentimiento informado para la evidencia primaria de campo. |
+| **Finalidad** | Uso académico para levantamiento, análisis, especificación y validación de requisitos, trazabilidad, reproducibilidad y publicación anonimizada. |
+| **Plazo de conservación** | Las copias restringidas o reidentificables se mantienen únicamente durante el periodo autorizado para el proyecto/evaluación y, cuando corresponda, bajo custodia institucional. |
+| **Responsable de custodia académica** | Equipo actual de cierre: Mera Arias Erick Jhair, Mora Duarte Alex José y Ponce Rivera Mery Helenmey, bajo supervisión académica del docente responsable. |
 
-## 3. Separación pública / restringida
+## 2. Separación pública / restringida
 
-**Público:** transcripciones anonimizadas, matrices, requisitos, modelado, resultados reproducibles y otros artefactos que no contienen identificadores directos.
+**[P] Pública:** transcripciones anonimizadas, matrices, resultados, requisitos, modelado, scripts, datos derivados y copias censuradas/enmascaradas aptas para publicación.
 
-**Restringido:** consentimientos firmados, evidencia con firmas o identificadores, grabaciones, fotografías no autorizadas para publicación y cualquier material que permita reidentificar a una persona.
+**[R] Restringida:** originales identificables, consentimientos firmados, grabaciones, fotografías originales no aptas para publicación y demás material con datos personales directos.
 
-La evidencia restringida no debe incorporarse al repositorio público.
+La guía específica de FabroGym exige mantener una **capa restringida cifrada** y una capa pública derivada sin datos personales.
 
-## 4. Regla de minimización
+## 3. Contenedor restringido documentado
 
-FabroGym no requiere ni publica para este proyecto académico:
+Se conserva deliberadamente:
 
+`02_Evidencias/00_Restringido/evidencias_restringidas.7z`
+
+Su presencia no significa que los datos contenidos se publiquen en claro. Para que sea válido en el cierre:
+
+- debe permanecer cifrado/protegido;
+- la contraseña/clave debe mantenerse fuera del repositorio;
+- sus originales no deben extraerse a rutas públicas;
+- Zenodo y `07_Datos/` deben contener solo derivados aptos para publicación.
+
+También se conserva `02_Evidencias/00_Restringido/fichas_tecnicas.csv` como inventario técnico de evidencia, sin sustituir ni exponer los archivos originales.
+
+## 4. Fotografías A11
+
+`10_Autoria/fotos_equipo/02_Fotos_Aplicacion/A11 Fotos_Originales_Cuestionario.7z` se trata como contenedor restringido. Solo puede permanecer versionado si está cifrado/protegido y la clave no está en Git. Las copias públicas deben estar autorizadas o enmascaradas.
+
+## 5. Regla de minimización
+
+FabroGym no publica en la capa [P]:
+
+- cédulas;
+- firmas originales;
+- teléfonos o correos privados;
 - datos reales de salud;
 - biometría;
 - medidas corporales identificables;
 - pagos reales asociados a personas;
 - historiales clínicos;
-- datos personales innecesarios para la investigación.
+- originales identificables no autorizados.
 
-## 5. Regla de cierre
+## 6. Verificación de cierre
 
-1. Revisar que GitHub y Zenodo contengan solo material público/anonimizado.
-2. Mantener el material restringido fuera de repositorios públicos.
-3. Al cierre académico, eliminar las copias personales o no institucionales que sean restringidas/reidentificables.
-4. Si existe una obligación institucional de conservación, transferir o mantener la evidencia únicamente bajo custodia institucional autorizada.
-5. No alterar ni retrofechar consentimientos, firmas o documentos históricos para hacer coincidir el cierre.
+Ejecutar:
 
-## 6. Relación con la rúbrica
+```bash
+python 07_Datos/scripts/verificar_privacidad_publica.py
+```
 
-Con esta matriz, B6 queda explícitamente localizable en `08_Etica/` y no depende de que el evaluador reconstruya la información a partir de varios anexos.
+El resultado automático debe quedar sin hallazgos bloqueantes. Además, antes del tag final el equipo debe confirmar manualmente el cifrado de los contenedores restringidos y revisar visualmente las piezas públicas.
 
-**Estado documental:** PREPARADO PARA INTEGRACIÓN.  
-**Pendiente humano:** subir estos archivos al repositorio y verificar que ninguna disposición firmada del A4 o de la UTEQ sea más restrictiva; si lo fuera, prevalece la condición más restrictiva.
+**Estado documental:** INTEGRADO Y VERSIONADO EN EL REPOSITORIO.  
+**Estado de cierre:** sujeto únicamente a la ejecución final del verificador y a las confirmaciones humanas de cifrado/privacidad antes del tag.
