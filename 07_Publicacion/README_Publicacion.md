@@ -1,52 +1,42 @@
-# 07_Publicacion - FabroGym
+# 07_Publicacion — FabroGym
 
 ## Propósito
 
-Esta carpeta conserva el manuscrito y el paquete local de replicación utilizado para la Entrega 4 (2B) de Ingeniería de Requerimientos (ISR-401). El registro Zenodo publicado se mantiene como evidencia histórica externa; la copia local de entrega puede incorporar normalizaciones exigidas por la rúbrica y no se declara byte a byte idéntica al depósito remoto.
+Esta carpeta conserva el manuscrito y artefactos de publicación/replicación asociados al proyecto FabroGym. El registro Zenodo publicado se mantiene como evidencia histórica externa.
+
+> **Importante para B1:** `07_Publicacion/` **no es el paquete canónico de datos y análisis de la Entrega Final**. La única cadena canónica y evaluable es `07_Datos/`.
 
 ## Contenido
 
-- `manuscrito_borrador.pdf`: versión 1.0 del artículo paralelo.
-- `manuscrito_fuente/`: fuente LaTeX, bibliografía y figuras.
-- `analisis_revistas.md`: comparación de seis revistas candidatas.
-- `dataset_zenodo/`: copia local de trabajo del paquete de replicación asociado al Zenodo 2.0.0; para A5 referencia la ERS/SRS canónica de `01_ERS/` y no incorpora una segunda copia del documento.
+- manuscrito y fuentes de publicación;
+- artefactos de metadatos;
+- copia local normalizada del paquete asociado al depósito Zenodo;
+- documentación de reproducibilidad histórica.
 
-## Estado de la evidencia
+## Ejecución canónica para la Entrega Final
 
-El paquete utiliza exclusivamente evidencia pública anonimizada:
-
-- 10 entrevistas anonimizadas;
-- 76 fragmentos de walkthrough codificados;
-- 37 códigos normalizados y 18 categorías temáticas;
-- **70 respuestas de cuestionario anonimizadas**, correspondientes al corte analítico vigente e incluidas las 4 respuestas de pilotaje;
-- 25 requisitos funcionales, 23 no funcionales y 4 restricciones de diseño;
-- matriz terminal con 105 trazas identificadas.
-
-No se incluyen consentimientos originales, firmas, cédulas, audios, videos, rostros, voces, datos clínicos, biometría, peso, medidas corporales ni archivos que permitan reidentificar participantes.
-
-## Limitaciones declaradas
-
-- La curva de códigos es descriptiva y no demuestra saturación teórica.
-- La muestra analítica del cuestionario es no probabilística, contiene 70 respuestas y conserva las cuatro respuestas de pilotaje.
-- El registro OSF y el depósito Zenodo ya están publicados. La cobertura funcional del MVP sigue sujeta a verificación terminal C3; no se presenta como prueba ejecutada.
-- Los textos completos de las transcripciones continúan en `02_Evidencias/Transcripciones/`. El JSON del paquete indexa sus rutas y contiene la totalidad de los fragmentos codificados para evitar versiones divergentes.
-
-## Compilación del manuscrito
+Desde la raíz del repositorio:
 
 ```bash
-cd manuscrito_fuente
-pdflatex manuscrito.tex
-bibtex manuscrito
-pdflatex manuscrito.tex
-pdflatex manuscrito.tex
+cd 07_Datos
+python -m pip install -r scripts/requirements.txt
+python scripts/run_all.py
 ```
 
-## Ejecución del análisis
+## Relación con el paquete local de publicación
 
-```bash
-cd dataset_zenodo
-python scripts_analisis/run_all.py
+`dataset_zenodo/` conserva una copia local de trabajo vinculada al depósito publicado y puede contener scripts internos de replicación histórica. Esos scripts **no sustituyen ni compiten con `07_Datos/scripts/run_all.py` como orquestador oficial de B1**.
+
+## ERS/SRS
+
+La única ERS/SRS académica vigente está en:
+
+```text
+01_ERS/ERS_SRS_2B_v2.0.pdf
+01_ERS/ERS_SRS_2B_v2.0.tex
 ```
+
+`dataset_zenodo/srs/README.md` la referencia sin duplicarla.
 
 ## Repositorio
 
@@ -54,8 +44,12 @@ https://github.com/amorad35/FabroGym_ISR401
 
 ## Licencia
 
-Los datos y la documentación pública anonimizada se documentan bajo CC BY 4.0. La licencia no cubre la zona restringida del proyecto.
+Los datos y documentación pública anonimizada se documentan bajo CC BY 4.0. La evidencia restringida se rige por las reglas de custodia/cifrado del expediente ético.
 
 ## Estado de Zenodo
 
-El depósito publicado es la versión 2.0.0 con DOI específico https://doi.org/10.5281/zenodo.22237884 y no se modifica retrospectivamente. Para la entrega académica vigente, `dataset_zenodo/` funciona como copia local normalizada: la única ERS/SRS vigente permanece en `01_ERS/ERS_SRS_2B_v2.0.*`, mientras `dataset_zenodo/srs/README.md` la referencia sin duplicarla. Una futura versión correctiva de Zenodo deberá publicarse como versión nueva y volver a validar manifiesto, checksums, privacidad y reproducibilidad.
+El depósito publicado es la versión 2.0.0 con DOI específico:
+
+https://doi.org/10.5281/zenodo.22237884
+
+No se modifica retrospectivamente. Cualquier corrección futura deberá publicarse como una nueva versión.

@@ -11,14 +11,16 @@ FabroGym documenta la ingeniería de requisitos de un sistema de gestión de gim
 | ERS/SRS | `01_ERS/ERS_SRS_2B_v2.0.pdf` y fuente LaTeX |
 | Trazabilidad | 25 RF, 23 RNF y 4 RD + 97 trazas históricas + 8 planes de verificación IA |
 | MVP | cobertura C3 verificada: **16/19 RF Must (84,21 %)** |
-| Análisis empírico | reproducible desde `06_Experimento/scripts_analisis/run_all.py` |
+| **Paquete de datos y análisis canónico** | **`07_Datos/` — ejecución oficial con `python scripts/run_all.py`** |
 | Manuscrito | `07_Publicacion/manuscrito_final.pdf` + `.tex` |
 | Zenodo | **PUBLICADO**, versión 2.0.0 — DOI `10.5281/zenodo.22237884` |
 | OSF | **PUBLICADO** — DOI `10.17605/OSF.IO/62YSC` |
 | Software Heritage | **SNAPSHOT ARCHIVADO** — `swh:1:snp:be5a4db361a11e5287ed1f925ed1b387cf73588e` |
 | F-UJI / FAIR | **EJECUTADO** — **88 %**, FAIR **moderate**, F-UJI 4.0.0 / métrica 0.8 |
 
-> **Nota de preservación:** Software Heritage muestra actualmente la revisión `swh:1:rev:56ae64739c8dfcb93de77b9085afaf74b029e5fd`. El `main` de GitHub contiene commits posteriores, por lo que se debe ejecutar **Save again** después del commit/tag final.
+> **Regla de unicidad B1:** para la Entrega Final 2B existe un único paquete canónico ejecutable de datos y análisis: `07_Datos/`. Los archivos conservados en `06_Experimento/` documentan el protocolo, la procedencia y el desarrollo histórico del estudio; **no constituyen una segunda cadena canónica de ejecución**. Los artefactos de `07_Publicacion/` documentan la publicación/replicación histórica y tampoco sustituyen a `07_Datos/` para B1.
+
+> **Nota de preservación:** Software Heritage muestra actualmente una revisión anterior del repositorio. Después del commit/tag final se debe ejecutar **Save again**.
 
 ## Evidencia FAIR y preservación
 
@@ -39,17 +41,20 @@ El DOI `10.5281/zenodo.22237884` fue evaluado el 11 de septiembre de 2026:
 - Snapshot SWHID: `swh:1:snp:be5a4db361a11e5287ed1f925ed1b387cf73588e`
 - Revision archivada: `swh:1:rev:56ae64739c8dfcb93de77b9085afaf74b029e5fd`
 - Directory SWHID: `swh:1:dir:864d5a537b9e2fa6931f7f2b3ad23a06275432fa`
-- Permalink: https://archive.softwareheritage.org/swh:1:snp:be5a4db361a11e5287ed1f925ed1b387cf73588e;origin=https://github.com/amorad35/FabroGym_ISR401
 
-## Equipo y ORCID
+## Equipo
 
-| Integrante | Rol principal | ORCID |
-|---|---|---|
-| Erick Adalberto Alvia Villegas | Analista líder / entrevistador | 0009-0001-3777-470X |
-| Erick Jhair Mera Arias | Documentador / responsable de encuestas | 0009-0001-0068-1796 |
-| Alex José Mora Duarte | Modelador / apoyo de análisis | 0009-0000-2494-2842 |
-| Mery Helenmey Ponce Rivera | Verificador / calidad de requisitos | 0009-0006-6041-9198 |
-| David Octavio Vaca Romero | Apoyo documental / evidencias | 0009-0000-4457-3095 |
+### Equipo actual de cierre
+
+| Integrante | Usuario Git |
+|---|---|
+| Erick Jhair Mera Arias | `Emeraxs` |
+| Alex José Mora Duarte | `amorad35` |
+| Mery Helenmey Ponce Rivera | `Mery-003` |
+
+### Participación histórica preservada
+
+Las contribuciones históricas de Erick Adalberto Alvia Villegas y David Octavio Vaca Romero permanecen en el historial Git y en los artefactos donde corresponden. No se eliminan ni se reasignan.
 
 ## Compilar el ERS/SRS
 
@@ -61,15 +66,21 @@ pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
 pdflatex -interaction=nonstopmode -halt-on-error ERS_SRS_2B_v2.0.tex
 ```
 
-## Reproducir el análisis
+## Reproducir el análisis — cadena oficial B1
+
+Desde la raíz del repositorio:
 
 ```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# Linux/macOS: source .venv/bin/activate
-pip install -r 06_Experimento/scripts_analisis/requirements.txt
-python 06_Experimento/scripts_analisis/run_all.py
+cd 07_Datos
+python -m pip install -r scripts/requirements.txt
+python scripts/run_all.py
 ```
+
+Esta es la **única cadena canónica de reproducción para la Entrega 4 (2B)**. No se debe ejecutar `06_Experimento/scripts_analisis/run_all.py` como cadena oficial de B1.
+
+## Relación con `06_Experimento/`
+
+`06_Experimento/` conserva el protocolo, el prerregistro OSF, instrumentos, matrices y scripts históricos que documentan la procedencia del estudio. Se mantienen por trazabilidad y no-retroceso, pero la cadena consolidada y evaluable se encuentra únicamente en `07_Datos/`.
 
 ## Paquete FAIR
 
@@ -79,4 +90,4 @@ Zenodo 2.0.0: https://doi.org/10.5281/zenodo.22237884. La evaluación F-UJI real
 
 - Código del MVP y scripts: **MIT**.
 - Documentación y dataset anonimizado: **CC BY 4.0**.
-- Evidencia restringida: excluida del paquete público.
+- Evidencia identificable: sujeta a las reglas de la capa restringida/cifrada definidas en `08_Etica/`.
