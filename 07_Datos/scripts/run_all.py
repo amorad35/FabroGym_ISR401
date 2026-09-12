@@ -5,7 +5,7 @@ FabroGym — Entrega 4 (2B), Fase 2
 Entrada única reproducible del análisis empírico.
 
 Principios:
-- usa únicamente datos versionados en 06_Experimento/datos_crudos/;
+- usa únicamente los datos versionados localmente en 07_Datos/datos_crudos/ (copiados desde 06_Experimento/datos_crudos/ según la procedencia documentada);
 - no inventa observaciones, puntuaciones, perfiles, hashes ni pruebas;
 - no convierte preguntas generales de encuesta en Likert de explicabilidad;
 - documenta como NO APLICABLE cualquier inferencia no soportada.
@@ -16,12 +16,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.stats.power import TTestPower, TTestIndPower
+from reportlab import rl_config
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.units import mm
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+
+# Salidas PDF/SVG reproducibles byte a byte entre ejecuciones equivalentes.
+rl_config.invariant = True
+plt.rcParams["svg.hashsalt"] = "FabroGym_ISR401"
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "datos_crudos"
@@ -50,7 +55,7 @@ def fmt_hms(x):
 def savefig(base_name):
     plt.tight_layout()
     plt.savefig(FIG / f"{base_name}.png", dpi=220)
-    plt.savefig(FIG / f"{base_name}.svg")
+    plt.savefig(FIG / f"{base_name}.svg", metadata={"Date": None})
     plt.close()
 
 def read_inputs():

@@ -63,7 +63,13 @@ for folder_name in ("datos_crudos","datos_procesados"):
             continue
         for h in rows[0].keys():
             hn = h.casefold()
-            if any(tok in hn for tok in TOKENS):
+            # Coincidencia por palabra completa: evita falsos positivos como
+            # "No incluya nombres" en el encabezado de un campo de comentario.
+            header_identifiable = any(
+                re.search(rf"(?<!\w){re.escape(tok)}(?!\w)", hn)
+                for tok in TOKENS
+            )
+            if header_identifiable:
                 nonempty = sum(1 for r in rows if (r.get(h) or "").strip())
                 if nonempty:
                     findings.append((

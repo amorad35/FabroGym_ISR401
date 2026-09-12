@@ -1,14 +1,13 @@
 # Revisión automática de privacidad — F3-07
 
-- Archivos del árbol público inspeccionados por nombre/extensión: **845**.
+- Archivos del árbol público inspeccionados por nombre/extensión: **84**.
 - CSV de `07_Datos/datos_crudos` y `datos_procesados` inspeccionados: **20**.
-- Hallazgos automáticos: **2**.
-- PDFs censurados/actas que requieren revisión visual adicional: **22**.
+- Hallazgos automáticos: **0**.
+- PDFs censurados/actas que requieren revisión visual adicional: **0**.
 
-## Hallazgos
+## Resultado
 
-- **ARCHIVO_MULTIMEDIA** — `05_MVP/video_demo.mp4` — archivo audiovisual presente en el árbol público
-- **COLUMNA_IDENTIFICABLE** — `07_Datos/datos_crudos/encuesta_clientes_anonimizada.csv` — columna=Escriba un comentario opcional sobre su experiencia en el gimnasio. No incluya nombres ni datos de salud.  ; valores_no_vacios=42
+No se detectaron, mediante estas reglas automáticas, archivos audiovisuales reales, nombres de archivos reservados para evidencia restringida ni columnas potencialmente identificables con valores no vacíos dentro de los CSV públicos de `07_Datos`.
 
 ## Revisión manual obligatoria
 
